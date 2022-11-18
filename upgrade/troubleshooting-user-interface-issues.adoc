@@ -1,0 +1,33 @@
+---
+permalink: upgrade/troubleshooting-user-interface-issues.html 
+sidebar: sidebar 
+keywords: grid manager, tenant manager, error, browser 
+summary: Nach dem Upgrade auf eine neue Version der StorageGRID-Software sind möglicherweise Probleme mit dem Grid Manager oder dem Tenant Manager zu sehen. 
+---
+= Fehlerbehebung bei Problemen mit der Benutzeroberfläche
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nach dem Upgrade auf eine neue Version der StorageGRID-Software sind möglicherweise Probleme mit dem Grid Manager oder dem Tenant Manager zu sehen.
+
+
+
+== Web-Oberfläche reagiert nicht wie erwartet
+
+Der Grid-Manager oder der Mandantenmanager reagieren nach einem Upgrade der StorageGRID-Software möglicherweise nicht wie erwartet.
+
+Wenn Probleme mit der Weboberfläche auftreten:
+
+* Stellen Sie sicher, dass Sie ein verwenden xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
++
+
+NOTE: Der Browser-Support ändert sich in der Regel für jede StorageGRID Version.
+
+* Löschen Sie den Cache Ihres Webbrowsers.
++
+Beim Löschen des Caches werden veraltete Ressourcen entfernt, die von der vorherigen Version der StorageGRID-Software verwendet werden, und die Benutzeroberfläche kann wieder ordnungsgemäß ausgeführt werden. Anweisungen hierzu finden Sie in der Dokumentation Ihres Webbrowsers.
+
+

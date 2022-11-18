@@ -1,0 +1,20 @@
+---
+permalink: monitor/viewing-grid-topology-tree.html 
+sidebar: sidebar 
+keywords: how to view the Grid Topology tree 
+summary: Die Grid Topology-Struktur bietet Zugriff auf detaillierte Informationen zu StorageGRID Systemelementen, einschließlich Standorten, Grid-Nodes, Services und Komponenten. In den meisten Fällen müssen Sie nur auf die Grid Topology-Struktur zugreifen, wenn Sie in der Dokumentation oder bei der Arbeit mit technischem Support angewiesen sind. 
+---
+= Sehen Sie sich den Baum der Grid Topology an
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Grid Topology-Struktur bietet Zugriff auf detaillierte Informationen zu StorageGRID Systemelementen, einschließlich Standorten, Grid-Nodes, Services und Komponenten. In den meisten Fällen müssen Sie nur auf die Grid Topology-Struktur zugreifen, wenn Sie in der Dokumentation oder bei der Arbeit mit technischem Support angewiesen sind.
+
+Um auf den Grid Topology-Baum zuzugreifen, wählen Sie *SUPPORT* *Tools* *Grid-Topologie*.
+
+image::../media/grid_topology_tree.gif[Teile des Grid Topology Tree]
+
+Klicken Sie auf, um die Struktur der Grid Topology zu erweitern oder zu reduzieren image:../media/nms_tree_expand.gif["Plus-Symbol"] Oder image:../media/nms_tree_collapse.gif["Minuszeichen-Symbol"] Am Standort, auf dem Node oder auf dem Service Level. Um alle Elemente der gesamten Site oder in jedem Knoten zu erweitern oder auszublenden, halten Sie die *Strg*-Taste gedrückt und klicken Sie auf.

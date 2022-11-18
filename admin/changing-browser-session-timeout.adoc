@@ -1,0 +1,49 @@
+---
+permalink: admin/changing-browser-session-timeout.html 
+sidebar: sidebar 
+keywords: browser timeout, inactive session timeout 
+summary: Sie können steuern, ob Grid Manager und Tenant Manager-Benutzer abgemeldet werden, wenn sie länger als eine bestimmte Zeit inaktiv sind. 
+---
+= Ändern Sie die Zeitüberschreitung der Browser-Sitzung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können steuern, ob Grid Manager und Tenant Manager-Benutzer abgemeldet werden, wenn sie länger als eine bestimmte Zeit inaktiv sind.
+
+.Was Sie und#8217;ll benötigen
+* Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+* Sie haben spezifische Zugriffsberechtigungen.
+
+
+Das Timeout für die GUI-Inaktivität ist standardmäßig auf 900 Sekunden (15 Minuten) eingestellt. Wenn die Browser-Sitzung eines Benutzers für diesen Zeitraum nicht aktiv ist, wird die Sitzung beendet.
+
+Nach Bedarf können Sie den Timeout-Zeitraum vergrößern oder verkleinern, indem Sie die Anzeigeoption GUI Inaktivität Timeout einstellen.
+
+Wenn Single Sign-On (SSO) aktiviert ist und die Browsersitzung eines Benutzers beendet wird, verhält sich das System so, als ob der Benutzer *Abmelden* manuell ausgewählt hat. Der Benutzer muss seine SSO-Anmeldedaten erneut eingeben, um wieder auf StorageGRID zugreifen zu können. Siehe xref:configuring-sso.adoc[Konfigurieren Sie Single Sign-On].
+
+[NOTE]
+====
+Das Timeout der Benutzersitzung kann auch durch Folgendes gesteuert werden:
+
+* Ein separater, nicht konfigurierbarer StorageGRID-Timer, der für die Systemsicherheit enthalten ist. Standardmäßig läuft das Authentifizierungs-Token jedes Benutzers 16 Stunden nach der Anmeldung des Benutzers ab. Wenn die Authentifizierung eines Benutzers abläuft, wird dieser Benutzer automatisch abgemeldet, auch wenn der Wert für das Timeout der GUI nicht erreicht wurde. Um das Token zu erneuern, muss sich der Benutzer erneut anmelden.
+* Zeitüberschreitungseinstellungen für den Identitäts-Provider, vorausgesetzt, SSO ist für StorageGRID aktiviert.
+
+
+====
+.Schritte
+. Wählen Sie *KONFIGURATION* *System* *Anzeigeoptionen*.
+. Geben Sie für *GUI Inaktivität Timeout* einen Timeout-Zeitraum von mindestens 60 Sekunden ein.
++
+Setzen Sie dieses Feld auf 0, wenn Sie diese Funktion nicht verwenden möchten. Benutzer werden 16 Stunden nach ihrer Anmeldung bei Ablauf ihrer Authentifizierungs-Tokens abgemeldet.
+
++
+image::../media/configuration_display_options.gif[Seite „Anzeigeoptionen“]
+
+. Wählen Sie *Änderungen Anwenden*.
++
+Die neue Einstellung hat keine Auswirkung auf die derzeit angemeldenen Benutzer. Benutzer müssen sich erneut anmelden oder ihre Browser aktualisieren, damit die neue Timeout-Einstellung wirksam wird.
+
+

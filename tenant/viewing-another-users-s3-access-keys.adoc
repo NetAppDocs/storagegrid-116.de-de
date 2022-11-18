@@ -1,0 +1,49 @@
+---
+permalink: tenant/viewing-another-users-s3-access-keys.html 
+sidebar: sidebar 
+keywords: how to view other user access key 
+summary: Wenn Sie einen S3-Mandanten verwenden und über entsprechende Berechtigungen verfügen, können Sie die S3-Zugriffsschlüssel eines anderen Benutzers anzeigen. Sie können die Liste nach Ablauf der Zeit sortieren, sodass Sie feststellen können, welche Schlüssel bald ablaufen. Nach Bedarf können Sie neue Schlüssel erstellen und Schlüssel löschen, die nicht mehr verwendet werden. 
+---
+= Zeigen Sie die S3-Zugriffstasten eines anderen Benutzers an
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie einen S3-Mandanten verwenden und über die entsprechenden Berechtigungen verfügen, können Sie die S3-Zugriffsschlüssel eines anderen Benutzers anzeigen. Sie können die Liste nach Ablauf der Zeit sortieren, sodass Sie feststellen können, welche Schlüssel bald ablaufen. Nach Bedarf können Sie neue Schlüssel erstellen und Schlüssel löschen, die nicht mehr verwendet werden.
+
+.Was Sie und#8217;ll benötigen
+* Sie müssen mit einem beim Mandantenmanager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+* Sie müssen über die Berechtigung Root Access verfügen.
+
+
+
+IMPORTANT: Auf die S3-Buckets und Objekte, die zu einem Benutzer gehören, kann über die Zugriffsschlüssel-ID und den geheimen Zugriffsschlüssel zugegriffen werden, die für diesen Benutzer im Mandanten-Manager angezeigt werden. Aus diesem Grund schützen Sie Zugriffsschlüssel wie ein Passwort. Drehen Sie die Zugriffstasten regelmäßig, entfernen Sie alle nicht verwendeten Schlüssel aus dem Konto und geben Sie sie niemals anderen Benutzern zur Verfügung.
+
+.Schritte
+. Wählen Sie *ZUGRIFFSVERWALTUNG* *Benutzer*.
++
+Die Seite Benutzer wird angezeigt und listet die vorhandenen Benutzer auf.
+
+. Wählen Sie den Benutzer aus, dessen S3-Zugriffstasten Sie anzeigen möchten.
++
+Die Seite Benutzerdetails wird angezeigt.
+
+. Wählen Sie *Zugriffstasten*.
++
+image::../media/access_key_view_list_for_other_user.png[Zugriffssteuerungsliste für andere Benutzer aufrufen]
+
+. Sortieren Sie die Tasten nach *Ablaufzeit* oder *Zugriffsschlüssel-ID*.
+. Erstellen Sie bei Bedarf neue Schlüssel und löschen Sie manuell die nicht mehr verwendeten Schlüssel.
++
+Wenn Sie neue Schlüssel erstellen, bevor die vorhandenen Schlüssel ablaufen, kann der Benutzer mit der Verwendung der neuen Schlüssel beginnen, ohne vorübergehend den Zugriff auf die Objekte im Konto zu verlieren.
+
++
+Abgelaufene Schlüssel werden automatisch entfernt.
+
+
+
+xref:creating-another-users-s3-access-keys.adoc[Erstellen von S3-Zugriffsschlüsseln eines anderen Benutzers]
+
+xref:deleting-another-users-s3-access-keys.adoc[Löschen Sie die S3-Zugriffsschlüssel eines anderen Benutzers]

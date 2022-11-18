@@ -1,0 +1,33 @@
+---
+permalink: expand/adding-grid-nodes-to-add-capabilities.html 
+sidebar: sidebar 
+keywords: grid nodes, expand, expansion, site, add 
+summary: Einem StorageGRID-System können Sie Redundanz oder zusätzliche Funktionen hinzufügen, indem Sie vorhandenen Standorten neue Grid-Nodes hinzufügen. 
+---
+= Grid-Nodes werden hinzugefügt, um Funktionen zu Ihrem System hinzuzufügen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Einem StorageGRID-System können Sie Redundanz oder zusätzliche Funktionen hinzufügen, indem Sie vorhandenen Standorten neue Grid-Nodes hinzufügen.
+
+Sie können beispielsweise zusätzliche Gateway-Nodes hinzufügen, um die Erstellung von Hochverfügbarkeitsgruppen von Gateway-Nodes zu unterstützen, oder Sie können einen Admin-Node an einem Remote-Standort hinzufügen, um die Überwachung über einen lokalen Knoten zu ermöglichen.
+
+In einem einzigen Erweiterungsvorgang können Sie mindestens einen der folgenden Node-Typen zu einem oder mehreren bestehenden Standorten hinzufügen:
+
+* Nicht primäre Admin-Nodes
+* Storage-Nodes
+* Gateway-Nodes
+* Archiv-Nodes
+
+
+Beachten Sie bei der Vorbereitung des Hinzufügens von Grid-Knoten die folgenden Einschränkungen:
+
+* Der primäre Admin-Node wird während der Erstinstallation bereitgestellt. Sie können während einer Erweiterung keinen primären Admin-Node hinzufügen.
+* Sie können Storage-Nodes und andere Node-Typen in der gleichen Erweiterung hinzufügen.
+* Beim Hinzufügen von Speicherknoten müssen Sie die Anzahl und Position der neuen Knoten sorgfältig planen. Siehe xref:../expand/guidelines-for-adding-object-capacity.adoc[Richtlinien zum Hinzufügen von Objektkapazität].
+* Wenn Sie Archiv-Nodes hinzufügen, beachten Sie, dass jeder Archiv-Node nur Tape über die TSM Middleware (Tivoli Storage Manager) unterstützt.
+* Wenn die Option *New Node Client Network Standard* auf der Seite nicht vertrauenswürdige Clientnetzwerke auf *nicht vertrauenswürdig* gesetzt ist, müssen Client-Anwendungen, die sich mit Erweiterungsknoten über das Client-Netzwerk verbinden, über einen Load Balancer-Endpunkt-Port (*KONFIGURATION* *Netzwerk* *nicht vertrauenswürdige Client-Netzwerke*) eine Verbindung herstellen. Siehe Anweisungen für xref:../admin/index.adoc[Administration von StorageGRID] So ändern Sie die Einstellung für den neuen Knoten und konfigurieren die Load Balancer-Endpunkte.
+

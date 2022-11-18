@@ -1,0 +1,42 @@
+---
+permalink: fabricpool/creating-tenant-account-for-fabricpool.html 
+sidebar: sidebar 
+keywords: fabricPool, tenant, SSO 
+summary: Sie müssen ein Mandantenkonto im Grid Manager for FabricPool Use erstellen. 
+---
+= Erstellen eines Mandantenkontos für FabricPool
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen ein Mandantenkonto im Grid Manager for FabricPool Use erstellen.
+
+.Was Sie und#8217;ll benötigen
+* Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+* Sie haben spezifische Zugriffsberechtigungen.
+
+
+Mandantenkonten ermöglichen Client-Applikationen, Objekte auf StorageGRID zu speichern und abzurufen. Jedes Mandantenkonto verfügt über eine eigene Account-ID, autorisierte Gruppen und Benutzer, Buckets und Objekte.
+
+Sie können dasselbe Mandantenkonto für mehrere ONTAP Cluster verwenden. Oder Sie können bei Bedarf ein dediziertes Mandantenkonto für jedes ONTAP Cluster erstellen.
+
+
+NOTE: Bei diesen Anweisungen wird davon ausgegangen, dass Sie Single Sign-On (SSO) für den Grid Manager konfiguriert haben. Wenn SSO nicht aktiviert ist, verwenden Sie xref:../admin/creating-tenant-account.adoc[Diese Anweisungen zum Erstellen eines Mandantenkontos] Stattdessen.
+
+.Schritte
+. Wählen Sie *MIETER*.
+. Wählen Sie *Erstellen*.
+. Geben Sie einen Anzeigenamen und eine Beschreibung ein.
+. Wählen Sie *S3*.
+. Lassen Sie das Feld *Storage Quota* leer.
+. Wählen Sie *Plattformdienste zulassen* aus, um die Nutzung von Plattformdiensten zu ermöglichen.
++
+Wenn Plattformservices aktiviert sind, kann ein Mandant Funktionen wie CloudMirror Replizierung verwenden, die auf externe Services zugreifen.
+
+. Wählen Sie nicht *eigene Identitätsquelle verwenden* aus.
+. Wählen Sie nicht *S3 Select zulassen* aus.
+. Wählen Sie eine vorhandene föderierte Gruppe aus dem Grid Manager aus, um die ursprüngliche Root-Zugriffsberechtigung für den Mandanten zu erhalten.
+. Wählen Sie *Create Tenant*.
+

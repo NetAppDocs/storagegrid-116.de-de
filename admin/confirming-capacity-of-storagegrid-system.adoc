@@ -1,0 +1,18 @@
+---
+permalink: admin/confirming-capacity-of-storagegrid-system.html 
+sidebar: sidebar 
+keywords: data migration, data capacity for migration 
+summary: Bevor Sie große Datenmengen in das StorageGRID System migrieren, vergewissern Sie sich, dass das StorageGRID System über die Festplattenkapazität verfügt, um das erwartete Volume zu verwalten. 
+---
+= Bestätigen Sie die Kapazität des StorageGRID Systems
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie große Datenmengen in das StorageGRID System migrieren, vergewissern Sie sich, dass das StorageGRID System über die Festplattenkapazität verfügt, um das erwartete Volume zu verwalten.
+
+Wenn das StorageGRID-System einen Archivknoten umfasst und eine Kopie migriertes Objekt in Nearline-Speicher (z. B. Band) gespeichert wurde, stellen Sie sicher, dass der Speicher des Archivknotens über ausreichende Kapazität für das erwartete Volumen migriertes Datenvolumen verfügt.
+
+Sehen Sie sich als Teil der Kapazitätsbewertung das Datenprofil der zu migrierenden Objekte an und berechnen Sie die erforderliche Festplattenkapazität. Weitere Informationen zum Monitoring der Festplattenkapazität Ihres StorageGRID Systems finden Sie unter xref:managing-storage-nodes.adoc[Managen Sie Storage-Nodes] Und xref:../monitor/index.adoc[Monitoring und Fehlerbehebung].

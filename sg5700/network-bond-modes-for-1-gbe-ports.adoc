@@ -1,0 +1,23 @@
+---
+permalink: sg5700/network-bond-modes-for-1-gbe-ports.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, Network bond, Network bonding, Network bond mode, Network-bond mode, independent, active-backup, active backup, 1-gbe, 1 gbe, e5700sg 
+summary: Für die beiden 1-GbE-Management-Ports des E5700SG-Controllers können Sie den Independent Network Bond-Modus oder den Active-Backup-Netzwerk-Bond-Modus wählen, um eine Verbindung zum optionalen Admin-Netzwerk herzustellen. 
+---
+= Netzwerk-Bond-Modi für 1-GbE-Management-Ports
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Für die beiden 1-GbE-Management-Ports des E5700SG-Controllers können Sie den Independent Network Bond-Modus oder den Active-Backup-Netzwerk-Bond-Modus wählen, um eine Verbindung zum optionalen Admin-Netzwerk herzustellen.
+
+Im Independent-Modus ist nur Management-Port 1 mit dem Admin-Netzwerk verbunden. Dieser Modus stellt keinen redundanten Pfad bereit. Management-Port 2 bleibt unverkabelt und für temporäre lokale Verbindungen verfügbar (verwenden Sie IP-Adresse 169.254.0.1)
+
+Im Active-Backup-Modus sind beide Management-Ports 1 und 2 mit dem Admin-Netzwerk verbunden. Es ist jeweils nur ein Port aktiv. Wenn der aktive Port ausfällt, stellt sein Backup-Port automatisch eine Failover-Verbindung bereit. Die Verbindung dieser beiden physischen Ports zu einem logischen Management-Port bietet einen redundanten Pfad zum Admin-Netzwerk.
+
+
+NOTE: Wenn Sie eine temporäre lokale Verbindung zum E5700SG-Controller herstellen müssen, wenn die 1-GbE-Management-Ports für den aktiv-Backup-Modus konfiguriert sind, entfernen Sie die Kabel von beiden Management-Ports, schließen Sie das temporäre Kabel an den Management-Port 2 an und greifen Sie über die IP-Adresse 169.254.0 auf das Gerät zu.
+
+image::../media/e5700sg_bonded_management_ports.gif[E5700SG Management-Port mit Bonded]

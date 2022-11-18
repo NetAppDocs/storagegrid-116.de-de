@@ -1,0 +1,120 @@
+---
+permalink: swift/get-container-consistency-request.html 
+sidebar: sidebar 
+keywords: get container consistency request 
+summary: Die Konsistenzstufe sorgt für einen Kompromiss zwischen der Verfügbarkeit der Objekte und der Konsistenz dieser Objekte über verschiedene Speicherknoten und Standorte hinweg. Die GET Container-Konsistenzanforderung ermöglicht es Ihnen, die auf einen bestimmten Container angewendete Konsistenzstufe zu bestimmen. 
+---
+= ABRUFEN der Container-Konsistenzanforderung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Konsistenzstufe sorgt für einen Kompromiss zwischen der Verfügbarkeit der Objekte und der Konsistenz dieser Objekte über verschiedene Speicherknoten und Standorte hinweg. Die GET Container-Konsistenzanforderung ermöglicht es Ihnen, die auf einen bestimmten Container angewendete Konsistenzstufe zu bestimmen.
+
+
+
+== Anfrage
+
+|===
+| HTTP-Header anfordern | Beschreibung 
+
+
+ a| 
+`X-Auth-Token`
+ a| 
+Gibt das Swift-Authentifizierungs-Token für das Konto an, das für die Anforderung verwendet werden soll.
+
+
+
+ a| 
+`x-ntap-sg-consistency`
+ a| 
+Gibt den Anforderungstyp an, wobei `true` = GET Containerkonsistenz, und `false` = get Container.
+
+
+
+ a| 
+`Host`
+ a| 
+Der Hostname, auf den die Anforderung gerichtet ist.
+
+|===
+
+
+== Anforderungsbeispiel
+
+[listing]
+----
+GET /v1/28544923908243208806/Swift container
+X-Auth-Token: SGRD_3a877009a2d24cb1801587bfa9050f29
+x-ntap-sg-consistency: true
+Host: test.com
+----
+
+
+== Antwort
+
+|===
+| HTTP-Kopfzeile für Antwort | Beschreibung 
+
+
+ a| 
+`Date`
+ a| 
+Datum und Uhrzeit der Antwort.
+
+
+
+ a| 
+`Connection`
+ a| 
+Ob die Verbindung zum Server offen oder geschlossen ist.
+
+
+
+ a| 
+`X-Trans-Id`
+ a| 
+Die eindeutige Transaktions-ID für die Anforderung.
+
+
+
+ a| 
+`Content-Length`
+ a| 
+Die Länge des Reaktionskörpers.
+
+
+
+ a| 
+`x-ntap-sg-consistency`
+ a| 
+Die auf den Container angewendete Konsistenzkontrollebene. Folgende Werte werden unterstützt:
+
+* *Alle*: Alle Knoten erhalten die Daten sofort oder die Anfrage schlägt fehl.
+* *Strong-global*: Garantiert Lese-After-Write-Konsistenz für alle Kundenanfragen über alle Standorte hinweg.
+* *Strong-site*: Garantiert Lese-After-Write Konsistenz für alle Kundenanfragen innerhalb einer Site.
+* *Read-after-New-write*: Sorgt für die Konsistenz von Read-after-write für neue Objekte und eventuelle Konsistenz von Objekt-Updates. Hochverfügbarkeit und garantierte Datensicherung
++
+*Hinweis*: Wenn Ihre Anwendung HEAD Requests für Objekte verwendet, die nicht existieren, erhalten Sie möglicherweise eine hohe Anzahl von 500 internen Serverfehlern, wenn ein oder mehrere Speicherknoten nicht verfügbar sind. Um diese Fehler zu vermeiden, verwenden Sie die Ebene „`Available`“.
+
+* *Verfügbar* (eventuelle Konsistenz für KOPFOPERATIONEN): Verhält sich wie das "`read-after-New-write`" Konsistenzniveau, bietet aber nur eventuelle Konsistenz für DEN KOPFBETRIEB. Bietet höhere Verfügbarkeit FÜR HEAD-Operationen als „`read-after-New-write`“, wenn Storage Nodes nicht verfügbar sind.
+
+
+|===
+
+
+== Antwortbeispiel
+
+[listing]
+----
+HTTP/1.1 204 No Content
+Date: Sat, 29 Nov 2015 01:02:18 GMT
+Connection: CLOSE
+X-Trans-Id: 1936575373
+Content-Length: 0
+x-ntap-sg-consistency: strong-site
+----
+xref:../tenant/index.adoc[Verwenden Sie das Mandantenkonto]

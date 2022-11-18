@@ -1,0 +1,82 @@
+---
+permalink: expand/configuring-expanded-storagegrid-system.html 
+sidebar: sidebar 
+keywords: expansion, configuration 
+summary: Nach Abschluss einer Erweiterung müssen Sie weitere Integrations- und Konfigurationsschritte durchführen. 
+---
+= Konfiguration Schritte nach Erweiterung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nach Abschluss einer Erweiterung müssen Sie weitere Integrations- und Konfigurationsschritte durchführen.
+
+Sie müssen die unten aufgeführten Konfigurationsaufgaben für die Grid-Nodes ausführen, die Sie in Ihrer Erweiterung hinzufügen. Einige Aufgaben können optional sein, je nachdem, welche Optionen bei der Installation und Verwaltung des Systems ausgewählt wurden, und wie Sie die während der Erweiterung hinzugefügten Grid-Nodes konfigurieren möchten.
+
+.Schritte
+. Wenn Sie einen Speicherknoten hinzugefügt haben, führen Sie die folgenden Konfigurationsaufgaben aus:
++
+.. Überprüfen Sie die in Ihren ILM-Regeln verwendeten Speicherpools, um sicherzustellen, dass der neue Speicher verwendet wird. Siehe xref:../ilm/index.adoc[Objektmanagement mit ILM].
++
+*** Wenn Sie einen Standort hinzufügen, erstellen Sie einen Speicherpool für den Standort und aktualisieren Sie ILM-Regeln, um den neuen Speicherpool zu verwenden.
+*** Wenn Sie einem vorhandenen Standort einen Speicherknoten hinzugefügt haben, bestätigen Sie, dass der neue Node die richtige Speicherklasse verwendet.
++
+
+NOTE: Standardmäßig wird der Speicherklasse Alle Speicherknoten ein neuer Speicherknoten zugewiesen und zu Speicherpools hinzugefügt, die diese Klasse für den Standort verwenden. Wenn ein neuer Knoten eine benutzerdefinierte Speicherklasse verwenden soll, müssen Sie diesen manuell der benutzerdefinierten Klasse zuweisen (*ILM* *Speicherstufen*).
+
+
+
+.. Vergewissern Sie sich, dass der Speicherknoten Objekte erfasst. Siehe xref:verifying-storage-node-is-active.adoc[Vergewissern Sie sich, dass der Speicherknoten aktiv ist].
+.. Ausgleich von Daten mit Verfahren zur Einhaltung von Datenkonsistenz (nur wenn die empfohlene Anzahl von Storage-Nodes nicht hinzugefügt werden konnte) Siehexref:rebalancing-erasure-coded-data-after-adding-storage-nodes.adoc[Ausgleich von Daten, die im Erasure Coding ausgeführt werden, nach dem Hinzufügen von Storage-Nodes].
+
+
+. Wenn Sie einen Gateway-Node hinzugefügt haben, führen Sie die folgende Konfigurationsaufgabe aus:
++
+** Wenn Hochverfügbarkeitsgruppen (High Availability groups, HA-Gruppen) für Client-Verbindungen verwendet werden, fügen Sie optional den Gateway-Node einer HA-Gruppe hinzu. Wählen Sie *KONFIGURATION* *Netzwerk* *Hochverfügbarkeitsgruppen* aus, um die Liste der vorhandenen HA-Gruppen zu überprüfen und den neuen Knoten hinzuzufügen. Siehe xref:../admin/index.adoc[StorageGRID verwalten].
+
+
+. Wenn Sie einen Admin-Node hinzugefügt haben, führen Sie die folgenden Konfigurationsaufgaben aus:
++
+.. Wenn SSO (Single Sign-On) für Ihr StorageGRID-System aktiviert ist, erstellen Sie für den neuen Admin-Node eine Vertrauensbasis von einer Vertrauensbasis. Sie können sich erst beim Knoten anmelden, wenn Sie dieses Vertrauen der Vertrauensbasis erstellen. Siehexref:../admin/configuring-sso.adoc[Konfigurieren Sie Single Sign-On].
+.. Wenn Sie den Load Balancer-Service auf Admin-Nodes verwenden möchten, fügen Sie optional den neuen Admin-Node zu einer HA-Gruppe hinzu. Wählen Sie *KONFIGURATION* *Netzwerk* *Hochverfügbarkeitsgruppen* aus, um die Liste der vorhandenen HA-Gruppen zu überprüfen und den neuen Knoten hinzuzufügen. Siehe xref:../admin/index.adoc[StorageGRID verwalten].
+.. Kopieren Sie optional die Admin-Node-Datenbank vom primären Admin-Node zum ErweiterungAdmin-Node, wenn Sie das Attribut und die Audit-Informationen auf jedem Admin-Knoten konsistent halten möchten. Siehe xref:copying-admin-node-database.adoc[Kopieren Sie die Admin-Knoten-Datenbank].
+.. Kopieren Sie optional die Prometheus-Datenbank vom primären Admin-Node zum ErweiterungAdmin-Node, wenn Sie die historischen Metriken auf jedem Admin-Knoten konsistent halten möchten. Siehe xref:copying-prometheus-metrics.adoc[Kopieren Sie die Prometheus-Kennzahlen].
+.. Kopieren Sie optional die vorhandenen Audit-Protokolle vom primären Admin-Node zum ErweiterungAdmin-Node, wenn Sie die historischen Protokollinformationen auf jedem Admin-Knoten konsistent halten möchten. Siehe xref:copying-audit-logs.adoc[Prüfprotokolle kopieren].
+.. Konfigurieren Sie optional den Zugriff auf das System für Audit-Zwecke über eine NFS- oder CIFS-Dateifreigabe. Siehe xref:../admin/index.adoc[StorageGRID verwalten].
++
+
+NOTE: Der Audit-Export über CIFS/Samba wurde veraltet und wird in einer zukünftigen StorageGRID-Version entfernt.
+
+.. Ändern Sie optional den bevorzugten Absender für Benachrichtigungen. Sie können den Erweiterungs-Admin-Knoten zum bevorzugten Absender machen. Andernfalls sendet ein vorhandener als bevorzugter Absender konfigurierter Admin-Node weiterhin Benachrichtigungen, einschließlich AutoSupport-Nachrichten, SNMP-Benachrichtigungen, Alarm-E-Mails und Alarm-E-Mails (Legacy-System). Siehe xref:../admin/index.adoc[StorageGRID verwalten].
+
+
+. Wenn Sie einen Archivknoten hinzugefügt haben, führen Sie die folgenden Konfigurationsaufgaben aus.
++
+.. Konfigurieren Sie die Verbindung des Archiv-Knotens mit dem angestrebten externen Archiv-Storage-System. Wenn Sie die Erweiterung abgeschlossen haben, befinden sich Archiv-Knoten in einem Alarmzustand, bis Sie die Verbindungsinformationen über die Komponente *ARC* *Ziel* konfigurieren. Siehe xref:../admin/index.adoc[StorageGRID verwalten].
+.. Aktualisieren Sie die ILM-Richtlinie, um Objektdaten über den neuen Archivierungs-Node zu archivieren. Siehe xref:../ilm/index.adoc[Objektmanagement mit ILM].
+.. Konfigurieren Sie benutzerdefinierte Alarme für die Attribute, die zur Überwachung der Geschwindigkeit und Effizienz des Datenabrufs von Objektdaten von Archiv-Nodes verwendet werden. Siehe xref:../admin/index.adoc[StorageGRID verwalten].
+
+
+. Um zu prüfen, ob Erweiterungsknoten mit einem nicht vertrauenswürdigen Client-Netzwerk hinzugefügt wurden oder um zu ändern, ob das Client-Netzwerk eines Knotens nicht vertrauenswürdig oder vertrauenswürdig ist, gehen Sie zu *CONFIGURATION* *Network* *UnTrusted Client Network*.
++
+Wenn das Client-Netzwerk auf dem Erweiterungsknoten nicht vertrauenswürdig ist, müssen Verbindungen zum Knoten im Client-Netzwerk über einen Load Balancer-Endpunkt hergestellt werden. Siehe xref:../admin/index.adoc[StorageGRID verwalten].
+
+. Konfigurieren Sie das Domain Name System (DNS).
++
+Wenn Sie für jeden Grid-Node DNS-Einstellungen separat angegeben haben, müssen Sie für die neuen Nodes benutzerdefinierte DNS-Einstellungen pro Node hinzufügen. Siehe xref:../maintain/modifying-dns-configuration-for-single-grid-node.adoc[Ändern der DNS-Konfiguration für einen einzelnen Grid-Node].
+
++
+Eine Best Practice besteht in der netzweiten DNS-Server-Liste, die einige DNS-Server enthält, auf die von jedem Standort aus lokal zugegriffen werden kann. Wenn Sie gerade einen neuen Standort hinzugefügt haben, fügen Sie der Grid-weiten DNS-Konfiguration neue DNS-Server für den Standort hinzu.
+
++
+
+IMPORTANT: Geben Sie zwei bis sechs IPv4-Adressen für DNS-Server an. Wählen Sie DNS-Server aus, auf die jeder Standort lokal zugreifen kann, wenn das Netzwerk landet. Damit soll sichergestellt werden, dass ein islanded-Standort weiterhin Zugriff auf den DNS-Dienst hat. Nach der Konfiguration der DNS-Serverliste für das gesamte Grid können Sie die DNS-Serverliste für jeden Knoten weiter anpassen. Weitere Informationen finden Sie unter xref:../maintain/modifying-dns-configuration-for-single-grid-node.adoc[Ändern der DNS-Konfiguration für einen einzelnen Grid-Node]..
+
+. Wenn Sie einen neuen Standort hinzugefügt haben, vergewissern Sie sich, dass auf die NTP-Server (Network Time Protocol) von diesem Standort aus zugegriffen werden kann. Siehe xref:../maintain/configuring-ntp-servers.adoc[Konfigurieren Sie NTP-Server].
++
+
+IMPORTANT: Vergewissern Sie sich, dass mindestens zwei Nodes an jedem Standort auf mindestens vier externe NTP-Quellen zugreifen können. Wenn nur ein Node an einem Standort die NTP-Quellen erreichen kann, treten Probleme mit dem Timing auf, wenn dieser Node ausfällt. Durch die Festlegung von zwei Nodes pro Standort als primäre NTP-Quellen ist zudem ein genaues Timing gewährleistet, wenn ein Standort vom Rest des Grid isoliert ist.
+
+

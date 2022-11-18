@@ -1,0 +1,38 @@
+---
+permalink: maintain/linux-migrating-grid-node-to-new-host.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, linux, migrate node, migrating node, new host for node 
+summary: 'Sie können StorageGRID Nodes von einem Linux-Host auf einen anderen migrieren, um Host-Wartungsarbeiten \ (z. B. OS-Patches und Neustart\) durchzuführen, ohne die Funktionalität oder Verfügbarkeit Ihres Grid zu beeinträchtigen.' 
+---
+= Linux: Migrieren des Grid-Node zu neuem Host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können StorageGRID Nodes von einem Linux-Host auf einen anderen migrieren, um Host-Wartungsarbeiten (wie BS-Patches und Neustart) durchzuführen, ohne die Funktionalität oder Verfügbarkeit Ihres Grid zu beeinträchtigen.
+
+Sie migrieren einen oder mehrere Knoten von einem Linux-Host (der „`source Host`“) zu einem anderen Linux-Host (der „`target-Host`“). Der Zielhost muss bereits für die Verwendung mit StorageGRID vorbereitet sein.
+
+
+IMPORTANT: Sie können diese Prozedur nur verwenden, wenn Sie die StorageGRID-Bereitstellung mit Migrationssupport geplant haben.
+
+Um einen Grid-Node auf einen neuen Host zu migrieren, müssen beide der folgenden Bedingungen erfüllt sein:
+
+* Shared Storage wird für alle Storage Volumes pro Node verwendet
+* Netzwerkschnittstellen haben zwischen Hosts einheitliche Namen
+
+
+
+NOTE: Führen Sie in einer Produktionsimplementierung nicht mehr als einen Speicherknoten auf einem einzelnen Host aus. Die Verwendung eines dedizierten Hosts für jeden Speicherknoten stellt eine isolierte Ausfalldomäne zur Verfügung.
+
+Andere Node-Typen, wie beispielsweise Admin-Nodes oder Gateway-Nodes, können auf demselben Host implementiert werden. Wenn Sie jedoch mehrere Nodes desselben Typs haben (z. B. zwei Gateway-Nodes), installieren Sie nicht alle Instanzen auf demselben Host.
+
+Weitere Informationen finden Sie unter „`Node Migration Requirements`“ in der StorageGRID-Installationsanleitung für Ihr Linux-Betriebssystem.
+
+xref:deploying-new-linux-hosts.adoc[Implementieren Sie neue Linux-Hosts]
+
+xref:../rhel/index.adoc[Installieren Sie Red hat Enterprise Linux oder CentOS]
+
+xref:../ubuntu/index.adoc[Installieren Sie Ubuntu oder Debian]

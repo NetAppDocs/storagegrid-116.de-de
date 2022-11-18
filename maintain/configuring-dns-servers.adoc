@@ -1,0 +1,36 @@
+---
+permalink: maintain/configuring-dns-servers.html 
+sidebar: sidebar 
+keywords: storagegrid, dns, configuring dns, configure dns, domain name system 
+summary: 'Sie können DNS-Server \(DNS\) hinzufügen, entfernen und aktualisieren, so dass Sie den vollqualifizierten Domänennamen \(FQDN\) anstelle von IP-Adressen verwenden können.' 
+---
+= Konfigurieren Sie DNS-Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können DNS-Server (Domain Name System) hinzufügen, entfernen und aktualisieren, sodass Sie vollständig qualifizierte Domain Name (FQDN) Hostnamen anstelle von IP-Adressen verwenden können.
+
+.Was Sie und#8217;ll benötigen
+* Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+* Sie müssen über die Berechtigung Wartung oder Stammzugriff verfügen.
+* Sie müssen die IP-Adressen der DNS-Server konfigurieren.
+
+
+Wenn Sie DNS-Serverinformationen angeben, können Sie vollständig qualifizierte Domänennamen (FQDN)-Hostnamen anstelle von IP-Adressen für E-Mail- oder SNMP-Benachrichtigungen und AutoSupport verwenden. Es wird empfohlen, mindestens zwei DNS-Server anzugeben.
+
+
+IMPORTANT: Geben Sie zwei bis sechs IP-Adressen für DNS-Server ein. Im Allgemeinen wählen Sie DNS-Server aus, auf die jeder Standort im Falle einer NetzwerkisLanding lokal zugreifen kann. Damit soll sichergestellt werden, dass ein islanded-Standort weiterhin Zugriff auf den DNS-Dienst hat. Nach der Konfiguration der DNS-Serverliste für das gesamte Grid können Sie dies ausführen xref:modifying-dns-configuration-for-single-grid-node.adoc[Passen Sie die DNS-Serverliste für jeden Knoten weiter an].
+
+Wenn die DNS-Serverinformationen nicht angegeben oder falsch konfiguriert sind, wird ein DNST-Alarm für den SSM-Service jedes Grid-Knotens ausgelöst. Der Alarm wird gelöscht, wenn DNS richtig konfiguriert ist und die neuen Serverinformationen alle Grid-Knoten erreicht haben.
+
+.Schritte
+. Wählen Sie *WARTUNG* > *Netzwerk* > *DNS-Server*.
+. Fügen Sie im Abschnitt „Server“ nach Bedarf Aktualisierungen hinzu oder entfernen Sie DNS-Servereinträge.
++
+Als Best Practice empfehlen wir, mindestens zwei DNS-Server pro Standort anzugeben. Sie können bis zu sechs DNS-Server angeben.
+
+. Klicken Sie Auf *Speichern*.
+

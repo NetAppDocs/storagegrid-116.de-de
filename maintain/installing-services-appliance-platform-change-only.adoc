@@ -1,0 +1,28 @@
+---
+permalink: maintain/installing-services-appliance-platform-change-only.html 
+sidebar: sidebar 
+keywords: storagegrid, recover services appliance, recover appliance, recovering appliance, recovering services appliance, install services appliance, installing services appliance, services appliance 
+summary: Wenn Sie einen fehlgeschlagenen Grid-Node wiederherstellen, der auf VMware oder einem Linux-Host gehostet wurde und eine SG100- oder SG1000-Services-Appliance für den Ersatzknoten verwenden, müssen Sie zuerst die neue Appliance-Hardware mit dem gleichen Node-Namen wie der ausgefallene Node installieren. 
+---
+= Installation der Services Appliance (nur Plattformänderung)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie einen fehlgeschlagenen Grid-Node wiederherstellen, der auf VMware oder einem Linux-Host gehostet wurde und eine SG100- oder SG1000-Services-Appliance für den Ersatzknoten verwenden, müssen Sie zuerst die neue Appliance-Hardware mit dem gleichen Node-Namen wie der ausgefallene Node installieren.
+
+Sie müssen über die folgenden Informationen zum ausgefallenen Node verfügen:
+
+* *Knotenname*: Sie müssen die Services-Appliance mit dem gleichen Knotennamen wie der ausgefallene Knoten installieren.
+* *IP-Adressen*: Sie können dem Services-Gerät dieselben IP-Adressen zuweisen wie dem ausgefallenen Knoten, was die bevorzugte Option ist, oder Sie können eine neue ungenutzte IP-Adresse in jedem Netzwerk auswählen.
+
+
+Führen Sie diese Vorgehensweise nur aus, wenn Sie einen ausgefallenen Node, der auf VMware oder Linux gehostet wurde, wiederherstellen und diesen durch einen Node ersetzen, der auf einer Services Appliance gehostet wird.
+
+. Befolgen Sie die Anweisungen zum Installieren einer neuen SG100- oder SG1000-Services-Appliance.
+. Verwenden Sie bei der Aufforderung zu einem Node-Namen den Node-Namen des ausgefallenen Node.
+
+
+xref:../sg100-1000/index.adoc[SG100- und SG1000-Services-Appliances]

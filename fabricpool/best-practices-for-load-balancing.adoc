@@ -1,0 +1,64 @@
+---
+permalink: fabricpool/best-practices-for-load-balancing.html 
+sidebar: sidebar 
+keywords: fabricPool, load balancer, endpoint, load balancing, Layer 7, cloud tier, best practices 
+summary: Bevor Sie StorageGRID als FabricPool-Cloud-Tier anhängen können, müssen Sie mit StorageGRID Grid Manager mindestens einen Load Balancer-Endpunkt konfigurieren. 
+---
+= Best Practices für den Lastausgleich
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie StorageGRID als FabricPool-Cloud-Tier anhängen können, müssen Sie mit StorageGRID Grid Manager mindestens einen Load Balancer-Endpunkt konfigurieren.
+
+
+
+== Was ist Load Balancing?
+
+Wenn Daten vom FabricPool zu einem StorageGRID System verschoben werden, verwendet StorageGRID einen Load Balancer zum Managen des Aufnahme- und Abrufs-Workloads. Der Lastausgleich maximiert die Geschwindigkeit und die Verbindungskapazität, indem der FabricPool Workload auf mehrere Storage-Nodes verteilt wird.
+
+Der StorageGRID Load Balancer-Service wird auf allen Admin-Nodes und allen Gateway-Knoten installiert und bietet Layer 7-Lastausgleich. Sie beendet die TLS-Beendigung von Client-Anforderungen, prüft die Anforderungen und stellt neue sichere Verbindungen zu den Storage-Nodes her.
+
+Der Load Balancer-Service auf jedem Node wird unabhängig ausgeführt, wenn der Client-Datenverkehr an die Storage Nodes weitergeleitet wird. Durch eine Gewichtung leitet der Load Balancer-Service mehr Anfragen an Storage-Nodes mit höherer CPU-Verfügbarkeit weiter.
+
+Obwohl der StorageGRID Load Balancer-Service der empfohlene Load-Balancing-Mechanismus ist, können Sie stattdessen einen Load Balancer eines Drittanbieters integrieren. Weitere Informationen erhalten Sie von Ihrem NetApp Ansprechpartner oder unter https://www.netapp.com/pdf.html?item=/media/17068-tr4626pdf.pdf["TR-4626: StorageGRID Anbieter- und Global Load Balancer"^].
+
+
+NOTE: Der separate Connection Load Balancer (CLB)-Service auf Gateway-Nodes ist veraltet und wird nicht mehr für die Verwendung mit FabricPool empfohlen.
+
+
+
+== Best Practices für den StorageGRID-Lastausgleich
+
+Als allgemeine Best Practice sollte jeder Standort in Ihrem StorageGRID-System zwei oder mehr Nodes mit dem Load Balancer Service umfassen. Ein Standort kann beispielsweise zwei Gateway-Nodes oder einen Admin-Node und einen Gateway-Node umfassen. Vergewissern Sie sich, dass für jeden Load-Balancing-Node eine entsprechende Netzwerk-, Hardware- oder Virtualisierungsinfrastruktur vorhanden ist, unabhängig davon, ob Sie SG100- oder SG1000-Servicegeräte, Bare Metal-Nodes oder VM-basierte Nodes verwenden.
+
+Sie müssen einen StorageGRID Load Balancer-Endpunkt konfigurieren, um den Port zu definieren, den Gateway-Knoten und Admin-Knoten für eingehende und ausgehende FabricPool-Anforderungen verwenden werden.
+
+
+
+== Best Practices für das Endpoint-Zertifikat für Load Balancer
+
+Wenn Sie einen Endpunkt für den Load Balancer für die Verwendung mit FabricPool erstellen, sollten Sie HTTPS als Protokoll verwenden. Eine Kommunikation mit StorageGRID ohne TLS-Verschlüsselung wird unterstützt, wird jedoch nicht empfohlen
+
+Anschließend können Sie entweder ein Zertifikat hochladen, das entweder von einer öffentlichen vertrauenswürdigen oder einer privaten Zertifizierungsstelle signiert ist, oder ein selbstsigniertes Zertifikat generieren. Mit dem Zertifikat kann ONTAP sich mit StorageGRID authentifizieren.
+
+Als Best Practice sollten Sie ein CA-Serverzertifikat verwenden, um die Verbindung zu sichern. Von einer Zertifizierungsstelle signierte Zertifikate können unterbrechungsfrei gedreht werden.
+
+Wenn Sie ein CA-Zertifikat zur Verwendung mit dem Endpunkt des Load Balancer anfordern, stellen Sie sicher, dass der Domänenname auf dem Zertifikat mit dem in ONTAP eingegebenen Servernamen für diesen Load Balancer-Endpunkt übereinstimmt. Wenn möglich, verwenden Sie einen Platzhalter (*), um virtuelle URLs im Hoststil zu ermöglichen. Beispiel:
+
+[listing]
+----
+*.s3.storagegrid.company.com
+----
+Wenn Sie StorageGRID als FabricPool Cloud Tier hinzufügen, müssen Sie beim ONTAP Cluster dasselbe Zertifikat sowie die Zertifikate „Root“ und „untergeordnete Certificate Authority“ (CA) installieren.
+
+
+NOTE: StorageGRID verwendet Serverzertifikate aus verschiedenen Gründen. Wenn Sie eine Verbindung zum Load Balancer Service herstellen, können Sie optional das S3- und Swift-API-Zertifikat verwenden.
+
+Weitere Informationen zum Serverzertifikat für einen Lastausgleichsendpunkt:
+
+* xref:../admin/configuring-load-balancer-endpoints.adoc[Konfigurieren von Load Balancer-Endpunkten]
+* xref:../harden/hardening-guideline-for-server-certificates.adoc[Härtungsrichtlinien für Serverzertifikate]
+

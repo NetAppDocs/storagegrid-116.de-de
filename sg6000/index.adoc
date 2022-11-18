@@ -1,0 +1,35 @@
+---
+permalink: sg6000/index.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, overview, models, features 
+summary: 'Die StorageGRID SG6000 Appliances sind integrierte Storage- und Computing-Plattformen, die als Storage-Nodes in einem StorageGRID System betrieben werden. Diese Appliances können in einer hybriden Grid-Umgebung eingesetzt werden, in der Appliance Storage Nodes und virtuelle \(softwarebasierte\) Storage-Nodes kombiniert werden.' 
+---
+= SG6000 Appliances: Übersicht
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die StorageGRID SG6000 Appliances sind integrierte Storage- und Computing-Plattformen, die als Storage-Nodes in einem StorageGRID System betrieben werden. Diese Appliances können in einer hybriden Grid-Umgebung eingesetzt werden, in der Appliance Storage Nodes und virtuelle (softwarebasierte) Storage-Nodes kombiniert werden.
+
+Die SG6000-Appliances bieten folgende Funktionen:
+
+* Erhältlich in drei Modellen:
++
+** SG6060 umfasst 60 Laufwerke, unterstützt Erweiterungs-Shelfs und verwendet E2800A Controller.
+** SG6060X umfasst 60 Laufwerke, unterstützt Erweiterungs-Shelfs und verwendet E2800B Controller.
++
+
+NOTE: Die SG6060 und SG6060X weisen die gleichen Spezifikationen und Funktionen auf, mit Ausnahme der Positionen der Interconnect-Ports der Storage Controller.
+
+** SGF6024 mit 24 Solid State-Laufwerken (SSDs)
+
+
+* Integrieren Sie die Storage- und Computing-Elemente für einen StorageGRID Storage Node.
+* Schließen Sie das Installationsprogramm für StorageGRID Appliance an, um die Implementierung und Konfiguration von Storage-Nodes zu vereinfachen.
+* Schließen Sie den SANtricity System Manager zum Managen und Überwachen von Storage Controllern und Laufwerken an.
+* Schließen Sie einen Baseboard Management Controller (BMC) für die Überwachung und Diagnose der Hardware im Compute-Controller an.
+* Unterstützung für bis zu vier 10-GbE- oder 25-GbE-Verbindungen mit dem StorageGRID-Grid-Netzwerk und dem Client-Netzwerk.
+* Unterstützung von FIPS-Laufwerken (Federal Information Processing Standard). Wenn diese Laufwerke mit der Laufwerksicherheitsfunktion in SANtricity System Manager verwendet werden, wird ein nicht autorisierter Zugriff auf die Daten verhindert.
+

@@ -1,0 +1,41 @@
+---
+permalink: admin/viewing-storagegrid-license-information.html 
+sidebar: sidebar 
+keywords: storagegrid license, view license, licensed capacity of grid 
+summary: Sie können die Lizenzinformationen für Ihr StorageGRID-System anzeigen, z. B. die maximale Storage-Kapazität eines Grids, wann immer sie benötigt werden. 
+---
+= Zeigen Sie StorageGRID Lizenzinformationen an
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Lizenzinformationen für Ihr StorageGRID-System anzeigen, z. B. die maximale Storage-Kapazität eines Grids, wann immer sie benötigt werden.
+
+.Was Sie und#8217;ll benötigen
+* Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+
+
+Wenn ein Problem mit der Softwarelizenz für dieses StorageGRID-System vorliegt, enthält das Bedienfeld „Systemzustand“ auf dem Dashboard ein Symbol für den Lizenzstatus und einen Link mit *Lizenz*. Die Nummer gibt an, wie viele Probleme mit Lizenzen es gibt.
+
+image::../media/dashboard_health_panel_license_status.png[Lizenzstatus Des Dashboards]
+
+Um die Lizenz anzuzeigen, führen Sie einen der folgenden Schritte aus:
+
+* Wählen Sie im Bedienfeld „Systemzustand“ des Dashboards das Symbol Lizenzstatus oder den Link *Lizenz* aus. Dieser Link wird nur angezeigt, wenn ein Problem mit der Lizenz vorliegt.
+* Wählen Sie *WARTUNG* *System* *Lizenz*.
+
+
+Die Lizenzseite wird angezeigt und enthält die folgenden, schreibgeschützten Informationen zur aktuellen Lizenz:
+
+* StorageGRID System-ID. Hierbei handelt es sich um die eindeutige Identifikationsnummer für diese StorageGRID Installation
+* Seriennummer der Lizenz
+* Lizenzierte Storage-Kapazität des Grid
+* Enddatum der Softwarelizenz
+* Enddatum des Support-Servicevertrags
+* Inhalt der Lizenztext-Datei
+
+
+
+NOTE: Bei Lizenzen, die vor StorageGRID 10.3 ausgestellt wurden, ist die lizenzierte Speicherkapazität nicht in der Lizenzdatei enthalten, und anstelle eines Werts wird eine Meldung „Siehe Lizenzvereinbarung“ angezeigt.

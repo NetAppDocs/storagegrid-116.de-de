@@ -1,0 +1,149 @@
+---
+permalink: primer/performing-maintenance-procedures.html 
+sidebar: sidebar 
+keywords: software upgrade, hotfix, santricity 
+summary: Sie führen verschiedene Wartungsverfahren durch, um Ihr StorageGRID System auf dem neuesten Stand zu halten und eine effiziente Performance zu gewährleisten. Der Grid Manager bietet Tools und Optionen, die den Prozess der Durchführung von Wartungsaufgaben vereinfachen. 
+---
+= Wartung durchführen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie führen verschiedene Wartungsverfahren durch, um Ihr StorageGRID System auf dem neuesten Stand zu halten und eine effiziente Performance zu gewährleisten. Der Grid Manager bietet Tools und Optionen, die den Prozess der Durchführung von Wartungsaufgaben vereinfachen.
+
+
+
+== Software-Updates
+
+Sie können drei Arten von Softwareupdates auf der Seite Software-Aktualisierung im Grid Manager ausführen:
+
+* StorageGRID-Software-Upgrade
+* StorageGRID-Hotfix
+* Upgrade von SANtricity OS
+
+
+
+
+== StorageGRID Software-Upgrades
+
+Sobald eine neue StorageGRID-Funktionsversion verfügbar ist, führt Sie die Seite Software-Upgrade durch das Hochladen der erforderlichen Datei und das Upgrade Ihres StorageGRID-Systems. Sie müssen alle Grid-Nodes für alle Datacenter-Standorte vom primären Admin-Node aus aktualisieren.
+
+Bei einem StorageGRID Software-Upgrade können Client-Applikationen weiterhin Objektdaten aufnehmen und abrufen.
+
+
+
+== Hotfixes
+
+Wenn Probleme mit der Software zwischen Funktionsversionen erkannt und behoben werden, müssen Sie möglicherweise ein Hotfix auf Ihr StorageGRID-System anwenden.
+
+StorageGRID Hotfixes enthalten Software-Änderungen, die außerhalb einer Feature- oder Patch-Freigabe verfügbar gemacht werden. Die gleichen Änderungen sind in einer zukünftigen Version enthalten.
+
+Auf der unten gezeigten Seite StorageGRID Hotfix können Sie eine Hotfix-Datei hochladen.
+
+image::../media/hotfix_choose_file.png[StorageGRID erste Hotfix-Seite]
+
+Der Hotfix wird zuerst auf den primären Admin-Knoten angewendet. Anschließend müssen Sie die Anwendung des Hotfix für andere Grid-Knoten genehmigen, bis alle Knoten im StorageGRID-System dieselbe Softwareversion ausführen. Sie können die Genehmigungssequenz anpassen, indem Sie auswählen, ob einzelne Grid-Nodes, Gruppen von Grid-Nodes oder alle Grid-Nodes genehmigt werden sollen.
+
+
+NOTE: Während alle Grid-Knoten mit der neuen Hotfix-Version aktualisiert werden, können die tatsächlichen Änderungen in einem Hotfix nur bestimmte Dienste auf bestimmten Knotentypen beeinflussen. Ein Hotfix wirkt sich beispielsweise nur auf den LDR-Service auf Storage Nodes aus.
+
+
+
+== Upgrades für SANtricity OS
+
+Möglicherweise müssen Sie die SANtricity OS Software auf den Storage Controllern Ihrer Storage Appliances aktualisieren, falls die Controller nicht optimal funktionieren. Sie können die SANtricity OS-Datei auf den primären Admin-Knoten in Ihrem StorageGRID-System hochladen und das Upgrade vom Grid-Manager anwenden.
+
+Auf der unten gezeigten SANtricity-Seite können Sie die SANtricity OS-Aktualisierungsdatei hochladen.
+
+image::../media/santricity_os_upgrade_first.png[StorageGRID First SANtricity OS Seite]
+
+Nach dem Hochladen der Datei können Sie das Upgrade auf einzelnen Storage-Nodes oder allen Nodes genehmigen. Die Möglichkeit, Nodes selektiv zu genehmigen, erleichtert Ihnen die Planung des Upgrades. Nachdem Sie einen Node für das Upgrade genehmigt haben, führt das System eine Zustandsprüfung durch und installiert das Upgrade, sofern es auf den Node anwendbar ist.
+
+
+
+== Erweiterungsverfahren
+
+Ein StorageGRID System lässt sich mit folgenden Methoden erweitern: Storage-Nodes erhalten mehr Storage-Volumes, ein Datacenter wird um neue Grid-Nodes erweitert oder es wird ein neues Datacenter hinzugefügt. Wenn Storage-Nodes mit der SG6060- oder SG6060X-Storage-Appliance vorhanden sind, können Sie ein oder zwei Erweiterungs-Shelfs hinzufügen, um die Storage-Kapazität des Node zu verdoppeln oder zu verdreifachen.
+
+Eine Erweiterung kann vorgenommen werden, ohne den Betrieb des aktuellen Systems zu unterbrechen. Wenn Sie Nodes oder einen Standort hinzufügen, implementieren Sie zunächst die neuen Nodes und führen dann die Erweiterungsverfahren auf der Seite „Grid Expansion“ aus.
+
+image::../media/grid_expansion_progress.png[Dieses Bild wird durch den umgebenden Text erläutert.]
+
+
+
+== Recovery-Verfahren für die Nodes
+
+Grid Nodes können ausfallen, wenn ein Hardware-, Virtualisierungs-, Betriebssystem- oder Softwarefehler den Node funktionsunfähig oder unzuverlässig macht.
+
+Die Schritte zur Wiederherstellung eines Grid-Node hängen von der Plattform ab, auf der der Grid-Node gehostet wird und vom Typ des Grid-Nodes. Jeder Grid-Node-Typ verfügt über eine bestimmte Recovery-Prozedur, die Sie genau befolgen müssen. Im Allgemeinen versuchen Sie, sofern möglich Daten vom ausgefallenen Grid Node beizubehalten, den ausgefallenen Node zu reparieren oder zu ersetzen, verwenden Sie die Seite Recovery, um den Ersatz-Node zu konfigurieren und die Daten des Node wiederherzustellen.
+
+In diesem Flussdiagramm wird beispielsweise der Wiederherstellungsvorgang angezeigt, wenn ein Admin-Node ausgefallen ist.
+
+image::../media/overview_admin_node_recovery.png[Übersicht: Admin Node Recovery]
+
+
+
+== Verfahren zur Deaktivierung
+
+Es besteht die Möglichkeit, die Grid-Nodes oder den gesamten Datacenter-Standort vom StorageGRID-System entfernt zu werden.
+
+In folgenden Fällen möchten Sie beispielsweise einen oder mehrere Grid-Nodes außer Betrieb nehmen:
+
+* Sie haben dem System einen größeren Speicherknoten hinzugefügt, und Sie möchten einen oder mehrere kleinere Speicherknoten entfernen, während gleichzeitig Objekte erhalten bleiben.
+* Sie benötigen weniger Storage insgesamt.
+* Sie benötigen keinen Gateway-Node oder einen nicht-primären Admin-Node mehr.
+* Das Grid enthält einen getrennten Node, den Sie nicht wiederherstellen können oder wieder online schalten können.
+
+
+Sie können die Seite Decommission Nodes im Grid Manager verwenden, um die folgenden Typen von Grid-Nodes zu entfernen:
+
+* Storage-Nodes, es sei denn, nicht genügend Nodes würden am Standort verbleiben, um bestimmte Anforderungen zu unterstützen
+* Gateway-Nodes
+* Nicht primäre Admin-Nodes
+
+
+image::../media/decommission_nodes_page_all_connected.png[Screenshot der Decommission-Seite]
+
+Sie können die Seite „Decommission Site“ im Grid Manager verwenden, um eine Site zu entfernen. Durch die Stilllegung einer verbundenen Website wird ein operativer Standort entfernt und Daten beibehalten. Durch die Stilllegung eines getrennten Standorts wird ein ausgefallener Standort entfernt, Daten werden jedoch nicht aufbewahrt. Der Assistent „Decommission Site“ führt Sie durch die Auswahl der Site, das Anzeigen von Standortdetails, die Überprüfung der ILM-Richtlinie, das Entfernen von Standortverweisen aus ILM-Regeln und das Beheben von Knotenkonflikten.
+
+image::../media/decommission_site_step_select_site.png[Standort Ausmustern, Schritt 1]
+
+
+
+== Netzwerkwartungsverfahren
+
+Einige der erforderlichen Netzwerkwartungsverfahren sind u. a.:
+
+* Subnetze im Grid-Netzwerk aktualisieren
+* Verwenden des Change IP-Tools zur Änderung der Netzwerkkonfiguration, die ursprünglich während der Grid-Implementierung festgelegt wurde
+* Hinzufügen, Entfernen oder Aktualisieren von DNS-Servern (Domain Name System
+* Hinzufügen, Entfernen oder Aktualisieren von NTP-Servern (Network Time Protocol) stellt sicher, dass die Daten zwischen den Grid-Nodes korrekt synchronisiert werden
+* Wiederherstellung der Netzwerkverbindung zu Nodes, die möglicherweise vom Rest des Grid isoliert wurden
+
+
+
+
+== Verfahren auf Host-Ebene und Middleware
+
+Einige Wartungsverfahren sind speziell für StorageGRID Nodes erhältlich, die unter Linux oder VMware implementiert werden oder sich speziell für andere Komponenten der StorageGRID Lösung eignen. Beispielsweise möchten Sie einen Grid-Node zu einem anderen Linux-Host migrieren oder einen Archiv-Node, der mit Tivoli Storage Manager (TSM) verbunden ist, warten.
+
+
+
+== Klonen von Appliance-Nodes
+
+Mit dem Appliance-Node-Klonen können Sie einen vorhandenen Appliance-Node im Grid durch eine Appliance mit neuerem Design oder höheren Funktionen ersetzen, die Teil desselben logischen StorageGRID-Standorts ist. Dabei werden alle Daten auf die neue Appliance übertragen, die Appliance wird in Betrieb versetzt, um den alten Appliance-Node zu ersetzen und die alte Appliance im Installationszustand zu lassen. Klonen bietet einen einfach zu handhabenden Hardware-Upgrade-Prozess und stellt eine alternative Methode für den Austausch von Appliances dar.
+
+
+
+== Verfahren für den Grid-Node
+
+Möglicherweise müssen Sie bestimmte Verfahren auf einem bestimmten Grid-Node durchführen. Beispielsweise müssen Sie einen Grid-Node neu booten oder einen bestimmten Grid-Node-Service manuell beenden und neu starten. Einige Verfahren für Grid-Nodes können über den Grid-Manager ausgeführt werden. Bei anderen müssen Sie sich am Grid-Node einloggen und die Befehlszeile des Node verwenden.
+
+.Verwandte Informationen
+* xref:../admin/index.adoc[StorageGRID verwalten]
+* xref:../upgrade/index.adoc[Software-Upgrade]
+* xref:../expand/index.adoc[Erweitern Sie Ihr Raster]
+* xref:../maintain/index.adoc[Recovery und Wartung]
+

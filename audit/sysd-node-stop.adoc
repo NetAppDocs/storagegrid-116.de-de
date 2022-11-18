@@ -1,0 +1,30 @@
+---
+permalink: audit/sysd-node-stop.html 
+sidebar: sidebar 
+keywords: storagegrid, audit, message, SYSD, Node Stop 
+summary: Wenn ein Dienst ordnungsgemäß angehalten wird, wird diese Meldung generiert, um anzugeben, dass das Herunterfahren angefordert wurde. Normalerweise wird diese Meldung erst nach einem späteren Neustart gesendet, da die Warteschlange für die Überwachungsmeldung vor dem Herunterfahren nicht gelöscht wird. Suchen Sie nach der SYST-Meldung, die zu Beginn der Abschaltsequenz gesendet wird, wenn der Dienst nicht neu gestartet wurde. 
+---
+= SYSD: Knoten stoppen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn ein Dienst ordnungsgemäß angehalten wird, wird diese Meldung generiert, um anzugeben, dass das Herunterfahren angefordert wurde. Normalerweise wird diese Meldung erst nach einem späteren Neustart gesendet, da die Warteschlange für die Überwachungsmeldung vor dem Herunterfahren nicht gelöscht wird. Suchen Sie nach der SYST-Meldung, die zu Beginn der Abschaltsequenz gesendet wird, wenn der Dienst nicht neu gestartet wurde.
+
+|===
+| Codieren | Feld | Beschreibung 
+
+
+ a| 
+RSLT
+ a| 
+Herunterfahren Reinigen
+ a| 
+Die Art des Herunterfahrens:
+
+SAUCS: Das System wurde sauber abgeschaltet.
+
+|===
+Die Meldung gibt nicht an, ob der Host-Server angehalten wird, sondern nur der Reporting-Service. Das RSLT eines SYSD kann nicht auf ein „nicht ordnungsgemäßes“ Herunterfahren hinweisen, da die Meldung nur durch „sauberes“ Herunterfahren generiert wird.

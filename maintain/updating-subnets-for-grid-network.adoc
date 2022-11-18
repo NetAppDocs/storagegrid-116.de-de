@@ -1,0 +1,44 @@
+---
+permalink: maintain/updating-subnets-for-grid-network.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, subnet, grid network, update subnets 
+summary: 'StorageGRID pflegt eine Liste der für die Kommunikation zwischen Grid-Nodes im Grid Network \(eth0\) verwendeten Subnetze. Zu diesen Einträgen gehören die Subnetze, die von jedem Standort im StorageGRID-System für das Grid-Netzwerk verwendet werden, sowie alle Subnetze, die für NTP, DNS, LDAP oder andere externe Server verwendet werden, auf die über das Grid-Netzwerk-Gateway zugegriffen wird. Wenn Sie Grid-Nodes oder einen neuen Standort in einer Erweiterung hinzufügen, müssen Sie möglicherweise Subnetze zum Grid-Netzwerk aktualisieren oder hinzufügen.' 
+---
+= Subnetze für Grid Network aktualisieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+StorageGRID pflegt eine Liste der für die Kommunikation zwischen den Grid-Nodes im Grid-Netzwerk (eth0) verwendeten Subnetze. Zu diesen Einträgen gehören die Subnetze, die von jedem Standort im StorageGRID-System für das Grid-Netzwerk verwendet werden, sowie alle Subnetze, die für NTP, DNS, LDAP oder andere externe Server verwendet werden, auf die über das Grid-Netzwerk-Gateway zugegriffen wird. Wenn Sie Grid-Nodes oder einen neuen Standort in einer Erweiterung hinzufügen, müssen Sie möglicherweise Subnetze zum Grid-Netzwerk aktualisieren oder hinzufügen.
+
+.Was Sie und#8217;ll benötigen
+* Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+* Sie müssen über die Berechtigung Wartung oder Stammzugriff verfügen.
+* Sie müssen über eine Passphrase für die Bereitstellung verfügen.
+* Sie müssen die Netzwerkadressen in CIDR-Notation der Subnetze haben, die Sie konfigurieren möchten.
+
+
+Wenn Sie eine Erweiterungsaktivität durchführen, die das Hinzufügen eines neuen Subnetzes beinhaltet, müssen Sie das neue Grid-Subnetz hinzufügen, bevor Sie den Erweiterungsvorgang starten.
+
+.Schritte
+. Wählen Sie *WARTUNG* > *Netzwerk* > *Grid-Netzwerk*.
++
+image::../media/maintenance_grid_networks_page.gif[Dieses Bild wird durch den umgebenden Text erläutert.]
+
+. Klicken Sie in der Liste Subnetze auf das Pluszeichen, um ein neues Subnetz in CIDR-Notation hinzuzufügen.
++
+Geben Sie beispielsweise ein `10.96.104.0/22`.
+
+. Geben Sie die Provisionierungs-Passphrase ein, und klicken Sie auf *Speichern*.
++
+Die angegebenen Subnetze werden automatisch für Ihr StorageGRID System konfiguriert.
+
+. Laden Sie ein neues Wiederherstellungspaket aus dem Grid Manager herunter.
++
+.. Wählen Sie *WARTUNG* > *System* > *Wiederherstellungspaket*.
+.. Geben Sie die Provisionierungs-Passphrase ein.
+
+
+

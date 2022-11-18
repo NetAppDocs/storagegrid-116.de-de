@@ -1,0 +1,217 @@
+---
+permalink: primer/viewing-nodes-page.html 
+sidebar: sidebar 
+keywords: nodes page, connection state, unknown, administratively down, critical, major, minor, icon 
+summary: Wenn Sie detailliertere Informationen über Ihr StorageGRID-System als das Dashboard erhalten, können Sie auf der Seite Nodes Metriken für das gesamte Grid, jeden Standort im Raster und jeden Node an einem Standort anzeigen. 
+---
+= Zeigen Sie die Seite Knoten an
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie detailliertere Informationen über Ihr StorageGRID-System als das Dashboard erhalten, können Sie auf der Seite Nodes Metriken für das gesamte Grid, jeden Standort im Raster und jeden Node an einem Standort anzeigen.
+
+image::../media/nodes_table.png[Knoten-Menü]
+
+Die Tabelle Knoten enthält alle Standorte und Knoten Ihres StorageGRID Systems. Für jeden Node werden zusammenfassende Informationen angezeigt. Wenn ein Node über eine aktive Warnmeldung verfügt, wird neben dem Node-Namen ein Symbol angezeigt. Wenn der Knoten verbunden ist und keine aktiven Warnmeldungen enthält, wird kein Symbol angezeigt.
+
+
+
+== Symbole für Verbindungsstatus
+
+* *Nicht verbunden - Unbekannt* image:../media/icon_alarm_blue_unknown.png["Blaues Fragezeichen-Symbol"]: Der Knoten ist aus einem unbekannten Grund nicht mit dem Raster verbunden. Beispielsweise wurde die Netzwerkverbindung zwischen den Knoten unterbrochen oder der Strom ist ausgefallen. Die Warnung * kann nicht mit Node* kommunizieren. Auch andere Warnmeldungen können aktiv sein. Diese Situation erfordert sofortige Aufmerksamkeit.
++
+
+NOTE: Ein Node wird möglicherweise während des verwalteten Herunterfahrens als „Unbekannt“ angezeigt. In diesen Fällen können Sie den Status Unbekannt ignorieren.
+
+* *Nicht verbunden - Administrativ unten* image:../media/icon_alarm_gray_administratively_down.png["Graues Fragensymbol"]: Der Knoten ist aus einem erwarteten Grund nicht mit dem Netz verbunden. Beispielsweise wurde der Node oder die Services für den Node ordnungsgemäß heruntergefahren, der Node neu gebootet oder die Software wird aktualisiert. Mindestens ein Alarm ist möglicherweise auch aktiv.
+
+
+Wenn ein Knoten vom Raster getrennt wird, wird möglicherweise eine zugrunde liegende Warnmeldung angezeigt, aber nur das Symbol „`not connected`“ wird angezeigt. Um die aktiven Warnmeldungen für einen Node anzuzeigen, wählen Sie den Node aus.
+
+
+
+== Warnungssymbole
+
+Wenn eine aktive Warnmeldung für einen Node vorhanden ist, wird neben dem Node-Namen eines der folgenden Symbole angezeigt:
+
+* * Kritisch* image:../media/icon_alert_red_critical.png["Symbol Warnung Rot Kritisch"]: Es besteht eine anormale Bedingung, die die normalen Vorgänge eines StorageGRID-Knotens oder -Dienstes gestoppt hat. Sie müssen das zugrunde liegende Problem sofort lösen. Wenn das Problem nicht behoben ist, kann es zu Serviceunterbrechungen und Datenverlusten kommen.
+* *Major* image:../media/icon_alert_orange_major.png["Icon Alert Orange Major"]: Es besteht eine anormale Bedingung, die entweder die aktuellen Operationen beeinflusst oder sich dem Schwellenwert für eine kritische Warnung nähert. Sie sollten größere Warnmeldungen untersuchen und alle zugrunde liegenden Probleme beheben, um sicherzustellen, dass die anormale Bedingung den normalen Betrieb eines StorageGRID Node oder Service nicht beendet.
+* *Klein* image:../media/icon_alert_yellow_minor.png["Symbol Alarm Gelb Minor"]: Das System funktioniert normal, aber es besteht eine anormale Bedingung, die die Fähigkeit des Systems beeinträchtigen könnte, zu arbeiten, wenn es fortgesetzt wird. Sie sollten kleinere Warnmeldungen überwachen und beheben, die sich nicht selbst beheben lassen, um sicherzustellen, dass sie nicht zu einem schwerwiegenderen Problem führen.
+
+
+
+
+== Details für ein System, einen Standort oder einen Node
+
+Um die verfügbaren Informationen anzuzeigen, wählen Sie den Namen des Rasters, des Standorts oder Nodes wie folgt aus:
+
+* Wählen Sie den Grid-Namen aus, um eine Zusammenfassung der Statistiken für Ihr gesamtes StorageGRID System anzuzeigen. (Der Screenshot zeigt ein System mit dem Namen „StorageGRID Deployment“.)
+* Wählen Sie einen bestimmten Datacenter-Standort aus, um eine aggregierte Zusammenfassung der Statistiken für alle Nodes an diesem Standort anzuzeigen.
+* Wählen Sie einen bestimmten Node aus, um detaillierte Informationen zu diesem Node anzuzeigen.
+
+
+
+
+== Registerkarten für die Seite Knoten
+
+Die Registerkarten oben auf der Seite Knoten basieren auf dem, was Sie im Baum links auswählen.
+
+[cols="1a,2a,1a"]
+|===
+| Registerkartenname | Beschreibung | Enthalten für 
+
+
+ a| 
+Überblick
+ a| 
+* Enthält grundlegende Informationen zu den einzelnen Nodes.
+* Zeigt alle aktiven Meldungen, die den Node betreffen.
+
+ a| 
+Alle Nodes
+
+
+
+ a| 
+Trennt
+ a| 
+* Zeigt die CPU-Auslastung und die Arbeitsspeicherauslastung für jeden Node an
+* Bei Appliance-Nodes werden zusätzliche Hardwareinformationen bereitgestellt.
+
+ a| 
+Alle Nodes
+
+
+
+ a| 
+Netzwerk
+ a| 
+Zeigt ein Diagramm an, in dem der empfangene und über die Netzwerkschnittstellen gesendete Netzwerkverkehr angezeigt wird. In der Ansicht für einen einzelnen Node werden zusätzliche Informationen für den Node angezeigt.
+ a| 
+Alle Nodes, jeden Standort und das gesamte Grid
+
+
+
+ a| 
+Storage
+ a| 
+* Enthält Details zu den Festplattengeräten und Volumes auf jedem Knoten.
+* Enthält Diagramme für Storage-Nodes, die den Objekt-Storage und den über die Zeit verwendeten Metadaten-Storage zeigen.
+
+ a| 
+Alle Nodes, jeden Standort und das gesamte Grid
+
+
+
+ a| 
+Objekte
+ a| 
+* Bietet Informationen zu Aufnahme- und Abrufraten für S3 und Swift.
+* Für Storage-Nodes werden Objektanzahl und Informationen zu Metadatenspeicherabfragen und zur Hintergrundüberprüfung bereitgestellt.
+
+ a| 
+Storage-Nodes, jeden Standort und das gesamte Grid
+
+
+
+ a| 
+ILM
+ a| 
+Stellt Informationen zu ILM-Vorgängen (Information Lifecycle Management) bereit.
+
+* Für Storage-Nodes enthält Details zur ILM-Bewertung und zur Hintergrund-Verifizierung zum Löschen codierter Objekte.
+* Zeigt für jeden Standort und das gesamte Grid ein Diagramm der ILM-Warteschlange im Laufe der Zeit an.
+* Stellt im gesamten Grid die geschätzte Zeit zum Abschluss eines vollständigen ILM-Scans aller Objekte zur Verfügung.
+
+ a| 
+Storage-Nodes, jeden Standort und das gesamte Grid
+
+
+
+ a| 
+Load Balancer
+ a| 
+Enthält Performance- und Diagnosediagramme zum Load Balancer-Service.
+
+* Bietet für jeden Standort eine Zusammenfassung der Statistiken für alle Nodes an diesem Standort.
+* Das gesamte Raster bietet eine aggregierte Zusammenfassung der Statistiken für alle Standorte.
+
+ a| 
+Admin-Nodes und Gateway-Nodes, jeden Standort und das gesamte Grid
+
+
+
+ a| 
+Plattform-Services
+ a| 
+Dieser Service bietet Informationen zu S3-Plattform-Servicevorgängen an einem Standort.
+ a| 
+Jeder Standort
+
+
+
+ a| 
+SANtricity System Manager
+ a| 
+Zugriff auf SANtricity System Manager Vom SANtricity System Manager können Sie die Hardware-Diagnose und Umgebungsinformationen für den Storage Controller sowie Probleme im Zusammenhang mit den Laufwerken überprüfen.
+ a| 
+Nodes von Storage-Appliances
+
+*Hinweis*: Die Registerkarte SANtricity System Manager wird nicht angezeigt, wenn die Controller-Firmware auf dem Speichergerät vor 8.70 liegt (11.70).
+
+|===
+
+
+== Kennzahlen von Prometheus
+
+Der Prometheus-Service auf Admin-Knoten sammelt Zeitreihungskennzahlen aus den Diensten auf allen Knoten.
+
+Die von Prometheus erfassten Kennzahlen werden an verschiedenen Stellen im Grid Manager verwendet:
+
+* *Knoten Seite*: Die Grafiken und Diagramme auf den Registerkarten, die auf der Seite Knoten verfügbar sind, zeigen mit dem Grafana Visualization Tool die von Prometheus erfassten Zeitreihenmetriken an. Grafana zeigt Zeitserien-Daten im Diagramm- und Diagrammformat an, Prometheus dient als Back-End-Datenquelle.
++
+image::../media/nodes_page_network_traffic_graph.png[Prometheus Diagramm]
+
+* *Alerts*: Warnmeldungen werden auf bestimmten Schweregraden ausgelöst, wenn Alarmregelbedingungen, die Prometheus-Metriken verwenden, als wahr bewerten.
+* *Grid Management API*: Sie können Prometheus-Kennzahlen in benutzerdefinierten Alarmregeln oder mit externen Automatisierungstools verwenden, um Ihr StorageGRID-System zu überwachen. Eine vollständige Liste der Prometheus-Kennzahlen finden Sie über die Grid Management API. (Wählen Sie oben im Grid Manager das Hilfesymbol aus und wählen Sie *API-Dokumentation* *Metriken*.) Während mehr als tausend Kennzahlen zur Verfügung stehen, ist nur eine relativ kleine Zahl zur Überwachung der kritischsten StorageGRID Vorgänge erforderlich.
++
+
+NOTE: Metriken, die _privat_ in ihren Namen enthalten, sind nur zur internen Verwendung vorgesehen und können ohne Ankündigung zwischen StorageGRID Versionen geändert werden.
+
+* Die Seite *SUPPORT* *Tools* *Diagnose* und die *SUPPORT* *Tools* *Metriken* Seite: Diese Seiten, die hauptsächlich für den technischen Support bestimmt sind, bieten eine Reihe von Werkzeugen und Diagrammen, die die Werte der Prometheus-Kennzahlen nutzen.
++
+
+NOTE: Einige Funktionen und Menüelemente auf der Seite Metriken sind absichtlich nicht funktionsfähig und können sich ändern.
+
+
+
+
+
+== StorageGRID Attribute
+
+Attribute berichten Werte und Status für viele Funktionen des StorageGRID-Systems. Für jeden Grid-Node, jeden Standort und das gesamte Raster sind Attributwerte verfügbar.
+
+StorageGRID-Attribute werden an verschiedenen Stellen im Grid Manager verwendet:
+
+* *Knoten Seite*: Viele der auf der Seite Knoten angezeigten Werte sind StorageGRID-Attribute. (Auf den Seiten Nodes werden auch die Kennzahlen Prometheus angezeigt.)
+* *Alarme*: Wenn Attribute definierte Schwellenwerte erreichen, werden StorageGRID-Alarme (Altsystem) auf bestimmten Schweregraden ausgelöst.
+* *Grid Topology Tree*: Attributwerte werden im Grid Topology Tree angezeigt (*UNTERSTÜTZUNG* *Tools* *Grid Topology*).
+* *Ereignisse*: Systemereignisse treten auf, wenn bestimmte Attribute einen Fehler oder Fehlerzustand für einen Knoten aufzeichnen, einschließlich Fehler wie Netzwerkfehler.
+
+
+
+
+=== Attributwerte
+
+Die Attribute werden nach bestem Aufwand gemeldet und sind ungefähr richtig. Unter bestimmten Umständen können Attributaktualisierungen verloren gehen, beispielsweise der Absturz eines Service oder der Ausfall und die Wiederherstellung eines Grid-Node.
+
+Darüber hinaus kann es zu Verzögerungen bei der Ausbreitung kommen, dass die Meldung von Attributen beeinträchtigt wird. Aktualisierte Werte für die meisten Attribute werden in festen Intervallen an das StorageGRID-System gesendet. Es kann mehrere Minuten dauern, bis ein Update im System sichtbar ist, und zwei Attribute, die sich mehr oder weniger gleichzeitig ändern, können zu leicht unterschiedlichen Zeiten gemeldet werden.
+
+.Verwandte Informationen
+* xref:../monitor/index.adoc[Monitoring und Fehlerbehebung]
+* xref:monitoring-and-managing-alerts.adoc[Monitoring und Management von Warnmeldungen]
+* xref:using-storagegrid-support-options.adoc[Nutzen Sie StorageGRID Support-Optionen]
+

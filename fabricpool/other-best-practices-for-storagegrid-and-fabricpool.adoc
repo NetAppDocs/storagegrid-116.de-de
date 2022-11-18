@@ -1,0 +1,41 @@
+---
+permalink: fabricpool/other-best-practices-for-storagegrid-and-fabricpool.html 
+sidebar: sidebar 
+keywords: fabricPool, best practices, encryption, compressions, tiering, AFF, consistency 
+summary: Wenn Sie ein StorageGRID-System für die Verwendung mit FabricPool konfigurieren, sollten Sie die Einstellung globaler Optionen vermeiden, die sich auf die Speicherung Ihrer Daten auswirken könnten. 
+---
+= Weitere Best Practices für StorageGRID und FabricPool
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie ein StorageGRID-System für die Verwendung mit FabricPool konfigurieren, sollten Sie die Einstellung globaler Optionen vermeiden, die sich auf die Speicherung Ihrer Daten auswirken könnten.
+
+
+
+== Objektverschlüsselung
+
+Bei der Konfiguration von StorageGRID können Sie optional die globale *gespeicherte Objektverschlüsselung*-Einstellung aktivieren, wenn für andere StorageGRID-Clients eine Datenverschlüsselung erforderlich ist (*KONFIGURATION* *System* *Grid-Optionen*). Die Daten, die von FabricPool zu StorageGRID verschoben werden, sind bereits verschlüsselt, d. h. die Aktivierung der StorageGRID-Einstellung ist nicht erforderlich. Die Client-seitige Verschlüsselung ist Eigentum von ONTAP.
+
+
+
+== Objektkomprimierung
+
+Aktivieren Sie bei der Konfiguration von StorageGRID nicht die globale *Komprimierung gespeicherter Objekte*-Einstellung (*CONFIGURATION* *System* *Grid-Optionen*). Die Daten, die von FabricPool zu StorageGRID verschoben werden, werden bereits komprimiert. Durch das Aktivieren von *compress gespeicherter Objekte* wird die Größe eines Objekts nicht weiter verringert.
+
+
+
+== Konsistenzstufe
+
+Für FabricPool Buckets wird die empfohlene Bucket-Konsistenzstufe „`read-after-New-write`“ empfohlen. Die Konsistenzstufe „`verfügbar`“ wird nicht empfohlen. Siehe xref:../tenant/changing-consistency-level.adoc[Ändern der Konsistenzstufe].
+
+
+
+== FabricPool Tiering
+
+Wenn der StorageGRID-Node Storage verwendet, der einem NetApp ONTAP System zugewiesen ist, vergewissern Sie sich, dass auf dem Volume keine FabricPool-Tiering-Richtlinie aktiviert ist. Wenn beispielsweise ein StorageGRID Node auf einem VMware Host ausgeführt wird, stellen Sie sicher, dass für das Volume, das den Datastore für den StorageGRID Node unterstützt, keine FabricPool-Tiering-Richtlinie aktiviert ist. Das Deaktivieren von FabricPool Tiering für Volumes, die in Verbindung mit StorageGRID Nodes verwendet werden, vereinfacht die Fehlerbehebung und Storage-Vorgänge.
+
+
+IMPORTANT: Verwenden Sie FabricPool niemals, um StorageGRID-bezogene Daten in das Tiering zurück zu StorageGRID selbst zu verschieben. Das Tiering von StorageGRID-Daten zurück in die StorageGRID verbessert die Fehlerbehebung und reduziert die Komplexität von betrieblichen Abläufen.

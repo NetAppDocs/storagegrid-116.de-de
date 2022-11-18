@@ -1,0 +1,178 @@
+---
+permalink: admin/configure-autosupport-grid-manager.html 
+sidebar: sidebar 
+keywords: how to configure autosupport, what is autosupport-on-demand 
+summary: Sie können die AutoSupport-Funktion und die einzelnen AutoSupport-Optionen bei der Erstinstallation von StorageGRID aktivieren oder später aktivieren. 
+---
+= Konfigurieren Sie AutoSupport
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die AutoSupport-Funktion und die einzelnen AutoSupport-Optionen bei der Erstinstallation von StorageGRID aktivieren oder später aktivieren.
+
+.Was Sie und#8217;ll benötigen
+* Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+* Sie haben die Berechtigung Root-Zugriff oder andere Grid-Konfigurationen.
+* Wenn Sie das HTTPS- oder HTTP-Protokoll für das Senden von AutoSupport-Meldungen verwenden, haben Sie Outbound-Internetzugang für den primären Admin-Node entweder direkt oder über einen Proxy-Server bereitgestellt (eingehende Verbindungen sind nicht erforderlich).
+* Wenn Sie das HTTPS- oder HTTP-Protokoll verwenden und einen Proxy-Server verwenden möchten, haben Sie die Möglichkeit xref:configuring-admin-proxy-settings.adoc[Administrator-Proxy-Server konfiguriert].
+* Wenn Sie SMTP als Protokoll für AutoSupport-Meldungen verwenden, haben Sie einen SMTP-Mail-Server konfiguriert. Die gleiche E-Mail-Serverkonfiguration wird für Benachrichtigungen über Alarm E-Mails verwendet (altes System).
+
+
+
+
+== Geben Sie das Protokoll für AutoSupport Meldungen an
+
+Sie können eines der folgenden Protokolle zum Senden von AutoSupport Meldungen verwenden:
+
+* *HTTPS*: Dies ist die Standard-Einstellung und wird für Neuinstallationen empfohlen. Das HTTPS-Protokoll verwendet Port 443. Wenn Sie die Funktion AutoSupport On Demand aktivieren möchten, müssen Sie das HTTPS-Protokoll verwenden.
+* *HTTP*: Dieses Protokoll ist nicht sicher, es sei denn, es wird in einer vertrauenswürdigen Umgebung verwendet, in der der Proxyserver beim Senden von Daten über das Internet in HTTPS konvertiert. Das HTTP-Protokoll verwendet Port 80.
+* *SMTP*: Verwenden Sie diese Option, wenn Sie AutoSupport-Nachrichten per E-Mail versenden möchten. Wenn Sie SMTP als Protokoll für AutoSupport-Meldungen verwenden, müssen Sie auf der Seite Legacy E-Mail-Einrichtung einen SMTP-Mail-Server konfigurieren (*SUPPORT* *Alere)* *Legacy-E-Mail-Setup*).
++
+
+NOTE: SMTP war das einzige Protokoll, das vor der StorageGRID 11.2-Version für AutoSupport-Meldungen verfügbar war. Wenn Sie zunächst eine frühere Version von StorageGRID installiert haben, ist SMTP möglicherweise das ausgewählte Protokoll.
+
+
+
+Das von Ihnen festgelegte Protokoll wird für das Senden aller Typen von AutoSupport Meldungen verwendet.
+
+.Schritte
+. Wählen Sie *SUPPORT* *Tools* *AutoSupport*.
++
+Die Seite AutoSupport wird angezeigt, und die Registerkarte *Einstellungen* ist ausgewählt.
+
++
+image::../media/autosupport_settings_tab.png[AutoSupport-Seite mit Registerkarte Einstellungen selected.png]
+
+. Wählen Sie das Protokoll aus, das Sie zum Senden von AutoSupport Meldungen verwenden möchten.
+. Wenn Sie *HTTPS* ausgewählt haben, wählen Sie aus, ob die Verbindung zum NetApp Support Server mit einem TLS-Zertifikat gesichert werden soll.
++
+** *NetApp Supportzertifikat verwenden* (Standard): Die Zertifikatvalidierung stellt sicher, dass die Übertragung von AutoSupport Meldungen sicher ist. Das NetApp Supportzertifikat ist bereits mit der StorageGRID Software installiert.
+** *Zertifikat nicht überprüfen*: Wählen Sie diese Option nur aus, wenn Sie einen guten Grund haben, keine Zertifikatvalidierung zu verwenden, z.B. wenn es ein vorübergehendes Problem mit einem Zertifikat gibt.
+
+
+. Wählen Sie *Speichern*.
++
+Alle wöchentlichen, vom Benutzer ausgelösten und von Ereignissen ausgelösten Meldungen werden über das ausgewählte Protokoll gesendet.
+
+
+
+
+
+== Deaktivieren Sie wöchentliche AutoSupport-Meldungen
+
+Standardmäßig wird das StorageGRID System so konfiguriert, dass einmal pro Woche eine AutoSupport Meldung an den NetApp Support gesendet wird.
+
+Um festzustellen, wann die wöchentliche AutoSupport-Nachricht gesendet wird, gehen Sie zur Registerkarte *AutoSupport* *results*. Sehen Sie im Abschnitt *Wöchentliche AutoSupport* den Wert für *Nächste geplante Zeit* an.
+
+image::../media/autosupport_weekly_next_scheduled_time.png[Wöchentlicher AutoSupport zur nächsten geplanten Zeit]
+
+Sie können das automatische Senden von wöchentlichen AutoSupport Meldungen jederzeit deaktivieren.
+
+.Schritte
+. Wählen Sie *SUPPORT* *Tools* *AutoSupport*.
+. Deaktivieren Sie das Kontrollkästchen *wöchentlicher AutoSupport* aktivieren.
+. Wählen Sie *Speichern*.
+
+
+
+
+== Deaktivieren Sie ereignisgesteuerte AutoSupport Meldungen
+
+Standardmäßig wird das StorageGRID System so konfiguriert, dass es eine AutoSupport Meldung an den NetApp Support sendet, wenn eine wichtige Meldung oder ein anderes bedeutendes Systemereignis auftritt.
+
+Sie können AutoSupport Meldungen, bei denen Ereignisse ausgelöst wurden, jederzeit deaktivieren.
+
+
+NOTE: Auch bei Event-ausgelösten AutoSupport-Meldungen werden diese unterdrückt, wenn Sie E-Mail-Benachrichtigungen systemweit unterdrücken. (Wählen Sie *KONFIGURATION* *System* *Anzeigeoptionen*. Wählen Sie dann *Benachrichtigung Alle unterdrücken*.)
+
+.Schritte
+. Wählen Sie *SUPPORT* *Tools* *AutoSupport*.
+. Deaktivieren Sie das Kontrollkästchen * Event-Triggered AutoSupport* aktivieren.
+. Wählen Sie *Speichern*.
+
+
+
+
+== AutoSupport-on-Demand aktivieren
+
+AutoSupport On Demand kann Ihnen bei der Lösung von Problemen helfen, an denen der technische Support aktiv arbeitet.
+
+AutoSupport-on-Demand ist standardmäßig deaktiviert. Wenn Sie diese Funktion aktivieren, kann der technische Support von Ihrem StorageGRID System automatisch AutoSupport Meldungen senden. Der technische Support kann auch das Abfrageintervall für AutoSupport-on-Demand-Abfragen festlegen.
+
+Der technische Support kann AutoSupport bei Bedarf nicht aktivieren oder deaktivieren.
+
+.Schritte
+. Wählen Sie *SUPPORT* *Tools* *AutoSupport*.
+. Wählen Sie *HTTPS* für das Protokoll aus.
+. Aktivieren Sie das Kontrollkästchen *Wochenendfach-AutoSupport aktivieren*.
+. Aktivieren Sie das Kontrollkästchen * AutoSupport on Demand aktivieren*.
+. Wählen Sie *Speichern*.
++
+AutoSupport-on-Demand ist aktiviert, und der technische Support kann AutoSupport-on-Demand-Anfragen an StorageGRID senden.
+
+
+
+
+
+== Deaktivieren Sie die Prüfung auf Softwareupdates
+
+Standardmäßig wendet sich StorageGRID an NetApp, um zu ermitteln, ob Software-Updates für Ihr System verfügbar sind. Wenn ein StorageGRID-Hotfix oder eine neue Version verfügbar ist, wird die neue Version auf der Seite StorageGRID-Aktualisierung angezeigt.
+
+Bei Bedarf können Sie optional die Prüfung auf Softwareupdates deaktivieren. Wenn Ihr System beispielsweise keinen WAN-Zugriff hat, sollten Sie die Prüfung deaktivieren, um Download-Fehler zu vermeiden.
+
+.Schritte
+. Wählen Sie *SUPPORT* *Tools* *AutoSupport*.
+. Deaktivieren Sie das Kontrollkästchen *nach Softwareupdates suchen*.
+. Wählen Sie *Speichern*.
+
+
+
+
+== Fügen Sie ein weiteres AutoSupport Ziel hinzu
+
+Wenn Sie AutoSupport aktivieren, werden Zustandsmeldungen und Statusmeldungen an den NetApp Support gesendet. Sie können ein zusätzliches Ziel für alle AutoSupport Meldungen angeben.
+
+Informationen zum Überprüfen oder Ändern des Protokolls zum Senden von AutoSupport Meldungen finden Sie in den Anweisungen an  the protocol for AutoSupport messages.
+
+
+NOTE: Sie können das SMTP-Protokoll nicht zum Senden von AutoSupport Meldungen an ein zusätzliches Ziel verwenden.
+
+.Schritte
+. Wählen Sie *SUPPORT* *Tools* *AutoSupport*.
+. Wählen Sie *zusätzliches AutoSupport-Ziel aktivieren*.
++
+Die Felder „zusätzliche AutoSupport-Zieladresse“ werden angezeigt.
+
++
+image::../media/autosupport_additional_destinations.png[AutoSupport fügt weitere Ziele hinzu]
+
+. Geben Sie den Hostnamen oder die IP-Adresse des Servers eines zusätzlichen AutoSupport-Zielservers ein.
++
+
+NOTE: Sie können nur ein weiteres Ziel eingeben.
+
+. Geben Sie den Port ein, der für die Verbindung zu einem zusätzlichen AutoSupport-Zielserver verwendet wird (standardmäßig ist Port 80 für HTTP oder Port 443 für HTTPS).
+. Um Ihre AutoSupport-Nachrichten mit Zertifikatvalidierung zu senden, wählen Sie im Dropdown-Menü *Zertifikatvalidierung* *Custom CA-Bundle verwenden* aus. Führen Sie dann einen der folgenden Schritte aus:
++
+** Verwenden Sie ein Bearbeitungswerkzeug, um alle Inhalte jeder PEM-kodierten CA-Zertifikatdatei in das Feld *CA Bundle* zu kopieren und einzufügen, das in der Reihenfolge der Zertifikatskette verkettet ist. Sie müssen Folgendes einschließen `----BEGIN CERTIFICATE----` Und `----END CERTIFICATE----` Wählen Sie aus.
++
+image::../media/autosupport_certificate.png[AutoSupport-Zertifikat]
+
+** Wählen Sie *Durchsuchen*, navigieren Sie zu der Datei mit den Zertifikaten und wählen Sie dann *Öffnen*, um die Datei hochzuladen. Die Zertifikatvalidierung stellt sicher, dass die Übertragung von AutoSupport Meldungen sicher ist.
+
+
+. Um Ihre AutoSupport-Nachrichten ohne Zertifikatvalidierung zu senden, wählen Sie im Dropdown-Menü * Zertifikatvalidierung* * * * nicht verifizieren aus.
++
+Wählen Sie diese Option nur aus, wenn Sie einen guten Grund haben, die Zertifikatvalidierung nicht zu verwenden, z. B. wenn ein vorübergehendes Problem mit einem Zertifikat vorliegt.
+
++
+Eine Warnung: "Sie verwenden kein TLS-Zertifikat, um die Verbindung zum zusätzlichen AutoSupport-Ziel zu sichern."
+
+. Wählen Sie *Speichern*.
++
+Alle zukünftigen wöchentlichen, ereignisgesteuert und vom Benutzer ausgelösten AutoSupport Meldungen werden an das zusätzliche Ziel gesendet.
+
+

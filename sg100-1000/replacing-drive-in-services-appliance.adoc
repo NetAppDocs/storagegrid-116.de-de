@@ -1,0 +1,67 @@
+---
+permalink: sg100-1000/replacing-drive-in-services-appliance.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, Replacing, replace, drive, remove, removing, removal, install, installing, installation 
+summary: Die SSDs in der Services-Appliance enthalten das Betriebssystem StorageGRID. Wenn die Appliance als Admin-Node konfiguriert ist, enthalten die SSDs außerdem Prüfprotokolle, Kennzahlen und Datenbanktabellen. Die Laufwerke werden aus Redundanzgründen mithilfe von RAID1 gespiegelt. Wenn eines der Laufwerke ausfällt, müssen Sie es so schnell wie möglich ersetzen, um Redundanz sicherzustellen. 
+---
+= Ersetzen Sie das Laufwerk in der Services Appliance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die SSDs in der Services-Appliance enthalten das Betriebssystem StorageGRID. Wenn die Appliance als Admin-Node konfiguriert ist, enthalten die SSDs außerdem Prüfprotokolle, Kennzahlen und Datenbanktabellen. Die Laufwerke werden aus Redundanzgründen mithilfe von RAID1 gespiegelt. Wenn eines der Laufwerke ausfällt, müssen Sie es so schnell wie möglich ersetzen, um Redundanz sicherzustellen.
+
+.Was Sie und#8217;ll benötigen
+* Das ist schon xref:locating-controller-in-data-center.adoc[Das Gerät befindet sich physisch].
+* Sie haben überprüft, welches Laufwerk ausgefallen ist, indem Sie die linke LED gelb blinken.
++
+
+IMPORTANT: Wenn Sie das Arbeitslaufwerk entfernen, wird der Appliance-Node heruntergefahren. Informationen zur Anzeige von Statusanzeigen zur Überprüfung des Fehlers finden Sie unter.
+
+* Sie haben das Ersatzlaufwerk erhalten.
+* Sie haben einen angemessenen ESD-Schutz erhalten.
+
+
+.Schritte
+. Stellen Sie sicher, dass die linke LED des Laufwerks gelb blinkt.
++
+Sie können den Status der SSDs auch mit Grid Manager überwachen. Wählen Sie *KNOTEN*. Wählen Sie anschließend aus `*Appliance Node*` *Hardware*. Wenn ein Laufwerk ausgefallen ist, enthält das Feld Speicher-RAID-Modus eine Meldung darüber, welches Laufwerk ausgefallen ist.
+
+. Wickeln Sie das Gurt-Ende des ESD-Armbands um Ihr Handgelenk, und befestigen Sie das Clip-Ende auf einer Metallmasse, um eine statische Entladung zu verhindern.
+. Packen Sie das Ersatzlaufwerk aus und legen Sie es in der Nähe des Geräts auf eine statische, Ebene Fläche.
++
+Alle Verpackungsmaterialien speichern.
+
+. Drücken Sie die Entriegelungstaste am ausgefallenen Laufwerk.
++
+image::../media/h600s_driveremoval.gif[Ausbau Des Laufwerks]
+
++
+Der Griff an den Antriebsfedern öffnet sich teilweise, und das Laufwerk löst sich aus dem Schlitz.
+
+. Öffnen Sie den Griff, schieben Sie das Laufwerk heraus und legen Sie es auf eine statisch freie, Ebene Oberfläche.
+. Drücken Sie die Entriegelungstaste am Ersatzlaufwerk, bevor Sie es in den Laufwerkschacht einsetzen.
++
+Die Verriegelungsfedern öffnen sich.
+
++
+image::../media/h600s_driveinstall.gif[Laufwerksinstallation]
+
+. Setzen Sie das Ersatzlaufwerk in den Steckplatz ein, und schließen Sie dann den Laufwerkgriff.
++
+
+IMPORTANT: Beim Schließen des Griffs keine übermäßige Kraft verwenden.
+
++
+Wenn das Laufwerk vollständig eingesetzt ist, hören Sie einen Klick.
+
++
+Das Laufwerk wird automatisch mit gespiegelten Daten aus dem Arbeitslaufwerk neu aufgebaut. Sie können den Status der Neuerstellung mithilfe des Grid Manager überprüfen. Wählen Sie *KNOTEN*. Wählen Sie anschließend aus `*Appliance Node*` *Hardware*. Das Feld Speicher-RAID-Modus enthält eine Meldung „`reBuilding`“, bis das Laufwerk komplett neu aufgebaut ist.
+
+. Wenden Sie sich an den technischen Support, um das Laufwerk auszutauschen.
++
+Der technische Support enthält Anweisungen zum Zurücksenden des ausgefallenen Laufwerks.
+
+

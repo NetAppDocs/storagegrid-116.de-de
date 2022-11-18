@@ -1,0 +1,98 @@
+---
+permalink: ilm/creating-default-ilm-rule.html 
+sidebar: sidebar 
+keywords: create default ilm rule 
+summary: Bevor Sie eine ILM-Richtlinie erstellen, müssen Sie eine Standardregel erstellen, um Objekte zu platzieren, die nicht mit einer anderen Regel in der Richtlinie übereinstimmt. Die Standardregel kann keinen Filter verwenden. Die Lösung muss für alle Mandanten, alle Buckets und alle Objektversionen gelten. 
+---
+= Erstellen einer Standard-ILM-Regel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie eine ILM-Richtlinie erstellen, müssen Sie eine Standardregel erstellen, um Objekte zu platzieren, die nicht mit einer anderen Regel in der Richtlinie übereinstimmt. Die Standardregel kann keine Filter verwenden. Die Lösung muss für alle Mandanten, alle Buckets und alle Objektversionen gelten.
+
+.Was Sie und#8217;ll benötigen
+* Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+* Sie haben spezifische Zugriffsberechtigungen.
+
+
+Die Standardregel ist die letzte Regel, die in einer ILM-Richtlinie ausgewertet werden muss. Daher kann sie keine Filter oder nicht aktuelle Referenzzeit verwenden. Die Anweisungen zur Platzierung der Standardregel werden auf alle Objekte angewendet, die nicht mit einer anderen Regel in der Richtlinie abgeglichen werden.
+
+In dieser Beispielrichtlinie gilt die erste Regel nur für Objekte, die zu Mandant A gehören Die letzte Standardregel gilt für Objekte, die zu allen anderen Mandantenkonten gehören.
+
+image::../media/ilm_policies_page_default_rule.png[Standardregel für ILM-Richtlinien]
+
+Beachten Sie beim Erstellen der Standardregel die folgenden Anforderungen:
+
+* Die Standardregel wird automatisch als letzte Regel in der Richtlinie gesetzt.
+* Die Standardregel kann keine einfachen oder erweiterten Filter verwenden.
+* Die Standardregel muss auf alle Objektversionen angewendet werden, daher kann die nicht aktuelle Zeitverweiszeit nicht verwendet werden.
+* Die Standardregel sollte replizierte Kopien erstellen.
++
+
+IMPORTANT: Verwenden Sie keine Regel, die Kopien, die zur Fehlerkorrektur codiert wurden, als Standardregel für eine Richtlinie erstellt. Für Verfahren zur Einhaltung von Datenkonsistenz (Erasure Coding) sollte ein erweiterter Filter verwendet werden, um zu verhindern, dass bei kleineren Objekten die Codierung von Datenkonsistenz erfolgt.
+
+* Im Allgemeinen sollte die Standardregel Objekte für immer aufbewahren.
+* Wenn Sie die globale S3-Objektsperre verwenden (oder diese aktivieren möchten), muss die Standardregel für die aktive oder vorgeschlagene Richtlinie konform sein.
+
+
+.Schritte
+. Wählen Sie *ILM* *Regeln*.
++
+Die Seite ILM-Regeln wird angezeigt.
+
+. Wählen Sie *Erstellen*.
++
+Schritt 1 (Grundlagen definieren) des Assistenten „ILM-Regel erstellen“ wird angezeigt.
+
+. Geben Sie im Feld *Name* einen eindeutigen Namen für die Regel ein.
+. Geben Sie optional im Feld *Beschreibung* eine kurze Beschreibung für die Regel ein.
+. Lassen Sie das Feld *Mandantenkonten* leer.
++
+Die Standardregel muss auf alle Mandantenkonten angewendet werden.
+
+. Lassen Sie das Feld *Bucket Name* leer.
++
+Die Standardregel muss auf alle S3-Buckets und Swift-Container angewendet werden.
+
+. Wählen Sie nicht *Advanced Filtering* aus
++
+Die Standardregel kann keine Filter angeben.
+
+. Wählen Sie *Weiter*.
++
+Schritt 2 (Platzierungen definieren) wird angezeigt.
+
+. Wählen Sie für Referenzzeit eine beliebige Option außer *nicht aktuelle Zeit* aus.
++
+Die Standardregel muss alle Objektversionen anwenden.
+
+. Legen Sie die Anweisungen für die Platzierung der Standardregel fest.
++
+** Die Standardregel sollte Objekte für immer aufbewahren. Wenn die Standardregel Objekte nicht dauerhaft enthält, wird eine Warnung angezeigt, wenn Sie eine neue Richtlinie aktivieren. Sie müssen bestätigen, dass dies das Verhalten ist, das Sie erwarten.
+** Die Standardregel sollte replizierte Kopien erstellen.
++
+
+IMPORTANT: Verwenden Sie keine Regel, die Kopien, die zur Fehlerkorrektur codiert wurden, als Standardregel für eine Richtlinie erstellt. Erasure-Coding-Regeln sollten den erweiterten Filter *Objektgröße (MB) von mehr als 0.2* enthalten, um zu verhindern, dass kleinere Objekte gelöscht werden.
+
+** Wenn Sie die globale S3-Objektsperre verwenden (oder diese aktivieren möchten), muss die Standardregel konform sein:
++
+*** Die IT muss mindestens zwei replizierte Objektkopien oder eine Kopie mit Verfahren zur Fehlerkorrektur erstellen.
+*** Diese Kopien müssen auf Storage-Nodes während der gesamten Dauer jeder Zeile in der Plazierung vorhanden sein.
+*** Objektkopien können nicht in einem Cloud-Storage-Pool gespeichert werden.
+*** Objektkopien können nicht auf Archiv-Knoten gespeichert werden.
+*** Mindestens eine Zeile der Anweisungen für die Platzierung muss am Tag 0 beginnen, wobei die Aufnahmezeit als Referenzzeit verwendet wird.
+*** Mindestens eine Zeile der Platzierungsanweisungen muss „`Forever`“ sein.
+
+
+
+
+. Wählen Sie *Aktualisieren*, um das Aufbewahrungsdiagramm zu aktualisieren und die Anweisungen zur Platzierung zu bestätigen.
+. Wählen Sie *Weiter*.
++
+Schritt 3 (Ingest Behavior definieren) wird angezeigt.
+
+. Wählen Sie die Datenschutzoption aus, die verwendet werden soll, wenn Objekte aufgenommen werden, und wählen Sie *Speichern*.
+

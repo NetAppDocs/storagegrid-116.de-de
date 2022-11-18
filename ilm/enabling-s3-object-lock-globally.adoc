@@ -1,0 +1,73 @@
+---
+permalink: ilm/enabling-s3-object-lock-globally.html 
+sidebar: sidebar 
+keywords: enable s3 object lock, object lock 
+summary: Falls ein S3-Mandantenkonto Vorschriften beim Speichern von Objektdaten einhalten muss, muss die S3-Objektsperre für Ihr gesamtes StorageGRID System aktiviert werden. Wenn Sie die globale S3-Objektsperre aktivieren, können alle S3-Mandantenbenutzer Buckets und Objekte mit S3 Object Lock erstellen und verwalten. 
+---
+= Aktivieren Sie die S3-Objektsperre global
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Falls ein S3-Mandantenkonto Vorschriften beim Speichern von Objektdaten einhalten muss, muss die S3-Objektsperre für Ihr gesamtes StorageGRID System aktiviert werden. Wenn Sie die globale S3-Objektsperre aktivieren, können alle S3-Mandantenbenutzer Buckets und Objekte mit S3 Object Lock erstellen und verwalten.
+
+.Was Sie und#8217;ll benötigen
+* Sie haben die Root-Zugriffsberechtigung.
+* Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+* Sie haben den S3 Object Lock Workflow überprüft und müssen die Überlegungen verstehen.
+* Die Standardregel für die aktive ILM-Richtlinie ist konform.
++
+** xref:creating-default-ilm-rule.adoc[Erstellen einer Standard-ILM-Regel]
+** xref:creating-ilm-policy.adoc[ILM-Richtlinie erstellen]
+
+
+
+
+Ein Grid-Administrator muss die globale S3-Objektsperre aktivieren, damit Mandantenbenutzer neue Buckets erstellen können, für die S3-Objektsperre aktiviert ist. Nachdem diese Einstellung aktiviert ist, kann sie nicht deaktiviert werden.
+
+
+NOTE: Wenn Sie die Einstellung für globale Konformität mit einer früheren Version von StorageGRID aktiviert haben, ist die S3-Objektsperre in StorageGRID 11.6 aktiviert. Sie können die Einstellungen für vorhandene konforme Buckets weiterhin mit StorageGRID verwalten, jedoch können keine neuen konformen Buckets erstellt werden. Siehe https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/StorageGRID/How_to_manage_legacy_Compliant_buckets_in_StorageGRID_11.5["NetApp Knowledge Base: Management älterer, konformer Buckets für StorageGRID 11.5"^].
+
+.Schritte
+. Wählen Sie *KONFIGURATION* *System* *S3 Objektsperre*.
++
+Die Seite Einstellungen für die S3-Objektsperre wird angezeigt.
+
++
+image::../media/s3_object_lock_global_setting.png[Globale Einstellung für S3-Objektsperre]
+
++
+Wenn Sie die globale Compliance-Einstellung mit einer früheren Version von StorageGRID aktiviert haben, enthält die Seite den folgenden Hinweis:
+
++
+image::../media/s3_object_lock_global_setting_compliant_note.png[Hinweis zur globalen S3-Objektsperre gemäß Compliance-Anforderungen]
+
+. Wählen Sie *S3-Objektsperre aktivieren*.
+. Wählen Sie *Anwenden*.
++
+Ein Bestätigungsdialogfeld wird angezeigt und Sie werden daran erinnert, dass Sie die S3-Objektsperre nach ihrer Aktivierung nicht deaktivieren können.
+
++
+image::../media/s3_object_lock_global_setting_confirm.png[Globale S3-Objektsperre bestätigen]
+
+. Wenn Sie sicher sind, dass Sie die S3-Objektsperre für Ihr gesamtes System dauerhaft aktivieren möchten, wählen Sie *OK*.
++
+Wenn Sie *OK* wählen:
+
++
+** Wenn die Standardregel in der aktiven ILM-Richtlinie konform ist, ist die S3-Objektsperre nun für das gesamte Grid aktiviert und kann nicht deaktiviert werden.
+** Wenn die Standardregel nicht konform ist, erscheint ein Fehler, der angibt, dass Sie eine neue ILM-Richtlinie erstellen und aktivieren müssen, die eine konforme Regel als Standardregel enthält. Wählen Sie *OK*, und erstellen Sie eine neue vorgeschlagene Richtlinie, simulieren Sie sie und aktivieren Sie sie.
++
+image::../media/s3_object_lock_global_setting_error.gif[Globaler S3-ObjektsperrenFehler]
+
+
+
+
+
+Nachdem Sie die globale S3-Objektsperre aktiviert haben, müssen Sie dies möglicherweise ändern xref:../ilm/creating-default-ilm-rule.adoc[Standardregel erstellen] Die Compliance-Anforderungen und erfüllen xref:creating-ilm-policy-after-s3-object-lock-is-enabled.adoc[ILM-Richtlinie erstellen] Die Compliance-Anforderungen erfüllt. Nach Aktivierung der Einstellung kann die ILM-Richtlinie optional sowohl eine konforme Standardregel als auch eine nicht konforme Standardregel enthalten. Beispielsweise möchten Sie eine nicht-konforme Regel verwenden, die keine Filter für Objekte in Buckets enthält, für die die S3-Objektsperre nicht aktiviert ist.
+
+.Verwandte Informationen
+* xref:managing-objects-with-s3-object-lock.adoc#comparing-s3-object-lock-to-legacy-compliance[Vergleichen Sie die S3-Objektsperre mit älterer Compliance]
+

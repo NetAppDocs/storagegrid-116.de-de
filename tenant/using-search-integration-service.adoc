@@ -1,0 +1,36 @@
+---
+permalink: tenant/using-search-integration-service.html 
+sidebar: sidebar 
+keywords: how to use search integration service 
+summary: Der Suchintegrations-Service ist einer der drei StorageGRID Plattform-Services. Sie können diesen Service aktivieren, wenn ein Objekt erstellt, gelöscht oder seine Metadaten oder Tags aktualisiert wird, Objektmetadaten an einen Zielsuchindex zu senden. 
+---
+= Verwenden Sie den Suchintegrationsdienst
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Suchintegrations-Service ist einer der drei StorageGRID Plattform-Services. Sie können diesen Service aktivieren, wenn ein Objekt erstellt, gelöscht oder seine Metadaten oder Tags aktualisiert wird, Objektmetadaten an einen Zielsuchindex zu senden.
+
+Sie können die Suchintegration mit dem Mandanten-Manager konfigurieren, um eine benutzerdefinierte StorageGRID-Konfigurations-XML auf einen Bucket anzuwenden.
+
+
+NOTE: Da der Suchintegrationsdienst dazu führt, dass Objektmetadaten an ein Ziel gesendet werden, wird seine Konfigurations-XML als _Metadaten Notification Configuration XML_ bezeichnet. Diese Konfigurations-XML unterscheidet sich von der XML-Konfiguration _notification_, die zur Aktivierung von Ereignisbenachrichtigungen verwendet wird.
+
+Siehe xref:../s3/index.adoc[Anweisungen zur Implementierung von S3-Client-Applikationen] Weitere Informationen zu den folgenden benutzerdefinierten StorageGRID S3 REST-API-Operationen:
+
+* Konfigurationsanforderung für Bucket-Metadaten-Benachrichtigungen LÖSCHEN
+* Konfigurationsanforderung FÜR Bucket-Metadaten-Benachrichtigungen ABRUFEN
+* PUT Anforderung der Bucket-Metadaten-Benachrichtigung
+
+
+xref:configuration-xml-for-search-configuration.adoc[Konfigurations-XML für die Integration der Suche]
+
+xref:object-metadata-included-in-metadata-notifications.adoc[Objektmetadaten sind in Metadaten-Benachrichtigungen enthalten]
+
+xref:json-generated-by-search-integration-service.adoc[JSON durch den Suchintegrations-Service generiert]
+
+xref:configuring-search-integration-service.adoc[Konfigurieren Sie den Suchintegrationsdienst]
+
+xref:../s3/index.adoc[S3 verwenden]

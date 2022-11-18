@@ -1,0 +1,90 @@
+---
+permalink: maintain/restoring-and-validating-grid-nodes.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, restore grid node, restore node, validate grid node, validate node 
+summary: Sie müssen die Grid-Konfigurationsdateien für alle ausgefallenen Grid-Nodes wiederherstellen, dann die Grid-Konfigurationsdateien validieren und Fehler beheben. 
+---
+= Wiederherstellung und Validierung der Grid Nodes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen die Grid-Konfigurationsdateien für alle ausgefallenen Grid-Nodes wiederherstellen, dann die Grid-Konfigurationsdateien validieren und Fehler beheben.
+
+Sie können jeden Grid-Node importieren, der auf dem Host vorhanden sein soll, solange er vorhanden ist `/var/local` Das Volume ging aufgrund des Ausfalls des vorherigen Hosts nicht verloren. Beispiel: Der `/var/local` Möglicherweise ist das Volume immer noch vorhanden, wenn Sie gemeinsam genutzten Storage für Daten-Volumes von StorageGRID Systemen verwendet haben, wie in der StorageGRID Installationsanleitung für Ihr Linux Betriebssystem beschrieben. Durch das Importieren des Knotens wird seine Knotenkonfigurationsdatei auf den Host wiederhergestellt.
+
+Wenn fehlende Knoten nicht importiert werden können, müssen Sie ihre Grid-Konfigurationsdateien neu erstellen.
+
+Sie müssen dann die Grid-Konfigurationsdatei validieren und alle Netzwerk- oder Storage-Probleme beheben, bevor Sie StorageGRID neu starten. Wenn Sie die Konfigurationsdatei für einen Node neu erstellen, müssen Sie denselben Namen für den Austausch-Node verwenden, der für den wiederherzuenden Node verwendet wurde.
+
+Weitere Informationen zum Standort des finden Sie in den Installationsanweisungen `/var/local` Volume für einen Node:
+
+.Schritte
+. Führen Sie in der Befehlszeile des wiederhergestellten Hosts alle derzeit konfigurierten StorageGRID-Grid-Knoten auf:``sudo storagegrid node list``
++
+Wenn keine Grid-Nodes konfiguriert sind, wird keine Ausgabe ausgegeben. Wenn einige Grid-Nodes konfiguriert sind, erwarten Sie die Ausgabe im folgenden Format:
+
++
+[listing]
+----
+Name               Metadata-Volume
+================================================================
+dc1-adm1           /dev/mapper/sgws-adm1-var-local
+dc1-gw1            /dev/mapper/sgws-gw1-var-local
+dc1-sn1            /dev/mapper/sgws-sn1-var-local
+dc1-arc1           /dev/mapper/sgws-arc1-var-local
+----
++
+Wenn einige oder alle Grid-Nodes, die auf dem Host konfiguriert werden sollen, nicht aufgeführt sind, müssen Sie die fehlenden Grid-Nodes wiederherstellen.
+
+. So importieren Sie Grid-Knoten mit einem `/var/local` Lautstärke:
++
+.. Führen Sie für jeden Knoten, den Sie importieren möchten, den folgenden Befehl aus:``sudo storagegrid node import node-var-local-volume-path``
++
+Der `storagegrid node import` Befehl ist nur erfolgreich, wenn der Ziel-Node sauber heruntergefahren wurde auf dem Host, auf dem er zuletzt ausgeführt wurde. Wenn dies nicht der Fall ist, beobachten Sie einen Fehler, der dem folgenden ähnlich ist:
+
++
+`This node (_node-name_) appears to be owned by another host (UUID host-uuid).`
+
++
+`Use the --force flag if you are sure import is safe.`
+
+.. Wenn der Fehler angezeigt wird, dass der Node, der einem anderen Host gehört, ausgeführt wird, führen Sie den Befehl erneut mit dem aus `--force` Flag, um den Import abzuschließen:``sudo storagegrid --force node import node-var-local-volume-path``
++
+
+NOTE: Alle mit dem importierten Knoten `--force` Flag erfordert weitere Wiederherstellungsschritte, bevor sie das Raster erneut verbinden können, wie unter beschrieben xref:whats-next-performing-additional-recovery-steps-if-required.adoc[Nächste Schritte: Falls erforderlich, zusätzliche Recovery-Schritte durchführen].
+
+
+
+. Für Grid-Nodes, die keinen über einen verfügen `/var/local` Volume: Erstellen Sie die Konfigurationsdatei des Node neu, um sie auf dem Host wiederherzustellen.
++
+Befolgen Sie die Richtlinien unter „`Create Node Configuration files`“ in den Installationsanweisungen.
+
++
+
+IMPORTANT: Wenn Sie die Konfigurationsdatei für einen Node neu erstellen, müssen Sie denselben Namen für den Austausch-Node verwenden, der für den wiederherzuenden Node verwendet wurde. Stellen Sie bei Linux-Bereitstellungen sicher, dass der Name der Konfigurationsdatei den Node-Namen enthält. Sie sollten, wenn möglich, dieselben Netzwerkschnittstellen, Gerätezuordnungen blockieren und IP-Adressen verwenden. Dieses Verfahren minimiert die Datenmenge, die während des Recovery auf den Node kopiert werden muss. Dadurch kann die Recovery erheblich schneller (in manchen Fällen nur Minuten statt Wochen) erfolgen.
+
++
+
+IMPORTANT: Wenn Sie neue Blockgeräte (Geräte, die zuvor vom StorageGRID-Knoten nicht genutzt wurden) als Werte für eine der mit zu startenden Konfigurationsvariablen verwenden `BLOCK_DEVICE_` Wenn Sie die Konfigurationsdatei für einen Knoten neu erstellen, befolgen Sie unbedingt alle Richtlinien in xref:fixing-missing-block-device-errors.adoc[Beheben Sie fehlende Blockgerätfehler].
+
+. Führen Sie den folgenden Befehl auf dem wiederhergestellten Host aus, um alle StorageGRID Knoten aufzulisten.
++
+`sudo storagegrid node list`
+
+. Überprüfen Sie die Node-Konfigurationsdatei für jeden Grid-Node, dessen Name in der Ausgabe der StorageGRID-Node-Liste angezeigt wurde:
++
+`sudo storagegrid node validate _node-name_`
+
++
+Sie müssen alle Fehler oder Warnungen beheben, bevor Sie den StorageGRID-Hostdienst starten. In den folgenden Abschnitten werden Fehler näher erläutert, die bei der Wiederherstellung möglicherweise eine besondere Bedeutung haben.
+
+
+
+xref:../rhel/index.adoc[Installieren Sie Red hat Enterprise Linux oder CentOS]
+
+xref:../ubuntu/index.adoc[Installieren Sie Ubuntu oder Debian]
+
+xref:fixing-mssing-network-interface-errors.adoc[Beheben Sie fehlende Fehler an der Netzwerkschnittstelle]

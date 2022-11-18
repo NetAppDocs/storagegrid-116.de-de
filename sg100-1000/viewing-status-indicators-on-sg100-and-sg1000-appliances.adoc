@@ -1,0 +1,119 @@
+---
+permalink: sg100-1000/viewing-status-indicators-on-sg100-and-sg1000-appliances.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, status, indicators, lights, leds, light, led, switch , button, power, reset, identify, alarm, ssd, indicator, boot codes, boot, code, start, startup, start up, start-up, progress 
+summary: Die Appliance enthält Anzeigen, mit denen Sie den Status des Appliance-Controllers und der beiden SSDs ermitteln können. 
+---
+= Anzeigen von Statusanzeigen für SG100- und SG1000-Geräte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Appliance enthält Anzeigen, mit denen Sie den Status des Appliance-Controllers und der beiden SSDs ermitteln können.
+
+
+
+== Gerätesteuchten und -Tasten
+
+image::../media/sg6000_cn_front_indicators.gif[Frontanzeigen - SG1000]
+
+|===
+|  | Anzeige | Bundesland 
+
+
+ a| 
+1
+ a| 
+Ein-/aus-Schalter
+ a| 
+* Blau: Das Gerät ist eingeschaltet.
+* Aus: Das Gerät ist ausgeschaltet.
+
+
+
+
+ a| 
+2
+ a| 
+Reset-Taste
+ a| 
+Mit dieser Taste können Sie den Controller auf einen harten Reset zurücksetzen.
+
+
+
+ a| 
+3
+ a| 
+Schaltfläche „Identifizierung“
+ a| 
+Diese Taste kann auf „Blinken“, „ein“ (Festkörper) oder „aus“ eingestellt werden.
+
+* Blau, blinkend: Identifiziert das Gerät im Schrank oder Rack.
+* Blau, fest: Identifiziert das Gerät im Schrank oder Rack.
+* Aus: Das Gerät ist im Schrank oder Rack nicht visuell erkennbar.
+
+
+
+
+ a| 
+4
+ a| 
+Alarm-LED
+ a| 
+* Gelb, konstant: Ein Fehler ist aufgetreten.
++
+*Hinweis:* um den Start und Fehlercodes anzuzeigen, müssen Sie auf die BMC-Schnittstelle zugreifen.
+
+* Aus: Es sind keine Fehler vorhanden.
+
+
+|===
+
+
+== Allgemeine Startcodes
+
+Beim Hochfahren oder nach einem harten Reset des Geräts treten folgende Aktionen auf:
+
+. Der BMC (Baseboard Management Controller) protokolliert Codes für die Boot-Sequenz, einschließlich etwaiger Fehler.
+. Der Betriebsschalter leuchtet auf.
+. Wenn während des Startvorgangs Fehler auftreten, leuchtet die Alarm-LED auf.
++
+Um die Boot- und Fehlercodes anzuzeigen, müssen Sie auf die BMC-Schnittstelle zugreifen.
+
+
+
+
+
+== SSD-LEDs
+
+image::../media/ssd_indicators.png[SSD-Kennzahlen]
+
+|===
+| LED | Anzeige | Bundesland 
+
+
+ a| 
+1
+ a| 
+Laufwerksstatus/-Fehler
+ a| 
+* Blau (fest): Laufwerk ist online
+* Gelb (blinkend): Laufwerksausfall
+* Aus: Steckplatz ist leer
+
+
+
+
+ a| 
+2
+ a| 
+Laufwerk aktiv
+ a| 
+Blau (blinkend): Auf das Laufwerk wird zugegriffen
+
+|===
+xref:troubleshooting-hardware-installation-sg100-and-sg1000.adoc[Fehlerbehebung bei der Hardwareinstallation (SG100 und SG1000)]
+
+xref:configuring-bmc-interface-sg1000.adoc[BMC-Schnittstelle konfigurieren (SG100 und SG1000)]

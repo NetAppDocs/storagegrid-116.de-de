@@ -1,0 +1,16 @@
+---
+permalink: sg5700/port-bond-modes-for-e5700sg-controller-ports.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, port bond, port bonding, port bond mode, port-bond mode 
+summary: Wenn Sie Netzwerkverbindungen für die Controller-Ports des E5700SG konfigurieren, können Sie die Portbindung für die 10/25-GbE-Ports verwenden, die mit dem Grid-Netzwerk und dem optionalen Client-Netzwerk verbunden sind, sowie die 1-GbE-Management-Ports, die eine Verbindung zum optionalen Admin-Netzwerk herstellen. Mit Port-Bonding sichern Sie Ihre Daten, indem Sie redundante Pfade zwischen StorageGRID-Netzwerken und der Appliance bereitstellen. 
+---
+= Port Bond-Modi für E5700SG Controller-Ports
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie Netzwerkverbindungen für die Controller-Ports des E5700SG konfigurieren, können Sie die Portbindung für die 10/25-GbE-Ports verwenden, die mit dem Grid-Netzwerk und dem optionalen Client-Netzwerk verbunden sind, sowie die 1-GbE-Management-Ports, die eine Verbindung zum optionalen Admin-Netzwerk herstellen. Mit Port-Bonding sichern Sie Ihre Daten, indem Sie redundante Pfade zwischen StorageGRID-Netzwerken und der Appliance bereitstellen.
+
+xref:configuring-network-links-sg5700.adoc[Konfigurieren von Netzwerk-Links (SG5700)]

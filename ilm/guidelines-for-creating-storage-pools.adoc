@@ -1,0 +1,71 @@
+---
+permalink: ilm/guidelines-for-creating-storage-pools.html 
+sidebar: sidebar 
+keywords: storage pool guidelines 
+summary: Befolgen Sie bei der Konfiguration und Verwendung von Speicherpools die folgenden Richtlinien. 
+---
+= Richtlinien zur Erstellung von Speicherpools
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Befolgen Sie bei der Konfiguration und Verwendung von Speicherpools die folgenden Richtlinien.
+
+
+
+== Richtlinien für alle Speicherpools
+
+* StorageGRID enthält einen Standard-Speicherpool, alle Storage-Nodes, der den Standardstandort, Alle Standorte und die Standard-Storage-Klasse, alle Storage-Nodes verwendet. Der Speicherpool Alle Storage-Nodes wird automatisch aktualisiert, wenn Sie neue Datacenter-Standorte hinzufügen.
++
+
+NOTE: Es wird nicht empfohlen, den Speicherpool für alle Storage-Nodes oder den Standort Alle Standorte zu verwenden, da diese Elemente automatisch aktualisiert werden, um neue Sites, die Sie in eine Erweiterung einfügen, einzubeziehen. Dies ist möglicherweise nicht das gewünschte Verhalten. Bevor Sie den Storage-Pool aller Storage-Nodes oder den Standardstandort verwenden, prüfen Sie sorgfältig die Richtlinien für replizierte und mit Erasure Coding gekennzeichnete Kopien.
+
+* Halten Sie Storage-Pool-Konfigurationen so einfach wie möglich. Erstellen Sie nicht mehr Storage Pools als nötig.
+* Erstellung von Storage-Pools mit so vielen Nodes wie möglich Jeder Storage-Pool sollte zwei oder mehr Nodes enthalten. Ein Storage-Pool mit unzureichenden Nodes kann ILM-Backlogs verursachen, wenn ein Node nicht mehr verfügbar ist.
+* Vermeiden Sie es, Storage-Pools zu erstellen oder zu verwenden, die sich überlappen (einen oder mehrere derselben Nodes enthalten). Bei Überschneidungen von Storage-Pools kann es sein, dass mehrere Kopien von Objektdaten auf demselben Node gespeichert werden.
+
+
+
+
+== Richtlinien für Storage-Pools, die für replizierte Kopien verwendet werden
+
+* Erstellen Sie für jeden Standort einen anderen Speicherpool. Geben Sie dann in den Anweisungen zur Platzierung für jede Regel einen oder mehrere standortspezifische Speicherpools an. Durch die Verwendung eines Storage Pools für jeden Standort wird sichergestellt, dass replizierte Objektkopien genau an den erwarteten Ort platziert werden (z. B. eine Kopie jedes Objekts an jedem Standort zum Site-Loss-Schutz).
+* Wenn Sie einer Erweiterung einen Standort hinzufügen, erstellen Sie einen neuen Speicherpool für den neuen Standort. Aktualisieren Sie dann ILM-Regeln, um zu steuern, welche Objekte auf der neuen Site gespeichert werden.
+* Verwenden Sie im Allgemeinen nicht den Standard-Speicherpool, alle Speicherknoten oder einen beliebigen Speicherpool, der den Standardstandort, Alle Standorte enthält.
+
+
+
+
+== Richtlinien für Storage-Pools, die für Kopien mit Verfahren zur Einhaltung von Datenkonsistenz (Erasure Coding) verwendet werden
+
+* Sie können Archiv-Knoten nicht zum Löschen codierter Daten verwenden.
+* Die Anzahl der im Storage-Pool enthaltenen Storage-Nodes und -Standorte bestimmen, welche Erasure Coding-Schemata zur Verfügung stehen.
+* Wenn ein Speicherpool nur zwei Standorte umfasst, können Sie diesen Speicherpool nicht für Erasure Coding verwenden. Für einen Speicherpool mit zwei Standorten stehen keine Erasure Coding-Schemata zur Verfügung.
+* Verwenden Sie im Allgemeinen nicht den Standardspeicherpool, alle Speicherknoten oder einen beliebigen Speicherpool, der den Standardstandort, Alle Standorte in einem beliebigen Erasure-Coding-Profil enthält.
++
+
+NOTE: Wenn in Ihrem Grid nur ein Standort enthalten ist, können Sie den Speicherpool „Alle Speicherknoten“ oder den Standardstandort „Alle Standorte“ in einem Erasure-Coding-Profil nicht verwenden. Dieses Verhalten verhindert, dass das Erasure Coding-Profil ungültig wird, wenn ein zweiter Standort hinzugefügt wird.
+
+* Bei hohen Durchsatzanforderungen wird die Erstellung eines Storage-Pools mit mehreren Standorten nicht empfohlen, wenn die Netzwerklatenz zwischen Standorten größer als 100 ms ist. Mit steigender Latenz sinkt auch die Rate, mit der StorageGRID Objektfragmente erstellen, platzieren und abrufen kann, aufgrund des geringeren TCP-Netzwerkdurchsatzes erheblich. Die Abnahme des Durchsatzes wirkt sich auf die maximal erreichbaren Raten für Objekteinspeisung und -Abruf aus (wenn strenge oder ausgewogene als Aufnahmeverhalten ausgewählt werden) oder kann zu Backlogs in der ILM-Warteschlange führen (wenn Dual-Commit als Aufnahmeverhalten ausgewählt wird).
+* Wenn möglich, sollte ein Speicherpool mehr als die Mindestanzahl an Speicherknoten enthalten, die für das ausgewählte Erasure-Coding-Schema erforderlich ist. Wenn Sie beispielsweise ein 6+3-Schema zur Codierung von Löschverfahren verwenden, müssen Sie mindestens neun Storage-Nodes haben. Es wird jedoch empfohlen, mindestens einen zusätzlichen Storage-Node pro Standort zu haben.
+* Verteilen Sie Storage Nodes so gleichmäßig wie möglich auf Standorte. Um beispielsweise ein 6+3 Erasure Coding-Schema zu unterstützen, konfigurieren Sie einen Storage-Pool, der mindestens drei Storage-Nodes an drei Standorten enthält.
+
+
+
+
+== Richtlinien für Speicherpools, die für archivierte Kopien verwendet werden
+
+* Es kann kein Speicherpool erstellt werden, der sowohl Speicherknoten als auch Archivknoten enthält. Für archivierte Kopien ist ein Storage-Pool erforderlich, der nur Archiv-Nodes enthält.
+* Wenn Sie einen Speicherpool verwenden, der Archivierungs-Nodes enthält, sollten Sie außerdem mindestens eine replizierte oder mit Erasure Coding versehende Kopie in einem Speicherpool mit Storage-Nodes verwalten.
+* Wenn die globale S3-Objektsperre aktiviert ist und Sie eine konforme ILM-Regel erstellen, können Sie keinen Speicherpool verwenden, der auch Archiv-Nodes enthält. Anweisungen zum Verwalten von Objekten mit S3 Object Lock finden Sie in den Anleitungen.
+* Wenn der Zieltyp eines Archiv-Node Cloud Tiering - Simple Storage Service (S3) lautet, muss sich der Archiv-Node im eigenen Storage-Pool befinden. Siehe xref:../admin/index.adoc[StorageGRID verwalten].
+
+
+.Verwandte Informationen
+* xref:what-replication-is.adoc[Was ist Replizierung]
+* xref:what-erasure-coding-is.adoc[Verfahren zur Einhaltung von Datenkonsistenz (Erasure Coding]
+* xref:what-erasure-coding-schemes-are.adoc[Was sind die Erasure Coding-Schemata]
+* xref:using-multiple-storage-pools-for-cross-site-replication.adoc[Verwendung mehrerer Storage Pools zur standortübergreifenden Replizierung]
+

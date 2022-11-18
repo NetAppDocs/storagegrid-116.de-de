@@ -1,0 +1,84 @@
+---
+permalink: monitor/information-you-should-monitor-regularly.html 
+sidebar: sidebar 
+keywords: monitor, monitoring, StorageGRID, 
+summary: StorageGRID ist ein fehlertolerantes, verteiltes Storage-System, das den Betrieb selbst bei Fehlern oder Nichtverfügbarkeit von Nodes oder Standorten unterstützt. Sie müssen den Systemzustand, die Workloads und die Nutzungsstatistiken proaktiv überwachen, damit Sie Maßnahmen ergreifen können, um potenzielle Probleme zu beheben, bevor sie die Effizienz oder Verfügbarkeit des Grid beeinträchtigen. 
+---
+= Informationen, die Sie regelmäßig überwachen sollten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+StorageGRID ist ein fehlertolerantes, verteiltes Storage-System, das den Betrieb selbst bei Fehlern oder Nichtverfügbarkeit von Nodes oder Standorten unterstützt. Sie müssen den Systemzustand, die Workloads und die Nutzungsstatistiken proaktiv überwachen, damit Sie Maßnahmen ergreifen können, um potenzielle Probleme zu beheben, bevor sie die Effizienz oder Verfügbarkeit des Grid beeinträchtigen.
+
+Ein überlasttes System generiert große Datenmengen. Dieser Abschnitt enthält eine Anleitung zu den wichtigsten Informationen, die fortlaufend überwacht werden sollen.
+
+[cols="2a,1a"]
+|===
+| Was überwacht werden soll | Frequenz 
+
+
+ a| 
+Der xref:monitoring-system-health.adoc[Daten für den Systemzustand] Wird auf dem Grid Manager Dashboard angezeigt. Beachten Sie, dass sich etwas vom Vortag geändert hat.
+ a| 
+Täglich
+
+
+
+ a| 
+Tarif xref:monitoring-storage-capacity.adoc[Objekt- und Metadatenkapazität des Storage-Node] Wird verbraucht
+ a| 
+Wöchentlich
+
+
+
+ a| 
+xref:monitoring-information-lifecycle-management.adoc[Information Lifecycle Management-Operationen]
+ a| 
+Wöchentlich
+
+
+
+ a| 
+xref:monitoring-network-connections-and-performance.adoc[Netzwerkverbindungen und Performance]
+ a| 
+Wöchentlich
+
+
+
+ a| 
+xref:monitoring-node-level-resources.adoc[Ressourcen auf Node-Ebene]
+ a| 
+Wöchentlich
+
+
+
+ a| 
+xref:monitoring-tenant-activity.adoc[Mandantenaktivität]
+ a| 
+Wöchentlich
+
+
+
+ a| 
+xref:monitoring-archival-capacity.adoc[Kapazität des externen Archiv-Storage-Systems]
+ a| 
+Wöchentlich
+
+
+
+ a| 
+xref:monitoring-load-balancing-operations.adoc[Lastverteilung]
+ a| 
+Nach der Erstkonfiguration und nach Konfigurationsänderungen
+
+
+
+ a| 
+xref:applying-hotfixes-or-upgrading-software-if-necessary.adoc[Verfügbarkeit von Software-Hotfixes und Software-Upgrades]
+ a| 
+Monatlich
+
+|===

@@ -1,0 +1,14 @@
+---
+permalink: sg5600/configuring-storagegrid-connections.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, storagegrid connections, connections, configure, setup, set up 
+summary: 'Bevor Sie eine StorageGRID Appliance als Storage Node in einem StorageGRID-Grid bereitstellen können, müssen Sie die Verbindungen zwischen der Appliance und den zu verwendenden Netzwerken konfigurieren. Sie können das Netzwerk konfigurieren, indem Sie im StorageGRID Appliance Installer navigieren, der im E5600SG Controller \ (dem Compute-Controller in der Appliance\) enthalten ist.' 
+---
+= Konfiguration von StorageGRID-Verbindungen (SG5600)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie eine StorageGRID Appliance als Storage Node in einem StorageGRID-Grid bereitstellen können, müssen Sie die Verbindungen zwischen der Appliance und den zu verwendenden Netzwerken konfigurieren. Sie können das Netzwerk konfigurieren, indem Sie im StorageGRID Appliance Installer navigieren, der im E5600SG Controller (dem Computing-Controller in der Appliance) enthalten ist.

@@ -1,0 +1,14 @@
+---
+permalink: s3/how-storagegrid-implements-s3-rest-api.html 
+sidebar: sidebar 
+keywords: implement s3 rest api 
+summary: Eine Client-Applikation kann S3-REST-API-Aufrufe zur Verbindung mit StorageGRID nutzen, um Buckets zu erstellen, zu löschen und zu ändern sowie Objekte zu speichern und abzurufen. 
+---
+= So implementiert StorageGRID die S3-REST-API
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Eine Client-Applikation kann S3-REST-API-Aufrufe zur Verbindung mit StorageGRID nutzen, um Buckets zu erstellen, zu löschen und zu ändern sowie Objekte zu speichern und abzurufen.

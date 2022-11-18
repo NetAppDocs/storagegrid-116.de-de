@@ -1,0 +1,69 @@
+---
+permalink: sg5700/unpacking-boxes-sg5700.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, install, installation, unpack, unbox, prepare, inventory, components, contents 
+summary: Packen Sie vor der Installation des StorageGRID-Geräts alle Kartons aus und vergleichen Sie den Inhalt mit den Artikeln auf dem Verpackungsschein. 
+---
+= Auspacken (SG5700)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Packen Sie vor der Installation des StorageGRID-Geräts alle Kartons aus und vergleichen Sie den Inhalt mit den Artikeln auf dem Verpackungsschein.
+
+* *SG5712-Appliance mit 12 installierten Laufwerken*
++
+image::../media/de212c_table_size.gif[SG5712-2-HE-Appliance]
+
+* *SG5760 Appliance ohne installierte Laufwerke*
++
+image::../media/de460c_table_size.gif[SG5760 4-HE-Appliance]
+
+* *Frontblende für das Gerät*
++
+image::../media/sg5700_front_bezels.gif[Bezels der SG5712 und SG5760]
+
+* *Rail Kit mit Anweisungen*
++
+image::../media/rail_kit.gif[Schienensatz]
+
+* *SG5760: 60 Laufwerke*
++
+image::../media/sg5760_drive.gif[Laufwerk]
+
+* *SG5760: Griffe*
++
+image::../media/handles.gif[Das SG5760 verarbeitet]
+
+* *SG5760: Rückenhalterungen und Käfigmuttern für quadratische Rackmontage*
++
+image::../media/back_brackets_table_size.gif[Rückenhalterungen und Käfigmuttern für SG5760]
+
+
+
+
+
+== Kabel und Anschlüsse
+
+Der Versand für das StorageGRID Gerät umfasst die folgenden Kabel und Anschlüsse:
+
+* * Zwei Netzkabel für Ihr Land*
++
+image::../media/power_cords.gif[Stromkabel]
+
++
+Ihr Schrank verfügt möglicherweise über spezielle Netzkabel, die Sie anstelle der Netzkabel verwenden, die Sie zur Einheit mit dem Gerät anschließen.
+
+* *Optische Kabel und SFP-Transceiver*
++
+image::../media/fc_cable_and_sfp.gif[Optische Kabel und SFPs]
+
++
+Zwei optische Kabel für die FC Interconnect Ports
+
++
+Acht SFP+-Transceiver, kompatibel mit den vier 16-Gbit/s-FC-Interconnect-Ports und den vier 10-GbE-Netzwerkports
+
+

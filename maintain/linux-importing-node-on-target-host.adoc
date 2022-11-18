@@ -1,0 +1,53 @@
+---
+permalink: maintain/linux-importing-node-on-target-host.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, linux, import node, importing node, target host 
+summary: Nachdem Sie den Knoten vom Quell-Host exportiert haben, importieren und validieren Sie den Knoten auf dem Ziel-Linux-Host. Die Validierung bestätigt, dass der Knoten Zugriff auf denselben Block-Speicher und Netzwerkschnittstellengeräte hat, wie er auf dem Quell-Host hatte. 
+---
+= Linux: Importknoten auf Zielhost
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie den Knoten vom Quell-Host exportiert haben, importieren und validieren Sie den Knoten auf dem Ziel-Linux-Host. Die Validierung bestätigt, dass der Knoten Zugriff auf denselben Block-Speicher und Netzwerkschnittstellengeräte hat, wie er auf dem Quell-Host hatte.
+
+Führen Sie den folgenden Befehl auf dem Ziel-Linux-Host aus.
+
+. Importieren Sie den Knoten auf dem Zielhost.
++
+[listing]
+----
+sudo storagegrid node import /dev/mapper/sgws-dc1-s3-var-local
+----
++
+`Finished importing node DC1-S3 from /dev/mapper/sgws-dc1-s3-var-local.`
+
++
+`You should run 'storagegrid node validate DC1-S3'`
+
+. Validieren der Node-Konfiguration auf dem neuen Host
++
+[listing]
+----
+sudo storagegrid node validate DC1-S3
+----
++
+`+Confirming existence of node DC1-S3... PASSED+`
+
++
+`+Checking configuration file /etc/storagegrid/nodes/DC1-S3.conf for node DC1-S3... PASSED+`
+
++
+`+Checking for duplication of unique values... PASSED+`
+
+. Wenn Validierungsfehler auftreten, beheben Sie diese, bevor Sie den migrierten Knoten starten.
++
+Informationen zur Fehlerbehebung finden Sie in der StorageGRID-Installationsanleitung für Ihr Linux-Betriebssystem.
+
+
+
+xref:../rhel/index.adoc[Installieren Sie Red hat Enterprise Linux oder CentOS]
+
+xref:../ubuntu/index.adoc[Installieren Sie Ubuntu oder Debian]

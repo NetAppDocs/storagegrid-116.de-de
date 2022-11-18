@@ -1,0 +1,61 @@
+---
+permalink: sg5600/hardware-setup-progress-appears-to-hang.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, troubleshoot, troubleshooting, hardware, setup, hang, hangs, fails, failure, stop, terminate, terminates, stuck 
+summary: Der Installationsassistent von StorageGRID steht möglicherweise nicht zur Verfügung, wenn Hardware-Fehler oder Verkabelungsfehler eine Ausführung der Boot-Verarbeitung durch den E5600SG-Controller verhindern. 
+---
+= Hardware-Setup scheint zu hängen (SG5600)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Installationsassistent von StorageGRID steht möglicherweise nicht zur Verfügung, wenn Hardware-Fehler oder Verkabelungsfehler eine Ausführung der Boot-Verarbeitung durch den E5600SG-Controller verhindern.
+
+.Schritte
+. Prüfen Sie die Warn-LED für die Controller und suchen Sie nach einem blinkenden Fehlercode.
++
+Während des Hochschalens werden die LEDs „Serviceaktion zulässig“ und „Serviceaktion erforderlich“ eingeschaltet, während die Hardware initialisiert wird. Auch der obere Dezimalpunkt der unteren Ziffer, genannt _Diagnose-LED_, leuchtet auf. Die Sieben-Segment-Anzeige führt eine Reihe von Codes durch, die für beide Controller üblich sind. Dies ist normal und kein Hinweis auf einen Fehler. Wenn die Hardware erfolgreich gebootet wird, sind die Service-Aktion-LEDs ausgeschaltet, und die Anzeigen werden durch die Firmware gesteuert.
+
+. Überprüfen Sie die Codes auf der siebensegmentreichen Anzeige für den E5600SG-Controller.
++
+
+NOTE: Installation und Bereitstellung nehmen Zeit in Anspruch. In einigen Installationsphasen werden dem Installationsprogramm der StorageGRID-Appliance für mehrere Minuten keine Aktualisierungen gemeldet.
+
++
+Wenn ein Fehler auftritt, blinkt die Sieben-Segment-Anzeige eine Sequenz, z. B. ER.
+
+. Um zu verstehen, was diese Codes bedeuten, lesen Sie die folgenden Ressourcen:
++
+|===
+| Controller | Referenz 
+
+
+ a| 
+E5600SG-Controller
+ a| 
+** „`HE error: Fehler beim Synchronisieren mit SANtricity OS Software`“
+** „`E5600SG Controller-Anzeigecodes für sieben Segmente`“
+
+
+
+
+ a| 
+E2700 Controller
+ a| 
+E-Series Dokumentation
+
+*Hinweis:* die für den E-Series E5600 Controller beschriebenen Codes gelten nicht für den E5600SG Controller im Gerät.
+
+|===
+. Falls das Problem dadurch nicht behoben werden kann, wenden Sie sich an den technischen Support.
+
+
+xref:e5600sg-controller-seven-segment-display-codes.adoc[E5600SG-Controller-Anzeigecodes für sieben Segmente]
+
+xref:he-error-error-synchronizing-with-santricity-os-software.adoc[HE-Fehler: Fehler beim Synchronisieren mit SANtricity OS Software]
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2344477["E2700 – Installationshandbuch für Controller-Laufwerke und zugehörige Laufwerksfächer"^]
+
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61765["NetApp Dokumentation: E2700 Serie"^]

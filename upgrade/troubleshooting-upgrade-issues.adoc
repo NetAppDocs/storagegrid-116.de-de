@@ -1,0 +1,48 @@
+---
+permalink: upgrade/troubleshooting-upgrade-issues.html 
+sidebar: sidebar 
+keywords: upgrade, troubleshoot, troubleshooting, errors, upgrade precheck 
+summary: Wenn das Upgrade nicht erfolgreich abgeschlossen wird, können Sie das Problem möglicherweise selbst beheben. Falls ein Problem nicht behoben werden kann, sollten Sie die erforderlichen Informationen erfassen, bevor Sie sich an den technischen Support wenden. 
+---
+= Upgrade wurde nicht abgeschlossen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn das Upgrade nicht erfolgreich abgeschlossen wird, können Sie das Problem möglicherweise selbst beheben. Falls ein Problem nicht behoben werden kann, sollten Sie die erforderlichen Informationen erfassen, bevor Sie sich an den technischen Support wenden.
+
+In den folgenden Abschnitten wird die Wiederherstellung in Situationen beschrieben, in denen das Upgrade teilweise fehlgeschlagen ist. Wenden Sie sich an den technischen Support, wenn ein Upgrade-Problem nicht behoben werden kann.
+
+
+
+== Fehler bei der Vorabprüfung des Upgrades
+
+Zur Erkennung und Behebung von Problemen können Sie die Vorabprüfungen manuell durchführen, bevor Sie das tatsächliche Upgrade starten. Die meisten Vorprüffehler enthalten Informationen zur Behebung des Problems. Wenden Sie sich an den technischen Support, wenn Sie Hilfe benötigen.
+
+
+
+== Provisionierungsfehler
+
+Wenden Sie sich an den technischen Support, wenn der automatische Bereitstellungsprozess fehlschlägt.
+
+
+
+== Der Grid-Node stürzt ab oder kann nicht gestartet werden
+
+Wenn ein Grid-Node während des Upgrade-Prozesses abstürzt oder nicht erfolgreich gestartet werden kann, nachdem das Upgrade abgeschlossen wurde, wenden Sie sich an den technischen Support, um eventuelle Probleme zu untersuchen und zu beheben.
+
+
+
+== Aufnahme oder Datenabfrage wird unterbrochen
+
+Wenn die Datenaufnahme oder -Abfrage bei keinem Upgrade eines Grid-Node unerwartet unterbrochen wird, wenden Sie sich an den technischen Support.
+
+
+
+== Fehler beim Datenbank-Upgrade
+
+Wenn das Datenbank-Upgrade mit einem Fehler fehlschlägt, versuchen Sie es erneut. Wenden Sie sich an den technischen Support, wenn dieser erneut fehlschlägt.
+
+xref:checking-systems-condition-before-upgrading-software.adoc[Überprüfen Sie den Zustand des Systems, bevor Sie die Software aktualisieren]

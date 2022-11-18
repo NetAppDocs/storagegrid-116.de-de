@@ -1,0 +1,14 @@
+---
+permalink: s3/index.html 
+sidebar: sidebar 
+keywords: about s3, s3 overview 
+summary: 'StorageGRID unterstützt die Simple Storage Service \ (S3\) API, die als Satz von Representational State Transfer \(REST\) Web Services implementiert wird. Dank der Unterstützung der S3-REST-API können serviceorientierte Applikationen, die für S3-Webservices entwickelt wurden, mit On-Premises-Objekt-Storage über das StorageGRID System verbunden werden. Dies erfordert minimale Änderungen an der aktuellen Nutzung von S3-REST-API-Aufrufen einer Client-Anwendung.' 
+---
+= Verwenden Sie S3: Übersicht
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+StorageGRID unterstützt die S3-API (Simple Storage Service), die als Satz Rest-Web-Services (Representational State Transfer) implementiert wird. Dank der Unterstützung der S3-REST-API können serviceorientierte Applikationen, die für S3-Webservices entwickelt wurden, mit On-Premises-Objekt-Storage über das StorageGRID System verbunden werden. Hierfür sind nur minimale Änderungen an der aktuellen Nutzung von S3-REST-API-Aufrufen einer Client-Applikation erforderlich.

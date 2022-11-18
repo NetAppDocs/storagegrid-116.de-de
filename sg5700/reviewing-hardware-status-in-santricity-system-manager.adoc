@@ -1,0 +1,62 @@
+---
+permalink: sg5700/reviewing-hardware-status-in-santricity-system-manager.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, SANtricity System Manager, SANtricity, System Manager, hardware, status, diagnostic, environment drives, drive, temperature 
+summary: Mit SANtricity System Manager können Sie die einzelnen Hardwarekomponenten im Storage Controller-Shelf überwachen und verwalten. Darüber hinaus werden Hardware-Diagnose- und Umgebungsinformationen, z. B. Komponentententententemperaturen oder Problemen mit den Laufwerken, überprüft. 
+---
+= Überprüfen Sie den Hardwarestatus in SANtricity System Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit SANtricity System Manager können Sie die einzelnen Hardwarekomponenten im Storage Controller-Shelf überwachen und verwalten. Darüber hinaus werden Hardware-Diagnose- und Umgebungsinformationen, z. B. Komponentententententemperaturen oder Problemen mit den Laufwerken, überprüft.
+
+.Was Sie und#8217;ll benötigen
+* Sie verwenden ein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+* Um über den Grid Manager auf SANtricity System Manager zuzugreifen, müssen Sie über die Administratorberechtigung für die Speicheranwendung oder über die Berechtigung für den Root-Zugriff verfügen.
+* Um mit dem StorageGRID-Appliance-Installationsprogramm auf SANtricity System Manager zuzugreifen, müssen Sie über den Benutzernamen und das Kennwort des SANtricity-System-Managers verfügen.
+* Um direkt über einen Webbrowser auf SANtricity System Manager zuzugreifen, müssen Sie über den Benutzernamen und das Kennwort des SANtricity System Managers verfügen.
+
+
+
+NOTE: Sie müssen über die SANtricity-Firmware 8.70 (11.70) oder höher verfügen, um mithilfe des Grid-Managers oder des StorageGRID-Appliance-Installationsprogramms auf SANtricity System Manager zuzugreifen.
+
+
+IMPORTANT: Der Zugriff auf den SANtricity System Manager über den Grid Manager oder über den Appliance Installer beschränkt sich im Allgemeinen nur auf die Überwachung der Hardware und die Konfiguration von E-Series AutoSupport. Viele Funktionen und Vorgänge in SANtricity System Manager, z. B. ein Firmware-Upgrade, gelten nicht für das Monitoring Ihrer StorageGRID Appliance. Um Probleme zu vermeiden, befolgen Sie immer die Hardware-Installations- und Wartungsanweisungen für Ihr Gerät.
+
+.Schritte
+. Greifen Sie auf SANtricity System Manager zu.
++
+xref:setting-up-and-accessing-santricity-system-manager.adoc[Einrichten und Zugreifen auf SANtricity System Manager]
+
+. Geben Sie bei Bedarf den Benutzernamen und das Kennwort des Administrators ein.
+. Klicken Sie auf *Abbrechen*, um den Einrichtungsassistenten zu schließen und die Startseite des SANtricity-System-Managers anzuzeigen.
++
+Die Startseite von SANtricity System Manager wird angezeigt. In SANtricity System Manager wird das Controller Shelf als Storage-Array bezeichnet.
+
++
+image::../media/sam_home_page.gif[Screenshot der Startseite von SANtricity System Manager]
+
+. Überprüfen Sie die angezeigten Informationen für die Appliance-Hardware und vergewissern Sie sich, dass alle Hardwarekomponenten den Status „optimal“ aufweisen.
++
+.. Klicken Sie auf die Registerkarte *Hardware*.
+.. Klicken Sie auf *Zurück von Regal anzeigen*.
++
+image::../media/sam_hardware_controllers_a_and_b.gif[Registerkarte „Hardwarestatus“ in SANtricity System Manager]
+
++
+Von der Rückseite des Shelfs können Sie sowohl Storage-Controller als auch den Akku in jedem Storage Controller, die beiden Power Kanister, die beiden Lüfter-Kanister und Erweiterungs-Shelfs (falls vorhanden) anzeigen. Sie können auch Komponententententemperaturen anzeigen.
+
+.. Um die Einstellungen für jeden Speicher-Controller anzuzeigen, wählen Sie den Controller aus, und wählen Sie im Kontextmenü *Einstellungen anzeigen* aus.
+.. Um die Einstellungen für andere Komponenten auf der Rückseite des Shelf anzuzeigen, wählen Sie die Komponente aus, die Sie anzeigen möchten.
+.. Klicken Sie auf *Vorderseite des Regals*, und wählen Sie die Komponente aus, die Sie anzeigen möchten.
++
+Von der Vorderseite des Shelfs können die Laufwerke und die Laufwerksfächer für das Storage Controller-Shelf oder die Erweiterungs-Shelfs (falls vorhanden) angezeigt werden.
+
+
+
+
+
+Falls der Status einer Komponente Achtung erfordert, führen Sie die Schritte im Recovery Guru zur Lösung des Problems durch oder wenden Sie sich an den technischen Support.

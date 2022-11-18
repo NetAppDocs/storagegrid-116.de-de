@@ -1,0 +1,77 @@
+---
+permalink: tenant/creating-groups-for-swift-tenant.html 
+sidebar: sidebar 
+keywords: how to create Swift tenant groups 
+summary: Sie können Zugriffsberechtigungen für ein Swift-Mandantenkonto verwalten, indem Sie föderierte Gruppen importieren oder lokale Gruppen erstellen. Mindestens eine Gruppe muss über die Swift-Administratorberechtigung verfügen, die zur Verwaltung der Container und Objekte für ein Swift-Mandantenkonto erforderlich ist. 
+---
+= Erstellen von Gruppen für einen Swift Mandanten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Zugriffsberechtigungen für ein Swift-Mandantenkonto verwalten, indem Sie föderierte Gruppen importieren oder lokale Gruppen erstellen. Mindestens eine Gruppe muss über die Swift-Administratorberechtigung verfügen, die zur Verwaltung der Container und Objekte für ein Swift-Mandantenkonto erforderlich ist.
+
+.Was Sie und#8217;ll benötigen
+* Sie müssen mit einem beim Mandantenmanager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+* Sie müssen einer Benutzergruppe mit Root Access-Berechtigung angehören.
+* Wenn Sie eine föderierte Gruppe importieren möchten, haben Sie einen Identitätsverbund konfiguriert, und die föderierte Gruppe ist bereits in der konfigurierten Identitätsquelle vorhanden.
+
+
+.Schritte
+. Wählen Sie *ZUGRIFFSVERWALTUNG* *Gruppen*.
++
+image::../media/tenant_add_groups_example.png[Screenshot mit der Seite „Access Control Groups“]
+
+. Wählen Sie *Gruppe erstellen*.
+. Wählen Sie die Registerkarte *Lokale Gruppe* aus, um eine lokale Gruppe zu erstellen, oder wählen Sie die Registerkarte *Federated Group* aus, um eine Gruppe aus der zuvor konfigurierten Identitätsquelle zu importieren.
++
+Wenn Single Sign-On (SSO) für Ihr StorageGRID-System aktiviert ist, können sich Benutzer, die zu lokalen Gruppen gehören, nicht beim Mandanten-Manager anmelden, obwohl sie sich mithilfe von Client-Applikationen die Ressourcen des Mandanten basierend auf Gruppenberechtigungen managen können.
+
+. Geben Sie den Namen der Gruppe ein.
++
+** *Lokale Gruppe*: Geben Sie einen Anzeigenamen und einen eindeutigen Namen ein. Sie können den Anzeigenamen später bearbeiten.
+** *Federated Group*: Geben Sie den eindeutigen Namen ein. Bei Active Directory ist der eindeutige Name der dem zugeordneten Name `sAMAccountName` Attribut. Bei OpenLDAP ist der eindeutige Name der Name, der dem zugeordnet ist `uid` Attribut.
+
+
+. Wählen Sie *Weiter*.
+. Wählen Sie einen Zugriffsmodus aus. Wenn ein Benutzer zu mehreren Gruppen gehört und eine beliebige Gruppe auf schreibgeschützt eingestellt ist, hat der Benutzer schreibgeschützten Zugriff auf alle ausgewählten Einstellungen und Funktionen.
++
+** *Lesen-Schreiben* (Standard): Benutzer können sich bei Tenant Manager anmelden und die Mandantenkonfiguration verwalten.
+** *Schreibgeschützt*: Benutzer können nur Einstellungen und Funktionen anzeigen. Sie können keine Änderungen vornehmen oder Vorgänge in der Mandanten-Manager- oder Mandantenmanagement-API ausführen. Lokale schreibgeschützte Benutzer können ihre eigenen Passwörter ändern.
+
+
+. Legen Sie die Gruppenberechtigung fest.
++
+** Aktivieren Sie das Kontrollkästchen *Root Access*, wenn sich Benutzer bei der Tenant Manager- oder Mandantenmanagement-API anmelden müssen. (Standard)
+** Deaktivieren Sie das Kontrollkästchen *Root Access*, wenn Benutzer keinen Zugriff auf die Tenant Manager- oder Mandantenmanagement-API benötigen. Deaktivieren Sie beispielsweise das Kontrollkästchen für Anwendungen, die nicht auf den Mandanten zugreifen müssen. Weisen Sie dann die *Swift Administrator*-Berechtigung zu, damit diese Benutzer Container und Objekte verwalten können.
+
+
+. Wählen Sie *Weiter*.
+. Aktivieren Sie das Kontrollkästchen *Swift Administrator*, wenn der Benutzer die Swift REST API verwenden muss.
++
+Swift-Benutzer müssen über die Root-Zugriffsberechtigung für den Zugriff auf den Mandanten-Manager verfügen. Die Root-Zugriffsberechtigung ermöglicht Benutzern jedoch nicht, sich in der Swift REST-API zu authentifizieren, um Container zu erstellen und Objekte aufzunehmen. Benutzer müssen über die Swift-Administratorberechtigung verfügen, um sich bei der Swift-REST-API zu authentifizieren.
+
+. Wählen Sie die Schaltfläche aus, die angezeigt wird, je nachdem, ob Sie eine föderierte Gruppe oder eine lokale Gruppe erstellen:
++
+** Verbundgruppe: *Gruppe erstellen*
+** Lokale Gruppe: *Weiter*
++
+Wenn Sie eine lokale Gruppe erstellen, wird Schritt 4 (Benutzer hinzufügen) angezeigt, nachdem Sie *Weiter* ausgewählt haben. Dieser Schritt wird nicht für föderierte Gruppen angezeigt.
+
+
+
+. Aktivieren Sie das Kontrollkästchen für jeden Benutzer, den Sie der Gruppe hinzufügen möchten, und wählen Sie dann *Gruppe erstellen*.
++
+Optional können Sie die Gruppe speichern, ohne Benutzer hinzuzufügen. Sie können die Gruppe später Benutzer hinzufügen oder die Gruppe auswählen, wenn Sie neue Benutzer erstellen.
+
+. Wählen Sie *Fertig*.
++
+Die von Ihnen erstellte Gruppe wird in der Gruppenliste angezeigt. Änderungen können aufgrund des Caching bis zu 15 Minuten dauern.
+
+
+
+xref:tenant-management-permissions.adoc[Mandantenmanagement-Berechtigungen]
+
+xref:../swift/index.adoc[Verwenden Sie Swift]

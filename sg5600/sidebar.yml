@@ -1,0 +1,157 @@
+---
+section: sg5600
+title: SG5600 Storage Appliances
+entries:
+- title: Überblick
+  pdf-filename: StorageGRID SG5600 Storage Appliances
+  url: "/sg5600/index.html"
+  entries:
+  - title: Funktionen der StorageGRID Appliance
+    url: "/sg5600/storagegrid-appliance-features.html"
+  - title: Hardwarediagramme
+    url: "/sg5600/hardware-diagrams.html"
+- title: Übersicht über Installation und Implementierung
+  url: "/sg5600/installation-and-deployment-overview.html"
+- title: Installation vorbereiten (SG5600)
+  url: "/sg5600/preparing-for-installation.html"
+  entries:
+  - title: Standort vorbereiten (SG5600)
+    url: "/sg5600/preparing-site-sg5600.html"
+  - title: Auspackboxen (SG5600)
+    url: "/sg5600/unpacking-boxes-sg5600.html"
+  - title: Zusätzliche Ausrüstung und Tools (SG5600)
+    url: "/sg5600/obtaining-additional-equipment-and-tools-sg5600.html"
+  - title: Anforderungen an Service-Laptops
+    url: "/sg5600/service-laptop-requirements-sg5600.html"
+  - title: Appliance-Netzwerkverbindungen (SG5600) prüfen
+    url: "/sg5600/reviewing-appliance-network-connections-sg5600.html"
+    entries:
+    - title: Port Bond-Modi für E5600SG Controller-Ports
+      url: "/sg5600/port-bond-modes-for-e5600sg-controller-ports.html"
+      entries:
+      - title: Network Bond-Modi für 10-GbE-Ports
+        url: "/sg5600/network-bond-modes-for-10-gbe-ports.html"
+      - title: Netzwerk-Bond-Modi für 1-GbE-Management-Ports
+        url: "/sg5600/network-bond-modes-for-1-gbe-managment-ports.html"
+  - title: Erfassen von Installationsinformationen (SG5600)
+    url: "/sg5600/gathering-installation-information-sg5600.html"
+- title: Hardware installieren (SG5600)
+  url: "/sg5600/installing-hardware.html"
+  entries:
+  - title: Hardware registrieren
+    url: "/sg5600/registering-hardware.html"
+  - title: Appliance in Schrank oder Rack (SG5600) installieren
+    url: "/sg5600/installing-appliance-in-cabinet-or-rack-sg5600.html"
+  - title: Kabelgerät (SG5600)
+    url: "/sg5600/cabling-appliance-sg5600.html"
+  - title: Anschließen des Wechselstromnetzes (SG5600)
+    url: "/sg5600/connecting-ac-power-cords-sg5600.html"
+  - title: Einschalten (SG5600)
+    url: "/sg5600/turning-power-on-sg5600.html"
+  - title: Anzeigen des Boot-Status und Überprüfen von Fehlercodes auf SG5600-Controllern
+    url: "/sg5600/viewing-boot-up-status-and-reviewing-error-codes-on-sg5600-controllers.html"
+    entries:
+    - title: E5600SG-Controller-Anzeigecodes für sieben Segmente
+      url: "/sg5600/e5600sg-controller-seven-segment-display-codes.html"
+- title: Hardware konfigurieren (SG5600)
+  url: "/sg5600/configuring-hardware.html"
+  entries:
+  - title: Konfiguration von StorageGRID-Verbindungen (SG5600)
+    url: "/sg5600/configuring-storagegrid-connections.html"
+    entries:
+    - title: Rufen Sie das Installationsprogramm für StorageGRID-Appliances auf
+      url: "/sg5600/accessing-storagegrid-appliance-installer-sg5600.html"
+    - title: Überprüfen und Aktualisieren der Installationsversion der StorageGRID
+        Appliance
+      url: "/sg5600/verifying-and-upgrading-storagegrid-appliance-installer-version.html"
+    - title: Konfigurieren von Netzwerkverbindungen (SG5600)
+      url: "/sg5600/configuring-network-links-sg5600.html"
+    - title: Legen Sie die IP-Konfiguration fest
+      url: "/sg5600/setting-ip-configuration-sg5600.html"
+    - title: Netzwerkverbindungen prüfen
+      url: "/sg5600/verifying-network-connections.html"
+    - title: Überprüfen Sie Netzwerkverbindungen auf Portebene
+      url: "/sg5600/verifying-port-level-network-connections.html"
+  - title: Konfigurieren Sie den SANtricity Storage Manager
+    url: "/sg5600/configuring-santricity-storage-manager.html"
+    entries:
+    - title: Legen Sie die IP-Adresse für den E2700 Controller fest
+      url: "/sg5600/setting-ip-address-for-e2700-controller.html"
+    - title: Fügen Sie eine Appliance zum SANtricity Storage Manager hinzu
+      url: "/sg5600/adding-appliance-to-santricity-storage-manager.html"
+    - title: Einrichten des SANtricity-Storage-Managers
+      url: "/sg5600/setting-up-santricity-storage-manager.html"
+      entries:
+      - title: Konfigurieren Sie AutoSupport
+        url: "/sg5600/configuring-autosupport.html"
+      - title: Überprüfen Sie den Eingang von AutoSupport
+        url: "/sg5600/verifying-receipt-of-autosupport.html"
+      - title: Konfigurieren Sie E-Mail- und SNMP-Trap-Warnungsbenachrichtigungen
+        url: "/sg5600/configuring-email-and-snmp-trap-alert-notifications.html"
+      - title: Legen Sie Passwörter für den SANtricity-Speichermanager fest
+        url: "/sg5600/setting-passwords-for-santricity-storage-manager.html"
+  - title: 'Optional: Node-Verschlüsselung aktivieren'
+    url: "/sg5600/optional-enabling-node-encryption.html"
+  - title: 'Optional: Wechseln Sie in den RAID-6-Modus (nur SG5660).'
+    url: "/sg5600/optional-changing-to-raid6-mode-sg5660-only.html"
+  - title: 'Optional: Netzwerkports für Appliance neu zuordnen'
+    url: "/sg5600/optional-remapping-network-ports-for-appliance-sg5600-and-sg5700.html"
+- title: Appliance-Storage-Node implementieren
+  url: "/sg5600/deploying-appliance-storage-node.html"
+- title: Überwachen Sie die Installation der Storage Appliance
+  url: "/sg5600/monitoring-storage-appliance-installation.html"
+- title: Automatische Installation und Konfiguration der Appliance (SG5600)
+  url: "/sg5600/automating-appliance-installation-and-configuration.html"
+  entries:
+  - title: Automatisieren Sie die Appliance-Konfiguration mit dem StorageGRID Appliance
+      Installer
+    url: "/sg5600/automating-appliance-configuration-using-storagegrid-appliance-installer.html"
+  - title: Automatisieren Sie die Installation und Konfiguration von Appliance-Nodes
+      mithilfe von configure-sga.py Skripten
+    url: "/sg5600/automating-installation-configuration-appliance-nodes-configure-sga-py-script.html"
+  - title: Automatisierte Konfiguration von StorageGRID
+    url: "/sg5600/automating-configuration-of-storagegrid.html"
+- title: Überblick über die Installations-REST-APIs
+  url: "/sg5600/overview-of-installation-rest-apis.html"
+- title: Fehlerbehebung bei der Hardware-Installation (SG5600)
+  url: "/sg5600/troubleshooting-hardware-installation.html"
+  entries:
+  - title: Hardware-Setup scheint zu hängen (SG5600)
+    url: "/sg5600/hardware-setup-progress-appears-to-hang.html"
+    entries:
+    - title: 'HE-Fehler: Fehler beim Synchronisieren mit SANtricity OS Software'
+      url: "/sg5600/he-error-error-synchronizing-with-santricity-os-software.html"
+  - title: Fehlerbehebung bei Verbindungsproblemen (SG5600)
+    url: "/sg5600/troubleshooting-connection-issues.html"
+  - title: Starten Sie den Controller neu, während das Installationsprogramm der StorageGRID
+      Appliance ausgeführt wird
+    url: "/sg5600/rebooting-controller-while-storagegrid-appliance-installer-is-running.html"
+- title: SG5600-Appliance warten
+  url: "/sg5600/maintaining-sg5600-appliance.html"
+  entries:
+  - title: Stellen Sie das Gerät in den Wartungsmodus
+    url: "/sg5600/placing-appliance-into-maintenance-mode.html"
+  - title: Aktualisieren Sie SANtricity OS auf Storage-Controllern mit Grid Manager
+    url: "/sg5600/upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5600.html"
+  - title: Aktualisieren Sie SANtricity OS auf einem E2700 Controller mithilfe des
+      Wartungsmodus
+    url: "/sg5600/upgrading-santricity-os-on-e2700-controller-using-maintenance-mode.html"
+  - title: Aktualisieren Sie die Laufwerk-Firmware mit SANtricity Storage Manager
+    url: "/sg5600/upgrading-drive-firmware-using-santricity-storage-manager.html"
+  - title: E2700 Controller austauschen
+    url: "/sg5600/replacing-e2700-controller.html"
+  - title: E5600SG-Controller austauschen
+    url: "/sg5600/replacing-e5600sg-controller.html"
+  - title: Tauschen Sie andere Hardwarekomponenten aus
+    url: "/sg5600/replacing-other-hardware-components-sg5600.html"
+  - title: Ändern Sie die Link-Konfiguration des E5600SG-Controllers
+    url: "/sg5600/changing-link-configuration-of-e5600sg-controller.html"
+  - title: MTU-Einstellung ändern
+    url: "/sg5600/changing-mtu-setting.html"
+  - title: Überprüfen Sie die DNS-Server-Konfiguration
+    url: "/sg5600/checking-dns-server-configuration.html"
+  - title: Überwachung der Node-Verschlüsselung im Wartungsmodus (SG5600)
+    url: "/sg5600/monitoring-node-encryption-in-maintenance-mode.html"
+    entries:
+    - title: Die Konfiguration des Verschlüsselungsmanagement-Servers löschen
+      url: "/sg5600/clearing-key-management-server-configuration.html"

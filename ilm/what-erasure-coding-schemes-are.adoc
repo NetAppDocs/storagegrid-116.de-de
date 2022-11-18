@@ -1,0 +1,319 @@
+---
+permalink: ilm/what-erasure-coding-schemes-are.html 
+sidebar: sidebar 
+keywords: erasure coding scheme 
+summary: Wenn Sie das Erasure Coding-Profil für eine ILM-Regel konfigurieren, wählen Sie ein verfügbares Codierungsschema zur Fehlerkorrektur aus, basierend darauf, wie viele Storage-Nodes und -Standorte den zu verwendenden Speicherpool bilden. Erasure Coding steuert die Anzahl von Datenfragmenten und die Anzahl der Parity-Fragmente für jedes Objekt. 
+---
+= Was sind die Erasure Coding-Schemata
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie das Erasure Coding-Profil für eine ILM-Regel konfigurieren, wählen Sie ein verfügbares Codierungsschema zur Fehlerkorrektur aus, basierend darauf, wie viele Storage-Nodes und -Standorte den zu verwendenden Speicherpool bilden. Erasure Coding steuert die Anzahl von Datenfragmenten und die Anzahl der Parity-Fragmente für jedes Objekt.
+
+Das StorageGRID-System verwendet den Reed-Solomon-Erasure-Coding-Algorithmus. Der Algorithmus schneidet ein Objekt in k Datenfragmente auf und berechnet m Paritätsfragmente. Die k + m = n Fragmente sind auf n Speicherknoten verteilt, um die Datensicherung zu gewährleisten. Ein Objekt kann bis zu m verlorene oder beschädigte Fragmente erhalten. k Fragmente sind erforderlich, um ein Objekt abzurufen oder zu reparieren.
+
+Verwenden Sie bei der Konfiguration eines Erasure Coding-Profils die folgenden Richtlinien für Speicherpools:
+
+* Der Speicherpool muss drei oder mehr Standorte oder exakt einen Standort umfassen.
++
+
+NOTE: Sie können kein Erasure Coding-Profil konfigurieren, wenn der Speicherpool zwei Standorte umfasst.
+
++
+**  schemes for storage pools containing three or more sites,Verfahren zur Einhaltung von Datenkonsistenz für Storage-Pools mit drei oder mehr Standorten
+**  schemes for one-site storage pools,Verfahren zur Einhaltung von Datenkonsistenz für Storage-Pools an einem Standort
+
+
+* Verwenden Sie nicht den Standardspeicherpool, alle Speicherknoten oder einen Speicherpool, der den Standardstandort, Alle Standorte, enthält.
+* Der Speicherpool sollte mindestens _k+m_ +1 Storage-Nodes enthalten.
++
+Die Mindestanzahl der benötigten Storage-Nodes beträgt _k+m_. Durch mindestens einen zusätzlichen Storage-Node können jedoch Ingest- oder ILM-Backlogs verhindert werden, wenn ein erforderlicher Storage-Node vorübergehend nicht verfügbar ist.
+
+
+
+Der Storage Overhead eines Erasure Coding-Schemas wird berechnet, indem die Anzahl der Paritäts-Fragmente (_m_) durch die Anzahl der Datenfragmente (_k_) geteilt wird. Der Storage Overhead lässt sich ermitteln, wie viel Festplattenspeicher jedes mit Erasure-Coding-Objekt benötigt:
+
+`_disk space_ = _object size_ + (_object size_ * _storage overhead_)`
+
+Wenn Sie beispielsweise ein Objekt mit 10 MB unter Verwendung des Schemas von 4+2 speichern (mit einem Mehraufwand von 50 %), verbraucht das Objekt 15 MB Grid Storage. Wenn Sie dasselbe 10 MB große Objekt mit dem Schema 6+2 speichern (mit einem Mehraufwand von 33 %), verbraucht das Objekt etwa 13.3 MB.
+
+Wählen Sie das Erasure-Coding-Schema mit dem niedrigsten Gesamtwert von _k+m_ aus, das Ihren Anforderungen entspricht. Erasure Coding-Schemata mit einer geringeren Anzahl von Fragmenten werden insgesamt recheneffizienter, da weniger Fragmente pro Objekt erstellt und verteilt (oder abgerufen) werden. Je größer die Fragmentgröße ist, desto weniger Nodes können bei einer Erweiterung hinzugefügt werden, wenn mehr Storage benötigt wird. (Informationen zur Planung einer Speichererweiterung finden Sie in den Anweisungen zum erweitern von StorageGRID.)
+
+
+
+== Verfahren zur Einhaltung von Datenkonsistenz für Storage-Pools mit drei oder mehr Standorten
+
+Die folgende Tabelle beschreibt die von StorageGRID derzeit unterstützten Erasure Coding-Schemata für Storage-Pools, die drei oder mehr Standorte umfassen. Alle diese Systeme bieten einen Schutz vor Schäden an den Standorten. Ein Standort kann verloren gehen, und das Objekt ist weiterhin verfügbar.
+
+Für Erasure-Coding-Schemata, die Site-Loss-Schutz bieten, übersteigt die empfohlene Anzahl von Storage-Nodes im Speicherpool die Anzahl _k+m_+1, da für jeden Standort mindestens drei Storage-Nodes erforderlich sind.
+
+[cols="1a,1a,1a,1a,1a,1a"]
+|===
+| Schema zur Einhaltung von Datenkonsistenz (Erasure Coding) (_k+m_) | Mindestanzahl der bereitgestellten Standorte | Empfohlene Anzahl von Storage-Nodes an jedem Standort | Insgesamt empfohlene Anzahl von Storage-Nodes | Schutz vor Standortausfällen? | Storage Overhead 
+
+
+ a| 
+4 + 2
+ a| 
+3
+ a| 
+3
+ a| 
+9
+ a| 
+Ja.
+ a| 
+50 % erzielt
+
+
+
+ a| 
+6 + 2
+ a| 
+4
+ a| 
+3
+ a| 
+12
+ a| 
+Ja.
+ a| 
+33 % erzielt
+
+
+
+ a| 
+8 + 2
+ a| 
+5
+ a| 
+3
+ a| 
+15
+ a| 
+Ja.
+ a| 
+25 % erzielt
+
+
+
+ a| 
+6 + 3
+ a| 
+3
+ a| 
+4
+ a| 
+12
+ a| 
+Ja.
+ a| 
+50 % erzielt
+
+
+
+ a| 
+9 + 3
+ a| 
+4
+ a| 
+4
+ a| 
+16
+ a| 
+Ja.
+ a| 
+33 % erzielt
+
+
+
+ a| 
+2+1
+ a| 
+3
+ a| 
+3
+ a| 
+9
+ a| 
+Ja.
+ a| 
+50 % erzielt
+
+
+
+ a| 
+4+1
+ a| 
+5
+ a| 
+3
+ a| 
+15
+ a| 
+Ja.
+ a| 
+25 % erzielt
+
+
+
+ a| 
+6+1
+ a| 
+7
+ a| 
+3
+ a| 
+21
+ a| 
+Ja.
+ a| 
+17 % erzielt
+
+
+
+ a| 
+7 + 5
+ a| 
+3
+ a| 
+5
+ a| 
+15
+ a| 
+Ja.
+ a| 
+71 % erzielt
+
+|===
+
+NOTE: StorageGRID erfordert mindestens drei Storage-Nodes pro Standort. Für die Verwendung des Schemas 7+5 benötigt jeder Standort mindestens vier Speicherknoten. Es wird empfohlen, fünf Storage-Nodes pro Standort zu verwenden.
+
+Bei der Auswahl eines Löschungsschemas, das Standortschutz bietet, sollte die relative Bedeutung der folgenden Faktoren in Einklang gestellt werden:
+
+* *Anzahl der Fragmente*: Leistung und Expansionsflexibilität sind im Allgemeinen besser, wenn die Gesamtzahl der Fragmente geringer ist.
+* *Fehlertoleranz*: Die Fehlertoleranz wird durch mehr Paritäts-Segmente erhöht (d. h. wenn _m_ einen höheren Wert hat).
+* *Netzverkehr*: Bei der Wiederherstellung nach Ausfällen erzeugt ein Schema mit mehr Fragmenten (das heißt, eine höhere Summe für _k+m_) mehr Netzwerkverkehr.
+* *Storage Overhead*: Bei Systemen mit höherem Overhead wird mehr Speicherplatz pro Objekt benötigt.
+
+
+Wenn Sie beispielsweise zwischen einem Schema 4+2 und dem Schema 6+3 (mit jeweils 50 % Storage Overhead) entscheiden, wählen Sie das Schema 6+3 aus, wenn eine zusätzliche Fehlertoleranz erforderlich ist. Wählen Sie das Schema 4+2 aus, wenn die Netzwerkressourcen begrenzt sind. Wenn alle anderen Faktoren gleich sind, wählen Sie 4+2 aus, da die Gesamtzahl der Fragmente geringer ist.
+
+
+NOTE: Wenn Sie sich nicht sicher sind, welches Schema Sie verwenden möchten, wählen Sie 4+2 oder 6+3 aus, oder wenden Sie sich an den technischen Support.
+
+
+
+== Verfahren zur Einhaltung von Datenkonsistenz für Storage-Pools an einem Standort
+
+Ein Storage-Pool an einem Standort unterstützt alle Erasure Coding-Schemata, die für drei oder mehr Standorte definiert sind, sofern der Standort über ausreichend Storage-Nodes verfügt.
+
+Die erforderliche Mindestanzahl an Storage-Nodes beträgt _k+m_, es wird jedoch ein Speicherpool mit _k+m_+1 Storage-Nodes empfohlen. Zum Beispiel erfordert das Verfahren zur Einhaltung von Datenkonsistenz (Erasure Coding) 2+1 einen Speicherpool mit mindestens drei Storage-Nodes, es werden jedoch vier Storage-Nodes empfohlen.
+
+[cols="1a,1a,1a,1a"]
+|===
+| Schema zur Einhaltung von Datenkonsistenz (Erasure Coding) (_k+m_) | Mindestanzahl Storage-Nodes | Empfohlene Anzahl von Storage-Nodes | Storage Overhead 
+
+
+ a| 
+4 + 2
+ a| 
+6
+ a| 
+7
+ a| 
+50 % erzielt
+
+
+
+ a| 
+6 + 2
+ a| 
+8
+ a| 
+9
+ a| 
+33 % erzielt
+
+
+
+ a| 
+8 + 2
+ a| 
+10
+ a| 
+11
+ a| 
+25 % erzielt
+
+
+
+ a| 
+6 + 3
+ a| 
+9
+ a| 
+10
+ a| 
+50 % erzielt
+
+
+
+ a| 
+9 + 3
+ a| 
+12
+ a| 
+13
+ a| 
+33 % erzielt
+
+
+
+ a| 
+2+1
+ a| 
+3
+ a| 
+4
+ a| 
+50 % erzielt
+
+
+
+ a| 
+4+1
+ a| 
+5
+ a| 
+6
+ a| 
+25 % erzielt
+
+
+
+ a| 
+6+1
+ a| 
+7
+ a| 
+8
+ a| 
+17 % erzielt
+
+
+
+ a| 
+7 + 5
+ a| 
+12
+ a| 
+13
+ a| 
+71 % erzielt
+
+|===
+xref:../expand/index.adoc[Erweitern Sie Ihr Raster]

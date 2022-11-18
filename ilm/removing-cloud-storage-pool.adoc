@@ -1,0 +1,50 @@
+---
+permalink: ilm/removing-cloud-storage-pool.html 
+sidebar: sidebar 
+keywords: remove cloud storage pool 
+summary: Sie können einen Cloud-Storage-Pool entfernen, der nicht in einer ILM-Regel verwendet wird und der keine Objektdaten enthält. 
+---
+= Entfernen Sie einen Cloud-Speicherpool
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Cloud-Storage-Pool entfernen, der nicht in einer ILM-Regel verwendet wird und der keine Objektdaten enthält.
+
+.Was Sie und#8217;ll benötigen
+* Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+* Sie haben spezifische Zugriffsberechtigungen.
+* Sie haben bestätigt, dass der S3-Bucket oder der Azure-Container keine Objekte enthält. Ein Fehler tritt auf, wenn Sie versuchen, einen Cloud-Speicherpool zu entfernen, wenn er Objekte enthält. Siehe xref:troubleshooting-cloud-storage-pools.adoc[Fehlerbehebung Bei Cloud Storage Pools].
++
+
+NOTE: Beim Erstellen eines Cloud Storage-Pools schreibt StorageGRID eine Markierungsdatei in den Bucket oder Container, um sie als Cloud-Storage-Pool zu identifizieren. Entfernen Sie diese Datei nicht, die den Namen trägt `x-ntap-sgws-cloud-pool-uuid`.
+
+* Sie haben bereits alle ILM-Regeln entfernt, die den Pool möglicherweise verwendet haben.
+
+
+.Schritte
+. Wählen Sie *ILM* *Storage Pools* aus.
++
+Die Seite Speicherpools wird angezeigt.
+
+. Wählen Sie das Optionsfeld für einen Cloud-Storage-Pool aus, der derzeit nicht in einer ILM-Regel verwendet wird.
++
+Sie können einen Cloud-Storage-Pool nicht entfernen, wenn er in einer ILM-Regel verwendet wird. Die Schaltfläche *Entfernen* ist deaktiviert.
+
++
+image::../media/cloud_storage_pool_used_in_ilm_rule.png[In der ILM-Regel verwendeter Cloud-Storage-Pool]
+
+. Wählen Sie *Entfernen*.
++
+Eine Bestätigungsmeldung wird angezeigt.
+
++
+image::../media/cloud_storage_pool_remove.gif[Cloud-Storage-Pool Entfernen]
+
+. Wählen Sie *OK*.
++
+Der Cloud-Speicherpool wird entfernt.
+
+

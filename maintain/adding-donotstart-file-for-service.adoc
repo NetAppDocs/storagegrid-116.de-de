@@ -1,0 +1,46 @@
+---
+permalink: maintain/adding-donotstart-file-for-service.html 
+sidebar: sidebar 
+keywords: storagegrid, add do not start file, adding do not start file, service 
+summary: Sie können verhindern, dass ein einzelner Dienst gestartet wird, indem Sie auf einem Grid-Knoten eine DoNotStart-Datei zum Verzeichnis dieses Dienstes hinzufügen. 
+---
+= Fügen Sie die DoNotStart-Datei für den Dienst hinzu
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können verhindern, dass ein einzelner Dienst gestartet wird, indem Sie dem Verzeichnis dieses Dienstes auf einem Grid-Node eine DoNotStart-Datei hinzufügen.
+
+Sie müssen die haben `Passwords.txt` Datei:
+
+.Schritte
+. Melden Sie sich beim Grid-Node an:
++
+.. Geben Sie den folgenden Befehl ein: `ssh admin@_grid_node_IP_`
+.. Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+.. Geben Sie den folgenden Befehl ein, um zum Root zu wechseln: `su -`
+.. Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+
+
++
+Wenn Sie als root angemeldet sind, ändert sich die Eingabeaufforderung von `$` Bis `#`.
+
+. Fügen Sie eine DoNotStart-Datei hinzu: `touch /etc/sv/_service_/DoNotStart`
++
+Wo `service` Ist der Name des Dienstes, der verhindert werden soll, dass der Dienst gestartet wird. Beispiel:
+
++
+[listing]
+----
+touch /etc/sv/ldr/DoNotStart
+----
++
+Eine DoNotStart-Datei wird erstellt. Es werden keine Dateiinhalte benötigt.
+
++
+Wenn Server Manager oder der Grid-Node neu gestartet wird, wird der Server Manager neu gestartet, der Service jedoch nicht.
+
+. Melden Sie sich aus der Befehlsshell ab: `exit`
+

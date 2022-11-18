@@ -1,0 +1,41 @@
+---
+permalink: tenant/deleting-your-own-s3-access-keys.html 
+sidebar: sidebar 
+keywords: how to delete S3 access key 
+summary: Wenn Sie einen S3-Mandanten verwenden und über die entsprechenden Berechtigungen verfügen, können Sie Ihre eigenen S3-Zugriffsschlüssel löschen. Nach dem Löschen eines Zugriffsschlüssels kann dieser nicht mehr für den Zugriff auf die Objekte und Buckets im Mandantenkonto verwendet werden. 
+---
+= Löschen Ihrer eigenen S3-Zugriffsschlüssel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie einen S3-Mandanten verwenden und über die entsprechenden Berechtigungen verfügen, können Sie Ihre eigenen S3-Zugriffsschlüssel löschen. Nach dem Löschen eines Zugriffsschlüssels kann dieser nicht mehr für den Zugriff auf die Objekte und Buckets im Mandantenkonto verwendet werden.
+
+.Was Sie und#8217;ll benötigen
+* Sie müssen mit einem beim Mandantenmanager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+* Sie müssen über die Berechtigung zum Verwalten Ihrer eigenen S3-Anmeldedaten verfügen. Siehe xref:tenant-management-permissions.adoc[Mandantenmanagement-Berechtigungen].
+
+
+
+IMPORTANT: Sie können auf die S3-Buckets und Objekte aus Ihrem Konto zugreifen, indem Sie die Zugriffsschlüssel-ID und den geheimen Zugriffsschlüssel verwenden, die für Ihr Konto im Mandanten-Manager angezeigt werden. Aus diesem Grund schützen Sie Zugriffsschlüssel wie ein Passwort. Drehen Sie regelmäßig Zugriffsschlüssel, entfernen Sie alle nicht verwendeten Schlüssel aus Ihrem Konto und teilen Sie sie niemals mit anderen Benutzern.
+
+.Schritte
+. Wählen Sie *STORAGE (S3)* *Meine Zugriffsschlüssel* aus.
++
+Die Seite Meine Zugriffsschlüssel wird angezeigt und enthält alle vorhandenen Zugriffsschlüssel.
+
+. Aktivieren Sie das Kontrollkästchen für jeden Zugriffschlüssel, den Sie entfernen möchten.
+. Wählen Sie * Taste löschen*.
++
+Ein Bestätigungsdialogfeld wird angezeigt.
+
++
+image::../media/access_key_confirm_delete.png[Zugriffsschlüssel - Löschen Bestätigen]
+
+. Wählen Sie * Taste löschen*.
++
+In der oberen rechten Ecke der Seite wird eine Bestätigungsmeldung angezeigt. Änderungen können aufgrund des Caching bis zu 15 Minuten dauern.
+
+

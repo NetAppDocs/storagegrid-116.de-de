@@ -1,0 +1,221 @@
+---
+permalink: monitor/configure-audit-messages.html 
+sidebar: sidebar 
+keywords: audit messages, configure syslog server, configure external syslog server. log destinations 
+summary: Alle StorageGRID-Nodes generieren Audit-Meldungen, um die Systemaktivität und -Ereignisse zu verfolgen. Sie können die Audiorelevel anpassen, um die Art und Anzahl der aufgezeichneten Audit-Meldungen zu erhöhen oder zu verringern. 
+---
+= Konfigurieren von Überwachungsmeldungen und Protokollzielen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Audit-Meldungen und -Protokolle zeichnen Systemaktivitäten und Sicherheitsereignisse auf und sind wichtige Tools für das Monitoring und die Fehlerbehebung. Sie können die Audiorelevel anpassen, um die Art und Anzahl der aufgezeichneten Audit-Meldungen zu erhöhen oder zu verringern. Optional können Sie alle HTTP-Anforderungs-Header definieren, die Sie in Client-Audit-Nachrichten lesen und schreiben möchten. Sie können auch einen externen Syslog-Server konfigurieren und das Ziel der Audit-Informationen ändern.
+
+Weitere Informationen zu Audit-Meldungen finden Sie unter xref:../audit/index.adoc[Prüfung von Audit-Protokollen].
+
+.Was Sie und#8217;ll benötigen
+* Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+* Sie verfügen über Wartungs- oder Root-Zugriffsberechtigungen.
+
+
+Alle StorageGRID Nodes generieren Audit-Meldungen und -Protokolle, um die Systemaktivität und -Ereignisse nachzuverfolgen. Standardmäßig werden Audit-Informationen an das Audit-Protokoll auf Admin-Knoten gesendet. Sie können die Überwachungsstufen anpassen, um die Art und Anzahl der im Audit-Protokoll aufgezeichneten Audit-Meldungen zu erhöhen oder zu verringern. Optional können Sie die Audit-Informationen konfigurieren, die an einen Remote-Syslog-Server gesendet oder temporär auf den ausnehmenden Nodes zur manuellen Erfassung gespeichert werden sollen.
+
+
+
+== Ändern Sie die Meldungsebenen im Auditprotokoll
+
+Sie können für jede der folgenden Meldungskategorien im Prüfprotokoll eine andere Überwachungsstufe festlegen:
+
+[cols="1a,3a"]
+|===
+| Audit-Kategorie | Beschreibung 
+
+
+ a| 
+System
+ a| 
+Standardmäßig ist diese Ebene auf „Normal“ eingestellt. Siehe xref:../audit/system-audit-messages.adoc[Systemaudits Meldungen].
+
+
+
+ a| 
+Storage
+ a| 
+Diese Ebene ist standardmäßig auf Fehler festgelegt. Siehe xref:../audit/object-storage-audit-messages.adoc[Audit-Meldungen zu Objekt-Storage].
+
+
+
+ a| 
+Vereinfachtes
+ a| 
+Standardmäßig ist diese Ebene auf „Normal“ eingestellt. Siehe xref:../audit/management-audit-message.adoc[Management-Audit-Nachricht].
+
+
+
+ a| 
+Client Liest
+ a| 
+Standardmäßig ist diese Ebene auf „Normal“ eingestellt. Siehe xref:../audit/client-read-audit-messages.adoc[Client liest Audit-Meldungen].
+
+
+
+ a| 
+Client-Schreibvorgänge
+ a| 
+Standardmäßig ist diese Ebene auf „Normal“ eingestellt. Siehe xref:../audit/client-write-audit-messages.adoc[Audit-Meldungen des Clients schreiben].
+
+|===
+
+NOTE: Diese Standardeinstellungen gelten, wenn Sie StorageGRID ursprünglich mit Version 10.3 oder höher installiert haben. Wenn Sie ein Upgrade von einer früheren Version von StorageGRID durchgeführt haben, ist die Standardeinstellung für alle Kategorien auf „Normal“ gesetzt.
+
+
+NOTE: Bei Upgrades sind Audit-Level-Konfigurationen nicht sofort wirksam.
+
+.Schritte
+. Wählen Sie *KONFIGURATION* *Überwachung* *Audit- und Syslog-Server*.
++
+image::../media/audit-messages-main-page.png[Hauptseite Überwachungsmeldungen]
+
+. Wählen Sie für jede Kategorie der Überwachungsmeldung eine Überwachungsstufe aus der Dropdown-Liste aus:
++
+[cols="1a,3a"]
+|===
+| Audit-Level | Beschreibung 
+
+
+ a| 
+Aus
+ a| 
+Es werden keine Überwachungsmeldungen aus der Kategorie protokolliert.
+
+
+
+ a| 
+Fehler
+ a| 
+Nur Fehlermeldungen sind protokollierte - Audit-Meldungen, für die der Ergebniscode nicht „erfolgreich“ (SUCS) war.
+
+
+
+ a| 
+Normal
+ a| 
+Standardtransaktionsmeldungen werden protokolliert – die in diesen Anweisungen für die Kategorie aufgeführten Nachrichten.
+
+
+
+ a| 
+Debuggen
+ a| 
+Veraltet. Dieser Level verhält sich mit dem normalen Prüfstand.
+
+|===
++
+Die Meldungen, die für eine bestimmte Ebene enthalten sind, enthalten diejenigen, die auf den höheren Ebenen protokolliert werden würden. Die normale Ebene umfasst beispielsweise alle Fehlermeldungen.
+
+. Definieren Sie optional unter *Prüfprotokoll-Header* alle HTTP-Anforderungsheader, die Sie in die Lese- und Schreibnachrichten des Clients einbeziehen möchten. Verwenden Sie ein Sternchen (\*) als Platzhalter, um Null oder mehr Zeichen zu entsprechen. Verwenden Sie die Escape-Sequenz (\*), um mit einem wortwörtliche Sternchen überein.
++
+
+NOTE: Header für Prüfprotokolle sind nur auf S3 und Swift Anfragen anwendbar.
+
+. Wählen Sie *Einen anderen Header hinzufügen* aus, um ggf. zusätzliche Header zu erstellen.
++
+Wenn HTTP-Header in einer Anfrage gefunden werden, sind sie in der Überwachungsmeldung unter dem Feld HTRH enthalten.
+
++
+
+NOTE: Header für Auditprotokoll-Anfragen werden nur protokolliert, wenn die Audit-Ebene für *Client* oder *Client-Schreibvorgänge* nicht *aus* ist.
+
+. Wählen Sie *Speichern*
++
+Ein grünes Banner zeigt an, dass Ihre Konfiguration erfolgreich gespeichert wurde.
+
+
+
+
+
+== Verwenden Sie einen externen Syslog-Server
+
+Sie können einen externen Syslog-Server konfigurieren, wenn Sie Audit-Informationen Remote speichern möchten.
+
+* Wenn Sie Audit-Informationen auf einem externen Syslog-Server speichern möchten, gehen Sie zu xref:../monitor/configuring-syslog-server.adoc[Konfigurieren Sie einen externen Syslog-Server].
+* Wenn Sie keinen externen Syslog-Server verwenden, fahren Sie mit fort ,Wählen Sie Ziele für Audit-Informationen aus.
+
+
+
+
+== Wählen Sie Ziele für Audit-Informationen aus
+
+Sie können festlegen, wo Audit-Protokolle, Sicherheitsereignisprotokolle und Anwendungsprotokolle gesendet werden.
+
+
+NOTE: Einige Ziele sind nur verfügbar, wenn Sie einen externen Syslog-Server verwenden. Siehe xref:../monitor/configuring-syslog-server.adoc[Konfigurieren Sie einen externen Syslog-Server] So konfigurieren Sie einen externen Syslog-Server:
+
+
+NOTE: Weitere Informationen zu StorageGRID-Softwareprotokollen finden Sie unter xref:../monitor/storagegrid-software-logs.adoc#[StorageGRID-Softwareprotokolle].
+
+. Wählen Sie auf der Seite Audit- und Syslog-Server aus den aufgeführten Optionen das Ziel für Audit-Informationen aus:
++
+[cols="1a,2a"]
+|===
+| Option | Beschreibung 
+
+
+ a| 
+Standard (Admin-Nodes/lokale Nodes)
+ a| 
+Audit-Meldungen werden an das Audit-Protokoll gesendet (`audit.log`) Auf dem Admin-Knoten werden Sicherheitsereignisprotokolle und Anwendungsprotokolle auf den Knoten gespeichert, in denen sie erzeugt wurden (auch als "der lokale Knoten" bezeichnet).
+
+
+
+ a| 
+Externer Syslog-Server
+ a| 
+Audit-Informationen werden an einen externen Syslog-Server gesendet und auf dem lokalen Knoten gespeichert. Die Art der gesendeten Informationen hängt davon ab, wie Sie den externen Syslog-Server konfiguriert haben. Diese Option ist erst aktiviert, nachdem Sie einen externen Syslog-Server konfiguriert haben.
+
+
+
+ a| 
+Admin-Node und externer Syslog-Server
+ a| 
+Audit-Meldungen werden an das Audit-Protokoll gesendet (`audit.log`) Auf dem Admin-Knoten und Audit-Informationen werden an den externen Syslog-Server gesendet und auf dem lokalen Knoten gespeichert. Die Art der gesendeten Informationen hängt davon ab, wie Sie den externen Syslog-Server konfiguriert haben. Diese Option ist erst aktiviert, nachdem Sie einen externen Syslog-Server konfiguriert haben.
+
+
+
+ a| 
+Nur lokale Nodes
+ a| 
+Es werden keine Audit-Informationen an einen Admin-Node oder Remote-Syslog-Server gesendet. Audit-Informationen werden nur auf den generierten Nodes gespeichert.
+
+*Hinweis*: StorageGRID entfernt regelmäßig diese lokalen Protokolle in einer Drehung, um Speicherplatz freizugeben. Wenn die Protokolldatei für einen Knoten 1 GB erreicht, wird die vorhandene Datei gespeichert und eine neue Protokolldatei gestartet. Die Rotationsgrenze für das Protokoll beträgt 21 Dateien. Wenn die 22. Version der Protokolldatei erstellt wird, wird die älteste Protokolldatei gelöscht. Auf jedem Node werden durchschnittlich etwa 20 GB an Protokolldaten gespeichert.
+
+|===
+
+
+
+NOTE: In werden Audit-Informationen, die für jeden lokalen Node generiert werden, gespeichert `/var/local/log/localaudit.log`
+
+. Wählen Sie *Speichern*.
+
+
+Es wird eine Warnmeldung angezeigt:
+
+
+CAUTION: Protokollziel ändern?
+
+. Bestätigen Sie, dass Sie das Ziel für Audit-Informationen ändern möchten, indem Sie *OK* wählen.
++
+Ein grünes Banner zeigt an, dass Ihre Audit-Konfiguration erfolgreich gespeichert wurde.
+
++
+Neue Protokolle werden an die ausgewählten Ziele gesendet. Vorhandene Protokolle verbleiben an ihrem aktuellen Speicherort.
+
+
+
+xref:../monitor/considerations-for-external-syslog-server.adoc[Überlegungen für externen Syslog-Server]
+
+xref:../admin/index.adoc[StorageGRID verwalten]
+
+xref:../monitor/troubleshooting-syslog-server.adoc[Fehlerbehebung für den externen Syslog-Server]

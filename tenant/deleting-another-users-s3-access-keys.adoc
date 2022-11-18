@@ -1,0 +1,45 @@
+---
+permalink: tenant/deleting-another-users-s3-access-keys.html 
+sidebar: sidebar 
+keywords: how to delete access key for other user 
+summary: Wenn Sie einen S3-Mandanten verwenden und über entsprechende Berechtigungen verfügen, können Sie die S3-Zugriffsschlüssel eines anderen Benutzers löschen. Nach dem Löschen eines Zugriffsschlüssels kann dieser nicht mehr für den Zugriff auf die Objekte und Buckets im Mandantenkonto verwendet werden. 
+---
+= Löschen Sie die S3-Zugriffstasten eines anderen Benutzers
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie einen S3-Mandanten verwenden und über die entsprechenden Berechtigungen verfügen, können Sie die S3-Zugriffsschlüssel eines anderen Benutzers löschen. Nach dem Löschen eines Zugriffsschlüssels kann dieser nicht mehr für den Zugriff auf die Objekte und Buckets im Mandantenkonto verwendet werden.
+
+.Was Sie und#8217;ll benötigen
+* Sie müssen mit einem beim Mandantenmanager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+* Sie müssen über die Berechtigung Root Access verfügen. Siehe xref:tenant-management-permissions.adoc[Mandantenmanagement-Berechtigungen].
+
+
+
+IMPORTANT: Auf die S3-Buckets und Objekte, die zu einem Benutzer gehören, kann über die Zugriffsschlüssel-ID und den geheimen Zugriffsschlüssel zugegriffen werden, die für diesen Benutzer im Mandanten-Manager angezeigt werden. Aus diesem Grund schützen Sie Zugriffsschlüssel wie ein Passwort. Drehen Sie die Zugriffstasten regelmäßig, entfernen Sie alle nicht verwendeten Schlüssel aus dem Konto und geben Sie sie niemals anderen Benutzern zur Verfügung.
+
+.Schritte
+. Wählen Sie *ZUGRIFFSVERWALTUNG* *Benutzer*.
++
+Die Seite Benutzer wird angezeigt und listet die vorhandenen Benutzer auf.
+
+. Wählen Sie den Benutzer aus, dessen S3-Zugriffsschlüssel Sie managen möchten.
++
+Die Seite Benutzerdetails wird angezeigt.
+
+. Wählen Sie *Zugriffstasten* aus, und aktivieren Sie dann das Kontrollkästchen für jeden zu löschenden Zugriffsschlüssel.
+. Wählen Sie *Aktionen* *Ausgewählte Taste löschen*.
++
+Ein Bestätigungsdialogfeld wird angezeigt.
+
++
+image::../media/access_key_confirm_delete.png[Zugriffsschlüssel - Löschen Bestätigen]
+
+. Wählen Sie * Taste löschen*.
++
+In der oberen rechten Ecke der Seite wird eine Bestätigungsmeldung angezeigt. Änderungen können aufgrund des Caching bis zu 15 Minuten dauern.
+
+

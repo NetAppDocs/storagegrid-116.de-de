@@ -1,0 +1,65 @@
+---
+permalink: monitor/monitoring-node-connection-states.html 
+sidebar: sidebar 
+keywords: monitor, monitoring node connection states, node connection states 
+summary: Wenn ein oder mehrere Nodes vom Grid getrennt werden, können kritische StorageGRID-Vorgänge beeinträchtigt werden. Sie müssen den Status der Node-Verbindung überwachen und Probleme unverzüglich beheben. 
+---
+= Überwachen Sie die Status der Node-Verbindung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn ein oder mehrere Nodes vom Grid getrennt werden, können kritische StorageGRID-Vorgänge beeinträchtigt werden. Sie müssen den Status der Node-Verbindung überwachen und Probleme unverzüglich beheben.
+
+.Was Sie und#8217;ll benötigen
+* Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+
+
+Nodes können einen von drei Verbindungszuständen haben:
+
+* *Nicht verbunden - Unbekannt* image:../media/icon_alarm_blue_unknown.png["Blaues Fragezeichen-Symbol"]: Der Knoten ist aus einem unbekannten Grund nicht mit dem Raster verbunden. Beispielsweise wurde die Netzwerkverbindung zwischen den Knoten unterbrochen oder der Strom ist ausgefallen. Die Warnung * kann nicht mit Node* kommunizieren. Auch andere Warnmeldungen können aktiv sein. Diese Situation erfordert sofortige Aufmerksamkeit.
++
+
+NOTE: Ein Node wird möglicherweise während des verwalteten Herunterfahrens als „Unbekannt“ angezeigt. In diesen Fällen können Sie den Status Unbekannt ignorieren.
+
+* *Nicht verbunden - Administrativ unten* image:../media/icon_alarm_gray_administratively_down.png["Graues Fragensymbol"]: Der Knoten ist aus einem erwarteten Grund nicht mit dem Netz verbunden. Beispielsweise wurde der Node oder die Services für den Node ordnungsgemäß heruntergefahren, der Node neu gebootet oder die Software wird aktualisiert. Mindestens ein Alarm ist möglicherweise auch aktiv.
+* * Verbunden* image:../media/icon_alert_green_checkmark.png["Grünes Häkchen für Symbolwarnung"]: Der Knoten ist mit dem Raster verbunden.
+
+
+.Schritte
+. Wenn im Bedienfeld „Systemzustand“ des Dashboards ein blaues oder graues Symbol angezeigt wird, klicken Sie auf das Symbol oder klicken Sie auf *Rasterdetails*. (Die blauen oder grauen Symbole und der Link *Grid Details* werden nur angezeigt, wenn mindestens ein Knoten vom Raster getrennt ist.)
++
+Die Übersichtsseite des ersten blauen Knotens in der Knotenstruktur wird angezeigt. Wenn keine blauen Knoten vorhanden sind, wird die Übersichtsseite für den ersten grauen Knoten in der Struktur angezeigt.
+
++
+Im Beispiel hat der Speicherknoten DC1-S3 ein blaues Symbol. Der *Verbindungsstatus* im Fenster Knoteninformationen lautet *Unbekannt*, und die Warnung *mit Knoten* kann nicht kommunizieren* ist aktiv. Die Meldung gibt an, dass ein oder mehrere Services nicht mehr reagiert oder der Node nicht erreicht werden kann.
+
++
+image::../media/node_connection_state_blue.png[Verbindungsstatus Knoten Blau]
+
+. Wenn ein Knoten über ein blaues Symbol verfügt, führen Sie die folgenden Schritte aus:
++
+.. Wählen Sie jede Warnung in der Tabelle aus, und befolgen Sie die empfohlenen Aktionen.
++
+Beispielsweise müssen Sie einen Dienst neu starten, der angehalten wurde, oder den Host für den Node neu starten.
+
+.. Wenn der Node nicht wieder in den Online-Modus versetzt werden kann, wenden Sie sich an den technischen Support.
+
+
+. Wenn ein Knoten über ein graues Symbol verfügt, führen Sie die folgenden Schritte aus:
++
+Graue Nodes werden während der Wartungsvorgänge erwartet und sind möglicherweise mit einem oder mehreren Warnmeldungen verbunden. Basierend auf dem zugrunde liegenden Problem werden diese „`administrativ unterliegenden`“ Nodes oft ohne Eingreifen wieder online geschaltet.
+
++
+.. Überprüfen Sie den Abschnitt „Meldungen“ und bestimmen Sie, ob Warnmeldungen diesen Node beeinträchtigen.
+.. Wenn eine oder mehrere Warnmeldungen aktiv sind, wählen Sie jede Warnung in der Tabelle aus, und befolgen Sie die empfohlenen Aktionen.
+.. Wenn der Node nicht wieder in den Online-Modus versetzt werden kann, wenden Sie sich an den technischen Support.
+
+
+
+
+xref:alerts-reference.adoc[Alerts Referenz]
+
+xref:../maintain/index.adoc[Recovery und Wartung]

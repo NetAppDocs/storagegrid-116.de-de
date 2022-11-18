@@ -1,0 +1,90 @@
+---
+permalink: sg5700/installation-and-deployment-overview.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, Installation, deployment, Install, deploy, Installing, deploying 
+summary: Sie können eine oder mehrere StorageGRID Appliances installieren, wenn Sie StorageGRID zum ersten Mal implementieren. Alternativ können Sie Appliance Storage-Nodes später im Rahmen einer Erweiterung hinzufügen. Möglicherweise müssen Sie auch einen Appliance-Speicherknoten im Rahmen eines Wiederherstellungsvorgangs installieren. 
+---
+= Übersicht über Installation und Implementierung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine oder mehrere StorageGRID Appliances installieren, wenn Sie StorageGRID zum ersten Mal implementieren. Alternativ können Sie Appliance Storage-Nodes später im Rahmen einer Erweiterung hinzufügen. Möglicherweise müssen Sie auch einen Appliance-Speicherknoten im Rahmen eines Wiederherstellungsvorgangs installieren.
+
+Das Hinzufügen einer StorageGRID Storage Appliance zu einem StorageGRID System umfasst vier primäre Schritte:
+
+. Installation vorbereiten:
++
+** Vorbereiten des Installationsstandorts
+** Auspacken der Schachteln und Prüfen des Inhalts
+** Zusätzliche Ausrüstung und Werkzeuge
+** Sammeln von IP-Adressen und Netzwerkinformationen
+** Optional: Konfiguration eines externen Verschlüsselungsmanagement-Servers (KMS), wenn Sie alle Appliance-Daten verschlüsseln möchten. Weitere Informationen zum externen Verschlüsselungsmanagement finden Sie in der Anleitung zur Administration von StorageGRID.
+
+
+. Installieren der Hardware:
++
+** Registrieren der Hardware
+** Installieren des Geräts in einem Schrank oder Rack
+** Installieren der Laufwerke (nur SG5760)
+** Verkabeln Sie das Gerät
+** Anschließen der Stromkabel und Strom anschließen
+** Anzeigen von Boot-Statuscodes
+
+
+. Konfigurieren der Hardware:
++
+** Zugriff auf SANtricity System Manager, Festlegen einer statischen IP-Adresse für den Management-Port 1 auf dem E2800-Controller und Konfigurieren von SANtricity System Manager-Einstellungen
+** Zugriff auf das Installationsprogramm von StorageGRID Appliance und Konfiguration der für die Verbindung mit StorageGRID-Netzwerken erforderlichen Link- und Netzwerk-IP-Einstellungen
+** Optional: Aktivieren der Node-Verschlüsselung, wenn Sie zur Verschlüsselung von Appliance-Daten einen externen KMS verwenden möchten.
+** Optional: Ändern des RAID-Modus.
+
+
+. Bereitstellen der Appliance als Storage-Node:
+
+
+|===
+| Aufgabe | Anweisungen 
+
+
+ a| 
+Bereitstellen eines Appliance-Speicherknoten in einem neuen StorageGRID-System
+ a| 
+xref:deploying-appliance-storage-node.adoc[Appliance-Storage-Node implementieren]
+
+
+
+ a| 
+Hinzufügen eines Appliance-Speicherknotens zu einem vorhandenen StorageGRID-System
+ a| 
+Anweisungen zum erweitern eines StorageGRID-Systems
+
+
+
+ a| 
+Bereitstellen eines Appliance-Speicherknotens als Teil eines Speicherknotenwiederherstellungsvorgangs
+ a| 
+Anweisungen zur Wiederherstellung und Wartung
+
+|===
+xref:preparing-for-installation.adoc[Installation vorbereiten (SG5700)]
+
+xref:installing-hardware.adoc[Hardware installieren]
+
+xref:configuring-hardware-sg5712-60.adoc[Hardware konfigurieren (SG5700)]
+
+xref:../vmware/index.adoc[VMware installieren]
+
+xref:../rhel/index.adoc[Installieren Sie Red hat Enterprise Linux oder CentOS]
+
+xref:../ubuntu/index.adoc[Installieren Sie Ubuntu oder Debian]
+
+xref:../sg100-1000/index.adoc[SG100- und SG1000-Services-Appliances]
+
+xref:../expand/index.adoc[Erweitern Sie Ihr Raster]
+
+xref:../maintain/index.adoc[Recovery und Wartung]
+
+xref:../admin/index.adoc[StorageGRID verwalten]

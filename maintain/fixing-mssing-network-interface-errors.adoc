@@ -1,0 +1,27 @@
+---
+permalink: maintain/fixing-mssing-network-interface-errors.html 
+sidebar: sidebar 
+keywords: storagegrid, network interface, network interface error 
+summary: Wenn das Hostnetzwerk nicht richtig konfiguriert ist oder ein Name falsch geschrieben wird, tritt ein Fehler auf, wenn StorageGRID die Zuordnung überprüft, die in der Datei /etc/storagegrid/Nodes/Node-Name\.conf angegeben ist. 
+---
+= Beheben Sie fehlende Fehler an der Netzwerkschnittstelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn das Hostnetzwerk nicht richtig konfiguriert ist oder ein Name falsch geschrieben wird, tritt ein Fehler auf, wenn StorageGRID die in angegebene Zuordnung überprüft `/etc/storagegrid/nodes/_node-name_.conf` Datei:
+
+Möglicherweise wird ein Fehler oder eine Warnung angezeigt, die diesem Muster entspricht:
+
+`Checking configuration file `/etc/storagegrid/nodes/_node-name_.conf` Für Node_Node-Name_...`
+`ERROR: _node-name_: GRID_NETWORK_TARGET = _host-interface-name_`` _Node-Name_: Schnittstelle '_Host-Interface-Name_' existiert nicht`
+
+Der Fehler konnte für das Grid-Netzwerk, das Admin-Netzwerk oder das Client-Netzwerk gemeldet werden. Dieser Fehler bedeutet, dass der `/etc/storagegrid/nodes/_node-name_.conf` Datei ordnet das angezeigte StorageGRID-Netzwerk der Host-Schnittstelle namens zu `_host-interface-name_`, Aber es gibt keine Schnittstelle mit diesem Namen auf dem aktuellen Host.
+
+Wenn Sie diesen Fehler erhalten, überprüfen Sie, ob Sie die Schritte unter ausgeführt haben xref:deploying-new-linux-hosts.adoc[Implementieren Sie neue Linux-Hosts]. Verwenden Sie dieselben Namen für alle Host-Schnittstellen, die auf dem ursprünglichen Host verwendet wurden.
+
+Wenn Sie die Host-Schnittstellen nicht benennen können, die mit der Node-Konfigurationsdatei übereinstimmen, können Sie die Node-Konfigurationsdatei bearbeiten und den Wert des GRID_NETWORK_TARGET, DES ADMIN_NETWORK_TARGET oder DES CLIENT_NETWORK_TARGET ändern, um einer vorhandenen Hostschnittstelle zu entsprechen.
+
+Stellen Sie sicher, dass die Host-Schnittstelle Zugriff auf den entsprechenden physischen Netzwerk-Port oder VLAN bietet und dass die Schnittstelle keinen direkten Bezug auf ein Bond- oder Bridge-Gerät hat. Sie müssen entweder ein VLAN (oder eine andere virtuelle Schnittstelle) auf dem Bond-Gerät auf dem Host konfigurieren oder ein Bridge- und virtuelles Ethernet-Paar (veth) verwenden.

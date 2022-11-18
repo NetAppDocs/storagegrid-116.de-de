@@ -1,0 +1,88 @@
+---
+permalink: upgrade/docker-image-availability-check-error-messages.html 
+sidebar: sidebar 
+keywords: upgrade, error message, docker image availability 
+summary: Beim Versuch, den Upgrade-Prozess zu starten, erhalten Sie möglicherweise eine Fehlermeldung mit der Meldung „die folgenden Probleme wurden durch die Suite zur Überprüfung der Verfügbarkeit von Docker Images identifiziert“. Alle Probleme müssen behoben werden, bevor Sie das Upgrade abschließen können. 
+---
+= Fehlermeldungen bei der „Docker Image Availability Check“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Beim Versuch, den Upgrade-Prozess zu starten, wird möglicherweise eine Fehlermeldung mit der Meldung „`die folgenden Probleme wurden durch die Suite zur Überprüfung der Verfügbarkeit von Docker Images identifiziert.`“ Alle Probleme müssen behoben werden, bevor Sie das Upgrade abschließen können.
+
+Wenden Sie sich an den technischen Support, wenn Sie sich nicht sicher sind, welche Änderungen zur Behebung der erkannten Probleme erforderlich sind.
+
+[cols="1a,1a,1a"]
+|===
+| Nachricht | Ursache | Nutzen 
+
+
+ a| 
+Upgrade-Version kann nicht ermittelt werden. Upgrade-Version Info-Datei `{file_path}` Das erwartete Format wurde nicht erreicht.
+ a| 
+Das Upgrade-Paket ist beschädigt.
+ a| 
+Laden Sie das Upgrade-Paket erneut hoch, und versuchen Sie es erneut. Wenn das Problem weiterhin besteht, wenden Sie sich an den technischen Support.
+
+
+
+ a| 
+Upgrade-Version Info-Datei `{file_path}` Wurde nicht gefunden. Upgrade-Version kann nicht ermittelt werden.
+ a| 
+Das Upgrade-Paket ist beschädigt.
+ a| 
+Laden Sie das Upgrade-Paket erneut hoch, und versuchen Sie es erneut. Wenn das Problem weiterhin besteht, wenden Sie sich an den technischen Support.
+
+
+
+ a| 
+Die derzeit installierte Version auf kann nicht ermittelt werden `{node_name}`.
+ a| 
+Eine kritische Datei auf dem Node ist beschädigt.
+ a| 
+Wenden Sie sich an den technischen Support.
+
+
+
+ a| 
+Verbindungsfehler beim Versuch, Versionen auf aufzulisten `{node_name}`
+ a| 
+Der Node ist offline oder die Verbindung wurde unterbrochen.
+ a| 
+Überprüfen Sie, ob alle Knoten online und über den primären Admin-Node erreichbar sind, und versuchen Sie es erneut.
+
+
+
+ a| 
+Der Host für den Node `{node_name}` Verfügt nicht über StorageGRID `{upgrade_version}` Bild geladen. Images und Dienste müssen auf dem Host installiert werden, bevor das Upgrade fortgesetzt werden kann.
+ a| 
+Die RPM- oder DEB-Pakete für das Upgrade wurden nicht auf dem Host installiert, auf dem der Knoten ausgeführt wird, oder die Images werden noch importiert.
+
+*Hinweis:* dieser Fehler gilt nur für Knoten, die als Container unter Linux ausgeführt werden.
+ a| 
+Vergewissern Sie sich, dass die RPM- oder DEB-Pakete auf allen Linux-Hosts, auf denen Knoten ausgeführt werden, installiert wurden. Stellen Sie sicher, dass die Version sowohl für den Dienst als auch für die Bilddatei korrekt ist. Warten Sie einige Minuten, und versuchen Sie es erneut.
+
+Siehe xref:../upgrade/linux-installing-rpm-or-deb-package-on-all-hosts.adoc[Linux: Installieren Sie RPM oder DEB-Paket auf allen Hosts].
+
+
+
+ a| 
+Fehler beim Prüfen des Knotens `{node_name}`
+ a| 
+Ein unerwarteter Fehler ist aufgetreten.
+ a| 
+Warten Sie einige Minuten, und versuchen Sie es erneut.
+
+
+
+ a| 
+Nicht beharrter Fehler beim Ausführen von Vorabprüfungen. `{error_string}`
+ a| 
+Ein unerwarteter Fehler ist aufgetreten.
+ a| 
+Warten Sie einige Minuten, und versuchen Sie es erneut.
+
+|===

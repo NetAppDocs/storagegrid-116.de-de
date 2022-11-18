@@ -1,0 +1,46 @@
+---
+permalink: ilm/workflow-for-s3-object-lock.html 
+sidebar: sidebar 
+keywords: object lock workflow 
+summary: Als Grid-Administrator müssen Sie sich eng mit den Mandantenbenutzern abstimmen, um sicherzustellen, dass die Objekte so geschützt sind, dass sie ihren Aufbewahrungsanforderungen entsprechen. 
+---
+= Workflow für S3 Objektsperre
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Als Grid-Administrator müssen Sie sich eng mit den Mandantenbenutzern abstimmen, um sicherzustellen, dass die Objekte so geschützt sind, dass sie ihren Aufbewahrungsanforderungen entsprechen.
+
+Das Workflow-Diagramm zeigt die grundlegenden Schritte zur Verwendung der S3-Objektsperre. Die Schritte werden vom Grid-Administrator und von Mandantenbenutzern durchgeführt.
+
+image::../media/compliance_workflow.png[S3-Objektsperre-Workflow]
+
+
+
+== Den Grid-Administratoren stehen
+
+Wie das Workflow-Diagramm zeigt, muss ein Grid-Administrator zwei übergeordnete Aufgaben durchführen, bevor S3-Mandanten S3-Objektsperre verwenden können:
+
+. Erstellen Sie mindestens eine kompatible ILM-Regel und stellen Sie diese Regel in der aktiven ILM-Richtlinie zur Standardregel bereit.
+. Aktivieren Sie die globale S3-Objektsperre für das gesamte StorageGRID-System.
+
+
+
+
+== Aufgaben für Mandanten
+
+Nach Aktivierung der globalen S3-Objektsperre können Mandanten die folgenden Aufgaben ausführen:
+
+. Erstellen Sie Buckets, für die S3-Objektsperre aktiviert ist.
+. Legen Sie die Standardeinstellungen für die Aufbewahrung des Buckets fest. Diese werden auf Objekte angewendet, die dem Bucket hinzugefügt wurden und keine eigenen Aufbewahrungseinstellungen festlegen.
+. Fügen Sie diesen Buckets Objekte hinzu, und legen Sie Aufbewahrungszeiträume auf Objektebene sowie Einstellungen für die Aufbewahrung rechtlicher Daten fest.
+. Aktualisieren Sie je nach Bedarf eine Aufbewahrungsfrist oder ändern Sie die Einstellung für die gesetzliche Aufbewahrungspflichten für ein einzelnes Objekt.
+
+
+.Verwandte Informationen
+* xref:../tenant/index.adoc[Verwenden Sie ein Mandantenkonto]
+* xref:../s3/index.adoc[S3 verwenden]
+* xref:../s3/operations-on-buckets.adoc#using-s3-object-lock-default-bucket-retention[S3 Object Lock Standard-Bucket-Aufbewahrung]
+

@@ -1,0 +1,78 @@
+---
+permalink: monitor/monitoring-load-balancing-operations.html 
+sidebar: sidebar 
+keywords: load balancing, monitoring 
+summary: Wenn Sie zum Verwalten von Client-Verbindungen zu StorageGRID einen Load Balancer verwenden, sollten Sie die Lastausgleichvorgänge überwachen, nachdem Sie das System zunächst und nachdem Sie Konfigurationsänderungen vorgenommen oder eine Erweiterung durchgeführt haben. 
+---
+= Monitoring von Lastverteilungsvorgängen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie zum Verwalten von Client-Verbindungen zu StorageGRID einen Load Balancer verwenden, sollten Sie die Lastausgleichvorgänge überwachen, nachdem Sie das System zunächst und nachdem Sie Konfigurationsänderungen vorgenommen oder eine Erweiterung durchgeführt haben.
+
+.Was Sie und#8217;ll benötigen
+* Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+* Sie müssen über spezifische Zugriffsberechtigungen verfügen.
+
+
+Sie können den Load Balancer-Service auf Admin-Nodes oder Gateway-Nodes, einen externen Load Balancer eines Drittanbieters oder den CLB-Service auf Gateway-Knoten verwenden, um Client-Anforderungen über mehrere Storage-Nodes zu verteilen.
+
+
+NOTE: Der CLB-Service ist veraltet.
+
+Nach der Konfiguration des Lastausgleichs sollten Sie bestätigen, dass Einspeisung und Abruf von Objekten gleichmäßig über Storage Nodes verteilt werden. Gleichmäßig verteilte Anfragen stellen sicher, dass StorageGRID weiterhin auf die Workload-Anforderungen reagiert und die Client-Performance erhalten kann.
+
+Wenn Sie eine HA-Gruppe (High Availability, Hochverfügbarkeit) von Gateway Nodes oder Admin-Nodes im aktiv-Backup-Modus konfiguriert haben, verteilt nur ein Node in der Gruppe aktiv die Client-Anforderungen.
+
+Lesen Sie den Abschnitt zum Konfigurieren von Client-Verbindungen in den Anweisungen zur Administration von StorageGRID.
+
+.Schritte
+. Wenn sich S3- oder Swift-Clients über den Load Balancer Service verbinden, überprüfen Sie, ob Admin-Nodes oder Gateway-Nodes den Datenverkehr aktiv verteilen, wie Sie erwarten:
++
+.. Wählen Sie *KNOTEN*.
+.. Wählen Sie einen Gateway-Node oder einen Admin-Node aus.
+.. Überprüfen Sie auf der Registerkarte *Übersicht*, ob sich eine Knotenschnittstelle in einer HA-Gruppe befindet und ob die Knotenschnittstelle die Rolle des Master hat.
++
+Nodes mit der Rolle „Master“ und Nodes, die sich nicht in einer HA-Gruppe befinden, sollten Anfragen aktiv an die Clients verteilen.
+
+.. Wählen Sie für jeden Knoten, der Clientanforderungen aktiv verteilen soll, die Registerkarte *Load Balancer* aus.
+.. Überprüfen Sie die Tabelle für den Datenverkehr der Lastverteilungsanforderung für die letzte Woche, um sicherzustellen, dass der Knoten die Anforderungen aktiv verteilt hat.
++
+Nodes in einer aktiv-Backup-HA-Gruppe können die Backup-Rolle von Zeit zu Zeit übernehmen. Während dieser Zeit verteilen die Nodes keine Client-Anforderungen.
+
+.. Prüfen Sie das Diagramm der eingehenden Lastbalancer-Anfragerate für die letzte Woche, um den Objektdurchsatz des Nodes zu überprüfen.
+.. Wiederholen Sie diese Schritte für jeden Admin-Node oder Gateway-Node im StorageGRID-System.
+.. Optional können Sie anhand von Traffic-Klassifizierungsrichtlinien eine detailliertere Aufschlüsselung des vom Load Balancer Service servierten Datenverkehrs anzeigen.
+
+
+. Wenn S3- oder Swift-Clients eine Verbindung über den CLB-Service (veraltet) herstellen, führen Sie die folgenden Prüfungen durch:
++
+.. Wählen Sie *KNOTEN*.
+.. Wählen Sie einen Gateway-Node aus.
+.. Überprüfen Sie auf der Registerkarte *Übersicht*, ob sich eine Knotenschnittstelle in einer HA-Gruppe befindet und ob die Knotenschnittstelle die Rolle des Master hat.
++
+Nodes mit der Rolle „Master“ und Nodes, die sich nicht in einer HA-Gruppe befinden, sollten Anfragen aktiv an die Clients verteilen.
+
+.. Wählen Sie für jeden Gateway-Knoten, der Clientanforderungen aktiv verteilen soll, *SUPPORT* *Tools* *Grid-Topologie* aus.
+.. Wählen Sie *_Gateway Node_* *CLB* *HTTP* *Übersicht* *Main*.
+.. Überprüfen Sie die Anzahl der *eingehenden Sitzungen - eingerichtet*, um zu überprüfen, ob der Gateway-Node aktiv Anforderungen bearbeitet hat.
+
+
+. Stellen Sie sicher, dass diese Anfragen gleichmäßig auf Speicherknoten verteilt werden.
++
+.. Wählen Sie *_Storage Node_* *LDR* *HTTP* aus.
+.. Überprüfen Sie die Anzahl der *derzeit festgelegten eingehenden Sitzungen*.
+.. Wiederholen Sie diesen Vorgang für jeden Speicherknoten im Raster.
++
+Die Anzahl der Sitzungen sollte ungefähr auf allen Storage-Nodes gleich sein.
+
+
+
+
+
+xref:../admin/index.adoc[StorageGRID verwalten]
+
+xref:viewing-load-balancer-tab.adoc[Zeigen Sie die Registerkarte Load Balancer an]

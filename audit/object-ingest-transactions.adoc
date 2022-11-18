@@ -1,0 +1,83 @@
+---
+permalink: audit/object-ingest-transactions.html 
+sidebar: sidebar 
+keywords: storagegrid, audit, message, messages, transaction, transactions, Object ingest, S3 ingest, Swift ingest, S3, Swift, SPUT, ORLM, WPUT 
+summary: 'Sie können Client-Aufnahme-Transaktionen im Prüfprotokoll identifizieren, indem API-spezifische \(S3 oder Swift\)-Audit-Nachrichten loktiert werden.' 
+---
+= Objektaufnahme von Transaktionen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Transaktionen zur Client-Aufnahme im Prüfprotokoll identifizieren, indem API-spezifische (S3 oder Swift) Audit-Nachrichten loktiert werden.
+
+In den folgenden Tabellen sind nicht alle während einer Aufnahmetransaktion generierten Audit-Meldungen aufgeführt. Es sind nur die Nachrichten enthalten, die für die Aufzeichnung der Transaktion erforderlich sind.
+
+
+
+== S3 Aufnahme von Audit-Nachrichten
+
+|===
+| Codieren | Name | Beschreibung | Verfolgen | Siehe 
+
+
+ a| 
+SPUT
+ a| 
+S3 PUT-Transaktion
+ a| 
+Eine S3-PUT-Aufnahmerate wurde erfolgreich abgeschlossen.
+ a| 
+CBID, S3BK, S3KY
+ a| 
+xref:sput-s3-put.adoc[SPUT: S3 PUT]
+
+
+
+ a| 
+ORLM
+ a| 
+Objektregeln Erfüllt
+ a| 
+Die ILM-Richtlinie wurde für dieses Objekt erfüllt.
+ a| 
+CBID
+ a| 
+xref:orlm-object-rules-met.adoc[ORLM: Objektregeln erfüllt]
+
+|===
+
+
+== Swift Ingest-Audit-Nachrichten
+
+|===
+| Codieren | Name | Beschreibung | Verfolgen | Siehe 
+
+
+ a| 
+WPUT
+ a| 
+Swift PUT-Transaktion
+ a| 
+EINE Swift PUT-Aufnahme-Transaktion wurde erfolgreich abgeschlossen.
+ a| 
+CBID, WCON, WOBJ
+ a| 
+xref:wput-swift-put.adoc[WPUT: Schnell AUSGEDRÜCKT]
+
+
+
+ a| 
+ORLM
+ a| 
+Objektregeln Erfüllt
+ a| 
+Die ILM-Richtlinie wurde für dieses Objekt erfüllt.
+ a| 
+CBID
+ a| 
+xref:orlm-object-rules-met.adoc[ORLM: Objektregeln erfüllt]
+
+|===

@@ -1,0 +1,42 @@
+---
+permalink: swift/how-storagegrid-implements-swift-rest-api.html 
+sidebar: sidebar 
+keywords: implement swift rest api 
+summary: Eine Client-Applikation kann mithilfe von Swift REST-API-Aufrufen eine Verbindung zu Storage-Nodes und Gateway-Nodes herstellen, um Container zu erstellen und Objekte zu speichern und abzurufen. Dadurch können serviceorientierte Applikationen, die für OpenStack Swift entwickelt wurden, mit lokalem Objekt-Storage des StorageGRID Systems verbunden werden. 
+---
+= So implementiert StorageGRID Swift REST API
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Eine Client-Applikation kann mithilfe von Swift REST-API-Aufrufen eine Verbindung zu Storage-Nodes und Gateway-Nodes herstellen, um Container zu erstellen und Objekte zu speichern und abzurufen. Dadurch können serviceorientierte Applikationen, die für OpenStack Swift entwickelt wurden, mit lokalem Objekt-Storage des StorageGRID Systems verbunden werden.
+
+
+
+== Swift Objekt-Management
+
+Nach der Aufnahme von Swift Objekten im StorageGRID System werden sie von den Regeln für Information Lifecycle Management (ILM) der aktiven ILM-Richtlinie des Systems gemanagt. Die ILM-Regeln und -Richtlinie bestimmen, wie StorageGRID Kopien von Objektdaten erstellt und verteilt und wie diese Kopien mit der Zeit gemanagt werden. Eine ILM-Regel kann beispielsweise für Objekte in bestimmten Swift Containern gelten und möglicherweise angeben, dass mehrere Objektkopien für eine bestimmte Anzahl von Jahren in mehreren Datacentern gespeichert werden.
+
+Wenden Sie sich an Ihren StorageGRID-Administrator, wenn Sie wissen müssen, welche Auswirkungen die ILM-Regeln und Richtlinien des Grid auf die Objekte in Ihrem Swift-Mandantenkonto haben.
+
+
+
+== In Konflikt stehende Clientanforderungen
+
+Widersprüchliche Clientanforderungen, wie z. B. zwei Clients, die in denselben Schlüssel schreiben, werden auf der Grundlage der „neuesten Wins“ gelöst. Der Zeitpunkt für die Bewertung „neuester Erfolge“ basiert darauf, wann das StorageGRID System eine bestimmte Anfrage abschließt und nicht darauf, wann Swift-Clients einen Vorgang starten.
+
+
+
+== Konsistenzgarantien und -Kontrollen
+
+Standardmäßig bietet StorageGRID Lese-/Nachher-Konsistenz für neu erstellte Objekte und schließlich die Konsistenz von Objekt-Updates und HEAD-Operationen. Jeder GET nach einem erfolgreich abgeschlossenen PUT wird in der Lage sein, die neu geschriebenen Daten zu lesen. Überschreibungen vorhandener Objekte, Metadatenaktualisierungen und -Löschungen sind schließlich konsistent. Überschreibungen dauern in der Regel nur wenige Sekunden oder Minuten, können jedoch bis zu 15 Tage in Anspruch nehmen.
+
+StorageGRID ermöglicht Ihnen außerdem die Kontrolle der Konsistenz einzelner Container. Sie können die Consistency Control ändern, um je nach Anforderung zwischen der Verfügbarkeit der Objekte und der Konsistenz dieser Objekte in verschiedenen Storage Nodes und Standorten einen Kompromiss zwischen der Verfügbarkeit der Objekte herzustellen.
+
+xref:../ilm/index.adoc[Objektmanagement mit ILM]
+
+xref:get-container-consistency-request.adoc[ABRUFEN der Container-Konsistenzanforderung]
+
+xref:put-container-consistency-request.adoc[PUT Container-Konsistenzanforderung]

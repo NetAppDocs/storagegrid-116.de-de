@@ -1,0 +1,17 @@
+---
+section: harden
+title: Systemhärtung
+entries:
+- title: Überblick
+  pdf-filename: StorageGRID Systemhärtung
+  url: "/harden/index.html"
+- title: Hardening-Richtlinien für Software Upgrades
+  url: "/harden/hardening-guidelines-for-software-upgrades.html"
+- title: Hardening Guidelines for StorageGRID Networks
+  url: "/harden/hardening-guidelines-for-storagegrid-networks.html"
+- title: Hardening-Richtlinien für StorageGRID-Knoten
+  url: "/harden/hardening-guidelines-for-storagegrid-nodes.html"
+- title: Härtungsrichtlinien für Serverzertifikate
+  url: "/harden/hardening-guideline-for-server-certificates.html"
+- title: Andere Hinweise zur Verhärtung
+  url: "/harden/other-hardening-guidelines.html"

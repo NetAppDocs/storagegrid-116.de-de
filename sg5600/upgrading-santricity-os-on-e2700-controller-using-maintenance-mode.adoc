@@ -1,0 +1,62 @@
+---
+permalink: sg5600/upgrading-santricity-os-on-e2700-controller-using-maintenance-mode.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, controller, e2700, storage controller, upgrade, upgrading, SANtricity OS, SANtricity, maintenance mode 
+summary: Wenn Sie die SANtricity OS-Software nicht mithilfe des Grid-Managers aktualisieren können, wenden Sie das Upgrade im Wartungsmodus an. 
+---
+= Aktualisieren Sie SANtricity OS auf einem E2700 Controller mithilfe des Wartungsmodus
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie die SANtricity OS-Software nicht mithilfe des Grid-Managers aktualisieren können, wenden Sie das Upgrade im Wartungsmodus an.
+
+.Was Sie und#8217;ll benötigen
+* Sie haben das NetApp Interoperabilitäts-Matrix-Tool (IMT) konsultiert, um zu überprüfen, ob die für das Upgrade verwendete SANtricity Betriebssystemversion mit Ihrer Appliance kompatibel ist.
+* Sie müssen den E5600-Controller in platzieren xref:placing-appliance-into-maintenance-mode.adoc[Wartungsmodus] Wenn Sie den Grid Manager nicht verwenden. Wenn der Controller in den Wartungsmodus versetzt wird, wird die Verbindung zum E2700 Controller unterbrochen.
++
+
+NOTE: In seltenen Fällen kann es vorkommen, dass eine StorageGRID Appliance in den Wartungsmodus versetzt wird, damit die Appliance für den Remote-Zugriff nicht verfügbar ist.
+
+
+
+Aktualisieren Sie das SANtricity Betriebssystem und NVSRAM im E-Series Controller nicht auf mehr als einer StorageGRID Appliance gleichzeitig.
+
+
+IMPORTANT: Wenn Sie mehrere StorageGRID Appliances gleichzeitig aktualisieren, kann dies in Abhängigkeit von Ihrem Implementierungsmodell und den ILM-Richtlinien zu Datenunverfügbarkeit führen.
+
+.Schritte
+. Überprüfen Sie, ob das Gerät in ist xref:placing-appliance-into-maintenance-mode.adoc[Wartungsmodus].
+. Greifen Sie über ein Service-Laptop auf den SANtricity Storage Manager zu und melden Sie sich an.
+. Laden Sie die neue SANtricity OS Software-Datei und die NVSRAM-Datei auf den Management-Client herunter.
++
+
+IMPORTANT: Das NVSRAM bezieht sich auf die StorageGRID Appliance. Verwenden Sie nicht den Standard-NVSRAM-Download.
+
+. Folgen Sie den Anweisungen in der Online-Hilfe des E2700 und der E5600 SANtricity-Software und Firmware-Upgrades_ oder der SANtricity Storage Manager und aktualisieren Sie die Firmware des E2700 Controllers, NVSRAM oder beides.
++
+
+IMPORTANT: Wenn Sie NVSRAM im E2700 Controller aktualisieren müssen, müssen Sie bestätigen, dass die heruntergeladene SANtricity Betriebssystemdatei mit StorageGRID Appliances kompatibel ist.
+
++
+
+NOTE: Aktivieren Sie die Upgrade-Dateien sofort. Die Aktivierung nicht verschieben.
+
+. Wenn diese Prozedur erfolgreich abgeschlossen ist und Sie weitere durchzuführenden Verfahren haben, während sich der Node im Wartungsmodus befindet, führen Sie sie jetzt aus. Wenn Sie fertig sind oder Fehler auftreten und von vorne beginnen möchten, wählen Sie *Erweitert* *Controller neu starten* aus, und wählen Sie dann eine der folgenden Optionen aus:
++
+** Wählen Sie *Neustart in StorageGRID* aus
+** Wählen Sie *Neustart im Wartungsmodus* aus, um den Controller neu zu starten, wobei der Knoten noch im Wartungsmodus bleibt. Wählen Sie diese Option aus, wenn während des Verfahrens Fehler auftreten und neu starten möchten. Nachdem der Node das Neubooten in den Wartungsmodus abgeschlossen hat, starten Sie den entsprechenden Schritt während des ausgefallenen Verfahrens neu.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Booten Sie den Controller im Wartungsmodus neu]
+
++
+Die Appliance kann bis zu 20 Minuten dauern, bis sie neu gestartet und wieder in das Grid eingesetzt wird. Um zu überprüfen, ob das Neubooten abgeschlossen ist und dass der Node wieder dem Grid beigetreten ist, gehen Sie zurück zum Grid Manager. Auf der Seite Knoten sollte ein normaler Status (links neben dem Knotennamen keine Symbole) für den Appliance-Knoten angezeigt werden, der angibt, dass keine Warnmeldungen aktiv sind und der Knoten mit dem Raster verbunden ist.
+
++
+image::../media/node_rejoin_grid_confirmation.png[Das Raster des Appliance-Node wurde neu verbunden]
+
+
+
+

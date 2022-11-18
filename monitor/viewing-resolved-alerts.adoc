@@ -1,0 +1,114 @@
+---
+permalink: monitor/viewing-resolved-alerts.html 
+sidebar: sidebar 
+keywords: how to view resolved alerts 
+summary: Sie können den Verlauf der behobenen Warnungen suchen und anzeigen. 
+---
+= Anzeigen von behobenen Warnmeldungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können den Verlauf der behobenen Warnungen suchen und anzeigen.
+
+.Was Sie und#8217;ll benötigen
+* Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+
+
+.Schritte
+. Führen Sie einen der folgenden Schritte aus, um aufgelöste Warnmeldungen anzuzeigen:
++
+** Klicken Sie im Bedienfeld „Systemzustand“ auf *Zuletzt behobene Alarme*.
++
+Der Link *Kürzlich behobene Alarme* wird nur angezeigt, wenn in der letzten Woche eine oder mehrere Warnungen ausgelöst wurden und nun behoben wurden.
+
+** Wählen Sie *ALERTS* *aufgelöst*. Die Seite „behobene Warnmeldungen“ wird angezeigt. Standardmäßig werden behobene Benachrichtigungen, die in der letzten Woche ausgelöst wurden, angezeigt, wobei zuerst die zuletzt ausgelösten Meldungen angezeigt werden. Die Warnmeldungen auf dieser Seite wurden zuvor auf der Seite „Aktuelle Meldungen“ oder in einer E-Mail-Benachrichtigung angezeigt.
++
+image::../media/alerts_resolved_page.png[Seite „Warnmeldungen Aufgelöst“]
+
+
+
+. Überprüfen Sie die Informationen in der Tabelle.
++
+|===
+| Spaltenüberschrift | Beschreibung 
+
+
+ a| 
+Name
+ a| 
+Der Name der Warnmeldung und deren Beschreibung.
+
+
+
+ a| 
+Schweregrad
+ a| 
+Der Schweregrad der Meldung.
+
+** * Kritisch* image:../media/icon_alert_red_critical.png["Symbol Warnung Rot Kritisch"]: Es besteht eine anormale Bedingung, die die normalen Vorgänge eines StorageGRID-Knotens oder -Dienstes gestoppt hat. Sie müssen das zugrunde liegende Problem sofort lösen. Wenn das Problem nicht behoben ist, kann es zu Serviceunterbrechungen und Datenverlusten kommen.
+** *Major* image:../media/icon_alert_orange_major.png["Icon Alert Orange Major"]: Es besteht eine anormale Bedingung, die entweder die aktuellen Operationen beeinflusst oder sich dem Schwellenwert für eine kritische Warnung nähert. Sie sollten größere Warnmeldungen untersuchen und alle zugrunde liegenden Probleme beheben, um sicherzustellen, dass die anormale Bedingung den normalen Betrieb eines StorageGRID Node oder Service nicht beendet.
+** *Klein* image:../media/icon_alert_yellow_minor.png["Symbol Alarm Gelb Minor"]: Das System funktioniert normal, aber es besteht eine anormale Bedingung, die die Fähigkeit des Systems beeinträchtigen könnte, zu arbeiten, wenn es fortgesetzt wird. Sie sollten kleinere Warnmeldungen überwachen und beheben, die sich nicht selbst beheben lassen, um sicherzustellen, dass sie nicht zu einem schwerwiegenderen Problem führen.
+
+
+
+
+ a| 
+Auslösezeit
+ a| 
+Wie lange vor der Warnmeldung ausgelöst wurde.
+
+
+
+ a| 
+Zeit für eine Lösung
+ a| 
+Wie lange zuvor wurde die Warnung behoben.
+
+
+
+ a| 
+Standort/Knoten
+ a| 
+Der Name des Standorts und des Node, auf dem die Meldung aufgetreten ist.
+
+
+
+ a| 
+Ausgelöste Werte
+ a| 
+Der Wert der Metrik, der den Auslöser der Meldung verursacht hat. Für manche Warnmeldungen werden zusätzliche Werte angezeigt, die Ihnen helfen, die Warnmeldung zu verstehen und zu untersuchen. Die Werte für eine Meldung mit * Objekt-Datenspeicher* enthalten beispielsweise den Prozentsatz des verwendeten Festplattenspeichers, die Gesamtmenge des Speicherplatzes und die Menge des verwendeten Festplattenspeichers.
+
+|===
+. Um die gesamte Liste der aufgelösten Warnmeldungen zu sortieren, klicken Sie auf die Pfeile nach oben/unten image:../media/icon_alert_sort_column.png["Sortieren Sie das Symbol für die Pfeile"] In jeder Spaltenüberschrift.
++
+Sie können beispielsweise aufgelöste Warnmeldungen nach *Site/Node* sortieren, um die Warnungen anzuzeigen, die einen bestimmten Knoten betreffen.
+
+. Optional können Sie die Liste der aufgelösten Warnmeldungen mithilfe der Dropdown-Menüs oben in der Tabelle filtern.
++
+.. Wählen Sie im Dropdown-Menü *When Triggered* einen Zeitraum aus, um aufgelöste Warnmeldungen anzuzeigen, basierend darauf, wie lange sie ausgelöst wurden.
++
+Sie können nach Benachrichtigungen suchen, die innerhalb der folgenden Zeiträume ausgelöst wurden:
+
++
+*** Letzte Stunde
+*** Letzter Tag
+*** Letzte Woche (Standardansicht)
+*** Letzten Monat
+*** Zu jedem Zeitpunkt
+*** Benutzerdefiniert (ermöglicht das Festlegen des Anfangsdatums und des Enddatum für den Zeitraum)
+
+
+.. Wählen Sie im Dropdown-Menü *Severity* einen oder mehrere Schweregrade aus, um nach gelösten Warnmeldungen eines bestimmten Schweregrads zu filtern.
+.. Wählen Sie im Dropdown-Menü *Warnregel* eine oder mehrere Standard- oder benutzerdefinierte Warnungsregeln aus, um nach aufgelösten Warnmeldungen zu filtern, die mit einer bestimmten Alarmregel zusammenhängen.
+.. Wählen Sie im Dropdown-Menü *Node* einen oder mehrere Knoten aus, um nach aufgelösten Warnmeldungen zu filtern, die mit einem bestimmten Knoten verbunden sind.
+.. Klicken Sie Auf *Suchen*.
+
+
+. Um Details zu einer bestimmten aufgelösten Warnmeldung anzuzeigen, wählen Sie die Warnmeldung aus der Tabelle aus.
++
+Ein Dialogfeld für die Meldung wird angezeigt. Siehe xref:viewing-specific-alert.adoc[Zeigen Sie eine bestimmte Warnmeldung an].
+
+

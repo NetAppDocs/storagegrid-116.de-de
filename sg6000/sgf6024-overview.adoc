@@ -1,0 +1,125 @@
+---
+permalink: sg6000/sgf6024-overview.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, overview, models, features 
+summary: StorageGRIDSGF6024 umfasst einen Computing-Controller und ein Storage-Controller-Shelf für 24 Solid State-Laufwerke. 
+---
+= SGF6024 Übersicht
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+StorageGRIDSGF6024 umfasst einen Computing-Controller und ein Storage-Controller-Shelf für 24 Solid State-Laufwerke.
+
+
+
+== SGF6024-Komponenten
+
+Die SGF6024 Appliance umfasst die folgenden Komponenten:
+
+|===
+| Komponente | Beschreibung 
+
+
+ a| 
+Computing-Controller
+ a| 
+SG6000-CN-Controller, ein 1U-Server (1 Rack-Einheit) mit folgenden Komponenten:
+
+* 40 Cores (80 Threads)
+* 192 GB RAM
+* Bis zu 4 × 25 Gbit/s aggregierte Ethernet-Bandbreite
+* FC-Interconnect mit 4 × 16 GBit/s
+* Baseboard Management Controller (BMC) der das Hardware-Management vereinfacht
+* Redundante Netzteile
+
+
+
+
+ a| 
+Flash-Array (Controller-Shelf)
+ a| 
+E-Series EF570 Flash-Array (auch als Controller-Shelf bekannt), ein 2-HE-Shelf mit folgenden Vorteilen:
+
+* Zwei E-Series EF570 Controller (Duplexkonfiguration) für Storage-Controller-Failover-Unterstützung
+* 24 Solid State-Laufwerke (auch als SSDs oder Flash-Laufwerke bekannt)
+* Redundante Netzteile und Lüfter
+
+
+|===
+
+
+== SGF6024-Diagramme
+
+Diese Abbildung zeigt die Vorderseite des SGF6024 mit einem 1-HE-Computing-Controller und einem 2-HE-Gehäuse mit zwei Storage-Controllern und 24 Flash-Laufwerken.
+
+image::../media/sgf6024_front_view_with_and_without_bezels.png[Blick auf die Vorderseite des SG6024]
+
+|===
+| Legende | Beschreibung 
+
+
+ a| 
+1
+ a| 
+SG6000-CN Computing Controller mit Frontblende
+
+
+
+ a| 
+2
+ a| 
+EF570 Flash-Array mit Frontblende
+
+
+
+ a| 
+3
+ a| 
+SG6000-CN Computing Controller mit abnehmbarer Frontblende
+
+
+
+ a| 
+4
+ a| 
+EF570 Flash-Array mit abnehmbarer Frontblende
+
+|===
+Diese Abbildung zeigt die Rückseite des SGF6024, einschließlich der Computing- und Storage-Controller, Lüfter und Netzteile.
+
+image::../media/sgf6024_rear_view.gif[SG6024 Rückseite]
+
+|===
+| Legende | Beschreibung 
+
+
+ a| 
+1
+ a| 
+Netzteil (1 von 2) für SG6000-CN Compute Controller
+
+
+
+ a| 
+2
+ a| 
+Anschlüsse für SG6000-CN Compute Controller
+
+
+
+ a| 
+3
+ a| 
+Netzteil (1 von 2) für EF570 Flash-Array
+
+
+
+ a| 
+4
+ a| 
+E-Series EF570 Storage-Controller (1 von 2) und Anschlüsse
+
+|===

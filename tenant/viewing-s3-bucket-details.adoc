@@ -1,0 +1,55 @@
+---
+permalink: tenant/viewing-s3-bucket-details.html 
+sidebar: sidebar 
+keywords: how to view s3 bucket details 
+summary: Sie können eine Liste der Buckets und Bucket-Einstellungen in Ihrem Mandantenkonto anzeigen. 
+---
+= Anzeigen von S3-Bucket-Details
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Liste der Buckets und Bucket-Einstellungen in Ihrem Mandantenkonto anzeigen.
+
+.Was Sie und#8217;ll benötigen
+* Sie müssen mit einem beim Mandantenmanager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+
+
+.Schritte
+. Wählen Sie *STORAGE (S3)* *Buckets* aus.
++
+Die Seite Buckets wird angezeigt und enthält alle Buckets für das Mandantenkonto.
+
++
+image::../media/buckets_table.png[Buckets-Tabelle]
+
+. Überprüfen Sie die Informationen für jeden Bucket.
++
+Bei Bedarf können Sie die Informationen nach einer beliebigen Spalte sortieren oder Sie können die Seite vorwärts und zurück durch die Liste blättern.
+
++
+** Name: Der eindeutige Name des Buckets, der nicht geändert werden kann.
+** S3 Object Lock: Ob S3 Object Lock für diesen Bucket aktiviert ist.
++
+Diese Spalte wird nicht angezeigt, wenn die globale S3-Objektsperre deaktiviert ist. In dieser Spalte werden außerdem Informationen für alle Buckets angezeigt, die für die Konformität mit älteren Daten verwendet wurden.
+
+** Region: Die Eimer-Region, die nicht geändert werden kann.
+** Objektanzahl: Die Anzahl der Objekte in diesem Bucket.
+** Verwendeter Speicherplatz: Die logische Größe aller Objekte in diesem Bucket. Die logische Größe umfasst nicht den tatsächlich benötigten Speicherplatz für replizierte oder Erasure Coding-Kopien oder für Objekt-Metadaten.
+** Erstellungsdatum: Das Datum und die Uhrzeit, zu der der Bucket erstellt wurde.
+
+
++
+
+IMPORTANT: Die angezeigten Werte für Objektanzahl und verwendeter Speicherplatz sind Schätzungen. Diese Schätzungen sind vom Zeitpunkt der Aufnahme, der Netzwerkverbindung und des Node-Status betroffen. Wenn Buckets die Versionierung aktiviert ist, sind gelöschte Objektversionen in der Objektanzahl enthalten.
+
+. Um die Einstellungen für einen Bucket anzuzeigen und zu managen, wählen Sie den Bucket-Namen aus.
++
+Auf der Seite mit den Bucket-Details können Sie Einstellungen für Bucket-Optionen, Bucket-Zugriff und -Einstellungen anzeigen und bearbeiten xref:what-platform-services-are.adoc[Plattform-Services].
+
++
+image::../media/bucket_details_page.png[Detailseite Für Bucket]
+
+

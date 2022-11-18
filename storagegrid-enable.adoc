@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: storagegrid-enable.html 
+keywords: storagegrid, how to enable, third-party solutions, tools, applications, examples 
+summary: Erfahren Sie, wie Sie Applikationen in Ihrer StorageGRID Umgebung testen und aktivieren. 
+---
+= StorageGRID in Ihrer Umgebung aktivieren
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Erfahren Sie, wie Sie Applikationen in Ihrer StorageGRID Umgebung testen und aktivieren.
+
+Wechseln Sie zum https://docs.netapp.com/us-en/storagegrid-enable/index.html["storagegrid aktivieren"^] doc-Site zum Finden von Beispielen und Cookbooks, die sich auf der Produktdokumentation auf dieser Seite erweitern. Die Seite *storagegrid-enable* beschreibt außerdem einige nächste Schritte bei der Bewertung und Integration mit StorageGRID.
+
+Folgende Informationen sind enthalten:
+
+* Liste validierter Lösungen von Drittanbietern für frühere und aktuelle StorageGRID Versionen.
+* Produktfunktionshandbücher. Beispielsweise bieten diese Leitfäden detaillierte Informationen zum Erstellen von Cloud-Storage-Pools.
+* Tool- und Anwendungsleitfäden.
+* API-Beispiele zur Verwendung von StorageGRID Funktionen wie S3-Verschlüsselung und S3-Objektsperre.
+

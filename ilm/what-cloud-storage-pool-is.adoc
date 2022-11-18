@@ -1,0 +1,102 @@
+---
+permalink: ilm/what-cloud-storage-pool-is.html 
+sidebar: sidebar 
+keywords: what is a cloud storage pool 
+summary: In einem Cloud Storage Pool können Sie ILM verwenden, um Objektdaten aus Ihrem StorageGRID System zu verschieben. Beispielsweise möchten Sie selten genutzte Objekte in kostengünstigeren Cloud-Storage verschieben, wie z. B. Amazon S3 Glacier, S3 Glacier Deep Archive oder die Archive Access Tier in Microsoft Azure Blob Storage. Alternativ möchten Sie auch ein Cloud-Backup von StorageGRID Objekten beibehalten, um die Disaster Recovery zu verbessern. 
+---
+= Was ist ein Cloud-Storage-Pool
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In einem Cloud Storage Pool können Sie ILM verwenden, um Objektdaten aus Ihrem StorageGRID System zu verschieben. Beispielsweise möchten Sie selten genutzte Objekte in kostengünstigeren Cloud-Storage verschieben, wie z. B. Amazon S3 Glacier, S3 Glacier Deep Archive oder die Archive Access Tier in Microsoft Azure Blob Storage. Alternativ möchten Sie auch ein Cloud-Backup von StorageGRID Objekten beibehalten, um die Disaster Recovery zu verbessern.
+
+Aus einer ILM-Perspektive ähnelt ein Cloud-Storage-Pool einem Storage-Pool. Um Objekte an beiden Standorten zu speichern, wählen Sie den Pool aus, wenn Sie die Anweisungen zur Platzierung einer ILM-Regel erstellen. Während Storage-Pools jedoch aus Storage-Nodes oder Archiv-Nodes innerhalb des StorageGRID-Systems bestehen, besteht ein Cloud Storage Pool aus einem externen Bucket (S3) oder Container (Azure Blob-Storage).
+
+Die folgende Tabelle vergleicht Storage-Pools mit Cloud Storage Pools und zeigt die grundlegenden Ähnlichkeiten und Unterschiede.
+
+[cols="1a,2a,2a"]
+|===
+|  | Storage-Pool | Cloud-Storage-Pool 
+
+
+ a| 
+Wie wird sie erstellt?
+ a| 
+Mit der Option *ILM* *Storage Pools* im Grid Manager.
+
+Sie müssen Speicherklassen einrichten, bevor Sie den Speicherpool erstellen können.
+ a| 
+Mit der Option *ILM* *Storage Pools* im Grid Manager.
+
+Sie müssen den externen Bucket oder Container einrichten, bevor Sie den Cloud Storage-Pool erstellen können.
+
+
+
+ a| 
+Wie viele Pools können Sie erstellen?
+ a| 
+Unbegrenzt.
+ a| 
+Bis zu 10.
+
+
+
+ a| 
+Wo werden Objekte gespeichert?
+ a| 
+Auf einem oder mehreren Speicherknoten oder Archivknoten innerhalb von StorageGRID.
+ a| 
+In einem Amazon S3-Bucket oder Azure Blob-Storage-Container, der nicht zum StorageGRID System integriert ist
+
+Wenn der Cloud Storage Pool ein Amazon S3-Bucket ist:
+
+* Optional kann ein Bucket-Lebenszyklus konfiguriert werden, um Objekte auf kostengünstigen Langzeit-Storage wie Amazon S3 Glacier oder S3 Glacier Deep Archive zu verschieben. Das externe Storage-System muss die Glacier Storage-Klasse und die S3 POST Object Restore API unterstützen.
+* Sie können Cloud-Storage-Pools zur Verwendung mit AWS Commercial Cloud Services (C2S) erstellen, die die AWS Secret Region unterstützen.
+
+
+Wenn der Cloud-Storage-Pool ein Azure Blob-Storage-Container ist, überträgt StorageGRID das Objekt auf die Archiv-Tier.
+
+*Hinweis:* Konfigurieren Sie generell nicht das Lifecycle-Management für Azure Blob Storage für den Container, der für einen Cloud-Storage-Pool verwendet wird. Die Wiederherstellung VON OBJEKTEN NACH DER Objekt-WIEDERHERSTELLUNG im Cloud-Storage-Pool kann vom konfigurierten Lebenszyklus betroffen sein.
+
+
+
+ a| 
+Welche Kontrollen steuern die Objektplatzierung?
+ a| 
+Eine ILM-Regel in der aktiven ILM-Richtlinie.
+ a| 
+Eine ILM-Regel in der aktiven ILM-Richtlinie.
+
+
+
+ a| 
+Welche Datensicherungsmethode wird verwendet?
+ a| 
+Replizierung oder Erasure Coding:
+ a| 
+Replizierung:
+
+
+
+ a| 
+Wie viele Kopien jedes Objekts sind erlaubt?
+ a| 
+Mehrere:
+ a| 
+Eine Kopie im Cloud-Storage-Pool und optional eine oder mehrere Kopien in StorageGRID.
+
+*Hinweis:* Sie können ein Objekt nicht in mehr als einem Cloud-Speicherpool speichern.
+
+
+
+ a| 
+Worin liegen die Vorteile?
+ a| 
+Objekte sind jederzeit schnell abrufbar.
+ a| 
+Kostengünstiger Storage:
+
+|===

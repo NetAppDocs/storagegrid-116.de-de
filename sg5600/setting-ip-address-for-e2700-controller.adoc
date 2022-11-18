@@ -1,0 +1,69 @@
+---
+permalink: sg5600/setting-ip-address-for-e2700-controller.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, storage controller, controller, configure, setup, set up, IP, IP address, management port, Appliance Installer, e2700 
+summary: Management Port 1 auf dem E2700 Controller verbindet die Appliance mit dem Managementnetzwerk für SANtricity Storage Manager. Sie müssen eine statische IP-Adresse für den E2700 Controller festlegen, um sicherzustellen, dass die Verbindung zwischen Management und Hardware und der Controller-Firmware in der StorageGRID Appliance nicht unterbrochen wird. 
+---
+= Legen Sie die IP-Adresse für den E2700 Controller fest
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Management Port 1 auf dem E2700 Controller verbindet die Appliance mit dem Managementnetzwerk für SANtricity Storage Manager. Sie müssen eine statische IP-Adresse für den E2700 Controller festlegen, um sicherzustellen, dass die Verbindung zwischen Management und Hardware und der Controller-Firmware in der StorageGRID Appliance nicht unterbrochen wird.
+
+Sie verwenden ein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+
+DHCP-zugewiesene Adressen können sich jederzeit ändern. Weisen Sie dem Controller eine statische IP-Adresse zu, um einen konsistenten Zugriff zu gewährleisten.
+
+.Schritte
+. Geben Sie auf dem Client die URL für den StorageGRID-Appliance-Installer ein: +
+`*https://_E5600SG_Controller_IP_:8443*`
++
+Für `_E5600SG_Controller_IP_`, Verwenden Sie die IP-Adresse für die Appliance in einem beliebigen StorageGRID-Netzwerk.
+
++
+Die Startseite des StorageGRID-Appliance-Installationsprogramms wird angezeigt.
+
+. Wählen Sie *Hardwarekonfiguration* * Storage Controller Netzwerkkonfiguration*.
++
+Die Seite Speichercontroller-Netzwerkkonfiguration wird angezeigt.
+
+. Wählen Sie je nach Netzwerkkonfiguration *aktiviert* für IPv4, IPv6 oder beides.
+. Notieren Sie sich die automatisch angezeigte IPv4-Adresse.
++
+DHCP ist die Standardmethode zum Zuweisen einer IP-Adresse zu diesem Port.
+
++
+
+NOTE: Es kann einige Minuten dauern, bis die DHCP-Werte angezeigt werden.
+
++
+image::../media/storage_controller_network_config_ipv4.gif[Speichercontroller-Netzwerk-Konfig. IPv4]
+
+. Legen Sie optional eine statische IP-Adresse für den E2700 Controller-Management-Port fest.
++
+
+NOTE: Sie sollten entweder eine statische IP für den Management-Port zuweisen oder einen permanenten Leasing für die Adresse auf dem DHCP-Server zuweisen.
+
++
+.. Wählen Sie *Statisch*.
+.. Geben Sie die IPv4-Adresse unter Verwendung der CIDR-Schreibweise ein.
+.. Geben Sie das Standard-Gateway ein.
++
+image::../media/storage_controller_ipv4_and_def_gateway.gif[Speicher-Controller-Netzwerk-Konfig. IPv4 und Standard-Gateway]
+
+.. Klicken Sie Auf *Speichern*.
++
+Es kann einige Minuten dauern, bis Ihre Änderungen angewendet werden.
+
++
+Wenn Sie eine Verbindung zu SANtricity Storage Manager herstellen, verwenden Sie die neue statische IP-Adresse als URL: +
+`*https://_E2700_Controller_IP_*`
+
+
+
+
+
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61197["NetApp Dokumentation: SANtricity Storage Manager"^]

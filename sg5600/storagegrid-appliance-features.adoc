@@ -1,0 +1,24 @@
+---
+permalink: sg5600/storagegrid-appliance-features.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, features 
+summary: Die StorageGRID SG5600 Appliance ist eine integrierte Storage-Lösung zum Erstellen eines neuen StorageGRID Systems oder zur Erweiterung der Kapazität eines vorhandenen Systems. 
+---
+= Funktionen der StorageGRID Appliance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die StorageGRID SG5600 Appliance ist eine integrierte Storage-Lösung zum Erstellen eines neuen StorageGRID Systems oder zur Erweiterung der Kapazität eines vorhandenen Systems.
+
+Die StorageGRID Appliance bietet folgende Funktionen:
+
+* StorageGRID Storage Node Computing und Storage-Elemente in einer einzelnen, effizienten und integrierten Lösung kombiniert
+* Vereinfacht die Installation und Konfiguration eines Storage Node und automatisiert den Großteil des erforderlichen Prozesses
+* Bietet eine hochdichte Storage-Lösung mit zwei Gehäuseoptionen: Eine für 2 HE und eine für 4 HE
+* Verwendet 10-GbE-IP-Schnittstellen direkt zum Storage Node ohne Bedarf an Zwischen-Storage-Schnittstellen wie FC oder iSCSI
+* Kann in einer hybriden Grid-Umgebung verwendet werden, die StorageGRID Appliances und virtuelle (softwarebasierte) Storage-Nodes verwendet
+* Enthält vorkonfigurierten Storage und wird vorab mit dem StorageGRID Appliance Installer (auf dem E5600SG Controller) für praxiserprobe Software-Implementierung und -Integration geliefert
+

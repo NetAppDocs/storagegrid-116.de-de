@@ -1,0 +1,463 @@
+---
+permalink: monitor/commonly-used-prometheus-metrics.html 
+sidebar: sidebar 
+keywords: prometheus, Prometheus metrics, metrics 
+summary: Der Prometheus-Service auf Admin-Knoten sammelt Zeitreihungskennzahlen aus den Diensten auf allen Knoten. Während Prometheus mehr als tausend Kennzahlen erfasst, sind zur Überwachung der wichtigsten StorageGRID Vorgänge eine relativ kleine Zahl erforderlich. 
+---
+= Häufig verwendete Prometheus-Kennzahlen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Prometheus-Service auf Admin-Knoten sammelt Zeitreihungskennzahlen aus den Diensten auf allen Knoten. Während Prometheus mehr als tausend Kennzahlen erfasst, sind zur Überwachung der wichtigsten StorageGRID Vorgänge eine relativ kleine Zahl erforderlich.
+
+Metriken werden auf jedem Admin-Node gespeichert, bis der für Prometheus-Daten reservierte Speicherplatz voll ist. Wenn der `/var/local/mysql_ibdata/` Volume erreicht die Kapazität, zuerst werden die ältesten Metriken gelöscht.
+
+Um die vollständige Liste der Metriken zu erhalten, verwenden Sie die Grid Management API.
+
+. Wählen Sie oben im Grid Manager das Hilfesymbol aus und wählen Sie *API Documentation* aus.
+. Suchen Sie nach den *Metriken*-Vorgängen.
+. Ausführen des `GET /grid/metric-names` Betrieb.
+. Ergebnisse herunterladen
+
+
+Die folgende Tabelle enthält die am häufigsten verwendeten Prometheus-Kennzahlen. Sie können diese Liste nutzen, um die Bedingungen in den Standardwarnregeln besser zu verstehen oder die Bedingungen für benutzerdefinierte Alarmregeln zu erstellen.
+
+
+NOTE: Metriken, die _privat_ in ihren Namen enthalten, sind nur zur internen Verwendung vorgesehen und können ohne Ankündigung zwischen StorageGRID Versionen geändert werden.
+
+|===
+| Prometheus metrisch | Beschreibung 
+
+
+ a| 
+Alertmanager_notifications_failed_total
+ a| 
+Die Gesamtzahl der fehlgeschlagenen Warnmeldungen.
+
+
+
+ a| 
+Node_Filesystem_verfügbare_Byte
+ a| 
+Die Menge an Dateisystemspeicherplatz, die nicht-Root-Benutzern in Bytes zur Verfügung steht.
+
+
+
+ a| 
+Node_Memory_MemAvailable_Bytes
+ a| 
+Feld Speicherinformationen MemAvailable_Bytes.
+
+
+
+ a| 
+Node_Network_Carrier
+ a| 
+Transportwert von /sys/class/net/iface.
+
+
+
+ a| 
+Node_Network_receive_errs_total
+ a| 
+Statistik für Netzwerkgeräte receive_errs.
+
+
+
+ a| 
+Node_Network_transmit_errs_total
+ a| 
+Statistik für Netzwerkgeräte transmit_errs.
+
+
+
+ a| 
+storagegrid_administrativ_down
+ a| 
+Der Node ist aus einem erwarteten Grund nicht mit dem Grid verbunden. Beispielsweise wurde der Node oder die Services für den Node ordnungsgemäß heruntergefahren, der Node neu gebootet oder die Software wird aktualisiert.
+
+
+
+ a| 
+storagegrid_Appliance_Compute_Controller_Hardware_Status
+ a| 
+Der Status der Computing-Controller-Hardware in einer Appliance.
+
+
+
+ a| 
+storagegrid_Appliance_failed_Disks
+ a| 
+Für den Storage-Controller in einer Appliance die Anzahl der Laufwerke, die nicht optimal sind.
+
+
+
+ a| 
+storagegrid_Appliance_Storage_Controller_Hardware_Status
+ a| 
+Der Gesamtstatus der Hardware eines Storage Controllers in einer Appliance.
+
+
+
+ a| 
+storagegrid_Content_Buckets_und_Containern
+ a| 
+Die Gesamtzahl der S3-Buckets und Swift-Container, die von diesem Storage-Node bekannt sind
+
+
+
+ a| 
+storagegrid_Content_Objects
+ a| 
+Die Gesamtzahl der von diesem Storage-Node bekannten S3 und Swift Datenobjekte. Die Anzahl ist nur für Datenobjekte gültig, die von Client-Applikationen erstellt werden, die über S3 oder Swift mit dem System interface.
+
+
+
+ a| 
+storagegrid_Content_Objects_Lost
+ a| 
+Gesamtzahl der vom StorageGRID System erkannten Objekte, die von diesem Service als fehlend erkannt werden. Es sollten Maßnahmen ergriffen werden, um die Ursache des Schadens zu ermitteln und ob eine Erholung möglich ist.
+
+xref:troubleshooting-lost-and-missing-object-data.adoc[Fehlerbehebung bei verlorenen und fehlenden Objektdaten]
+
+
+
+ a| 
+storagegrid_http_Sessions_Incoming_versuchte
+ a| 
+Die Gesamtzahl der HTTP-Sitzungen, die zu einem Speicherknoten versucht wurden.
+
+
+
+ a| 
+storagegrid_http_Sessions_Incoming_derzeit_etabliertes
+ a| 
+Die Anzahl der derzeit aktiven HTTP-Sitzungen (offen) auf dem Speicherknoten.
+
+
+
+ a| 
+storagegrid_http_Sessions_INCOMING_FAILED
+ a| 
+Die Gesamtzahl der HTTP-Sitzungen, die nicht erfolgreich abgeschlossen wurden, entweder aufgrund einer fehlerhaften HTTP-Anfrage oder aufgrund eines Fehlers bei der Verarbeitung eines Vorgangs.
+
+
+
+ a| 
+storagegrid_http_Sessions_Incoming_successful
+ a| 
+Die Gesamtzahl der erfolgreich abgeschlossenen HTTP-Sitzungen.
+
+
+
+ a| 
+storagegrid_ilm_awaiting_background_Objects
+ a| 
+Die Gesamtzahl der Objekte auf diesem Node, die auf eine ILM-Bewertung aus dem Scan warten
+
+
+
+ a| 
+storagegrid_ilm_awaiting_Client_Evaluation_Objects_per_Second
+ a| 
+Die aktuelle Rate, mit der Objekte im Vergleich zur ILM-Richtlinie auf diesem Node bewertet werden.
+
+
+
+ a| 
+storagegrid_ilm_awaiting_Client_Objects
+ a| 
+Die Gesamtzahl der Objekte auf diesem Node, die auf eine ILM-Bewertung aus den Client-Vorgängen (z. B. Aufnahme) warten
+
+
+
+ a| 
+storagegrid_ilm_awaiting_total_Objects
+ a| 
+Gesamtzahl der Objekte, die auf eine ILM-Bewertung warten
+
+
+
+ a| 
+storagegrid_ilm_Scan_Objects_per_Second
+ a| 
+Die Geschwindigkeit, mit der Objekte des Node gescannt und für ILM in der Warteschlange gestellt werden.
+
+
+
+ a| 
+storagegrid_ilm_Scan_Period_Geschätzter_Minuten
+ a| 
+Die geschätzte Zeit zum Abschließen eines vollständigen ILM-Scans auf diesem Node.
+
+*Hinweis:* Ein vollständiger Scan garantiert nicht, dass ILM auf alle Objekte angewendet wurde, die sich im Besitz dieses Knotens befinden.
+
+
+
+ a| 
+storagegrid_Load_Balancer_Endpoint_cert_expiry_time
+ a| 
+Die Ablaufzeit des Endpunktzertifikats des Load Balancer in Sekunden seit der Epoche.
+
+
+
+ a| 
+storagegrid_Metadatenabfragen_average_Latency_Millisekunden
+ a| 
+Die durchschnittliche Zeit, die zum Ausführen einer Abfrage des Metadatenspeichers über diesen Service benötigt wird.
+
+
+
+ a| 
+storagegrid_Network_received_Byte
+ a| 
+Die Gesamtmenge der seit der Installation empfangenen Daten.
+
+
+
+ a| 
+storagegrid_Network_transmited_Byte
+ a| 
+Die Gesamtmenge der seit der Installation gesendeten Daten.
+
+
+
+ a| 
+storagegrid_Node_cpu_Utifficienty_percenty
+ a| 
+Der Prozentsatz der verfügbaren CPU-Zeit, die derzeit von diesem Service genutzt wird. Gibt an, wie beschäftigt der Dienst ist. Die verfügbare CPU-Zeit hängt von der Anzahl der CPUs für den Server ab.
+
+
+
+ a| 
+storagegrid_ntp_Chooed_time_source_Offset_Millisekunden
+ a| 
+Systematischer Zeitversatz, der von einer ausgewählten Zeitquelle bereitgestellt wird. Offset wird eingeführt, wenn die Verzögerung zum Erreichen einer Zeitquelle nicht der Zeit entspricht, die für das Erreichen des NTP-Clients benötigt wird.
+
+
+
+ a| 
+storagegrid_ntp_gesperrt
+ a| 
+Der Node ist nicht auf einen NTP-Server (Network Time Protocol) gesperrt.
+
+
+
+ a| 
+storagegrid_s3_Data_Transfers_Bytes_aufgenommen
+ a| 
+Die Gesamtmenge an Daten, die seit dem letzten Zurücksetzen des Attributs von S3-Clients auf diesen Storage-Node aufgenommen wurden.
+
+
+
+ a| 
+storagegrid_s3_Data_Transfers_Bytes_abgerufen
+ a| 
+Die Gesamtanzahl der Daten, die von S3-Clients von diesem Speicherknoten seit dem letzten Zurücksetzen des Attributs abgerufen wurden.
+
+
+
+ a| 
+storagegrid_s3_Operations_fehlgeschlagen
+ a| 
+Die Gesamtzahl der fehlgeschlagenen S3-Vorgänge (HTTP-Statuscodes 4xx und 5xx), ausgenommen solche, die durch S3-Autorisierungsfehler verursacht wurden.
+
+
+
+ a| 
+storagegrid_s3_Operations_erfolgreich
+ a| 
+Die Gesamtzahl der erfolgreichen S3-Vorgänge (HTTP-Statuscode 2xx).
+
+
+
+ a| 
+storagegrid_s3_Operations_nicht autorisiert
+ a| 
+Die Gesamtzahl der fehlerhaften S3-Vorgänge, die auf einen Autorisierungsfehler zurückzuführen sind.
+
+
+
+ a| 
+storagegrid_Servercertifikat_Management_Interface_cert_expiry_days
+ a| 
+Die Anzahl der Tage vor Ablauf des Managementschnittstelle-Zertifikats.
+
+
+
+ a| 
+storagegrid_Serverzertifikat_Storage_API_endpunktes_cert_expiry_days
+ a| 
+Die Anzahl der Tage, bevor das Objekt-Speicher-API-Zertifikat abläuft.
+
+
+
+ a| 
+storagegrid_Service_cpu_Sekunden
+ a| 
+Der kumulierte Zeitaufwand, die die CPU seit der Installation bei diesem Service verwendet hat.
+
+
+
+ a| 
+storagegrid_Service_Memory_Usage_Byte
+ a| 
+Die Speichermenge (RAM), die derzeit von diesem Dienst verwendet wird. Dieser Wert ist identisch mit dem, der vom Linux-Top-Dienstprogramm als RES angezeigt wird.
+
+
+
+ a| 
+storagegrid_Service_Network_received_Byte
+ a| 
+Die Gesamtanzahl der Daten, die seit der Installation von diesem Service eingehen.
+
+
+
+ a| 
+storagegrid_Service_Network_transmited_Byte
+ a| 
+Die Gesamtanzahl der von diesem Service gesendeten Daten.
+
+
+
+ a| 
+storagegrid_Service_startet neu
+ a| 
+Die Gesamtanzahl der Neustarts des Dienstes.
+
+
+
+ a| 
+storagegrid_Service_Runtime_seconds
+ a| 
+Die Gesamtzeit, die der Service seit der Installation ausgeführt hat.
+
+
+
+ a| 
+storagegrid_Service_Uptime_Sekunden
+ a| 
+Die Gesamtzeit, die der Dienst seit dem letzten Neustart ausgeführt hat.
+
+
+
+ a| 
+storagegrid_Storage_State_current
+ a| 
+Der aktuelle Status der Storage-Services. Attributwerte sind:
+
+* 10 = Offline
+* 15 = Wartung
+* 20 = schreibgeschützt
+* 30 = Online
+
+
+
+
+ a| 
+storagegrid_Storage_Status
+ a| 
+Der aktuelle Status der Storage-Services. Attributwerte sind:
+
+* 0 = Keine Fehler
+* 10 = In Transition
+* 20 = Nicht Genügend Freier Speicherplatz
+* 30 = Volume(s) nicht verfügbar
+* 40 = Fehler
+
+
+
+
+ a| 
+storagegrid_Storage_Utifficienfficienoy_Bytes
+ a| 
+Schätzung der Gesamtgröße der replizierten und Erasure-codierten Objektdaten auf dem Storage-Node
+
+
+
+ a| 
+storagegrid_Storage_Utiffici“_Metadata_allowed_Bytes
+ a| 
+Der gesamte Speicherplatz auf Volume 0 jedes Storage-Node, der für Objekt-Metadaten zulässig ist. Dieser Wert ist immer kleiner als der tatsächlich für Metadaten auf einem Node reservierte Speicherplatz, da für grundlegende Datenbankvorgänge (wie Data-Compaction und Reparatur) sowie zukünftige Hardware- und Software-Upgrades ein Teil des reservierten Speicherplatzes benötigt wird. Der zulässige Speicherplatz für Objektmetadaten steuert die allgemeine Objektkapazität.
+
+
+
+ a| 
+storagegrid_Storage_Utifficiendatiy_Metadata_Bytes
+ a| 
+Die Menge der Objekt-Metadaten auf dem Storage-Volume 0 in Bytes.
+
+
+
+ a| 
+storagegrid_Storage_Utifficienfficienals_total_space_Bytes
+ a| 
+Der gesamte Speicherplatz, der allen Objektspeichern zugewiesen ist.
+
+
+
+ a| 
+storagegrid_Storage_Utiable_space_Bytes
+ a| 
+Die verbleibende Menge an Objekt-Storage. Berechnet durch Hinzufügen der verfügbaren Menge an Speicherplatz für alle Objektspeichern auf dem Storage-Node.
+
+
+
+ a| 
+storagegrid_Swift_Data_Transfers_Bytes_aufgenommen
+ a| 
+Die Gesamtmenge der Daten, die Swift-Clients seit dem letzten Zurücksetzen des Attributs von diesem Storage-Node aufgenommen haben.
+
+
+
+ a| 
+storagegrid_Swift_Data_Transfers_Bytes_abgerufen
+ a| 
+Die Gesamtanzahl der Daten, die Swift-Clients von diesem Speicherknoten seit dem letzten Zurücksetzen des Attributs abgerufen haben.
+
+
+
+ a| 
+storagegrid_Swift_Operations_fehlgeschlagen
+ a| 
+Die Gesamtzahl der fehlgeschlagenen Swift-Vorgänge (HTTP-Statuscodes 4xx und 5xx), ausgenommen solche, die durch Swift-Autorisierungsfehler verursacht wurden.
+
+
+
+ a| 
+storagegrid_Swift_Operations_erfolgreich
+ a| 
+Die Gesamtzahl der erfolgreichen Swift-Vorgänge (HTTP-Statuscode 2xx).
+
+
+
+ a| 
+storagegrid_Swift_Operations_nicht autorisiert
+ a| 
+Die Gesamtzahl der fehlgeschlagenen Swift-Vorgänge, die auf einen Autorisierungsfehler zurückzuführen sind (HTTP-Statuscodes 401, 403, 405).
+
+
+
+ a| 
+storagegrid_Tenant_Usage_Data_Byte
+ a| 
+Die logische Größe aller Objekte für den Mandanten.
+
+
+
+ a| 
+storagegrid_Tenant_Usage_object_count
+ a| 
+Die Anzahl der Objekte für den Mandanten.
+
+
+
+ a| 
+storagegrid_Tenant_Usage_quota_bytes
+ a| 
+Die maximale Menge an logischem Speicherplatz, die für die Objekte des Mandanten verfügbar ist Wenn keine Quota-Metrik angegeben wird, steht eine unbegrenzte Menge an Speicherplatz zur Verfügung.
+
+|===

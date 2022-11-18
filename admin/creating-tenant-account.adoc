@@ -1,0 +1,207 @@
+---
+permalink: admin/creating-tenant-account.html 
+sidebar: sidebar 
+keywords: create tenant, tenant account 
+summary: Sie müssen mindestens ein Mandantenkonto erstellen, um den Zugriff auf den Storage in Ihrem StorageGRID-System zu kontrollieren. 
+---
+= Erstellen eines Mandantenkontos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen mindestens ein Mandantenkonto erstellen, um den Zugriff auf den Storage in Ihrem StorageGRID-System zu kontrollieren.
+
+Wenn Sie ein Mandantenkonto erstellen, geben Sie einen Namen, ein Client-Protokoll und optional ein Storage-Kontingent an. Wenn Single Sign-On (SSO) für StorageGRID aktiviert ist, geben Sie außerdem an, welche föderierte Gruppe Root-Zugriffsberechtigungen hat, um das Mandantenkonto zu konfigurieren. Wenn StorageGRID keine Single-Sign-On verwendet, müssen Sie außerdem angeben, ob das Mandantenkonto seine eigene Identitätsquelle verwendet und das erste Passwort für den lokalen Root-Benutzer des Mandanten konfiguriert.
+
+Der Grid Manager enthält einen Assistenten, der Sie durch die Schritte zum Erstellen eines Mandantenkontos führt. Je nachdem, ob die Schritte variieren xref:using-identity-federation.adoc[Identitätsföderation] Und xref:configuring-sso.adoc[Single Sign On] Sind konfiguriert und ob das Grid Manager-Konto, das Sie zum Erstellen des Mandantenkontos verwenden, einer Admin-Gruppe mit Root-Zugriffsberechtigung angehört.
+
+.Was Sie und#8217;ll benötigen
+* Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+* Sie haben spezifische Zugriffsberechtigungen.
+* Wenn das Mandantenkonto die für den Grid Manager konfigurierte Identitätsquelle verwendet und Sie einer föderierten Gruppe Root-Zugriffsberechtigungen für das Mandantenkonto gewähren möchten, haben Sie diese föderierte Gruppe in den Grid Manager importiert. Sie müssen dieser Admin-Gruppe keine Grid Manager-Berechtigungen zuweisen. Siehe xref:managing-admin-groups.adoc[Anweisungen zum Verwalten von Admin-Gruppen].
+
+
+.Schritte
+. Wählen Sie *MIETER*.
+. Wählen Sie *Erstellen* und geben Sie folgende Informationen für den Mieter ein:
++
+.. *Name*: Geben Sie einen Namen für das Mandantenkonto ein. Mandantennamen müssen nicht eindeutig sein. Wenn das Mandantenkonto erstellt wird, erhält es eine eindeutige, numerische Konto-ID.
+.. *Beschreibung* (optional): Geben Sie eine Beschreibung ein, mit der Sie den Mieter identifizieren können.
+.. *Client-Typ*: Wählen Sie den Client-Typ von *S3* oder *Swift* aus.
+.. *Speicherkontingent* (optional): Wenn dieser Mieter ein Speicherkontingent haben soll, geben Sie einen numerischen Wert für das Kontingent ein und wählen Sie die richtigen Einheiten (GB, TB oder PB) aus.
++
+image::../media/tenant_create_wizard_step_1.png[Seite „Mandantenkonten“ - Leer]
+
+
+
+. Wählen Sie *Weiter* und konfigurieren Sie den S3- oder Swift-Mandanten.
+
+
+[role="tabbed-block"]
+====
+.S3-Mandant
+--
+Wählen Sie die entsprechenden Berechtigungen für den Mandanten aus. Einige dieser Berechtigungen haben zusätzliche Anforderungen. Weitere Informationen finden Sie in der Online-Hilfe zu jeder Berechtigung.
+
+* Unterstützung von Plattform-Services
+* Eigene Identitätsquelle verwenden (nur bei Nichtverwendung von SSO wählbar)
+* S3-Auswahl zulassen (siehe xref:manage-s3-select-for-tenant-accounts.adoc[Management von S3 Select für Mandantenkonten])
+
+
+--
+.Swift-Mandant
+--
+Wenn der Mieter seine eigene Identitätsquelle verwendet, wählen Sie *eigene Identitätsquelle verwenden* (nur wählbar, wenn SSO nicht verwendet wird).
+
+--
+====
+. Wählen Sie *Weiter* und definieren Sie den Root-Zugriff für das Mandantenkonto.
+
+
+[role="tabbed-block"]
+====
+.Identitätsföderation nicht konfiguriert
+--
+. Geben Sie ein Passwort für den lokalen Root-Benutzer ein.
+. Wählen Sie *Create Tenant*.
+
+
+--
+.SSO aktiviert
+--
+Wenn SSO für StorageGRID aktiviert ist, muss der Mandant die für den Grid Manager konfigurierte Identitätsquelle verwenden. Keine lokalen Benutzer können sich anmelden. Sie geben an, welche föderierte Gruppe Root-Zugriffsberechtigungen hat, um das Mandantenkonto zu konfigurieren.
+
+. Wählen Sie eine vorhandene föderierte Gruppe aus dem Grid Manager aus, um die ursprüngliche Root-Zugriffsberechtigung für den Mandanten zu erhalten.
++
+
+NOTE: Wenn Sie über ausreichende Berechtigungen verfügen, werden die vorhandenen föderierten Gruppen aus dem Grid Manager aufgelistet, wenn Sie das Feld auswählen. Geben Sie andernfalls den eindeutigen Namen der Gruppe ein.
+
+. Wählen Sie *Create Tenant*.
+
+
+--
+.SSO ist nicht aktiviert
+--
+. Führen Sie die in der Tabelle beschriebenen Schritte aus, je nachdem, ob der Mandant seine eigenen Gruppen und Benutzer verwaltet oder die für den Grid Manager konfigurierte Identitätsquelle verwendet.
++
+[cols="1a,3a"]
+|===
+| Falls der Mandant... | Tun Sie das... 
+
+
+ a| 
+Verwaltung ihrer eigenen Gruppen und Benutzer
+ a| 
+.. Wählen Sie *eigene Identitätsquelle verwenden*.
++
+*Hinweis*: Wenn dieses Kontrollkästchen aktiviert ist und Sie Identity Federation für Mandantengruppen und Benutzer verwenden möchten, muss der Mandant seine eigene Identitätsquelle konfigurieren. Siehe xref:../tenant/index.adoc[Anweisungen zur Verwendung von Mandantenkonten].
+
+.. Geben Sie ein Passwort für den lokalen Root-Benutzer des Mandanten an, und wählen Sie dann *Create Tenant*.
+.. Wählen Sie *Anmelden als root*, um den Mandanten zu konfigurieren, oder wählen Sie *Fertig*, um den Mandanten später zu konfigurieren.
+
+
+
+
+ a| 
+Verwenden Sie die für den Grid Manager konfigurierten Gruppen und Benutzer
+ a| 
+.. Führen Sie einen oder beide der folgenden Schritte aus:
++
+*** Wählen Sie eine vorhandene föderierte Gruppe aus dem Grid Manager aus, die über die ursprüngliche Root-Zugriffsberechtigung für den Mandanten verfügen sollte.
++
+*Hinweis*: Wenn Sie über ausreichende Berechtigungen verfügen, werden die vorhandenen föderierten Gruppen aus dem Grid Manager aufgelistet, wenn Sie das Feld auswählen. Geben Sie andernfalls den eindeutigen Namen der Gruppe ein.
+
+*** Geben Sie ein Passwort für den lokalen Root-Benutzer des Mandanten an.
+
+
+.. Wählen Sie *Create Tenant*.
+
+
+|===
+
+
+--
+====
+. So melden Sie sich jetzt beim Mieter an:
++
+** Wenn Sie über einen eingeschränkten Port auf den Grid Manager zugreifen, wählen Sie in der Mandantentabelle *eingeschränkt* aus, um mehr über den Zugriff auf dieses Mandantenkonto zu erfahren.
++
+Die URL für den Tenant Manager weist folgendes Format auf:
+
++
+`https://_FQDN_or_Admin_Node_IP:port_/?accountId=_20-digit-account-id_/`
+
++
+*** `_FQDN_or_Admin_Node_IP_` Ist ein vollständig qualifizierter Domain-Name oder die IP-Adresse eines Admin-Knotens
+*** `_port_` Ist der reine Mandantenport
+*** `_20-digit-account-id_` Die eindeutige Account-ID des Mandanten
+
+
+** Wenn Sie am Port 443 auf den Grid Manager zugreifen, aber kein Passwort für den lokalen Root-Benutzer festgelegt haben, wählen Sie in der Tabelle Mandanten des Grid Manager die Option *Anmelden* aus, und geben Sie die Anmeldeinformationen für einen Benutzer in die föderierte Gruppe Root Access ein.
+** Wenn Sie auf den Grid Manager auf Port 443 zugreifen und ein Passwort für den lokalen Root-Benutzer festlegen:
++
+... Wählen Sie *Anmelden als root*, um den Mandanten jetzt zu konfigurieren.
++
+Wenn Sie sich anmelden, werden Links zum Konfigurieren von Buckets oder Containern, Identitätsföderation, Gruppen und Benutzern angezeigt.
+
++
+image::../media/configure_tenant_account.png[Konfigurieren Sie ein Mandantenkonto]
+
+... Wählen Sie die Links aus, um das Mandantenkonto zu konfigurieren.
++
+Jeder Link öffnet die entsprechende Seite im Tenant Manager. Informationen zum Ausfüllen der Seite finden Sie im xref:../tenant/index.adoc[Anweisungen zur Verwendung von Mandantenkonten].
+
+... Andernfalls wählen Sie *Fertig*, um später auf den Mieter zuzugreifen.
+
+
+
+
+. So greifen Sie später auf den Mandanten zu:
++
+[cols="1a,2a"]
+|===
+| Sie verwenden... | Führen Sie eine dieser... 
+
+
+ a| 
+Port 443
+ a| 
+** Wählen Sie im Grid Manager *MIETERS* aus und wählen Sie *Anmelden* rechts neben dem Mieternamen aus.
+** Geben Sie die URL des Mandanten in einen Webbrowser ein:
++
+`https://_FQDN_or_Admin_Node_IP_/?accountId=_20-digit-account-id_/`
+
++
+*** `_FQDN_or_Admin_Node_IP_` Ist ein vollständig qualifizierter Domain-Name oder die IP-Adresse eines Admin-Knotens
+*** `_20-digit-account-id_` Die eindeutige Account-ID des Mandanten
+
+
+
+
+
+
+ a| 
+Ein eingeschränkter Port
+ a| 
+** Wählen Sie im Grid Manager die Option *MITERS* aus, und wählen Sie *eingeschränkt*.
+** Geben Sie die URL des Mandanten in einen Webbrowser ein:
++
+`https://_FQDN_or_Admin_Node_IP:port_/?accountId=_20-digit-account-id_`
+
++
+*** `_FQDN_or_Admin_Node_IP_` Ist ein vollständig qualifizierter Domain-Name oder die IP-Adresse eines Admin-Knotens
+*** `_port_` Ist der ausschließlich auf Mandanten beschränkte Port
+*** `_20-digit-account-id_` Die eindeutige Account-ID des Mandanten
+
+
+
+
+|===
+
+
+.Verwandte Informationen
+* xref:controlling-access-through-firewalls.adoc[Kontrolle des Zugriffs durch Firewalls]
+* xref:manage-platform-services-for-tenants.adoc[Management von Plattform-Services für S3-Mandantenkonten]
+

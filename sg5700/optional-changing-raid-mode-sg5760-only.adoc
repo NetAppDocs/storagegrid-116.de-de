@@ -1,0 +1,43 @@
+---
+permalink: sg5700/optional-changing-raid-mode-sg5760-only.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, raid, raid mode, change, changing, modify, DDP, ddp16, raid6 
+summary: Wenn Sie eine SG5760 mit 60 Laufwerken haben, können Sie einen anderen RAID-Modus wechseln, um Ihre Storage- und Recovery-Anforderungen zu erfüllen. Sie können den Modus nur ändern, bevor Sie den Speicherknoten der StorageGRID-Appliance bereitstellen. 
+---
+= Optional: Ändern Sie den RAID-Modus (nur SG5760).
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie eine SG5760 mit 60 Laufwerken haben, können Sie einen anderen RAID-Modus wechseln, um Ihre Storage- und Recovery-Anforderungen zu erfüllen. Sie können den Modus nur ändern, bevor Sie den Speicherknoten der StorageGRID-Appliance bereitstellen.
+
+.Was Sie und#8217;ll benötigen
+* Sie haben eine SG5760. Wenn Sie eine SG5712 haben, müssen Sie den DDP-Modus verwenden.
+* Sie verwenden jeden Client, der eine Verbindung zu StorageGRID herstellen kann.
+* Der Client verfügt über eine xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+
+
+Vor der Bereitstellung der SG5760 Appliance als Storage-Node können Sie eine der folgenden Volume-Konfigurationsoptionen wählen:
+
+* *DDP*: Dieser Modus verwendet zwei Paritätslaufwerke pro acht Datenlaufwerke. Dies ist der Standard- und empfohlene Modus für alle Appliances. Im Vergleich zu RAID 6 bietet DDP eine bessere System-Performance, geringere Wiederherstellungszeiten nach Laufwerksausfällen und einfaches Management. DDP bietet auch Schutz vor Schubladenverlust bei Appliances mit 60 Laufwerken.
+* *DDP16*: In diesem Modus werden für alle 16 Datenlaufwerke zwei Paritätslaufwerke verwendet. Dies führt im Vergleich zu DDP zu einer höheren Storage-Effizienz. Im Vergleich zu RAID 6 bietet DDP16 eine bessere System-Performance, geringere Wiederherstellungszeiten nach Laufwerksausfällen, einfaches Management und vergleichbare Storage-Effizienz. Um den DDP16-Modus zu verwenden, muss Ihre Konfiguration mindestens 20 Laufwerke enthalten. DDP16 bietet keinen Schubladenschutz.
+* *RAID 6*: Dieser Modus verwendet zwei Paritätslaufwerke pro 16 oder mehr Datenlaufwerken. Für die Verwendung des RAID 6-Modus muss Ihre Konfiguration mindestens 20 Laufwerke enthalten. Obwohl RAID-6 die Storage-Effizienz der Appliance im Vergleich zu DDP erhöhen kann, wird dies in den meisten StorageGRID-Umgebungen nicht empfohlen.
+
+
+
+IMPORTANT: Wenn bereits Volumes konfiguriert wurden oder bereits StorageGRID installiert war, werden die Volumes durch eine Änderung des RAID-Modus entfernt und ersetzt. Alle Daten auf diesen Volumes gehen verloren.
+
+.Schritte
+. Öffnen Sie mithilfe des Service-Laptops einen Webbrowser, und greifen Sie auf das Installationsprogramm der StorageGRID-Appliance: + zu
+`*https://_E5700SG_Controller_IP_:8443*`
++
+Wo `_E5700SG_Controller_IP_` Gibt eine der IP-Adressen für den E5700SG-Controller an.
+
+. Wählen Sie *Erweitert* *RAID-Modus*.
+. Wählen Sie auf der Seite *RAID-Modus konfigurieren* den gewünschten RAID-Modus aus der Dropdown-Liste Modus aus.
+. Klicken Sie Auf *Speichern*.
+
+
+http://mysupport.netapp.com/info/web/ECMP1658252.html["NetApp E-Series Systems Documentation Site"^]

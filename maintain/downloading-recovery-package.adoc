@@ -1,0 +1,45 @@
+---
+permalink: maintain/downloading-recovery-package.html 
+sidebar: sidebar 
+keywords: storagegrid, recovery package 
+summary: Die Wiederherstellungspakedatei ermöglicht Ihnen die Wiederherstellung des StorageGRID-Systems bei einem Fehler. 
+---
+= Recovery Package Herunterladen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Wiederherstellungspakedatei ermöglicht Ihnen die Wiederherstellung des StorageGRID-Systems bei einem Fehler.
+
+.Was Sie und#8217;ll benötigen
+* Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+* Sie müssen über eine Passphrase für die Bereitstellung verfügen.
+* Sie müssen über spezifische Zugriffsberechtigungen verfügen.
+
+
+Laden Sie die aktuelle Recovery Package-Datei herunter, bevor Sie Grid-Topologieänderungen am StorageGRID-System vornehmen oder bevor Sie Software aktualisieren. Laden Sie anschließend eine neue Kopie des Wiederherstellungspakets herunter, nachdem Sie Änderungen an der Grid-Topologie vorgenommen haben oder nachdem Sie die Software aktualisiert haben.
+
+.Schritte
+. Wählen Sie *WARTUNG* > *System* > *Wiederherstellungspaket*.
+. Geben Sie die Provisionierungs-Passphrase ein, und wählen Sie *Download starten*.
++
+Der Download startet sofort.
+
+. Wenn der Download abgeschlossen ist:
++
+.. Öffnen Sie das `.zip` Datei:
+.. Bestätigen Sie, dass es ein gpt-Backup-Verzeichnis und eine interne enthält `.zip` Datei:
+.. Entnehmen Sie die Innenseite `.zip` Datei:
+.. Bestätigen Sie, dass Sie den öffnen können `Passwords.txt` Datei:
+
+
+. Kopieren Sie die heruntergeladene Wiederherstellungspaket-Datei (`.zip`) An zwei sichere und getrennte Stellen.
++
+
+IMPORTANT: Die Recovery Package-Datei muss gesichert sein, weil sie Verschlüsselungsschlüssel und Passwörter enthält, die zum Abrufen von Daten vom StorageGRID-System verwendet werden können.
+
+
+
+xref:../admin/index.adoc[StorageGRID verwalten]

@@ -1,0 +1,132 @@
+---
+permalink: sg100-1000/obtaining-additional-equipment-and-tools-sg100-and-sg1000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, additional, equipment, tools 
+summary: Vergewissern Sie sich vor der Installation der StorageGRID Appliance, dass alle zusätzlichen Geräte und Tools zur Verfügung stehen, die Sie benötigen. 
+---
+= Zusätzliche Geräte und Werkzeuge (SG100 und SG1000)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vergewissern Sie sich vor der Installation der StorageGRID Appliance, dass alle zusätzlichen Geräte und Tools zur Verfügung stehen, die Sie benötigen.
+
+Sie benötigen die folgende zusätzliche Ausrüstung für die Installation und Konfiguration der Hardware:
+
+* *Schraubendreher*
++
+image::../media/screwdrivers.gif[Zwei Schraubendreher]
+
++
+Phillips Nr. 2 Schraubendreher
+
++
+Mittlerer Schlitzschraubendreher
+
+* *ESD-Handgelenkschlaufe*
++
+image::../media/appliance_wriststrap.gif[ESD-Handgelenkschlaufe]
+
+* *Optische Kabel und Transceiver*
++
+image::../media/fc_cable_and_sfp.gif[Optisches Kabel und QSFP+ Transceiver]
+
++
+** Kabel
++
+*** Twinax/Kupferkabel (1 bis 4)
++
+Oder
+
+*** Glasfaser/optisch (1 bis 4)
+
+
+** 1 bis 4 dieser Transceiver/Adapter je nach Verbindungsgeschwindigkeit (gemischte Geschwindigkeiten werden nicht unterstützt)
++
+*** SG100:
++
+|===
+| Verbindungsgeschwindigkeit (GbE) | Erforderliche Ausrüstung 
+
+
+ a| 
+10
+ a| 
+SFP+-Transceiver
+
+
+
+ a| 
+25
+ a| 
+SFP28-Transceiver
+
+|===
+*** SG1000:
++
+|===
+| Verbindungsgeschwindigkeit (GbE) | Erforderliche Ausrüstung 
+
+
+ a| 
+10
+ a| 
+QSFP-to-SFP Adapter (QSA) und SFP+ Transceiver
+
+
+
+ a| 
+25
+ a| 
+QSFP-to-SFP Adapter (QSA) und SFP28-Transceiver
+
+
+
+ a| 
+40
+ a| 
+QSFP+-Transceiver
+
+
+
+ a| 
+100
+ a| 
+QFSP28-Transceiver
+
+|===
+
+
+
+
+* * RJ-45 (Cat5/Cat5e/Cat6/Cat6a) Ethernet-Kabel*
++
+image::../media/ethernet_cables.png[Ethernet-Kabel]
+
+* *Service-Laptop*
++
+image::../media/sam_management_client.gif[Service-Laptop]
+
++
+xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser]
+
++
+1-GbE-Port (RJ-45
+
++
+
+NOTE: Einige Ports unterstützen möglicherweise keine 10/100 Ethernet-Geschwindigkeiten.
+
+* *Optionale Werkzeuge*
++
+image::../media/optional_tools.gif[Kraftbohrer und Taschenlampe]
+
++
+Kraftbohrer mit Kreuzschlitz
+
++
+Taschenlampe
+
+

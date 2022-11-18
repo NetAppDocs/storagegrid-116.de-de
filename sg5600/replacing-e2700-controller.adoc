@@ -1,0 +1,101 @@
+---
+permalink: sg5600/replacing-e2700-controller.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, hardware, Replacing, replace, E2700, controller, remove, removing, removal, install, installing, installation 
+summary: Möglicherweise müssen Sie den E2700 Controller austauschen, wenn er nicht optimal funktioniert oder ausgefallen ist. 
+---
+= E2700 Controller austauschen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Möglicherweise müssen Sie den E2700 Controller austauschen, wenn er nicht optimal funktioniert oder ausgefallen ist.
+
+.Was Sie und#8217;ll benötigen
+* Sie verfügen über einen Ersatzcontroller mit derselben Teilenummer wie der zu ersetzenden Controller.
+* Sie verfügen über Etiketten, um jedes Kabel, das mit dem Controller verbunden ist, zu identifizieren.
+* Sie haben antistatischen Schutz.
+* Sie müssen über die Berechtigung Wartung oder Stammzugriff verfügen. Weitere Informationen finden Sie in den Anweisungen zum Verwalten von StorageGRID.
+
+
+Sie können feststellen, ob ein ausgefallener Controller vorhanden ist, indem Sie die gelbe Service Action required LED am Controller überprüfen (in der Abbildung 1). Wenn diese LED leuchtet, sollte der Controller ersetzt werden.
+
+image::../media/e2700_controller_sar_led.gif[LED für Serviceaktionen am E2700 Controller]
+
+Auf den Appliance-Speicherknoten kann nicht zugegriffen werden, wenn Sie den Controller austauschen. Wenn der E2700 Controller ausreichend funktioniert, können Sie den E5600SG Controller in den Wartungsmodus versetzen.
+
+Wenn Sie einen Controller austauschen, müssen Sie den Akku aus dem ursprünglichen Controller entfernen und in den Ersatzcontroller einsetzen.
+
+.Schritte
+. Bereiten Sie das Entfernen des Controllers vor.
++
+Sie führen diese Schritte mit SANtricity Storage Manager aus.
+
++
+.. Notieren Sie sich, welche Version der SANtricity OS Software derzeit auf dem Controller installiert ist.
+.. Notieren Sie sich, welche NVSRAM-Version derzeit installiert ist.
+.. Wenn die Laufwerksicherheit aktiviert ist, stellen Sie sicher, dass ein gespeicherter Schlüssel existiert und dass Sie den Passphrase kennen, der für die Installation erforderlich ist.
++
+
+IMPORTANT: *Möglicher Verlust des Datenzugriffs #8212;* Wenn alle Laufwerke im Gerät auf Sicherheit aktiviert sind, kann der neue Controller erst dann auf das Gerät zugreifen, wenn Sie die gesicherten Laufwerke mit dem Unternehmensverwaltungsfenster im SANtricity Storage Manager entsperren.
+
+.. Sichern Sie die Konfigurationsdatenbank.
++
+Wenn beim Entfernen eines Controllers ein Problem auftritt, können Sie die gespeicherte Datei verwenden, um Ihre Konfiguration wiederherzustellen.
+
+.. Sammeln von Support-Daten für die Appliance
++
+
+NOTE: Das Erfassen von Supportdaten vor und nach dem Ersetzen einer Komponente stellt sicher, dass Sie einen vollständigen Satz von Protokollen an den technischen Support senden können, falls das Problem durch den Austausch nicht behoben wird.
+
+
+
+. Wenn die StorageGRID Appliance in einem StorageGRID System ausgeführt wird, xref:placing-appliance-into-maintenance-mode.adoc[Setzen Sie den E5600SG-Controller in den Wartungsmodus].
+. Wenn der E2700 Controller ausreichend funktioniert, um ein kontrolliertes Herunterfahren zu ermöglichen, bestätigen Sie, dass alle Operationen abgeschlossen wurden.
++
+.. Wählen Sie in der Titelleiste des Array Management-Fensters die Option *Monitor* *Berichte* *Operation in progress* aus.
+.. Vergewissern Sie sich, dass alle Vorgänge abgeschlossen sind.
+
+
+. Befolgen Sie die Anweisungen im Ersatzverfahren für einen Simplex E2700 Controller, um die folgenden Schritte auszuführen:
++
+.. Beschriften Sie die Kabel, und ziehen Sie die Kabel ab.
++
+
+IMPORTANT: Um eine verminderte Leistung zu vermeiden, dürfen die Kabel nicht verdreht, gefaltet, gequetscht oder treten.
+
+.. Entfernen Sie den fehlerhaften Controller aus dem Gerät.
+.. Entfernen Sie die Controllerabdeckung.
+.. Lösen Sie die Flügelschraube, und entfernen Sie die Batterie vom defekten Controller.
+.. Setzen Sie den Akku in den Ersatzcontroller ein, und bringen Sie die Controllerabdeckung wieder an.
+.. Setzen Sie den Ersatzcontroller in das Gerät ein.
+.. Ersetzen Sie die Kabel.
+.. Warten Sie, bis der E2700 Controller neu gestartet wurde. Vergewissern Sie sich, dass auf der 7-Segment-Anzeige ein Status von angezeigt wird `99`.
+
+
+. Wenn das Gerät gesicherte Laufwerke verwendet, importieren Sie den Sicherheitsschlüssel des Laufwerks.
+. Stellen Sie den normalen Betriebsmodus des Geräts wieder ein. Wählen Sie im Installationsprogramm der StorageGRID-Appliance die Option *Erweitert* *Controller neu starten* und wählen Sie dann *Neustart in StorageGRID* aus.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Booten Sie den Controller im Wartungsmodus neu]
+
++
+Während des Neustarts wird der folgende Bildschirm angezeigt:
+
++
+image::../media/reboot_controller_in_progress.png[Neustart wird ausgeführt]
+
++
+Das Gerät wird neu gestartet und wieder in das Raster integriert. Dieser Vorgang kann bis zu 20 Minuten dauern.
+
+. Vergewissern Sie sich, dass das Neubooten abgeschlossen ist und dass der Node wieder dem Raster beigetreten ist. Überprüfen Sie im Grid Manager, ob auf der Seite Nodes ein normaler Status (keine Symbole links neben dem Knotennamen) für den Appliance-Node angezeigt wird, der angibt, dass keine Warnmeldungen aktiv sind und der Node mit dem Raster verbunden ist.
++
+image::../media/node_rejoin_grid_confirmation.png[Das Raster des Appliance-Node wurde neu verbunden]
+
+. Überprüfen Sie vom SANtricity Storage Manager, ob der neue Controller optimal ist, und sammeln Sie Support-Daten.
+
+
+https://mysupport.netapp.com/info/web/ECMP11751516.html["Verfahren zum Austausch von Hardware der NetApp E-Series und EF-Series"^]
+
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61765["NetApp Dokumentation: E2700 Serie"^]

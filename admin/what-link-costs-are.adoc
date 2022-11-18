@@ -1,0 +1,58 @@
+---
+permalink: admin/what-link-costs-are.html 
+sidebar: sidebar 
+keywords: what are link costs, site latency 
+summary: Durch die Verbindungskosten können Sie festlegen, welcher Datacenter-Standort einen angeforderten Service bereitstellt, wenn zwei oder mehr Datacenter-Standorte vorhanden sind. Sie können die Verbindungskosten anpassen, um die Latenz zwischen Standorten reflektieren. 
+---
+= Was sind Verbindungskosten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Durch die Verbindungskosten können Sie festlegen, welcher Datacenter-Standort einen angeforderten Service bereitstellt, wenn zwei oder mehr Datacenter-Standorte vorhanden sind. Sie können die Verbindungskosten anpassen, um die Latenz zwischen Standorten reflektieren.
+
+* Die Link-Kosten werden verwendet, um Prioritäten zu setzen, welche Objektkopie für die Bearbeitung von Objektabrufungen verwendet wird.
+* Die Link-Kosten werden von der Grid-Management-API und der Mandanten-Management-API verwendet, um festzustellen, welche internen StorageGRID-Services verwendet werden sollen.
+* Die Verbindungskosten werden vom veralteten Connection Load Balancer (CLB)-Dienst auf Gateway-Knoten zur direkten Weiterleitung von Client-Verbindungen verwendet. Siehe xref:how-load-balancing-works-clb-service.adoc[Wie der Lastenausgleich funktioniert - CLB-Service].
+
+
+Das Diagramm zeigt ein drei Standortraster mit Verbindungskosten, die zwischen Standorten konfiguriert sind:
+
+image::../media/link_costs.gif[Konzeptdiagramm für die Verknüpfung von Kosten zwischen Datacentern]
+
+* Der CLB-Service auf Gateway-Knoten verteilt Client-Verbindungen gleichermaßen auf alle Storage-Nodes am selben Datacenter-Standort und an beliebige Datacenter-Standorte mit einem Linkskosten von 0.
++
+Im Beispiel verteilt ein Gateway-Node am Datacenter-Standort 1 (DC1) Client-Verbindungen gleichmäßig auf Storage-Nodes an DC1 und Storage Nodes an DC2. Ein Gateway-Node bei DC3 sendet Client-Verbindungen nur zu Storage-Nodes an DC3.
+
+* Beim Abrufen eines Objekts, das als mehrere replizierte Kopien vorhanden ist, ruft StorageGRID die Kopie im Datacenter ab, das die niedrigsten Verbindungskosten bietet.
++
+Wenn eine Client-Anwendung an DC2 ein Objekt abruft, das sowohl an DC1 als auch an DC3 gespeichert ist, wird das Objekt von DC1 abgerufen, da die Verbindungskosten von DC1 bis D2 0 sind, was niedriger ist als die Verbindungskosten von DC3 nach DC2 (25).
+
+
+
+Verbindungskosten sind willkürliche relative Zahlen ohne spezifische Maßeinheit. So werden beispielsweise die Linkkosten von 50 weniger bevorzugt genutzt als eine Linkkosten von 25. In der Tabelle sind die häufig verwendeten Verbindungskosten aufgeführt.
+
+[cols="1a,1a,2a"]
+|===
+| Verlinken | Verbindungskosten | Hinweise 
+
+
+ a| 
+Zwischen physischen Datacenter-Standorten zu wechseln
+ a| 
+25 (Standard)
+ a| 
+Über WAN-Verbindung verbundene Datacenter.
+
+
+
+ a| 
+Zwischen logischen Datacenter-Standorten am selben physischen Standort
+ a| 
+0
+ a| 
+Logische Rechenzentren befinden sich in demselben physischen Gebäude oder Campus, das über ein LAN verbunden ist.
+
+|===

@@ -1,0 +1,60 @@
+---
+permalink: ilm/access-create-ilm-rule-wizard.html 
+sidebar: sidebar 
+keywords: create ILM rule, information lifecycle rule 
+summary: Sie verwenden den Assistenten zur Erstellung einer ILM-Regel, um eine ILM-Regel zu erstellen. 
+---
+= Rufen Sie den Assistenten für die Erstellung von ILM-Regeln auf
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ILM-Regeln ermöglichen es Ihnen, die Platzierung von Objektdaten im Laufe der Zeit zu managen. Zum Erstellen einer ILM-Regel verwenden Sie den Assistenten zur Erstellung von ILM-Regeln.
+
+
+NOTE: Wenn Sie die Standard-ILM-Regel für eine Richtlinie erstellen, verwenden Sie stattdessen diese Vorgehensweise: xref:creating-default-ilm-rule.adoc[Erstellen einer Standard-ILM-Regel].
+
+.Was Sie und#8217;ll benötigen
+* Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+* Sie haben spezifische Zugriffsberechtigungen.
+* Wenn Sie angeben möchten, für welche Mandantenkonten diese Regel gilt, haben Sie die Berechtigung für Mandantenkonten, oder Sie kennen die Konto-ID für jedes Konto.
+* Wenn die Regel Objekte nach Metadaten der letzten Zugriffszeit filtern soll, müssen Updates der letzten Zugriffszeit für S3 oder für Swift nach Container aktiviert werden.
+* Falls Sie replizierte Kopien erstellen, haben Sie alle Storage-Pools oder Cloud-Storage-Pools konfiguriert, die Sie verwenden möchten. Siehe xref:creating-storage-pool.adoc[Erstellung eines Speicherpools] Und xref:creating-cloud-storage-pool.adoc[Cloud Storage Pool Erstellen].
+* Wenn Sie Kopien mit Erasure Coding erstellen, haben Sie ein Erasure Coding-Profil konfiguriert. Siehe xref:creating-erasure-coding-profile.adoc[Erstellen Sie ein Erasure Coding-Profil].
+* Sie kennen das xref:data-protection-options-for-ingest.adoc[Datensicherungsoptionen für die Aufnahme].
+* Wenn Sie eine konforme Regel für die Verwendung mit S3 Object Lock erstellen müssen, kennen Sie die xref:requirements-for-s3-object-lock.adoc[Anforderungen für die S3-Objektsperre].
+* Optional haben Sie sich das Video angesehen: https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=beffbe9b-e95e-4a90-9560-acc5013c93d8["Video: StorageGRID ILM-Regeln: Erste Schritte"^].
++
+[link=https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=beffbe9b-e95e-4a90-9560-acc5013c93d8]
+image::../media/video-screenshot-ilm-rules.png[Video: StorageGRID ILM-Regeln: Erste Schritte]
+
+
+
+Wenn ILM-Regeln erstellt werden:
+
+* Dabei sind die Topologie und Storage-Konfigurationen des StorageGRID Systems zu berücksichtigen.
+* Es sollte berücksichtigt werden, welche Arten von Objektkopien Sie erstellen möchten (replizierte oder Erasure Coding) und wie viele Kopien der einzelnen Objekte erforderlich sind.
+* Legen Sie fest, welche Typen von Objekt-Metadaten in den Applikationen verwendet werden, die sich mit dem StorageGRID System verbinden. ILM-Regeln filtern Objekte auf Basis ihrer Metadaten.
+* Dabei sollten Sie berücksichtigen, wo Sie Objektkopien über einen längeren Zeitraum ablegen möchten.
+* Entscheiden Sie, welche Option für die Datensicherungsoption bei der Aufnahme verwendet werden soll (ausgewogen, streng oder Dual-Commit).
+
+
+.Schritte
+. Wählen Sie *ILM* *Regeln*.
++
+Die Seite ILM-Regeln wird angezeigt, wobei die Bestandsregel 2 Kopien erstellen soll, ausgewählt.
+
++
+image::../media/ilm_create_ilm_rule.png[Seite mit ILM-Regeln]
+
++
+
+NOTE: Die Seite ILM-Regeln sieht etwas anders aus, wenn die globale S3-Objektsperre für das StorageGRID System aktiviert wurde. Die Übersichtstabelle enthält eine *Compliant*-Spalte, und die Details für die ausgewählte Regel enthalten ein *Compliant*-Feld.
+
+. Wählen Sie *Erstellen*.
++
+Schritt 1 (Grundlagen definieren) des Assistenten „ILM-Regel erstellen“ wird angezeigt. Auf der Seite Grundlagen definieren können Sie definieren, für welche Objekte die Regel gilt.
+
+

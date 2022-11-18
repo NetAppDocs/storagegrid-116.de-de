@@ -1,0 +1,38 @@
+---
+permalink: maintain/linux-starting-migrated-node.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, linux, start node 
+summary: Nachdem Sie den migrierten Node validiert haben, starten Sie den Node durch Ausführen eines Befehls auf dem Linux-Zielhost. 
+---
+= Linux: Migrierenden Knoten starten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie den migrierten Node validiert haben, starten Sie den Node durch Ausführen eines Befehls auf dem Linux-Zielhost.
+
+.Schritte
+. Starten Sie den Knoten auf dem neuen Host.
++
+[listing]
+----
+sudo storagegrid node start DC1-S3
+Starting node DC1-S3
+----
+. Überprüfen Sie im Grid Manager, ob der Status des Knotens grün ist und keine Alarme dagegen ausgelöst werden.
++
+
+IMPORTANT: Überprüfen, ob der Status des Node grün lautet, stellt sicher, dass der migrierte Node vollständig neu gestartet und wieder dem Grid beigetreten ist. Wenn der Status nicht grün lautet, migrieren Sie keine zusätzlichen Nodes, damit nicht mehr als ein Node außer Betrieb ist.
+
++
+Wenn Sie nicht auf den Grid Manager zugreifen können, warten Sie 10 Minuten, und führen Sie den folgenden Befehl aus:
+
++
+`sudo storagegrid node status *_node-name_*`
+
++
+Vergewissern Sie sich, dass der migrierte Knoten einen Run-State von hat `Running`.
+
+

@@ -1,0 +1,231 @@
+---
+permalink: primer/exploring-grid-manager.html 
+sidebar: sidebar 
+keywords: what is the grid manager, grid manager dashboard 
+summary: Der Grid Manager ist eine browserbasierte grafische Schnittstelle, mit der Sie Ihr StorageGRID System konfigurieren, managen und überwachen können. 
+---
+= Entdecken Sie den Grid Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Grid Manager ist eine browserbasierte grafische Schnittstelle, mit der Sie Ihr StorageGRID System konfigurieren, managen und überwachen können.
+
+Wenn Sie sich beim Grid Manager anmelden, stellen Sie eine Verbindung zu einem Admin-Node her. Jedes StorageGRID System umfasst einen primären Admin-Node und eine beliebige Anzahl nicht primärer Admin-Nodes. Sie können eine Verbindung zu einem beliebigen Admin-Knoten herstellen, und jeder Admin-Knoten zeigt eine ähnliche Ansicht des StorageGRID-Systems an.
+
+Sie können über ein auf den Grid Manager zugreifen xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+
+
+
+== Grid Manager Dashboard
+
+Wenn Sie sich zum ersten Mal beim Grid Manager anmelden, können Sie über das Dashboard Systemaktivitäten auf einen Blick überwachen.
+
+Das Dashboard bietet zusammenfassende Informationen zum Systemzustand, zur Storage-Verwendung, ILM-Prozesse sowie S3 und Swift Operationen.
+
+image::../media/grid_manager_dashboard.png[Dashboard im Grid Manager]
+
+Um die Informationen in den einzelnen Bedienfelds zu erläutern, klicken Sie auf das Hilfesymbol image:../media/icon_nms_question.png["Fragezeichen-Symbol"] Für dieses Panel.
+
+.Weitere Informationen .
+* xref:../monitor/index.adoc[Monitoring und Fehlerbehebung]
+
+
+
+
+== Suchfeld
+
+Mit dem Feld *Suche* in der Kopfzeile können Sie schnell zu einer bestimmten Seite in Grid Manager navigieren. Sie können beispielsweise *km* eingeben, um auf die KMS-Seite (Key Management Server) zuzugreifen. Sie können *Suche* verwenden, um Einträge in der Seitenleiste des Grid Managers sowie in den Menüs Konfiguration, Wartung und Support zu finden.
+
+
+
+== Menü „Meldungen“
+
+Das Menü „Meldungen“ bietet eine benutzerfreundliche Oberfläche zum Erkennen, Bewerten und Beheben von Problemen, die während des StorageGRID-Betriebs auftreten können.
+
+image::../media/alerts_menu.png[Menü „Meldungen“]
+
+Im Menü „Meldungen“ können Sie Folgendes tun:
+
+* Überprüfen Sie aktuelle Warnmeldungen
+* Überprüfen Sie behobene Warnmeldungen
+* Konfigurieren Sie Stille, um Benachrichtigungen zu unterdrücken
+* Definieren Sie Alarmregeln für Bedingungen, die Warnmeldungen auslösen
+* Konfigurieren Sie den E-Mail-Server für Warnmeldungen
+
+
+.Weitere Informationen .
+* xref:monitoring-and-managing-alerts.adoc[Monitoring und Management von Warnmeldungen]
+* xref:../monitor/index.adoc[Monitoring und Fehlerbehebung]
+
+
+
+
+== Knoten Seite
+
+Auf der Seite Knoten werden Informationen zum gesamten Raster, zu jedem Standort im Raster und zu jedem Node an einem Standort angezeigt.
+
+Auf der Startseite Nodes werden die kombinierten Metriken für das gesamte Raster angezeigt. Um Informationen zu einem bestimmten Standort oder Node anzuzeigen, wählen Sie den Standort oder Node aus.
+
+image::../media/nodes_menu.png[Knoten Hauptseite]
+
+.Weitere Informationen .
+* xref:viewing-nodes-page.adoc[Zeigen Sie die Seite Knoten an]
+* xref:../monitor/index.adoc[Monitoring und Fehlerbehebung]
+
+
+
+
+== Mandanten werden gestartet
+
+Auf der Seite Mandanten können Sie Storage-Mandantenkonten für Ihr StorageGRID System erstellen und überwachen. Sie müssen mindestens ein Mandantenkonto erstellen, um anzugeben, wer Objekte speichern und abrufen kann und welche Funktionen ihnen zur Verfügung stehen.
+
+Die Seite „Mandanten“ stellt zudem Nutzungsdetails für die einzelnen Mandanten bereit, einschließlich der Anzahl der verwendeten Storage-Ressourcen und der Anzahl der Objekte. Wenn Sie beim Erstellen des Mandanten eine Quote festlegen, sehen Sie, wie viel von dieser Quote verwendet wurde.
+
+image::../media/tenants_menu_and_page.png[Mandantenmenü und Seite]
+
+.Weitere Informationen .
+* xref:managing-tenants-and-client-connections.adoc[Management von Mandanten und Client-Verbindungen]
+* xref:../admin/index.adoc[StorageGRID verwalten]
+* xref:../tenant/index.adoc[Verwenden Sie ein Mandantenkonto]
+
+
+
+
+== ILM-Menü
+
+Über das ILM-Menü können Sie Regeln und Richtlinien für das Information Lifecycle Management (ILM) konfigurieren, die die Langlebigkeit und Verfügbarkeit von Daten regeln. Sie können auch eine Objekt-ID eingeben, um die Metadaten für das Objekt anzuzeigen.
+
+image::../media/ilm_menu_and_page.png[ILM-Menü und -Seite]
+
+.Weitere Informationen .
+* xref:using-information-lifecycle-management.adoc[Verwenden Sie das Information Lifecycle Management]
+* xref:../ilm/index.adoc[Objektmanagement mit ILM]
+
+
+
+
+== Konfigurationsmenü
+
+Über das Konfigurationsmenü können Sie Netzwerkeinstellungen, Sicherheitseinstellungen, Systemeinstellungen, Überwachungsoptionen und Optionen für die Zugriffssteuerung festlegen.
+
+image::../media/configuration_menu.png[Konfigurationsmenü]
+
+.Weitere Informationen .
+* xref:configuring-network-settings.adoc[Netzwerkeinstellungen konfigurieren]
+* xref:managing-tenants-and-client-connections.adoc[Management von Mandanten und Client-Verbindungen]
+* xref:reviewing-audit-messages.adoc[Audit-Meldungen prüfen]
+* xref:controlling-storagegrid-access.adoc[Kontrolle über den StorageGRID-Zugriff]
+* xref:../admin/index.adoc[StorageGRID verwalten]
+* xref:../monitor/index.adoc[Monitoring und Fehlerbehebung]
+* xref:../audit/index.adoc[Prüfung von Audit-Protokollen]
+
+
+
+
+== Menü Wartung
+
+Im Menü Wartung können Sie Wartungsarbeiten, Systemwartung und Netzwerkwartung durchführen.
+
+image::../media/maintenance_menu.png[Menü „Wartung“ und „Seite“]
+
+
+
+=== Aufgaben
+
+Zu den Wartungsarbeiten gehören:
+
+* Deaktivierung von Vorgängen zur Entfernung nicht verwendeter Grid Nodes und Standorte
+* Erweiterungsvorgänge ermöglichen das Hinzufügen neuer Grid-Nodes und -Standorte.
+* Recovery-Vorgänge zum Austausch eines ausgefallenen Nodes und zur Wiederherstellung von Daten.
+* Überprüfen der Existenz von Objekten, um die Existenz (obwohl nicht die Richtigkeit) von Objektdaten zu überprüfen.
+
+
+
+
+=== System
+
+Sie können folgende Systemwartungsaufgaben ausführen:
+
+* Überprüfen der Details für die aktuelle StorageGRID-Lizenz oder Hochladen einer neuen Lizenz.
+* Erstellen eines Wiederherstellungspakets.
+* Durchführung von StorageGRID Software-Updates, einschließlich Software-Upgrades, Hotfixes und Updates für die SANtricity OS Software auf ausgewählten Appliances.
+
+
+
+
+=== Netzwerk
+
+Sie können folgende Aufgaben zur Netzwerkwartung ausführen:
+
+* Bearbeiten von Informationen zu DNS-Servern
+* Konfigurieren der Subnetze, die im Grid-Netzwerk verwendet werden.
+* Bearbeiten von Informationen zu NTP-Servern
+
+
+.Weitere Informationen .
+* xref:performing-maintenance-procedures.adoc[Wartung durchführen]
+* xref:downloading-recovery-package.adoc[Laden Sie das Recovery Package herunter]
+* xref:../expand/index.adoc[Erweitern Sie Ihr Raster]
+* xref:../upgrade/index.adoc[Software-Upgrade]
+* xref:../maintain/index.adoc[Recovery und Wartung]
+* xref:../sg6000/index.adoc[SG6000 Storage-Appliances]
+* xref:../sg5700/index.adoc[SG5700 Storage-Appliances]
+* xref:../sg5600/index.adoc[SG5600 Storage Appliances]
+
+
+
+
+== Menü „Support“
+
+Das Menü Support enthält Optionen, die dem technischen Support bei der Analyse und Fehlerbehebung Ihres Systems helfen. Das Menü „Support“ enthält zwei Teile: Werkzeuge und Alarme (alt).
+
+image::../media/support_menu.png[Menü „Support“]
+
+
+
+=== Tools
+
+Im Abschnitt Tools des Menüs Support können Sie folgende Aufgaben ausführen:
+
+* Aktivieren Sie AutoSupport.
+* Führen Sie eine Reihe von diagnostischen Prüfungen zum aktuellen Status des Rasters durch.
+* Greifen Sie auf die Grid-Topologiestruktur zu, um detaillierte Informationen zu Grid-Nodes, -Services und -Attributen anzuzeigen.
+* Abrufen von Protokolldateien und Systemdaten
+* Detaillierte Metriken und Diagramme prüfen
++
+
+IMPORTANT: Die Tools, die über die Option *Metrics* zur Verfügung stehen, sind für den technischen Support bestimmt. Einige Funktionen und Menüelemente in diesen Tools sind absichtlich nicht funktionsfähig.
+
+
+
+
+
+=== Alarme (alt)
+
+Im Bereich „Alarme (alt)“ des Menüs „Support“ können Sie aktuelle, historische und globale Alarme prüfen, benutzerdefinierte Ereignisse einrichten und E-Mail-Benachrichtigungen für ältere Alarme und AutoSupport einrichten.
+
+
+NOTE: Das alte Alarmsystem wird zwar weiterhin unterstützt, bietet jedoch deutliche Vorteile und ist einfacher zu bedienen.
+
+.Weitere Informationen .
+* xref:storagegrid-architecture-and-network-topology.adoc[StorageGRID Architektur und Netzwerktopologie]
+* xref:viewing-nodes-page.adoc[StorageGRID Attribute]
+* xref:using-storagegrid-support-options.adoc[Nutzen Sie StorageGRID Support-Optionen]
+* xref:../admin/index.adoc[StorageGRID verwalten]
+* xref:../monitor/index.adoc[Monitoring und Fehlerbehebung]
+
+
+
+
+== Hilfe-Menü
+
+Die Hilfsoption bietet Zugriff auf das StorageGRID Documentation Center für die aktuelle Version und die API-Dokumentation. Sie bestimmen auch, welche Version von StorageGRID derzeit installiert ist.
+
+image::../media/help_menu.png[Hilfe-Menü]
+
+.Weitere Informationen .
+* xref:../admin/index.adoc[StorageGRID verwalten]
+

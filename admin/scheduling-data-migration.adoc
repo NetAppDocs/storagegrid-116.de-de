@@ -1,0 +1,65 @@
+---
+permalink: admin/scheduling-data-migration.html 
+sidebar: sidebar 
+keywords: data migration schedule, monitor data migration 
+summary: Die Datenmigration muss bei Bedarf geplant und überwacht werden, um sicherzustellen, dass die Daten gemäß der ILM-Richtlinie innerhalb der erforderlichen Frist abgelegt werden. 
+---
+= Planung und Überwachung der Datenmigration
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Datenmigration muss bei Bedarf geplant und überwacht werden, um sicherzustellen, dass die Daten gemäß der ILM-Richtlinie innerhalb der erforderlichen Frist abgelegt werden.
+
+
+
+== Planen Sie die Datenmigration
+
+Vermeiden Sie die Datenmigration während der wichtigsten Geschäftszeiten. Begrenzen Sie die Datenmigration auf Abende, Wochenenden und andere Zeiten, in denen die Systemauslastung knapp ist.
+
+Planen Sie die Datenmigration nach Möglichkeit nicht für Zeiten mit hoher Aktivität ein. Wenn es jedoch nicht sinnvoll ist, den hohen Aktivitätszeitraum vollständig zu vermeiden, ist es sicher, so lange vorzugehen, wie Sie die relevanten Attribute genau überwachen und Maßnahmen ergreifen, wenn sie akzeptable Werte überschreiten.
+
+
+
+== Monitoring der Datenmigration
+
+In dieser Tabelle sind die Attribute aufgeführt, die während der Datenmigration überwacht werden müssen, und die jeweiligen Probleme aufgeführt.
+
+Wenn Sie Traffic-Klassifizierungsrichtlinien mit Geschwindigkeitsbegrenzungen zur Drosselung verwenden, können Sie die beobachtete Rate in Verbindung mit den in der folgenden Tabelle beschriebenen Statistiken überwachen und die Grenzwerte bei Bedarf reduzieren.
+
+[cols="1a,2a"]
+|===
+| Überwachen | Beschreibung 
+
+
+ a| 
+Anzahl an Objekten, die auf die ILM-Bewertung warten
+ a| 
+. Wählen Sie *SUPPORT* > *Tools* > *Grid-Topologie* aus.
+. Wählen Sie *_Deployment_* *Übersicht* *Main*.
+. Überwachen Sie im Abschnitt ILM-Aktivität die Anzahl der für die folgenden Attribute angezeigten Objekte:
++
+** *Ausstehend - alles (XQUZ)*: Die Gesamtzahl der Objekte, die auf die ILM-Bewertung warten.
+** *Ausstehend - Client (XCQZ)*: Die Gesamtzahl der Objekte, die auf eine ILM-Bewertung aus Client-Operationen warten (zum Beispiel Aufnahme).
+
+
+. Wenn die Anzahl der für eines dieser Attribute angezeigten Objekte 100,000 überschreitet, drosseln Sie die Aufnahmegeschwindigkeit von Objekten, um die Last auf dem StorageGRID-System zu verringern.
+
+
+
+
+ a| 
+Storage-Kapazität eines Targeted Archivsystems
+ a| 
+Wenn durch die ILM-Richtlinie eine Kopie der migrierten Daten auf ein zielgerichtetes Storage-System (Band oder Cloud) gespeichert wird, überwachen Sie die Kapazität des Zielspeichersystems, um sicherzustellen, dass genügend Kapazität für die migrierten Daten vorhanden ist.
+
+
+
+ a| 
+*Archiv-Knoten* *ARC* *Store*
+ a| 
+Wenn ein Alarm für das Attribut *Store Failures (ARVF)* ausgelöst wird, hat das zielgerichtete Archivspeichersystem möglicherweise die Kapazität erreicht. Überprüfen Sie das ausgewählte Archivspeichersystem, und beheben Sie alle Probleme, die einen Alarm ausgelöst haben.
+
+|===

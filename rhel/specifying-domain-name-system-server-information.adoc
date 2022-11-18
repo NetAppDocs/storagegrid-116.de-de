@@ -1,0 +1,33 @@
+---
+permalink: rhel/specifying-domain-name-system-server-information.html 
+sidebar: sidebar 
+keywords: how to specify domain name system dns 
+summary: 'Sie müssen Informationen zum Domain Name System \ (DNS\) für Ihr StorageGRID-System angeben, damit Sie auf externe Server zugreifen können, die Hostnamen anstelle von IP-Adressen verwenden.' 
+---
+= Geben Sie Informationen zum DNS-Server an
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen DNS-Informationen (Domain Name System) für Ihr StorageGRID-System angeben, damit Sie auf externe Server zugreifen können, indem Sie Hostnamen anstelle von IP-Adressen verwenden.
+
+Wenn Sie DNS-Serverinformationen angeben, können Sie vollständig qualifizierte Domänennamen (FQDN)-Hostnamen anstelle von IP-Adressen für E-Mail-Benachrichtigungen und AutoSupport verwenden. Es wird empfohlen, mindestens zwei DNS-Server anzugeben.
+
+
+IMPORTANT: Geben Sie zwei bis sechs IPv4-Adressen für DNS-Server an. Wählen Sie DNS-Server aus, auf die jeder Standort lokal zugreifen kann, wenn das Netzwerk landet. Damit soll sichergestellt werden, dass ein islanded-Standort weiterhin Zugriff auf den DNS-Dienst hat. Nach der Konfiguration der DNS-Serverliste für das gesamte Grid können Sie die DNS-Serverliste für jeden Knoten weiter anpassen. Weitere Informationen finden Sie in den Informationen zum Ändern der DNS-Konfiguration in den Wiederherstellungsanleitungen und Wartungsanweisungen.
+
+Wenn die DNS-Serverinformationen nicht angegeben oder falsch konfiguriert sind, wird ein DNST-Alarm für den SSM-Service jedes Grid-Knotens ausgelöst. Der Alarm wird gelöscht, wenn DNS richtig konfiguriert ist und die neuen Serverinformationen alle Grid-Knoten erreicht haben.
+
+.Schritte
+. Geben Sie die IPv4-Adresse für mindestens einen DNS-Server im Textfeld *Server 1* an.
+. Wählen Sie bei Bedarf das Pluszeichen neben dem letzten Eintrag aus, um zusätzliche Servereinträge hinzuzufügen.
++
+image::../media/9_gmi_installer_dns_page.gif[Dieses Bild wird durch den umgebenden Text erläutert.]
+
++
+Als Best Practice empfehlen wir, mindestens zwei DNS-Server anzugeben. Sie können bis zu sechs DNS-Server angeben.
+
+. Wählen Sie *Weiter*.
+

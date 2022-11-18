@@ -1,0 +1,135 @@
+---
+permalink: audit/object-storage-audit-messages.html 
+sidebar: sidebar 
+keywords: storagegrid, audit, object storage, object management, object retrieval, node transfer, verification, APCT, ARCB, ARCE, ARCT, AREM, ASCE, ASCT, ATCE, AVCC, CBSE, CBRE, SCMT, SREM 
+summary: Sie sollten mit Audit-Meldungen vertraut sein, die zur Objektspeicheraudits-Kategorie gehören. Dies sind Ereignisse, die mit der Speicherung und dem Management von Objekten innerhalb des StorageGRID Systems zusammenhängen. Dazu zählen Objekt-Storage und -Abruf, Grid-Node zu Grid-Node-Transfers und Verifizierungen. 
+---
+= Audit-Meldungen zu Objekt-Storage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie sollten mit Audit-Meldungen vertraut sein, die zur Objektspeicheraudits-Kategorie gehören. Dies sind Ereignisse, die mit der Speicherung und dem Management von Objekten innerhalb des StorageGRID Systems zusammenhängen. Dazu zählen Objekt-Storage und -Abruf, Grid-Node zu Grid-Node-Transfers und Verifizierungen.
+
+|===
+| Codieren | Beschreibung | Siehe 
+
+
+ a| 
+APCT
+ a| 
+Archiv aus Cloud-Tier: Archivierte Objektdaten werden aus einem externen Archiv-Storage-System gelöscht, das über die S3-API eine Verbindung zur StorageGRID herstellt.
+ a| 
+xref:apct-archive-purge-from-cloud-tier.adoc[APCT: Löschen von Archiven aus der Cloud-Ebene]
+
+
+
+ a| 
+ARCB
+ a| 
+Archiv Objekt abrufen Begin: Der ARC-Dienst beginnt den Abruf von Objektdaten aus dem externen Archivspeichersystem.
+ a| 
+xref:arcb-archive-object-retrieve-begin.adoc[ARCB: Archiv Objekt abrufen beginnen]
+
+
+
+ a| 
+ARCE
+ a| 
+Archivobjekt Retrieve End: Objektdaten wurden von einem externen Archivspeichersystem abgerufen, und der ARC-Dienst meldet den Status des Abruffvorgangs.
+ a| 
+xref:arce-archive-object-retrieve-end.adoc[ARCE: Archiv Objekt abrufen Ende]
+
+
+
+ a| 
+ARCT
+ a| 
+Archive Retrieve von Cloud-Tier: Archivierte Objektdaten werden von einem externen Archiv-Storage-System abgerufen, das über die S3-API eine Verbindung zur StorageGRID herstellt.
+ a| 
+xref:arct-archive-retrieve-from-cloud-tier.adoc[ARCT: Archiv Abrufen aus Cloud-Tier]
+
+
+
+ a| 
+AREM
+ a| 
+Archiv Objekt entfernen: Ein Inhaltsblock wurde erfolgreich oder erfolglos aus dem externen Archiv-Speichersystem gelöscht.
+ a| 
+xref:arem-archive-object-remove.adoc[ARM: Archivobjekt Entfernen]
+
+
+
+ a| 
+ASCE
+ a| 
+Archiv Objekt Store Ende: Ein Inhaltsblock wurde auf das externe Archivspeichersystem geschrieben und der ARC-Dienst meldet den Status des Schreibvorgangs.
+ a| 
+xref:asce-archive-object-store-end.adoc[ASCE: Archiv-Objektspeicher Ende]
+
+
+
+ a| 
+ASCT
+ a| 
+Archivspeicher Cloud-Tier: Objektdaten werden in einem externen Archiv-Storage-System gespeichert, das über die S3-API eine Verbindung zur StorageGRID herstellt.
+ a| 
+xref:asct-archive-store-cloud-tier.adoc[ASCT: Archivspeicher Cloud-Tier]
+
+
+
+ a| 
+ATCE
+ a| 
+Archive Object Store Begin: Das Schreiben eines Inhaltsblocks in einen externen Archiv-Speicher hat begonnen.
+ a| 
+xref:atce-archive-object-store-begin.adoc[ATCE: Archiv-Objektspeicher beginnen]
+
+
+
+ a| 
+AVCC
+ a| 
+Archiv Validierung der Cloud-Tier-Konfiguration: Die angegebenen Account- und Bucket-Einstellungen wurden erfolgreich oder nicht erfolgreich validiert.
+ a| 
+xref:avcc-archive-validate-cloud-tier-configuration.adoc[AVCC: Archiv Validierung der Cloud-Tier-Konfiguration]
+
+
+
+ a| 
+CBSES
+ a| 
+Objekt Send End: Die Quelleinheit hat einen Grid-Node zum Grid-Node-Datentransfer abgeschlossen.
+ a| 
+xref:cbse-object-send-end.adoc[CBSE: Objekt Senden Ende]
+
+
+
+ a| 
+CBRE
+ a| 
+Empfang des Objekts: Die Zieleinheit hat einen Grid-Node zum Datentransfer des Grid-Node abgeschlossen.
+ a| 
+xref:cbre-object-receive-end.adoc[CBRE: Das Objekt erhält das Ende]
+
+
+
+ a| 
+SCMT
+ a| 
+Object Store Commit: Ein Inhaltsblock wurde vollständig gespeichert und verifiziert und kann nun angefordert werden.
+ a| 
+xref:scmt-object-store-commit.adoc[SCMT: Objekt Store Commit]
+
+
+
+ a| 
+SREM
+ a| 
+Objektspeicher Remove: Ein Inhaltsblock wurde von einem Grid-Knoten gelöscht und kann nicht mehr direkt angefordert werden.
+ a| 
+xref:srem-object-store-remove.adoc[SREM: Objektspeicher Entfernen]
+
+|===

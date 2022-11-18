@@ -1,0 +1,114 @@
+---
+permalink: fabricpool/information-needed-to-attach-storagegrid-as-cloud-tier.html 
+sidebar: sidebar 
+keywords: StorageGRID, fabricPool, ONTAP System Manager, ONTAP CLI, port, FQDN, object store name 
+summary: Bevor Sie StorageGRID als Cloud Tier für FabricPool hinzufügen können, müssen Sie einige Konfigurationsschritte in StorageGRID ausführen, um bestimmte Werte zu erhalten. 
+---
+= Erforderliche Informationen zum Hinzufügen von StorageGRID als Cloud-Tier
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie StorageGRID als Cloud Tier für FabricPool hinzufügen können, müssen Sie einige Konfigurationsschritte in StorageGRID ausführen, um bestimmte Werte zu erhalten.
+
+In der folgenden Tabelle werden die Informationen aufgeführt, die Sie ONTAP bereitstellen müssen, wenn Sie StorageGRID als Cloud-Tier für FabricPool anhängen. In den Themen in diesem Abschnitt wird erläutert, wie Sie den StorageGRID Grid Manager und den Tenant Manager verwenden, um die Informationen zu erhalten, die Sie benötigen.
+
+
+NOTE: Die genauen Feldnamen und der Prozess, den Sie zur Eingabe der erforderlichen Werte in ONTAP verwenden, hängen davon ab, ob Sie die ONTAP CLI (Storage Aggregate object-Store config create) oder ONTAP System Manager (*Storage* *Aggregate Disks* *Cloud Tier*) verwenden.
+
+Weitere Informationen finden Sie im Folgenden:
+
+* https://www.netapp.com/pdf.html?item=/media/17239-tr4598pdf.pdf["TR-4598: FabricPool Best Practices in ONTAP 9.9.1"^]
+* https://docs.netapp.com/us-en/ontap/index.html["ONTAP 9-Dokumentation"^]
+
+
+[cols="1a,2a"]
+|===
+| ONTAP Field | Beschreibung 
+
+
+ a| 
+Objektspeichername
+ a| 
+Jeder eindeutige und beschreibende Name. Beispiel: `StorageGRID_Cloud_Tier`.
+
+
+
+ a| 
+Anbietertyp
+ a| 
+StorageGRID (ONTAP System Manager) oder `SGWS` (ONTAP CLI).
+
+
+
+ a| 
+Port
+ a| 
+Der Port, den FabricPool verwenden wird, wenn er eine Verbindung zu StorageGRID herstellt. Sie legen fest, welche Portnummer beim Definieren des StorageGRID Load Balancer-Endpunkts verwendet werden soll.
+
+xref:creating-load-balancer-endpoint-for-fabricpool.adoc[Erstellen eines Load Balancer-Endpunkts für FabricPool]
+
+
+
+ a| 
+Servername
+ a| 
+Der vollständig qualifizierte Domänenname (FQDN) für den StorageGRID Load Balancer-Endpunkt. Beispiel: `s3.storagegrid.company.com`.
+
+Beachten Sie Folgendes:
+
+* Der hier angegebene Domänenname muss mit dem Domänennamen auf dem CA-Zertifikat übereinstimmen, das Sie für den StorageGRID Load Balancer-Endpunkt hochladen.
+* Der DNS-Datensatz für diesen Domain-Namen muss jeder IP-Adresse zugeordnet werden, die Sie zum Herstellen einer Verbindung zu StorageGRID verwenden werden.
+
+
+xref:configuring-dns-for-storagegrid-ip-addresses.adoc[Konfigurieren Sie den DNS-Server für StorageGRID-IP-Adressen]
+
+
+
+ a| 
+Containername
+ a| 
+Der Name des StorageGRID-Buckets, den Sie mit diesem ONTAP-Cluster verwenden werden. Beispiel: `fabricpool-bucket`. Sie können diesen Bucket im Mandanten-Manager erstellen oder, beginnend mit ONTAP 9.10 System Manager, Sie können den Bucket mit dem FabricPool-Setup-Assistenten erstellen.
+
+Beachten Sie Folgendes:
+
+* Der Bucket-Name kann nach dem Erstellen der Konfiguration nicht mehr geändert werden.
+* Für den Bucket ist die Versionierung nicht aktiviert.
+* Sie müssen einen anderen Bucket für jedes ONTAP Cluster verwenden, für das Daten in StorageGRID verschoben werden sollen.
+
+
+xref:creating-s3-bucket-and-access-key.adoc[Erstellen eines S3-Buckets und Abrufen eines Zugriffsschlüssels]
+
+
+
+ a| 
+Zugriffsschlüssel und geheimes Passwort
+ a| 
+Der Zugriffsschlüssel und der geheime Zugriffsschlüssel für das StorageGRID-Mandantenkonto.
+
+Diese Werte generieren Sie im Tenant Manager.
+
+xref:creating-s3-bucket-and-access-key.adoc[Erstellen eines S3-Buckets und Abrufen eines Zugriffsschlüssels]
+
+
+
+ a| 
+SSL
+ a| 
+Muss aktiviert sein.
+
+
+
+ a| 
+Objektspeicherzertifikat
+ a| 
+Das CA-Zertifikat, das Sie beim Erstellen des StorageGRID Load Balancer-Endpunkts hochgeladen haben.
+
+*Hinweis:* Wenn eine Zwischenzertifizierungsstelle das StorageGRID-Zertifikat ausgestellt hat, müssen Sie das Zwischenzertifikat vorlegen. Wenn das StorageGRID-Zertifikat direkt von der Root-CA ausgestellt wurde, müssen Sie das Root-CA-Zertifikat bereitstellen.
+
+xref:creating-load-balancer-endpoint-for-fabricpool.adoc[Erstellen eines Load Balancer-Endpunkts für FabricPool]
+
+|===
+Nachdem Sie die erforderlichen StorageGRID Informationen erhalten haben, können Sie unter ONTAP StorageGRID als Cloud-Tier hinzufügen, die Cloud-Ebene als Aggregat hinzufügen und die Tiering-Richtlinien für Volumes festlegen.

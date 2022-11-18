@@ -1,0 +1,185 @@
+---
+permalink: sg5600/configuring-network-links-sg5600.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, links, network links, configure, setup, set up, grid network connections, grid network connection, link speed, bond mode 
+summary: Sie können Netzwerkverbindungen für die Ports konfigurieren, die zum Verbinden der Appliance mit dem Grid-Netzwerk, dem Client-Netzwerk und dem Admin-Netzwerk verwendet werden. Sie können die Verbindungsgeschwindigkeit sowie den Port- und Netzwerk-Bond-Modus einstellen. 
+---
+= Konfigurieren von Netzwerkverbindungen (SG5600)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Netzwerkverbindungen für die Ports konfigurieren, die zum Verbinden der Appliance mit dem Grid-Netzwerk, dem Client-Netzwerk und dem Admin-Netzwerk verwendet werden. Sie können die Verbindungsgeschwindigkeit sowie den Port- und Netzwerk-Bond-Modus einstellen.
+
+Wenn Sie den aggregierten Port Bond-Modus, den LACP Network Bond-Modus oder VLAN-Tagging verwenden möchten:
+
+* Sie haben die 10-GbE-Ports an der Appliance an Switches angeschlossen, die VLAN und LACP unterstützen.
+* Wenn mehrere Switches an der LACP-Verbindung beteiligt sind, unterstützen die Switches MLAG (Multi-Chassis Link Aggregation Groups) oder eine vergleichbare Position.
+* Sie wissen, wie Sie die Switches für die Verwendung von VLAN, LACP und MLAG oder Ähnliches konfigurieren.
+* Sie kennen das eindeutige VLAN-Tag, das für jedes Netzwerk verwendet werden soll. Dieses VLAN-Tag wird zu jedem Netzwerkpaket hinzugefügt, um sicherzustellen, dass der Netzwerkverkehr an das richtige Netzwerk weitergeleitet wird.
+
+
+Diese Abbildung zeigt, wie die vier 10-GbE-Ports im Bond-Modus mit festen Ports verbunden sind (Standardkonfiguration).
+
+image::../media/e5600sg_fixed_port.gif[Das Bild zeigt, wie die 10-GbE-Ports auf dem E5600SG-Controller im festen Modus verbunden sind]
+
+|===
+| Legende | Welche Ports sind verbunden 
+
+
+ a| 
+C
+ a| 
+Die Ports 1 und 3 sind für das Client-Netzwerk verbunden, falls dieses Netzwerk verwendet wird.
+
+
+
+ a| 
+G
+ a| 
+Die Ports 2 und 4 sind für das Grid-Netzwerk verbunden.
+
+|===
+Diese Abbildung zeigt, wie die vier 10-GbE-Ports im Bond-Modus für aggregierte Ports verbunden sind.
+
+image::../media/e5600sg_aggregate_port.gif[Das Bild zeigt, wie die 10-GbE-Ports auf dem E5600SG Controller im Aggregatmodus verbunden sind]
+
+|===
+| Legende | Welche Ports sind verbunden 
+
+
+ a| 
+1
+ a| 
+Alle vier Ports werden in einer einzelnen LACP Bond gruppiert, sodass alle Ports für den Grid-Netzwerk- und Client-Netzwerk-Traffic verwendet werden können.
+
+|===
+In der Tabelle sind die Optionen für die Konfiguration der vier 10-GbE-Ports zusammengefasst. Sie müssen nur die Einstellungen auf der Seite Link Configuration konfigurieren, wenn Sie eine nicht-Standardeinstellung verwenden möchten.
+
+* *Festes (Standard) Port Bond-Modus*
++
+|===
+| Netzwerk-Bond-Modus | Client-Netzwerk deaktiviert (Standard) | Client-Netzwerk aktiviert 
+
+
+ a| 
+Aktiv/Backup (Standard)
+ a| 
+** Die Ports 2 und 4 verwenden eine aktiv-Backup-Verbindung für das Grid Network.
+** Die Ports 1 und 3 werden nicht verwendet.
+** Ein VLAN-Tag ist optional.
+
+ a| 
+** Die Ports 2 und 4 verwenden eine aktiv-Backup-Verbindung für das Grid Network.
+** Die Ports 1 und 3 verwenden eine aktiv-Backup-Verbindung für das Client-Netzwerk.
+** VLAN-Tags können für beide Netzwerke angegeben werden.
+
+
+
+
+ a| 
+LACP (802.3ad)
+ a| 
+** Die Ports 2 und 4 verwenden eine LACP-Verbindung für das Grid-Netzwerk.
+** Die Ports 1 und 3 werden nicht verwendet.
+** Ein VLAN-Tag ist optional.
+
+ a| 
+** Die Ports 2 und 4 verwenden eine LACP-Verbindung für das Grid-Netzwerk.
+** Die Ports 1 und 3 verwenden eine LACP Bond für das Client-Netzwerk.
+** VLAN-Tags können für beide Netzwerke angegeben werden.
+
+
+|===
+* * Aggregat-Port-Bond-Modus*
++
+|===
+| Netzwerk-Bond-Modus | Client-Netzwerk deaktiviert (Standard) | Client-Netzwerk aktiviert 
+
+
+ a| 
+Nur LACP (802.3ad
+ a| 
+** Die Ports 1-4 verwenden einen einzelnen LACP Bond für das Grid Network.
+** Ein einzelnes VLAN-Tag identifiziert Grid-Netzwerkpakete.
+
+ a| 
+** Die Ports 1-4 verwenden eine einzelne LACP-Verbindung für das Grid-Netzwerk und das Client-Netzwerk.
+** Zwei VLAN-Tags ermöglichen die Trennung von Grid-Netzwerkpaketen von Client-Netzwerkpaketen.
+
+
+|===
+
+
+Weitere Informationen zu Port Bond- und Netzwerk-Bond-Modi finden Sie unter „`10-GbE-Port-Verbindungen für den E5600SG Controller`“.
+
+Diese Abbildung zeigt, wie die zwei 1-GbE-Management-Ports des E5600SG-Controllers im Active-Backup-Netzwerk-Bond-Modus des Admin-Netzwerks verbunden sind.
+
+image::../media/e5600sg_aggregate_ports_bonded.gif[Management-Ports Festgelegt]
+
+.Schritte
+. Klicken Sie in der Menüleiste des StorageGRID-Appliance-Installationsprogramms auf *Netzwerke konfigurieren* *Link-Konfiguration*.
++
+Auf der Seite Network Link Configuration wird ein Diagramm der Appliance angezeigt, in dem die Netzwerk- und Verwaltungsports nummeriert sind.
+
++
+image::../media/sg5612_configuring_network_ports.png[SG5612 Netzwerk- und Management-Ports]
+
++
+In der Tabelle „Link-Status“ werden der Verbindungsstatus (nach oben/unten) und die Geschwindigkeit (1/10/25/40/100 Gbit/s) der nummerierten Ports aufgeführt.
+
++
+image::../media/sg5612_configuring_network_linkstatus.png[5612 Verbindungsstatus]
+
++
+Das erste Mal, wenn Sie diese Seite aufrufen:
+
++
+** *Link Speed* ist auf *10GbE* eingestellt. Dies ist die einzige Verbindungsgeschwindigkeit, die für den E5600SG Controller verfügbar ist.
+** *Port Bond Modus* ist auf *fest* eingestellt.
+** *Network Bond-Modus* für das Grid-Netzwerk ist auf *Active-Backup* eingestellt.
+** Das *Admin-Netzwerk* ist aktiviert, und der Netzwerk-Bond-Modus ist auf *unabhängig* eingestellt.
+** Das *Client-Netzwerk* ist deaktiviert.
++
+image::../media/network_link_configuration_fixed.png[Netzwerk-Link-Konfiguration Wurde Behoben]
+
+
+
+. Aktivieren oder deaktivieren Sie die StorageGRID-Netzwerke, die Sie verwenden möchten.
++
+Das Grid-Netzwerk ist erforderlich. Sie können dieses Netzwerk nicht deaktivieren.
+
++
+.. Wenn das Gerät nicht mit dem Admin-Netzwerk verbunden ist, deaktivieren Sie das Kontrollkästchen *Netzwerk aktivieren* für das Admin-Netzwerk.
++
+image::../media/admin_network_disabled.gif[Screenshot mit Kontrollkästchen zum Aktivieren oder Deaktivieren des Admin-Netzwerks]
+
+.. Wenn das Gerät mit dem Client-Netzwerk verbunden ist, aktivieren Sie das Kontrollkästchen *Netzwerk aktivieren* für das Client-Netzwerk.
++
+Die Client-Netzwerk-Einstellungen für die 10-GbE-Ports werden nun angezeigt.
+
+
+
+. In der Tabelle finden Sie Informationen zum Konfigurieren des Port-Bond-Modus und des Netzwerk-Bond-Modus.
++
+Das Beispiel zeigt:
+
++
+** *Aggregate* und *LACP* ausgewählt für das Grid und die Client Netzwerke. Sie müssen für jedes Netzwerk ein eindeutiges VLAN-Tag angeben. Sie können Werte zwischen 0 und 4095 auswählen.
+** *Active-Backup* für das Admin-Netzwerk ausgewählt.
++
+image::../media/network_link_configuration_aggregate.gif[Screenshot mit den Link-Konfigurationseinstellungen für den Aggregatmodus]
+
+
+
+. Wenn Sie mit Ihrer Auswahl zufrieden sind, klicken Sie auf *Speichern*.
++
+
+NOTE: Wenn Sie Änderungen am Netzwerk oder an der Verbindung vorgenommen haben, über die Sie verbunden sind, können Sie die Verbindung verlieren. Wenn Sie nicht innerhalb einer Minute eine erneute Verbindung hergestellt haben, geben Sie die URL für das Installationsprogramm von StorageGRID-Geräten erneut ein. Verwenden Sie dazu eine der anderen IP-Adressen, die der Appliance zugewiesen sind: +
+`*https://_E5600SG_Controller_IP_:8443*`
+
+
+
+xref:port-bond-modes-for-e5600sg-controller-ports.adoc[Port Bond-Modi für die E5600SG Controller-Ports]

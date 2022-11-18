@@ -1,0 +1,54 @@
+---
+permalink: sg100-1000/shut-down-sg1000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg1000, SG100, power off, turn off, shut off, shutdown, shut down, 
+summary: Fahren Sie die Service-Appliance herunter, um Hardware-Wartungsarbeiten durchzuführen. 
+---
+= Fahren Sie die Service Appliance herunter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Fahren Sie die Service-Appliance herunter, um Hardware-Wartungsarbeiten durchzuführen.
+
+.Was Sie und#8217;ll benötigen
+* Das ist schon xref:locating-controller-in-data-center.adoc[Die Service Appliance befindet sich physisch].
+* Das Gerät war xref:placing-appliance-into-maintenance-mode.adoc[Wird in den Wartungsmodus versetzt].
+
+
+Um Serviceunterbrechungen zu vermeiden, sollten Sie die Services-Appliance während eines geplanten Wartungsfensters herunterfahren, wenn mit den üblichen Serviceunterbrechungen gerechnet wird.
+
+.Schritte
+. Wenn das Gerät in den Wartungsmodus versetzt wurde, fahren Sie das Gerät herunter:
++
+
+CAUTION: Sie müssen das Herunterfahren des Controllers steuern, indem Sie die unten angegebenen Befehle eingeben. Wenn Sie das Gerät mit dem Netzschalter herunterfahren, führt dies zu Datenverlust.
+
++
+.. Melden Sie sich mit PuTTY oder einem anderen SSH-Client am Grid-Knoten an:
++
+... Geben Sie den folgenden Befehl ein: `ssh admin@_grid_node_IP_`
+... Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+... Geben Sie den folgenden Befehl ein, um zum Root zu wechseln: `su -`
+... Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
++
+Wenn Sie als root angemeldet sind, ändert sich die Eingabeaufforderung von `$` Bis `#`.
+
+
+
+.. Schalten Sie das Service-Gerät aus: +
+`*shutdown -h now*`
++
+Dieser Befehl kann bis zu 10 Minuten in Anspruch nehmen.
+
+
+
+. Überprüfen Sie anhand einer der folgenden Methoden, ob das Gerät ausgeschaltet ist:
++
+** Sehen Sie sich die LED-Betriebsanzeige an der Vorderseite des Geräts an, und vergewissern Sie sich, dass sie ausgeschaltet ist.
+** Überprüfen Sie auf der Seite Power Control der BMC-Schnittstelle, ob das Gerät ausgeschaltet ist.
+
+
+

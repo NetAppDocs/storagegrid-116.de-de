@@ -1,0 +1,21 @@
+---
+permalink: admin/configuring-audit-client-access.html 
+sidebar: sidebar 
+keywords: audit client, ams, audit management service 
+summary: 'Der Admin-Knoten protokolliert über den Dienst Audit Management System \(AMS\) alle überprüften Systemereignisse in eine Protokolldatei, die über die Revisionsfreigabe verfügbar ist, die jedem Admin-Knoten bei der Installation hinzugefügt wird. Um einfachen Zugriff auf Audit-Protokolle zu ermöglichen, lässt sich der Client-Zugriff auf Audit-Freigaben für CIFS und NFS konfigurieren.' 
+---
+= Konfigurieren des Zugriffs auf Audit-Clients
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Admin-Knoten protokolliert über den Service Audit Management System (AMS) alle überprüften Systemereignisse in eine Protokolldatei, die über die Revisionsfreigabe verfügbar ist und die zu jedem Admin-Knoten bei der Installation hinzugefügt wird. Um einfachen Zugriff auf Audit-Protokolle zu ermöglichen, lässt sich der Client-Zugriff auf Audit-Freigaben für CIFS und NFS konfigurieren.
+
+Das StorageGRID System verwendet eine positive Bestätigung, um den Verlust von Audit-Meldungen zu verhindern, bevor sie in die Protokolldatei geschrieben werden. Eine Meldung bleibt an einem Dienst in der Warteschlange, bis der AMS-Dienst oder ein Zwischenaudit-Relaisdienst die Kontrolle über ihn bestätigt hat.
+
+Weitere Informationen finden Sie unter xref:../audit/index.adoc[Prüfung von Audit-Protokollen].
+
+
+NOTE: Der Audit-Export über CIFS/Samba wurde veraltet und wird in einer zukünftigen StorageGRID-Version entfernt. Wenn Sie CIFS oder NFS verwenden möchten, wählen Sie NFS.

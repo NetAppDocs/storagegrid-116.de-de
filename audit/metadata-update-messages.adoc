@@ -1,0 +1,35 @@
+---
+permalink: audit/metadata-update-messages.html 
+sidebar: sidebar 
+keywords: storagegrid, audit, message, Metadata update, S3 metadata update, SUPD 
+summary: Audit-Meldungen werden generiert, wenn ein S3-Client die Metadaten eines Objekts aktualisiert. 
+---
+= Nachrichten zum Metadatenupdate
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Audit-Meldungen werden generiert, wenn ein S3-Client die Metadaten eines Objekts aktualisiert.
+
+
+
+== Audit-Meldungen zu S3-Metadaten
+
+|===
+| Codieren | Name | Beschreibung | Verfolgen | Siehe 
+
+
+ a| 
+SUPD
+ a| 
+S3-Metadaten wurden aktualisiert
+ a| 
+Wird generiert, wenn ein S3-Client die Metadaten für ein aufgenommenes Objekt aktualisiert.
+ a| 
+CBID, S3KY, HTRH
+ a| 
+xref:supd-s3-metadata-updated.adoc[SUPD: S3-Metadaten wurden aktualisiert]
+
+|===

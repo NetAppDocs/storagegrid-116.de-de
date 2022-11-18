@@ -1,0 +1,86 @@
+---
+permalink: sg6000/accessing-storagegrid-appliance-installer-sg6000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, appliance installer, installer, access, accessing, start, starting 
+summary: 'Sie müssen auf das Installationsprogramm der StorageGRID-Appliance zugreifen, um die Installationsversion zu überprüfen und die Verbindungen zwischen der Appliance und den drei StorageGRID-Netzwerken zu konfigurieren: Das Grid-Netzwerk, das Admin-Netzwerk \ (optional\) und das Client-Netzwerk \ (optional\).' 
+---
+= Rufen Sie das Installationsprogramm für StorageGRID-Appliances auf
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen auf das Installationsprogramm der StorageGRID Appliance zugreifen, um die Installationsversion zu überprüfen und die Verbindungen zwischen der Appliance und den drei StorageGRID-Netzwerken zu konfigurieren: Das Grid-Netzwerk, das Admin-Netzwerk (optional) und das Client-Netzwerk (optional).
+
+.Was Sie und#8217;ll benötigen
+* Sie verwenden einen beliebigen Management-Client, der eine Verbindung zum StorageGRID-Admin-Netzwerk herstellen kann, oder Sie haben einen Service-Laptop.
+* Der Client- oder Service-Laptop verfügt über einen unterstützten Webbrowser.
+* Der SG6000-CN-Controller ist mit allen StorageGRID-Netzwerken verbunden, die Sie verwenden möchten.
+* Sie kennen die IP-Adresse, das Gateway und das Subnetz für den SG6000-CN-Controller in diesen Netzwerken.
+* Sie haben die geplanten Netzwerk-Switches konfiguriert.
+
+
+Um zunächst auf das Installationsprogramm der StorageGRID-Appliance zuzugreifen, können Sie die über DHCP zugewiesene IP-Adresse für den Admin-Netzwerkport auf dem SG6000-CN-Controller verwenden (vorausgesetzt, der Controller ist mit dem Admin-Netzwerk verbunden). Alternativ können Sie einen Service-Laptop direkt mit dem SG6000-CN-Controller verbinden.
+
+.Schritte
+. Wenn möglich, verwenden Sie die DHCP-Adresse für den Netzwerkanschluss des Administrators am SG6000-CN-Controller, um auf das Installationsprogramm der StorageGRID-Appliance zuzugreifen.
++
+image::../media/sg6000_cn_admin_network_port.gif[Admin-Netzwerk-Port am SG6000-CN Controller]
+
++
+.. Suchen Sie das MAC-Adressenetikett auf der Vorderseite des SG6000-CN-Controllers und legen Sie die MAC-Adresse für den Admin-Netzwerkanschluss fest.
++
+Auf dem MAC-Adressenetikett wird die MAC-Adresse für den BMC-Verwaltungsport aufgelistet.
+
++
+Um die MAC-Adresse für den Admin-Netzwerkanschluss zu ermitteln, müssen Sie der Hexadezimalzahl auf dem Etikett *2* hinzufügen. Wenn die MAC-Adresse auf dem Etikett beispielsweise mit *09* endet, endet die MAC-Adresse für den Admin-Port in *0B*. Wenn die MAC-Adresse auf dem Etikett mit *(_y_)FF* endet, endet die MAC-Adresse für den Admin-Port in *(_y_+1)01*. Sie können diese Berechnung einfach durchführen, indem Sie den Rechner unter Windows öffnen, ihn auf den Programmiermodus setzen, Hex auswählen, die MAC-Adresse eingeben und dann *+ 2 =* eingeben.
+
+.. Geben Sie die MAC-Adresse an Ihren Netzwerkadministrator an, damit er die DHCP-Adresse für die Appliance im Admin-Netzwerk nachsuchen kann.
+.. Geben Sie auf dem Client diese URL für den StorageGRID-Appliance-Installer ein: +
+`*https://_Appliance_Controller_IP_:8443*`
++
+Für `_SG6000-CN_Controller_IP_`, Verwenden Sie die DHCP-Adresse.
+
+.. Wenn Sie aufgefordert werden, eine Sicherheitswarnung zu erhalten, zeigen Sie das Zertifikat mithilfe des Browser-Installationsassistenten an und installieren Sie es.
++
+Die Meldung wird beim nächsten Zugriff auf diese URL nicht angezeigt.
+
++
+Die Startseite des StorageGRID-Appliance-Installationsprogramms wird angezeigt. Die Informationen und Meldungen, die beim ersten Zugriff auf diese Seite angezeigt werden, hängen davon ab, wie Ihr Gerät derzeit mit StorageGRID-Netzwerken verbunden ist. Möglicherweise werden Fehlermeldungen angezeigt, die in späteren Schritten gelöst werden.
+
++
+image::../media/appliance_installer_home_5700_5600.png[Screenshot des oberen Teils der Startseite des StorageGRID Webscale Appliance Installer]
+
+
+
+. Wenn Sie keine IP-Adresse über DHCP erhalten können, können Sie eine Link-lokale Verbindung verwenden.
++
+.. Schließen Sie einen Service-Laptop mithilfe eines Ethernet-Kabels direkt an den rechtesten RJ-45-Anschluss des SG6000-CN Controllers an.
++
+image::../media/sg6000_cn_link_local_port.gif[Standort des Management-Ports für SG6000-CN]
+
+.. Öffnen Sie einen Webbrowser auf dem Service-Laptop.
+.. Geben Sie diese URL für das StorageGRID-Appliance-Installationsprogramm ein: +
+`*\https://169.254.0.1:8443*`
++
+Die Startseite des StorageGRID-Appliance-Installationsprogramms wird angezeigt. Die Informationen und Meldungen, die beim ersten Zugriff auf diese Seite angezeigt werden, hängen davon ab, wie das Gerät aktuell verbunden ist.
+
++
+
+NOTE: Wenn Sie über eine lokale Verbindung nicht auf die Startseite zugreifen können, konfigurieren Sie die Service-Laptop-IP-Adresse als `169.254.0.2`, Und versuchen Sie es erneut.
+
+
+
+
+
+Nach dem Zugriff auf das Installationsprogramm der StorageGRID-Appliance:
+
+* Überprüfen Sie, ob die Installationsversion der StorageGRID Appliance auf der Appliance mit der auf dem StorageGRID-System installierten Softwareversion übereinstimmt. Aktualisieren Sie gegebenenfalls das Installationsprogramm für StorageGRID-Appliances.
++
+xref:verifying-and-upgrading-storagegrid-appliance-installer-version.adoc[Überprüfen und Aktualisieren der Installationsversion der StorageGRID Appliance]
+
+* Überprüfen Sie alle Meldungen, die auf der Startseite des StorageGRID-Appliance-Installationsprogramms angezeigt werden, und konfigurieren Sie die Linkkonfiguration und die IP-Konfiguration nach Bedarf.
+
+
+xref:../admin/web-browser-requirements.adoc[Anforderungen an einen Webbrowser]

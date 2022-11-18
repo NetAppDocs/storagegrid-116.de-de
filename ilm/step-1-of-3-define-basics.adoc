@@ -1,0 +1,61 @@
+---
+permalink: ilm/step-1-of-3-define-basics.html 
+sidebar: sidebar 
+keywords: ILM rule step 1, define basics 
+summary: 'Schritt 1 \(Grundlagen definieren\) des Assistenten „ILM-Regel erstellen“ ermöglicht es Ihnen, die grundlegenden und erweiterten Filter der Regel festzulegen.' 
+---
+= Schritt 1 von 3: Grundlagen definieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Schritt 1 (Grundlagen definieren) des Assistenten „ILM-Regel erstellen“ ermöglicht es Ihnen, die grundlegenden und erweiterten Filter der Regel zu definieren.
+
+Bei der Bewertung eines Objekts mit einer ILM-Regel vergleicht StorageGRID die Objekt-Metadaten mit den Filtern der Regel. Wenn die Objektmetadaten mit allen Filtern übereinstimmen, verwendet StorageGRID die Regel, um das Objekt abzulegen. Sie können eine Regel für alle Objekte entwerfen oder grundlegende Filter angeben, z. B. ein oder mehrere Mandantenkonten und Bucket-Namen oder erweiterte Filter, wie z. B. Größe des Objekts oder Benutzermetadaten.
+
+image::../media/ilm_create_ilm_rule_wizard_1.png[Erstellen Sie die ILM-Regel Schritt 1 von 3]
+
+.Schritte
+. Geben Sie im Feld *Name* einen eindeutigen Namen für die Regel ein.
++
+Sie müssen 1 bis 64 Zeichen eingeben.
+
+. Geben Sie optional im Feld *Beschreibung* eine kurze Beschreibung für die Regel ein.
++
+Sie sollten den Zweck oder die Funktion der Regel beschreiben, damit Sie die Regel später erkennen können.
+
++
+image::../media/ilm_rule_wizard_name_description.gif[Regelname und Beschreibung]
+
+. Wählen Sie optional ein oder mehrere S3- oder Swift-Mandantenkonten aus, für die diese Regel gilt. Wenn diese Regel für alle Mandanten gilt, lassen Sie dieses Feld leer.
++
+Wenn Sie nicht über die Berechtigung Stammzugriff oder Mandantenkonten verfügen, können Sie keine Mandanten aus der Liste auswählen. Geben Sie stattdessen die Mandanten-ID ein, oder geben Sie mehrere IDs als durch Komma getrennte Zeichenfolge ein.
+
+. Geben Sie optional die S3-Buckets oder Swift-Container an, für die diese Regel gilt.
++
+Wenn *entspricht allen* ausgewählt ist (Standard), gilt die Regel für alle S3-Buckets oder Swift-Container.
+
+. Wählen Sie optional *Erweiterte Filterung*, um zusätzliche Filter festzulegen.
++
+Wenn Sie keine erweiterte Filterung konfigurieren, gilt die Regel für alle Objekte, die den grundlegenden Filtern entsprechen.
+
++
+Wenn diese Regel mit dem Löschen kodierte Kopien erstellt, fügen Sie den erweiterten Filter *Objektgröße (MB)* hinzu und setzen Sie ihn auf *größer als 1*. Der Größenfilter stellt sicher, dass Objekte, die 1 MB oder kleiner sind, nicht gelöscht werden.
+
++
+
+IMPORTANT: Das Verfahren zur Einhaltung von Datenkonsistenz eignet sich am besten für Objekte mit einer Größe von mehr als 1 MB. Verwenden Sie kein Erasure Coding für Objekte mit einer Größe von mehr als 200 KB, um den Overhead zu vermeiden, der bei dem Management sehr kleiner, mit Erasure Coding codierter Fragmente verbunden ist.
+
+. Wählen Sie *Weiter*.
++
+Schritt 2 (Platzierungen definieren) wird angezeigt.
+
+
+
+.Verwandte Informationen
+* xref:what-ilm-rule-is.adoc[Was ist eine ILM-Regel]
+* xref:using-advanced-filters-in-ilm-rules.adoc[Verwenden Sie erweiterte Filter in ILM-Regeln]
+* xref:step-2-of-3-define-placements.adoc[Schritt 2 von 3: Definieren von Platzierungen]
+

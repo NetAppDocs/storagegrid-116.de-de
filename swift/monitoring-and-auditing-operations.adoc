@@ -1,0 +1,140 @@
+---
+permalink: swift/monitoring-and-auditing-operations.html 
+sidebar: sidebar 
+keywords: monitor operations, audit operations 
+summary: Kunden können Workloads und die Effizienz für Client-Vorgänge überwachen, indem sie Transaktionstrends für das gesamte Grid oder bestimmte Nodes anzeigen. Sie können Audit-Meldungen zur Überwachung von Client-Vorgängen und -Transaktionen verwenden. 
+---
+= Monitoring und Prüfung von Vorgängen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Kunden können Workloads und die Effizienz für Client-Vorgänge überwachen, indem sie Transaktionstrends für das gesamte Grid oder bestimmte Nodes anzeigen. Sie können Audit-Meldungen zur Überwachung von Client-Vorgängen und -Transaktionen verwenden.
+
+
+
+== Überwachen von Objekteinspeisung und -Abruf
+
+Die Überwachung von Objekteraufnahmeraten und -Abruffraten sowie von Metriken für Objektanzahl, -Abfragen und -Verifizierung Sie können die Anzahl der erfolgreichen und fehlgeschlagenen Versuche von Client-Applikationen anzeigen, Objekte in StorageGRID zu lesen, zu schreiben und zu ändern.
+
+.Schritte
+. Melden Sie sich mit einem bei Grid Manager an xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+. Suchen Sie im Dashboard den Abschnitt Protokollvorgänge.
++
+In diesem Abschnitt wird die Anzahl der Client-Vorgänge zusammengefasst, die vom StorageGRID System durchgeführt werden. Die Protokollraten werden über die letzten zwei Minuten Durchschnitt.
+
+. Wählen Sie *KNOTEN*.
+. Klicken Sie auf der Startseite Knoten (Bereitstellungsebene) auf die Registerkarte *Load Balancer*.
++
+Die Diagramme zeigen Trends für den gesamten Client-Datenverkehr an Load Balancer-Endpunkte im Raster. Sie können ein Zeitintervall in Stunden, Tagen, Wochen, Monaten oder Jahren auswählen. Oder Sie können ein benutzerdefiniertes Intervall anwenden.
+
+. Klicken Sie auf der Startseite Knoten (Bereitstellungsebene) auf die Registerkarte *Objekte*.
++
+Das Diagramm zeigt die Aufnahme- und Abrufraten Ihres gesamten StorageGRID Systems in Byte pro Sekunde sowie insgesamt Bytes. Sie können ein Zeitintervall in Stunden, Tagen, Wochen, Monaten oder Jahren auswählen. Oder Sie können ein benutzerdefiniertes Intervall anwenden.
+
+. Um Informationen zu einem bestimmten Speicherknoten anzuzeigen, wählen Sie den Knoten aus der Liste auf der linken Seite aus, und klicken Sie auf die Registerkarte *Objekte*.
++
+Das Diagramm zeigt die Aufnahme- und Abrufraten des Objekts für diesen Speicherknoten. Die Registerkarte enthält außerdem Kennzahlen für Objektanzahl, Abfragen und Verifizierung. Sie können auf die Beschriftungen klicken, um die Definitionen dieser Metriken anzuzeigen.
+
++
+image::../media/nodes_storage_node_objects_help.png[Screenshot des Attributs Nodes _Storage Node_ Objects Hilfe]
+
+. Wenn Sie noch mehr Details wünschen:
++
+.. Wählen Sie *SUPPORT* > *Tools* > *Grid-Topologie* aus.
+.. Wählen Sie *_site_* *Übersicht* *Haupt*.
++
+Im Abschnitt API-Vorgänge werden zusammenfassende Informationen für das gesamte Raster angezeigt.
+
+.. Wählen Sie *_Storage Node_* *LDR* *_Client-Anwendung_* *Übersicht* *Haupt*
++
+Im Abschnitt „Vorgänge“ werden zusammenfassende Informationen für den ausgewählten Speicherknoten angezeigt.
+
+
+
+
+
+
+
+== Aufrufen und Prüfen von Prüfprotokollen
+
+Audit-Meldungen werden von StorageGRID-Diensten generiert und in Text-Log-Dateien gespeichert. API-spezifische Audit-Meldungen in den Audit-Protokollen stellen kritische Daten zum Monitoring von Sicherheit, Betrieb und Performance bereit, die Ihnen bei der Bewertung des Systemzustands helfen können.
+
+.Was Sie und#8217;ll benötigen
+* Sie müssen über spezifische Zugriffsberechtigungen verfügen.
+* Sie müssen die haben `Passwords.txt` Datei:
+* Sie müssen die IP-Adresse eines Admin-Knotens kennen.
+
+
+Der Name der aktiven Audit-Log-Datei `audit.log`, Und es wird auf Admin-Knoten gespeichert.
+
+Einmal am Tag wird die aktive audit.log-Datei gespeichert und eine neue audit.log-Datei gestartet. Der Name der gespeicherten Datei gibt an, wann sie gespeichert wurde, im Format `yyyy-mm-dd.txt`.
+
+Nach einem Tag wird die gespeicherte Datei komprimiert und im Format umbenannt `yyyy-mm-dd.txt.gz`, Die das ursprüngliche Datum bewahrt.
+
+Dieses Beispiel zeigt die aktive audit.log-Datei, die Datei des Vortags (2018-04-15.txt) und die komprimierte Datei für den Vortag (`2018-04-14.txt.gz`).
+
+[listing]
+----
+audit.log
+2018-04-15.txt
+2018-04-14.txt.gz
+----
+.Schritte
+. Melden Sie sich bei einem Admin-Knoten an:
++
+.. Geben Sie den folgenden Befehl ein: `ssh _admin@primary_Admin_Node_IP_`
+.. Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+
+
+. Gehen Sie zu dem Verzeichnis, das die Audit-Log-Dateien enthält:``cd /var/local/audit/export``
+. Sehen Sie sich die aktuelle oder gespeicherte Audit-Protokolldatei nach Bedarf an.
+
+
+xref:../audit/index.adoc[Prüfung von Audit-Protokollen]
+
+
+
+=== In den Audit-Protokollen werden Swift-Vorgänge nachverfolgt
+
+Alle erfolgreichen Vorgänge zum LÖSCHEN, ABRUFEN, NACHFÜHREN, POSTEN und PUT werden im StorageGRID Audit-Protokoll verfolgt. Fehler werden weder protokolliert, noch sind Info-, Auth- oder OPTIONSANFORDERUNGEN.
+
+Weitere Informationen zu den für die folgenden Swift-Vorgänge erfassten Informationen finden Sie unter _Audit-Meldungen_.
+
+
+
+==== Konto-Operationen
+
+* GET Konto
+* HEAD Konto
+
+
+
+
+==== Container-Operationen
+
+* Container LÖSCHEN
+* GET Container
+* KOPF Behälter
+* Legen Sie den Behälter
+
+
+
+
+==== Objekt-Operationen
+
+* Delete Objekt
+* GET Objekt
+* HEAD Objekt
+* PUT Objekt
+
+
+xref:../audit/index.adoc[Prüfung von Audit-Protokollen]
+
+xref:account-operations.adoc[Konto-Operationen]
+
+xref:container-operations.adoc[Container-Operationen]
+
+xref:object-operations.adoc[Objekt-Operationen]

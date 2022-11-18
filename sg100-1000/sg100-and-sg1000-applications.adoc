@@ -1,0 +1,46 @@
+---
+permalink: sg100-1000/sg100-and-sg1000-applications.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, applications, how to use, services 
+summary: Die StorageGRID Services Appliances können auf unterschiedliche Weise konfiguriert werden, um Gateway Services oder Redundanz einiger Grid-Administrations-Services bereitzustellen. 
+---
+= SG100- und SG1000-Applikationen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die StorageGRID Services Appliances können auf unterschiedliche Weise konfiguriert werden, um Gateway Services oder Redundanz einiger Grid-Administrations-Services bereitzustellen.
+
+Appliances können wie folgt eingesetzt werden:
+
+* Zu einem neuen oder vorhandenen Grid als Gateway-Node hinzufügen
+* Fügen Sie zu einem neuen Grid als primären oder nicht-primären Admin-Node oder zu einem vorhandenen Grid als nicht-primärer Admin-Node hinzu
+* Arbeiten Sie gleichzeitig als Gateway Node und Admin Node (primär oder nicht primär)
+
+
+Die Appliance erleichtert die Nutzung von Hochverfügbarkeitsgruppen (HA) und intelligentem Lastausgleich für S3- oder Swift-Datenpfadverbindungen.
+
+In den folgenden Beispielen wird beschrieben, wie Sie die Funktionen der Appliance maximieren können:
+
+* Verwenden Sie zwei SG100- oder zwei SG1000-Appliances, um Gateway-Services bereitzustellen, indem Sie sie als Gateway-Nodes konfigurieren.
++
+
+IMPORTANT: Implementieren Sie die Service-Appliances SG100 und SG1000 nicht am selben Standort. Das kann zu einer unvorhersehbaren Performance führen.
+
+* Verwenden Sie zwei SG100- oder zwei SG1000-Appliances, um die Redundanz einiger Grid-Verwaltungsdienste zu gewährleisten. Konfigurieren Sie dazu jedes Gerät als Admin-Nodes.
+* Verwenden Sie zwei SG100- oder zwei SG1000-Appliances, um hochverfügbare Lastausgleichs- und Traffic Shaping-Services bereitzustellen, auf die über eine oder mehrere virtuelle IP-Adressen zugegriffen wird. Konfigurieren Sie die Appliances als beliebige Kombination aus Admin-Nodes oder Gateway-Nodes und fügen Sie beide Nodes derselben HA-Gruppe hinzu.
++
+
+IMPORTANT: Wenn Sie Admin-Nodes und Gateway-Nodes in derselben HA-Gruppe verwenden, fallen CLB-Ports (Connection Load Balancer) und reine Admin-Node-Ports kein Failover an. Anweisungen zum Konfigurieren von HA-Gruppen finden Sie in den Anweisungen für das Verwalten von StorageGRID.
+
++
+
+NOTE: Der CLB-Service ist veraltet.
+
+
+
+Bei der Verwendung mit StorageGRID Storage Appliances ermöglichen sowohl die SG100- als auch die SG1000-Service-Appliances die Implementierung von gerätebasierten Grids ohne Abhängigkeiten von externen Hypervisoren oder Computing-Hardware.
+
+xref:../admin/index.adoc[StorageGRID verwalten]

@@ -1,0 +1,92 @@
+---
+permalink: s3/operations-for-multipart-uploads.html 
+sidebar: sidebar 
+keywords: operations, multipart uploads, uploads, rest API 
+summary: In diesem Abschnitt wird beschrieben, wie StorageGRID Vorgänge für mehrteilige Uploads unterstützt. 
+---
+= Vorgänge für mehrteilige Uploads
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In diesem Abschnitt wird beschrieben, wie StorageGRID Vorgänge für mehrteilige Uploads unterstützt.
+
+Die folgenden Bedingungen und Hinweise gelten für alle mehrteiligen Uploadvorgänge:
+
+* Sie sollten nicht mehr als 1,000 gleichzeitige mehrteilige Uploads in einen einzelnen Bucket durchführen, da die Ergebnisse der „List Multipart Uploads“-Abfragen für diesen Bucket möglicherweise unvollständige Ergebnisse liefern.
+* StorageGRID setzt AWS Größenbeschränkungen für mehrere Teile durch. S3-Clients müssen folgende Richtlinien einhalten:
++
+** Jedes Teil eines mehrteiligen Uploads muss zwischen 5 MiB (5,242,880 Byte) und 5 gib (5,368,709,120 Byte) liegen.
+** Der letzte Teil kann kleiner als 5 MiB (5,242,880 Byte) sein.
+** Im Allgemeinen sollten die Teilemaße so groß wie möglich sein. Verwenden Sie z. B. für ein Objekt mit 100 gib die Teilenummer 5 gib. Da jedes Teil als einzigartiges Objekt betrachtet wird, verringert der StorageGRID-Metadaten-Overhead durch große Teilgrößen.
+** Verwenden Sie für Objekte, die kleiner als 5 gib sind, stattdessen einen Upload ohne mehrere Teile.
+
+
+* ILM wird für jeden Teil eines mehrteiligen Objekts bei Aufnahme und für das Objekt als Ganzes, wenn der Multipart-Upload abgeschlossen ist, bewertet, wenn die ILM-Regel das strenge oder ausgeglichene Aufnahmeverhalten verwendet. Sie sollten sich bewusst sein, wie dies die Objekt- und Teileplatzierung beeinflusst:
++
+** Wenn sich ILM-Änderungen während des Hochladen mehrerer S3-Teile ändern, erfüllt der mehrteilige Upload einige Teile des Objekts möglicherweise nicht die aktuellen ILM-Anforderungen. Nicht korrekt platzierte Teile werden zur ILM-Neubewertung in die Warteschlange verschoben und werden später an den richtigen Ort verschoben.
+** Bei der Evaluierung von ILM für ein Teil filtert StorageGRID nach der Größe des Teils und nicht der Größe des Objekts. Das bedeutet, dass Teile eines Objekts an Standorten gespeichert werden können, die die ILM-Anforderungen für das Objekt als Ganzes nicht erfüllen. Wenn z. B. eine Regel angibt, dass alle Objekte ab 10 GB auf DC1 gespeichert werden, während alle kleineren Objekte an DC2 gespeichert sind, wird bei Aufnahme jeder 1 GB-Teil eines 10-teiligen mehrteiligen Uploads auf DC2 gespeichert. Wenn ILM für das Objekt als Ganzes bewertet wird, werden alle Teile des Objekts auf DC1 verschoben.
+
+
+* Alle mehrteiligen Uploadvorgänge unterstützen die StorageGRID-Konsistenzkontrollen.
+* Falls erforderlich, können Sie die Verschlüsselung auf Serverseite mit mehrteiligen Uploads verwenden. Um SSE (serverseitige Verschlüsselung mit über StorageGRID gemanagten Schlüsseln) zu verwenden, müssen Sie das angeben `x-amz-server-side-encryption` Kopfzeile anfordern in der Anfrage zum Senden von mehrteiligen Uploads. Um SSE-C (serverseitige Verschlüsselung mit vom Kunden bereitgestellten Schlüsseln) zu verwenden, geben Sie in der Anfrage zum Hochladen von mehreren Teilen und bei jeder nachfolgenden Anfrage zum Hochladen von Teilen dieselben Schlüsselkopfzeilen an.
+
+
+|===
+| Betrieb | Implementierung 
+
+
+ a| 
+Mehrteilige Uploads Auflisten
+ a| 
+Siehe xref:list-multipart-uploads.adoc[Mehrteilige Uploads Auflisten]
+
+
+
+ a| 
+Initiieren Von Mehrteiligen Uploads
+ a| 
+Siehe xref:initiate-multipart-upload.adoc[Initiieren Von Mehrteiligen Uploads]
+
+
+
+ a| 
+Hochladen Von Teilen
+ a| 
+Siehe xref:upload-part.adoc[Hochladen Von Teilen]
+
+
+
+ a| 
+Hochladen Von Teilen - Kopieren
+ a| 
+Siehe xref:upload-part-copy.adoc[Hochladen Von Teilen - Kopieren]
+
+
+
+ a| 
+Abschließen Von Mehrteiligen Uploads
+ a| 
+Siehe xref:complete-multipart-upload.adoc[Abschließen Von Mehrteiligen Uploads]
+
+
+
+ a| 
+Abbrechen Von Mehrteiligen Uploads
+ a| 
+Wird mit dem gesamten Amazon S3-REST-API-Verhalten implementiert
+
+
+
+ a| 
+Teile Auflisten
+ a| 
+Wird mit dem gesamten Amazon S3-REST-API-Verhalten implementiert
+
+|===
+.Verwandte Informationen
+* xref:consistency-controls.adoc[Konsistenzkontrollen]
+* xref:using-server-side-encryption.adoc[Serverseitige Verschlüsselung]
+

@@ -1,0 +1,71 @@
+---
+permalink: primer/configuring-network-settings.html 
+sidebar: sidebar 
+keywords: network settings, configure, configuring, configuration, domain name, virtual hosted-style requests 
+summary: Sie können verschiedene Netzwerkeinstellungen vom Grid Manager konfigurieren, um den Betrieb Ihres StorageGRID Systems zu optimieren. 
+---
+= Netzwerkeinstellungen konfigurieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können verschiedene Netzwerkeinstellungen vom Grid Manager konfigurieren, um den Betrieb Ihres StorageGRID Systems zu optimieren.
+
+
+
+== Domain-Namen
+
+Falls Sie beabsichtigen, virtuelle S3-Hosted-Style-Anforderungen zu unterstützen, müssen Sie die Liste der Endpunkt-Domain-Namen, mit denen S3-Clients verbunden werden, konfigurieren. Beispiele `s3.example.com`, `s3.example.co.uk`, und `s3-east.example.com`.
+
+Die konfigurierten Serverzertifikate müssen mit den Domänennamen des Endpunkts übereinstimmen.
+
+
+
+== Hochverfügbarkeitsgruppen
+
+Darüber hinaus können HA-Gruppen (High Availability, Hochverfügbarkeit) für hochverfügbare Datenverbindungen für S3 und Swift Clients verwendet oder hochverfügbare Verbindungen mit dem Grid Manager und dem Mandanten Manager hergestellt werden.
+
+Wenn Sie eine HA-Gruppe erstellen, wählen Sie eine Netzwerkschnittstelle für einen oder mehrere Nodes aus. Jede HA-Gruppe bietet Zugriff auf die Shared Services auf den ausgewählten Nodes.
+
+* HA-Gruppen, die Schnittstellen an Gateway-Nodes, Admin-Nodes oder beide umfassen, bieten hochverfügbare Datenverbindungen für S3- und Swift-Clients.
+* HA-Gruppen, die Schnittstellen auf Admin-Nodes enthalten, stellen nur hochverfügbare Verbindungen zum Grid Manager und dem Mandanten-Manager bereit.
+
+
+Die Schnittstellen können zum Grid-Netzwerk (eth0), zum Client-Netzwerk (eth2) oder zu einem VLAN-Netzwerk gehören.
+
+Sie können jeder HA-Gruppe bis zu 10 virtuelle IP-Adressen (VIP) zuweisen. Sie geben an, eine Schnittstelle die primäre Schnittstelle zu sein, und ordnen alle anderen Schnittstellen in Prioritätsreihenfolge ein. Die primäre Schnittstelle ist die aktive Schnittstelle, sofern kein Fehler auftritt. Wenn die aktive Schnittstelle ausfällt, werden die VIP-Adressen auf die erste Sicherungsschnittstelle in der Prioritätsreihenfolge verschoben. Wenn diese Schnittstelle ausfällt, wechseln die VIP-Adressen zur nächsten Backup-Schnittstelle usw.
+
+
+
+== Verbindungskosten
+
+Sie können die Verbindungskosten entsprechend der Latenz zwischen Standorten anpassen. Wenn zwei oder mehr Datacenter-Standorte vorhanden sind, priorisieren die Verbindungskosten, welcher Datacenter-Standort einen angeforderten Service bereitstellen soll.
+
+
+
+== Load Balancer-Endpunkte
+
+Mithilfe eines Load Balancer können Sie Aufnahme- und Abruf-Workloads von S3 und Swift Clients verarbeiten. Durch Verteilung der Workloads und Verbindungen auf mehrere Storage-Nodes maximiert der Lastausgleich die Geschwindigkeit und die Kapazität der Verbindungen.
+
+Wenn Sie den StorageGRID-Load-Balancer-Dienst verwenden möchten, der in Admin-Nodes und Gateway-Nodes enthalten ist, müssen Sie einen oder mehrere Load-Balancer-Endpunkte konfigurieren. Jeder Endpunkt definiert einen Gateway-Node- oder Admin-Node-Port für S3- und Swift-Anforderungen zu Storage-Nodes.
+
+
+
+== Verkehrsklassifizierung
+
+Sie können Richtlinien für die Traffic-Klassifizierung erstellen, um verschiedene Typen von Netzwerk-Traffic zu identifizieren und zu bearbeiten, einschließlich des Datenverkehrs im Zusammenhang mit bestimmten Buckets, Mandanten, Client-Subnetzen oder Endpunkten für den Load Balancer. Diese Richtlinien unterstützen die Begrenzung und das Monitoring des Datenverkehrs.
+
+
+
+== VLAN-Schnittstellen
+
+Sie können virtuelle LAN-Schnittstellen (VLAN) erstellen, um den Datenverkehr zu isolieren und zu partitionieren, um für Sicherheit, Flexibilität und Performance zu sorgen. Jede VLAN-Schnittstelle ist einer oder mehreren übergeordneten Schnittstellen auf Admin-Nodes und Gateway-Nodes zugeordnet. Die VLAN-Schnittstellen können in HA-Gruppen und in Load Balancer Endpunkten eingesetzt werden, um den Client- oder Admin-Datenverkehr nach Applikation oder Mandanten zu trennen.
+
+Beispielsweise könnte Ihr Netzwerk VLAN 100 für FabricPool-Datenverkehr und VLAN 200 für eine Archivierungsanwendung verwenden.
+
+.Verwandte Informationen
+* xref:../admin/index.adoc[StorageGRID verwalten]
+* xref:managing-tenants-and-client-connections.adoc[Management von Mandanten und Client-Verbindungen]
+

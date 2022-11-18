@@ -1,0 +1,14 @@
+---
+permalink: sg6000/troubleshooting-connection-issues.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, troubleshoot, troubleshooting, connection 
+summary: Wenn während der Installation der StorageGRID-Appliance Verbindungsprobleme auftreten, führen Sie die hier aufgeführten Korrekturmaßnahmen durch. 
+---
+= Fehlerbehebung bei Verbindungsproblemen (SG6000)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn während der Installation der StorageGRID-Appliance Verbindungsprobleme auftreten, führen Sie die hier aufgeführten Korrekturmaßnahmen durch.

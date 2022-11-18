@@ -1,0 +1,37 @@
+---
+permalink: sg5600/connecting-ac-power-cords-sg5600.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, wire, wiring, cabling, cable, Connecting, connect, power cords, power, ac, ac power 
+summary: Sie müssen die Netzkabel an die externe Stromquelle und an den Netzanschluss an jedem Controller anschließen. Nachdem Sie die Netzkabel angeschlossen haben, können Sie das Netzkabel einschalten. 
+---
+= Anschließen des Wechselstromnetzes (SG5600)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen die Netzkabel an die externe Stromquelle und an den Netzanschluss an jedem Controller anschließen. Nachdem Sie die Netzkabel angeschlossen haben, können Sie das Netzkabel einschalten.
+
+Vor dem Anschließen an die Stromversorgung müssen beide Netzschalter des Geräts ausgeschaltet sein.
+
+
+CAUTION: *Gefahr eines elektrischen Schlags* -- bevor Sie die Netzkabel anschließen, stellen Sie sicher, dass die beiden Netzschalter am Gerät ausgeschaltet sind.
+
+.Über diese Aufgabe
+* Sie sollten für jedes Netzteil separate Stromquellen verwenden.
++
+Beim Anschluss an unabhängige Stromquellen bleibt die Stromredundanz erhalten.
+
+* Sie können die mit dem Controller gelieferten Netzkabel mit typischen Steckdosen verwenden, die im Zielland verwendet werden, z. B. Wandsteckdosen mit einer unterbrechungsfreien Stromversorgung (USV).
++
+Diese Netzkabel sind jedoch nicht für die meisten EIA-konformen Cabinets geeignet.
+
+
+
+.Schritte
+. Schalten Sie die Netzschalter im Gehäuse oder Gehäuse aus.
+. Schalten Sie die Netzschalter an den Controllern aus.
+. Schließen Sie die primären Netzkabel des Cabinets an die externen Stromquellen an.
+. Schließen Sie die Stromkabel an den Netzanschluss an jedem Controller an.
+

@@ -1,0 +1,93 @@
+---
+permalink: sg5600/accessing-storagegrid-appliance-installer-sg5600.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, appliance installer, installer, access, accessing, start, starting 
+summary: 'Sie müssen auf das Installationsprogramm der StorageGRID-Appliance zugreifen, um die Verbindungen zwischen der Appliance und den drei StorageGRID-Netzwerken zu konfigurieren: Das Grid-Netzwerk, das Admin-Netzwerk \ (optional\) und das Client-Netzwerk \ (optional\).' 
+---
+= Rufen Sie das Installationsprogramm für StorageGRID-Appliances auf
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen auf das Installationsprogramm der StorageGRID Appliance zugreifen, um die Verbindungen zwischen der Appliance und den drei StorageGRID-Netzwerken zu konfigurieren: Das Grid-Netzwerk, das Admin-Netzwerk (optional) und das Client-Netzwerk (optional).
+
+.Was Sie und#8217;ll benötigen
+* Sie verwenden ein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+* Die Appliance ist mit allen von Ihnen geplanten StorageGRID-Netzwerken verbunden.
+* In diesen Netzwerken kennen Sie die IP-Adresse, das Gateway und das Subnetz für die Appliance.
+* Sie haben die geplanten Netzwerk-Switches konfiguriert.
+
+
+Wenn Sie zum ersten Mal auf das Installationsprogramm der StorageGRID-Appliance zugreifen, können Sie die vom DHCP zugewiesene IP-Adresse für das Admin-Netzwerk verwenden (vorausgesetzt, die Appliance ist mit dem Admin-Netzwerk verbunden) oder die durch DHCP zugewiesene IP-Adresse für das Grid-Netzwerk. Die Verwendung der IP-Adresse für das Admin-Netzwerk ist vorzuziehen. Wenn Sie andernfalls über die DHCP-Adresse für das Grid-Netzwerk auf das Installationsprogramm von StorageGRID-Appliances zugreifen, kann die Verbindung zum StorageGRID-Appliance-Installationsprogramm verloren gehen, wenn Sie die Link-Einstellungen ändern und wenn Sie eine statische IP eingeben.
+
+.Schritte
+. Beziehen Sie die DHCP-Adresse für das Gerät im Admin-Netzwerk (wenn es verbunden ist) oder das Grid-Netzwerk (wenn das Admin-Netzwerk nicht verbunden ist).
++
+Sie können eine der folgenden Aktionen ausführen:
+
++
+** Geben Sie dem Netzwerkadministrator die MAC-Adresse für den Management-Port 1 an, damit er die DHCP-Adresse für diesen Port im Admin-Netzwerk nachsehen kann. Die MAC-Adresse wird auf einem Etikett am E5600SG-Controller neben dem Port gedruckt.
+** Sehen Sie sich die Sieben-Segment-Anzeige auf dem E5600SG-Controller an. Wenn Management-Port 1 und 10-GbE-Ports 2 und 4 des E5600SG-Controllers mit Netzwerken mit DHCP-Servern verbunden sind, versucht der Controller, beim Einschalten des Gehäuses dynamisch zugewiesene IP-Adressen zu erhalten. Nachdem der Controller den Einschaltvorgang abgeschlossen hat, zeigt sein 7-Segment-Display *HO* an, gefolgt von einer sich wiederholenden Sequenz von zwei Zahlen.
++
+[listing]
+----
+HO -- IP address for Admin Network -- IP address for Grid Network HO
+----
++
+In der Reihenfolge:
+
++
+*** Der erste Zahlensatz ist die DHCP-Adresse für den Appliance-Speicherknoten im Admin-Netzwerk, sofern er verbunden ist. Diese IP-Adresse ist dem Management-Port 1 des E5600SG-Controllers zugewiesen.
+*** Der zweite Zahlensatz ist die DHCP-Adresse für den Appliance-Speicherknoten im Grid-Netzwerk. Diese IP-Adresse wird 10-GbE-Ports 2 und 4 zugewiesen, wenn Sie das Gerät zum ersten Mal mit Strom versorgen.
++
+
+NOTE: Wenn eine IP-Adresse nicht über DHCP zugewiesen werden konnte, wird 0.0.0.0 angezeigt.
+
+
+
+
+
+. Wenn Sie eine der DHCP-Adressen abrufen konnten:
++
+.. Öffnen Sie einen Webbrowser auf dem Service-Laptop.
+.. Geben Sie diese URL für das StorageGRID-Appliance-Installationsprogramm ein: +
+`*https://_E5600SG_Controller_IP_:8443*`
++
+Für `_E5600SG_Controller_IP_`, Verwenden Sie die DHCP-Adresse für den Controller. (Verwenden Sie die IP-Adresse für das Admin-Netzwerk, wenn Sie ihn haben).
+
+.. Wenn Sie aufgefordert werden, eine Sicherheitswarnung zu erhalten, zeigen Sie das Zertifikat mithilfe des Browser-Installationsassistenten an und installieren Sie es.
++
+Die Meldung wird beim nächsten Zugriff auf diese URL nicht angezeigt.
+
++
+Die Startseite des StorageGRID-Appliance-Installationsprogramms wird angezeigt. Die Informationen und Meldungen, die beim ersten Zugriff auf diese Seite angezeigt werden, hängen davon ab, wie Ihr Gerät derzeit mit StorageGRID-Netzwerken verbunden ist. Möglicherweise werden Fehlermeldungen angezeigt, die in späteren Schritten gelöst werden.
+
++
+image::../media/appliance_installer_home_5700_5600.png[Screenshot des oberen Teils der Startseite des StorageGRID Webscale Appliance Installer]
+
+
+
+. Wenn der E5600SG-Controller keine IP-Adresse über DHCP erhalten konnte:
++
+.. Schließen Sie den Service-Laptop über ein Ethernet-Kabel an den Management-Port 2 des E5600SG-Controllers an.
++
+image::../media/e5600sg_mgmt_port_2.gif[Position des Management-Ports 2 am E5600SG-Controller]
+
+.. Öffnen Sie einen Webbrowser auf dem Service-Laptop.
+.. Geben Sie diese URL für das StorageGRID-Appliance-Installationsprogramm ein: +
+`*\https://169.254.0.1:8443*`
++
+Die Startseite des StorageGRID-Appliance-Installationsprogramms wird angezeigt. Die Informationen und Meldungen, die beim ersten Zugriff auf diese Seite angezeigt werden, hängen davon ab, wie das Gerät aktuell verbunden ist.
+
++
+
+NOTE: Wenn Sie über eine lokale Verbindung nicht auf die Startseite zugreifen können, konfigurieren Sie die Service-Laptop-IP-Adresse als `169.254.0.2`, Und versuchen Sie es erneut.
+
+
+
+. Überprüfen Sie alle Meldungen, die auf der Startseite angezeigt werden, und konfigurieren Sie die Verbindungskonfiguration und die IP-Konfiguration nach Bedarf.
+
+
+xref:../admin/web-browser-requirements.adoc[Anforderungen an einen Webbrowser]

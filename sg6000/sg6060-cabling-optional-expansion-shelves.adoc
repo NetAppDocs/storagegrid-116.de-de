@@ -1,0 +1,103 @@
+---
+permalink: sg6000/sg6060-cabling-optional-expansion-shelves.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, cabling, cable, wiring, wire, expansion shelf, sg6060 
+summary: Wenn Sie Erweiterungs-Shelfs verwenden, müssen Sie sie mit dem E2860 Controller-Shelf verbinden. Es können maximal zwei Erweiterungs-Shelfs für jede SG6060 Appliance verwendet werden. 
+---
+= SG6060 und SG6060X: Verkabelung optionaler Erweiterungs-Shelfs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie Erweiterungs-Shelfs verwenden, müssen Sie sie mit dem E2860 Controller-Shelf verbinden. Es können maximal zwei Erweiterungs-Shelfs für jede SG6060- oder SG6060X-Appliance verwendet werden.
+
+.Was Sie und#8217;ll benötigen
+* Sie haben die beiden SAS-Kabel mit jedem Erweiterungs-Shelf geliefert.
+* Sie haben die Erweiterungs-Shelfs im Rack oder Rack mit dem E2860 Controller-Shelf installiert.
++
+xref:sg6060-installing-60-drive-shelves-into-cabinet-or-rack.adoc[SG6060 und SG6060X: Shelfs mit 60 Laufwerken in einem Rack oder Rack installieren]
+
+
+
+Verbinden Sie jedes Erweiterungs-Shelf mit dem E2860 Controller-Shelf, wie in der Abbildung dargestellt.
+
+Diese Abbildung zeigt die Verkabelung für zwei Erweiterungs-Shelfs in einem SG6060 (die Erweiterungskabel für den SG6060X sind identisch). Wenn Sie nur über ein Erweiterungs-Shelf verfügen, verbinden Sie IOM A mit Controller A und verbinden Sie IOM B mit Controller B
+
+image::../media/expansion_shelves_connections_sg6060.png[SG6060- und SG6060X-Erweiterungs-Shelf-Verbindungen]
+
+[cols="1a,2a"]
+|===
+| Legende | Beschreibung 
+
+
+ a| 
+1
+ a| 
+SG6000-CN
+
+
+
+ a| 
+2
+ a| 
+E2860 Controller-Shelf
+
+
+
+ a| 
+3
+ a| 
+Controller A
+
+
+
+ a| 
+4
+ a| 
+Controller B
+
+
+
+ a| 
+5
+ a| 
+Erweiterungs-Shelf 1
+
+
+
+ a| 
+6
+ a| 
+IOM A für Erweiterungs-Shelf 1
+
+
+
+ a| 
+7
+ a| 
+IOM B für Erweiterungs-Shelf 1
+
+
+
+ a| 
+8
+ a| 
+Erweiterungs-Shelf 2
+
+
+
+ a| 
+9
+ a| 
+IOM A für Erweiterungs-Shelf 2
+
+
+
+ a| 
+10
+ a| 
+IOM B für Erweiterungs-Shelf 2
+
+|===

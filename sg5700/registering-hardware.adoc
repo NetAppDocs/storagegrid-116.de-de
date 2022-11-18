@@ -1,0 +1,53 @@
+---
+permalink: sg5700/registering-hardware.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, hardware, register, registering, registration, support 
+summary: Die Registrierung der Appliance-Hardware bietet Support-Vorteile. 
+---
+= Hardware registrieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Registrierung der Appliance-Hardware bietet Support-Vorteile.
+
+.Schritte
+. Suchen Sie die Seriennummer des Chassis.
++
+Sie finden die Nummer auf dem Packzettel, in Ihrer Bestätigungs-E-Mail oder auf dem Gerät nach dem Auspacken.
+
++
+image::../media/appliance_label.gif[Etikett mit Seriennummer]
+
+. Wechseln Sie zur NetApp Support Site unter http://mysupport.netapp.com/["mysupport.netapp.com"^].
+. Bestimmen Sie, ob Sie die Hardware registrieren müssen:
++
+|===
+| Wenn Sie ein... | Führen Sie die folgenden Schritte aus... 
+
+
+ a| 
+Bestehender NetApp Kunde
+ a| 
+.. Melden Sie sich mit Ihrem Benutzernamen und Passwort an.
+.. Wählen Sie *Produkte* *Meine Produkte*.
+.. Bestätigen Sie, dass die neue Seriennummer aufgeführt ist.
+.. Falls nicht, folgen Sie den Anweisungen für neue NetApp Kunden.
+
+
+
+
+ a| 
+Neuer NetApp Kunde
+ a| 
+.. Klicken Sie auf *Jetzt registrieren* und erstellen Sie ein Konto.
+.. Wählen Sie *Produkte* *Produkte Registrieren*.
+.. Geben Sie die Seriennummer des Produkts und die angeforderten Details ein.
+
+
+Nach der Registrierung können Sie die erforderliche Software herunterladen. Der Genehmigungsprozess kann bis zu 24 Stunden in Anspruch nehmen.
+
+|===
+

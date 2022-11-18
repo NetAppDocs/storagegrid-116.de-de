@@ -1,0 +1,138 @@
+---
+permalink: upgrade/estimating-time-to-complete-upgrade.html 
+sidebar: sidebar 
+keywords: upgrade, time estimate, duration, cassandra upgrade 
+summary: Wenn Sie ein Upgrade auf StorageGRID 11.6 planen, müssen Sie je nach Dauer des Upgrades in Betracht ziehen, wann ein Upgrade durchgeführt werden soll. Außerdem muss bekannt sein, welche Vorgänge in jeder Phase des Upgrades ausgeführt werden können und welche nicht. 
+---
+= Schätzen Sie den Zeitaufwand für die Durchführung eines Upgrades ein
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie ein Upgrade auf StorageGRID 11.6 planen, müssen Sie je nach Dauer des Upgrades in Betracht ziehen, wann ein Upgrade durchgeführt werden soll. Außerdem muss bekannt sein, welche Vorgänge in jeder Phase des Upgrades ausgeführt werden können und welche nicht.
+
+Die erforderliche Zeit zur Durchführung eines StorageGRID Upgrades hängt von verschiedenen Faktoren ab, beispielsweise von Client-Last und Hardware-Performance.
+
+Die Tabelle fasst die wichtigsten Upgrade-Aufgaben zusammen und zeigt die ungefähre Zeit, die für jede Aufgabe erforderlich ist. Die Schritte nach der Tabelle enthalten Anweisungen zur Schätzung der Aktualisierungszeit für Ihr System.
+
+[cols="1a,1a,1a,a"]
+|===
+| Aufgabe aktualisieren | Beschreibung | Ungefähre Zeit erforderlich | Während dieser Aufgabe 
+
+
+ a| 
+Starten Sie Den Upgrade Service
+ a| 
+Vorabprüfungen werden durchgeführt, die Software-Datei wird verteilt und der Upgrade-Service wird gestartet.
+ a| 
+3 Minuten pro Grid-Node, es sei denn, Validierungsfehler werden gemeldet
+ a| 
+Falls erforderlich, können Sie die Vorabprüfungen für das Upgrade manuell vor dem geplanten Wartungsfenster für die Aktualisierung durchführen.
+
+
+
+ a| 
+Grid-Nodes aktualisieren (primärer Admin-Node)
+ a| 
+Der primäre Admin-Node wird angehalten, aktualisiert und neu gestartet.
+ a| 
+30 Minuten bis 1 Stunde, wobei SG100- und SG1000-Appliance-Nodes die meiste Zeit erfordern.
+ a| 
+Sie können nicht auf den primären Admin-Node zugreifen. Verbindungsfehler werden gemeldet, die Sie ignorieren können.
+
+
+
+ a| 
+Grid-Nodes aktualisieren (alle anderen Nodes)
+ a| 
+Die Software auf allen anderen Grid-Knoten wird aktualisiert, in der Reihenfolge, in der Sie die Knoten genehmigen. Jeder Knoten in Ihrem System wird einzeln für jeweils mehrere Minuten heruntergefahren.
+ a| 
+15 Minuten bis 1 Stunde pro Node, wobei Appliance-Nodes die höchste Zeit erfordern
+
+*Hinweis:* für Appliance-Knoten wird das StorageGRID-Appliance-Installationsprogramm automatisch auf die neueste Version aktualisiert.
+ a| 
+* Ändern Sie die Grid-Konfiguration nicht.
+* Ändern Sie nicht die Konfiguration der Prüfungsstufe.
+* Aktualisieren Sie die ILM-Konfiguration nicht.
+* Sie können keine weiteren Wartungsvorgänge wie Hotfix, Stilllegung oder Erweiterung durchführen.
++
+*Hinweis:* Wenn Sie eine Wiederherstellung durchführen müssen, wenden Sie sich an den technischen Support.
+
+
+
+
+
+ a| 
+Aktivieren Sie Die Funktionen
+ a| 
+Die neuen Funktionen für die neue Version sind aktiviert.
+ a| 
+Weniger als 5 Minuten
+ a| 
+* Ändern Sie die Grid-Konfiguration nicht.
+* Ändern Sie nicht die Konfiguration der Prüfungsstufe.
+* Aktualisieren Sie die ILM-Konfiguration nicht.
+* Sie können kein weiteres Wartungsverfahren durchführen.
+
+
+
+
+ a| 
+Upgrade Von Datenbanken
+ a| 
+Der Upgrade-Prozess überprüft jeden Knoten, um zu überprüfen, ob die Cassandra-Datenbank nicht aktualisiert werden muss.
+ a| 
+10 Sekunden pro Node oder einige Minuten für das gesamte Grid
+ a| 
+Für das Upgrade von StorageGRID 11.5 auf 11.6 ist kein Cassandra Datenbank-Upgrade erforderlich. Allerdings wird der Cassandra-Service auf jedem Storage-Node angehalten und neu gestartet.
+
+Bei künftigen StorageGRID-Funktionsversionen kann der Schritt für das Update der Cassandra-Datenbank mehrere Tage dauern.
+
+
+
+ a| 
+Letzte Schritte Zur Aktualisierung
+ a| 
+Temporäre Dateien werden entfernt und das Upgrade auf die neue Version wird abgeschlossen.
+ a| 
+5 Minuten
+ a| 
+Wenn die Aufgabe * Final Upgrade Steps* abgeschlossen ist, können Sie alle Wartungsarbeiten durchführen.
+
+|===
+.Schritte
+. Schätzen Sie die für das Upgrade aller Grid-Nodes erforderliche Zeit ein.
++
+.. Multiplizieren Sie die Anzahl der Nodes in Ihrem StorageGRID System um 1 Stunde/Node.
++
+In der Regel dauert das Upgrade von Appliance-Nodes länger als softwarebasierte Nodes.
+
+.. Fügen Sie 1 Stunde zu diesem Zeitpunkt hinzu, um die Zeit zu berücksichtigen, die zum Herunterladen des erforderlich ist `.upgrade` Führen Sie die Vorabvalidierung aus, und führen Sie die letzten Aktualisierungsschritte durch.
+
+
+. Wenn Sie Linux-Knoten haben, fügen Sie 15 Minuten für jeden Knoten hinzu, um die Zeit zu berücksichtigen, die zum Herunterladen und Installieren des RPM- oder DEB-Pakets erforderlich ist.
+. Berechnen Sie die geschätzte Gesamtdauer für das Upgrade, indem Sie die Ergebnisse der Schritte 1 und 2 hinzufügen.
+
+
+
+
+== Beispiel: Voraussichtliche Zeit für ein Upgrade auf StorageGRID 11.6
+
+Angenommen, Ihr System verfügt über 14 Grid-Nodes, von denen 8 Linux-Nodes sind.
+
+. 14 mit 1 Stunde/Node multiplizieren.
+. Fügen Sie 1 Stunde hinzu, um den Download, die Vorabprüfung und die abschließenden Schritte zu berücksichtigen.
++
+Die geschätzte Zeit für ein Upgrade aller Nodes beträgt 15 Stunden.
+
+. Multiplizieren Sie 8 x 15 Minuten/Node, um die Zeit für die Installation des RPM- oder DEB-Pakets auf den Linux-Knoten zu berücksichtigen.
++
+Die voraussichtliche Zeit für diesen Schritt beträgt 2 Stunden.
+
+. Fügen Sie die Werte zusammen.
++
+Es sollte bis zu 17 Stunden dauern, bis das Upgrade Ihres Systems auf StorageGRID 11.6 abgeschlossen ist.
+
+

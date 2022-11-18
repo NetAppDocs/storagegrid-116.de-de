@@ -1,0 +1,67 @@
+---
+permalink: sg5700/installing-appliance-in-cabinet-or-rack-sg5700.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, install, installing, installation, cabinet, rack, rail, rails 
+summary: Sie müssen Schienen in Ihrem Schrank oder Rack installieren und das Gerät dann auf die Schienen schieben. Wenn Sie eine SG5760 haben, müssen Sie nach der Installation der Appliance auch die Laufwerke installieren. 
+---
+= Appliance in Schrank oder Rack (SG5700) installieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen Schienen in Ihrem Schrank oder Rack installieren und das Gerät dann auf die Schienen schieben. Wenn Sie eine SG5760 haben, müssen Sie nach der Installation der Appliance auch die Laufwerke installieren.
+
+.Was Sie und#8217;ll benötigen
+* Sie haben das im Lieferumfang enthaltene Sicherheitshinweisen geprüft und die Vorsichtsmaßnahmen für das Bewegen und Installieren von Hardware verstanden.
+* Sie haben die Anweisungen im Lieferumfang des Schienensatz enthalten.
+* Sie verfügen über die _Installations- und Setup-Anleitung_ für das Gerät.
+
+
+
+CAUTION: Installieren Sie die Hardware von der Unterseite des Racks oder Racks bis zu, um ein Umkippen des Geräts zu verhindern.
+
+
+CAUTION: Die SG5712 wiegt bei voller Beladung mit Laufwerken ca. 64 lb (29 kg). Um den SG5712 sicher zu bewegen, sind zwei Personen oder ein mechanisierter Lift erforderlich.
+
+
+CAUTION: Die SG5760 wiegt ca. 60 kg (132 lb), ohne dass Laufwerke installiert sind. Vier Personen oder ein mechanisierter Lift sind erforderlich, um eine leere SG5760 sicher zu bewegen.
+
+
+CAUTION: Um eine Beschädigung der Hardware zu vermeiden, verschieben Sie niemals eine SG5760, wenn Laufwerke installiert sind. Vor dem Verschieben des Shelfs müssen alle Laufwerke entfernt werden.
+
+.Schritte
+. Befolgen Sie die Anweisungen für den Schienensatz, um die Schienen in Ihrem Schrank oder Rack zu installieren.
+. Wenn Sie eine SG5760 haben, befolgen Sie diese Schritte, um das Verschieben der Appliance vorzubereiten.
++
+.. Entfernen Sie den äußeren Verpackungskasten. Falten Sie dann die Klappen auf dem inneren Kasten nach unten.
+.. Wenn Sie die SG5760 von Hand anheben, befestigen Sie die vier Griffe an den Seiten des Chassis.
++
+Sie entfernen diese Griffe, während Sie das Gerät auf die Schienen schieben.
+
+
+
+. Siehe Anweisungen zur Installation und Einrichtung_ und schieben Sie das Gerät in den Schrank oder das Rack.
+. Siehe die Anweisungen zur Installation und Einrichtung_, und befestigen Sie das Gerät am Schrank oder Rack.
++
+Wenn Sie eine SG5760 haben, befestigen Sie das Gerät mithilfe der hinteren Halterungen an der Rückseite des Racks oder der Ablage. Verwenden Sie die Käfigmuttern, wenn Ihr Rack oder Schrank quadratische Löcher hat.
+
+. Wenn Sie eine SG5760 haben, installieren Sie 12 Laufwerke in jedem der 5 Laufwerk-Schubladen.
++
+Sie müssen alle 60 Laufwerke installieren, um den korrekten Betrieb zu gewährleisten.
+
++
+.. Setzen Sie das ESD-Armband auf, und entfernen Sie die Antriebe aus der Verpackung.
+.. Lösen Sie die Hebel an der oberen Antriebsschublade, und schieben Sie die Schublade mit den Hebeln heraus.
+.. Heben Sie den Laufwerkgriff senkrecht an, und richten Sie die Tasten am Laufwerk an den Kerben in der Schublade aus.
++
+image::../media/appliance_drive_insertion.gif[Installieren Sie das Laufwerk in einer Appliance mit 60 Laufwerken]
+
+.. Drücken Sie vorsichtig auf die Oberseite des Laufwerks, und drehen Sie den Laufwerkgriff nach unten, bis das Laufwerk einrastet.
+.. Schieben Sie nach dem Einbau der ersten 12 Laufwerke die Schublade wieder nach innen, indem Sie die Mitte drücken und beide Hebel vorsichtig schließen.
+.. Wiederholen Sie diese Schritte für die anderen vier Schubladen.
+
+
+. Befestigen Sie die Frontverkleidung.
+

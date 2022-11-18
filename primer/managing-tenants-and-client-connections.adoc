@@ -1,0 +1,69 @@
+---
+permalink: primer/managing-tenants-and-client-connections.html 
+sidebar: sidebar 
+keywords: tenant, client, connect, connection 
+summary: Als Grid-Administrator erstellen und managen Sie die Mandantenkonten, die S3 und Swift Clients zum Speichern und Abrufen von Objekten verwenden, und managen die Konfigurationsoptionen, die steuern, wie Clients sich mit Ihrem StorageGRID System verbinden. 
+---
+= Management von Mandanten und Client-Verbindungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Als Grid-Administrator erstellen und managen Sie die Mandantenkonten, die S3 und Swift Clients zum Speichern und Abrufen von Objekten verwenden, und managen die Konfigurationsoptionen, die steuern, wie Clients sich mit Ihrem StorageGRID System verbinden.
+
+
+
+== Mandantenkonten
+
+Ein Mandantenkonto ermöglicht es Ihnen, festzulegen, wer mit Ihrem StorageGRID System Objekte speichern und abrufen kann und welche Funktionen ihnen zur Verfügung stehen. Mandantenkonten ermöglichen Client-Applikationen, die die S3-REST-API oder die Swift-REST-API unterstützen, um Objekte auf StorageGRID zu speichern und abzurufen. Jedes Mandantenkonto verwendet entweder das S3-Client-Protokoll oder das Swift-Client-Protokoll.
+
+Sie müssen für jedes Client-Protokoll mindestens ein Mandantenkonto erstellen, das zum Speichern von Objekten auf Ihrem StorageGRID System verwendet wird. Optional können Sie zusätzliche Mandantenkonten erstellen, wenn Sie die auf Ihrem System gespeicherten Objekte durch verschiedene Einheiten trennen möchten. Jedes Mandantenkonto verfügt über eigene föderierte bzw. lokale Gruppen und Benutzer sowie eigene Buckets (Container für Swift) und Objekte.
+
+Sie können mithilfe des Grid Manager oder der Grid-Management-API Mandantenkonten erstellen. Beim Erstellen eines Mandantenkontos geben Sie die folgenden Informationen an:
+
+* Anzeigename für den Mandanten (die Konto-ID des Mandanten wird automatisch zugewiesen und kann nicht geändert werden).
+* Gibt an, ob das Mandantenkonto das S3 oder Swift verwenden wird
+* Bei S3-Mandantenkonten: Unabhängig davon, ob das Mandantenkonto Plattform-Services nutzen darf. Wenn die Nutzung von Plattformdiensten zulässig ist, muss das Grid so konfiguriert werden, dass es seine Verwendung unterstützt.
+* Optional: Ein Storage-Kontingent für das Mandantenkonto – die maximale Anzahl der Gigabyte, Terabyte oder Petabyte, die für die Mandantenobjekte verfügbar sind. Das Storage-Kontingent eines Mandanten stellt eine logische Menge (Objektgröße) und keine physische Menge (Größe auf der Festplatte) dar.
+* Wenn die Identitätsföderation für das StorageGRID-System aktiviert ist, hat die föderierte Gruppe Root-Zugriffsberechtigungen, um das Mandantenkonto zu konfigurieren.
+* Wenn Single Sign-On (SSO) nicht für das StorageGRID-System verwendet wird, gibt das Mandantenkonto seine eigene Identitätsquelle an oder teilt die Identitätsquelle des Grid mit, und zwar mit dem anfänglichen Passwort für den lokalen Root-Benutzer des Mandanten.
+
+
+Wenn S3-Mandantenkonten die gesetzlichen Anforderungen erfüllen müssen, können Grid-Administratoren die globale S3-Objektsperreneinstellung für das StorageGRID System aktivieren. Wenn S3 Object Lock für das System aktiviert ist, können alle S3-Mandantenkonten Buckets erstellen, wobei S3 Object Lock aktiviert ist. Anschließend können für die Objektversionen in diesem Bucket die Einstellungen für Aufbewahrung und Aufbewahrung nach rechts angegeben werden.
+
+Nach dem Erstellen eines Mandantenkontos können sich Mandantenbenutzer bei Tenant Manager anmelden.
+
+
+
+== Client-Verbindungen zu StorageGRID-Nodes
+
+Bevor Mandantenbenutzer S3 oder Swift Clients verwenden können, um Daten in StorageGRID zu speichern und abzurufen, müssen Sie entscheiden, wie diese Clients eine Verbindung zu StorageGRID Nodes herstellen.
+
+Client-Applikationen können Objekte speichern oder abrufen, indem sie eine Verbindung mit folgenden Komponenten herstellen:
+
+* Der Lastverteilungsservice an Admin-Nodes oder Gateway-Nodes. Dies ist die empfohlene Verbindung.
+* Der CLB-Service auf Gateway-Knoten.
++
+
+NOTE: Der CLB-Service ist veraltet.
+
+* Storage-Nodes mit oder ohne externen Load Balancer.
+
+
+Bei der Konfiguration von StorageGRID, damit Clients den Lastverteilungsservice verwenden können, führen Sie die folgenden Schritte aus:
+
+. Konfiguration von Hochverfügbarkeitsgruppen (High Availability groups, HA-Gruppen) Wenn Sie eine HA-Gruppe erstellen, werden die Schnittstellen mehrerer Admin-Nodes und Gateway-Nodes in einer aktiv-Backup-Konfiguration platziert. Client-Verbindungen werden mithilfe der virtuellen IP-Adresse der HA-Gruppe hergestellt.
+. Konfigurieren von Endpunkten für den Load Balancer Service. Der Lastverteilungsservice an Admin-Nodes oder Gateway-Nodes verteilt eingehende Netzwerkverbindungen von Client-Anwendungen auf Storage-Nodes. Beim Erstellen eines Load Balancer-Endpunkts geben Sie eine Portnummer an, ob der Endpunkt HTTP- oder HTTPS-Verbindungen akzeptiert, der Client-Typ (S3 oder Swift), der den Endpunkt verwendet, und das Zertifikat, das für HTTPS-Verbindungen verwendet werden soll (falls zutreffend).
+. Geben Sie optional an, dass das Client-Netzwerk eines Node nicht vertrauenswürdig ist, um sicherzustellen, dass alle Verbindungen zum Client-Netzwerk des Nodes auf den Load Balancer-Endpunkten ausgeführt werden.
+
+
+.Verwandte Informationen
+* xref:../admin/index.adoc[StorageGRID verwalten]
+* xref:../tenant/index.adoc[Verwenden Sie ein Mandantenkonto]
+* xref:../s3/index.adoc[S3 verwenden]
+* xref:../swift/index.adoc[Verwenden Sie Swift]
+* xref:exploring-tenant-manager.adoc[Entdecken Sie den Tenant Manager]
+* xref:configuring-network-settings.adoc[Netzwerkeinstellungen konfigurieren]
+

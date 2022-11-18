@@ -1,0 +1,69 @@
+---
+permalink: sg5600/changing-link-configuration-of-e5600sg-controller.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, admin node, link configuration, link, configure, configuring, ethernet, port bond mode, port bond, network bond mode, network bond, link speed, vlan tagging, vlan tag 
+summary: Sie können die Ethernet-Link-Konfiguration des E5600SG-Controllers ändern. Sie können den Port Bond-Modus, den Netzwerk-Bond-Modus und die Verbindungsgeschwindigkeit ändern. 
+---
+= Ändern Sie die Link-Konfiguration des E5600SG-Controllers
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Ethernet-Link-Konfiguration des E5600SG-Controllers ändern. Sie können den Port Bond-Modus, den Netzwerk-Bond-Modus und die Verbindungsgeschwindigkeit ändern.
+
+xref:placing-appliance-into-maintenance-mode.adoc[Setzen Sie den E5600SG-Controller in den Wartungsmodus].
+
+
+NOTE: In seltenen Fällen kann es vorkommen, dass eine StorageGRID Appliance in den Wartungsmodus versetzt wird, damit die Appliance für den Remote-Zugriff nicht verfügbar ist.
+
+Die Ethernet-Link-Konfiguration des E5600SG-Controllers kann wie folgt geändert werden:
+
+* Ändern des *Port Bond Modus* von Fixed zu Aggregate oder von Aggregat zu Fixed
+* Ändern des *Netzwerk-Bond-Modus* von Active-Backup zu LACP oder von LACP zu Active-Backup
+* Aktivieren oder Deaktivieren von VLAN-Tagging oder Ändern des Werts einer VLAN-Tag-Nummer
+* Ändern der Verbindungsgeschwindigkeit von 10-GbE auf 25-GbE oder von 25-GbE auf 10-GbE
+
+
+.Schritte
+. Wählen Sie im Menü * Netzwerke konfigurieren* *Link-Konfiguration* aus.
++
+image::../media/link_configuration_option.gif[Verbindungskonfiguration]
+
+. [[change_Link_Configuration_sg5600, Start=2]]nehmen Sie die gewünschten Änderungen an der Link-Konfiguration vor.
++
+Weitere Informationen zu den Optionen finden Sie unter „`Konfigurieren von Netzwerkverbindungen`“.
+
+. Wenn Sie mit Ihrer Auswahl zufrieden sind, klicken Sie auf *Speichern*.
++
+
+NOTE: Wenn Sie Änderungen am Netzwerk oder an der Verbindung vorgenommen haben, über die Sie verbunden sind, können Sie die Verbindung verlieren. Wenn Sie nicht innerhalb einer Minute eine erneute Verbindung hergestellt haben, geben Sie die URL für das Installationsprogramm von StorageGRID-Geräten erneut ein. Verwenden Sie dazu eine der anderen IP-Adressen, die der Appliance zugewiesen sind: +
+`*https://_E5600SG_Controller_IP_:8443*`
+
++
+Wenn Sie Änderungen an den VLAN-Einstellungen vorgenommen haben, hat sich das Subnetz für die Appliance möglicherweise geändert. Wenn Sie die IP-Adressen für die Appliance ändern müssen, befolgen Sie die xref:setting-ip-configuration-sg5600.adoc[Legen Sie die IP-Konfiguration fest] Anweisungen.
+
+. Wählen Sie im Installationsprogramm der StorageGRID-Appliance die Option *Netzwerke konfigurieren* *Ping-Test* aus.
+. Verwenden Sie das Ping-Test-Tool, um die Verbindung zu IP-Adressen in Netzwerken zu prüfen, die möglicherweise von den in vorgenommenen Änderungen der Verbindungskonfiguration betroffen sind ,Verbindungskonfiguration ändern Schritt:
++
+Zusätzlich zu allen anderen Tests, die Sie durchführen möchten, bestätigen Sie, dass Sie die Grid-IP-Adresse des primären Admin-Knotens und die Grid-IP-Adresse von mindestens einem anderen Speicherknoten pingen können. Korrigieren Sie ggf. alle Probleme mit der Verbindungskonfiguration.
+
+. Sobald Sie zufrieden sind, dass die Änderungen an der Link-Konfiguration funktionieren, booten Sie den Node neu. Wählen Sie im Installationsprogramm der StorageGRID-Appliance die Option *Erweitert* *Controller neu starten* aus, und wählen Sie dann eine der folgenden Optionen aus:
++
+** Wählen Sie *Neustart in StorageGRID* aus, um den Controller neu zu starten, wobei der Knoten wieder in das Raster integriert wird. Wählen Sie diese Option, wenn Sie im Wartungsmodus ausgeführt werden und den Node in den normalen Betrieb zurückkehren möchten.
+** Wählen Sie *Neustart im Wartungsmodus* aus, um den Controller neu zu starten, wobei der Knoten noch im Wartungsmodus bleibt. (Diese Option ist nur verfügbar, wenn sich der Controller im Wartungsmodus befindet.) Wählen Sie diese Option aus, wenn weitere Wartungsmaßnahmen erforderlich sind, die Sie auf dem Node durchführen müssen, bevor Sie das Raster neu beitreten.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Booten Sie den Controller im Wartungsmodus neu]
+
++
+Die Appliance kann bis zu 20 Minuten dauern, bis sie neu gestartet und wieder in das Grid eingesetzt wird. Um zu überprüfen, ob das Neubooten abgeschlossen ist und dass der Node wieder dem Grid beigetreten ist, gehen Sie zurück zum Grid Manager. Auf der Seite *NODES* sollte ein normaler Status (kein Symbol) für den Appliance-Knoten angezeigt werden, was darauf hinweist, dass keine Alarme aktiv sind und der Knoten mit dem Raster verbunden ist.
+
++
+image::../media/nodes_menu.png[Das Raster des Appliance-Node wurde neu verbunden]
+
+
+
+
+
+xref:configuring-network-links-sg5600.adoc[Konfigurieren von Netzwerkverbindungen (SG5600)]

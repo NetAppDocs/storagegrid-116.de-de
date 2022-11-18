@@ -1,0 +1,145 @@
+---
+permalink: expand/adding-storage-capacity-for-erasure-coded-objects.html 
+sidebar: sidebar 
+keywords: erasure coding, capacity, storage nodes, ec, expand, expansion 
+summary: Wenn Ihre ILM-Richtlinie eine Regel zur Erstellung von Kopien zur Fehlerkorrektur enthält, müssen Sie planen, wo neuer Storage hinzugefügt werden muss und wann neuer Storage hinzugefügt werden muss. Die Menge des zusätzlichen Speichers und der Zeitpunkt der Hinzufügung können die nutzbare Speicherkapazität des Netzes beeinflussen. 
+---
+= Erweitern Sie Storage-Kapazität für Objekte, die nach dem Erasure-Coding-Verfahren codiert wurden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Ihre ILM-Richtlinie eine Regel zur Erstellung von Kopien zur Fehlerkorrektur enthält, müssen Sie planen, wo neuer Storage hinzugefügt werden muss und wann neuer Storage hinzugefügt werden muss. Die Menge des Hinzufügen von Speicherplatz und der Zeitpunkt der Hinzufügung können die nutzbare Speicherkapazität des Grid beeinflussen.
+
+Der erste Schritt bei der Planung einer Storage-Erweiterung ist das untersuchen der Regeln in Ihrer ILM-Richtlinie, die Objekte mit Erasure-Coding-Verfahren erstellt. Da StorageGRID für jedes Objekt, das mit Erasure-Coding-Verfahren codiert wurde, _k+m_ Fragmente erstellt und jedes Fragment auf einem anderen Storage-Node speichert, müssen Sie sicherstellen, dass mindestens _k+m_ Storage-Nodes nach der Erweiterung über Platz für neue Daten mit Erasure-Code verfügen. Wenn das Erasure Coding-Profil einen Site-Loss-Schutz bietet, müssen Sie jedem Standort Storage hinzufügen. Siehe xref:../ilm/index.adoc[Objektmanagement mit ILM].
+
+Die Anzahl der Nodes, die Sie hinzufügen müssen, hängt auch davon ab, wie voll die vorhandenen Nodes sind, wenn Sie die Erweiterung durchführen.
+
+
+
+== Allgemeine Empfehlung für die Erweiterung der Storage-Kapazität für Objekte mit Erasure-Coding-Verfahren
+
+Wenn detaillierte Berechnungen vermieden werden sollen, können Sie zwei Storage-Nodes pro Standort hinzufügen, wenn vorhandene Storage-Nodes eine Kapazität von 70 % erreichen.
+
+Diese allgemeine Empfehlung liefert angemessene Ergebnisse für eine Vielzahl von Erasure Coding-Schemata für Grids an einem Standort und für Grids, bei denen ein Erasure Coding-Verfahren einen Site-Loss-Schutz bietet.
+
+Um die Faktoren, die zu dieser Empfehlung führen, besser zu verstehen oder einen genaueren Plan für Ihren Standort zu entwickeln, überprüfen Sie den nächsten Abschnitt. Wenden Sie sich an Ihren NetApp Ansprechpartner, um eine für Ihre Situation optimierte Empfehlung zu erhalten.
+
+
+
+== Berechnen Sie die Anzahl der Erweiterungs-Storage-Nodes, die für Objekte mit Erasure-Coding-Verfahren hinzugefügt werden sollen
+
+Um die Erweiterung einer Implementierung zur Speicherung von Objekten, die mit Erasure-Coding-Verfahren codiert wurden, zu optimieren, müssen Sie viele Faktoren berücksichtigen:
+
+* Verwendung eines Schemas zur Einhaltung von Datenkonsistenz (Erasure Coding)
+* Merkmale des für das Verfahren zur Einhaltung von Datenkonsistenz verwendeten Storage Pools, einschließlich der Anzahl der Nodes an jedem Standort und der Menge an freiem Speicherplatz auf jedem Node
+* Gibt an, ob das Grid zuvor erweitert wurde (da sich der freie Speicherplatz pro Storage-Node möglicherweise nicht in etwa auf allen Nodes identisch befindet)
+* Die genaue Natur der ILM-Richtlinie, beispielsweise darüber, ob ILM-Regeln replizierte und Erasure-Coding-Objekte erstellen
+
+
+Die folgenden Beispiele zeigen, welche Auswirkungen das Erasure Coding-Schema hat, die Anzahl der Nodes im Storage-Pool und die Menge an freiem Speicherplatz auf jedem Node.
+
+Ähnliche Überlegungen wirken sich auf die Berechnungen für eine ILM-Richtlinie aus, die sowohl replizierte Daten als auch Daten mit Erasure-Coding-Verfahren speichert und die Berechnungen für ein zuvor erweitertes Grid enthält.
+
+
+IMPORTANT: Die Beispiele in diesem Abschnitt stellen die Best Practices für das Hinzufügen von Speicherkapazität zu einem StorageGRID System dar. Wenn Sie die empfohlene Anzahl an Nodes nicht hinzufügen können, müssen Sie möglicherweise das EC-Ausgleichverfahren durchführen, um zusätzliche, mit Erasure Coding versehenen Objekte zu speichern. Siehe xref:considerations-for-rebalancing-erasure-coded-data.adoc[Ausgleich von Daten, die zur Einhaltung von Datenkonsistenz (Erasure Coding].
+
+
+
+== Beispiel 1: Erweitertes Grid mit einem Standort, das 2+1 Erasure Coding verwendet
+
+Dieses Beispiel zeigt, wie ein einfaches Raster erweitert wird, das nur drei Storage-Nodes enthält.
+
+
+NOTE: Dieses Beispiel verwendet nur drei Storage-Nodes zur Vereinfachung. Es wird jedoch nicht empfohlen, nur drei Speicherknoten zu verwenden: Ein tatsächliches Produktionsnetz sollte mindestens _k+m_ + 1 Speicherknoten verwenden, um Redundanz zu erhalten, was vier Speicherknoten (2+1+1) entspricht.
+
+Gehen Sie folgendermaßen vor:
+
+* Alle Daten werden mithilfe des 2+1-Schemas zur Einhaltung von Datenkonsistenz gespeichert. Mit dem Erasure Coding-Schema 2+1 wird jedes Objekt als drei Fragmente gespeichert und jedes Fragment auf einem anderen Storage Node gespeichert.
+* Es gibt einen Standort mit drei Storage-Nodes. Jeder Storage-Node hat eine Gesamtkapazität von 100 TB.
+* Sie möchten erweitern, indem Sie neue 100-TB-Storage-Nodes hinzufügen.
+* Ziel ist es, mithilfe von Erasure Coding Daten auf die alten und neuen Nodes einen Ausgleich zu finden.
+
+
+Je nachdem, wie voll die Speicherknoten sind, wenn Sie die Erweiterung durchführen, stehen verschiedene Optionen zur Verfügung.
+
+* *Fügen Sie drei 100 TB Storage Nodes hinzu, wenn die vorhandenen Knoten zu 100% voll sind*
++
+In diesem Beispiel sind die vorhandenen Nodes zu 100 % ausgelastet. Da keine freie Kapazität vorhanden ist, müssen Sie sofort drei Nodes hinzufügen, um mit dem Erasure Coding von 2+1 fortzufahren.
+
++
+Nach Abschluss der Erweiterung werden bei Erasure-Coding von Objekten alle Fragmente auf die neuen Nodes platziert.
+
++
+image::../media/used_space_after_3_node_expansion.png[Belegter Speicherplatz Nach Erweiterung Mit 3 Knoten]
+
++
+
+NOTE: Durch diese Erweiterung werden Nodes _k+m_ hinzugefügt. Das Hinzufügen von vier Nodes wird aus Redundanzgründen empfohlen. Wenn Sie Storage-Nodes mit _k+m_-Erweiterung hinzufügen, wenn vorhandene Nodes zu 100 % voll sind, werden alle neuen Objekte auf den Erweiterungs-Nodes gespeichert. Wenn einer der neuen Nodes nicht verfügbar ist, kann StorageGRID die ILM-Anforderungen selbst vorübergehend nicht erfüllen.
+
+* *Fügen Sie zwei 100 TB Storage-Nodes hinzu, wenn die vorhandenen Storage-Nodes zu 67 % voll sind*
++
+In diesem Beispiel sind die vorhandenen Nodes zu 67 % ausgelastet. Da auf den vorhandenen Nodes 100 TB an freier Kapazität verfügbar sind (33 TB pro Node), müssen Sie nur noch zwei Nodes hinzufügen, wenn Sie die Erweiterung jetzt durchführen.
+
++
+Wenn Sie 200 TB zusätzliche Kapazität hinzufügen, können Sie das 2+1 Erasure Coding fortsetzen und die Daten, die mit Erasure Coding versehen sind, auf allen Nodes einen Ausgleich finden.
+
++
+image::../media/node_expansion_example_67_percent.png[Beispiel für Knotenerweiterung 1 67 Prozent]
+
+* *Fügen Sie einen 100 TB Storage Node hinzu, wenn die vorhandenen Speicherknoten zu 33% voll sind*
++
+In diesem Beispiel sind die vorhandenen Nodes zu 33 % ausgelastet. Da auf den vorhandenen Nodes 200 TB an freier Kapazität verfügbar sind (67 TB pro Node), müssen Sie nur noch einen Node hinzufügen, wenn Sie die Erweiterung jetzt durchführen.
+
++
+Wenn Sie 100 TB zusätzliche Kapazität hinzufügen, können Sie das 2+1 Erasure Coding fortsetzen und die Daten, die mit Erasure Coding versehen sind, auf allen Nodes einen Ausgleich finden.
+
++
+image::../media/node_expansion_example_33_percent.png[Beispiel für Knotenerweiterung 1 33 Prozent]
+
+
+
+
+
+== Beispiel 2: Erweitern Sie das Grid mit drei Standorten, das Erasure Coding für 6+3 verwendet
+
+Dieses Beispiel zeigt, wie ein Erweiterungsplan für ein Grid mit mehreren Standorten entwickelt wird, das über ein Erasure Coding-Schema mit einer größeren Anzahl von Fragmenten verfügt. Trotz der Unterschiede zwischen diesen Beispielen ist der empfohlene Erweiterungsplan sehr ähnlich.
+
+Gehen Sie folgendermaßen vor:
+
+* Alle Daten werden mithilfe des Erasure Coding-Schemas von 6+3 gespeichert. Mit dem Erasure Coding-Schema 6+3 wird jedes Objekt als 9 Fragmente gespeichert und jedes Fragment wird auf einem anderen Storage Node gespeichert.
+* Sie verfügen über drei Standorte und jeder Standort hat vier Storage-Nodes (insgesamt 12 Nodes). Jeder Node hat eine Gesamtkapazität von 100 TB.
+* Sie möchten erweitern, indem Sie neue 100-TB-Storage-Nodes hinzufügen.
+* Ziel ist es, mithilfe von Erasure Coding Daten auf die alten und neuen Nodes einen Ausgleich zu finden.
+
+
+Je nachdem, wie voll die Speicherknoten sind, wenn Sie die Erweiterung durchführen, stehen verschiedene Optionen zur Verfügung.
+
+* *Fügen Sie neun 100 TB Storage-Nodes (drei pro Standort) hinzu, wenn vorhandene Knoten zu 100 % voll sind*
++
+In diesem Beispiel sind die 12 vorhandenen Nodes zu 100 % ausgelastet. Da keine freie Kapazität zur Verfügung steht, müssen Sie sofort neun Nodes (900 TB zusätzliche Kapazität) hinzufügen, um mit dem Erasure Coding für 6+3 fortzufahren.
+
++
+Nach Abschluss der Erweiterung werden bei Erasure-Coding von Objekten alle Fragmente auf die neuen Nodes platziert.
+
++
+
+NOTE: Durch diese Erweiterung werden Nodes _k+m_ hinzugefügt. Das Hinzufügen von 12 Nodes (vier pro Standort) wird aus Redundanzgründen empfohlen. Wenn Sie Storage-Nodes mit _k+m_-Erweiterung hinzufügen, wenn vorhandene Nodes zu 100 % voll sind, werden alle neuen Objekte auf den Erweiterungs-Nodes gespeichert. Wenn einer der neuen Nodes nicht verfügbar ist, kann StorageGRID die ILM-Anforderungen selbst vorübergehend nicht erfüllen.
+
+* *Hinzufügen von sechs 100 TB Storage-Nodes (zwei pro Standort), wenn vorhandene Knoten zu 75 % voll sind*
++
+In diesem Beispiel sind die 12 vorhandenen Nodes zu 75 % ausgelastet. Da 300 TB freie Kapazität (25 TB pro Node) zur Verfügung stehen, müssen Sie nur sechs Nodes hinzufügen, wenn Sie die Erweiterung jetzt durchführen. Sie würden jedem der drei Standorte zwei Nodes hinzufügen.
+
++
+Wenn Sie 600 TB Storage-Kapazität hinzufügen, können Sie das Erasure Coding von 6 und 3 fortsetzen und einen Ausgleich für Daten mit Erasure Coding auf allen Nodes erzielen.
+
+* *Fügen Sie drei 100 TB Storage-Nodes (einer pro Standort) hinzu, wenn vorhandene Knoten zu 50 % voll sind*
++
+In diesem Beispiel sind die 12 vorhandenen Nodes zu 50 % ausgelastet. Da 600 TB freie Kapazität (50 TB pro Node) zur Verfügung stehen, müssen Sie nur drei Nodes hinzufügen, wenn Sie die Erweiterung jetzt durchführen. Sie würden jedem der drei Standorte einen Node hinzufügen.
+
++
+Wenn Sie 300 TB Storage-Kapazität hinzufügen, können Sie das Erasure Coding von 6 und 3 fortsetzen und einen Ausgleich für Daten mit Erasure Coding auf allen Nodes erzielen.
+
+

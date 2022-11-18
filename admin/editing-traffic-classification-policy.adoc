@@ -1,0 +1,49 @@
+---
+permalink: admin/editing-traffic-classification-policy.html 
+sidebar: sidebar 
+keywords: edit traffic classification policy 
+summary: Sie können eine Traffic-Klassifizierungsrichtlinie bearbeiten, um ihren Namen oder ihre Beschreibung zu ändern oder um Regeln oder Grenzen für die Richtlinie zu erstellen, zu bearbeiten oder zu löschen. 
+---
+= Bearbeiten Sie eine Traffic-Klassifizierungsrichtlinie
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Traffic-Klassifizierungsrichtlinie bearbeiten, um ihren Namen oder ihre Beschreibung zu ändern oder um Regeln oder Grenzen für die Richtlinie zu erstellen, zu bearbeiten oder zu löschen.
+
+.Was Sie und#8217;ll benötigen
+* Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+* Sie haben die Root-Zugriffsberechtigung.
+
+
+.Schritte
+. Wählen Sie *KONFIGURATION* *Netzwerk* *Verkehrsklassifizierung*.
++
+Die Seite Richtlinien zur Klassifizierung von Verkehrsdaten wird angezeigt, und die vorhandenen Richtlinien sind in der Tabelle aufgeführt.
+
++
+image::../media/traffic_classification_policies_main_screen_w_examples.png[Beispiele Für Richtlinien Zur Klassifizierung Von Verkehrsdaten]
+
+. Wählen Sie das Optionsfeld links neben der Richtlinie, die Sie bearbeiten möchten.
+. Wählen Sie *Bearbeiten*.
++
+Das Dialogfeld Richtlinie zur Klassifizierung von Datenverkehr bearbeiten wird angezeigt.
+
++
+image::../media/traffic_classification_policy_edit.png[Richtlinie Zur Klassifizierung Von Verkehrsdaten Bearbeiten]
+
+. Erstellen, Bearbeiten oder Entfernen übereinstimmender Regeln und Grenzen nach Bedarf.
++
+.. Um eine übereinstimmende Regel oder ein entsprechendes Limit zu erstellen, wählen Sie *Erstellen* aus, und befolgen Sie die Anweisungen zum Erstellen einer Regel oder zum Erstellen eines Limits.
+.. Um eine passende Regel oder Grenze zu bearbeiten, wählen Sie die Optionsschaltfläche für die Regel oder die Begrenzung aus, wählen Sie im Abschnitt *passende Regeln* oder im Abschnitt *Grenzen* die Option *Bearbeiten* und befolgen Sie die Anweisungen zum Erstellen einer Regel oder zum Erstellen eines Limits.
+.. Um eine passende Regel oder Begrenzung zu entfernen, wählen Sie die Optionsschaltfläche für die Regel oder die Begrenzung aus, und wählen Sie *Entfernen*. Wählen Sie dann *OK* aus, um zu bestätigen, dass Sie die Regel oder das Limit entfernen möchten.
+
+
+. Wenn Sie mit dem Erstellen oder Bearbeiten einer Regel oder eines Limits fertig sind, wählen Sie *Anwenden*.
+. Wenn Sie mit der Bearbeitung der Richtlinie fertig sind, wählen Sie *Speichern*.
++
+Die an der Richtlinie vorgenommenen Änderungen werden gespeichert, und der Netzwerkverkehr wird nun gemäß den Richtlinien zur Klassifizierung von Verkehrsmeldungen verarbeitet. Sie können Verkehrsdiagramme anzeigen und überprüfen, ob die Richtlinien die von Ihnen erwarteten Verkehrsgrenzwerte durchsetzen.
+
+

@@ -1,0 +1,26 @@
+---
+permalink: maintain/recovering-nodes-that-fail-to-start-normally.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, node did not start, node fail to start 
+summary: Wenn ein StorageGRID Node nicht ordnungsgemäß wieder in das Grid kommt und nicht als wiederherstellbar angezeigt wird, kann er beschädigt werden. Sie können den Node in den Recovery-Modus erzwingen. 
+---
+= Wiederherstellung von Nodes, die nicht ordnungsgemäß gestartet werden können
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn ein StorageGRID Node nicht ordnungsgemäß wieder in das Grid kommt und nicht als wiederherstellbar angezeigt wird, kann er beschädigt werden. Sie können den Node in den Recovery-Modus erzwingen.
+
+So erzwingen Sie den Knoten in den Wiederherstellungsmodus:
+
+`sudo storagegrid node force-recovery _node-name_`
+
+
+TIP: Bestätigen Sie vor Ausgabe dieses Befehls, dass die Netzwerkkonfiguration des Node korrekt ist. Möglicherweise ist es aufgrund falscher Netzwerkschnittstellenzuordnungen oder einer falschen Grid-Netzwerk-IP-Adresse oder eines falschen Gateways fehlgeschlagen, das Grid-Netzwerk erneut anzuschließen.
+
+
+IMPORTANT: Nach Ausstellung des `storagegrid node force-recovery _node-name_` Befehl, Sie müssen zusätzliche Recovery-Schritte für _Node-Name_ durchführen.
+
+xref:whats-next-performing-additional-recovery-steps-if-required.adoc[Nächste Schritte: Falls erforderlich, zusätzliche Recovery-Schritte durchführen]

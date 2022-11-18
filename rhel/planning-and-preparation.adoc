@@ -1,0 +1,47 @@
+---
+permalink: rhel/planning-and-preparation.html 
+sidebar: sidebar 
+keywords: installation planning red hat linux 
+summary: Bevor Sie Grid-Nodes implementieren und das StorageGRID Grid konfigurieren, müssen Sie die Schritte und Anforderungen für das Durchführen des Verfahrens kennen. 
+---
+= Vor der Installation (Red hat oder CentOS)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie Grid-Nodes implementieren und das StorageGRID Grid konfigurieren, müssen Sie die Schritte und Anforderungen für das Durchführen des Verfahrens kennen.
+
+Bei den Implementierungs- und Konfigurationsverfahren für StorageGRID ist bereits die Architektur und der Betrieb des StorageGRID Systems bekannt.
+
+Sie können einen oder mehrere Standorte gleichzeitig implementieren. Alle Standorte müssen jedoch die Mindestanforderungen erfüllen, die für mindestens drei Storage-Nodes bestehen.
+
+Vor dem Starten einer StorageGRID-Installation müssen folgende Schritte durchgeführt werden:
+
+* Informieren Sie sich über die Computing-Anforderungen von StorageGRID, einschließlich der minimalen CPU- und RAM-Anforderungen für jeden Node.
+* Erfahren Sie, wie StorageGRID diverse Netzwerke unterstützt, um die Trennung von Datenverkehr, Sicherheit und Verwaltung zu gewährleisten, und planen Sie, welche Netzwerke Sie mit den einzelnen StorageGRID Nodes verbinden möchten.
++
+Siehe StorageGRID Netzwerkrichtlinien.
+
+* Ermitteln der Storage- und Performance-Anforderungen der einzelnen Grid-Nodes
+* Ermitteln Sie eine Reihe von Servern (physische, virtuelle oder beides), die als Aggregat ausreichend Ressourcen zur Unterstützung der Anzahl und des Typs der zu implementierenden StorageGRID Nodes bieten.
+* Informieren Sie sich über die Anforderungen für die Node-Migration, wenn Sie geplante Wartungsarbeiten an physischen Hosts ohne Service-Unterbrechung durchführen möchten.
+* Sammeln Sie alle Netzwerkinformationen im Voraus. Wenn Sie nicht DHCP verwenden, sammeln Sie die IP-Adressen, die jedem Grid-Node zugewiesen werden sollen, und die IP-Adressen des Domain Name System (DNS) und der von Ihnen verwendeten NTP-Server (Network Time Protocol).
+* Installation, Anschluss und Konfiguration der gesamten erforderlichen Hardware – einschließlich aller StorageGRID Appliances – gemäß den Spezifikationen
++
+
+NOTE: Hardware-spezifische Installations- und Integrationsanweisungen sind nicht im Installationsverfahren für StorageGRID enthalten. Informationen zur Installation von StorageGRID Appliances finden Sie in der Installations- und Wartungsanleitung für Ihre Appliance.
+
+* Legen Sie fest, welche der verfügbaren Implementierungs- und Konfigurationstools Sie verwenden möchten.
+
+
+xref:../network/index.adoc[Netzwerkrichtlinien]
+
+xref:../sg100-1000/index.adoc[SG100- und SG1000-Services-Appliances]
+
+xref:../sg6000/index.adoc[SG6000 Storage-Appliances]
+
+xref:../sg5700/index.adoc[SG5700 Storage-Appliances]
+
+xref:../sg5600/index.adoc[SG5600 Storage Appliances]

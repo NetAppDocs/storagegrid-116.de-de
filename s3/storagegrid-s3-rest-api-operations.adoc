@@ -1,0 +1,52 @@
+---
+permalink: s3/storagegrid-s3-rest-api-operations.html 
+sidebar: sidebar 
+keywords: S3 REST API, S3 operations 
+summary: Auf der S3-REST-API wurden Vorgänge hinzugefügt, die speziell für das StorageGRID-System gelten. 
+---
+= StorageGRID S3 REST-API-Operationen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der S3-REST-API wurden Vorgänge hinzugefügt, die speziell für das StorageGRID-System gelten.
+
+* xref:../s3/get-bucket-consistency-request.adoc[Get Bucket-Konsistenzanforderung]
++
+Die GET Bucket-Konsistenzanforderung ermöglicht es Ihnen, das auf einen bestimmten Bucket angewendete Konsistenzlevel zu bestimmen.
+
+* xref:../s3/put-bucket-consistency-request.adoc[PUT Bucket-Konsistenzanforderung]
++
+In der PUT Bucket-Konsistenzanforderung können Sie die Konsistenzstufe für Operationen angeben, die in einem Bucket durchgeführt werden.
+
+* xref:../s3/get-bucket-last-access-time-request.adoc[Anforderung der Uhrzeit des letzten Bucket-Zugriffs ABRUFEN]
++
+In der Anforderung „letzte Bucket-Zugriffszeit“ KÖNNEN Sie festlegen, ob Updates der letzten Zugriffszeit für einzelne Buckets aktiviert oder deaktiviert sind.
+
+* xref:../s3/put-bucket-last-access-time-request.adoc[PUT Anforderung der Uhrzeit des letzten Bucket-Zugriffs]
++
+In der ANFORDERUNG PUT Bucket Last Access Time können Sie Updates der letzten Zugriffszeit für einzelne Buckets aktivieren oder deaktivieren. Durch das Deaktivieren von Updates der letzten Zugriffszeit wird die Performance verbessert. Dies ist die Standardeinstellung für alle Buckets, die mit Version 10.3 oder höher erstellt wurden.
+
+* xref:../s3/delete-bucket-metadata-notification-configuration-request.adoc[Konfigurationsanforderung für Bucket-Metadaten-Benachrichtigungen LÖSCHEN]
++
+Mit der Konfigurationsanforderung FÜR DIE BENACHRICHTIGUNG „BUCKET-Metadaten LÖSCHEN“ können Sie den Suchintegrationsdienst für einzelne Buckets deaktivieren, indem Sie die Konfigurations-XML löschen.
+
+* xref:../s3/get-bucket-metadata-notification-configuration-request.adoc[Konfigurationsanforderung FÜR Bucket-Metadaten-Benachrichtigungen ABRUFEN]
++
+Die Konfigurationsanforderung FÜR GET Bucket-Metadaten-Benachrichtigungen ermöglicht es Ihnen, die Konfigurations-XML abzurufen, die zur Konfiguration der Suchintegration für einzelne Buckets verwendet wird.
+
+* xref:../s3/put-bucket-metadata-notification-configuration-request.adoc[PUT Anforderung der Bucket-Metadaten-Benachrichtigung]
++
+Die Konfigurationsanforderung FÜR PUT Bucket-Metadaten-Benachrichtigungen ermöglicht es Ihnen, den Such-Integrationsservice für einzelne Buckets zu aktivieren. Die XML-XML-Konfiguration für die Metadatenbenachrichtigung, die Sie im Anforderungsindex angeben, gibt die Objekte an, deren Metadaten an den Zielsuchindex gesendet werden.
+
+* xref:../s3/get-storage-usage-request.adoc[Storage-Nutzungsanforderung ABRUFEN]
++
+Der Antrag ZUR GET Storage-Nutzung gibt Ihnen die Gesamtzahl des verwendeten Storage durch ein Konto und für jeden mit dem Account verknüpften Bucket an.
+
+* xref:../s3/deprecated-bucket-requests-for-legacy-compliance.adoc[Veraltete Bucket-Anforderungen für ältere Compliance]
++
+Möglicherweise müssen Sie die StorageGRID S3 REST-API zum Management von Buckets verwenden, die mit der älteren Compliance-Funktion erstellt wurden.
+
+

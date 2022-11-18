@@ -1,0 +1,199 @@
+---
+permalink: fabricpool/using-storagegrid-ilm-with-fabricpool-data.html 
+sidebar: sidebar 
+keywords: FabricPool, requirements, ILM, information lifecycle management, ILM rule, ILM rules, ILM policy, erasure-coding, replication, cloud storage pool, glacier 
+summary: 'Wenn Sie FabricPool für das Tiering von Daten zu StorageGRID verwenden, müssen Sie die Anforderungen für die Erstellung von StorageGRID Information Lifecycle Management \ (ILM\) Regeln und eine ILM-Richtlinie zum Management von FabricPool Daten kennen. Sie müssen sicherstellen, dass die ILM-Regeln für FabricPool Daten nicht von Unterbrechungen geprägt sind.' 
+---
+= Nutzen Sie das Information Lifecycle Management von StorageGRID mit FabricPool-Daten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie FabricPool für das Tiering von Daten zu StorageGRID verwenden, müssen Sie die Anforderungen für die Erstellung von StorageGRID Information Lifecycle Management (ILM)-Regeln und eine ILM-Richtlinie für das Management von FabricPool-Daten kennen. Sie müssen sicherstellen, dass die ILM-Regeln für FabricPool Daten nicht von Unterbrechungen geprägt sind.
+
+
+IMPORTANT: FabricPool ist nicht mit den StorageGRID ILM-Regeln oder -Richtlinien bekannt. Wenn die StorageGRID ILM-Richtlinie falsch konfiguriert ist, kann es zu Datenverlusten kommen. Siehe xref:../ilm/index.adoc[Objektmanagement mit ILM] Für detaillierte ILM-Anweisungen.
+
+Diese Richtlinien prüfen, um sicherzustellen, dass Ihre ILM-Regeln und ILM-Richtlinien für FabricPool Daten und Ihre geschäftlichen Anforderungen geeignet sind. Wenn Sie bereits StorageGRID ILM verwenden, müssen Sie möglicherweise Ihre aktive ILM-Richtlinie aktualisieren, um diese Richtlinien zu erfüllen.
+
+* Sie können jede beliebige Kombination aus Replizierung und Verfahren zur Einhaltung von Datenkonsistenz zum Schutz von Cloud-Tiering-Daten verwenden.
++
+Die empfohlene Best Practice besteht darin, ein 2+1-Verfahren zur Einhaltung von Datenkonsistenz an einem Standort zu verwenden, um eine kosteneffiziente Datensicherung zu gewährleisten. Das Verfahren zur Einhaltung von Datenkonsistenz benötigt zwar mehr CPU, bietet aber wesentlich weniger Storage-Kapazität als Replizierung. Die Schemata 4+1 und 6+1 benötigen weniger Kapazität als das Schema 2+1. Die Schemata 4+1 und 6+1 sind jedoch weniger flexibel, wenn Sie während der Grid-Erweiterung Storage-Nodes hinzufügen müssen. Weitere Informationen finden Sie unter xref:../expand/adding-storage-capacity-for-erasure-coded-objects.adoc[Erweitern Sie Storage-Kapazität für Objekte, die nach dem Erasure-Coding-Verfahren codiert wurden].
+
+* Jede auf FabricPool-Daten angewandte Regel muss entweder Erasure Coding verwenden oder mindestens zwei replizierte Kopien erstellen.
++
+
+IMPORTANT: Eine ILM-Regel, die immer nur eine replizierte Kopie erstellt, gefährdet Daten permanent. Wenn nur eine replizierte Kopie eines Objekts vorhanden ist, geht dieses Objekt verloren, wenn ein Speicherknoten ausfällt oder einen beträchtlichen Fehler hat. Während Wartungsarbeiten wie Upgrades verlieren Sie auch vorübergehend den Zugriff auf das Objekt.
+
+* Verwenden Sie keine ILM-Regel, die Daten des FabricPool Cloud-Tiers ablaufen oder löschen soll. Legen Sie die Aufbewahrungsdauer in jeder ILM-Regel auf „Forever“ fest, um zu gewährleisten, dass FabricPool-Objekte nicht durch StorageGRID ILM gelöscht werden.
+* Erstellen Sie keine Regeln, nach denen FabricPool Cloud-Tiering-Daten aus dem Bucket in einen anderen Speicherort verschoben werden. Mit ILM-Regeln können FabricPool-Daten nicht mithilfe eines Archivierungs-Nodes auf Band archiviert werden. Alternativ können Sie zum Verschieben von FabricPool-Daten in einen anderen Objektspeicher einen Cloud-Storage-Pool verwenden.
++
+
+NOTE: Die Verwendung von Cloud Storage Pools mit FabricPool wird nicht unterstützt, weil die zusätzliche Latenz zum Abrufen eines Objekts aus dem Cloud-Storage-Pool-Ziel hinzugefügt wird.
+
+* Ab ONTAP 9.8 können Sie optional Objekt-Tags erstellen, um Daten in Tiers zu klassifizieren und zu sortieren und das Management zu erleichtern. Beispielsweise können Sie Tags nur auf FabricPool Volumes festlegen, die an StorageGRID angebunden sind. Wenn Sie dann ILM-Regeln in StorageGRID erstellen, können Sie diese Daten mithilfe des erweiterten Filter Object Tag auswählen und platzieren.
+
+
+
+
+== Beispiel für eine ILM-Richtlinie für FabricPool-Daten
+
+Nutzen Sie diese einfache Beispielrichtlinie als Ausgangspunkt für Ihre eigenen ILM-Regeln und -Richtlinien.
+
+Das Beispiel geht davon aus, dass Sie die ILM-Regeln und eine ILM-Richtlinie für ein StorageGRID System mit vier Storage-Nodes in einem einzelnen Datacenter in Denver, Colorado, entwerfen. Die FabricPool-Daten in diesem Beispiel verwenden einen Bucket mit dem Namen `fabricpool-bucket`.
+
+
+CAUTION: Die folgenden ILM-Regeln und -Richtlinien sind nur Beispiele. Es gibt viele Möglichkeiten zur Konfiguration von ILM-Regeln. Vor der Aktivierung einer neuen Richtlinie sollte die vorgeschlagene Richtlinie simuliert werden, um zu bestätigen, dass sie wie vorgesehen funktioniert, um Inhalte vor Verlust zu schützen. Weitere Informationen finden Sie unter xref:../ilm/index.adoc[Objektmanagement mit ILM].
+
+.Schritte
+. Erstellen Sie einen Speicherpool mit dem Namen *DEN*. Wählen Sie den Standort Denver aus.
+. Erstellen Sie ein Erasure-Coding-Profil mit dem Namen *2 plus 1*. Wählen Sie die 2+1-Löschcodierung und den *DEN*-Speicherpool aus.
+. Erstellen einer ILM-Regel, die sich nur auf die Daten in bezieht `fabricpool-bucket`. In dieser Beispielregel werden Kopien mit Verfahren zur Fehlerkorrektur erstellt.
++
+[cols="1a,2a"]
+|===
+| Regeldefinition | Beispielwert 
+
+
+ a| 
+Regelname
+ a| 
+2 plus 1 Erasure Coding für FabricPool-Daten
+
+
+
+ a| 
+Bucket-Name
+ a| 
+`fabricpool-bucket`
+
+Sie könnten auch nach dem FabricPool-Mandantenkonto filtern.
+
+
+
+ a| 
+Erweiterte Filterung
+ a| 
+Objektgröße (MB) größer als 0.2 MB.
+
+*Hinweis:* FabricPool schreibt nur 4 MB Objekte, aber Sie müssen einen Filter für Objektgröße hinzufügen, da diese Regel das Erasure Coding verwendet.
+
+
+
+ a| 
+Referenzzeit
+ a| 
+Aufnahmezeit
+
+
+
+ a| 
+Platzierung
+ a| 
+Ab Tag 0 dauerhaft speichern
+
+
+
+ a| 
+Typ
+ a| 
+Erasure Coding
+
+
+
+ a| 
+Standort
+ a| 
+DEN (2 plus 1)
+
+
+
+ a| 
+Aufnahmeverhalten
+ a| 
+Ausgeglichen
+
+|===
+. Erstellen einer ILM-Regel, die zwei replizierte Kopien von Objekten erstellt, die nicht mit der ersten Regel übereinstimmt. Wählen Sie keinen grundlegenden Filter (Mandantenkonto oder Bucket-Name) oder erweiterte Filter aus.
++
+[cols="1a,2a"]
+|===
+| Regeldefinition | Beispielwert 
+
+
+ a| 
+Regelname
+ a| 
+Zwei replizierte Kopien
+
+
+
+ a| 
+Bucket-Name
+ a| 
+_None_
+
+
+
+ a| 
+Erweiterte Filterung
+ a| 
+_None_
+
+
+
+ a| 
+Referenzzeit
+ a| 
+Aufnahmezeit
+
+
+
+ a| 
+Platzierung
+ a| 
+Ab Tag 0 dauerhaft speichern
+
+
+
+ a| 
+Typ
+ a| 
+Datenreplizierung
+
+
+
+ a| 
+Standort
+ a| 
+DEN
+
+
+
+ a| 
+Kopien
+ a| 
+2
+
+
+
+ a| 
+Aufnahmeverhalten
+ a| 
+Ausgeglichen
+
+|===
+. Erstellen Sie eine vorgeschlagene ILM-Richtlinie und wählen Sie beide Regeln aus. Da die Replikationsregel keine Filter verwendet, kann es sich um die Standardregel (letzte) für die Richtlinie handelt.
+. Aufnahme von Testobjekten in das Raster
+. Simulieren Sie die Richtlinie mit den Testobjekten, um das Verhalten zu überprüfen.
+. Aktivieren Sie die Richtlinie.
+
+
+Wenn diese Richtlinie aktiviert ist, speichert StorageGRID Objektdaten wie folgt:
+
+* Die Daten-Tiering von FabricPool in `fabricpool-bucket` Wird mithilfe des 2+1-Schemas zur Einhaltung von Datenkonsistenz (Erasure Coding) codiert. Zwei Datenfragmente und ein Paritätsfragment werden auf drei verschiedenen Storage Nodes platziert.
+* Alle Objekte in allen anderen Buckets werden repliziert. Es werden zwei Kopien erstellt und auf zwei verschiedenen Speicherknoten platziert.
+* Die von Erasure Coding und replizierten Kopien werden in StorageGRID aufbewahrt, bis sie vom S3 Client gelöscht werden. StorageGRID ILM löscht diese Elemente nie.
+

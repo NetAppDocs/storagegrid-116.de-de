@@ -1,0 +1,39 @@
+---
+permalink: primer/using-snmp-monitoring.html 
+sidebar: sidebar 
+keywords: snmp, simple network management protocol, agent, trap, inform, mib 
+summary: 'Wenn Sie StorageGRID mit dem Simple Network Management Protocol \(SNMP\) überwachen möchten, können Sie den SNMP-Agent mithilfe des Grid-Managers konfigurieren.' 
+---
+= Verwenden Sie SNMP-Überwachung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie StorageGRID mit dem Simple Network Management Protocol (SNMP) überwachen möchten, können Sie den SNMP-Agent mithilfe des Grid-Managers konfigurieren.
+
+Auf jedem StorageGRID-Knoten wird ein SNMP-Agent oder Daemon ausgeführt, der eine Management Information Base (MIB) bereitstellt. Die StorageGRID MIB enthält Tabellen- und Benachrichtigungsdefinitionen für Alarme und Alarme. Jeder StorageGRID-Knoten unterstützt auch eine Untergruppe von MIB-II-Objekten.
+
+Zunächst ist SNMP auf allen Knoten deaktiviert. Wenn Sie den SNMP-Agent konfigurieren, erhalten alle StorageGRID-Knoten die gleiche Konfiguration.
+
+Der StorageGRID SNMP Agent unterstützt alle drei Versionen des SNMP-Protokolls. Der Agent bietet schreibgeschützten MIB-Zugriff für Abfragen, und es kann zwei Arten von ereignisgesteuerten Benachrichtigungen an ein Verwaltungssystem senden:
+
+* *Traps* sind Benachrichtigungen, die vom SNMP-Agent gesendet werden, die keine Bestätigung durch das Verwaltungssystem erfordern. Traps dienen dazu, das Managementsystem über etwas innerhalb von StorageGRID zu informieren, wie z. B. eine Warnung, die ausgelöst wird. Traps werden in allen drei Versionen von SNMP unterstützt.
+* *Informiert* sind ähnlich wie Traps, aber sie erfordern eine Bestätigung durch das Management-System. Wenn der SNMP-Agent innerhalb einer bestimmten Zeit keine Bestätigung erhält, wird die Benachrichtigung erneut gesendet, bis eine Bestätigung empfangen wurde oder der maximale Wiederholungswert erreicht wurde. Die Informationsunterstützung wird in SNMPv2c und SNMPv3 unterstützt.
+
+
+Trap- und Inform-Benachrichtigungen werden in folgenden Fällen versendet:
+
+* Eine Standardwarnung oder eine benutzerdefinierte Meldung wird für jeden Schweregrad ausgelöst. Um SNMP-Benachrichtigungen für eine Warnung zu unterdrücken, müssen Sie eine Stille für die Warnung konfigurieren. Benachrichtigungen werden von jedem Admin-Node gesendet, der als bevorzugter Absender konfiguriert wurde.
+* Bestimmte Alarme (Altsystem) werden mit einem bestimmten Schweregrad oder höher ausgelöst.
++
+
+NOTE: SNMP-Benachrichtigungen werden nicht für jeden Alarm oder jeden Schweregrad gesendet.
+
+
+
+*Verwandte Informationen*
+
+* xref:../monitor/index.adoc[Monitoring und Fehlerbehebung]
+

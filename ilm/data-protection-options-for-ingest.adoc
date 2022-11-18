@@ -1,0 +1,69 @@
+---
+permalink: ilm/data-protection-options-for-ingest.html 
+sidebar: sidebar 
+keywords: ingest options, balanced ingest, strict ingest, dual-commit ingest 
+summary: 'Bei der Erstellung einer ILM-Regel geben Sie eine von drei Optionen zum Schutz von Objekten bei ihrer Aufnahme an: Doppelte Provisionierung, Balance oder strikte. Je nach Ihrer Wahl erstellt StorageGRID später vorläufige Kopien und Warteschlangen für die ILM-Bewertung. Alternativ nutzt es die synchrone Platzierung und erstellt sofort Kopien zur Erfüllung der ILM-Anforderungen.' 
+---
+= Datensicherungsoptionen für die Aufnahme
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei der Erstellung einer ILM-Regel geben Sie eine von drei Optionen zum Schutz von Objekten bei ihrer Aufnahme an: Doppelte Provisionierung, Balance oder strikte. Je nach Ihrer Wahl erstellt StorageGRID später vorläufige Kopien und Warteschlangen für die ILM-Bewertung. Alternativ nutzt es die synchrone Platzierung und erstellt sofort Kopien zur Erfüllung der ILM-Anforderungen.
+
+
+
+== Flussdiagramm mit drei Aufnahmeoptionen
+
+Das Flussdiagramm zeigt, was passiert, wenn Objekte mit einer ILM-Regel abgeglichen werden, die jede der drei Aufnahmeoptionen nutzt.
+
+image::../media/ingest_object_lifecycle.png[Das Diagramm zeigt die Art und Weise der Objektaufnahme für die einzelnen Datensicherungsoptionen]
+
+
+
+== Doppelte Provisionierung
+
+Wenn Sie die Option Dual Commit auswählen, erstellt StorageGRID sofort interim-Objektkopien auf zwei verschiedenen Storage-Nodes und gibt dem Client eine „`Ingest Successful`“-Nachricht zurück. Das Objekt wird zur ILM-Evaluierung in eine Warteschlange gestellt und Kopien, die den Anweisungen zur Platzierung der Regel entsprechen, werden später erstellt.
+
+
+
+=== Wann sollten Sie die Option Dual Commit verwenden
+
+Verwenden Sie in einem der folgenden Fälle die Dual-Commit-Option:
+
+* Die wichtigsten Überlegungen dabei sind die Verwendung von ILM-Regeln für mehrere Standorte und die Client-Erfassungs-Latenz. Bei der Verwendung von Dual-Commit müssen Sie sicherstellen, dass das Grid zusätzliche Aufgaben zur Erstellung und Entfernung der Dual-Commit-Kopien ausführen kann, wenn sie ILM nicht erfüllen. Im Detail:
++
+** Die Last am Grid muss so gering sein, dass kein ILM-Rückstand mehr vorhanden ist.
+** Das Grid muss über überschüssige Hardware-Ressourcen verfügen (IOPS, CPU, Arbeitsspeicher, Netzwerkbandbreite usw.).
+
+
+* Sie verwenden ILM-Regeln für mehrere Standorte und die WAN-Verbindung zwischen den Standorten weist normalerweise eine hohe Latenz oder eine begrenzte Bandbreite auf. In diesem Szenario kann die Verwendung der Dual-Commit-Option dazu beitragen, Client-Timeouts zu verhindern. Bevor Sie sich für die Dual Commit-Option entscheiden, sollten Sie die Client-Applikation mit realistischen Workloads testen.
+
+
+
+
+== Streng
+
+Wenn Sie die strenge Option auswählen, verwendet StorageGRID bei der Aufnahme eine synchrone Platzierung und erstellt sofort alle Objektkopien, die in der Plazierung der Regel angegeben sind. Die Aufnahme schlägt fehl, wenn StorageGRID beispielsweise nicht alle Kopien erstellen kann, da ein benötigter Speicherplatz vorübergehend nicht verfügbar ist. Der Client muss den Vorgang wiederholen.
+
+
+
+=== Wann die strenge Option verwendet werden soll
+
+Verwenden Sie die Option streng, wenn Sie eine betriebliche oder gesetzliche Anforderung haben, Objekte sofort nur an den in der ILM-Regel aufgeführten Standorten zu speichern. Beispielsweise müssen Sie zur Einhaltung gesetzlicher Vorgaben unter Umständen die strenge Option und einen erweiterten Filter für Speicherortbeschränkungen verwenden, um zu gewährleisten, dass Objekte nie in einem bestimmten Rechenzentrum gespeichert werden.
+
+xref:example-5-ilm-rules-and-policy-for-strict-ingest-behavior.adoc[Beispiel 5: ILM-Regeln und Richtlinie für striktes Ingest-Verhalten]
+
+
+
+== Ausgeglichen
+
+Wenn Sie die Option „Ausgleich“ auswählen, verwendet StorageGRID bei der Aufnahme auch die synchrone Platzierung und erstellt sofort alle Kopien, die in den Anweisungen zur Platzierung der Regel angegeben sind. Falls StorageGRID nicht sofort alle Kopien erstellen kann, verwendet er dagegen die doppelte Provisionierung.
+
+
+
+=== Wann sollte die Option „Balance“ verwendet werden
+
+Die ausgewogene Option erzielt die beste Kombination aus Datensicherung, Grid-Performance und Aufnahme-Erfolg. Balance ist die Standardoption im ILM-Regelassistenten.

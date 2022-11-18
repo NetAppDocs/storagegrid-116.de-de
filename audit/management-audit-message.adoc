@@ -1,0 +1,27 @@
+---
+permalink: audit/management-audit-message.html 
+sidebar: sidebar 
+keywords: storagegrid, audit, message, management, user request, user requests 
+summary: Die Kategorie Management protokolliert Benutzeranfragen an die Management-API. 
+---
+= Management-Audit-Nachricht
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Kategorie Management protokolliert Benutzeranfragen an die Management-API.
+
+|===
+| Codieren | Titel und Beschreibung der Nachricht | Siehe 
+
+
+ a| 
+MGAU
+ a| 
+Management-API-Audit-Nachricht: Ein Protokoll von Benutzeranfragen.
+ a| 
+xref:mgau-management-audit-message.adoc[MGAU: Management-Audit-Nachricht]
+
+|===

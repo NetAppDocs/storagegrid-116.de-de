@@ -1,0 +1,69 @@
+---
+permalink: ilm/creating-and-assigning-storage-grades.html 
+sidebar: sidebar 
+keywords: what is a storage grade, create storage grade 
+summary: Speicherklassen identifizieren den Speichertyp, der von einem Speicherknoten verwendet wird. Sie können Storage-Klassen erstellen, wenn ILM-Regeln bestimmte Objekte auf bestimmten Storage-Nodes anstatt auf allen Nodes am Standort platzieren sollen. Möglicherweise möchten Sie beispielsweise bestimmte Objekte auf Ihren schnellsten Storage-Nodes wie z. B. StorageGRID All-Flash Storage Appliances speichern. 
+---
+= Speicherklassen erstellen und zuweisen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Speicherklassen identifizieren den Speichertyp, der von einem Speicherknoten verwendet wird. Sie können Storage-Klassen erstellen, wenn ILM-Regeln bestimmte Objekte auf bestimmten Storage-Nodes anstatt auf allen Nodes am Standort platzieren sollen. Möglicherweise möchten Sie beispielsweise bestimmte Objekte auf Ihren schnellsten Storage-Nodes wie z. B. StorageGRID All-Flash Storage Appliances speichern.
+
+.Was Sie und#8217;ll benötigen
+* Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+* Sie haben spezifische Zugriffsberechtigungen.
+
+
+Wenn Sie mehr als einen Storage-Typ verwenden, können Sie optional eine Storage-Klasse erstellen, um jeden Typ zu identifizieren. Beim Erstellen von Speicherklassen können Sie bei der Konfiguration von Speicherpools einen bestimmten Typ von Speicherknoten auswählen.
+
+Wenn die Speicherklasse kein Problem ist (beispielsweise sind alle Speicherknoten identisch), können Sie dieses Verfahren überspringen und bei der Konfiguration von Speicherpools die Standardspeicherklasse Alle Speicherknoten verwenden.
+
+Wenn Sie in einer Erweiterung einen neuen Storage-Node hinzufügen, wird dieser Node zur Standardspeicherklasse Alle Storage-Nodes hinzugefügt. Das Ergebnis:
+
+* Wenn eine ILM-Regel einen Storage-Pool mit der Klasse „Alle Storage-Nodes“ verwendet, kann der neue Node unmittelbar nach Abschluss der Erweiterung verwendet werden.
+* Wenn eine ILM-Regel einen Storage-Pool mit einer benutzerdefinierten Storage-Klasse verwendet, wird der neue Node erst verwendet, nachdem Sie den Node wie unten beschrieben manuell die benutzerdefinierte Storage-Klasse zugewiesen haben.
+
+
+
+NOTE: Beim Erstellen von Lagergüten nicht mehr als erforderlich Speicherklassen erstellen. Erstellen Sie beispielsweise nicht für jeden Storage-Node eine Storage-Klasse. Weisen Sie jede Storage-Klasse zwei oder mehr Nodes zu. Storage-Klassen, die nur einem Node zugewiesen sind, können ILM-Backlogs verursachen, wenn der Node nicht mehr verfügbar ist.
+
+.Schritte
+. Wählen Sie *ILM* * Storage-Klassen* aus.
+. Speicherklasse erstellen:
++
+.. Wählen Sie für jede zu definierenden Speicherklasse *Einfügen* aus image:../media/icon_nms_insert.gif["Symbol einfügen"] Um eine Zeile hinzuzufügen und eine Bezeichnung für die Speicherklasse einzugeben.
++
+Die Standard-Speicherstufe kann nicht geändert werden. Es ist für neue, während einer StorageGRID Systemerweiterung hinzugefügte Storage Nodes reserviert.
+
++
+image::../media/editing_storage_grades.gif[Seite „Speicherstufen“]
+
+.. Um eine vorhandene Speicherklasse zu bearbeiten, wählen Sie *Bearbeiten* image:../media/icon_nms_edit.gif["Symbol bearbeiten"] Und ändern Sie die Beschriftung nach Bedarf.
++
+
+NOTE: Speicherklassen können nicht gelöscht werden.
+
+.. Wählen Sie *Änderungen Anwenden*.
++
+Diese Speicherklassen sind jetzt für die Zuordnung zu Speicherknoten verfügbar.
+
+
+
+. Weisen Sie einem Storage-Node eine Storage-Klasse zu:
++
+.. Wählen Sie für den LDR-Service jedes Speicherknotens *Bearbeiten* aus image:../media/icon_nms_edit.gif["Symbol bearbeiten"] Und wählen Sie eine Speicherklasse aus der Liste aus.
++
+image::../media/assigning_storage_grades_to_storage_nodes.gif[Seite „Speicherstufen“]
+
++
+
+IMPORTANT: Weisen Sie einem bestimmten Speicherknoten nur einmal eine Speicherklasse zu. Bei einem nach einem Ausfall wiederhergestellten Storage-Node wird die zuvor zugewiesene Storage-Klasse erhalten. Ändern Sie diese Zuweisung nicht, wenn die ILM-Richtlinie aktiviert ist. Wenn die Zuweisung geändert wird, werden die Daten auf Basis der neuen Speicherklasse gespeichert.
+
+.. Wählen Sie *Änderungen Anwenden*.
+
+
+

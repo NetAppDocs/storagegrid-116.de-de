@@ -1,0 +1,94 @@
+---
+permalink: s3/get-bucket-consistency-request.html 
+sidebar: sidebar 
+keywords: S3 REST API, S3 operations, GET bucket consistency request 
+summary: Die GET Bucket-Konsistenzanforderung ermöglicht es Ihnen, das auf einen bestimmten Bucket angewendete Konsistenzlevel zu bestimmen. 
+---
+= Get Bucket-Konsistenzanforderung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die GET Bucket-Konsistenzanforderung ermöglicht es Ihnen, das auf einen bestimmten Bucket angewendete Konsistenzlevel zu bestimmen.
+
+Die standardmäßigen Konsistenzkontrollen garantieren „Read-after-Write“ für neu erstellte Objekte.
+
+Sie verfügen über die s3:GetBucketConsistency-Berechtigung oder als Account-Root, um diesen Vorgang abzuschließen.
+
+
+
+== Anforderungsbeispiel
+
+[source, subs="specialcharacters,quotes"]
+----
+GET /bucket?x-ntap-sg-consistency HTTP/1.1
+Date: _date_
+Authorization: _authorization string_
+Host: _host_
+----
+
+
+== Antwort
+
+In der XML-Antwortantwort `<Consistency>` Gibt einen der folgenden Werte zurück:
+
+|===
+| Konsistenzkontrolle | Beschreibung 
+
+
+ a| 
+Alle
+ a| 
+Alle Nodes erhalten die Daten sofort, sonst schlägt die Anfrage fehl.
+
+
+
+ a| 
+Stark global
+ a| 
+Garantierte Konsistenz bei Lese-nach-Schreibvorgängen für alle Client-Anfragen an allen Standorten.
+
+
+
+ a| 
+Stark vor Ort
+ a| 
+Garantiert Konsistenz bei Lese-nach-Schreibvorgängen für alle Client-Anfragen innerhalb eines Standorts.
+
+
+
+ a| 
+Read-after-New-Write-Funktion
+ a| 
+(Standard) konsistente Lese-/Schreibvorgänge für neue Objekte und eventuelle Konsistenz bei Objekt-Updates. Hochverfügbarkeit und garantierte Datensicherung Am ehesten entspricht die Konsistenzgarantie von Amazon S3.
+
+*Hinweis:* Wenn Ihre Anwendung HEAD Requests für Objekte verwendet, die nicht vorhanden sind, erhalten Sie möglicherweise eine hohe Anzahl von 500 internen Serverfehlern, wenn ein oder mehrere Speicherknoten nicht verfügbar sind. Um diese Fehler zu vermeiden, setzen Sie das Consistency Control auf „`available`“, es sei denn, Sie benötigen Konsistenzgarantien ähnlich wie Amazon S3.
+
+
+
+ a| 
+Verfügbar (eventuelle Konsistenz für DEN HAUPTBETRIEB)
+ a| 
+Verhält sich wie die Konsistenzstufe „`read-after-New-write`“, bietet aber nur eventuelle Konsistenz für DEN KOPFBETRIEB. Bietet höhere Verfügbarkeit FÜR HEAD-Operationen als „`read-after-New-write`“, wenn Storage Nodes nicht verfügbar sind. Unterschied zu Amazon S3 Konsistenzgarantien nur für HEAD-Operationen.
+
+|===
+
+
+== Antwortbeispiel
+
+[listing]
+----
+HTTP/1.1 200 OK
+Date: Fri, 18 Sep 2020 01:02:18 GMT
+Connection: CLOSE
+Server: StorageGRID/11.5.0
+x-amz-request-id: 12345
+Content-Length: 127
+Content-Type: application/xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Consistency xmlns="http://s3.storagegrid.com/doc/2015-02-01/">read-after-new-write</Consistency>
+----
+xref:consistency-controls.adoc[Konsistenzkontrollen]

@@ -1,0 +1,84 @@
+---
+permalink: admin/removing-user-or-group-from-cifs-audit-share.html 
+sidebar: sidebar 
+keywords: cifs audit client 
+summary: Sie können den letzten Benutzer oder die letzte Gruppe, der Zugriff auf die Revisionsfreigabe hat, nicht entfernen. 
+---
+= Entfernen Sie einen Benutzer oder eine Gruppe aus einer CIFS-Revisionsfreigabe
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können den letzten Benutzer oder die letzte Gruppe, der Zugriff auf die Revisionsfreigabe hat, nicht entfernen.
+
+.Was Sie und#8217;ll benötigen
+* Sie haben die `Passwords.txt` Datei mit den Passwörtern des Root-Kontos (im GENANNTEN Paket verfügbar).
+* Sie haben die `Configuration.txt` Datei (im GENANNTEN Paket verfügbar).
+
+
+Der Audit-Export über CIFS/Samba wurde veraltet und wird in einer zukünftigen StorageGRID-Version entfernt.
+
+.Schritte
+. Melden Sie sich beim primären Admin-Node an:
++
+.. Geben Sie den folgenden Befehl ein: `ssh admin@_primary_Admin_Node_IP_`
+.. Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+.. Geben Sie den folgenden Befehl ein, um zum Root zu wechseln: `su -`
+.. Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
++
+Wenn Sie als root angemeldet sind, ändert sich die Eingabeaufforderung von `$` Bis `#`.
+
+
+
+. Starten Sie das CIFS-Konfigurationsprogramm: `config_cifs.rb`
++
+[listing]
+----
+
+---------------------------------------------------------------------
+| Shares                 | Authentication         | Config          |
+---------------------------------------------------------------------
+| add-audit-share        | set-authentication     | validate-config |
+| enable-disable-share   | set-netbios-name       | help            |
+| add-user-to-share      | join-domain            | exit            |
+| remove-user-from-share | add-password-server    |                 |
+| modify-group           | remove-password-server |                 |
+|                        | add-wins-server        |                 |
+|                        | remove-wins-server     |                 |
+---------------------------------------------------------------------
+----
+. Starten Sie das Entfernen eines Benutzers oder einer Gruppe: `remove-user-from-share`
++
+Eine nummerierte Liste der verfügbaren Audit-Shares für den Admin-Knoten wird angezeigt. Die Revisionsfreigabe wird als Audit-Export bezeichnet.
+
+. Geben Sie die Nummer der Revisionsfreigabe ein: `_audit_share_number_`
+. Wenn Sie aufgefordert werden, einen Benutzer oder eine Gruppe zu entfernen: `user` Oder `group`
++
+Eine nummerierte Liste von Benutzern oder Gruppen für die Revisionsfreigabe wird angezeigt.
+
+. Geben Sie die Nummer für den Benutzer oder die Gruppe ein, die Sie entfernen möchten: `_number_`
++
+Die Revisionsfreigabe wird aktualisiert, und der Benutzer oder die Gruppe ist nicht mehr berechtigt, auf die Revisionsfreigabe zuzugreifen. Beispiel:
+
++
+[listing]
+----
+Enabled shares
+ 1. audit-export
+Select the share to change: 1
+Remove user or group? [User/group]: User
+Valid users for this share
+1. audituser
+2. newaudituser
+Select the user to remove: 1
+
+Removed user "audituser" from share "audit-export".
+
+Press return to continue.
+----
+. Schließen Sie das CIFS-Konfigurationsprogramm: `exit`
+. Wenn die StorageGRID-Bereitstellung Admin-Nodes an anderen Standorten umfasst, deaktivieren Sie die Revisionsfreigabe an jedem Standort nach Bedarf.
+. Melden Sie sich bei Abschluss der Konfiguration von jeder Befehlshaber ab: `exit`
+

@@ -1,0 +1,90 @@
+---
+permalink: sg5600/replacing-other-hardware-components-sg5600.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, Replacing, replace, hardware, components, remove, removing, removal, install, installing, installation, drive, fan, power supply, battery 
+summary: Möglicherweise müssen Sie ein Laufwerk, einen Lüfter, ein Netzteil oder einen Akku im StorageGRID-Gerät austauschen. 
+---
+= Tauschen Sie andere Hardwarekomponenten aus
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Möglicherweise müssen Sie ein Laufwerk, einen Lüfter, ein Netzteil oder einen Akku im StorageGRID-Gerät austauschen.
+
+.Was Sie und#8217;ll benötigen
+* Sie haben das Verfahren zum Austausch der E-Series Hardware.
+* Das Gerät war xref:placing-appliance-into-maintenance-mode.adoc[Wird im Wartungsmodus versetzt] Wenn das Verfahren zum Austausch von Komponenten erfordert, schalten Sie das Gerät aus.
+
+
+Zum Austausch eines Antriebs, des Power-Lüfterbehälter, des Ventilatorkanals, des Stromkanisters, der Batterie, Oder Laufwerkseinschub finden Sie in den Standardverfahren für die E2700 und E5600 Storage-Arrays. Konzentrieren Sie sich auf die Schritt-für-Schritt-Anleitung zum Entfernen und Austauschen der Hardware selbst. Viele der SANtricity Storage Manager Verfahren gelten nicht für eine Appliance.
+
+
+
+== SG5612 – Anweisungen zum Austausch von Komponenten
+
+|===
+| FRU | Siehe 
+
+
+ a| 
+Laufwerk
+ a| 
+Folgen Sie den Schritten in der Anleitung zur E-Series, um ein Laufwerk in den Schäfchen E2600, E2700, E5400, E5500, E5600, 12 Laufwerke oder 24 Laufwerke zu ersetzen.
+
+
+
+ a| 
+Lüfter-Behälter
+ a| 
+Befolgen Sie die Schritte in der Anleitung zur E-Series, um einen Behälter mit einem defekten Lüfter im E5612 oder E5624-Controller-Laufwerksfach zu ersetzen
+
+
+
+ a| 
+Batterie im E2700 Controller (Entfernen des Controllers erforderlich)
+ a| 
+Befolgen Sie die Schritte unter xref:replacing-e2700-controller.adoc[E2700 Controller austauschen], Aber installieren Sie den neuen Akku in der vorhandenen Steuerung.
+
+|===
+
+
+== Anweisungen für den Austausch von SG5660 Komponenten
+
+|===
+| FRU | Siehe 
+
+
+ a| 
+Laufwerk
+ a| 
+Befolgen Sie die Schritte in der Anleitung zur E-Series, um ein Laufwerk in den Schäfchen E2660, E2760, E5460, E5560 oder E5660 zu ersetzen.
+
+
+
+ a| 
+Leistungsbehälter
+ a| 
+Befolgen Sie die Schritte in der Anleitung zur E-Series, um einen defekten Netzbehälter im E5660 Controller-Laufwerksfach zu ersetzen
+
+
+
+ a| 
+Gebläsebehälter
+ a| 
+Befolgen Sie die Schritte in der Anleitung zur E-Series, um einen Lüfterbehälter für fehlerhafte Lüfter im E5660 Controller-Laufwerksfach zu ersetzen
+
+
+
+ a| 
+Batterie im E2700 Controller (Entfernen des Controllers erforderlich)
+ a| 
+Befolgen Sie die Schritte unter xref:replacing-e2700-controller.adoc[E2700 Controller austauschen], Aber installieren Sie den neuen Akku in der vorhandenen Steuerung.
+
+|===
+https://mysupport.netapp.com/info/web/ECMP11751516.html["Verfahren zum Austausch von Hardware der NetApp E-Series und EF-Series"^]
+
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61765["NetApp Dokumentation: E2700 Serie"^]
+
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61893["NetApp Dokumentation: E5600 Serie"^]

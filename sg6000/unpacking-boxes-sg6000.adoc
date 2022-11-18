@@ -1,0 +1,133 @@
+---
+permalink: sg6000/unpacking-boxes-sg6000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, install, installation, unpack, unbox, prepare, inventory, components, contents 
+summary: Packen Sie vor der Installation des StorageGRID-Geräts alle Kartons aus und vergleichen Sie den Inhalt mit den Artikeln auf dem Verpackungsschein. 
+---
+= Auspacken (SG6000)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Packen Sie vor der Installation des StorageGRID-Geräts alle Kartons aus und vergleichen Sie den Inhalt mit den Artikeln auf dem Verpackungsschein.
+
+
+
+== SG6060 und SG6060X
+
+* *SG6000-CN-Controller*
++
+image::../media/sg6000_cn_front_without_bezel.gif[SG6000-CN Controller]
+
+* *E2860 Controller-Shelf ohne Laufwerke installiert*
++
+image::../media/de460c_table_size.gif[SG5760 4-HE-Appliance]
+
+* *Zwei Vorderkämpfe*
++
+image::../media/sg6000_front_bezels_for_table.gif[Vorderrahmen]
+
+* *Zwei Schienen-Kits mit Anweisungen*
++
+image::../media/rail_kit.gif[Schienensatz]
+
+* *60 Laufwerke (2 SSD und 58 NL-SAS)*
++
+image::../media/sg5760_drive.gif[Laufwerk]
+
+* *Vier Griffe*
++
+image::../media/handles.gif[Das SG5760 verarbeitet]
+
+* *Hintere Halterungen und Käfigmuttern für quadratische Rackmontage*
++
+image::../media/back_brackets_table_size.gif[Rückenhalterungen und Käfigmuttern für SG5760]
+
+
+
+
+
+== SG6060- und SG6060X-Erweiterungs-Shelf
+
+* *Erweiterungs-Shelf ohne installierte Laufwerke*
++
+image::../media/de460c_table_size.gif[SG5760 4-HE-Appliance]
+
+* *Frontblende*
++
+image::../media/front_bezel_for_table_de460c.gif[Frontblende DE460C]
+
+* *60 NL-SAS-Laufwerke*
++
+image::../media/sg5760_drive.gif[Laufwerk]
+
+* *Ein Schienen-Kit mit Anweisungen*
++
+image::../media/rail_kit.gif[Schienensatz]
+
+* *Vier Griffe*
++
+image::../media/handles.gif[Das SG5760 verarbeitet]
+
+* *Hintere Halterungen und Käfigmuttern für quadratische Rackmontage*
++
+image::../media/back_brackets_table_size.gif[Rückenhalterungen und Käfigmuttern für SG5760]
+
+
+
+
+
+== SGF6024
+
+* *SG6000-CN-Controller*
++
+image::../media/sg6000_cn_front_without_bezel.gif[SG6000-CN Controller]
+
+* *EF570 Flash-Array mit installierten 24 Solid State-Laufwerken*
++
+image::../media/de224c_with_drives.gif[EF570 Controller Shelf]
+
+* *Zwei Vorderkämpfe*
++
+image::../media/sgf6024_front_bezels_for_table.png[SG6024 Vorderrahmen]
+
+* *Zwei Schienen-Kits mit Anweisungen*
++
+image::../media/rail_kit.gif[Schienensatz]
+
+* *Regal Endcaps*
++
+image::../media/endcaps.png[Endkappen]
+
+
+
+
+
+== Kabel und Anschlüsse
+
+Der Versand für das StorageGRID Gerät umfasst die folgenden Kabel und Anschlüsse:
+
+* *Vier Netzkabel für Ihr Land*
++
+image::../media/power_cords.gif[Stromkabel]
+
++
+Ihr Schrank verfügt möglicherweise über spezielle Netzkabel, die Sie anstelle der Netzkabel verwenden, die Sie zur Einheit mit dem Gerät anschließen.
+
+* *Optische Kabel und SFP-Transceiver*
++
+image::../media/fc_cable_and_sfp.gif[Optische Kabel und SFPs]
+
++
+Vier optische Kabel für die FC Interconnect Ports
+
++
+Vier SFP+-Transceiver, die 16 Gbit/s FC unterstützen
+
+* *Optional: Zwei SAS-Kabel zum Anschließen jedes SG6060 oder SG6060X Erweiterungs-Shelf*
++
+image::../media/sas_cable.gif[SAS-Kabel]
+
+

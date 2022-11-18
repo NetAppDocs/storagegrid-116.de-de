@@ -1,0 +1,50 @@
+---
+permalink: s3/s3-operations-tracked-in-audit-logs.html 
+sidebar: sidebar 
+keywords: audit log actions tracked 
+summary: Verschiedene Bucket-Vorgänge und Objektvorgänge werden in den StorageGRID-Prüfprotokollen verfolgt. 
+---
+= S3-Vorgänge werden in den Audit-Protokollen protokolliert
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Verschiedene Bucket-Vorgänge und Objektvorgänge werden in den StorageGRID-Prüfprotokollen verfolgt.
+
+
+
+== Bucket-Vorgänge werden in den Audit-Protokollen protokolliert
+
+* Bucket LÖSCHEN
+* Bucket-Tagging LÖSCHEN
+* LÖSCHEN Sie mehrere Objekte
+* Bucket ABRUFEN (Objekte auflisten)
+* Get Bucket-Objektversionen
+* Get Bucket-Tagging
+* EIMER
+* Put Bucket
+* BUCKET-Compliance
+* PUT Bucket-Tagging
+* PUT Bucket-Versionierung
+
+
+
+
+== Objektvorgänge werden in den Audit-Protokollen protokolliert
+
+* Abschließen Von Mehrteiligen Uploads
+* Hochladen von Teilen (wenn die ILM-Regel das strenge oder ausgeglichene Aufnahmeverhalten verwendet)
+* Hochladen von Teilen – Kopieren (Wenn die ILM-Regel das strenge oder ausgeglichene Aufnahmeverhalten verwendet)
+* Objekt LÖSCHEN
+* GET Objekt
+* HEAD Objekt
+* WIEDERHERSTELLUNG VON POSTOBJEKTEN
+* PUT Objekt
+* PUT Objekt - Kopieren
+
+
+xref:operations-on-buckets.adoc[Operationen auf Buckets]
+
+xref:operations-on-objects.adoc[Operationen für Objekte]

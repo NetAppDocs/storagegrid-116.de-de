@@ -1,0 +1,26 @@
+---
+permalink: admin/how-load-balancing-works-clb-service.html 
+sidebar: sidebar 
+keywords: clb service, connection load balancer 
+summary: 'Der Verbindungsladeverteilungsdienst \ (CLB\) auf Gateway-Knoten ist veraltet. Der Lastausgleichsdienst ist jetzt der empfohlene Lastausgleichmechanismus.' 
+---
+= Wie der Lastenausgleich funktioniert - CLB-Service (veraltet)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der CLB-Dienst (Connection Load Balancer) auf Gateway-Nodes ist veraltet. Der Lastausgleichsdienst ist jetzt der empfohlene Lastausgleichmechanismus.
+
+Der CLB-Service nutzt Layer 4 Load Balancing zur Verteilung eingehender TCP-Netzwerkverbindungen von Client-Anwendungen auf den optimalen Storage Node basierend auf Verfügbarkeit, Systemlast und den vom Administrator konfigurierten Verbindungskosten. Wenn der optimale Speicherknoten ausgewählt wird, baut der CLB-Dienst eine zweiseitige Netzwerkverbindung auf und leitet den Datenverkehr vom und zum ausgewählten Knoten weiter. Beim CLB wird die Konfiguration des Grid-Netzwerks nicht berücksichtigt, wenn eingehende Netzwerkverbindungen geleitet werden.
+
+Um Informationen zum CLB-Dienst anzuzeigen, wählen Sie *SUPPORT* *Tools* *Grid-Topologie* und erweitern Sie dann einen Gateway-Knoten, bis Sie *CLB* und die Optionen darunter auswählen können.
+
+image::../media/gateway_node.gif[API-Gateway-Node in der Grid Topology-Struktur]
+
+Wenn Sie den CLB-Service nutzen möchten, sollten Sie die Verbindungskosten für Ihr StorageGRID-System in Betracht ziehen.
+
+* xref:what-link-costs-are.adoc[Was sind Verbindungskosten]
+* xref:updating-link-costs.adoc[Verbindungskosten aktualisieren]
+

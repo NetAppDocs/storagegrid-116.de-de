@@ -1,0 +1,38 @@
+---
+permalink: s3/benefits-of-active-http-connections.html 
+sidebar: sidebar 
+keywords: active http connection benefits 
+summary: 'Für Verbindungen direkt zu Storage-Nodes oder zum CLB-Dienst \(veraltet\) auf Gateway-Knoten sollten Sie die Dauer einer aktiven HTTP-Verbindung auf maximal 10 Minuten beschränken, auch wenn die HTTP-Verbindung kontinuierlich Transaktionen durchführt.' 
+---
+= Vorteile von aktiven HTTP-Verbindungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei Verbindungen direkt zu Storage-Nodes oder zum CLB-Dienst (veraltet) auf Gateway-Knoten sollten Sie die Dauer einer aktiven HTTP-Verbindung auf maximal 10 Minuten beschränken, auch wenn die HTTP-Verbindung kontinuierlich Transaktionen durchführt.
+
+Die Bestimmung der maximalen Dauer, die eine Verbindung offen halten‐sollte, ist ein Kompromiss zwischen den Vorteilen der Verbindungspersistenz und der idealen Zuweisung der Verbindung zu internen Systemressourcen.
+
+Für Client-Verbindungen zu Storage-Nodes oder zum CLB-Service bietet die Beschränkung aktiver HTTP-Verbindungen folgende Vorteile:
+
+* Ermöglicht einen optimalen Lastausgleich über das StorageGRID System hinweg.
++
+Bei der Nutzung des CLB-Dienstes sollten Sie lange‐durchlebte TCP/IP-Verbindungen verhindern, um den Lastenausgleich über das StorageGRID-System zu optimieren. Sie sollten Client-Anwendungen so konfigurieren, dass die Dauer jeder HTTP-Verbindung verfolgt und die HTTP-Verbindung nach einer festgelegten Zeit geschlossen wird, damit die HTTP-Verbindung wiederhergestellt und ausgeglichen werden kann.
+
++
+Der CLB-Dienst gleicht die Last über das StorageGRID-System aus, wenn eine Client-Anwendung eine HTTP-Verbindung herstellt. Im Laufe der Zeit ist eine HTTP-Verbindung möglicherweise nicht mehr optimal, da sich die Anforderungen für den Lastausgleich ändern. Das System führt den besten Lastenausgleich durch, wenn Client-Anwendungen für jede Transaktion eine separate HTTP-Verbindung herstellen, jedoch die wesentlich wertvolleren Gewinne, die mit persistenten Verbindungen verbunden sind, zunichte machen.
+
++
+
+NOTE: Der CLB-Service ist veraltet.
+
+* Ermöglicht Client-Anwendungen, HTTP-Transaktionen an LDR-Dienste mit verfügbarem Speicherplatz zu leiten.
+* Ermöglicht das Starten von Wartungsvorgängen.
++
+Einige Wartungsverfahren beginnen erst, nachdem alle laufenden HTTP-Verbindungen abgeschlossen sind.
+
+
+
+Bei Client-Verbindungen zum Load Balancer-Service kann eine Begrenzung der Dauer offener Verbindungen nützlich sein, um einige Wartungsverfahren zeitnah starten zu können. Wenn die Dauer der Clientverbindungen nicht begrenzt ist, kann es mehrere Minuten dauern, bis aktive Verbindungen automatisch beendet werden.

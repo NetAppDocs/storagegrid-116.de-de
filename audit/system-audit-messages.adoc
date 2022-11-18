@@ -1,0 +1,208 @@
+---
+permalink: audit/system-audit-messages.html 
+sidebar: sidebar 
+keywords: storagegrid, audit, message, messages, system, ECOC, ETAF, GNRG, GNUR, GTED, GTST, GTSU, IDEL, LKCU, LLST, OLST, ORLM, SADD, SADE, SVRF, SVRU, SYSD, SYST, SYSU, VLST 
+summary: 'Sie sollten mit Audit-Meldungen vertraut sein, die zur Systemaudit-Kategorie gehören. Dies sind Ereignisse in Bezug auf das Prüf-System selbst, den Grid-Node-Status, die systemweite Task-Aktivität \(Grid-Aufgaben\) und Service-Backup-Vorgänge, sodass Sie potenzielle Probleme beheben können.' 
+---
+= Systemaudits Meldungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie sollten mit Audit-Meldungen vertraut sein, die zur Systemaudit-Kategorie gehören. Dies sind Ereignisse in Bezug auf das Auditing von Systemen selbst, den Status von Grid-Nodes, systemweite Task-Aktivitäten (Grid-Aufgaben) und Service-Backup-Vorgänge, sodass Sie potenzielle Probleme beheben können.
+
+|===
+| Codieren | Titel und Beschreibung der Nachricht | Siehe 
+
+
+ a| 
+ECMC
+ a| 
+Datenfragment mit Löschcode fehlt: Zeigt an, dass ein fehlendes Datenfragment mit Löschungscode erkannt wurde.
+ a| 
+xref:ecmc-missing-erasure-coded-data-fragment.adoc[ECMC: Fehlendes Erasure coded Data Fragment]
+
+
+
+ a| 
+ECOC
+ a| 
+Beschädigte Datenfragment mit Erasure-Code: Zeigt an, dass ein korruptes Datenfragment mit Löschungscode erkannt wurde.
+ a| 
+xref:ecoc-corrupt-erasure-coded-data-fragment.adoc[ECOC: Korrupte, mit Erasure codierte Datenfragment]
+
+
+
+ a| 
+ETAF
+ a| 
+Sicherheitsauthentifizierung fehlgeschlagen: Verbindungsversuch mit TLS (Transport Layer Security) fehlgeschlagen.
+ a| 
+xref:etaf-security-authentication-failed.adoc[ETAF: Sicherheitsauthentifizierung fehlgeschlagen]
+
+
+
+ a| 
+GNRG
+ a| 
+GNDS Registrierung: Ein Dienst aktualisiert oder registriert Informationen über sich selbst im StorageGRID-System.
+ a| 
+xref:gnrg-gnds-registration.adoc[GNRG: GNDS Registrierung]
+
+
+
+ a| 
+GNUR
+ a| 
+GNDS Unregistrierung: Ein Dienst hat sich vom StorageGRID-System nicht registriert.
+ a| 
+xref:gnur-gnds-unregistration.adoc[GNUR: GNDS Registrierung aufheben]
+
+
+
+ a| 
+GTED
+ a| 
+Grid Task beendet: Der CMN-Dienst hat die Verarbeitung der Grid-Aufgabe abgeschlossen.
+ a| 
+xref:gted-grid-task-ended.adoc[GTED: Grid Task beendet]
+
+
+
+ a| 
+GTST
+ a| 
+Grid Task gestartet: Der CMN-Dienst hat mit der Verarbeitung der Grid-Aufgabe begonnen.
+ a| 
+xref:gtst-grid-task-started.adoc[GTST: Grid Task gestartet]
+
+
+
+ a| 
+GSU
+ a| 
+Grid Task übermittelt: Eine Grid-Aufgabe wurde an den CMN-Dienst übermittelt.
+ a| 
+xref:gtsu-grid-task-submitted.adoc[GTSU: Grid Task übermittelt]
+
+
+
+ a| 
+IDEL
+ a| 
+ILM-Initiated Delete: Diese Audit-Meldung wird generiert, wenn ILM den Prozess zum Löschen eines Objekts startet.
+ a| 
+xref:idel-ilm-initiated-delete.adoc[IDEL: ILM gestartet Löschen]
+
+
+
+ a| 
+LKCU
+ a| 
+Bereinigung Des Objekts Überschrieben. Diese Überwachungsmeldung wird erzeugt, wenn ein überschreibtes Objekt automatisch entfernt wird, um Speicherplatz freizugeben.
+ a| 
+xref:lkcu-overwritten-object-cleanup.adoc[LKCU: Objektbereinigung überschrieben]
+
+
+
+ a| 
+LLST
+ a| 
+Standort verloren: Diese Überwachungsmeldung wird generiert, wenn ein Standort verloren geht.
+ a| 
+xref:llst-location-lost.adoc[LLST: Standort verloren]
+
+
+
+ a| 
+OLST
+ a| 
+Objekt verloren: Ein angeforderter Gegenstand kann nicht innerhalb des StorageGRID Systems gefunden werden.
+ a| 
+xref:olst-system-detected-lost-object.adoc[OLST: System hat Lost Object erkannt]
+
+
+
+ a| 
+ORLM
+ a| 
+Objektregeln erfüllt: Objektdaten werden gemäß den ILM-Regeln gespeichert.
+ a| 
+xref:orlm-object-rules-met.adoc[ORLM: Objektregeln erfüllt]
+
+
+
+ a| 
+SADD
+ a| 
+Sicherheitsüberprüfung deaktivieren: Die Protokollierung von Überwachungsnachrichten wurde deaktiviert.
+ a| 
+xref:sadd-security-audit-disable.adoc[SADD: Security Audit deaktiviert]
+
+
+
+ a| 
+SADE
+ a| 
+Sicherheitsüberprüfung aktivieren: Die Protokollierung von Prüfnachrichten wurde wiederhergestellt.
+ a| 
+xref:sade-security-audit-enable.adoc[SADE: Sicherheits-Audit aktivieren]
+
+
+
+ a| 
+SVRF
+ a| 
+Objektspeicherüberprüfung fehlgeschlagen: Überprüfung durch einen Inhaltsblock fehlgeschlagen.
+ a| 
+xref:svrf-object-store-verify-fail.adoc[SVRF: Objektspeicherüberprüfung fehlgeschlagen]
+
+
+
+ a| 
+SVRU
+ a| 
+Objektspeicher Verify Unbekannt: Unerwartete Objektdaten im Objektspeicher erkannt.
+ a| 
+xref:svru-object-store-verify-unknown.adoc[SVRU: Objektspeicher überprüfen Unbekannt]
+
+
+
+ a| 
+SYSD
+ a| 
+Knotenstopp: Es wurde ein Herunterfahren angefordert.
+ a| 
+xref:sysd-node-stop.adoc[SYSD: Knoten stoppen]
+
+
+
+ a| 
+SYST
+ a| 
+Knoten stoppen: Ein Dienst hat einen graziösen Stopp initiiert.
+ a| 
+xref:syst-node-stopping.adoc[SYST: Knoten wird angehalten]
+
+
+
+ a| 
+SYSU
+ a| 
+Node Start: Ein Dienst gestartet. In der Meldung wird der Charakter des vorherigen Herunterfahrens angezeigt.
+ a| 
+xref:sysu-node-start.adoc[SYSU: Knoten Start]
+
+
+
+ a| 
+VLST
+ a| 
+Vom Benutzer Initiiertes Volume Verloren: Das `/proc/CMSI/Volume_Lost` Befehl wurde ausgeführt.
+ a| 
+xref:vlst-user-initiated-volume-lost.adoc[VLST: Vom Benutzer initiiertes Volumen verloren]
+
+|===
+xref:lkcu-overwritten-object-cleanup.adoc[LKCU: Objektbereinigung überschrieben]

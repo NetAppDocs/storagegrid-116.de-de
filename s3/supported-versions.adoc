@@ -1,0 +1,39 @@
+---
+permalink: s3/supported-versions.html 
+sidebar: sidebar 
+keywords: supported versions, version support 
+summary: StorageGRID unterstützt die folgenden spezifischen Versionen von S3 und HTTP. 
+---
+= Unterstützte Versionen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+StorageGRID unterstützt die folgenden spezifischen Versionen von S3 und HTTP.
+
+|===
+| Element | Version 
+
+
+ a| 
+S3-Spezifikation
+ a| 
+_Simple Storage Service API Reference_ 2006-03-01
+
+
+
+ a| 
+HTTP
+ a| 
+1.1
+
+Weitere Informationen zu HTTP finden Sie unter HTTP/1.1 (RFCs 7230-35).
+
+*Hinweis*: StorageGRID unterstützt HTTP/1.1-Pipelining nicht.
+
+|===
+https://datatracker.ietf.org/doc/html/rfc2616["IETF RFC 2616: Hypertext Transfer Protocol (HTTP/1.1)"]
+
+http://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html["Amazon Web Services (AWS) Dokumentation: Amazon Simple Storage Service API Reference"]

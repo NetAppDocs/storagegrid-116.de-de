@@ -1,0 +1,112 @@
+---
+permalink: s3/using-s3-object-lock.html 
+sidebar: sidebar 
+keywords: using S3 object lock, object lock, S3 object 
+summary: Wenn die globale S3-Objektsperre für Ihr StorageGRID System aktiviert ist, können Sie Buckets mit aktivierter S3-Objektsperre erstellen und dann für jede zu diesem Bucket addieren Objektversion noch bis dato und Legal-Hold-Einstellungen festlegen. 
+---
+= Verwenden Sie die S3-Objektsperre
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn die globale S3-Objektsperreneinstellung für Ihr StorageGRID System aktiviert ist, können Sie Buckets mit aktivierter S3-Objektsperre erstellen und dann für jeden Bucket oder bestimmte Aufbewahrungsfristen für einzelne Objektversionen, die Sie diesem Bucket hinzufügen, festlegen.
+
+Mit S3 Object Lock können Sie Einstellungen auf Objektebene angeben, um das Löschen oder Überschreiben von Objekten für einen bestimmten Zeitraum oder für einen bestimmten Zeitraum zu verhindern.
+
+Die StorageGRID S3 Objektsperre bietet einen einheitlichen Aufbewahrungsmodus, der dem Amazon S3-Compliance-Modus entspricht. Standardmäßig kann eine geschützte Objektversion nicht von einem Benutzer überschrieben oder gelöscht werden. Die StorageGRID S3-Objektsperre unterstützt keinen Governance-Modus und erlaubt Benutzern mit speziellen Berechtigungen nicht, Aufbewahrungseinstellungen zu umgehen oder geschützte Objekte zu löschen.
+
+
+
+== Aktivieren Sie S3 Object Lock für Bucket
+
+Wenn die globale S3-Objektsperreneinstellung für Ihr StorageGRID-System aktiviert ist, können Sie bei der Erstellung jedes Buckets optional die S3-Objektsperre aktivieren. Sie können eine der folgenden Methoden verwenden:
+
+* Erstellen Sie den Bucket mit Tenant Manager.
++
+xref:../tenant/index.adoc[Verwenden Sie das Mandantenkonto]
+
+* Erstellen Sie den Bucket mithilfe einer PUT-Bucket-Anforderung zusammen mit dem `x-amz-bucket-object-lock-enabled` Kopfzeile der Anfrage.
++
+xref:operations-on-buckets.adoc[Operationen auf Buckets]
+
+
+
+Sie können S3 Object Lock nicht hinzufügen oder deaktivieren, nachdem der Bucket erstellt wurde. Für die S3-Objektsperre ist eine Bucket-Versionierung erforderlich. Diese wird bei der Erstellung des Buckets automatisch aktiviert.
+
+Ein Bucket mit aktivierter S3-Objektsperre kann eine Kombination von Objekten mit und ohne S3-ObjektLock-Einstellungen enthalten. StorageGRID unterstützt die Standardaufbewahrungszeiträume für Objekte in S3-Objektsperren-Buckets und unterstützt DEN Bucket-Vorgang „PUT Objektsperre Konfiguration“. Der `s3:object-lock-remaining-retention-days` Richtlinienbedingung-Schlüssel legt den minimalen und maximalen Aufbewahrungszeitraum für Ihre Objekte fest.
+
+
+
+== Ermitteln, ob S3-Objektsperre für Bucket aktiviert ist
+
+Um festzustellen, ob die S3-Objektsperre aktiviert ist, verwenden Sie den xref:../s3/use-s3-object-lock-default-bucket-retention.adoc#get-object-lock-configuration[Konfiguration der Objektsperre ABRUFEN] Anfrage.
+
+
+
+== Erstellen Sie ein Objekt mit S3-Objektsperreinstellungen
+
+Zum Festlegen von S3-Objektsperreinstellungen beim Hinzufügen einer Objektversion zu einem Bucket mit aktivierter S3-Objektsperre geben Sie ein PUT-Objekt aus, PUT Object - Copy oder initiieren Sie die Anforderung zum Hochladen mehrerer Teile. Verwenden Sie die folgenden Anfrageheader.
+
+
+NOTE: Sie müssen die S3-Objektsperre aktivieren, wenn Sie einen Bucket erstellen. Sie können S3 Object Lock nicht hinzufügen oder deaktivieren, nachdem ein Bucket erstellt wurde.
+
+* `x-amz-object-lock-mode`, Die COMPLIANCE sein muss (Groß-/Kleinschreibung muss beachtet werden).
++
+
+NOTE: Wenn Sie angeben `x-amz-object-lock-mode`, Sie müssen auch angeben `x-amz-object-lock-retain-until-date`.
+
+* `x-amz-object-lock-retain-until-date`
++
+** Der Wert für „bis-Datum beibehalten“ muss das Format aufweisen `2020-08-10T21:46:00Z`. Fraktionale Sekunden sind zulässig, aber nur 3 Dezimalstellen bleiben erhalten (Präzision in Millisekunden). Andere ISO 8601-Formate sind nicht zulässig.
+** Das „Aufbewahrung bis“-Datum muss in der Zukunft liegen.
+
+
+* `x-amz-object-lock-legal-hold`
++
+Wenn die gesetzliche Aufbewahrungspflichten LIEGEN (Groß-/Kleinschreibung muss beachtet werden), wird das Objekt unter einer gesetzlichen Aufbewahrungspflichten platziert. Wenn die gesetzliche Aufbewahrungspflichten AUS DEM WEG gehen, wird keine gesetzliche Aufbewahrungspflichten platziert. Jeder andere Wert führt zu einem 400-Fehler (InvalidArgument).
+
+
+
+Wenn Sie eine dieser Anfrageheadern verwenden, beachten Sie die folgenden Einschränkungen:
+
+* Der `Content-MD5` Der Anforderungskopf ist erforderlich `x-amz-object-lock-*` In DER PUT-Objektanforderung ist eine Anforderungsüberschrift vorhanden. `Content-MD5` Ist für PUT Object – Copy oder Initiierung von mehrteiligen Uploads nicht erforderlich.
+* Wenn für den Bucket die S3-Objektsperre nicht aktiviert ist und ein `x-amz-object-lock-*` Der Anforderungskopf ist vorhanden, es wird ein 400-Fehler (InvalidRequest) zurückgegeben.
+* Die PUT-Objektanforderung unterstützt die Verwendung von `x-amz-storage-class: REDUCED_REDUNDANCY` Passend zum Verhalten von AWS. Wird ein Objekt jedoch mit aktivierter S3-Objektsperre in einen Bucket aufgenommen, führt StorageGRID immer eine Dual-Commit-Aufnahme durch.
+* Eine nachfolgende ANTWORT AUF GET- oder HEAD Object-Version enthält die Kopfzeilen `x-amz-object-lock-mode`, `x-amz-object-lock-retain-until-date`, und `x-amz-object-lock-legal-hold`, Wenn konfiguriert und wenn der Anforderungssender die richtige hat `s3:Get*` Berechtigungen.
+* Eine Anfrage zur späteren LÖSCHUNG von Objekten oder ZUM LÖSCHEN von Objektversionen schlägt fehl, wenn sie sich vor dem Datum der Aufbewahrung bis zum Datum befindet oder wenn eine gesetzliche Aufbewahrungspflichten vorliegen.
+
+
+
+
+== Einstellungen für die S3-Objektsperre aktualisieren
+
+Wenn Sie die Einstellungen für die gesetzliche Aufbewahrungs- oder Aufbewahrungseinstellung einer vorhandenen Objektversion aktualisieren müssen, können Sie die folgenden Vorgänge der Unterressource des Objekts ausführen:
+
+* `PUT Object legal-hold`
++
+Wenn der neue Legal-Hold-Wert AKTIVIERT ist, wird das Objekt unter einer gesetzlichen Aufbewahrungspflichten platziert. Wenn DER Rechtsvorenthalten-Wert DEAKTIVIERT ist, wird die gesetzliche Aufbewahrungspflichten aufgehoben.
+
+* `PUT Object retention`
++
+** Der Moduswert muss COMPLIANCE sein (Groß-/Kleinschreibung muss beachtet werden).
+** Der Wert für „bis-Datum beibehalten“ muss das Format aufweisen `2020-08-10T21:46:00Z`. Fraktionale Sekunden sind zulässig, aber nur 3 Dezimalstellen bleiben erhalten (Präzision in Millisekunden). Andere ISO 8601-Formate sind nicht zulässig.
+** Wenn eine Objektversion über ein vorhandenes Aufbewahrungsdatum verfügt, können Sie sie nur erhöhen. Der neue Wert muss in der Zukunft liegen.
+
+
+
+
+xref:../ilm/index.adoc[Objektmanagement mit ILM]
+
+xref:../tenant/index.adoc[Verwenden Sie das Mandantenkonto]
+
+xref:put-object.adoc[PUT Objekt]
+
+xref:put-object-copy.adoc[PUT Objekt - Kopieren]
+
+xref:initiate-multipart-upload.adoc[Initiieren Von Mehrteiligen Uploads]
+
+xref:object-versioning.adoc[Objektversionierung]
+
+https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html["Amazon Simple Storage Service Benutzerhandbuch: S3 Object Lock verwenden"^]

@@ -1,0 +1,37 @@
+---
+permalink: sg6000/viewing-boot-up-status-codes-for-sg6000-storage-controllers.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, boot codes, boot-up codes, start codes, codes, boot, start, storage controller, controller, storage 
+summary: Jeder Storage Controller verfügt über eine Anzeige in sieben Segmenten, die Statuscodes bereitstellt, wenn der Controller heruntergefahren wird. Die Statuscodes sind sowohl für den E2800 Controller als auch für den EF570 Controller identisch. 
+---
+= Anzeigen von Boot-Statuscodes für SG6000-Speicher-Controller
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Jeder Storage Controller verfügt über eine Anzeige in sieben Segmenten, die Statuscodes bereitstellt, wenn der Controller heruntergefahren wird. Die Statuscodes sind sowohl für den E2800 Controller als auch für den EF570 Controller identisch.
+
+Beschreibungen dieser Codes finden Sie in den Informationen zur Systemüberwachung der E-Series für Ihren Storage Controller-Typ.
+
+.Schritte
+. Überwachen Sie während des Startvorgangs den Fortschritt, indem Sie die auf der siebensegmentreichen Anzeige angezeigten Codes für jeden Storage-Controller anzeigen.
++
+Die sieben-Segment-Anzeige auf jedem Speicher-Controller zeigt die sich wiederholende Sequenz *OS*, *SD*, `*_blank_*` Um anzugeben, dass der Controller die Tagesbeginn-Verarbeitung durchführt.
+
+. Vergewissern Sie sich, dass nach dem Booten der Controller 99 angezeigt wird. Diese ist die Standard-ID für ein E-Series Controller-Shelf.
++
+Vergewissern Sie sich, dass dieser Wert auf beiden Storage-Controllern angezeigt wird. Diese Abbildung zeigt in diesem Beispiel den E2800 Controller.
+
++
+image::../media/seven_segment_display_codes_for_e2800.gif[Anzeigecodes für sieben Segmente für E2800]
+
+. Wenn ein Controller oder beide andere Werte anzeigen, lesen Sie xref:troubleshooting-hardware-installation.adoc[Fehlerbehebung bei der Hardwareinstallation (SG6000)] Und bestätigen Sie, dass Sie die Installationsschritte korrekt ausgeführt haben. Wenn das Problem nicht behoben werden kann, wenden Sie sich an den technischen Support.
+
+
+https://library.netapp.com/ecmdocs/ECMLP2588751/html/frameset.html["E5700 und E2800 – System Monitoring Guide"^]
+
+https://mysupport.netapp.com/site/global/dashboard["NetApp Support"^]
+
+xref:powering-on-sg6000-cn-controller-and-verifying-operation.adoc[Schalten Sie den SG6000-CN Controller ein, und überprüfen Sie den Betrieb]

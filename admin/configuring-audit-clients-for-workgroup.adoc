@@ -1,0 +1,168 @@
+---
+permalink: admin/configuring-audit-clients-for-workgroup.html 
+sidebar: sidebar 
+keywords: audit client for workgroup 
+summary: Führen Sie dieses Verfahren für jeden Admin-Knoten in einer StorageGRID-Bereitstellung durch, von der aus Sie Audit-Nachrichten abrufen möchten. 
+---
+= Konfigurieren von Audit-Clients für Workgroup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Führen Sie dieses Verfahren für jeden Admin-Knoten in einer StorageGRID-Bereitstellung durch, von der aus Sie Audit-Nachrichten abrufen möchten.
+
+.Was Sie und#8217;ll benötigen
+* Sie haben die `Passwords.txt` Datei mit dem Root-/Admin-Passwort (im GENANNTEN Paket verfügbar).
+* Sie haben die `Configuration.txt` Datei (im GENANNTEN Paket verfügbar).
+
+
+Der Audit-Export über CIFS/Samba wurde veraltet und wird in einer zukünftigen StorageGRID-Version entfernt.
+
+.Schritte
+. Melden Sie sich beim primären Admin-Node an:
++
+.. Geben Sie den folgenden Befehl ein: `ssh admin@_primary_Admin_Node_IP_`
+.. Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+.. Geben Sie den folgenden Befehl ein, um zum Root zu wechseln: `su -`
+.. Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
++
+Wenn Sie als root angemeldet sind, ändert sich die Eingabeaufforderung von `$` Bis `#`.
+
+
+
+. Vergewissern Sie sich, dass alle Dienste den Status „ausgeführt“ oder „geprüft“ aufweisen: `storagegrid-status`
++
+Wenn nicht alle Dienste ausgeführt oder verifiziert werden, beheben Sie Probleme, bevor Sie fortfahren.
+
+. Kehren Sie zur Befehlszeile zurück und drücken Sie *Strg*+*C*.
+. Starten Sie das CIFS-Konfigurationsprogramm: `config_cifs.rb`
++
+[listing]
+----
+
+---------------------------------------------------------------------
+| Shares                 | Authentication         | Config          |
+---------------------------------------------------------------------
+| add-audit-share        | set-authentication     | validate-config |
+| enable-disable-share   | set-netbios-name       | help            |
+| add-user-to-share      | join-domain            | exit            |
+| remove-user-from-share | add-password-server    |                 |
+| modify-group           | remove-password-server |                 |
+|                        | add-wins-server        |                 |
+|                        | remove-wins-server     |                 |
+---------------------------------------------------------------------
+----
+. Legen Sie die Authentifizierung für die Windows Workgroup fest:
++
+Wenn die Authentifizierung bereits festgelegt wurde, wird eine Beratungsmeldung angezeigt. Wenn die Authentifizierung bereits festgelegt wurde, fahren Sie mit dem nächsten Schritt fort.
+
++
+.. Geben Sie Ein: `set-authentication`
+.. Wenn Sie zur Installation von Windows Workgroup oder Active Directory aufgefordert werden, geben Sie Folgendes ein: `workgroup`
+.. Geben Sie bei der entsprechenden Aufforderung einen Namen für die Arbeitsgruppe ein: `_workgroup_name_`
+.. Erstellen Sie bei Aufforderung einen aussagekräftigen NetBIOS-Namen: `_netbios_name_`
++
+Oder
+
++
+Drücken Sie *Enter*, um den Hostnamen des Admin-Knotens als NetBIOS-Name zu verwenden.
+
++
+Das Skript startet den Samba-Server neu und es werden Änderungen vorgenommen. Dies sollte weniger als eine Minute dauern. Fügen Sie nach dem Festlegen der Authentifizierung einen Audit-Client hinzu.
+
+.. Drücken Sie auf der entsprechenden Aufforderung *Enter*.
++
+Das CIFS-Konfigurationsprogramm wird angezeigt.
+
+
+
+. Hinzufügen eines Audit-Clients:
++
+.. Geben Sie Ein: `add-audit-share`
++
+
+NOTE: Die Freigabe wird automatisch als schreibgeschützt hinzugefügt.
+
+.. Wenn Sie dazu aufgefordert werden, fügen Sie einen Benutzer oder eine Gruppe hinzu: `_user_`
+.. Geben Sie bei der entsprechenden Aufforderung den Benutzernamen für die Prüfung ein: `_audit_user_name_`
+.. Wenn Sie dazu aufgefordert werden, geben Sie ein Kennwort für den Benutzer der Prüfung ein: `_password_`
+.. Geben Sie bei der entsprechenden Aufforderung dasselbe Passwort erneut ein, um es zu bestätigen: `_password_`
+.. Drücken Sie auf der entsprechenden Aufforderung *Enter*.
++
+Das CIFS-Konfigurationsprogramm wird angezeigt.
+
+
+
++
+
+NOTE: Es ist nicht erforderlich, ein Verzeichnis einzugeben. Der Name des Überwachungsverzeichnisses ist vordefiniert.
+
+. Wenn mehr als ein Benutzer oder eine Gruppe auf die Revisionsfreigabe zugreifen darf, fügen Sie die zusätzlichen Benutzer hinzu:
++
+.. Geben Sie Ein: `add-user-to-share`
++
+Es wird eine nummerierte Liste mit aktivierten Freigaben angezeigt.
+
+.. Geben Sie bei der entsprechenden Aufforderung die Nummer der Freigabe für den Audit-Export ein: `_share_number_`
+.. Wenn Sie dazu aufgefordert werden, fügen Sie einen Benutzer oder eine Gruppe hinzu: `user`
++
+Oder `group`
+
+.. Geben Sie bei Aufforderung den Namen des Audit-Benutzers oder der Gruppe ein: `_audit_user or audit_group_`
+.. Drücken Sie auf der entsprechenden Aufforderung *Enter*.
++
+Das CIFS-Konfigurationsprogramm wird angezeigt.
+
+.. Wiederholen Sie diese Teilschritte für jeden weiteren Benutzer oder jede Gruppe, die Zugriff auf die Revisionsfreigabe hat.
+
+
+. Überprüfen Sie optional die Konfiguration: `validate-config`
++
+Die Dienste werden überprüft und angezeigt. Sie können die folgenden Meldungen ohne Bedenken ignorieren:
+
++
+[listing]
+----
+Can't find include file /etc/samba/includes/cifs-interfaces.inc
+Can't find include file /etc/samba/includes/cifs-filesystem.inc
+Can't find include file /etc/samba/includes/cifs-custom-config.inc
+Can't find include file /etc/samba/includes/cifs-shares.inc
+rlimit_max: increasing rlimit_max (1024) to minimum Windows limit (16384)
+----
++
+.. Drücken Sie auf der entsprechenden Aufforderung *Enter*.
++
+Die Konfiguration des Audit-Clients wird angezeigt.
+
+.. Drücken Sie auf der entsprechenden Aufforderung *Enter*.
++
+Das CIFS-Konfigurationsprogramm wird angezeigt.
+
+
+
+. Schließen Sie das CIFS-Konfigurationsprogramm: `exit`
+. Starten Sie den Samba-Dienst: `service smbd start`
+. Wenn es sich bei der StorageGRID-Implementierung um einen einzelnen Standort handelt, mit dem nächsten Schritt fortfahren.
++
+Oder
+
++
+Wenn die StorageGRID-Bereitstellung Admin-Nodes an anderen Standorten enthält, aktivieren Sie diese Revisionsfreigabe nach Bedarf:
+
++
+.. Remote-Anmeldung beim Admin-Node eines Standorts:
++
+... Geben Sie den folgenden Befehl ein: `ssh admin@_grid_node_IP_`
+... Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+... Geben Sie den folgenden Befehl ein, um zum Root zu wechseln: `su -`
+... Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+
+
+.. Wiederholen Sie die Schritte, um die Revisionsfreigabe für jeden zusätzlichen Admin-Knoten zu konfigurieren.
+.. Schließen Sie die sichere Remote-Shell-Anmeldung am Remote-Admin-Node: `exit`
+
+
+. Melden Sie sich aus der Befehlsshell ab: `exit`
+

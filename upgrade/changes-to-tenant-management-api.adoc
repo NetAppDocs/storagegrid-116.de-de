@@ -1,0 +1,25 @@
+---
+permalink: upgrade/changes-to-tenant-management-api.html 
+sidebar: sidebar 
+keywords: tenant management api, api, api version, swagger, rest api 
+summary: StorageGRID 11.6 verwendet Version 3 der Mandantenmanagement-API. Version 3 depretiert Version 2; jedoch werden Version 1 und Version 2 weiterhin unterstützt. 
+---
+= Änderungen an der Mandantenmanagement-API
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+StorageGRID 11.6 verwendet Version 3 der Mandantenmanagement-API. Version 3 depretiert Version 2; jedoch werden Version 1 und Version 2 weiterhin unterstützt.
+
+
+IMPORTANT: Sie können weiterhin Version 1 und Version 2 der Management-API mit StorageGRID 11.6 verwenden. Die Unterstützung für diese Versionen der API wird jedoch in einem zukünftigen Release von StorageGRID entfernt. Nach dem Upgrade auf StorageGRID 11.6 können die veralteten v1- und v2-APIs mit dem deaktiviert werden `PUT /grid/config/management` API:
+
+Weitere Informationen finden Sie unter xref:../tenant/understanding-tenant-management-api.adoc[Mandantenmanagement-API verstehen].
+
+
+
+== PATCH-Methode ist veraltet
+
+Die PATCH-Methode wurde jetzt veraltet und wird in einer zukünftigen Version entfernt. Führen Sie bei Bedarf einen PUT-Vorgang durch, um eine Ressource zu ersetzen, anstatt einen PATCH-Vorgang zum Ändern der Ressource zu verwenden.

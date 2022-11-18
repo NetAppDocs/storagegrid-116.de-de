@@ -1,0 +1,18 @@
+---
+permalink: admin/managing-storage-options.html 
+sidebar: sidebar 
+keywords: storage options 
+summary: Storage-Optionen umfassen die Einstellungen für die Objektsegmentierung, die aktuellen Werte für Storage-Volume-Wasserzeichen und die Einstellung für reservierten Speicherplatz. Sie können auch die S3- und Swift-Ports anzeigen, die vom veralteten CLB-Dienst auf Gateway-Nodes und vom LDR-Service auf Storage-Nodes verwendet werden. 
+---
+= Storage-Optionen managen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Storage-Optionen umfassen die Einstellungen für die Objektsegmentierung, die aktuellen Werte für Storage-Volume-Wasserzeichen und die Einstellung für reservierten Speicherplatz. Sie können auch die S3- und Swift-Ports anzeigen, die vom veralteten CLB-Dienst auf Gateway-Nodes und vom LDR-Service auf Storage-Nodes verwendet werden.
+
+Informationen zu Port-Zuweisungen finden Sie unter xref:summary-ip-addresses-and-ports-for-client-connections.adoc[Zusammenfassung: IP-Adressen und Ports für Client-Verbindungen].
+
+image::../media/storage_options.png[Storage-Optionen]

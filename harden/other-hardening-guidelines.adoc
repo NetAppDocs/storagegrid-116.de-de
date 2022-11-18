@@ -1,0 +1,60 @@
+---
+permalink: harden/other-hardening-guidelines.html 
+sidebar: sidebar 
+keywords: Hardening guidelines, security 
+summary: Beachten Sie zusätzlich die Hinweise zur Verhärtung von StorageGRID-Netzwerken und -Knoten die Härtungsrichtlinien für andere Bereiche des StorageGRID-Systems. 
+---
+= Andere Hinweise zur Verhärtung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Beachten Sie zusätzlich die Hinweise zur Verhärtung von StorageGRID-Netzwerken und -Knoten die Härtungsrichtlinien für andere Bereiche des StorageGRID-Systems.
+
+
+
+== Protokolle und Prüfmeldungen
+
+Sichern Sie StorageGRID-Protokolle und die Ausgabe von Prüfnachrichten sicher. StorageGRID-Protokolle und Audit-Meldungen bieten wertvolle Informationen aus Sicht der Support- und Systemverfügbarkeit. Darüber hinaus handelt es sich bei den Informationen und Details der StorageGRID-Protokolle und der Ausgabe von Audit-Meldungen in der Regel um sensible Daten.
+
+Konfigurieren Sie StorageGRID, um Sicherheitsereignisse an einen externen Syslog-Server zu senden. Wenn Sie syslog-Export verwenden, wählen Sie TLS und RELP/TLS für die Transportprotokolle aus.
+
+Weitere Informationen zu StorageGRID-Protokollen finden Sie in den Anweisungen zum Monitoring und zur Fehlerbehebung. Weitere Informationen zu StorageGRID-Audit-Meldungen finden Sie in den Anweisungen für Audit-Meldungen.
+
+
+
+== NetApp AutoSupport
+
+Mit der AutoSupport Funktion von StorageGRID können Sie proaktiv den Systemzustand überwachen und automatisch Nachrichten und Details an den technischen Support von NetApp, das interne Support-Team Ihres Unternehmens oder einen Support-Partner senden. Standardmäßig sind AutoSupport Meldungen an den technischen Support von NetApp aktiviert, wenn StorageGRID zum ersten Mal konfiguriert ist.
+
+Die AutoSupport-Funktion kann deaktiviert werden. NetApp empfiehlt jedoch die Aktivierung, da AutoSupport die Identifizierung von Problemen und die Behebung von Problemen beschleunigt, wenn es auf Ihrem StorageGRID System zu Problemen kommt.
+
+AutoSupport unterstützt HTTPS, HTTP und SMTP für Transportprotokolle. Aufgrund der sensible Natur von AutoSupport Meldungen empfiehlt NetApp dringend, HTTPS als Standard-Transportprotokoll für das Senden von AutoSupport Meldungen an die NetApp Unterstützung zu verwenden.
+
+Optional können Sie einen Admin-Proxy für mehr Kontrolle über die AutoSupport Kommunikation von Admin Nodes zum technischen Support von NetApp konfigurieren. Lesen Sie die Schritte zum Erstellen eines Admin-Proxys in den Anweisungen zur Administration von StorageGRID.
+
+
+
+== Cross-Origin Resource Sharing (CORS)
+
+Die Cross-Origin Resource Sharing (CORS) kann für einen S3-Bucket konfiguriert werden, wenn für Web-Applikationen in anderen Domänen auf diesen Bucket und Objekte in diesem Bucket zugegriffen werden soll. Aktivieren Sie CORS im Allgemeinen nur, wenn dies erforderlich ist. Wenn CORS erforderlich ist, beschränken Sie es auf vertrauenswürdige Herkunft.
+
+Lesen Sie die Schritte zum Konfigurieren der Cross-Origin Resource Sharing (CORS) in der Anleitung zur Verwendung von Mandantenkonten.
+
+
+
+== Externe Sicherheitsgeräte
+
+Eine vollständige Härtungslösung muss auch Sicherheitsmechanismen außerhalb von StorageGRID berücksichtigen. Der Einsatz zusätzlicher Infrastrukturgeräte zum Filtern und zur Einschränkung des Zugriffs auf StorageGRID ist eine effektive Möglichkeit, eine anspruchsvolle Sicherheit zu schaffen und zu erhalten. Zu diesen externen Sicherheitsgeräten gehören Firewalls, Intrusion Prevention Systems (IPSs) und andere Sicherheitsgeräte.
+
+Für nicht vertrauenswürdigen Client-Datenverkehr wird ein Load Balancer eines Drittanbieters empfohlen. Der Lastausgleich von Drittanbietern bietet mehr Kontrolle und zusätzlichen Schutz vor Angriffen.
+
+xref:../monitor/index.adoc[Monitoring und Fehlerbehebung]
+
+xref:../audit/index.adoc[Prüfung von Audit-Protokollen]
+
+xref:../tenant/index.adoc[Verwenden Sie das Mandantenkonto]
+
+xref:../admin/index.adoc[StorageGRID verwalten]

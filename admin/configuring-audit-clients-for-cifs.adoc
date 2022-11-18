@@ -1,0 +1,17 @@
+---
+permalink: admin/configuring-audit-clients-for-cifs.html 
+sidebar: sidebar 
+keywords: audit client for cifs 
+summary: 'Das Verfahren zur Konfiguration eines Audit-Clients hängt von der Authentifizierungsmethode ab: Windows Workgroup oder Windows Active Directory \(AD\). Wenn diese Option hinzugefügt wird, wird die Revisionsfreigabe automatisch als schreibgeschützte Freigabe aktiviert.' 
+---
+= Audit-Clients für CIFS konfigurieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Verfahren zum Konfigurieren eines Audit-Clients hängt von der Authentifizierungsmethode ab: Windows Workgroup oder Windows Active Directory (AD). Wenn diese Option hinzugefügt wird, wird die Revisionsfreigabe automatisch als schreibgeschützte Freigabe aktiviert.
+
+
+NOTE: Der Audit-Export über CIFS/Samba wurde veraltet und wird in einer zukünftigen StorageGRID-Version entfernt.

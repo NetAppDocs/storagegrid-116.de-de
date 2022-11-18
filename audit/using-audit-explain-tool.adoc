@@ -1,0 +1,101 @@
+---
+permalink: audit/using-audit-explain-tool.html 
+sidebar: sidebar 
+keywords: storagegrid, audit, tool, audit-explain, audit explain, translate audit messages, translate messages, translate audit message, translate message 
+summary: Mit dem Tool zur Erläuterung von Audits können Sie die Audit-Meldungen im Audit-Protokoll in ein einfach zu lesendes Format übersetzen. 
+---
+= Verwenden Sie das Audit-Erklären-Tool
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können das verwenden `audit-explain` Tool zum Übersetzen der Audit-Meldungen im Audit-Protokoll in ein einfach zu lesendes Format.
+
+.Was Sie und#8217;ll benötigen
+* Sie müssen über spezifische Zugriffsberechtigungen verfügen.
+* Sie müssen die haben `Passwords.txt` Datei:
+* Sie müssen die IP-Adresse des primären Admin-Knotens kennen.
+
+
+Der `audit-explain` Das auf dem primären Admin-Knoten verfügbare Tool bietet vereinfachte Zusammenfassungen der Audit-Meldungen in einem Audit-Protokoll.
+
+
+IMPORTANT: Der `audit-explain` Das Tool ist hauptsächlich für den technischen Support bei der Fehlerbehebung vorgesehen. Wird Verarbeitet `audit-explain` Abfragen können eine große Menge an CPU-Energie verbrauchen, was sich auf die StorageGRID-Vorgänge auswirken kann.
+
+Dieses Beispiel zeigt die typische Ausgabe von der `audit-explain` Werkzeug. Diese vier SPUT-Audit-Nachrichten wurden generiert, als der S3-Mandant mit Konto-ID 92484777680322627870 S3-PUT-Anforderungen verwendete, um einen Bucket mit dem Namen „bucket1“ zu erstellen und diesem Bucket drei Objekte hinzuzufügen.
+
+[listing]
+----
+SPUT S3 PUT bucket bucket1 account:92484777680322627870 usec:124673
+SPUT S3 PUT object bucket1/part1.txt tenant:92484777680322627870  cbid:9DCB157394F99FE5 usec:101485
+SPUT S3 PUT object bucket1/part2.txt tenant:92484777680322627870  cbid:3CFBB07AB3D32CA9 usec:102804
+SPUT S3 PUT object bucket1/part3.txt tenant:92484777680322627870  cbid:5373D73831ECC743 usec:93874
+----
+Der `audit-explain` Das Tool kann einfache oder komprimierte Prüfprotokolle verarbeiten. Beispiel:
+
+[listing]
+----
+audit-explain audit.log
+----
+[listing]
+----
+audit-explain 2019-08-12.txt.gz
+----
+Der `audit-explain` Das Tool kann auch mehrere Dateien gleichzeitig verarbeiten. Beispiel:
+
+[listing]
+----
+audit-explain audit.log 2019-08-12.txt.gz 2019-08-13.txt.gz
+----
+[listing]
+----
+audit-explain /var/local/audit/export/*
+----
+Schließlich das `audit-explain` Das Tool kann Eingaben aus einer Leitung annehmen, sodass Sie die Eingabe mit dem filtern und vorverarbeiten können `grep` Befehl oder andere Mittel. Beispiel:
+
+[listing]
+----
+grep SPUT audit.log | audit-explain
+----
+[listing]
+----
+grep bucket-name audit.log | audit-explain
+----
+Da Audit-Protokolle sehr groß und langsam zu analysieren sein können, können Sie Zeit sparen, indem Sie Teile filtern, die Sie ansehen und ausführen möchten `audit-explain` Auf die Teile, statt der gesamten Datei.
+
+
+NOTE: Der `audit-explain` Das Werkzeug akzeptiert keine komprimierten Dateien als Piper-Eingabe. Um komprimierte Dateien zu verarbeiten, geben Sie ihre Dateinamen als Befehlszeilenargumente an, oder verwenden Sie das `zcat` Werkzeug, um die Dateien zuerst zu dekomprimieren. Beispiel:
+
+[listing]
+----
+zcat audit.log.gz | audit-explain
+----
+Verwenden Sie die `help (-h)` Option, um die verfügbaren Optionen anzuzeigen. Beispiel:
+
+[listing]
+----
+ $ audit-explain -h
+----
+.Schritte
+. Melden Sie sich beim primären Admin-Node an:
++
+.. Geben Sie den folgenden Befehl ein: `ssh admin@_primary_Admin_Node_IP_`
+.. Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+
+
+. Geben Sie den folgenden Befehl ein, wobei `/var/local/audit/export/audit.log` Gibt den Namen und den Speicherort der zu analysierenden Datei oder der zu analysierenden Dateien an:
++
+`$ audit-explain /var/local/audit/export/audit.log`
+
++
+Der `audit-explain` Werkzeug druckt menschliche Interpretationen aller Nachrichten in der angegebenen Datei oder Datei.
+
++
+
+NOTE: Um die Zeilenlänge zu verringern und die Lesbarkeit zu erleichtern, werden Zeitstempel standardmäßig nicht angezeigt. Wenn Sie die Zeitstempel anzeigen möchten, verwenden Sie den Zeitstempel (`-t`) Option.
+
+
+
+xref:sput-s3-put.adoc[SPUT: S3 PUT]

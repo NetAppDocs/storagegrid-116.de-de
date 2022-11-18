@@ -1,0 +1,150 @@
+---
+permalink: sg5700/automating-installation-configuration-appliance-nodes-configure-sga-py-script.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, automate, automating, automation, automatic, install, installation, configuration, configure, configure-sga.py script, configure-sga.py 
+summary: Mit dem Skript configure-sga.py können Sie viele Installations- und Konfigurationsaufgaben für StorageGRID Appliance-Knoten automatisieren, einschließlich der Installation und Konfiguration eines primären Admin-Knotens. Dieses Skript kann nützlich sein, wenn Sie über eine große Anzahl von Geräten verfügen, die konfiguriert werden müssen. Sie können das Skript auch zum Generieren einer JSON-Datei verwenden, die Informationen zur Appliance-Konfiguration enthält. 
+---
+= Automatisieren Sie die Installation und Konfiguration von Appliance-Nodes mithilfe von configure-sga.py Skripten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können das verwenden `configure-sga.py` Skript zur Automatisierung vieler Installations- und Konfigurationsaufgaben für StorageGRID-Appliance-Nodes, einschließlich der Installation und Konfiguration eines primären Admin-Knotens Dieses Skript kann nützlich sein, wenn Sie über eine große Anzahl von Geräten verfügen, die konfiguriert werden müssen. Sie können das Skript auch zum Generieren einer JSON-Datei verwenden, die Informationen zur Appliance-Konfiguration enthält.
+
+.Über diese Aufgabe
+* Die Appliance wurde in einem Rack installiert, mit Ihren Netzwerken verbunden und eingeschaltet.
+* Mithilfe des StorageGRID Appliance Installer wurden Netzwerkverbindungen und IP-Adressen für den primären Administratorknoten konfiguriert.
+* Wenn Sie den primären Admin-Node installieren, kennen Sie dessen IP-Adresse.
+* Wenn Sie andere Knoten installieren und konfigurieren, wurde der primäre Admin-Node bereitgestellt, und Sie kennen seine IP-Adresse.
+* Für alle anderen Nodes als den primären Admin-Node wurden alle auf der Seite IP-Konfiguration des Installationsprogramms der StorageGRID-Appliance aufgeführten Grid-Netzwerknetze in der Netznetzwerksubnetz-Liste auf dem primären Admin-Node definiert.
+* Sie haben die heruntergeladen `configure-sga.py` Datei: Die Datei ist im Installationsarchiv enthalten, oder Sie können darauf zugreifen, indem Sie im StorageGRID-Appliance-Installationsprogramm auf *Hilfe* *Installationsskript* klicken.
+
+
+
+NOTE: Dieses Verfahren richtet sich an fortgeschrittene Benutzer, die Erfahrung mit der Verwendung von Befehlszeilenschnittstellen haben. Alternativ können Sie die Konfiguration auch mit dem StorageGRID Appliance Installer automatisieren. +xref:automating-appliance-configuration-using-storagegrid-appliance-installer.adoc[Automatisieren Sie die Appliance-Konfiguration mit dem StorageGRID Appliance Installer]
+
+.Schritte
+. Melden Sie sich an der Linux-Maschine an, die Sie verwenden, um das Python-Skript auszuführen.
+. Für allgemeine Hilfe bei der Skript-Syntax und um eine Liste der verfügbaren Parameter anzuzeigen, geben Sie Folgendes ein:
++
+[listing]
+----
+configure-sga.py --help
+----
++
+Der `configure-sga.py` Skript verwendet fünf Unterbefehle:
+
++
+** `advanced` Für erweiterte Interaktionen von StorageGRID Appliances, einschließlich BMC-Konfiguration und Erstellen einer JSON-Datei, die die aktuelle Konfiguration der Appliance enthält
+** `configure` Zum Konfigurieren des RAID-Modus, des Node-Namens und der Netzwerkparameter
+** `install` Zum Starten einer StorageGRID Installation
+** `monitor` Zur Überwachung einer StorageGRID Installation
+** `reboot` Um das Gerät neu zu starten
+
+
++
+Wenn Sie ein Unterbefehlsargument (erweitert, konfigurieren, installieren, überwachen oder neu booten), gefolgt vom eingeben `--help` Option Sie erhalten einen anderen Hilfetext mit mehr Details zu den Optionen, die in diesem Unterbefehl verfügbar sind: +
+`configure-sga.py _subcommand_ --help`
+
+. Um die aktuelle Konfiguration des Appliance-Knotens zu bestätigen, geben Sie hier Folgendes ein `_SGA-install-ip_` Ist eine der IP-Adressen für den Appliance-Knoten: +
+`configure-sga.py configure _SGA-INSTALL-IP_`
++
+Die Ergebnisse zeigen aktuelle IP-Informationen für die Appliance an, einschließlich der IP-Adresse des primären Admin-Knotens und Informationen über Admin-, Grid- und Client-Netzwerke.
+
++
+[listing]
+----
+Connecting to +https://10.224.2.30:8443+ (Checking version and connectivity.)
+2021/02/25 16:25:11: Performing GET on /api/versions... Received 200
+2021/02/25 16:25:11: Performing GET on /api/v2/system-info... Received 200
+2021/02/25 16:25:11: Performing GET on /api/v2/admin-connection... Received 200
+2021/02/25 16:25:11: Performing GET on /api/v2/link-config... Received 200
+2021/02/25 16:25:11: Performing GET on /api/v2/networks... Received 200
+2021/02/25 16:25:11: Performing GET on /api/v2/system-config... Received 200
+
+  StorageGRID Appliance
+    Name:        LAB-SGA-2-30
+    Node type:   storage
+
+  StorageGRID primary Admin Node
+    IP:        172.16.1.170
+    State:     unknown
+    Message:   Initializing...
+    Version:   Unknown
+
+  Network Link Configuration
+    Link Status
+          Link      State      Speed (Gbps)
+          ----      -----      -----
+          1         Up         10
+          2         Up         10
+          3         Up         10
+          4         Up         10
+          5         Up         1
+          6         Down       N/A
+
+    Link Settings
+        Port bond mode:      FIXED
+        Link speed:          10GBE
+
+        Grid Network:        ENABLED
+            Bonding mode:    active-backup
+            VLAN:            novlan
+            MAC Addresses:   00:a0:98:59:8e:8a  00:a0:98:59:8e:82
+
+        Admin Network:       ENABLED
+            Bonding mode:    no-bond
+            MAC Addresses:   00:80:e5:29:70:f4
+
+        Client Network:      ENABLED
+            Bonding mode:    active-backup
+            VLAN:            novlan
+            MAC Addresses:   00:a0:98:59:8e:89  00:a0:98:59:8e:81
+
+  Grid Network
+    CIDR:      172.16.2.30/21 (Static)
+    MAC:       00:A0:98:59:8E:8A
+    Gateway:   172.16.0.1
+    Subnets:   172.17.0.0/21
+               172.18.0.0/21
+               192.168.0.0/21
+    MTU:       1500
+
+  Admin Network
+    CIDR:      10.224.2.30/21 (Static)
+    MAC:       00:80:E5:29:70:F4
+    Gateway:   10.224.0.1
+    Subnets:   10.0.0.0/8
+               172.19.0.0/16
+               172.21.0.0/16
+    MTU:       1500
+
+  Client Network
+    CIDR:      47.47.2.30/21 (Static)
+    MAC:       00:A0:98:59:8E:89
+    Gateway:   47.47.0.1
+    MTU:       2000
+
+##############################################################
+#####   If you are satisfied with this configuration,    #####
+##### execute the script with the "install" sub-command. #####
+##############################################################
+----
+. Wenn Sie einen der Werte in der aktuellen Konfiguration ändern müssen, verwenden Sie den `configure` Unterbefehl, um sie zu aktualisieren. Wenn Sie beispielsweise die IP-Adresse ändern möchten, die die Appliance für die Verbindung zum primären Admin-Node verwendet `172.16.2.99`, Geben Sie Folgendes ein: +
+`configure-sga.py configure --admin-ip 172.16.2.99 _SGA-INSTALL-IP_`
+. Wenn Sie die Appliance-Konfiguration in einer JSON-Datei sichern möchten, verwenden Sie das `advanced` Und `backup-file` Unterbefehle. Wenn Sie beispielsweise die Konfiguration einer Appliance mit IP-Adresse sichern möchten `_SGA-INSTALL-IP_` Zu einer Datei mit dem Namen `appliance-SG1000.json`, Geben Sie Folgendes ein: +
+`configure-sga.py advanced --backup-file appliance-SG1000.json _SGA-INSTALL-IP_`
++
+Die JSON-Datei, die die Konfigurationsinformationen enthält, wird in das gleiche Verzeichnis geschrieben, aus dem Sie das Skript ausgeführt haben.
+
++
+
+IMPORTANT: Überprüfen Sie, ob der Node-Name der generierten JSON-Datei der Name der Appliance entspricht. Nehmen Sie diese Datei nur dann vor, wenn Sie ein erfahrener Benutzer sind und über die StorageGRID APIs verfügen.
+
+. Wenn Sie mit der Gerätekonfiguration zufrieden sind, verwenden Sie das `install` Und `monitor` Unterbefehle zum Installieren des Geräts: +
+`configure-sga.py install --monitor _SGA-INSTALL-IP_`
+. Wenn Sie das Gerät neu starten möchten, geben Sie Folgendes ein: +
+`configure-sga.py reboot _SGA-INSTALL-IP_`
+

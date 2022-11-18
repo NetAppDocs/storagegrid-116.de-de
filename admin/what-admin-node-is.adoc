@@ -1,0 +1,53 @@
+---
+permalink: admin/what-admin-node-is.html 
+sidebar: sidebar 
+keywords: admin nodes 
+summary: Admin Nodes stellen Managementservices wie Systemkonfiguration, Monitoring und Protokollierung bereit. Jedes Grid muss einen primären Admin-Node haben und kann eine beliebige Anzahl nicht primärer Admin-Nodes für Redundanz aufweisen. 
+---
+= Was ist ein Admin-Node
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Admin Nodes stellen Managementservices wie Systemkonfiguration, Monitoring und Protokollierung bereit. Jedes Grid muss einen primären Admin-Node haben und kann eine beliebige Anzahl nicht primärer Admin-Nodes für Redundanz aufweisen.
+
+Wenn Sie sich beim Grid Manager oder dem Tenant Manager anmelden, stellen Sie eine Verbindung zu einem Admin-Node her. Sie können eine Verbindung zu einem beliebigen Admin-Knoten herstellen, und jeder Admin-Knoten zeigt eine ähnliche Ansicht des StorageGRID-Systems an. Wartungsverfahren müssen jedoch mit dem primären Admin-Node durchgeführt werden.
+
+Admin-Nodes können auch verwendet werden, um den S3- und Swift-Client-Datenverkehr auszugleichen.
+
+Admin-Nodes hosten die folgenden Services:
+
+* AMS-Service
+* CMN-Service
+* NMS-Service
+* Prometheus Service
+* Load Balancer- und High Availability-Services (zur Unterstützung von S3- und Swift-Client-Datenverkehr)
+
+
+Admin-Nodes unterstützen außerdem die Management Application Program Interface (Management-API) zur Verarbeitung von Anfragen aus der Grid Management API und der Mandanten-Management-API. Siehe xref:using-grid-management-api.adoc[Verwenden Sie die Grid-Management-API].
+
+
+
+== Was ist der AMS-Service
+
+Der Audit Management System (AMS)-Dienst verfolgt Systemaktivität und -Ereignisse.
+
+
+
+== Was der CMN-Service ist
+
+Der Configuration Management Node (CMN)-Dienst verwaltet systemweite Konfigurationen von Konnektivität und Protokollfunktionen, die von allen Diensten benötigt werden. Darüber hinaus wird der CMN-Dienst zur Ausführung und Überwachung von Grid-Aufgaben verwendet. Es gibt nur einen CMN-Service pro StorageGRID-Implementierung. Der Admin-Node, der den CMN-Service hostet, wird als primärer Admin-Node bezeichnet.
+
+
+
+== Was ist der NMS-Service
+
+Der NMS-Dienst (Network Management System) steuert die Überwachungs-, Reporting- und Konfigurationsoptionen, die über den Grid Manager, die browserbasierte Schnittstelle des StorageGRID-Systems, angezeigt werden.
+
+
+
+== Was der Prometheus Service ist
+
+Der Prometheus Service sammelt Zeitreihungsmetriken aus den Services auf allen Knoten.

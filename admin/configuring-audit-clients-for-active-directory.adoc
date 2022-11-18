@@ -1,0 +1,189 @@
+---
+permalink: admin/configuring-audit-clients-for-active-directory.html 
+sidebar: sidebar 
+keywords: audit client for ad, active directory 
+summary: Führen Sie dieses Verfahren für jeden Admin-Knoten in einer StorageGRID-Bereitstellung durch, von der aus Sie Audit-Nachrichten abrufen möchten. 
+---
+= Konfigurieren von Audit-Clients für Active Directory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Führen Sie dieses Verfahren für jeden Admin-Knoten in einer StorageGRID-Bereitstellung durch, von der aus Sie Audit-Nachrichten abrufen möchten.
+
+.Was Sie und#8217;ll benötigen
+* Sie haben die `Passwords.txt` Datei mit dem Root-/Admin-Passwort (im GENANNTEN Paket verfügbar).
+* Sie haben den Benutzernamen und das Kennwort für das CIFS Active Directory.
+* Sie haben die `Configuration.txt` Datei (im GENANNTEN Paket verfügbar).
+
+
+
+NOTE: Der Audit-Export über CIFS/Samba wurde veraltet und wird in einer zukünftigen StorageGRID-Version entfernt.
+
+.Schritte
+. Melden Sie sich beim primären Admin-Node an:
++
+.. Geben Sie den folgenden Befehl ein: `ssh admin@_primary_Admin_Node_IP_`
+.. Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+.. Geben Sie den folgenden Befehl ein, um zum Root zu wechseln: `su -`
+.. Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
++
+Wenn Sie als root angemeldet sind, ändert sich die Eingabeaufforderung von `$` Bis `#`.
+
+
+
+. Vergewissern Sie sich, dass alle Dienste den Status „ausgeführt“ oder „geprüft“ aufweisen: `storagegrid-status`
++
+Wenn nicht alle Dienste ausgeführt oder verifiziert werden, beheben Sie Probleme, bevor Sie fortfahren.
+
+. Kehren Sie zur Befehlszeile zurück und drücken Sie *Strg*+*C*.
+. Starten Sie das CIFS-Konfigurationsprogramm: `config_cifs.rb`
++
+[listing]
+----
+
+---------------------------------------------------------------------
+| Shares                 | Authentication         | Config          |
+---------------------------------------------------------------------
+| add-audit-share        | set-authentication     | validate-config |
+| enable-disable-share   | set-netbios-name       | help            |
+| add-user-to-share      | join-domain            | exit            |
+| remove-user-from-share | add-password-server    |                 |
+| modify-group           | remove-password-server |                 |
+|                        | add-wins-server        |                 |
+|                        | remove-wins-server     |                 |
+---------------------------------------------------------------------
+----
+. Legen Sie die Authentifizierung für Active Directory fest: `set-authentication`
++
+In den meisten Bereitstellungen müssen Sie die Authentifizierung festlegen, bevor Sie den Audit-Client hinzufügen. Wenn die Authentifizierung bereits festgelegt wurde, wird eine Beratungsmeldung angezeigt. Wenn die Authentifizierung bereits festgelegt wurde, fahren Sie mit dem nächsten Schritt fort.
+
++
+.. Bei Aufforderung zur Workgroup- oder Active Directory-Installation: `ad`
+.. Geben Sie bei der entsprechenden Aufforderung den Namen der AD-Domäne ein (kurzer Domain-Name).
+.. Geben Sie bei entsprechender Aufforderung die IP-Adresse oder den DNS-Hostnamen des Domänencontrollers ein.
+.. Geben Sie bei entsprechender Aufforderung den vollständigen Domänennamen ein.
++
+Verwenden Sie Großbuchstaben.
+
+.. Geben Sie bei Aufforderung zur Aktivierung der Winbindunterstützung *y* ein.
++
+Winbind wird verwendet, um Benutzer- und Gruppeninformationen von AD-Servern zu lösen.
+
+.. Geben Sie bei entsprechender Aufforderung den NetBIOS-Namen ein.
+.. Drücken Sie auf der entsprechenden Aufforderung *Enter*.
++
+Das CIFS-Konfigurationsprogramm wird angezeigt.
+
+
+
+. Treten Sie der Domäne bei:
++
+.. Wenn noch nicht gestartet, starten Sie das CIFS-Konfigurationsprogramm: `config_cifs.rb`
+.. Treten Sie der Domäne bei: `join-domain`
+.. Sie werden aufgefordert zu testen, ob der Admin-Knoten derzeit ein gültiges Mitglied der Domain ist. Wenn dieser Admin-Node der Domäne noch nicht beigetreten ist, geben Sie Folgendes ein: `no`
+.. Geben Sie bei entsprechender Aufforderung den Benutzernamen des Administrators an: `_administrator_username_`
++
+Wo `_administrator_username_` Ist der Benutzername für das CIFS Active Directory, nicht der StorageGRID-Benutzername.
+
+.. Geben Sie bei entsprechender Aufforderung das Administratorpasswort an: `_administrator_password_`
++
+Waren `_administrator_password_` Ist der Benutzername für das CIFS-Active-Verzeichnis und nicht das StorageGRID-Kennwort.
+
+.. Drücken Sie auf der entsprechenden Aufforderung *Enter*.
++
+Das CIFS-Konfigurationsprogramm wird angezeigt.
+
+
+
+. Vergewissern Sie sich, dass Sie der Domäne ordnungsgemäß beigetreten sind:
++
+.. Treten Sie der Domäne bei: `join-domain`
+.. Wenn Sie aufgefordert werden, zu testen, ob der Server derzeit ein gültiges Mitglied der Domäne ist, geben Sie Folgendes ein: `y`
++
+Wenn Sie die Meldung „`Join is OK,`“ erhalten, haben Sie sich erfolgreich der Domäne angeschlossen. Wenn diese Antwort nicht angezeigt wird, versuchen Sie, die Authentifizierung zu aktivieren und die Domain erneut anzuschließen.
+
+.. Drücken Sie auf der entsprechenden Aufforderung *Enter*.
++
+Das CIFS-Konfigurationsprogramm wird angezeigt.
+
+
+
+. Hinzufügen eines Audit-Clients: `add-audit-share`
++
+.. Wenn Sie aufgefordert werden, einen Benutzer oder eine Gruppe hinzuzufügen, geben Sie Folgendes ein: `user`
+.. Wenn Sie zur Eingabe des Benutzernamens für die Prüfung aufgefordert werden, geben Sie den Benutzernamen für die Prüfung ein.
+.. Drücken Sie auf der entsprechenden Aufforderung *Enter*.
++
+Das CIFS-Konfigurationsprogramm wird angezeigt.
+
+
+
+. Wenn mehr als ein Benutzer oder eine Gruppe auf die Revisionsfreigabe zugreifen darf, fügen Sie weitere Benutzer hinzu: `add-user-to-share`
++
+Es wird eine nummerierte Liste mit aktivierten Freigaben angezeigt.
+
++
+.. Geben Sie die Nummer der Freigabe für den Audit-Export ein.
+.. Wenn Sie aufgefordert werden, einen Benutzer oder eine Gruppe hinzuzufügen, geben Sie Folgendes ein: `group`
++
+Sie werden aufgefordert, den Namen der Überwachungsgruppe anzugeben.
+
+.. Wenn Sie zur Eingabe des Namens der Überwachungsgruppe aufgefordert werden, geben Sie den Namen der Benutzergruppe für die Prüfung ein.
+.. Drücken Sie auf der entsprechenden Aufforderung *Enter*.
++
+Das CIFS-Konfigurationsprogramm wird angezeigt.
+
+.. Wiederholen Sie diesen Schritt für jeden weiteren Benutzer oder jede Gruppe, der Zugriff auf die Revisionsfreigabe hat.
+
+
+. Überprüfen Sie optional die Konfiguration: `validate-config`
++
+Die Dienste werden überprüft und angezeigt. Sie können die folgenden Meldungen ohne Bedenken ignorieren:
+
++
+** Die include-Datei kann nicht gefunden werden `/etc/samba/includes/cifs-interfaces.inc`
+** Die include-Datei kann nicht gefunden werden `/etc/samba/includes/cifs-filesystem.inc`
+** Die include-Datei kann nicht gefunden werden `/etc/samba/includes/cifs-interfaces.inc`
+** Die include-Datei kann nicht gefunden werden `/etc/samba/includes/cifs-custom-config.inc`
+** Die include-Datei kann nicht gefunden werden `/etc/samba/includes/cifs-shares.inc`
+** Rlimit_max: Anstieg von rlimit_max (1024) auf Windows-Minimum (16384)
++
+
+IMPORTANT: Kombinieren Sie die Einstellung 'security=ads' nicht mit dem Parameter 'Password Server'. (Standardmäßig erkennt Samba das korrekte DC, um automatisch Kontakt aufzunehmen).
+
++
+... Wenn Sie dazu aufgefordert werden, drücken Sie *Enter*, um die Konfiguration des Audit-Clients anzuzeigen.
+... Drücken Sie auf der entsprechenden Aufforderung *Enter*.
++
+Das CIFS-Konfigurationsprogramm wird angezeigt.
+
+
+
+
+
+. Schließen Sie das CIFS-Konfigurationsprogramm: `exit`
+. Wenn es sich bei der StorageGRID-Implementierung um einen einzelnen Standort handelt, mit dem nächsten Schritt fortfahren.
++
+Oder
+
++
+Wenn die StorageGRID-Bereitstellung Admin-Nodes an anderen Standorten enthält, aktivieren Sie optional die folgenden Audit-Shares nach Bedarf:
+
++
+.. Remote-Anmeldung beim Admin-Node eines Standorts:
++
+... Geben Sie den folgenden Befehl ein: `ssh admin@_grid_node_IP_`
+... Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+... Geben Sie den folgenden Befehl ein, um zum Root zu wechseln: `su -`
+... Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+
+
+.. Wiederholen Sie diese Schritte, um die Revisionsfreigaben für jeden Admin-Knoten zu konfigurieren.
+.. Schließen Sie die sichere Remote-Shell-Anmeldung beim Admin-Node: `exit`
+
+
+. Melden Sie sich aus der Befehlsshell ab: `exit`
+

@@ -1,0 +1,103 @@
+---
+permalink: maintain/recovering-failed-storage-volumes-and-rebuilding-cassandra-database.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, maintenance, maintain, failed storage volumes, failed volumes, cassandra, cassandra rebuild, rebuild cassandra, cassandra database 
+summary: Sie müssen ein Skript ausführen, das den Speicher auf ausgefallenen Storage-Volumes neu formatiert und neu einbindet, und die Cassandra-Datenbank auf dem Storage-Node neu erstellen, falls das System den Bedarf ermittelt. 
+---
+= Recovery ausgefallener Storage-Volumes und Wiederherstellung der Cassandra-Datenbank
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen ein Skript ausführen, das den Speicher auf ausgefallenen Storage-Volumes neu formatiert und neu einbindet, und die Cassandra-Datenbank auf dem Storage-Node neu erstellen, falls das System den Bedarf ermittelt.
+
+* Sie müssen die haben `Passwords.txt` Datei:
+* Die Systemlaufwerke auf dem Server müssen intakt sein.
+* Die Fehlerursache muss ermittelt worden sein und bei Bedarf muss bereits Ersatz-Storage-Hardware angeschafft worden sein.
+* Die Gesamtgröße des Ersatzspeichers muss mit dem Original übereinstimmen.
+* Sie haben überprüft, dass keine Ausmusterung von Storage-Nodes ausgeführt wird oder Sie den Vorgang zur Deaktivierung eines Node angehalten haben. (Wählen Sie im Grid Manager die Option *WARTUNG* *Aufgaben* *Dekommission*.)
+* Sie haben überprüft, dass keine Erweiterung ausgeführt wird. (Wählen Sie im Grid Manager die Option *WARTUNG* *Aufgaben* *Erweiterung*.)
+* Das ist schon xref:reviewing-warnings-about-storage-volume-recovery.adoc[Die Warnungen zur Wiederherstellung des Speichervolumens wurden überprüft].
++
+.. Ersetzen Sie bei Bedarf den fehlerhaften physischen oder virtuellen Speicher, der mit den fehlerhaften Speicher-Volumes verbunden ist, die Sie zuvor ermittelt und abgehängt haben.
++
+Stellen Sie nach dem Ersetzen des Speichers sicher, dass Sie ihn erneut scannen oder neu booten, um sicherzustellen, dass er vom Betriebssystem erkannt wird, die Volumes jedoch nicht neu mounten. Der Speicher wird neu eingebunden und hinzugefügt `/etc/fstab` In einem späteren Schritt.
+
+.. Melden Sie sich beim fehlgeschlagenen Speicherknoten an:
++
+... Geben Sie den folgenden Befehl ein: `ssh admin@_grid_node_IP_`
+... Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+... Geben Sie den folgenden Befehl ein, um zum Root zu wechseln: `su -`
+... Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+
+
+
+
++
+Wenn Sie als root angemeldet sind, ändert sich die Eingabeaufforderung von `$` Bis `#`.
+
++
+.. Verwenden Sie einen Texteditor (vi oder vim), um fehlgeschlagene Volumes aus dem zu löschen `/etc/fstab` Datei und dann speichern Sie die Datei.
++
+
+NOTE: Kommentieren eines ausgefallenen Volumes in `/etc/fstab` Datei reicht nicht aus. Das Volume muss aus gelöscht werden `fstab` Während der Wiederherstellungsvorgang überprüft, ob alle Leitungen im vorhanden sind `fstab` Die Datei stimmt mit den gemounteten Dateisystemen überein.
+
+.. Formatieren Sie alle ausgefallenen Storage-Volumes neu und stellen Sie ggf. die Cassandra-Datenbank wieder her. Geben Sie Ein: `reformat_storage_block_devices.rb`
++
+*** Wenn Speicherservices ausgeführt werden, werden Sie aufgefordert, diese zu beenden. Geben Sie ein: *Y*
+*** Sie werden aufgefordert, die Cassandra-Datenbank bei Bedarf neu aufzubauen.
++
+**** Überprüfen Sie die Warnungen. Falls keines dieser Beispiele zutreffend ist, bauen Sie die Cassandra-Datenbank neu aus. Geben Sie ein: *Y*
+**** Wenn mehr als ein Speicherknoten offline ist oder wenn ein anderer Speicherknoten in den letzten 15 Tagen wieder aufgebaut wurde. Geben Sie: *N* ein
++
+Das Skript wird beendet, ohne dass Cassandra neu aufgebaut werden muss. Wenden Sie sich an den technischen Support.
+
+
+
+*** Wenn Sie nach jedem Rangedb-Laufwerk auf dem Storage-Node gefragt werden: `Reformat the rangedb drive _<name>_ (device _<major number>:<minor number>_)? [y/n]?`, Geben Sie eine der folgenden Antworten ein:
++
+**** *Y* um ein Laufwerk neu zu formatieren, das Fehler hatte. Dadurch wird das Speichervolumen neu formatiert und das neu formatierte Speichervolume wird hinzugefügt `/etc/fstab` Datei:
+**** *N* wenn das Laufwerk keine Fehler enthält und Sie es nicht neu formatieren wollen.
++
+
+NOTE: Durch Auswahl von *n* wird das Skript beendet. Entweder montieren Sie das Laufwerk (wenn Sie denken, dass die Daten auf dem Laufwerk beibehalten werden sollten und das Laufwerk fehlerhaft abgehängt wurde) oder entfernen Sie das Laufwerk. Führen Sie dann die aus `reformat_storage_block_devices.rb` Befehl erneut.
+
++
+
+NOTE: Einige StorageGRID-Wiederherstellungsverfahren verwenden Reaper für die Bearbeitung von Cassandra-Reparaturen. Reparaturen werden automatisch ausgeführt, sobald die entsprechenden oder erforderlichen Services gestartet wurden. Sie können die Skriptausgabe bemerken, die "`reaper`" oder "`Cassandra Reparatur erwähnt.`" Wenn eine Fehlermeldung angezeigt wird, dass die Reparatur fehlgeschlagen ist, führen Sie den in der Fehlermeldung angegebenen Befehl aus.
+
++
+Im folgenden Beispiel wird das Laufwerk ausgegeben `/dev/sdf` Muss neu formatiert werden, und Cassandra musste nicht neu aufgebaut werden:
+
++
+[listing]
+----
+root@DC1-S1:~ # reformat_storage_block_devices.rb
+Storage services must be stopped before running this script.
+Stop storage services [y/N]? **y**
+Shutting down storage services.
+Storage services stopped.
+Formatting devices that are not in use...
+Skipping in use device /dev/sdc
+Skipping in use device /dev/sdd
+Skipping in use device /dev/sde
+Reformat the rangedb drive /dev/sdf (device 8:64)? [Y/n]? **y**
+Successfully formatted /dev/sdf with UUID c817f87f-f989-4a21-8f03-b6f42180063f
+Skipping in use device /dev/sdg
+All devices processed
+Running: /usr/local/ldr/setup_rangedb.sh 12075630
+Cassandra does not need rebuilding.
+Starting services.
+
+Reformatting done.  Now do manual steps to
+restore copies of data.
+----
+
+
+
+
+
+
+

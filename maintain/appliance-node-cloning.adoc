@@ -1,0 +1,14 @@
+---
+permalink: maintain/appliance-node-cloning.html 
+sidebar: sidebar 
+keywords: node cloning, clone node 
+summary: Sie können einen Appliance-Node in StorageGRID klonen, um eine Appliance mit neuerem Design oder höheren Funktionen zu verwenden. Durch das Klonen werden alle Informationen des vorhandenen Nodes an die neue Appliance übertragen, ein Hardware-Upgrade-Prozess ist einfach durchzuführen und eine Alternative zur Ausmusterung und Erweiterung beim Austausch von Appliances zu bieten. 
+---
+= Klonen von Appliance-Nodes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Appliance-Node in StorageGRID klonen, um eine Appliance mit neuerem Design oder höheren Funktionen zu verwenden. Durch das Klonen werden alle Informationen des vorhandenen Nodes an die neue Appliance übertragen, ein Hardware-Upgrade-Prozess ist einfach durchzuführen und eine Alternative zur Ausmusterung und Erweiterung beim Austausch von Appliances zu bieten.

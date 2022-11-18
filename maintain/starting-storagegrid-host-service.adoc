@@ -1,0 +1,39 @@
+---
+permalink: maintain/starting-storagegrid-host-service.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, host service, start host service 
+summary: Um die StorageGRID Nodes zu starten und sicherzustellen, dass sie nach einem Neustart des Hosts neu gestartet werden, müssen Sie den StorageGRID Host Service aktivieren und starten. 
+---
+= Starten Sie den StorageGRID Host Service
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um die StorageGRID Nodes zu starten und sicherzustellen, dass sie nach einem Neustart des Hosts neu gestartet werden, müssen Sie den StorageGRID Host Service aktivieren und starten.
+
+. Führen Sie auf jedem Host folgende Befehle aus:
++
+[listing]
+----
+sudo systemctl enable storagegrid
+sudo systemctl start storagegrid
+----
+. Führen Sie den folgenden Befehl aus, um sicherzustellen, dass die Bereitstellung fortgesetzt wird:
++
+`sudo storagegrid node status _node-name_`
+
++
+Führen Sie für jeden Node, der den Status „nicht ausgeführt“ oder „angehalten“ zurückgibt, den folgenden Befehl aus:
+
++
+`sudo storagegrid node start _node-name_`
+
+. Wenn Sie zuvor den StorageGRID-Hostdienst aktiviert und gestartet haben (oder wenn Sie sich nicht sicher sind, ob der Dienst aktiviert und gestartet wurde), führen Sie auch den folgenden Befehl aus:
++
+[listing]
+----
+sudo systemctl reload-or-restart storagegrid
+----
+

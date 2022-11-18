@@ -1,0 +1,76 @@
+---
+permalink: sg6000/replacing-hardware-components-in-storage-controller-shelf.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, Replacing, replace, hardware, components, remove, removing, removal, install, installing, installation, storage controller shelf, Battery, Drive, Power canister, power supply, Fan canister, fan, Drive drawer 
+summary: Wenn ein Hardwareproblem auftritt, müssen Sie möglicherweise eine Komponente im Storage-Controller-Shelf ersetzen. 
+---
+= Hardwarekomponenten in das Storage-Controller-Shelf austauschen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn ein Hardwareproblem auftritt, müssen Sie möglicherweise eine Komponente im Storage-Controller-Shelf ersetzen.
+
+.Was Sie und#8217;ll benötigen
+* Sie haben das Verfahren zum Austausch der E-Series Hardware.
+* Sie haben die Storage Appliance physisch gefunden, bei der die Storage Shelf-Hardwarekomponenten im Datacenter ausgetauscht werden.
++
+xref:locating-controller-in-data-center.adoc[Controller im Datacenter finden]
+
+
+
+Informationen zum Austauschen des Akkus im Speicher-Controller finden Sie in den Anweisungen zum Austauschen eines Speichercontrollers. Diese Anweisungen beschreiben, wie Sie einen Controller aus dem Gerät entfernen, den Akku aus dem Controller entfernen, den Akku einbauen und den Controller austauschen.
+
+Anweisungen zu den anderen Field Replaceable Units (FRUs) in den Controller-Shelfs finden Sie in den Verfahren der E-Series zur Systemwartung.
+
+|===
+| FRU | Siehe Anweisungen 
+
+
+ a| 
+Batterie
+ a| 
+StorageGRID (diese Anleitung): Ersetzen eines Storage-Controllers
+
+
+
+ a| 
+Laufwerk
+ a| 
+E-Series:
+
+* Laufwerk austauschen (60 Laufwerke)
+* Auswechseln des Laufwerks (12 Laufwerke oder 24 Laufwerke)
+
+
+
+
+ a| 
+Leistungsbehälter
+ a| 
+E-Series
+
+* Ersetzen Sie den Netzbehälter (60 Laufwerke).
+* Ersetzen Sie das Netzteil (12 oder 24 Laufwerke).
+
+
+
+
+ a| 
+Lüfterbehälter (nur Shelfs mit 60 Laufwerken)
+ a| 
+E-Series: Lüfterbehälter ersetzen (60 Laufwerke)
+
+
+
+ a| 
+Laufwerkseinschub (nur Shelfs mit 60 Laufwerken)
+ a| 
+E-Series: Auswechseln der Laufwerkschublade (60 Laufwerke)
+
+|===
+http://mysupport.netapp.com/info/web/ECMP1658252.html["NetApp E-Series Systems Documentation Site"^]
+
+xref:replacing-storage-controller-sg6000.adoc[Austausch des Storage Controllers]

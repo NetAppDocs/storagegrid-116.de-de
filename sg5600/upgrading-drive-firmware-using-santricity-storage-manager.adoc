@@ -1,0 +1,215 @@
+---
+permalink: sg5600/upgrading-drive-firmware-using-santricity-storage-manager.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, upgrade, upgrading, firmware, drive, disk, SANtricity Storage Manager, SANtricity 
+summary: Sie aktualisieren Ihre Laufwerk-Firmware, um sicherzustellen, dass Sie über alle neuesten Funktionen und Fehlerbehebungen verfügen. 
+---
+= Aktualisieren Sie die Laufwerk-Firmware mit SANtricity Storage Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie aktualisieren Ihre Laufwerk-Firmware, um sicherzustellen, dass Sie über alle neuesten Funktionen und Fehlerbehebungen verfügen.
+
+.Was Sie und#8217;ll benötigen
+* Die Storage Appliance hat einen optimalen Status.
+* Alle Laufwerke haben einen optimalen Status.
+* Sie haben die aktuelle Version des SANtricity Storage Managers installiert, der mit Ihrer StorageGRID-Version kompatibel ist.
++
+xref:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5600.adoc[Aktualisieren Sie SANtricity OS auf Storage-Controllern mit Grid Manager]
+
++
+xref:upgrading-santricity-os-on-e2700-controller-using-maintenance-mode.adoc[Aktualisieren Sie SANtricity OS auf dem E2700 Controller mithilfe des Wartungsmodus]
+
+* Das ist schon xref:placing-appliance-into-maintenance-mode.adoc[StorageGRID-Appliance in den Wartungsmodus versetzt].
++
+
+NOTE: Im Wartungsmodus wird die Verbindung zum Storage Controller unterbrochen, alle I/O-Aktivitäten werden angehalten und alle Laufwerke werden offline geschaltet.
+
+
+
+
+IMPORTANT: Aktualisieren Sie die Laufwerk-Firmware nicht auf mehr als einer StorageGRID Appliance gleichzeitig. Dadurch kann je nach Implementierungsmodell und ILM-Richtlinien die Nichtverfügbarkeit von Daten auftreten.
+
+.Schritte
+. Vergewissern Sie sich, dass das Gerät in ist xref:placing-appliance-into-maintenance-mode.adoc[Wartungsmodus].
+. Öffnen Sie einen Webbrowser, und geben Sie die IP-Adresse als URL für SANtricity-Speichermanager ein: +
+`*https://_E2700_Controller_IP_*`
+. Geben Sie bei Bedarf den Benutzernamen und das Kennwort des SANtricity Storage Manager-Administrators ein.
+. Wählen Sie in SANtricity Enterprise Management die Registerkarte *Geräte* aus.
++
+Das Fenster SANtricity-Array-Verwaltung wird geöffnet.
+
+. Doppelklicken Sie in der SANtricity-Array-Verwaltung auf das Speicher-Array mit den zu aktualisierenden Laufwerken.
+. Vergewissern Sie sich, dass sowohl das Speicher-Array als auch die Laufwerke den optimalen Status haben.
+. Überprüfen Sie die Version der Laufwerk-Firmware, die derzeit in der Speicher-Appliance installiert ist:
++
+.. Wählen Sie unter SANtricity Enterprise Management die Option *Upgrade* *Laufwerk-Firmware* aus.
++
+Im Fenster Laufwerk-Firmware herunterladen – Pakete hinzufügen werden die aktuell verwendeten Firmware-Dateien des Laufwerks angezeigt.
+
+.. Beachten Sie die aktuellen Versionen der Laufwerk-Firmware und die Laufwerk-IDs unter Aktuelle Firmware-Pakete.
++
+image::../media/sg_storagemanager_upgrade_drive_firmware.png[Aktualisieren Sie Die Laufwerk-Firmware]
+
++
+In diesem Beispiel:
+
++
+*** Die Version der Laufwerk-Firmware lautet *NE00*.
+*** Die Laufwerk-ID lautet *HUH728080AL5204*.
+
+
+
+
++
+Wählen Sie * zugeordnete Laufwerke anzeigen* aus, um anzuzeigen, wo diese Laufwerke in Ihrem Speichergerät installiert sind.
+
+. Laden Sie das verfügbare Laufwerk-Firmware-Upgrade herunter, und bereiten Sie es vor:
++
+.. Öffnen Sie Ihren Webbrowser, navigieren Sie zur NetApp Support Website und melden Sie sich mit Ihrer ID und Ihrem Passwort an.
++
+https://mysupport.netapp.com/site/["NetApp Support"^]
+
+.. Wählen Sie auf der NetApp Support Website die Registerkarte *Downloads* aus und wählen Sie dann *E-Series Festplatten-Firmware* aus.
++
+Die Seite E-Series Festplatten-Firmware wird angezeigt.
+
+.. Suchen Sie nach jedem in Ihrer Speicheranwendung installierten *Drive Identifier*, und stellen Sie sicher, dass jeder Laufwerkkennung die neueste Firmware-Version hat.
++
+*** Wenn die Firmware-Version kein Link ist, hat diese Laufwerkkennung die neueste Firmware-Version.
+*** Wenn eine oder mehrere Laufwerk-Teilenummern für eine Laufwerksidentifikation aufgeführt sind, ist für diese Laufwerke ein Firmware-Upgrade verfügbar. Sie können einen beliebigen Link auswählen, um die Firmware-Datei herunterzuladen.
++
+image::../media/sg_storage_mgr_download_drive_firmware.png[Seite E-Series Festplatten-Firmware]
+
+
+
+.. Wenn eine spätere Firmware-Version aufgeführt wird, wählen Sie den Link im Firmware-Rev. Aus (Download) Spalte zum Herunterladen einer `.zip` Archiv mit der Firmware-Datei.
+.. Extrahieren Sie die von der Support-Website heruntergeladenen Archivdateien der Laufwerk-Firmware (entpacken).
+
+
+. Installieren Sie das Laufwerk-Firmware-Upgrade:
++
+.. Wählen Sie im Fenster SANtricity Storage Manager Laufwerk-Firmware herunterladen - Pakete hinzufügen die Option *Hinzufügen* aus.
+.. Navigieren Sie zum Verzeichnis, das die Firmware-Dateien enthält, und wählen Sie bis zu vier Firmware-Dateien aus.
++
+Die Firmware-Dateien des Laufwerks haben einen Dateinamen wie +
+`D_HUC101212CSS600_30602291_MS01_2800_0002.dlp`
+
++
+Wenn Sie mehrere Firmware-Dateien auswählen, um die Firmware des gleichen Laufwerks zu aktualisieren, kann dies zu einem Dateikonflikt führen. Wenn ein Dateikonflikt auftritt, wird ein Fehlerdialogfeld angezeigt. Um diesen Fehler zu beheben, wählen Sie *OK* aus, und entfernen Sie alle anderen Firmware-Dateien außer denen, die Sie für die Aktualisierung der Firmware des Laufwerks verwenden möchten. Um eine Firmware-Datei zu entfernen, wählen Sie die Firmware-Datei im Informationsbereich Pakete aus, die übertragen werden sollen, und wählen Sie *Entfernen* aus. Darüber hinaus können Sie nur bis zu vier Laufwerk-Firmware-Pakete gleichzeitig auswählen.
+
+.. Wählen Sie *OK*.
++
+Das System aktualisiert den Informationsbereich Pakete, die mit den ausgewählten Firmware-Dateien übertragen werden sollen.
+
+.. Wählen Sie *Weiter*.
++
+Das Fenster Laufwerk-Firmware herunterladen – Laufwerke auswählen wird geöffnet.
+
++
+*** Alle Laufwerke in der Appliance werden nach Konfigurationsinformationen und nach den Voraussetzungen für Upgrades durchsucht.
+*** Sie werden mit einer Auswahl (je nachdem, welche Anzahl von Laufwerken Sie im Speicher-Array haben) von kompatiblen Laufwerken angezeigt, die mit der ausgewählten Firmware aktualisiert werden können. Die Laufwerke, die als Online-Vorgang aktualisiert werden können, werden standardmäßig angezeigt.
+*** Die ausgewählte Firmware für das Laufwerk wird im Bereich der vorgeschlagenen Firmware-Informationen angezeigt. Wenn Sie die Firmware ändern müssen, wählen Sie *Zurück* aus, um zum vorherigen Dialogfeld zurückzukehren.
+
+
+.. Wählen Sie aus der Upgrade-Funktion des Laufwerks den Download-Vorgang *parallel* oder *All* aus.
++
+Sie können eine dieser Upgrade-Methoden verwenden, da sich die Appliance im Wartungsmodus befindet, wobei die I/O-Aktivität für alle Laufwerke und alle Volumes angehalten wird.
+
+.. Wählen Sie in kompatiblen Laufwerken die Laufwerke aus, für die Sie die ausgewählten Firmware-Dateien aktualisieren möchten.
++
+*** Wählen Sie für ein oder mehrere Laufwerke jedes Laufwerk aus, das Sie aktualisieren möchten.
+*** Wählen Sie für alle kompatiblen Laufwerke * Alle auswählen*.
++
+Als Best Practice wird empfohlen, alle Laufwerke desselben Modells auf dieselbe Firmware-Version zu aktualisieren.
+
+
+
+.. Wählen Sie *Fertig*, und geben Sie dann ein `yes` Und wählen Sie *OK*.
++
+*** Das Herunterladen und Upgrade der Laufwerk-Firmware beginnt mit der Firmware des Download-Laufwerks. Der Fortschritt zeigt den Status der Firmware-Übertragung für alle Laufwerke an.
+*** Der Status jedes Laufwerks, das an der Aktualisierung beteiligt ist, wird in der Spalte Status des Übertragungsfortschritts der aktualisierten Geräte angezeigt.
++
+Ein Upgrade der parallelen Festplatten-Firmware kann bis zu 90 Sekunden dauern, wenn alle Laufwerke auf einem System mit 24 Laufwerken aktualisiert werden. Bei einem größeren System ist die Ausführungszeit etwas länger.
+
+
+
+.. Während der Firmware-Aktualisierung können Sie: +
++
+*** Wählen Sie *Stopp*, um die Firmware-Aktualisierung zu beenden. Alle derzeit laufenden Firmware-Aktualisierungen sind abgeschlossen. Alle Laufwerke, bei denen ein Firmware-Upgrade durchgeführt wurde, zeigen ihren individuellen Status an. Alle verbleibenden Laufwerke werden mit dem Status „nicht versucht“ aufgeführt.
++
+
+IMPORTANT: Wenn Sie die Aktualisierung der Laufwerk-Firmware beenden, kann dies zu Datenverlust oder nicht verfügbaren Laufwerken führen.
+
+*** Wählen Sie *Speichern unter* aus, um einen Textbericht der Fortschrittszusammenfassung der Firmware-Aktualisierung zu speichern. Der Bericht wird mit einer standardmäßigen .log-Dateierweiterung gespeichert. Wenn Sie die Dateierweiterung oder das Verzeichnis ändern möchten, ändern Sie die Parameter in Save Drive Download Log.
+
+
+.. Verwenden Sie Download Drive Firmware - Fortschritt, um den Fortschritt der Laufwerk-Firmware-Upgrades zu überwachen. Der Bereich „Laufwerke aktualisiert“ enthält eine Liste der Laufwerke, die für das Firmware-Upgrade geplant sind, sowie den Übertragungsstatus des Downloads und Upgrades jedes Laufwerks.
++
+Der Fortschritt und der Status jedes Laufwerks, das an der Aktualisierung beteiligt ist, wird in der Spalte „Fortschritt übertragen“ angezeigt. Nehmen Sie die entsprechende empfohlene Aktion vor, wenn während des Upgrades Fehler auftreten.
+
++
+*** *Ausstehend*
++
+Dieser Status wird für einen Online-Firmware-Download-Vorgang angezeigt, der zwar geplant, aber noch nicht gestartet wurde.
+
+*** *In Bearbeitung*
++
+Die Firmware wird auf das Laufwerk übertragen.
+
+*** *Rekonstruktion läuft*
++
+Dieser Status wird angezeigt, wenn eine Volume-Übertragung während der schnellen Rekonstruktion eines Laufwerks stattfindet. Dies liegt normalerweise daran, dass der Controller zurückgesetzt oder ausfällt und der Controller-Eigentümer das Volume überträgt.
+
++
+Das System initiiert eine vollständige Rekonstruktion des Laufwerks.
+
+*** *Fehlgeschlagen - Teil*
++
+Die Firmware wurde nur teilweise auf das Laufwerk übertragen, bevor ein Problem die Übertragung der restlichen Datei verhindert hat.
+
+*** *Fehlgeschlagen - ungültiger Status*
++
+Die Firmware ist ungültig.
+
+*** *Fehlgeschlagen - Sonstiges*
++
+Die Firmware konnte nicht heruntergeladen werden, möglicherweise aufgrund eines physischen Problems mit dem Laufwerk.
+
+*** *Nicht versucht*
++
+Die Firmware wurde nicht heruntergeladen. Dies kann auf verschiedene Gründe zurückzuführen sein, wie z. B. der Download wurde angehalten, bevor es auftreten konnte, oder das Laufwerk hat sich nicht für das Upgrade qualifiziert, oder der Download konnte aufgrund eines Fehlers nicht auftreten.
+
+*** *Erfolgreich*
++
+Die Firmware wurde erfolgreich heruntergeladen.
+
+
+
+
+
+. Nach Abschluss des Upgrades der Laufwerk-Firmware:
++
+** Um den Assistenten zum Herunterladen der Laufwerk-Firmware zu schließen, wählen Sie *Schließen*.
+** Um den Assistenten erneut zu starten, wählen Sie *Mehr übertragen*.
+
+
+. Wenn diese Prozedur erfolgreich abgeschlossen ist und Sie weitere durchzuführenden Verfahren haben, während sich der Node im Wartungsmodus befindet, führen Sie sie jetzt aus. Wenn Sie fertig sind oder Fehler auftreten und von vorne beginnen möchten, wählen Sie *Erweitert* *Controller neu starten* aus, und wählen Sie dann eine der folgenden Optionen aus:
++
+** Wählen Sie *Neustart in StorageGRID* aus
+** Wählen Sie *Neustart im Wartungsmodus* aus, um den Controller neu zu starten, wobei der Knoten noch im Wartungsmodus bleibt. Wählen Sie diese Option aus, wenn während des Verfahrens Fehler auftreten und neu starten möchten. Nachdem der Node das Neubooten in den Wartungsmodus abgeschlossen hat, starten Sie den entsprechenden Schritt während des ausgefallenen Verfahrens neu.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Booten Sie den Controller im Wartungsmodus neu]
+
++
+Die Appliance kann bis zu 20 Minuten dauern, bis sie neu gestartet und wieder in das Grid eingesetzt wird. Um zu überprüfen, ob das Neubooten abgeschlossen ist und dass der Node wieder dem Grid beigetreten ist, gehen Sie zurück zum Grid Manager. Die Seite *Nodes* sollte einen normalen Status (keine Symbole links neben dem Knotennamen) für den Appliance-Knoten anzeigen, der angibt, dass keine Warnmeldungen aktiv sind und der Knoten mit dem Raster verbunden ist.
+
++
+image::../media/node_rejoin_grid_confirmation.png[Das Raster des Appliance-Node wurde neu verbunden]
+
+
+
+

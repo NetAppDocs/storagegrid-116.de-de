@@ -1,0 +1,52 @@
+---
+permalink: admin/specifying-node-client-network-is-untrusted.html 
+sidebar: sidebar 
+keywords: how to specify if client network is untrusted, what is untrusted client network 
+summary: Wenn Sie ein Client-Netzwerk verwenden, können Sie angeben, ob das Client-Netzwerk jedes Knotens vertrauenswürdig oder nicht vertrauenswürdig ist. Sie können auch die Standardeinstellung für neue Knoten festlegen, die in einer Erweiterung hinzugefügt werden. 
+---
+= Das Client-Netzwerk des Node angeben ist nicht vertrauenswürdig
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie ein Client-Netzwerk verwenden, können Sie angeben, ob das Client-Netzwerk jedes Node vertrauenswürdig oder nicht vertrauenswürdig ist. Sie können auch die Standardeinstellung für neue Knoten festlegen, die in einer Erweiterung hinzugefügt werden.
+
+.Was Sie und#8217;ll benötigen
+* Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+* Sie haben die Root-Zugriffsberechtigung.
+* Wenn ein Admin-Node oder Gateway-Node nur eingehenden Datenverkehr auf explizit konfigurierten Endpunkten annehmen soll, haben Sie die Load Balancer-Endpunkte definiert.
++
+
+NOTE: Vorhandene Client-Verbindungen können fehlschlagen, wenn die Load Balancer-Endpunkte nicht konfiguriert wurden.
+
+
+
+.Schritte
+. Wählen Sie *KONFIGURATION* *Sicherheit* *nicht vertrauenswürdige Client-Netzwerke*.
++
+Auf der Seite nicht vertrauenswürdige Clientnetzwerke werden alle Knoten Ihres StorageGRID-Systems aufgelistet. Die Spalte „nicht verfügbar“ enthält einen Eintrag, wenn das Client-Netzwerk auf dem Knoten vertrauenswürdig sein muss.
+
++
+image::../media/untrusted_client_networks_page.png[Nicht Vertrauenswürdige Client-Netzwerke]
+
+. Geben Sie im Abschnitt *Neue Knoten Standard* festlegen an, was die Standardeinstellung sein soll, wenn neue Knoten in einem Erweiterungsvorgang zum Raster hinzugefügt werden.
++
+** *Trusted*: Wenn ein Knoten in einer Erweiterung hinzugefügt wird, wird seinem Client-Netzwerk vertraut.
+** *UnTrusted*: Wenn ein Knoten in einer Erweiterung hinzugefügt wird, ist sein Client-Netzwerk nicht vertrauenswürdig. Sie können bei Bedarf zu dieser Seite zurückkehren, um die Einstellung für einen bestimmten neuen Knoten zu ändern.
+
+
++
+
+NOTE: Diese Einstellung hat keine Auswirkung auf die vorhandenen Nodes im StorageGRID System.
+
+. Wählen Sie im Abschnitt *nicht vertrauenswürdige Client-Netzwerkknoten auswählen* die Knoten aus, die Clientverbindungen nur auf explizit konfigurierten Load-Balancer-Endpunkten zulassen sollen.
++
+Sie können das Kontrollkästchen im Titel auswählen oder deaktivieren, um alle Knoten auszuwählen oder zu deaktivieren.
+
+. Wählen Sie *Speichern*.
++
+Die neuen Firewall-Regeln werden sofort hinzugefügt und durchgesetzt. Vorhandene Client-Verbindungen können fehlschlagen, wenn die Load Balancer-Endpunkte nicht konfiguriert wurden.
+
+

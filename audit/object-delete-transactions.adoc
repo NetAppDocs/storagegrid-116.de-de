@@ -1,0 +1,57 @@
+---
+permalink: audit/object-delete-transactions.html 
+sidebar: sidebar 
+keywords: storagegrid, audit, message, messages, transaction, transactions, Object delete, S3 delete, Swift delete, S3, Swift, SDEL, WDEL 
+summary: 'Sie können Transaktionen zum Löschen von Objekten im Audit-Protokoll identifizieren, indem API-spezifische \(S3 und Swift\)-Audit-Nachrichten ausfindig gemacht werden.' 
+---
+= Löschen von Objekttransaktionen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Transaktionen zum Löschen von Objekten im Prüfprotokoll identifizieren, indem API-spezifische (S3 und Swift) Audit-Meldungen angezeigt werden.
+
+In den folgenden Tabellen sind nicht alle während einer Löschtransaktion generierten Überwachungsmeldungen aufgeführt. Es werden nur Nachrichten enthalten, die zum Verfolgen der Löschtransaktion erforderlich sind.
+
+
+
+== S3-Audit-Nachrichten löschen
+
+|===
+| Codieren | Name | Beschreibung | Verfolgen | Siehe 
+
+
+ a| 
+SDEL
+ a| 
+S3 Löschen
+ a| 
+Anforderung zum Löschen des Objekts aus einem Bucket gemacht.
+ a| 
+CBID, S3KY
+ a| 
+xref:sdel-s3-delete.adoc[SDEL: S3 LÖSCHEN]
+
+|===
+
+
+== Swift Audit-Nachrichten löschen
+
+|===
+| Codieren | Name | Beschreibung | Verfolgen | Siehe 
+
+
+ a| 
+WDEL
+ a| 
+Swift Löschen
+ a| 
+Anforderung gemacht, das Objekt aus einem Container oder Container zu löschen.
+ a| 
+CBID, WOBJ
+ a| 
+xref:wdel-swift-delete.adoc[WDEL: Swift LÖSCHEN]
+
+|===

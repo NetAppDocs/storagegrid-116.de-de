@@ -1,0 +1,117 @@
+---
+permalink: sg6000/installation-and-deployment-overview.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, Installation, deployment, Install, deploy, Installing, deploying 
+summary: Sie können eine oder mehrere StorageGRID Storage Appliances installieren, wenn Sie StorageGRID zum ersten Mal implementieren. Alternativ können Sie Appliance Storage-Nodes später im Rahmen einer Erweiterung hinzufügen. Möglicherweise müssen Sie auch einen Appliance-Speicherknoten im Rahmen eines Wiederherstellungsvorgangs installieren. 
+---
+= Übersicht über Installation und Implementierung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine oder mehrere StorageGRID Storage Appliances installieren, wenn Sie StorageGRID zum ersten Mal implementieren. Alternativ können Sie Appliance Storage-Nodes später im Rahmen einer Erweiterung hinzufügen. Möglicherweise müssen Sie auch einen Appliance-Speicherknoten im Rahmen eines Wiederherstellungsvorgangs installieren.
+
+Ihr StorageGRID System verwendet die erforderliche Version der StorageGRID Software.
+
+|===
+| Appliance | Erforderliche StorageGRID Version 
+
+
+ a| 
+SG6060 und SG6060X ohne Erweiterungs-Shelfs
+ a| 
+11.1.1 oder höher
+
+
+
+ a| 
+SG6060 und SG6060X mit Erweiterungs-Shelfs (ein oder zwei)
+ a| 
+11.3 oder höher
+
+*Hinweis:* Wenn Sie Erweiterungs-Shelfs nach der ersten Implementierung hinzufügen, müssen Sie Version 11.4 oder höher verwenden.
+
+
+
+ a| 
+SGF6024
+ a| 
+11.3 oder höher
+
+|===
+
+
+== Installations- und Implementierungsaufgaben
+
+Das Hinzufügen einer StorageGRID Storage Appliance zu einem StorageGRID System umfasst vier primäre Schritte:
+
+. Installation vorbereiten:
++
+** Vorbereiten des Installationsstandorts
+** Auspacken der Schachteln und Prüfen des Inhalts
+** Zusätzliche Ausrüstung und Werkzeuge
+** Sammeln von IP-Adressen und Netzwerkinformationen
+** Optional: Konfiguration eines externen Verschlüsselungsmanagement-Servers (KMS), wenn Sie alle Appliance-Daten verschlüsseln möchten. Weitere Informationen zum externen Verschlüsselungsmanagement finden Sie in der Anleitung zur Administration von StorageGRID.
+
+
+. Installieren der Hardware:
++
+** Registrieren der Hardware
+** Installieren des Geräts in einem Schrank oder Rack
+** Installieren der Laufwerke
+** Installation optionaler Erweiterungs-Shelfs (nur Modell SG6060 und SG6060X, maximal zwei Erweiterungs-Shelfs)
+** Verkabeln Sie das Gerät
+** Anschließen der Stromkabel und Strom anschließen
+** Anzeigen von Boot-Statuscodes
+
+
+. Konfigurieren der Hardware:
++
+** Zugriff auf SANtricity System Manager zur Konfiguration von SANtricity System Manager Einstellungen
+** Zugriff auf das Installationsprogramm von StorageGRID Appliance, Festlegen einer statischen IP-Adresse für Management Port 1 auf dem Storage Controller und Konfiguration der Link- und Netzwerk-IP-Einstellungen, die für die Verbindung mit StorageGRID-Netzwerken erforderlich sind
+** Zugriff auf die Schnittstelle des Baseboard Management Controller (BMC) auf dem SG6000-CN Controller
+** Optional: Aktivieren der Node-Verschlüsselung, wenn Sie zur Verschlüsselung von Appliance-Daten einen externen KMS verwenden möchten.
+** Optional: Ändern des RAID-Modus.
+
+
+. Bereitstellen der Appliance als Storage-Node:
++
+|===
+| Aufgabe | Anweisungen 
+
+
+ a| 
+Bereitstellen eines Appliance-Speicherknoten in einem neuen StorageGRID-System
+ a| 
+xref:deploying-appliance-storage-node.adoc[Appliance-Storage-Node implementieren]
+
+
+
+ a| 
+Hinzufügen eines Appliance-Speicherknotens zu einem vorhandenen StorageGRID-System
+ a| 
+Anweisungen zum erweitern eines StorageGRID-Systems
+
+
+
+ a| 
+Bereitstellen eines Appliance-Speicherknotens als Teil eines Speicherknotenwiederherstellungsvorgangs
+ a| 
+Anweisungen zur Wiederherstellung und Wartung
+
+|===
+
+
+xref:preparing-for-installation.adoc[Installation vorbereiten (SG6000)]
+
+xref:installing-hardware.adoc[Hardware installieren (SG6000)]
+
+xref:configuring-hardware.adoc[Hardware konfigurieren (SG6000)]
+
+xref:../expand/index.adoc[Erweitern Sie Ihr Raster]
+
+xref:../maintain/index.adoc[Recovery und Wartung]
+
+xref:../admin/index.adoc[StorageGRID verwalten]

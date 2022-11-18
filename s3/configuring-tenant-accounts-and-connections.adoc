@@ -1,0 +1,326 @@
+---
+permalink: s3/configuring-tenant-accounts-and-connections.html 
+sidebar: sidebar 
+keywords: configuring, tenant, connections 
+summary: Wenn StorageGRID konfiguriert wird, um Verbindungen von Client-Applikationen zu akzeptieren, müssen ein oder mehrere Mandantenkonten erstellt und die Verbindungen eingerichtet werden. 
+---
+= Mandantenkonten und -Verbindungen konfigurieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn StorageGRID konfiguriert wird, um Verbindungen von Client-Applikationen zu akzeptieren, müssen ein oder mehrere Mandantenkonten erstellt und die Verbindungen eingerichtet werden.
+
+
+
+== S3-Mandantenkonten erstellen und konfigurieren
+
+Bevor S3-API-Clients Objekte auf StorageGRID speichern und abrufen können, ist ein S3-Mandantenkonto erforderlich. Jedes Mandantenkonto hat seine eigene Konto-ID, Gruppen und Benutzer sowie Container und Objekte.
+
+S3-Mandantenkonten werden von einem StorageGRID Grid-Administrator erstellt, der den Grid Manager oder die Grid Management API verwendet. Beim Erstellen eines S3-Mandantenkontos gibt der Grid-Administrator die folgenden Informationen an:
+
+* Anzeigename für den Mandanten (die Konto-ID des Mandanten wird automatisch zugewiesen und kann nicht geändert werden).
+* Gibt an, ob das Mandantenkonto Plattform-Services nutzen darf. Wenn die Nutzung von Plattformdiensten zulässig ist, muss das Grid so konfiguriert werden, dass es seine Verwendung unterstützt.
+* Optional: Ein Storage-Kontingent für das Mandantenkonto – die maximale Anzahl der Gigabyte, Terabyte oder Petabyte, die für die Mandantenobjekte verfügbar sind. Das Storage-Kontingent eines Mandanten stellt eine logische Menge (Objektgröße) und keine physische Menge (Größe auf der Festplatte) dar.
+* Wenn die Identitätsföderation für das StorageGRID-System aktiviert ist, hat die föderierte Gruppe Root-Zugriffsberechtigungen, um das Mandantenkonto zu konfigurieren.
+* Wenn Single Sign-On (SSO) nicht für das StorageGRID-System verwendet wird, gibt das Mandantenkonto seine eigene Identitätsquelle an oder teilt die Identitätsquelle des Grid mit, und zwar mit dem anfänglichen Passwort für den lokalen Root-Benutzer des Mandanten.
+
+
+Nachdem ein S3-Mandantenkonto erstellt wurde, können Mandantenbenutzer auf den Mandanten-Manager zugreifen, um Aufgaben wie die folgenden auszuführen:
+
+* Richten Sie einen Identitätsverbund ein (es sei denn, die Identitätsquelle wird gemeinsam mit dem Grid verwendet), und erstellen Sie lokale Gruppen und Benutzer
+* Managen von S3-Zugriffsschlüsseln
+* Erstellung und Management von S3-Buckets, einschließlich Buckets, für die S3-Objektsperre aktiviert ist
+* Verwenden von Plattform-Services (falls aktiviert)
+* Monitoring der Storage-Auslastung
+
+
+
+IMPORTANT: Benutzer von S3-Mandanten können mit Mandanten-Manager S3-Buckets erstellen und managen. Dafür sind jedoch S3-Zugriffsschlüssel sowie die S3-REST-API erforderlich, um Objekte aufzunehmen und zu managen.
+
+xref:../admin/index.adoc[StorageGRID verwalten]
+
+xref:../tenant/index.adoc[Verwenden Sie das Mandantenkonto]
+
+
+
+== Wie Client-Verbindungen konfiguriert werden können
+
+Ein Grid-Administrator trifft Konfigurationsmöglichkeiten, die Einfluss darauf haben, wie S3-Clients sich mit StorageGRID verbinden, um Daten zu speichern und abzurufen. Die spezifischen Informationen, die benötigt werden, um eine Verbindung herzustellen, hängen von der gewählten Konfiguration ab.
+
+Client-Applikationen können Objekte speichern oder abrufen, indem sie eine Verbindung mit folgenden Komponenten herstellen:
+
+* Der Lastverteilungsservice an Admin-Nodes oder Gateway-Nodes oder optional die virtuelle IP-Adresse einer HA-Gruppe (High Availability, Hochverfügbarkeit) von Admin-Nodes oder Gateway-Nodes
+* Der CLB-Dienst auf Gateway-Knoten oder optional die virtuelle IP-Adresse einer Hochverfügbarkeitsgruppe von Gateway-Knoten
++
+
+NOTE: Der CLB-Service ist veraltet. Clients, die vor der Version StorageGRID 11.3 konfiguriert wurden, können den CLB-Service auf Gateway-Knoten weiterhin verwenden. Alle anderen Client-Applikationen, die zum Lastausgleich vom StorageGRID abhängig sind, sollten über den Load Balancer Service eine Verbindung herstellen.
+
+* Storage-Nodes mit oder ohne externen Load Balancer
+
+
+Bei der Konfiguration von StorageGRID kann ein Grid-Administrator den Grid-Manager oder die Grid-Management-API verwenden, um die folgenden Schritte auszuführen, die alle optional sind:
+
+. Konfigurieren von Endpunkten für den Load Balancer Service.
++
+Sie müssen Endpunkte konfigurieren, um den Load Balancer Service verwenden zu können. Der Lastverteilungsservice an Admin-Nodes oder Gateway-Nodes verteilt eingehende Netzwerkverbindungen von Client-Anwendungen auf Storage-Nodes. Beim Erstellen eines Load Balancer-Endpunkts gibt der StorageGRID-Administrator eine Portnummer an, ob der Endpunkt HTTP- oder HTTPS-Verbindungen akzeptiert, der Client-Typ (S3 oder Swift), der den Endpunkt verwendet, und das für HTTPS-Verbindungen zu verwendende Zertifikat (falls zutreffend).
+
+. Konfigurieren Sie Nicht Vertrauenswürdige Client-Netzwerke.
++
+Wenn ein StorageGRID-Administrator das Clientnetzwerk eines Node so konfiguriert, dass es nicht vertrauenswürdig ist, akzeptiert der Knoten nur eingehende Verbindungen im Clientnetzwerk an Ports, die explizit als Load Balancer-Endpunkte konfiguriert sind.
+
+. Konfigurieren Sie Hochverfügbarkeitsgruppen.
++
+Wenn ein Administrator eine HA-Gruppe erstellt, werden die Netzwerkschnittstellen mehrerer Admin-Nodes oder Gateway-Nodes in einer aktiv-Backup-Konfiguration platziert. Client-Verbindungen werden mithilfe der virtuellen IP-Adresse der HA-Gruppe hergestellt.
+
+
+
+Weitere Informationen zu den einzelnen Optionen finden Sie in den Anweisungen zur Administration von StorageGRID.
+
+xref:../admin/index.adoc[StorageGRID verwalten]
+
+
+
+=== Zusammenfassung: IP-Adressen und Ports für Client-Verbindungen
+
+Client-Applikationen stellen mithilfe der IP-Adresse eines Grid-Node und der Port-Nummer eines Service auf diesem Node eine Verbindung zu StorageGRID her. Bei Konfiguration von Hochverfügbarkeitsgruppen (High Availability, HA) können Client-Applikationen eine Verbindung über die virtuelle IP-Adresse der HA-Gruppe herstellen.
+
+
+
+==== Zum Erstellen von Client-Verbindungen erforderliche Informationen
+
+Die Tabelle fasst die verschiedenen Möglichkeiten zusammen, wie Clients eine Verbindung zu StorageGRID sowie zu den für die einzelnen Verbindungstypen verwendeten IP-Adressen und Ports herstellen können. Wenden Sie sich an Ihren StorageGRID-Administrator, um weitere Informationen zu erhalten, oder lesen Sie die Anweisungen zur Administration von StorageGRID, um eine Beschreibung der Informationen im Grid-Manager zu erhalten.
+
+|===
+| Wo eine Verbindung hergestellt wird | Dienst, mit dem der Client verbunden ist | IP-Adresse | Port 
+
+
+ a| 
+HA-Gruppe
+ a| 
+Lastausgleich
+ a| 
+Virtuelle IP-Adresse einer HA-Gruppe
+ a| 
+* Endpunkt-Port des Load Balancer
+
+
+
+
+ a| 
+HA-Gruppe
+ a| 
+CLB
+
+**Hinweis:** der CLB-Service ist veraltet.
+ a| 
+Virtuelle IP-Adresse einer HA-Gruppe
+ a| 
+S3-Standard-Ports:
+
+* HTTPS: 8082
+* HTTP: 8084
+
+
+
+
+ a| 
+Admin-Node
+ a| 
+Lastausgleich
+ a| 
+IP-Adresse des Admin-Knotens
+ a| 
+* Endpunkt-Port des Load Balancer
+
+
+
+
+ a| 
+Gateway-Node
+ a| 
+Lastausgleich
+ a| 
+IP-Adresse des Gateway-Node
+ a| 
+* Endpunkt-Port des Load Balancer
+
+
+
+
+ a| 
+Gateway-Node
+ a| 
+CLB
+
+**Hinweis:** der CLB-Service ist veraltet.
+ a| 
+IP-Adresse des Gateway-Node
+
+**Hinweis:** standardmäßig sind HTTP-Ports für CLB und LDR nicht aktiviert.
+ a| 
+S3-Standard-Ports:
+
+* HTTPS: 8082
+* HTTP: 8084
+
+
+
+
+ a| 
+Storage-Node
+ a| 
+LDR
+ a| 
+IP-Adresse des Speicherknoten
+ a| 
+S3-Standard-Ports:
+
+* HTTPS: 18082
+* HTTP: 18084
+
+
+|===
+
+
+==== Beispiel
+
+Verwenden Sie eine strukturierte URL, wie unten gezeigt, um einen S3-Client mit dem Load Balancer-Endpunkt einer HA-Gruppe von Gateway-Nodes zu verbinden:
+
+* `https://_VIP-of-HA-group_:_LB-endpoint-port_`
+
+
+Wenn beispielsweise die virtuelle IP-Adresse der HA-Gruppe 192.0.2.5 lautet und die Portnummer eines S3 Load Balancer Endpunkts 10443 ist, kann ein S3-Client die folgende URL zur Verbindung mit StorageGRID verwenden:
+
+* `https://192.0.2.5:10443`
+
+
+Ein DNS-Name kann für die IP-Adresse konfiguriert werden, die Clients zum Herstellen der Verbindung mit StorageGRID verwenden. Wenden Sie sich an Ihren Netzwerkadministrator vor Ort.
+
+xref:../admin/index.adoc[StorageGRID verwalten]
+
+
+
+=== Entscheiden Sie sich für die Verwendung von HTTPS- oder HTTP-Verbindungen
+
+Wenn Client-Verbindungen mit einem Load Balancer-Endpunkt hergestellt werden, müssen Verbindungen über das Protokoll (HTTP oder HTTPS) hergestellt werden, das für diesen Endpunkt angegeben wurde. Um HTTP für Client-Verbindungen zu Storage-Nodes oder zum CLB-Dienst auf Gateway-Knoten zu verwenden, müssen Sie dessen Verwendung aktivieren.
+
+Wenn Client-Anwendungen eine Verbindung zu Speicherknoten oder zum CLB-Dienst auf Gateway-Knoten herstellen, müssen sie für alle Verbindungen verschlüsseltes HTTPS verwenden. Optional können Sie weniger sichere HTTP-Verbindungen aktivieren, indem Sie im Grid Manager die Option *HTTP-Verbindung* aktivieren auswählen. Eine Client-Anwendung kann beispielsweise HTTP verwenden, wenn die Verbindung zu einem Speicherknoten in einer nicht produktiven Umgebung getestet wird.
+
+
+IMPORTANT: Achten Sie bei der Aktivierung von HTTP für ein Produktionsraster darauf, dass die Anforderungen unverschlüsselt gesendet werden.
+
+
+NOTE: Der CLB-Service ist veraltet.
+
+Wenn die Option *HTTP-Verbindung aktivieren* ausgewählt ist, müssen Clients für HTTP unterschiedliche Ports verwenden als für HTTPS. Lesen Sie die Anweisungen zum Verwalten von StorageGRID.
+
+xref:../admin/index.adoc[StorageGRID verwalten]
+
+xref:benefits-of-active-idle-and-concurrent-http-connections.adoc[Vorteile von aktiven, inaktiven und gleichzeitigen HTTP-Verbindungen]
+
+
+
+== Endpoint-Domain-Namen für S3-Anforderungen
+
+Bevor Sie S3-Domänennamen für Client-Anforderungen verwenden können, muss ein StorageGRID-Administrator das System so konfigurieren, dass Verbindungen angenommen werden, die S3-Domänennamen im S3-Pfadstil und virtuelle S3-Hosted-Style-Anforderungen verwenden.
+
+Um Ihnen die Verwendung von virtuellen S3-Hosted-Style-Anforderungen zu ermöglichen, muss ein Grid-Administrator die folgenden Aufgaben durchführen:
+
+* Verwenden Sie den Grid-Manager, um dem StorageGRID System die S3-Endpunkt-Domain-Namen hinzuzufügen.
+* Stellen Sie sicher, dass das Zertifikat, das der Client für HTTPS-Verbindungen zu StorageGRID verwendet, für alle vom Client erforderlichen Domänennamen signiert ist.
++
+Beispiel: Wenn der Endpunkt lautet `s3.company.com`, Der Grid-Administrator muss sicherstellen, dass das Zertifikat, das für HTTPS-Verbindungen verwendet wird, das umfasst `s3.company.com` endpunkt und Wildcard-alternativer Name (SAN) des Endpunkts: `*.s3.company.com`.
+
+* Konfigurieren Sie den vom Client verwendeten DNS-Server, um DNS-Datensätze mit den Endpunktdomänennamen, einschließlich aller erforderlichen Platzhalterdatensätze, einzuschließen.
+
+
+Wenn der Client über den Load Balancer-Service eine Verbindung herstellt, ist das Zertifikat, das der Grid-Administrator konfiguriert, das Zertifikat für den vom Client verwendeten Load Balancer-Endpunkt.
+
+
+NOTE: Jeder Load Balancer-Endpunkt verfügt über ein eigenes Zertifikat, und jeder Endpunkt kann so konfiguriert werden, dass verschiedene Endpunkt-Domain-Namen erkannt werden.
+
+Wenn der Client eine Verbindung zu Storage-Nodes oder zum CLB-Dienst auf Gateway-Knoten herstellt, ist das Zertifikat, das der Grid-Administrator konfiguriert, das einzelne benutzerdefinierte Serverzertifikat, das für das Grid verwendet wird.
+
+
+NOTE: Der CLB-Service ist veraltet.
+
+Weitere Informationen finden Sie in den Anweisungen zum Verwalten von StorageGRID.
+
+Nach Abschluss dieser Schritte können Sie virtuelle Anfragen im Hosted-Style verwenden (z. B. `bucket.s3.company.com`).
+
+xref:../admin/index.adoc[StorageGRID verwalten]
+
+xref:configuring-security-for-rest-api.adoc[Konfigurieren Sie die Sicherheit für DIE REST API]
+
+
+
+== Testen Sie die S3-REST-API-Konfiguration
+
+Mit der Amazon Web Services Command Line Interface (AWS CLI) können Sie die Verbindung zum System testen und überprüfen, ob Sie Objekte lesen und in das System schreiben können.
+
+.Was Sie und#8217;ll benötigen
+* Sie haben die AWS CLI von heruntergeladen und installiert https://aws.amazon.com/cli["aws.amazon.com/cli"^].
+* Sie haben im StorageGRID System ein S3-Mandantenkonto erstellt.
+
+
+.Schritte
+. Konfigurieren Sie die Einstellungen für Amazon Web Services so, dass Sie das im StorageGRID System erstellte Konto verwenden:
++
+.. Konfigurationsmodus aufrufen: `aws configure`
+.. Geben Sie die AWS Zugriffsschlüssel-ID für das erstellte Konto ein.
+.. Geben Sie den AWS-Schlüssel für den geheimen Zugriff für das erstellte Konto ein.
+.. Geben Sie die Standardregion ein, die verwendet werden soll, z. B. US-East-1.
+.. Geben Sie das zu verwendende Standardausgabeformat ein, oder drücken Sie *Enter*, um JSON auszuwählen.
+
+
+. Erstellen eines Buckets:
++
+[listing]
+----
+aws s3api --endpoint-url https://10.96.101.17:10443
+--no-verify-ssl create-bucket --bucket testbucket
+----
++
+Wenn der Bucket erfolgreich erstellt wurde, wird der Speicherort des Buckets zurückgegeben, wie im folgenden Beispiel zu sehen:
+
+
+
+[listing]
+----
+"Location": "/testbucket"
+----
+. Hochladen eines Objekts.
++
+[listing]
+----
+aws s3api --endpoint-url https://10.96.101.17:10443 --no-verify-ssl
+put-object --bucket testbucket --key s3.pdf --body C:\s3-test\upload\s3.pdf
+----
++
+Wenn das Objekt erfolgreich hochgeladen wurde, wird ein ETAG zurückgegeben, der ein Hash der Objektdaten ist.
+
+. Listen Sie den Inhalt des Buckets auf, um zu überprüfen, ob das Objekt hochgeladen wurde.
++
+[listing]
+----
+aws s3api --endpoint-url https://10.96.101.17:10443 --no-verify-ssl
+list-objects --bucket testbucket
+----
+. Löschen Sie das Objekt.
++
+[listing]
+----
+aws s3api --endpoint-url https://10.96.101.17:10443 --no-verify-ssl
+delete-object --bucket testbucket --key s3.pdf
+----
+. Löschen Sie den Bucket.
++
+[listing]
+----
+aws s3api --endpoint-url https://10.96.101.17:10443 --no-verify-ssl
+delete-bucket --bucket testbucket
+----
+

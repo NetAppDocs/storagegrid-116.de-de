@@ -1,0 +1,53 @@
+---
+permalink: maintain/selecting-start-recovery-to-configure-appliance-storage-node.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, appliance storage node 
+summary: Sie müssen im Grid Manager die Option Wiederherstellung starten auswählen, um einen Appliance-Speicherknoten als Ersatz für den ausgefallenen Knoten zu konfigurieren. 
+---
+= Wählen Sie Wiederherstellung starten, um Appliance Storage Node zu konfigurieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen im Grid Manager die Option Wiederherstellung starten auswählen, um einen Appliance-Speicherknoten als Ersatz für den ausgefallenen Knoten zu konfigurieren.
+
+.Was Sie und#8217;ll benötigen
+* Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+* Sie müssen über die Berechtigung Wartung oder Stammzugriff verfügen.
+* Sie müssen über eine Passphrase für die Bereitstellung verfügen.
+* Sie müssen einen Speicher-Node für die Wiederherstellungsanwendung bereitgestellt haben.
+* Sie müssen das Startdatum aller Reparaturaufträge für Daten mit Löschungscode kennen.
+* Sie müssen überprüft haben, dass der Speicherknoten innerhalb der letzten 15 Tage nicht neu aufgebaut wurde.
+
+
+.Schritte
+. Wählen Sie im Grid Manager die Option *WARTUNG* *Tasks* *Recovery*.
+. Wählen Sie in der Liste Ausstehende Knoten den Rasterknoten aus, den Sie wiederherstellen möchten.
++
+Nodes werden nach ihrem Ausfall in der Liste angezeigt. Sie können jedoch keinen Node auswählen, bis er neu installiert wurde und zur Wiederherstellung bereit ist.
+
+. Geben Sie die *Provisioning-Passphrase* ein.
+. Klicken Sie Auf *Wiederherstellung Starten*.
++
+image::../media/4b_select_recovery_node.png[Screenshot mit der Seite Maintenance Recovery]
+
+. Überwachen Sie den Fortschritt der Wiederherstellung in der Tabelle „Netzknoten wiederherstellen“.
++
+Wenn der Grid-Knoten die Stufe „`Warten auf manuelle Schritte`“ erreicht, gehen Sie zum nächsten Thema und führen Sie die manuellen Schritte durch, um Appliance-Storage-Volumes neu zu mounten und neu zu formatieren.
+
++
+image::../media/recovery_reset_button.gif[Screenshot mit der Bühne, die auf manuelle Schritte wartet]
+
++
+
+NOTE: An jedem Punkt während der Wiederherstellung können Sie auf *Zurücksetzen* klicken, um eine neue Wiederherstellung zu starten. Ein Info-Dialogfeld wird angezeigt, das angibt, dass der Knoten bei einem Zurücksetzen des Vorgangs in einen unbestimmten Zustand zurückgelassen wird.
+
++
+image::../media/recovery_reset_warning.gif[Screenshot mit dem Dialogfeld Warnung zum Zurücksetzen der Wiederherstellung]
+
++
+Wenn Sie die Wiederherstellung nach dem Zurücksetzen des Vorgangs erneut versuchen möchten, müssen Sie den Appliance-Knoten durch Ausführen auf einen vorinstallierten Status wiederherstellen `sgareinstall` Auf dem Node.
+
+

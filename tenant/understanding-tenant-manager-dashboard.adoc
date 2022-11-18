@@ -1,0 +1,105 @@
+---
+permalink: tenant/understanding-tenant-manager-dashboard.html 
+sidebar: sidebar 
+keywords: how to understand tenant manager dashboard 
+summary: 'Das Tenant Manager Dashboard bietet einen Überblick über die Konfiguration eines Mandantenkontos und die Menge des Speicherplatzes, der von Objekten in den Buckets \(S3\) oder Containern \(Swift\) des Mandanten verwendet wird. Wenn der Mandant ein Kontingent hat, zeigt das Dashboard an, wie viel des Kontingents verwendet wird und wie viel übrig ist. Wenn beim Mandantenkonto Fehler auftreten, werden die Fehler im Dashboard angezeigt.' 
+---
+= Informieren Sie Sich Über Das Tenant Manager Dashboard
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Mandanten-Manager-Dashboard bietet einen Überblick über die Konfiguration eines Mandanten-Accounts sowie den Speicherplatz, der von Objekten in Buckets (S3) oder Containern (Swift) verwendet wird. Wenn der Mandant ein Kontingent hat, zeigt das Dashboard an, wie viel des Kontingents verwendet wird und wie viel übrig ist. Wenn beim Mandantenkonto Fehler auftreten, werden die Fehler im Dashboard angezeigt.
+
+
+IMPORTANT: Die Werte für den genutzten Speicherplatz sind Schätzungen. Diese Schätzungen sind vom Zeitpunkt der Aufnahme, der Netzwerkverbindung und des Node-Status betroffen.
+
+Wenn Objekte hochgeladen wurden, sieht das Dashboard wie das folgende Beispiel aus:
+
+image::../media/tenant_dashboard_with_buckets.png[Dashboard – Bucket-Liste]
+
+
+
+== Zusammenfassung des Mandantenkontos
+
+Oben im Dashboard sind folgende Informationen enthalten:
+
+* Die Anzahl der konfigurierten Buckets oder Container, Gruppen und Benutzer
+* Die Anzahl der Endpunkte von Plattformservices, falls vorhanden
+
+
+Sie können die Links auswählen, um die Details anzuzeigen.
+
+Auf der rechten Seite des Dashboards sind folgende Informationen enthalten:
+
+* Die Gesamtzahl der Objekte für den Mandanten.
++
+Wenn bei einem S3-Konto keine Objekte aufgenommen wurden und Sie über die Berechtigung Stammzugriff verfügen, werden Startrichtlinien anstelle der Gesamtzahl der Objekte angezeigt.
+
+* Mandantendetails, einschließlich des Mandantenkontonnamens und der ID und der Frage, ob der Mandant verwendet werden kann xref:what-platform-services-are.adoc[Plattform-Services], xref:../admin/using-identity-federation.adoc[Seine eigene Identitätsquelle], Oder xref:../admin/manage-s3-select-for-tenant-accounts.adoc[S3 Select] (Es werden nur die aktivierten Berechtigungen aufgelistet.)
+
+
+
+
+== Storage- und Kontingentnutzung
+
+Das Fenster Speichernutzung enthält die folgenden Informationen:
+
+* Die Menge der Objektdaten für den Mandanten.
++
+
+IMPORTANT: Dieser Wert gibt die Gesamtanzahl der hochgeladenen Objektdaten an und stellt nicht den Speicherplatz dar, der zum Speichern der Kopien dieser Objekte und ihrer Metadaten verwendet wird.
+
+* Wenn ein Kontingent festgelegt ist, ist die Gesamtmenge an Speicherplatz, der für Objektdaten verfügbar ist, sowie die Menge und der Prozentsatz des verbleibenden Speicherplatzes. Der Kontingentnutzer beschränkt die Menge der Objektdaten, die aufgenommen werden können.
++
+
+IMPORTANT: Die Kontingentnutzung basiert auf internen Schätzungen und kann in einigen Fällen sogar überschritten werden. StorageGRID überprüft beispielsweise das Kontingent, wenn ein Mandant beginnt, Objekte hochzuladen und neue Einlässe zurückweist, wenn der Mieter die Quote überschritten hat. StorageGRID berücksichtigt jedoch bei der Bestimmung, ob das Kontingent überschritten wurde, nicht die Größe des aktuellen Uploads. Wenn Objekte gelöscht werden, kann es vorübergehend verhindert werden, dass ein Mandant neue Objekte hochgeladen wird, bis die Kontingentnutzung neu berechnet wird. Berechnungen zur Kontingentnutzung können 10 Minuten oder länger dauern.
+
+* Ein Balkendiagramm, das die relative Größe der größten Buckets oder Container darstellt.
++
+Sie können den Mauszeiger über eines der Diagrammsegmente platzieren, um den gesamten Speicherplatz anzuzeigen, der von diesem Bucket oder Container verbraucht wird.
+
++
+image::../media/tenant_dashboard_storage_usage_segment.png[Balkendiagramm Segment]
+
+* Zur Übereinstimmung mit dem Balkendiagramm, eine Liste der größten Buckets oder Container, einschließlich der Gesamtzahl der Objektdaten und der Anzahl der Objekte für jeden Bucket oder Container.
++
+image::../media/tenant_dashboard_buckets.png[Mandanten-Dashboard-Buckets]
+
++
+Wenn ein Mandant mehr als neun Buckets oder Container enthält, werden alle anderen Buckets oder Container zu einem Eintrag im unteren Teil der Liste zusammengefasst.
+
+
+
+
+
+== Warnmeldungen zur Kontingentnutzung
+
+Wenn im Grid Manager Warnmeldungen zur Kontingentnutzung aktiviert wurden, werden diese im Mandanten-Manager angezeigt, wenn das Kontingent niedrig oder überschritten ist, wie folgt:
+
+Wenn 90% oder mehr der Quote eines Mandanten verwendet wurden, wird die Meldung *Tenant Quotenverbrauch hoch* ausgelöst. Weitere Informationen finden Sie unter Alerts Referenz in den Anweisungen zum Monitoring und zur Fehlerbehebung von StorageGRID.
+
+image::../media/tenant_dashboard_quota_remaining.png[Verbleibendes Mandanten-Dashboard-Kontingent]
+
+Wenn Sie Ihr Kontingent überschreiten, können Sie keine neuen Objekte hochladen.
+
+image::../media/tenant_dashboard_quota_used.png[Genutztes Mandanten-Dashboard-Kontingent]
+
+
+NOTE: Weitere Details sowie das Management von Regeln und Benachrichtigungen für Warnmeldungen finden Sie in den Anweisungen zum Monitoring und zur Fehlerbehebung von StorageGRID.
+
+
+
+== Endpunktfehler
+
+Wenn Sie mithilfe des Grid Manager einen oder mehrere Endpunkte für die Verwendung mit Plattformdiensten konfiguriert haben, zeigt das Tenant Manager Dashboard eine Warnung an, wenn innerhalb der letzten sieben Tage Endpoint-Fehler aufgetreten sind.
+
+image::../media/tenant_dashboard_endpoint_error.png[Dashboard mit Endpunkt-Meldung]
+
+Wenn Sie Details zu einem Endpunktfehler anzeigen möchten, wählen Sie Endpunkte aus, um die Seite Endpunkte anzuzeigen.
+
+xref:troubleshooting-platform-services-endpoint-errors.adoc[Fehlerbehebung bei Endpunktfehlern bei Plattform-Services]
+
+xref:../monitor/index.adoc[Monitoring und Fehlerbehebung]

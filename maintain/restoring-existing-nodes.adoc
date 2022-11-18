@@ -1,0 +1,24 @@
+---
+permalink: maintain/restoring-existing-nodes.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, restore node to host 
+summary: Um einen fehlgeschlagenen Grid-Node auf einem neuen Linux-Host wiederherzustellen, stellen Sie die Node-Konfigurationsdatei mit den entsprechenden Befehlen wieder her. 
+---
+= Stellen Sie die Grid-Nodes für den Host wieder her
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um einen fehlgeschlagenen Grid-Node auf einem neuen Linux-Host wiederherzustellen, stellen Sie die Node-Konfigurationsdatei mit den entsprechenden Befehlen wieder her.
+
+Bei einer Neuinstallation erstellen Sie für jeden Grid-Node, der auf einem Host installiert werden soll, eine Node-Konfigurationsdatei. Beim Wiederherstellen eines Grid-Node auf einem Ersatzhost stellen Sie die Node-Konfigurationsdatei für ausgefallene Grid-Nodes wieder her oder ersetzen sie.
+
+Falls alle Block-Storage-Volumes vom vorherigen Host erhalten würden, müssen möglicherweise weitere Recovery-Verfahren durchgeführt werden. Mit den Befehlen in diesem Abschnitt können Sie ermitteln, welche zusätzlichen Verfahren erforderlich sind.
+
+.Schritte
+* xref:restoring-and-validating-grid-nodes.adoc[Wiederherstellung und Validierung der Grid Nodes]
+* xref:starting-storagegrid-host-service.adoc[Starten Sie den StorageGRID Host Service]
+* xref:recovering-nodes-that-fail-to-start-normally.adoc[Wiederherstellung von Nodes, die nicht ordnungsgemäß gestartet werden können]
+

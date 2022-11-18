@@ -1,0 +1,105 @@
+---
+permalink: ilm/how-objects-are-deleted.html 
+sidebar: sidebar 
+keywords: ILM deletion, how objects are deleted 
+summary: StorageGRID kann Objekte entweder als direkte Antwort auf eine Client-Anfrage oder automatisch aufgrund des Ablaufs eines S3-Bucket-Lebenszyklus oder der Anforderungen der ILM-Richtlinie löschen. Wenn Sie verstehen, auf welche Weise Objekte gelöscht werden können und wie StorageGRID Löschanfragen verarbeitet, können Sie Objekte effizienter managen. 
+---
+= So werden Objekte gelöscht
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+StorageGRID kann Objekte entweder als direkte Antwort auf eine Client-Anfrage oder automatisch aufgrund des Ablaufs eines S3-Bucket-Lebenszyklus oder der Anforderungen der ILM-Richtlinie löschen. Wenn Sie verstehen, auf welche Weise Objekte gelöscht werden können und wie StorageGRID Löschanfragen verarbeitet, können Sie Objekte effizienter managen.
+
+StorageGRID kann Objekte auf eine von zwei Methoden löschen:
+
+* Synchrones Löschen: Erhält StorageGRID eine Client-Löschanforderung, werden alle Objektkopien sofort entfernt. Der Client wird informiert, dass das Löschen nach dem Entfernen der Kopien erfolgreich war.
+* Objekte werden zum Löschen in die Warteschlange eingereiht: Wenn StorageGRID eine Löschanforderung empfängt, wird das Objekt zum Löschen in die Warteschlange verschoben. Der Client wird umgehend darüber informiert, dass das Löschen erfolgreich war. Objektkopien werden später durch ILM-Verarbeitung im Hintergrund entfernt.
+
+
+Beim Löschen von Objekten verwendet StorageGRID die Methode, die das Löschen der Performance optimiert, mögliche Rückprotokolle für das Löschen minimiert und Speicherplatz am schnellsten freigegeben wird.
+
+Die Tabelle fasst zusammen, wann StorageGRID die einzelnen Methoden verwendet.
+
+[cols="1a,2a"]
+|===
+| Löschmethode | Wenn verwendet 
+
+
+ a| 
+Objekte werden zum Löschen in eine Warteschlange eingereiht
+ a| 
+Wenn *eine* der folgenden Bedingungen zutrifft:
+
+* Das automatische Löschen von Objekten wurde von einem der folgenden Ereignisse ausgelöst:
++
+** Das Ablaufdatum oder die Anzahl der Tage in der Lebenszykluskonfiguration für einen S3-Bucket erreicht ist.
+** Der letzte in einer ILM-Regel angegebene Zeitraum ist abgelaufen.
+
+
++
+*Hinweis:* Objekte in einem Bucket mit aktivierter S3-Objektsperre können nicht gelöscht werden, wenn sie sich unter einer gesetzlichen Sperre befinden oder wenn ein Aufbewahrungsdatum angegeben, aber noch nicht erfüllt wurde.
+
+* Ein S3- oder Swift-Client fordert eine Löschung an. Eine oder mehrere der folgenden Bedingungen gilt:
++
+** Kopien können nicht innerhalb von 30 Sekunden gelöscht werden, da z. B. ein Objektverzeichnis vorübergehend nicht verfügbar ist.
+** Löschwarteschlangen im Hintergrund sind inaktiv.
+
+
+
+
+
+
+ a| 
+Objekte werden sofort entfernt (synchrones Löschen)
+ a| 
+Wenn ein S3- oder Swift-Client eine Löschanfrage erstellt und *alle* der folgenden Bedingungen erfüllt sind:
+
+* Alle Kopien können innerhalb von 30 Sekunden entfernt werden.
+* Warteschlangen zum Löschen im Hintergrund enthalten Objekte, die verarbeitet werden sollen.
+
+
+|===
+Wenn S3- oder Swift-Clients Anforderungen löschen, beginnt StorageGRID mit dem Hinzufügen einer Reihe von Objekten zur Löschwarteschlange. Anschließend wechselt er zur Durchführung des synchronen Löschvorgangs. Wenn sichergestellt wird, dass in der Warteschlange zum Löschen im Hintergrund Objekte verarbeitet werden, kann StorageGRID das Löschen von Löschungen effizienter verarbeiten, insbesondere bei Clients mit geringer Parallelität. Gleichzeitig wird verhindert, dass die Backlogs von Clients gelöscht werden.
+
+
+
+== Wie lange dauert es, Objekte zu löschen
+
+Die Art und Weise, wie StorageGRID Objekte löscht, kann sich auf die Ausführung des Systems auswirken:
+
+* Wenn StorageGRID das synchrone Löschen durchführt, kann StorageGRID bis zu 30 Sekunden dauern, bis ein Ergebnis an den Client zurückgegeben wird. Das heißt, das Löschen kann scheinbar langsamer erfolgen, auch wenn Kopien tatsächlich schneller entfernt werden als wenn StorageGRID Objekte zum Löschen Warteschlangen.
+* Falls Sie die Löschleistung während eines Massenlöschs genau überwachen, kann es vorkommen, dass sich die Löschrate nach dem Löschen einer bestimmten Anzahl von Objekten verlangsamt. Diese Änderung tritt auf, wenn StorageGRID von Objekten aus der Warteschlange zum Löschen auf das synchrone Löschen verschiebt. Die offensichtliche Reduzierung der Löschrate bedeutet nicht, dass Objektkopien langsamer entfernt werden. Im Gegenteil: Er zeigt an, dass durchschnittlich Speicherplatz schneller freigegeben wird.
+
+
+Wenn Sie eine große Anzahl von Objekten löschen und Ihre Priorität darin besteht, Speicherplatz schnell freizugeben, ziehen Sie in Betracht, Objekte mithilfe einer Client-Anfrage zu löschen, anstatt sie mit ILM oder anderen Methoden zu löschen. Im Allgemeinen wird Speicherplatz schneller freigegeben, wenn das Löschen durch Clients durchgeführt wird, da StorageGRID das synchrone Löschen verwenden kann.
+
+Beachten Sie, dass die zur Freigabe von Speicherplatz nach dem Löschen eines Objekts benötigte Zeit von mehreren Faktoren abhängt:
+
+* Gibt an, ob Objektkopien synchron entfernt werden oder später zur Entfernung in die Warteschlange verschoben werden (für Client-Löschanfragen).
+* Weitere Faktoren wie die Anzahl der Objekte im Grid oder die Verfügbarkeit von Grid-Ressourcen, wenn Objektkopien zur Entfernung in eine Warteschlange verschoben werden (für Clientlöschungen und andere Methoden).
+
+
+
+
+== Löschen von S3-versionierten Objekten
+
+Wenn die Versionierung für einen S3-Bucket aktiviert ist, befolgt StorageGRID das Verhalten von Amazon S3, wenn es auf Löschanfragen reagiert, unabhängig davon, ob diese Anfragen von einem S3-Client, dem Ablauf eines S3-Bucket-Lebenszyklus oder den Anforderungen der ILM-Richtlinie stammen.
+
+Wenn Objekte versioniert sind, löschen Anforderungen zum Löschen von Objekten nicht die aktuelle Version des Objekts und geben keinen freien Speicherplatz frei. Stattdessen erstellt eine Anforderung zum Löschen eines Objekts einfach eine Löschmarkierung als aktuelle Version des Objekts, wodurch die vorherige Version des Objekts „`non-current.`“
+
+Auch wenn das Objekt nicht entfernt wurde, verhält sich StorageGRID so, als ob die aktuelle Version des Objekts nicht mehr verfügbar ist. Anfragen an dieses Objekt geben 404 nicht gefunden zurück. Da jedoch nicht aktuelle Objektdaten nicht entfernt wurden, können Anforderungen, die eine nicht aktuelle Version des Objekts angeben, erfolgreich ausgeführt werden.
+
+Um beim Löschen versionierter Objekte freien Speicherplatz zu erhalten, müssen Sie einen der folgenden Schritte ausführen:
+
+* *S3-Clientanforderung*: Geben Sie die Objektversionsnummer in der S3-LÖSCHOBJEKTANFORDERUNG an (`DELETE /object?versionId=ID`). Beachten Sie, dass diese Anforderung nur Objektkopien für die angegebene Version entfernt (die anderen Versionen belegen noch Speicherplatz).
+* *Bucket-Lebenszyklus*: Verwenden Sie das `NoncurrentVersionExpiration` Aktionen in der Bucket-Lifecycle-Konfiguration Wenn die angegebene Anzahl von nicht-currentDays erreicht ist, entfernt StorageGRID dauerhaft alle Kopien nicht aktueller Objektversionen. Diese Objektversionen können nicht wiederhergestellt werden.
+* *ILM*: Fügen Sie zwei ILM-Regeln zu Ihrer ILM-Richtlinie hinzu. Verwenden Sie *nicht aktuelle Zeit* als Referenzzeit in der ersten Regel, um die nicht aktuellen Versionen des Objekts zu entsprechen. Verwenden Sie *Aufnahmezeit* in der zweiten Regel, um mit der aktuellen Version zu übereinstimmen. Die *nicht aktuelle Zeit*-Regel muss in der Regel über der *Aufnahmezeit*-Regel erscheinen.
+
+
+.Verwandte Informationen
+* xref:../s3/index.adoc[S3 verwenden]
+* xref:example-4-ilm-rules-and-policy-for-s3-versioned-objects.adoc[Beispiel 4: ILM-Regeln und -Richtlinie für versionierte Objekte mit S3]
+

@@ -1,0 +1,33 @@
+---
+permalink: upgrade/upgrade-workflow.html 
+sidebar: sidebar 
+keywords: upgrade workflow 
+summary: Lesen Sie vor dem Upgrade den allgemeinen Workflow durch. Die Seite StorageGRID-Upgrade führt Sie durch die Aktualisierungsschritte. 
+---
+= Workflow-Upgrade
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lesen Sie vor dem Upgrade den allgemeinen Workflow durch. Die Seite StorageGRID-Upgrade führt Sie durch die einzelnen Upgrade-Schritte.
+
+image::../media/upgrade_workflow.png[Flussdiagramm der Schritte zum Software-Upgrade]
+
+. Wenn StorageGRID Nodes auf Linux-Hosts bereitgestellt werden, xref:linux-installing-rpm-or-deb-package-on-all-hosts.adoc[Installieren Sie das RPM- oder DEB-Paket auf jedem Host] Bevor Sie mit dem Upgrade beginnen.
+. Rufen Sie über den primären Admin-Node auf die Seite StorageGRID-Upgrade auf, und laden Sie die Upgrade-Datei hoch.
+. Führen Sie optional Vorabprüfungen zum Upgrade durch, um Probleme zu erkennen und zu lösen, bevor Sie das tatsächliche Upgrade starten.
+. Starten Sie das Upgrade, in dem Vorabprüfungen durchgeführt werden und der primäre Admin-Node automatisch aktualisiert wird. Sie können nicht auf den Grid Manager zugreifen, während der primäre Admin-Node aktualisiert wird. Auch Audit-Protokolle sind nicht verfügbar. Dieses Upgrade kann bis zu 30 Minuten in Anspruch nehmen.
+. Nachdem der primäre Admin-Knoten aktualisiert wurde, löschen Sie Ihren Web-Browser-Cache, melden Sie sich wieder an, und kehren Sie zur StorageGRID-Upgrade-Seite.
+. Laden Sie ein neues Wiederherstellungspaket herunter.
+. Genehmigen Sie die Grid-Knoten. Sie können einzelne Grid-Nodes, Gruppen von Grid-Nodes oder alle Grid-Nodes genehmigen.
++
+
+IMPORTANT: Genehmigen Sie das Upgrade für einen Grid-Node nicht, es sei denn, Sie sind sicher, dass der Node bereit ist, angehalten und neu gebootet zu werden.
+
+. Setzen Sie den Betrieb fort. Wenn alle Grid-Nodes aktualisiert wurden, sind neue Funktionen aktiviert und der Betrieb kann fortgesetzt werden. Sie müssen warten, bis der Hintergrund *Datenbank aktualisieren* und die Aufgabe *Letzte Aktualisierungsschritte* abgeschlossen sind.
+. Nach Abschluss des Upgrades überprüfen Sie die Softwareversion und wenden alle Hotfixes an.
+
+
+xref:estimating-time-to-complete-upgrade.adoc[Schätzen Sie den Zeitaufwand für die Durchführung eines Upgrades ein]

@@ -1,0 +1,14 @@
+---
+permalink: sg6000/accessing-and-configuring-santricity-system-manager.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, SANtricity System Manager, SANtricity, System Manager, configure, configuring, setup, set up, setting up, access, accessing, E-Series AutoSupport, autosupport 
+summary: Mit SANtricity System Manager lässt sich der Status von Storage Controllern, Storage-Festplatten und anderen Hardwarekomponenten im Storage Controller-Shelf überwachen. Sie können außerdem einen Proxy für AutoSupport der E-Series konfigurieren, mit dem Sie AutoSupport Meldungen von der Appliance senden können, ohne den Managementport zu verwenden. 
+---
+= Aufrufen und Konfigurieren von SANtricity System Manager (SG6000)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit SANtricity System Manager lässt sich der Status von Storage Controllern, Storage-Festplatten und anderen Hardwarekomponenten im Storage Controller-Shelf überwachen. Sie können außerdem einen Proxy für AutoSupport der E-Series konfigurieren, mit dem Sie AutoSupport Meldungen von der Appliance senden können, ohne den Managementport zu verwenden.

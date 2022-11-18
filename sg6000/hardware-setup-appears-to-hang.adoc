@@ -1,0 +1,33 @@
+---
+permalink: sg6000/hardware-setup-appears-to-hang.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, troubleshoot, troubleshooting, hardware, setup, hang, hangs, fails, failure, stop, terminate, terminates, stuck 
+summary: Das Installationsprogramm von StorageGRID Appliance ist möglicherweise nicht verfügbar, wenn Hardwarefehler oder Verkabelungsfehler die Speichercontroller oder den SG6000-CN-Controller daran hindern, ihre Boot-Verarbeitung abzuschließen. 
+---
+= Hardware-Setup scheint zu hängen (SG6000)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Installationsprogramm von StorageGRID Appliance ist möglicherweise nicht verfügbar, wenn Hardwarefehler oder Verkabelungsfehler die Speichercontroller oder den SG6000-CN-Controller daran hindern, ihre Boot-Verarbeitung abzuschließen.
+
+.Schritte
+. Sehen Sie sich für die Speichercontroller die Codes in den sieben-Segment-Anzeigen an.
++
+Während die Hardware beim Einschalten initialisiert wird, zeigen die beiden sieben Segmente eine Reihe von Codes an. Wenn die Hardware erfolgreich gebootet wurde, werden beide sieben Segmente angezeigt `99`.
+
+. Überprüfen Sie die LEDs am SG6000-CN-Controller sowie die im BMC angezeigten Boot- und Fehlercodes.
+. Wenn Sie Hilfe bei der Behebung eines Problems benötigen, wenden Sie sich an den technischen Support.
+
+
+xref:viewing-boot-up-status-codes-for-sg6000-storage-controllers.adoc[Anzeigen von Boot-Statuscodes für SG6000-Speicher-Controller]
+
+https://library.netapp.com/ecmdocs/ECMLP2588751/html/frameset.html["E5700 und E2800 – System Monitoring Guide"^]
+
+xref:viewing-status-indicators-and-buttons-on-sg6000-cn-controller.adoc[Statusanzeigen und Schaltflächen des SG6000-CN Controllers anzeigen]
+
+xref:viewing-boot-up-codes-for-sg6000-cn-controller.adoc[Anzeigen von Boot-Codes für SG6000-CN-Controller]
+
+xref:viewing-error-codes-for-sg6000-cn-controller.adoc[Fehlercodes für SG6000-CN-Controller anzeigen]

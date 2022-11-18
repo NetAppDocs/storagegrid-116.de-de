@@ -1,0 +1,27 @@
+---
+permalink: network/subnet-requirements.html 
+sidebar: sidebar 
+keywords: network subnets 
+summary: Befolgen Sie diese Anforderungen und Richtlinien für Netzwerknetze. 
+---
+= Subnetz-Anforderungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Befolgen Sie diese Anforderungen und Richtlinien für Netzwerknetze.
+
+
+IMPORTANT: Jedes Netzwerk muss mit einem eigenen Subnetz verbunden sein, das sich nicht mit einem anderen Netzwerk auf dem Knoten überschneidet.
+
+Die folgenden Einschränkungen werden während der Bereitstellung durch den Grid Manager durchgesetzt. Sie werden hier zur Unterstützung bei der Netzwerkplanung vor der Implementierung bereitgestellt.
+
+* Die Subnetzmaske für eine Netzwerk-IP-Adresse darf nicht 255.255.255.254 oder 255.255.255.255 (/31 oder /32 in CIDR-Notation) sein.
+* Das durch eine Netzwerkschnittstelle definierte Subnetz-IP-Adresse und Subnetzmaske (CIDR) kann das Subnetz anderer Schnittstellen, die auf demselben Knoten konfiguriert sind, nicht überlappen.
+* Das Grid-Netzwerk-Subnetz für jeden Node muss in der GNSL enthalten sein.
+* Das Subnetz Admin-Netzwerk kann das Subnetz Grid-Netzwerk, das Subnetz Client-Netzwerk oder ein beliebiges Subnetz in der GNSL nicht überlappen.
+* Die Subnetze im AESL können nicht mit Teilnetzen im GNSL überlappen.
+* Das Subnetz Client-Netzwerk kann das Subnetz Grid-Netzwerk, das Subnetz Admin-Netzwerk, ein beliebiges Subnetz in der GNSL oder ein beliebiges Subnetz in der AESL nicht überlappen.
+

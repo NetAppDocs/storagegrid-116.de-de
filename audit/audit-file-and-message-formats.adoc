@@ -1,0 +1,14 @@
+---
+permalink: audit/audit-file-and-message-formats.html 
+sidebar: sidebar 
+keywords: storagegrid, audit, log file formats, log formats, message formats, log file format, log format ,message format 
+summary: Mit Audit-Protokollen können Informationen zu Ihrem System erfasst und Probleme behoben werden. Sie sollten das Format der Audit-Log-Datei und das allgemeine Format für Audit-Meldungen verstehen. 
+---
+= Audit-Log-Datei und Nachrichtenformate
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit Audit-Protokollen können Informationen zu Ihrem System erfasst und Probleme behoben werden. Sie sollten das Format der Audit-Log-Datei und das allgemeine Format für Audit-Meldungen verstehen.

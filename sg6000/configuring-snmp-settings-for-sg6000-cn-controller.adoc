@@ -1,0 +1,40 @@
+---
+permalink: sg6000/configuring-snmp-settings-for-sg6000-cn-controller.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, SNMP, configure, setup, set up, sg6000-cn 
+summary: Wenn Sie mit der Konfiguration von SNMP für Hardware vertraut sind, können Sie die SNMP-Einstellungen für den SG6000-CN-Controller über die BMC-Schnittstelle konfigurieren. Sie können sichere Community-Strings bereitstellen, SNMP-Trap aktivieren und bis zu fünf SNMP-Ziele angeben. 
+---
+= Konfigurieren Sie SNMP-Einstellungen für SG6000-CN Controller
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie mit der Konfiguration von SNMP für Hardware vertraut sind, können Sie die SNMP-Einstellungen für den SG6000-CN-Controller über die BMC-Schnittstelle konfigurieren. Sie können sichere Community-Strings bereitstellen, SNMP-Trap aktivieren und bis zu fünf SNMP-Ziele angeben.
+
+.Was Sie und#8217;ll benötigen
+* Wissen Sie, wie Sie auf das BMC-Dashboard zugreifen können.
+* Sie haben Erfahrung in der Konfiguration von SNMP-Einstellungen für SNMPv1-v2c Geräte.
+
+
+
+NOTE: Die durch dieses Verfahren vorgenommenen BMC-Einstellungen bleiben möglicherweise nicht erhalten, wenn das SG6000-CN ausfällt und ersetzt werden muss. Stellen Sie sicher, dass Sie über eine Aufzeichnung aller Einstellungen verfügen, die Sie angewendet haben, so dass sie nach einem Hardware-Austausch bei Bedarf leicht wieder angewendet werden können.
+
+.Schritte
+. Wählen Sie im BMC-Dashboard *Einstellungen* *SNMP-Einstellungen* aus.
+. Wählen Sie auf der Seite SNMP-Einstellungen die Option *SNMP V1/V2* aktivieren und geben Sie dann eine schreibgeschützte Community-Zeichenfolge und eine Read-Write Community-Zeichenfolge an.
++
+Die schreibgeschützte Community-Zeichenfolge ist wie eine Benutzer-ID oder ein Passwort. Sie sollten diesen Wert ändern, um zu verhindern, dass Eindringlinge Informationen über Ihr Netzwerk-Setup erhalten. Die Lese-Schreib-Community-Zeichenfolge schützt das Gerät vor nicht autorisierten Änderungen.
+
+. Wählen Sie optional *Trap aktivieren* aus, und geben Sie die erforderlichen Informationen ein.
++
+
+IMPORTANT: Geben Sie die Ziel-IP für jeden SNMP-Trap unter Verwendung einer IP-Adresse ein. Vollständig qualifizierte Domain-Namen werden nicht unterstützt.
+
++
+Aktivieren Sie Traps, wenn der SG6000-CN-Controller sofortige Benachrichtigungen an eine SNMP-Konsole senden soll, wenn sie sich in einem ungewöhnlichen Zustand befindet. Traps können zeigen, dass Hardwareausfälle von verschiedenen Komponenten oder Temperaturschwellenwerten überschritten werden.
+
+. Klicken Sie optional auf *Test-Trap senden*, um Ihre Einstellungen zu testen.
+. Wenn die Einstellungen korrekt sind, klicken Sie auf *Speichern*.
+

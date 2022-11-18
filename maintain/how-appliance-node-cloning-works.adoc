@@ -1,0 +1,97 @@
+---
+permalink: maintain/how-appliance-node-cloning-works.html 
+sidebar: sidebar 
+keywords: storagegrid, appliance node cloning, appliance node clone 
+summary: 'Durch das Klonen von Appliance-Nodes können Sie einen vorhandenen Appliance-Node \(Source\) in Ihrem Grid ganz einfach durch eine kompatible Appliance \(target\) ersetzen, die Teil desselben logischen StorageGRID-Standorts ist. Dabei werden alle Daten auf die neue Appliance übertragen, die Appliance wird in Betrieb versetzt, um den alten Appliance-Node zu ersetzen und die alte Appliance im Installationszustand zu lassen.' 
+---
+= Funktionsweise des Appliance-Node-Klonens
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit dem Appliance-Node-Klonen können Sie einen vorhandenen Appliance-Node (Quelle) im Grid ganz einfach durch eine kompatible Appliance (Ziel) ersetzen, die Teil desselben logischen StorageGRID-Standorts ist. Dabei werden alle Daten auf die neue Appliance übertragen, die Appliance wird in Betrieb versetzt, um den alten Appliance-Node zu ersetzen und die alte Appliance im Installationszustand zu lassen.
+
+
+
+== Warum einen Appliance-Node klonen?
+
+Sie können einen Appliance-Node klonen, wenn Sie Folgendes benötigen:
+
+* Ersetzen Sie Appliances, die sich dem Ende ihrer Lebensdauer nähert.
+* Aktualisieren Sie vorhandene Nodes, um von der verbesserten Appliance-Technologie zu profitieren.
+* Erhöhen Sie die Grid-Storage-Kapazität, ohne die Anzahl der Storage-Nodes in Ihrem StorageGRID System zu ändern.
+* Verbessern Sie die Storage-Effizienz, z. B. durch Ändern des RAID-Modus von DDP-8 auf DDP-16 oder auf RAID-6.
+* Node-Verschlüsselung wird effizient implementiert, sodass die externen Verschlüsselungsmanagement-Server (KMS) verwendet werden können.
+
+
+
+
+== Welches StorageGRID Netzwerk wird verwendet?
+
+Durch das Klonen werden Daten vom Quell-Node über ein beliebiges StorageGRID-Netzwerk direkt an die Ziel-Appliance übertragen. Das Grid-Netzwerk wird normalerweise verwendet, Sie können aber auch das Admin-Netzwerk oder das Client-Netzwerk verwenden, wenn die Quell-Appliance mit diesen Netzwerken verbunden ist. Wählen Sie das Netzwerk für den Klon-Traffic aus, das die beste Performance bei der Datenübertragung bietet, ohne die Leistung des StorageGRID-Netzwerks oder die Datenverfügbarkeit zu beeinträchtigen.
+
+Bei der Installation der Ersatzanwendung müssen Sie temporäre IP-Adressen für StorageGRID-Verbindung und Datentransfer angeben. Da die Ersatz-Appliance Teil derselben Netzwerke ist wie der von ihr ersetzte Appliance-Node, müssen Sie für jedes dieser Netzwerke auf der Ersatzanwendung temporäre IP-Adressen angeben.
+
+
+
+== Kompatibilität der Ziel-Appliance
+
+Ersatz-Appliances müssen vom gleichen Typ sein wie der Quell-Node, den sie ersetzen, und beide müssen Teil desselben logischen StorageGRID-Standorts sein.
+
+* Eine Ersatz-Services-Appliance kann sich von dem Admin-Node oder dem Gateway-Node unterscheiden, den er ersetzt.
++
+** Sie können eine SG100-Quell-Node-Appliance zu einer SG1000-Services-Ziel-Appliance klonen, um dem Admin-Node oder Gateway-Node eine höhere Funktion zuzuweisen.
+** Sie können eine SG1000-Quell-Node-Appliance in einer SG100-Services-Ziel-Appliance klonen, um die SG1000 für eine anspruchsvollere Applikation neu zu implementieren.
++
+Beispiel: Wenn eine SG1000-Quell-Node-Appliance als Admin-Node verwendet wird und Sie sie als dedizierten Load-Balancing-Node verwenden möchten.
+
+** Durch den Austausch einer SG1000-Quell-Node-Appliance durch eine SG100-Services-Ziel-Appliance wird die maximale Geschwindigkeit der Netzwerkports von 100 GbE auf 25 GbE verringert.
+** Die SG100- und SG1000-Appliances verfügen über unterschiedliche Netzwerkverbindungen. Wenn Sie den Gerätetyp ändern, müssen möglicherweise die Kabel oder SFP-Module ersetzt werden.
+
+
+* Eine Ersatz-Speicher-Appliance muss die gleiche oder höhere Kapazität aufweisen als der Speicherknoten, den sie ersetzt.
++
+** Wenn die Ziel-Speicher-Appliance die gleiche Anzahl von Laufwerken wie der Quellknoten hat, müssen die Laufwerke in der ZielAppliance dieselbe Kapazität (in TB) oder größer haben.
+** Wenn Sie planen, denselben RAID-Modus auf dem Ziel-Node zu verwenden, der auf dem Quell-Node verwendet wurde, Oder einen weniger Storage-effizienten RAID-Modus (beispielsweise beim Wechsel von RAID 6 zu DDP) müssen die Laufwerke in der Ziel-Appliance größer sein (in TB) als die Laufwerke in der Quell-Appliance.
+** Wenn die Anzahl der Standardlaufwerke, die in einer Ziel-Storage Appliance installiert sind, kleiner als die Anzahl der Laufwerke im Quell-Node ist, da Solid State Drives (SSDs) installiert sind, wird die gesamte Storage-Kapazität der Standardlaufwerke in der Ziel-Appliance (in TB) Die Gesamtkapazität aller Laufwerke im Quell-Storage-Node muss erreicht oder überschritten werden.
++
+Wenn beispielsweise eine SG5660 Quell-Storage-Node-Appliance mit 60 Laufwerken auf eine SG6060- oder SG6060X-Zielapplikation mit 58 Standardlaufwerken geklont wird, sollten größere Laufwerke in der SG6060 oder SG6060X Zielanwendung installiert werden, bevor das Klonen die Storage-Kapazität erhalten. (Die zwei Laufwerksschächte mit SSDs in der Ziel-Appliance sind nicht in der gesamten Appliance-Storage-Kapazität enthalten.)
+
++
+Wenn jedoch eine SG5660 Quell-Node-Appliance mit 60 Laufwerken mit SANtricity Dynamic Disk Pools DDP-8 konfiguriert ist, kann die SG6060 oder SG6060X Zielapplikation mit DDP-16 für 58 Laufwerke aus der SG6060 oder SG6060X Appliance aufgrund der verbesserten Storage-Effizienz ein gültiges Klonziel machen.
+
++
+Auf der Seite *NODES* im Grid Manager können Sie Informationen zum aktuellen RAID-Modus des Quell-Appliance-Knotens anzeigen. Wählen Sie die Registerkarte * Storage* für das Gerät aus.
+
+
+
+
+
+
+
+== Welche Informationen sind nicht geklont?
+
+Die folgenden Appliance-Konfigurationen werden während des Klonens nicht auf die Ersatz-Appliance übertragen. Sie müssen sie während der Ersteinrichtung des Ersatzgeräts konfigurieren.
+
+* BMC Schnittstelle
+* Netzwerkverbindungen
+* Verschlüsselungsstatus der Nodes
+* SANtricity System Manager (für Storage-Nodes)
+* RAID-Modus (für Storage-Nodes)
+
+
+
+
+== Welche Probleme verhindern das Klonen?
+
+Wenn beim Klonen eines der folgenden Probleme auftreten, stoppt der Klonprozess und eine Fehlermeldung wird erzeugt:
+
+* Falsche Netzwerkkonfiguration
+* Fehlende Konnektivität zwischen Quell- und Ziel-Appliances
+* Nicht kompatibel mit Quell- und Ziel-Appliance
+* Bei Storage-Nodes eine Ersatz-Appliance mit unzureichender Kapazität
+
+
+Sie müssen jedes Problem lösen, damit das Klonen fortgesetzt werden kann.

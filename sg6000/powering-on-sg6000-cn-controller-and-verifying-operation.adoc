@@ -1,0 +1,113 @@
+---
+permalink: sg6000/powering-on-sg6000-cn-controller-and-verifying-operation.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, power on, turn on, start, sg6000-cn, controller 
+summary: Schalten Sie den Controller nach dem Abschluss der Wartung ein. 
+---
+= Schalten Sie den SG6000-CN Controller ein, und überprüfen Sie den Betrieb
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Schalten Sie den Controller nach dem Abschluss der Wartung ein.
+
+.Was Sie und#8217;ll benötigen
+* Der Controller wurde in einem Rack oder Rack installiert und die Daten- und Stromkabel angeschlossen.
++
+xref:reinstalling-sg6000-cn-controller-into-cabinet-or-rack.adoc[Installieren Sie den SG6000-CN Controller wieder in den Schrank oder Rack]
+
+* Der Controller befindet sich physisch im Datacenter.
++
+xref:locating-controller-in-data-center.adoc[Controller im Datacenter finden]
+
+
+
+.Schritte
+. Schalten Sie den SG6000-CN-Controller ein, und überwachen Sie die Controller-LEDs und den Startcode mithilfe einer der folgenden Methoden:
++
+** Drücken Sie den Netzschalter an der Vorderseite des Controllers.
++
+image::../media/sg6060_front_panel_power_led_off.jpg[Betriebs-LED der SG6060- und SG6060X-Frontblende - aus]
+
+** Verwenden Sie die BMC-Schnittstelle des Controllers:
++
+... Greifen Sie auf die BMC-Schnittstelle des Controllers zu.
++
+xref:accessing-bmc-interface-sg6000.adoc[Greifen Sie auf die BMC-Schnittstelle zu]
+
+... Wählen Sie *Power Control*.
+... Wählen Sie *Power on Server* und dann *Perform Action*.
++
+image::../media/sg6060_power_on_from_bmc.png[Schalten Sie Controller von BMC ein]
+
++
+Verwenden Sie die BMC-Schnittstelle, um den Startstatus zu überwachen.
+
+
+
+
+
+. Vergewissern Sie sich, dass der Appliance-Controller im Grid Manager und ohne Warnungen angezeigt wird.
++
+Es kann bis zu 20 Minuten dauern, bis der Controller im Grid Manager angezeigt wird.
+
+. Vergewissern Sie sich, dass der neue SG6000-CN-Controller voll funktionsfähig ist:
++
+.. Melden Sie sich mit PuTTY oder einem anderen SSH-Client am Grid-Knoten an:
++
+... Geben Sie den folgenden Befehl ein: `ssh admin@_grid_node_IP_`
+... Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+... Geben Sie den folgenden Befehl ein, um zum Root zu wechseln: `su -`
+... Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
++
+Wenn Sie als root angemeldet sind, ändert sich die Eingabeaufforderung von `$` Bis `#`.
+
+
+
+.. Geben Sie den folgenden Befehl ein, und überprüfen Sie, ob die erwartete Ausgabe zurückgegeben wird: +
+`cat /sys/class/fc_host/*/port_state`
++
+Erwartete Ausgabe:
+
++
+[listing]
+----
+Online
+Online
+Online
+Online
+----
++
+Wenn die erwartete Ausgabe nicht zurückgegeben wird, wenden Sie sich an den technischen Support.
+
+.. Geben Sie den folgenden Befehl ein, und überprüfen Sie, ob die erwartete Ausgabe zurückgegeben wird: +
+`cat /sys/class/fc_host/*/speed`
++
+Erwartete Ausgabe:
+
++
+[listing]
+----
+16 Gbit
+16 Gbit
+16 Gbit
+16 Gbit
+----
++
+Wenn die erwartete Ausgabe nicht zurückgegeben wird, wenden Sie sich an den technischen Support.
+
+.. Stellen Sie auf der Seite Knoten im Grid Manager sicher, dass der Appliance-Node mit dem Raster verbunden ist und keine Warnmeldungen enthält.
++
+
+CAUTION: Nehmen Sie keinen anderen Appliance-Node offline, es sei denn, dieses Gerät verfügt über ein grünes Symbol.
+
+
+
+. Optional: Befestigen Sie die Frontverkleidung, falls eine entfernt wurde.
+
+
+xref:viewing-status-indicators-and-buttons-on-sg6000-cn-controller.adoc[Statusanzeigen und Schaltflächen des SG6000-CN Controllers anzeigen]
+
+xref:viewing-boot-up-status-codes-for-sg6000-storage-controllers.adoc[Anzeigen von Boot-Statuscodes für SG6000-Speicher-Controller]

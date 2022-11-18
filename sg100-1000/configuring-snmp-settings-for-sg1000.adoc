@@ -1,0 +1,40 @@
+---
+permalink: sg100-1000/configuring-snmp-settings-for-sg1000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, SNMP, configure, setup, set up 
+summary: Wenn Sie mit der Konfiguration von SNMP für Hardware vertraut sind, können Sie die BMC-Schnittstelle verwenden, um die SNMP-Einstellungen für die Services-Appliance zu konfigurieren. Sie können sichere Community-Strings bereitstellen, SNMP-Trap aktivieren und bis zu fünf SNMP-Ziele angeben. 
+---
+= Konfigurieren Sie SNMP-Einstellungen für Services Appliance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie mit der Konfiguration von SNMP für Hardware vertraut sind, können Sie die BMC-Schnittstelle verwenden, um die SNMP-Einstellungen für die Services-Appliance zu konfigurieren. Sie können sichere Community-Strings bereitstellen, SNMP-Trap aktivieren und bis zu fünf SNMP-Ziele angeben.
+
+.Was Sie und#8217;ll benötigen
+* Wissen Sie, wie Sie auf das BMC-Dashboard zugreifen können.
+* Sie haben Erfahrung in der Konfiguration von SNMP-Einstellungen für SNMPv1-v2c Geräte.
+
+
+
+NOTE: Die durch diese Vorgehensweise vorgenommenen BMC-Einstellungen bleiben möglicherweise nicht erhalten, wenn das Gerät ausfällt und ersetzt werden muss. Stellen Sie sicher, dass Sie über eine Aufzeichnung aller Einstellungen verfügen, die Sie angewendet haben, so dass sie nach einem Hardware-Austausch bei Bedarf leicht wieder angewendet werden können.
+
+.Schritte
+. Wählen Sie im BMC-Dashboard *Einstellungen* *SNMP-Einstellungen* aus.
+. Wählen Sie auf der Seite SNMP-Einstellungen die Option *SNMP V1/V2* aktivieren und geben Sie dann eine schreibgeschützte Community-Zeichenfolge und eine Read-Write Community-Zeichenfolge an.
++
+Die schreibgeschützte Community-Zeichenfolge ist wie eine Benutzer-ID oder ein Passwort. Sie sollten diesen Wert ändern, um zu verhindern, dass Eindringlinge Informationen über Ihr Netzwerk-Setup erhalten. Die Lese-Schreib-Community-Zeichenfolge schützt das Gerät vor nicht autorisierten Änderungen.
+
+. Wählen Sie optional *Trap aktivieren* aus, und geben Sie die erforderlichen Informationen ein.
++
+
+IMPORTANT: Geben Sie die Ziel-IP für jeden SNMP-Trap unter Verwendung einer IP-Adresse ein. Vollständig qualifizierte Domain-Namen werden nicht unterstützt.
+
++
+Aktivieren Sie Traps, wenn die Services-Appliance sofortige Benachrichtigungen an eine SNMP-Konsole senden soll, wenn sie sich in einem ungewöhnlichen Zustand befindet. Möglicherweise sind Verbindungsfallen nach oben/unten, Temperaturen über bestimmten Schwellenwerten oder hohen Datenverkehr hindeuten.
+
+. Klicken Sie optional auf *Test-Trap senden*, um Ihre Einstellungen zu testen.
+. Wenn die Einstellungen korrekt sind, klicken Sie auf *Speichern*.
+

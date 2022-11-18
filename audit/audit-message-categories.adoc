@@ -1,0 +1,14 @@
+---
+permalink: audit/audit-message-categories.html 
+sidebar: sidebar 
+keywords: storagegrid, audit, message, categories, category, group, groups, organization, class, classes 
+summary: Sie sollten mit den verschiedenen Kategorien vertraut sein, in denen Audit-Meldungen gruppiert werden. Diese Gruppen sind auf der Grundlage der Aktivitätsklasse organisiert, für die die Nachricht steht. 
+---
+= Kategorien von Überwachungsnachrichten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie sollten mit den verschiedenen Kategorien vertraut sein, in denen Audit-Meldungen gruppiert werden. Diese Gruppen sind auf der Grundlage der Aktivitätsklasse organisiert, für die die Nachricht steht.

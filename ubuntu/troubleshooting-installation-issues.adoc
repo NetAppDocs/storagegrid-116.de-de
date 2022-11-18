@@ -1,0 +1,40 @@
+---
+permalink: ubuntu/troubleshooting-installation-issues.html 
+sidebar: sidebar 
+keywords: how to troubleshoot ubuntu or debian installation 
+summary: Falls bei der Installation des StorageGRID-Systems Probleme auftreten, können Sie auf die Installationsprotokolldateien zugreifen. Der technische Support muss möglicherweise auch die Installations-Log-Dateien verwenden, um Probleme zu beheben. 
+---
+= Fehlerbehebung bei Installationsproblemen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Falls bei der Installation des StorageGRID-Systems Probleme auftreten, können Sie auf die Installationsprotokolldateien zugreifen. Der technische Support muss möglicherweise auch die Installations-Log-Dateien verwenden, um Probleme zu beheben.
+
+Die folgenden Installationsprotokolldateien sind über den Container verfügbar, auf dem jeder Node ausgeführt wird:
+
+* `/var/local/log/install.log` (Auf allen Grid-Nodes gefunden)
+* `/var/local/log/gdu-server.log` (Auf dem primären Admin-Node gefunden)
+
+
+Die folgenden Installationsprotokolldateien sind vom Host verfügbar:
+
+* `/var/log/storagegrid/daemon.log`
+* `/var/log/storagegrid/nodes/<node-name>.log`
+
+
+Informationen zum Zugriff auf die Protokolldateien finden Sie in den Anweisungen zum Überwachen und Beheben von StorageGRID. Informationen zur Fehlerbehebung bei Problemen mit der Installation finden Sie in den Installations- und Wartungsanweisungen für Ihre Geräte. Wenn Sie weitere Hilfe benötigen, wenden Sie sich an den technischen Support.
+
+xref:../monitor/index.adoc[Monitoring und Fehlerbehebung]
+
+xref:../sg100-1000/index.adoc[SG100- und SG1000-Services-Appliances]
+
+xref:../sg6000/index.adoc[SG6000 Storage-Appliances]
+
+xref:../sg5700/index.adoc[SG5700 Storage-Appliances]
+
+xref:../sg5600/index.adoc[SG5600 Storage Appliances]
+
+https://mysupport.netapp.com/site/global/dashboard["NetApp Support"^]

@@ -1,0 +1,38 @@
+---
+permalink: monitor/monitoring-node-level-resources.html 
+sidebar: sidebar 
+keywords: monitoring, monitoring node-level resources, grid nodes 
+summary: Sie sollten einzelne Grid-Nodes überwachen, um die Ressourcenauslastung zu überprüfen. 
+---
+= Monitoring von Ressourcen auf Node-Ebene
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie sollten einzelne Grid-Nodes überwachen, um die Ressourcenauslastung zu überprüfen.
+
+.Was Sie und#8217;ll benötigen
+* Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+
+
+Sind Nodes konsistent überlastet, sind möglicherweise mehr Nodes erforderlich, um einen effizienten Betrieb zu gewährleisten.
+
+.Schritte
+. So zeigen Sie Informationen zur Hardwareauslastung eines Grid-Node an:
++
+.. Wählen Sie auf der Seite *NODES* den Knoten aus.
+.. Wählen Sie die Registerkarte *Hardware* aus, um Grafiken der CPU-Auslastung und der Speicherauslastung anzuzeigen.
++
+image::../media/nodes_page_hardware_tab_graphs.png[Registerkarte Knoten Hardware]
+
+.. Um ein anderes Zeitintervall anzuzeigen, wählen Sie eines der Steuerelemente oberhalb des Diagramms oder Diagramms aus. Sie können die verfügbaren Informationen für Intervalle von 1 Stunde, 1 Tag, 1 Woche oder 1 Monat anzeigen. Sie können auch ein benutzerdefiniertes Intervall festlegen, mit dem Sie Datum und Zeitbereiche festlegen können.
+.. Wenn der Node auf einer Storage Appliance oder einer Services Appliance gehostet wird, scrollen Sie nach unten, um die Komponententabellen anzuzeigen. Der Status aller Komponenten sollte „`Nominal`“ sein. Untersuchen Sie Komponenten, die einen anderen Status haben.
+
+
+
+
+xref:viewing-hardware-tab.adoc#view-information-about-appliance-storage-nodes[Zeigen Sie Informationen zu Appliance Storage Nodes an]
+
+xref:viewing-hardware-tab.adoc#view-information-about-appliance-admin-nodes-and-gateway-nodes[Zeigen Sie Informationen zu Appliance Admin Nodes und Gateway Nodes an]

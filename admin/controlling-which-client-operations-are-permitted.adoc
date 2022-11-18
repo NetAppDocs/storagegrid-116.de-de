@@ -1,0 +1,48 @@
+---
+permalink: admin/controlling-which-client-operations-are-permitted.html 
+sidebar: sidebar 
+keywords: prevent client modification, grid option, deny client operations 
+summary: Sie können die Option „Client Modification Grid verhindern“ auswählen, um bestimmte HTTP-Client-Vorgänge zu verweigern. 
+---
+= Kontrollieren Sie, welche Client-Vorgänge zulässig sind
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Option „Client Modification Grid verhindern“ auswählen, um bestimmte HTTP-Client-Vorgänge zu verweigern.
+
+.Was Sie und#8217;ll benötigen
+* Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+* Sie haben spezifische Zugriffsberechtigungen.
+
+
+„Client-Änderung verhindern“ ist eine systemweite Einstellung. Wenn die Option „Client-Änderung verhindern“ ausgewählt ist, werden die folgenden Anfragen verweigert:
+
+* *S3 REST API*
++
+** Bucket-Anforderungen löschen
+** Alle Anforderungen, die das Ändern von Daten eines vorhandenen Objekts, benutzerdefinierter Metadaten oder S3-Objekt-Tagging zum Einsatz kommen
++
+
+NOTE: Diese Einstellung gilt nicht für Buckets mit aktivierter Versionierung. Bei der Versionierung werden bereits Änderungen an Objektdaten, benutzerdefinierten Metadaten und Objekt-Tagging verhindert.
+
+
+
+* *Swift REST API*
++
+** Container-Anforderungen löschen
+** Anträge zum Ändern vorhandener Objekte. Beispielsweise werden folgende Vorgänge verweigert: Put Overwrite, Delete, Metadata Update usw.
+
+
+
+
+.Schritte
+. Wählen Sie *KONFIGURATION* *System* *Gitteroptionen*.
+. Aktivieren Sie im Abschnitt Netzwerkoptionen das Kontrollkästchen *Client-Änderung verhindern*.
++
+image::../media/prevent_client_modification.png[Client-Änderung Verhindern]
+
+. Wählen Sie *Speichern*.
+

@@ -1,0 +1,14 @@
+---
+permalink: sg5600/maintaining-sg5600-appliance.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, maintain, maintaining, hardware, procedures, tasks 
+summary: Möglicherweise müssen Sie die SANtricity OS Software auf dem E2700 Controller aktualisieren, den E2700 Controller oder den E5600SG Controller ersetzen oder bestimmte Komponenten ersetzen. Bei den in diesem Abschnitt beschriebenen Verfahren wird davon ausgegangen, dass die Appliance bereits als Storage-Node in einem StorageGRID-System bereitgestellt wurde. 
+---
+= SG5600-Appliance warten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Möglicherweise müssen Sie die SANtricity OS Software auf dem E2700 Controller aktualisieren, den E2700 Controller oder den E5600SG Controller ersetzen oder bestimmte Komponenten ersetzen. Bei den in diesem Abschnitt beschriebenen Verfahren wird davon ausgegangen, dass die Appliance bereits als Storage-Node in einem StorageGRID-System bereitgestellt wurde.

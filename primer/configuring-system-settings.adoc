@@ -1,0 +1,42 @@
+---
+permalink: primer/configuring-system-settings.html 
+sidebar: sidebar 
+keywords: system settings, grid manager, configure, configuration, display options, grid options, key management server, S3 object lock, storage options 
+summary: Sie können verschiedene Systemeinstellungen über den Grid Manager konfigurieren, um den Betrieb Ihres StorageGRID Systems zu optimieren. 
+---
+= Konfigurieren Sie Systemeinstellungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können verschiedene Systemeinstellungen über den Grid Manager konfigurieren, um den Betrieb Ihres StorageGRID Systems zu optimieren.
+
+
+
+== Anzeigeoptionen
+
+Mit den Anzeigeoptionen können Sie den Zeitraum für das Timeout für Benutzersitzungen festlegen und E-Mail-Benachrichtigungen für ältere Alarme und AutoSupport-Meldungen mit Ereignisauslösung unterdrücken.
+
+
+
+== Grid-Optionen
+
+Mit den Grid-Optionen können Sie die Einstellungen für alle Objekte konfigurieren, die in Ihrem StorageGRID-System gespeichert sind, einschließlich gespeicherter Objektkomprimierung und gespeicherter Objektverschlüsselung. Und gespeichertes Objekt-Hashing.
+
+Mit diesen Optionen können Sie auch globale Einstellungen für S3- und Swift-Client-Vorgänge festlegen.
+
+
+
+== S3-Objektsperre
+
+Die Funktion StorageGRID S3 Object Lock ist eine Objektschutzlösung, die der S3 Object Lock in Amazon Simple Storage Service (Amazon S3) entspricht. Sie können die globale S3-Objektsperre für ein StorageGRID-System aktivieren, damit S3-Mandantenkonten Buckets erstellen können, wobei S3-Objektsperre aktiviert ist. Der Mandant kann dann mithilfe einer S3-Client-Applikation optional Aufbewahrungseinstellungen (Aufbewahrung bis Datum, gesetzliche Aufbewahrungspflichten oder beides) für die Objekte in diesen Buckets festlegen. Zudem kann jeder Bucket, für den die S3-Objektsperre aktiviert ist, optional einen Standardaufbewahrungsmodus und einen Aufbewahrungszeitraum aufweisen. Dies gilt, wenn Objekte ohne eigene Aufbewahrungseinstellungen zum Bucket hinzugefügt werden.
+
+image::../media/s3_object_lock_architecture.png[S3 Object Lock-Architektur]
+
+
+
+== Storage-Optionen
+
+Mit Storage-Optionen können Sie die Objektsegmentierung steuern und Storage-Volume-Wasserzeichen überschreiben, um den nutzbaren Storage-Node zu managen.

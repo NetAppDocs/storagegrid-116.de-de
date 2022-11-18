@@ -1,0 +1,56 @@
+---
+permalink: primer/configuring-security-settings.html 
+sidebar: sidebar 
+keywords: how to configure security settings 
+summary: Sie können verschiedene Sicherheitseinstellungen über den Grid-Manager konfigurieren, um das StorageGRID-System zu sichern. 
+---
+= Konfigurieren Sie die Sicherheitseinstellungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können verschiedene Sicherheitseinstellungen über den Grid-Manager konfigurieren, um das StorageGRID-System zu sichern.
+
+
+
+== Zertifikate
+
+StorageGRID verwendet zwei Arten von Sicherheitszertifikaten:
+
+* Serverzertifikate sind erforderlich, wenn Sie HTTPS-Verbindungen verwenden. Serverzertifikate werden verwendet, um sichere Verbindungen zwischen Clients und Servern herzustellen, die Identität eines Servers bei seinen Clients zu authentifizieren und einen sicheren Kommunikationspfad für Daten bereitzustellen. Der Server und der Client verfügen jeweils über eine Kopie des Zertifikats.
+* Clientzertifikate authentifizieren eine Client- oder Benutzeridentität auf dem Server und ermöglichen eine sicherere Authentifizierung als Passwörter allein. Clientzertifikate verschlüsseln keine Daten.
+
+
+Sie können alle StorageGRID-Zertifikate auf der Seite *KONFIGURATION* *Sicherheit* *Zertifikate* anzeigen.
+
+
+
+== Für Schlüsselmanagement-Server
+
+Ein oder mehrere externe Verschlüsselungsmanagement-Server (KMS) lassen sich konfigurieren, um StorageGRID Services und Storage Appliances Verschlüsselungen bereitzustellen. Jeder KMS- oder KMS-Cluster verwendet das KMIP (Key Management Interoperability Protocol), um einen Verschlüsselungsschlüssel für die Appliance-Nodes am zugehörigen StorageGRID-Standort bereitzustellen. Mithilfe von Verschlüsselungsmanagement-Servern können Sie StorageGRID-Daten schützen, selbst wenn eine Appliance aus dem Datacenter entfernt wird. Nachdem die Appliance-Volumes verschlüsselt sind, können Sie erst auf sämtliche Daten auf der Appliance zugreifen, wenn der Node mit dem KMS kommunizieren kann.
+
+
+NOTE: Um die Verschlüsselungsschlüsselverwaltung zu verwenden, müssen Sie während der Installation die Einstellung *Node Encryption* für jedes Gerät aktivieren, bevor das Gerät zum Grid hinzugefügt wird.
+
+
+
+== Proxy-Einstellungen
+
+Wenn Sie S3-Plattform-Services oder Cloud Storage-Pools verwenden, können Sie einen nicht transparenten Proxy-Server zwischen Storage Nodes und den externen S3-Endpunkten konfigurieren. Wenn Sie AutoSupport-Meldungen über HTTPS oder HTTP senden, können Sie einen nicht transparenten Proxy-Server zwischen Admin-Knoten und dem technischen Support konfigurieren.
+
+image::../media/proxy_settings_menu_storage.png[Proxy-Einstellungen-Menü - Speicher]
+
+
+
+== Nicht Vertrauenswürdige Client-Netzwerke
+
+Wenn Sie ein Client-Netzwerk verwenden, können Sie StorageGRID vor feindlichen Angriffen schützen, indem Sie angeben, dass das Client-Netzwerk auf jedem Knoten nicht vertrauenswürdig ist. Wenn das Client-Netzwerk eines Node nicht vertrauenswürdig ist, akzeptiert der Knoten nur eingehende Verbindungen an Ports, die explizit als Load Balancer-Endpunkte konfiguriert sind.
+
+Beispielsweise könnte ein Gateway-Node den gesamten eingehenden Datenverkehr im Client-Netzwerk mit Ausnahme von HTTPS S3-Anforderungen ablehnen. Sie können auch den Datenverkehr des Outbound-S3-Plattformdienstes von einem Speicherknoten aktivieren, während eingehende Verbindungen zu diesem Speicherknoten im Client-Netzwerk verhindert werden.
+
+.Verwandte Informationen
+* xref:../admin/index.adoc[StorageGRID verwalten]
+* xref:managing-tenants-and-client-connections.adoc[Management von Mandanten und Client-Verbindungen]
+

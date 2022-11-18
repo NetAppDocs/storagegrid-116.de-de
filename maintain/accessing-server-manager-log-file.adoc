@@ -1,0 +1,18 @@
+---
+permalink: maintain/accessing-server-manager-log-file.html 
+sidebar: sidebar 
+keywords: storagegrid, server manager, log file 
+summary: Wenn bei der Verwendung von Server Manager ein Problem auftritt, überprüfen Sie dessen Protokolldatei. 
+---
+= Rufen Sie die Protokolldatei von Server Manager auf
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn bei der Verwendung von Server Manager ein Problem auftritt, überprüfen Sie dessen Protokolldatei.
+
+Fehlermeldungen im Zusammenhang mit Server Manager werden in der Server Manager-Protokolldatei erfasst, die sich unter befindet: `/var/local/log/servermanager.log`
+
+Prüfen Sie diese Datei auf Fehlermeldungen zu Fehlern. Eskalieren des Problems gegebenenfalls an den technischen Support. Möglicherweise werden Sie aufgefordert, Protokolldateien an den technischen Support weiterzuleiten.

@@ -1,0 +1,41 @@
+---
+permalink: admin/how-load-balancing-works-load-balancer-service.html 
+sidebar: sidebar 
+keywords: load balancer service, how load balancing works 
+summary: Der Load Balancer Service verteilt eingehende Netzwerkverbindungen von Client-Anwendungen auf Storage Nodes. Um den Lastenausgleich zu aktivieren, müssen Sie Load Balancer-Endpunkte mithilfe des Grid-Managers konfigurieren. 
+---
+= Wie funktioniert der Lastausgleich? Load Balancer Service
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Load Balancer Service verteilt eingehende Netzwerkverbindungen von Client-Anwendungen auf Storage Nodes. Um den Lastenausgleich zu aktivieren, müssen Sie Load Balancer-Endpunkte mithilfe des Grid-Managers konfigurieren.
+
+Sie können Load Balancer-Endpunkte nur für Admin-Nodes oder Gateway-Nodes konfigurieren, da diese Node-Typen den Load Balancer Service enthalten. Sie können keine Endpunkte für Speicherknoten oder Knoten archivieren konfigurieren.
+
+Jeder Load Balancer-Endpunkt legt einen Port, ein Netzwerkprotokoll (HTTP oder HTTPS), einen Client-Typ (S3 oder Swift) und einen Bindungsmodus fest. HTTPS-Endpunkte erfordern ein Serverzertifikat. Bindungsmodi ermöglichen es Ihnen, die Zugriffsmöglichkeiten von Endpunktports auf folgende Arten zu beschränken:
+
+* Die virtuellen IP-Adressen (VIPs) bestimmter Hochverfügbarkeitsgruppen (HA-Gruppen)
+* Spezifische Netzwerkschnittstellen bestimmter Admin- und Gateway-Knoten
+
+
+
+
+== Überlegungen zu Ports
+
+Clients können auf alle Endpunkte zugreifen, die Sie auf jedem Node konfigurieren, auf dem der Load Balancer Service ausgeführt wird. Es gibt zwei Ausnahmen: Die Ports 80 und 443 sind auf Admin-Nodes reserviert, sodass auf diesen Ports konfigurierte Endpunkte nur auf Gateway-Knoten Lastverteilungsvorgänge unterstützen.
+
+Wenn Sie Ports neu zugeordnet haben, können Sie nicht dieselben Ports zum Konfigurieren von Load Balancer-Endpunkten verwenden. Sie können Endpunkte mit neu zugeordneten Ports erstellen, aber diese Endpunkte werden nicht dem Load Balancer-Service, sondern den ursprünglichen CLB-Ports und -Service neu zugeordnet. Befolgen Sie die Schritte unter xref:../maintain/removing-port-remaps.adoc[Entfernen Sie die Port-Remaps].
+
+
+NOTE: Der CLB-Service ist veraltet.
+
+
+
+== CPU-Verfügbarkeit
+
+Der Load Balancer Service läuft auf jedem Admin-Node und Gateway-Node unabhängig, wenn der S3- oder Swift-Datenverkehr zu den Storage-Nodes weitergeleitet wird. Durch eine Gewichtung leitet der Load Balancer-Service mehr Anfragen an Storage-Nodes mit höherer CPU-Verfügbarkeit weiter. Die Informationen zur CPU-Auslastung des Knotens werden alle paar Minuten aktualisiert. Die Gewichtung kann jedoch häufiger aktualisiert werden. Allen Storage-Nodes wird ein Mindestwert für das Basisgewicht zugewiesen, selbst wenn ein Node eine Auslastung von 100 % meldet oder seine Auslastung nicht meldet.
+
+In manchen Fällen sind die Informationen zur CPU-Verfügbarkeit auf den Standort beschränkt, an dem sich der Load Balancer Service befindet.

@@ -1,0 +1,102 @@
+---
+permalink: upgrade/how-your-system-is-affected-during-upgrade.html 
+sidebar: sidebar 
+keywords: upgrade, firmware, appliance, alert 
+summary: Sie müssen wissen, welche Auswirkungen das Upgrade auf Ihr StorageGRID System hat. 
+---
+= Auswirkungen des Upgrades auf Ihr System
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen wissen, welche Auswirkungen das Upgrade auf Ihr StorageGRID System hat.
+
+
+
+== StorageGRID Upgrades sind unterbrechungsfrei
+
+Das StorageGRID System ist in der Lage, während des Upgrades Daten von Client-Applikationen aufzunehmen und abzurufen. Während des Upgrades werden Grid-Nodes nacheinander heruntergefahren. Daher ist nicht zu der Zeit gekommen, dass alle Grid-Nodes nicht verfügbar sind.
+
+Um die kontinuierliche Verfügbarkeit zu gewährleisten, müssen Sie sicherstellen, dass Objekte mit den entsprechenden ILM-Richtlinien redundant gespeichert werden. Es muss zudem sichergestellt werden, dass alle externen S3- oder Swift-Clients für das Senden von Anforderungen an eine der folgenden Komponenten konfiguriert sind:
+
+* Ein StorageGRID Endpunkt, der als HA-Gruppe (Hochverfügbarkeit) konfiguriert ist
+* Einen hochverfügbaren Drittanbieter-Load Balancer
+* Mehrere Gateway-Nodes für jeden Client
+* Mehrere Storage-Nodes für jeden Client
+
+
+
+
+== Die Appliance-Firmware wird aktualisiert
+
+Während des Upgrades auf StorageGRID 11.6:
+
+* Alle Knoten der StorageGRID Appliance werden automatisch auf die StorageGRID Appliance Installer Firmware Version 3.6 aktualisiert.
+* SG6060- und SGF6024-Appliances werden automatisch auf die BIOS-Firmware-Version 3B07.EX und BMC-Firmware-Version BMC 3.93.07 aktualisiert.
+* SG100- und SG1000-Appliances werden automatisch auf die BIOS-Firmware-Version 3B12.EC und BMC-Firmware-Version 4.67.07 aktualisiert.
+
+
+
+
+== Möglicherweise werden Benachrichtigungen ausgelöst
+
+Warnmeldungen können ausgelöst werden, wenn Services gestartet und beendet werden und wenn das StorageGRID System als Umgebung mit gemischten Versionen funktioniert (einige Grid-Nodes mit einer früheren Version, während andere auf eine neuere Version aktualisiert wurden). Nach Abschluss des Upgrades können weitere Warnmeldungen ausgelöst werden.
+
+Zum Beispiel wird die Meldung *mit Knoten* nicht kommunizieren kann, wenn Dienste beendet werden, oder Sie sehen möglicherweise die Meldung *Cassandra Kommunikationsfehler*, wenn einige Knoten auf StorageGRID 11.6 aktualisiert wurden, andere Knoten jedoch noch StorageGRID 11.5 ausführen. Im Allgemeinen werden diese Meldungen nach Abschluss des Upgrades gelöscht.
+
+Die Warnung *ILM-Platzierung unerreichbar* wird möglicherweise ausgelöst, wenn Storage-Nodes während des Upgrades auf StorageGRID 11.6 angehalten werden. Dieser Alarm wird möglicherweise einen Tag nach Abschluss des Upgrades andauern.
+
+Wenn Sie benutzerdefinierte Werte für die Wasserzeichen für das Speichervolumen verwenden, wird nach Abschluss des Upgrades möglicherweise die Warnung *Low read-only Watermark override* ausgelöst. Siehe xref:../monitor/troubleshoot-low-watermark-alert.adoc[Fehlerbehebung bei Warnungen zur Überbrückung von nur geringem Lesezugriff] Entsprechende Details.
+
+Nach Abschluss des Upgrades können Sie alle Warnmeldungen zu Upgrades überprüfen, indem Sie im Grid Manager Dashboard * kürzlich behobene Warnmeldungen* oder *Aktuelle Warnmeldungen* auswählen.
+
+
+
+== Viele SNMP-Benachrichtigungen werden erzeugt
+
+Beachten Sie, dass möglicherweise eine große Anzahl von SNMP-Benachrichtigungen generiert werden kann, wenn Grid-Knoten angehalten und während des Upgrades neu gestartet werden. Um übermäßige Benachrichtigungen zu vermeiden, deaktivieren Sie das Kontrollkästchen *SNMP-Agent-Benachrichtigungen aktivieren* (*CONFIGURATION* *Monitoring* *SNMP-Agent*), um SNMP-Benachrichtigungen zu deaktivieren, bevor Sie das Upgrade starten. Aktivieren Sie dann die Benachrichtigungen wieder, nachdem das Upgrade abgeschlossen ist.
+
+
+
+== Konfigurationsänderungen sind eingeschränkt
+
+
+NOTE: Die Liste der Änderungen bei eingeschränkter Konfiguration kann von Release zu Release geändert werden. Wenn Sie ein Upgrade auf eine andere Version von StorageGRID durchführen, lesen Sie die Liste in den entsprechenden Upgrade-Anweisungen.
+
+Bis die Aufgabe *Neues Feature* aktivieren abgeschlossen ist:
+
+* Nehmen Sie keine Änderungen an der Grid-Konfiguration vor.
+* Ändern Sie nicht die Konfiguration der Audit-Ebene oder konfigurieren Sie keinen externen Syslog-Server.
+* Aktivieren oder deaktivieren Sie keine neuen Funktionen.
+* Aktualisieren Sie die ILM-Konfiguration nicht. Andernfalls kann es zu inkonsistenten und unerwarteten ILM-Verhaltensweisen kommen.
+* Wenden Sie keinen Hotfix an, oder stellen Sie einen Gitterknoten wieder her.
+* Sie können keine HA-Gruppen, VLAN-Schnittstellen oder Load Balancer Endpunkte managen, während Sie ein Upgrade auf StorageGRID 11.6 durchführen.
+
+
+Bis die Aufgabe * Final Upgrade Steps* abgeschlossen ist:
+
+* Führen Sie keine Erweiterungsverfahren durch.
+* Führen Sie keine Außerbetriebnahme durch.
+
+
+
+
+== Sie können Bucket-Details und Buckets vom Mandanten-Manager nicht anzeigen oder managen
+
+Während des Upgrades auf StorageGRID 11.6 (d. h. während das System als Umgebung mit gemischten Versionen ausgeführt wird) können Sie mit dem Mandanten-Manager keine Bucket-Details anzeigen oder Buckets verwalten. Auf der Seite Buckets in Tenant Manager wird einer der folgenden Fehler angezeigt:
+
+* „`Sie können diese API nicht verwenden, während Sie ein Upgrade auf 11.6 durchführen.`“
+* „`Sie können die Details zur Bucket-Versionierung im Mandanten-Manager nicht anzeigen, während Sie ein Upgrade auf 11.6 durchführen.`“
+
+
+Dieser Fehler wird nach Abschluss des Upgrades auf 11.6 behoben.
+
+Während das Upgrade für 11.6 ausgeführt wird, nutzen Sie folgende Tools, um Bucket-Details anzuzeigen oder Buckets zu managen, anstatt den Mandanten-Manager zu verwenden:
+
+* Zur Ausführung von S3-Standardvorgängen auf einem Bucket können Sie entweder die S3-REST-API oder die Mandanten-Management-API verwenden.
+* Um benutzerdefinierte StorageGRID-Vorgänge auf einem Bucket durchzuführen (beispielsweise zum Anzeigen und Ändern der Bucket-Konsistenzstufe, zum Aktivieren oder Deaktivieren von Updates für die letzte Zugriffszeit oder zum Konfigurieren der Suchintegration), verwenden Sie die Mandantenmanagement-API.
+
+
+Siehe xref:../tenant/understanding-tenant-management-api.adoc[Mandantenmanagement-API verstehen] Und xref:../s3/index.adoc[S3 verwenden] Weitere Anweisungen.

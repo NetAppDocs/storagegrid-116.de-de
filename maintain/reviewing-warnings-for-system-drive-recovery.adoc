@@ -1,0 +1,49 @@
+---
+permalink: maintain/reviewing-warnings-for-system-drive-recovery.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, system drive warning, storage node 
+summary: Bevor Sie ein ausgefallenes Systemlaufwerk eines Speicherknoten wiederherstellen, müssen Sie die folgenden Warnungen überprüfen. 
+---
+= Prüfen Sie die Warnungen für die Wiederherstellung von Speicherknoten-Laufwerken
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie ein ausgefallenes Systemlaufwerk eines Speicherknoten wiederherstellen, müssen Sie die folgenden Warnungen überprüfen.
+
+Storage-Nodes verfügen über eine Cassandra Datenbank mit Objekt-Metadaten. Unter folgenden Umständen kann die Cassandra-Datenbank neu erstellt werden:
+
+* Ein Storage-Node wird nach mehr als 15 Tagen offline wieder online geschaltet.
+* Ein Speichervolume ist ausgefallen und wurde wiederhergestellt.
+* Das Systemlaufwerk und ein oder mehrere Storage-Volumes ausfallen und werden wiederhergestellt.
+
+
+Nach dem Rebuilt von Cassandra verwendet das System Informationen von anderen Speicherknoten. Wenn zu viele Storage-Nodes offline sind, sind einige Cassandra-Daten möglicherweise nicht verfügbar. Falls Cassandra vor Kurzem neu aufgebaut wurde, sind Cassandra-Daten möglicherweise noch nicht konsistent im gesamten Grid. Datenverluste können auftreten, wenn Cassandra neu aufgebaut wird, wenn zu viele Storage-Nodes offline sind oder wenn zwei oder mehr Storage-Nodes innerhalb von 15 Tagen neu erstellt werden.
+
+
+CAUTION: Wenn mehrere Speicherknoten ausgefallen sind (oder offline ist), wenden Sie sich an den technischen Support. Führen Sie den folgenden Wiederherstellungsvorgang nicht durch. Es kann zu Datenverlusten kommen.
+
+
+CAUTION: Falls dies der zweite Ausfall des Storage-Nodes in weniger als 15 Tagen nach Ausfall oder Wiederherstellung eines Storage-Nodes ist, wenden Sie sich an den technischen Support. Die Neuerstellung von Cassandra auf zwei oder mehr Storage-Nodes innerhalb von 15 Tagen kann zu Datenverlust führen.
+
+
+NOTE: Wenn mehr als ein Speicherknoten an einem Standort ausgefallen ist, ist möglicherweise ein Verfahren zur Standortwiederherstellung erforderlich. Wenden Sie sich an den technischen Support.
+
+xref:how-site-recovery-is-performed-by-technical-support.adoc[Durchführen der Standortwiederherstellung durch den technischen Support]
+
+
+CAUTION: Wenn sich dieser Speicherknoten im schreibgeschützten Wartungsmodus befindet, um das Abrufen von Objekten durch einen anderen Speicherknoten mit ausgefallenen Speichervolumes zu ermöglichen, stellen Sie Volumes auf dem Speicherknoten mit fehlerhaften Speicher-Volumes wieder her, bevor Sie diesen fehlgeschlagenen Speicherknoten wiederherstellen. Beachten Sie die Anweisungen für die Wiederherstellung nach einem Verlust von Storage-Volumes, bei denen das Systemlaufwerk intakt ist.
+
+
+IMPORTANT: Wenn ILM-Regeln so konfiguriert sind, dass nur eine replizierte Kopie gespeichert wird und sich die Kopie auf einem ausgefallenen Storage Volume befindet, können Sie das Objekt nicht wiederherstellen.
+
+
+NOTE: Wenn während der Wiederherstellung ein Alarm „Service: Status – Cassandra (SVST)“ (Service: Status – Cassandra) ausgegeben wird, lesen Sie die Überwachungs- und Fehlerbehebungsanweisungen zur Wiederherstellung des Alarms durch Neuaufbau von Cassandra. Nach dem Wiederaufbau von Cassandra sollten die Alarme gelöscht werden. Wenn die Alarme nicht gelöscht werden, wenden Sie sich an den technischen Support.
+
+xref:../monitor/index.adoc[Monitoring und Fehlerbehebung]
+
+xref:warnings-and-considerations-for-grid-node-recovery.adoc[Warnungen und Überlegungen für die Wiederherstellung von Grid Nodes]
+
+xref:recovering-from-storage-volume-failure-where-system-drive-is-intact.adoc[Wiederherstellung nach einem Storage-Volume-Ausfall bei intaktem Systemlaufwerk]

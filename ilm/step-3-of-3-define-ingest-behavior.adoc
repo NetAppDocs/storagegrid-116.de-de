@@ -1,0 +1,74 @@
+---
+permalink: ilm/step-3-of-3-define-ingest-behavior.html 
+sidebar: sidebar 
+keywords: ilm rule step 3, define ingest behavior 
+summary: 'Schritt 3 \(Ingest Behavior definieren\) des Assistenten Create ILM Rule ermöglicht es Ihnen, festzulegen, wie die Objekte, die von dieser Regel gefiltert wurden, beim Einnehmen geschützt werden.' 
+---
+= Schritt 3 von 3: Definieren des Aufnahmeverhaltens
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Schritt 3 (Ingest Behavior definieren) des Assistenten Create ILM Rule ermöglicht es Ihnen, festzulegen, wie die Objekte, die von dieser Regel gefiltert werden, beim Einnehmen geschützt werden.
+
+StorageGRID erstellt Zwischenkopien und stellt die Objekte später zur ILM-Evaluierung in einen Warteschleife. Außerdem kann es Kopien erstellen, um sofort die Anweisungen zur Platzierung der Regel zu erfüllen.
+
+image::../media/define_ingest_behavior_for_ilm_rule.png[Erstellen Sie die ILM-Regel Schritt 3 von 3]
+
+.Schritte
+. Wählen Sie die Datenschutzoption aus, die verwendet werden soll, wenn Objekte aufgenommen werden:
++
+[cols="1a,2a"]
+|===
+| Option | Beschreibung 
+
+
+ a| 
+Streng
+ a| 
+Verwendet bei der Aufnahme immer die Platzierungen dieser Regel. Einspeisung scheitert, wenn die Platzierungen dieser Regel nicht möglich sind.
+
+
+
+ a| 
+Ausgeglichen
+ a| 
+Optimale ILM-Effizienz: Versucht die Platzierungen dieser Regel bei der Aufnahme. Erstellt zwischenzeitliche Kopien, wenn dies nicht möglich ist.
+
+
+
+ a| 
+Doppelte Provisionierung
+ a| 
+Erstellt vorläufige Kopien bei der Aufnahme und wendet die Platzierung dieser Regel später an.
+
+|===
++
+Balance bietet eine Kombination aus Datensicherheit und Effizienz, die in den meisten Fällen geeignet ist. Zur Erfüllung spezifischer Anforderungen wird in der Regel eine strenge oder doppelte Provisionierung verwendet.
+
++
+Siehe xref:data-protection-options-for-ingest.adoc[Datensicherungsoptionen für die Aufnahme] Und xref:advantages-disadvantages-of-ingest-options.adoc[Vor- und Nachteile sowie Einschränkungen der Datensicherungsoptionen] Finden Sie weitere Informationen.
+
++
+[NOTE]
+====
+Wenn Sie die Option streng oder ausgewogen auswählen und die Regel eine der folgenden Platzierungen verwendet, wird eine Fehlermeldung angezeigt:
+
+** Ein Cloud-Storage-Pool am Tag 0
+** Ein Archiv-Node am Tag 0
+** Ein Cloud-Speicherpool oder ein Archiv-Node, wenn die Regel eine benutzerdefinierte Erstellungszeit als Referenzzeit verwendet
+
+
+====
+. Wählen Sie *Speichern*.
++
+Die ILM-Regel wird gespeichert. Die Regel bleibt erst aktiv, wenn sie zu einer ILM-Richtlinie hinzugefügt und diese Richtlinie aktiviert wird.
+
+
+
+.Verwandte Informationen
+* xref:example-5-ilm-rules-and-policy-for-strict-ingest-behavior.adoc[Beispiel 5: ILM-Regeln und Richtlinie für striktes Ingest-Verhalten]
+* xref:creating-ilm-policy.adoc[ILM-Richtlinie erstellen]
+

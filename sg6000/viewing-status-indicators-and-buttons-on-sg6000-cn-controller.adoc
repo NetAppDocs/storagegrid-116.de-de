@@ -1,0 +1,89 @@
+---
+permalink: sg6000/viewing-status-indicators-and-buttons-on-sg6000-cn-controller.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, status, indicators, lights, leds, light, led, switch , button, power, reset, identify, alarm, indicator, boot codes, boot, code, start, startup, start up, start-up, progress, sg6000-cn 
+summary: Der SG6000-CN-Controller enthält Anzeigen, mit denen Sie den Status des Controllers bestimmen können, einschließlich der folgenden Anzeigen und Schaltflächen. 
+---
+= Statusanzeigen und Schaltflächen des SG6000-CN Controllers anzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der SG6000-CN-Controller enthält Anzeigen, mit denen Sie den Status des Controllers bestimmen können, einschließlich der folgenden Anzeigen und Schaltflächen.
+
+image::../media/sg6000_cn_front_indicators.gif[Frontanzeigen - SG6000-CN]
+
+[cols="1a,2a,3a"]
+|===
+|  | Anzeige | Beschreibung 
+
+
+ a| 
+1
+ a| 
+Ein-/aus-Schalter
+ a| 
+* Blau: Der Controller ist eingeschaltet.
+* Aus: Der Controller ist ausgeschaltet.
+
+
+
+
+ a| 
+2
+ a| 
+Reset-Taste
+ a| 
+_Kein Indikator_
+
+Mit dieser Taste können Sie den Controller auf einen harten Reset zurücksetzen.
+
+
+
+ a| 
+3
+ a| 
+Schaltfläche „Identifizierung“
+ a| 
+* Blinkt oder leuchtet blau: Identifiziert den Controller im Schrank oder Rack.
+* Aus: Die Steuerung ist im Schrank oder Rack nicht visuell erkennbar.
+
+
+Diese Taste kann auf „Blinken“, „ein“ (Festkörper) oder „aus“ eingestellt werden.
+
+
+
+ a| 
+4
+ a| 
+Alarm-LED
+ a| 
+* Gelb: Ein Fehler ist aufgetreten.
++
+*Hinweis:* um den Start und Fehlercodes anzuzeigen, müssen Sie auf die BMC-Schnittstelle zugreifen.
+
+* Aus: Es sind keine Fehler vorhanden.
+
+
+|===
+
+
+== Allgemeine Startcodes
+
+Beim Hochfahren oder nach einem harten Reset des SG6000-CN-Controllers treten folgende Aktionen auf:
+
+. Der BMC (Baseboard Management Controller) protokolliert Codes für die Boot-Sequenz, einschließlich etwaiger Fehler.
+. Der Betriebsschalter leuchtet auf.
+. Wenn während des Startvorgangs Fehler auftreten, leuchtet die Alarm-LED auf.
++
+Um die Boot- und Fehlercodes anzuzeigen, müssen Sie auf die BMC-Schnittstelle zugreifen.
+
+
+
+xref:troubleshooting-hardware-installation.adoc[Fehlerbehebung bei der Hardwareinstallation (SG6000)]
+
+xref:configuring-bmc-interface-sg6000.adoc[BMC-Schnittstelle konfigurieren (SG6000)]
+
+xref:powering-on-sg6000-cn-controller-and-verifying-operation.adoc[Schalten Sie den SG6000-CN Controller ein, und überprüfen Sie den Betrieb]

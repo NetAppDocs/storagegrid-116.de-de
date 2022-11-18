@@ -1,0 +1,80 @@
+---
+permalink: sg5600/installing-appliance-in-cabinet-or-rack-sg5600.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, install, installing, installation, cabinet, rack, rail, rails 
+summary: Sie müssen Schienen in Ihrem Schrank oder Rack installieren und das Gerät dann auf die Schienen schieben. Wenn Sie über eine SG5660 verfügen, müssen Sie die Laufwerke auch nach der Installation der Appliance installieren. 
+---
+= Appliance in Schrank oder Rack (SG5600) installieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen Schienen in Ihrem Schrank oder Rack installieren und das Gerät dann auf die Schienen schieben. Wenn Sie über eine SG5660 verfügen, müssen Sie die Laufwerke auch nach der Installation der Appliance installieren.
+
+.Was Sie und#8217;ll benötigen
+* Sie haben das im Lieferumfang enthaltene Sicherheitshinweisen geprüft und die Vorsichtsmaßnahmen für das Bewegen und Installieren von Hardware verstanden.
+* Sie verfügen über die Installationsanweisungen für die Hardware der E-Series.
+
+
+
+CAUTION: Installieren Sie die Hardware von der Unterseite des Racks oder Racks bis zu, um ein Umkippen des Geräts zu verhindern.
+
+
+CAUTION: Die SG5612 wiegt bei voller Beladung mit Laufwerken ca. 27 kg (60 lb). Für das sichere Verschieben der SG5612 sind zwei Personen oder ein mechanisierter Lift erforderlich.
+
+
+CAUTION: Die SG5660 wiegt etwa 60 kg (132 lb), ohne dass Laufwerke installiert werden. Um eine leere SG5660 sicher zu bewegen, sind vier Personen oder ein mechanisierter Hub erforderlich.
+
+
+CAUTION: Um Hardware-Schäden zu vermeiden, verschieben Sie niemals eine SG5660, wenn Laufwerke installiert sind. Vor dem Umstellen des Geräts müssen alle Laufwerke entfernt werden.
+
+Führen Sie die folgenden Aufgaben aus, um die SG5660 Appliance in einem Rack oder Schrank zu installieren.
+
+* *Installieren Sie die Befestigungsschienen*
++
+Installieren Sie die Befestigungsschienen im Schrank oder Rack.
+
++
+Anweisungen zur Installation der E2700 oder der E5600 finden Sie in der Installationsanleitung für die E-Series.
+
+* *Installieren Sie das Gerät im Schrank oder Rack*
++
+Schieben Sie das Gerät in das Gehäuse oder Rack und sichern Sie es.
+
++
+
+NOTE: Wenn Sie die SG5660 von Hand anheben, befestigen Sie die vier Griffe an den Seiten des Gehäuses. Sie entfernen diese Griffe, während Sie das Gerät auf die Schienen schieben.
+
+* *Installieren Sie die Laufwerke*
++
+Wenn Sie über eine SG5660 verfügen, installieren Sie 12 Laufwerke in jedem der 5 Laufwerksfächer.
+
++
+Sie müssen alle 60 Laufwerke installieren, um den korrekten Betrieb zu gewährleisten.
+
++
+.. Setzen Sie das ESD-Armband auf, und entfernen Sie die Antriebe aus der Verpackung.
+.. Lösen Sie die Hebel an der oberen Antriebsschublade, und schieben Sie die Schublade mit den Hebeln heraus.
+.. Heben Sie den Laufwerkgriff senkrecht an, und richten Sie die Tasten am Laufwerk an den Kerben in der Schublade aus.
++
+image::../media/appliance_drive_insertion.gif[Einschub des Laufwerks]
+
+.. Drücken Sie vorsichtig auf die Oberseite des Laufwerks, und drehen Sie den Laufwerkgriff nach unten, bis das Laufwerk einrastet.
+.. Schieben Sie nach dem Einbau der ersten 12 Laufwerke die Schublade wieder nach innen, indem Sie die Mitte drücken und beide Hebel vorsichtig schließen.
+.. Wiederholen Sie diese Schritte für die anderen vier Schubladen.
+
+
+* *Befestigen Sie die Frontblende*
++
+*SG5612*: Befestigen Sie die linken und rechten Endkappen an der Vorderseite.
+
++
+*SG5660*: Befestigen Sie die Blende an der Vorderseite.
+
+
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2344477["E2700 – Installationshandbuch für Controller-Laufwerke und zugehörige Laufwerksfächer"^]
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP1532527["E5600 – Installationshandbuch für Controller-Laufwerke und zugehörige Laufwerksfächer"^]

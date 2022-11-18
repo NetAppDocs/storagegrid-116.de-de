@@ -1,0 +1,27 @@
+---
+permalink: admin/managing-load-balancing.html 
+sidebar: sidebar 
+keywords: manage load balancing, balance workload, client ingest, client retrieval, distribute connection 
+summary: Die StorageGRID Lastausgleichfunktionen verarbeiten Aufnahme- und Abruf-Workloads von S3 und Swift Clients. Durch Verteilung der Workloads und Verbindungen auf mehrere Storage-Nodes maximiert der Lastausgleich die Geschwindigkeit und die Kapazität der Verbindungen. 
+---
+= Managen Sie den Lastausgleich: Übersicht
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die StorageGRID Lastausgleichfunktionen verarbeiten Aufnahme- und Abruf-Workloads von S3 und Swift Clients. Durch Verteilung der Workloads und Verbindungen auf mehrere Storage-Nodes maximiert der Lastausgleich die Geschwindigkeit und die Kapazität der Verbindungen.
+
+Es gibt folgende Möglichkeiten für einen Lastenausgleich von Client-Workloads:
+
+* Verwenden Sie den Lastverteilungsservice, der auf Admin Nodes und Gateway Nodes installiert ist. Der Lastverteilungsservice bietet Layer 7 Load Balancing und führt TLS-Terminierung von Client-Anfragen durch, prüft die Anfragen und stellt neue sichere Verbindungen zu den Storage Nodes her. Dies ist der empfohlene Lastausgleichmechanismus.
++
+Siehe xref:how-load-balancing-works-load-balancer-service.adoc[Wie funktioniert der Lastausgleich? Load Balancer Service].
+
+* Verwenden Sie den veralteten Verbindungs-Lastverteilungs-Service (CLB), der nur auf Gateway-Knoten installiert ist. Der CLB-Service bietet Layer 4-Lastenausgleich und unterstützt Verbindungskosten.
++
+Siehe xref:how-load-balancing-works-clb-service.adoc[Wie der Lastenausgleich funktioniert - CLB-Service (veraltet)].
+
+* Integration eines Load Balancer eines Drittanbieters: Genaue Informationen erhalten Sie bei Ihrem NetApp Ansprechpartner.
+

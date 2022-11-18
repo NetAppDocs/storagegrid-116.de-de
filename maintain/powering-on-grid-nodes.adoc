@@ -1,0 +1,45 @@
+---
+permalink: maintain/powering-on-grid-nodes.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, start nodes 
+summary: Folgen Sie dieser Sequenz, um die Grid-Knoten nach einem vollständigen Herunterfahren zu starten. 
+---
+= Grid-Nodes starten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Folgen Sie dieser Sequenz, um die Grid-Knoten nach einem vollständigen Herunterfahren zu starten.
+
+.Was Sie und#8217;ll benötigen
+
+CAUTION: Wenn das gesamte Grid seit mehr als 15 Tagen heruntergefahren wurde, müssen Sie sich an den technischen Support wenden, bevor Sie die Grid-Nodes starten. Versuchen Sie nicht, die Wiederherstellungsverfahren für die Wiederherstellung von Cassandra-Daten zu verwenden. Dies kann zu Datenverlust führen.
+
+Wenn möglich, sollten Sie die Netzknoten in dieser Reihenfolge einschalten:
+
+* Zuerst die Administratorknoten mit Strom versorgen.
+* Strom auf Gateway-Knoten zuletzt anwenden.
+
+
+
+NOTE: Wenn ein Host mehrere Grid-Nodes enthält, werden die Nodes automatisch wieder online geschaltet, wenn Sie den Host einschalten.
+
+.Schritte
+. Schalten Sie die Hosts für den primären Admin-Node und alle nicht-primären Admin-Nodes ein.
++
+
+NOTE: Sie können sich erst bei den Admin-Knoten anmelden, wenn die Speicherknoten neu gestartet wurden.
+
+. Schalten Sie die Hosts für alle Archiv-Nodes und Speicherknoten ein.
++
+Sie können diese Knoten in beliebiger Reihenfolge einschalten.
+
+. Schalten Sie die Hosts für alle Gateway-Nodes ein.
+. Melden Sie sich beim Grid Manager an.
+. Wählen Sie *NODES* aus, und überwachen Sie den Status der Grid-Knoten. Vergewissern Sie sich, dass neben den Node-Namen keine Warnsymbole vorhanden sind.
++
+image::../media/nodes_page_all_nodes_green.png[Knoten Seite Alle Knoten grün]
+
+

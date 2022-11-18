@@ -1,0 +1,14 @@
+---
+permalink: sg5700/maintaining-sg5700-appliance.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, maintain, maintaining, hardware, procedures, tasks 
+summary: Möglicherweise müssen Sie auf dem E2800 Controller die SANtricity OS Software aktualisieren, die Ethernet-Link-Konfiguration des E5700SG Controllers ändern, den E2800 Controller oder den E5700SG Controller austauschen oder bestimmte Komponenten ersetzen. Bei den in diesem Abschnitt beschriebenen Verfahren wird davon ausgegangen, dass die Appliance bereits als Storage-Node in einem StorageGRID-System bereitgestellt wurde. 
+---
+= SG5700 Appliance warten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Möglicherweise müssen Sie auf dem E2800 Controller die SANtricity OS Software aktualisieren, die Ethernet-Link-Konfiguration des E5700SG Controllers ändern, den E2800 Controller oder den E5700SG Controller austauschen oder bestimmte Komponenten ersetzen. Bei den in diesem Abschnitt beschriebenen Verfahren wird davon ausgegangen, dass die Appliance bereits als Storage-Node in einem StorageGRID-System bereitgestellt wurde.

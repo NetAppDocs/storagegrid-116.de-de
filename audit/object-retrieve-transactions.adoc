@@ -1,0 +1,59 @@
+---
+permalink: audit/object-retrieve-transactions.html 
+sidebar: sidebar 
+keywords: storagegrid, audit, message, Object retrieve, messages, transaction, transactions, s3, swift, trace, SGET, WGET 
+summary: 'Sie können Transaktionen zum Abrufen von Objekten im Audit-Protokoll identifizieren, indem API-spezifische \(S3 und Swift\)-Audit-Nachrichten ausfindig gemacht werden.' 
+---
+= Abrufen von Objekttransaktionen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Transaktionen zum Abrufen von Objekten im Audit-Protokoll identifizieren, indem API-spezifische (S3 und Swift) Audit-Nachrichten loktiert werden.
+
+In den folgenden Tabellen sind nicht alle während einer Abruftransaktion generierten Überwachungsmeldungen aufgeführt. Es werden nur Nachrichten enthalten, die für die Rückrufs-Transaktion erforderlich sind.
+
+
+
+== S3-Abruf von Audit-Meldungen
+
+[cols="1a,1a,2a,1a,1a"]
+|===
+| Codieren | Name | Beschreibung | Verfolgen | Siehe 
+
+
+ a| 
+SGET
+ a| 
+S3 ABRUFEN
+ a| 
+Anforderung zum Abrufen eines Objekts aus einem Bucket
+ a| 
+CBID, S3BK, S3KY
+ a| 
+xref:sget-s3-get.adoc[SGET S3 ABRUFEN]
+
+|===
+
+
+== Schnelles Abrufen von Audit-Meldungen
+
+[cols="1a,1a,2a,1a,1a"]
+|===
+| Codieren | Name | Beschreibung | Verfolgen | Siehe 
+
+
+ a| 
+WGET
+ a| 
+Swift GET
+ a| 
+Anforderung gemacht, ein Objekt aus einem Container abzurufen.
+ a| 
+CBID, WCON, WOBJ
+ a| 
+xref:wget-swift-get.adoc[WGET: Schneller ERHALTEN]
+
+|===

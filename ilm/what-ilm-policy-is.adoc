@@ -1,0 +1,59 @@
+---
+permalink: ilm/what-ilm-policy-is.html 
+sidebar: sidebar 
+keywords: what is information lifecycle management policy, ilm policy 
+summary: 'Eine Information Lifecycle Management \ (ILM\)-Richtlinie ist ein bestellter Satz von ILM-Regeln, die bestimmen, wie das StorageGRID System Objektdaten über einen längeren Zeitraum verwaltet.' 
+---
+= Was ist eine ILM-Richtlinie
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Eine Information Lifecycle Management-Richtlinie (ILM) ist ein bestellter Satz von ILM-Regeln, die bestimmen, wie das StorageGRID System Objektdaten über einen längeren Zeitraum managt.
+
+
+
+== Wie evaluiert eine ILM-Richtlinie Objekte?
+
+Die aktive ILM-Richtlinie für Ihr StorageGRID System steuert die Platzierung, Dauer und Datensicherung aller Objekte.
+
+Wenn Clients Objekte in StorageGRID speichern, werden die Objekte anhand der bestellten ILM-Regeln in der aktiven Richtlinie bewertet:
+
+. Wenn die Filter für die erste Regel in der Richtlinie mit einem Objekt übereinstimmen, wird das Objekt gemäß dem Aufnahmeverhalten der Regel aufgenommen und gemäß den Anweisungen zur Platzierung dieser Regel gespeichert.
+. Wenn die Filter für die erste Regel nicht mit dem Objekt übereinstimmen, wird das Objekt anhand jeder nachfolgenden Regel in der Richtlinie ausgewertet, bis eine Übereinstimmung erfolgt.
+. Stimmen keine Regeln mit einem Objekt überein, werden das Aufnahmeverhalten und die Anweisungen zur Platzierung der Standardregel in der Richtlinie angewendet. Die Standardregel ist die letzte Regel in einer Richtlinie. Die Standardregel muss auf alle Mandanten, alle Buckets und alle Objektversionen angewendet werden und kann keine erweiterten Filter verwenden.
+
+
+
+
+== Beispiel für eine ILM-Richtlinie
+
+In diesem Beispiel verwendet die ILM-Richtlinie drei ILM-Regeln.
+
+image::../media/policy_for_two_tenants.png[Beispielrichtlinie für zwei Mandanten]
+
+In diesem Beispiel stimmt Regel 1 mit allen Objekten überein, die zu Mandant A gehören Diese Objekte werden als drei replizierte Kopien an drei Standorten gespeichert. Objekte, die zu anderen Mietern gehören, werden von Regel 1 nicht abgeglichen, so dass sie gegen Regel 2 ausgewertet werden.
+
+Regel 2 entspricht allen Objekten anderer Mandanten, aber nur, wenn sie größer als 1 MB sind. Diese größeren Objekte werden mithilfe von 6+3 Erasure Coding an drei Standorten gespeichert. Regel 2 stimmt nicht mit Objekten 1 MB oder kleiner überein, daher werden diese Objekte gegen Regel 3 ausgewertet.
+
+Regel 3 ist die letzte und Standardregel in der Richtlinie und verwendet keine Filter. Regel 3 erstellt zwei replizierte Kopien aller Objekte, die nicht mit Regel 1 oder Regel 2 übereinstimmt (Objekte, die nicht zu Mandant A gehören, die 1 MB oder kleiner sind).
+
+image::../media/ilm_policy_and_rules.png[ILM-Richtlinie und -Regeln]
+
+
+
+== Was sind vorgeschlagene, aktive und historische Politiken?
+
+Jedes StorageGRID System muss über eine aktive ILM-Richtlinie verfügen. Ein StorageGRID System kann auch über eine vorgeschlagene ILM-Richtlinie und eine beliebige Anzahl an historischen Richtlinien verfügen.
+
+Beim ersten Erstellen einer ILM-Richtlinie erstellen Sie eine vorgeschlagene Richtlinie, indem Sie eine oder mehrere ILM-Regeln auswählen und in einer bestimmten Reihenfolge anordnen. Nachdem Sie die vorgeschlagene Richtlinie simuliert haben, um ihr Verhalten zu bestätigen, aktivieren Sie sie, um die aktive Richtlinie zu erstellen.
+
+Bei der Aktivierung einer neuen ILM-Richtlinie verwendet StorageGRID diese Richtlinie, um alle Objekte, einschließlich vorhandener Objekte und neu aufgenommener Objekte, zu managen. Vorhandene Objekte können an neue Standorte verschoben werden, wenn die ILM-Regeln der neuen Richtlinie implementiert werden.
+
+Die Aktivierung der vorgeschlagenen Richtlinie führt dazu, dass die zuvor aktive Richtlinie zu einer historischen Politik wird. Historische ILM-Richtlinien können nicht gelöscht werden.
+
+image::../media/ilm_policies_proposed_active_historical.png[Konzept-Image für ILM-Richtlinien]
+
+xref:creating-ilm-policy.adoc[ILM-Richtlinie erstellen]

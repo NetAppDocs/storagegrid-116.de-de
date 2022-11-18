@@ -1,0 +1,84 @@
+---
+permalink: tenant/creating-groups-for-s3-tenant.html 
+sidebar: sidebar 
+keywords: how to create S3 tenant groups 
+summary: Sie können Berechtigungen für S3-Benutzergruppen managen, indem Sie föderierte Gruppen importieren oder lokale Gruppen erstellen. 
+---
+= Erstellen von Gruppen für einen S3-Mandanten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Berechtigungen für S3-Benutzergruppen managen, indem Sie föderierte Gruppen importieren oder lokale Gruppen erstellen.
+
+.Was Sie und#8217;ll benötigen
+* Sie müssen mit einem beim Mandantenmanager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+* Sie müssen einer Benutzergruppe mit Root Access-Berechtigung angehören. Siehe xref:tenant-management-permissions.adoc[Mandantenmanagement-Berechtigungen].
+* Wenn Sie eine föderierte Gruppe importieren möchten, haben Sie einen Identitätsverbund konfiguriert, und die föderierte Gruppe ist bereits in der konfigurierten Identitätsquelle vorhanden.
+
+
+Informationen zu S3 finden Sie unter xref:../s3/index.adoc[S3 verwenden].
+
+.Schritte
+. Wählen Sie *ZUGRIFFSVERWALTUNG* *Gruppen*.
++
+image::../media/tenant_add_groups_example.png[Screenshot mit der Seite „Access Control Groups“]
+
+. Wählen Sie *Gruppe erstellen*.
+. Wählen Sie die Registerkarte *Lokale Gruppe* aus, um eine lokale Gruppe zu erstellen, oder wählen Sie die Registerkarte *Federated Group* aus, um eine Gruppe aus der zuvor konfigurierten Identitätsquelle zu importieren.
++
+Wenn Single Sign-On (SSO) für Ihr StorageGRID-System aktiviert ist, können sich Benutzer, die zu lokalen Gruppen gehören, nicht beim Mandanten-Manager anmelden, obwohl sie sich mithilfe von Client-Applikationen die Ressourcen des Mandanten basierend auf Gruppenberechtigungen managen können.
+
+. Geben Sie den Namen der Gruppe ein.
++
+** *Lokale Gruppe*: Geben Sie einen Anzeigenamen und einen eindeutigen Namen ein. Sie können den Anzeigenamen später bearbeiten.
+** *Federated Group*: Geben Sie den eindeutigen Namen ein. Bei Active Directory ist der eindeutige Name der dem zugeordneten Name `sAMAccountName` Attribut. Bei OpenLDAP ist der eindeutige Name der Name, der dem zugeordnet ist `uid` Attribut.
+
+
+. Wählen Sie *Weiter*.
+. Wählen Sie einen Zugriffsmodus aus. Wenn ein Benutzer zu mehreren Gruppen gehört und eine beliebige Gruppe auf schreibgeschützt eingestellt ist, hat der Benutzer schreibgeschützten Zugriff auf alle ausgewählten Einstellungen und Funktionen.
++
+** *Lesen-Schreiben* (Standard): Benutzer können sich bei Tenant Manager anmelden und die Mandantenkonfiguration verwalten.
+** *Schreibgeschützt*: Benutzer können nur Einstellungen und Funktionen anzeigen. Sie können keine Änderungen vornehmen oder Vorgänge in der Mandanten-Manager- oder Mandantenmanagement-API ausführen. Lokale schreibgeschützte Benutzer können ihre eigenen Passwörter ändern.
+
+
+. Wählen Sie die Gruppenberechtigungen für diese Gruppe aus.
++
+Weitere Informationen zu Berechtigungen für die Mandantenverwaltung finden Sie unter.
+
+. Wählen Sie *Weiter*.
+. Wählen Sie eine Gruppenrichtlinie aus, um zu bestimmen, über welche S3-Zugriffsrechte die Mitglieder dieser Gruppe verfügen.
++
+** *Kein S3-Zugriff*: Standard. Benutzer in dieser Gruppe haben keinen Zugriff auf S3-Ressourcen, es sei denn, der Zugriff wird mit einer Bucket-Richtlinie gewährt. Wenn Sie diese Option auswählen, hat nur der Root-Benutzer standardmäßig Zugriff auf S3-Ressourcen.
+** *Schreibgeschützter Zugriff*: Benutzer in dieser Gruppe haben schreibgeschützten Zugriff auf S3-Ressourcen. Benutzer in dieser Gruppe können beispielsweise Objekte auflisten und Objektdaten, Metadaten und Tags lesen. Wenn Sie diese Option auswählen, wird im Textfeld der JSON-String für eine schreibgeschützte Gruppenrichtlinie angezeigt. Sie können diesen String nicht bearbeiten.
+** *Vollzugriff*: Benutzer in dieser Gruppe haben vollen Zugriff auf S3-Ressourcen, einschließlich Buckets. Wenn Sie diese Option auswählen, wird im Textfeld der JSON-String für eine Richtlinie mit vollem Zugriff angezeigt. Sie können diesen String nicht bearbeiten.
+** *Benutzerdefiniert*: Benutzern in der Gruppe werden die Berechtigungen erteilt, die Sie im Textfeld angeben. Anweisungen zur Implementierung einer S3-Client-Applikation finden Sie in den detaillierten Informationen zu Gruppenrichtlinien, einschließlich Sprachsyntax und Beispielen.
+
+
+. Wenn Sie *Benutzerdefiniert* ausgewählt haben, geben Sie die Gruppenrichtlinie ein. Jede Gruppenrichtlinie hat eine Größenbeschränkung von 5,120 Byte. Sie müssen einen gültigen JSON-formatierten String eingeben.
++
+In diesem Beispiel dürfen Mitglieder der Gruppe nur einen Ordner auflisten und darauf zugreifen, der ihrem Benutzernamen (Schlüsselpräfix) im angegebenen Bucket entspricht. Beachten Sie, dass bei der Festlegung der Privatsphäre dieser Ordner Zugriffsberechtigungen aus anderen Gruppenrichtlinien und der Bucket-Richtlinie berücksichtigt werden sollten.
+
++
+image::../media/tenant_add_group_custom.png[Fügen Sie der Mandantengruppe benutzerdefinierte Gruppenrichtlinien hinzu]
+
+. Wählen Sie die Schaltfläche aus, die angezeigt wird, je nachdem, ob Sie eine föderierte Gruppe oder eine lokale Gruppe erstellen:
++
+** Verbundgruppe: *Gruppe erstellen*
+** Lokale Gruppe: *Weiter*
+
+
++
+Wenn Sie eine lokale Gruppe erstellen, wird Schritt 4 (Benutzer hinzufügen) angezeigt, nachdem Sie *Weiter* ausgewählt haben. Dieser Schritt wird nicht für föderierte Gruppen angezeigt.
+
+. Aktivieren Sie das Kontrollkästchen für jeden Benutzer, den Sie der Gruppe hinzufügen möchten, und wählen Sie dann *Gruppe erstellen*.
++
+Optional können Sie die Gruppe speichern, ohne Benutzer hinzuzufügen. Sie können der Gruppe später Benutzer hinzufügen oder die Gruppe auswählen, wenn Sie neue Benutzer hinzufügen.
+
+. Wählen Sie *Fertig*.
++
+Die von Ihnen erstellte Gruppe wird in der Gruppenliste angezeigt. Änderungen können aufgrund des Caching bis zu 15 Minuten dauern.
+
+

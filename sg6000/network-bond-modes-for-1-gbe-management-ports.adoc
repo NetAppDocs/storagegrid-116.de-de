@@ -1,0 +1,41 @@
+---
+permalink: sg6000/network-bond-modes-for-1-gbe-management-ports.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, Network bond, Network bonding, Network bond mode, Network-bond mode, independent, active-backup, active backup, 1-gbe, 1 gbe, sg6000-cn 
+summary: Für die beiden 1-GbE-Management-Ports des SG6000-CN-Controllers können Sie den unabhängigen Netzwerk-Bond-Modus oder den aktiv-Backup-Netzwerk-Bond-Modus wählen, um eine Verbindung zum optionalen Admin-Netzwerk herzustellen. 
+---
+= Netzwerk-Bond-Modi für 1-GbE-Management-Ports
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Für die beiden 1-GbE-Management-Ports des SG6000-CN-Controllers können Sie den unabhängigen Netzwerk-Bond-Modus oder den aktiv-Backup-Netzwerk-Bond-Modus wählen, um eine Verbindung zum optionalen Admin-Netzwerk herzustellen.
+
+Im Independent-Modus ist nur der Management-Port links mit dem Admin-Netzwerk verbunden. Dieser Modus stellt keinen redundanten Pfad bereit. Der Management Port auf der rechten Seite ist nicht verbunden und für temporäre lokale Verbindungen verfügbar (verwendet IP-Adresse 169.254.0.1)
+
+Im Active-Backup-Modus sind beide Management-Ports mit dem Admin-Netzwerk verbunden. Es ist jeweils nur ein Port aktiv. Wenn der aktive Port ausfällt, stellt sein Backup-Port automatisch eine Failover-Verbindung bereit. Die Verbindung dieser beiden physischen Ports zu einem logischen Management-Port bietet einen redundanten Pfad zum Admin-Netzwerk.
+
+
+NOTE: Wenn Sie eine temporäre lokale Verbindung zum SG6000-CN-Controller herstellen müssen, wenn die 1-GbE-Management-Ports für den aktiv-Backup-Modus konfiguriert sind, entfernen Sie die Kabel von beiden Management-Ports, schließen Sie das temporäre Kabel an den Managementport auf der rechten Seite an und greifen Sie über die IP-Adresse 169.254.0 auf das Gerät zu.
+
+image::../media/sg6000_cn_bonded_managemente_ports.gif[1-GbE-Ports]
+
+|===
+| Legende | Netzwerk-Bond-Modus 
+
+
+ a| 
+A
+ a| 
+Beide Management-Ports sind mit einem logischen Management-Port verbunden, der mit dem Admin-Netzwerk verbunden ist.
+
+
+
+ a| 
+ICH
+ a| 
+Der Port auf der linken Seite ist mit dem Admin-Netzwerk verbunden. Der Anschluss rechts ist für temporäre lokale Verbindungen verfügbar (IP-Adresse 169.254.0.1).
+
+|===

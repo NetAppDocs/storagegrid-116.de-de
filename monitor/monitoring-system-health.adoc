@@ -1,0 +1,71 @@
+---
+permalink: monitor/monitoring-system-health.html 
+sidebar: sidebar 
+keywords: how to monitor system health, how to view system health 
+summary: Sie sollten täglich den allgemeinen Zustand Ihres StorageGRID Systems überwachen. 
+---
+= Systemzustand überwachen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie sollten täglich den allgemeinen Zustand Ihres StorageGRID Systems überwachen.
+
+Das StorageGRID System ist fehlertolerant und funktioniert weiterhin, wenn Teile des Grids nicht verfügbar sind. Das erste Anzeichen eines potenziellen Problems mit Ihrem StorageGRID System ist wahrscheinlich eine Warnmeldung oder ein Alarm (Legacy-System) und nicht unbedingt ein Problem beim Systembetrieb. Wenn Sie die Systemintegrität beachten, können Sie kleinere Probleme erkennen, bevor sie den Betrieb oder die Netzeffizienz beeinträchtigen.
+
+Das Teilfenster „Systemzustand“ im Grid Manager Dashboard bietet eine Zusammenfassung von Problemen, die Ihr System möglicherweise beeinträchtigen. Sie sollten alle auf dem Dashboard angezeigten Probleme untersuchen.
+
+
+NOTE: Damit Sie über Warnungen benachrichtigt werden können, sobald sie ausgelöst werden, können Sie E-Mail-Benachrichtigungen für Warnungen einrichten oder SNMP-Traps konfigurieren.
+
+.Schritte
+. Melden Sie sich beim Grid Manager an, um das Dashboard anzuzeigen.
+. Überprüfen Sie die Informationen im Bedienfeld „Systemzustand“.
++
+image::../media/dashboard_health_panel.png[Dashboard-Statuskonsole]
+
++
+Wenn Probleme bestehen, werden Links angezeigt, mit denen Sie weitere Details anzeigen können:
+
++
+[cols="1a,2a"]
+|===
+| Verlinken | Zeigt An 
+
+
+ a| 
+Grid-Details
+ a| 
+Wird angezeigt, wenn Knoten getrennt sind (Verbindungsstatus unbekannt oder Administrativ ausgefallen). Klicken Sie auf den Link oder klicken Sie auf das blaue oder graue Symbol, um zu ermitteln, welche Nodes betroffen sind.
+
+
+
+ a| 
+Aktuelle Meldungen
+ a| 
+Wird angezeigt, wenn derzeit Meldungen aktiv sind. Klicken Sie auf den Link oder klicken Sie auf *kritisch*, *Major* oder *Minor*, um die Details auf der Seite *ALERTS* *Current* anzuzeigen.
+
+
+
+ a| 
+Kürzlich behobene Warnmeldungen
+ a| 
+Wird angezeigt, wenn in der letzten Woche ausgelöste Benachrichtigungen jetzt behoben sind. Klicken Sie auf den Link, um die Details auf der Seite *ALERTS* *aufgelöst* anzuzeigen.
+
+
+
+ a| 
+Lizenz
+ a| 
+Wird angezeigt, wenn es ein Problem mit der Softwarelizenz für dieses StorageGRID-System gibt. Klicken Sie auf den Link, um die Details auf der Seite *MAINTENANCE* *System* *Lizenz* anzuzeigen.
+
+|===
+
+
+.Verwandte Informationen
+* xref:../admin/index.adoc[StorageGRID verwalten]
+* xref:email-alert-notifications.adoc[Richten Sie E-Mail-Benachrichtigungen für Warnmeldungen ein]
+* xref:using-snmp-monitoring.adoc[Verwenden Sie SNMP-Überwachung]
+

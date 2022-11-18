@@ -1,0 +1,35 @@
+---
+permalink: admin/configuring-client-connections.html 
+sidebar: sidebar 
+keywords: s3 connection, swift connection, connect to storagegrid 
+summary: Als Grid-Administrator managen Sie die Konfigurationsoptionen, die steuern, wie S3- und Swift-Mandanten Client-Applikationen mit Ihrem StorageGRID-System verbinden können, um Daten zu speichern und abzurufen. Es stehen verschiedene Optionen zur Verfügung, um verschiedene Anforderungen von Kunden und Mandanten zu erfüllen. 
+---
+= Informationen zu S3- und Swift-Client-Verbindungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Als Grid-Administrator managen Sie die Konfigurationsoptionen, die steuern, wie S3- und Swift-Mandanten Client-Applikationen mit Ihrem StorageGRID-System verbinden können, um Daten zu speichern und abzurufen. Es stehen verschiedene Optionen zur Verfügung, um verschiedene Anforderungen von Kunden und Mandanten zu erfüllen.
+
+Client-Applikationen können Objekte speichern oder abrufen, indem sie eine Verbindung mit folgenden Komponenten herstellen:
+
+* Der Lastverteilungsservice an Admin-Nodes oder Gateway-Nodes oder optional die virtuelle IP-Adresse einer HA-Gruppe (High Availability, Hochverfügbarkeit) von Admin-Nodes oder Gateway-Nodes
+* Der CLB-Dienst auf Gateway-Knoten oder optional die virtuelle IP-Adresse einer Hochverfügbarkeitsgruppe von Gateway-Knoten
++
+
+NOTE: Der CLB-Service ist veraltet. Clients, die vor der Version StorageGRID 11.3 konfiguriert wurden, können den CLB-Service auf Gateway-Knoten weiterhin verwenden. Alle anderen Client-Applikationen, die zum Lastausgleich vom StorageGRID abhängig sind, sollten über den Load Balancer Service eine Verbindung herstellen.
+
+* Storage-Nodes mit oder ohne externen Load Balancer
+
+
+Auf dem StorageGRID-System können Sie optional die folgenden Funktionen konfigurieren:
+
+* *VLAN-Schnittstellen*: Sie können virtuelle LAN-Schnittstellen (VLAN) auf Admin-Knoten und Gateway-Knoten erstellen, um Client- und Mandantenverkehr zu isolieren und zu partitionieren, um Sicherheit, Flexibilität und Leistung zu erzielen. Nach dem Erstellen einer VLAN-Schnittstelle fügen Sie sie einer HA-Gruppe (High Availability, Hochverfügbarkeit) hinzu.
+* *Hochverfügbarkeitsgruppen*: Sie können eine HA-Gruppe der Schnittstellen für Gateway-Nodes oder Admin-Nodes erstellen, um eine aktiv/aktiv-Backup-Konfiguration zu erstellen, oder Round-Robin-DNS oder einen Load Balancer eines Drittanbieters und mehrere HA-Gruppen verwenden, um eine aktiv/aktiv-Konfiguration zu erreichen. Client-Verbindungen werden mithilfe der virtuellen IP-Adressen der HA-Gruppen hergestellt.
+* *Load Balancer Service*: Sie können Clients den Load Balancer Service durch die Erstellung von Load Balancer Endpunkten für Client-Verbindungen verwenden. Beim Erstellen eines Load Balancer-Endpunkts geben Sie eine Portnummer an, ob der Endpunkt HTTP- oder HTTPS-Verbindungen akzeptiert, der Client-Typ (S3 oder Swift), der den Endpunkt verwendet, und das Zertifikat, das für HTTPS-Verbindungen verwendet werden soll (falls zutreffend).
+* *UnTrusted Client Network*: Sie können das Client-Netzwerk sicherer machen, indem Sie es als unvertrauenswürdig konfigurieren. Wenn das Client-Netzwerk nicht vertrauenswürdig ist, können Clients nur über Load Balancer-Endpunkte eine Verbindung herstellen.
+
+
+Sie können auch die Verwendung von HTTP für Clients aktivieren, die eine Verbindung zu StorageGRID entweder direkt zu Storage-Nodes oder über den CLB-Dienst (veraltet) herstellen, und Sie können S3-API-Endpunktdomänennamen für S3-Clients konfigurieren.

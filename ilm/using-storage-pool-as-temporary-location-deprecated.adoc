@@ -1,0 +1,21 @@
+---
+permalink: ilm/using-storage-pool-as-temporary-location-deprecated.html 
+sidebar: sidebar 
+keywords: storage pool temporary location 
+summary: Wenn Sie eine ILM-Regel mit einer Objektplatzierung erstellen, die einen einzelnen Storage-Pool umfasst, werden Sie aufgefordert, einen zweiten Storage-Pool anzugeben, der als temporärer Speicherort verwendet werden soll. 
+---
+= Verwenden eines Speicherpools als temporärer Speicherort (veraltet)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie eine ILM-Regel mit einer Objektplatzierung erstellen, die einen einzelnen Storage-Pool umfasst, werden Sie aufgefordert, einen zweiten Storage-Pool anzugeben, der als temporärer Speicherort verwendet werden soll.
+
+Temporäre Speicherorte wurden veraltet und werden in einer zukünftigen Version entfernt. Sie sollten einen Speicherpool nicht als temporären Speicherort für eine neue ILM-Regel auswählen.
+
+
+NOTE: Wenn Sie das strikte Aufnahmeverhalten auswählen (Schritt 3 des Assistenten zur Erstellung von ILM-Regeln), wird der temporäre Speicherort ignoriert.
+
+xref:data-protection-options-for-ingest.adoc[Datensicherungsoptionen für die Aufnahme]

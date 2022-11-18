@@ -1,0 +1,45 @@
+---
+permalink: admin/kms-removing.html 
+sidebar: sidebar 
+keywords: remove kms, remove key management server 
+summary: In einigen Fällen möchten Sie einen Schlüsselverwaltungsserver entfernen. Sie können beispielsweise einen standortspezifischen KMS entfernen, wenn Sie den Standort deaktiviert haben. 
+---
+= Entfernen eines Verschlüsselungsmanagement-Servers (KMS)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In einigen Fällen möchten Sie einen Schlüsselverwaltungsserver entfernen. Sie können beispielsweise einen standortspezifischen KMS entfernen, wenn Sie den Standort deaktiviert haben.
+
+.Was Sie und#8217;ll benötigen
+* Sie haben die geprüft xref:kms-considerations-and-requirements.adoc[Überlegungen und Anforderungen für die Verwendung eines Verschlüsselungsmanagement-Servers].
+* Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+* Sie haben die Root-Zugriffsberechtigung.
+
+
+In diesen Fällen können Sie einen KMS entfernen:
+
+* Wenn der Standort außer Betrieb genommen wurde oder wenn der Standort keine Appliance-Nodes mit aktivierter Node-Verschlüsselung enthält, können Sie einen standortspezifischen KMS entfernen.
+* Der Standard-KMS kann entfernt werden, wenn für jeden Standort bereits ein standortspezifischer KMS vorhanden ist, bei dem Appliance-Nodes mit aktivierter Node-Verschlüsselung vorhanden sind.
+
+
+.Schritte
+. Wählen Sie *KONFIGURATION* *Sicherheit* *Schlüsselverwaltungsserver*.
++
+Die Seite Key Management Server wird angezeigt und zeigt alle konfigurierten Schlüsselverwaltungsserver an.
+
++
+image::../media/kms_configuration_details_table.png[KMS-Konfigurationsdetails KMS-Tabelle]
+
+. Wählen Sie das Optionsfeld für den KMS, den Sie entfernen möchten, und wählen Sie *Entfernen*.
+. Prüfen Sie die Überlegungen im Warndialogfeld.
++
+image::../media/kms_remove_warning.png[WARNUNG KM entfernen]
+
+. Wählen Sie *OK*.
++
+Die KMS-Konfiguration wurde entfernt.
+
+

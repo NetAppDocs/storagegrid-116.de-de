@@ -1,0 +1,82 @@
+---
+permalink: sg5600/index.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, overview, models, features 
+summary: Die StorageGRID SG5600 Appliance ist eine integrierte Storage- und Computing-Plattform, die als Storage Node in einem StorageGRID Grid ausgeführt wird. 
+---
+= SG5600 Appliances: Übersicht
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die StorageGRID SG5600 Appliance ist eine integrierte Storage- und Computing-Plattform, die als Storage Node in einem StorageGRID Grid ausgeführt wird.
+
+Die StorageGRID SG5600 Appliance enthält die folgenden Komponenten:
+
+|===
+| Komponente | Beschreibung 
+
+
+ a| 
+E5600SG-Controller
+ a| 
+Server berechnen der E5600SG-Controller führt das Betriebssystem Linux und die StorageGRID-Software aus.
+
+Dieser Controller stellt eine Verbindung zu folgenden Komponenten her:
+
+* Die Admin-, Grid- und Client-Netzwerke für das StorageGRID-System
+* Der E2700 Controller mit dualen SAS-Pfaden (aktiv/aktiv) und der E5600SG Controller arbeitet als Initiator
+
+
+
+
+ a| 
+E2700 Controller
+ a| 
+Storage Controller der E2700 fungiert als Standard-Storage-Array der E-Series im Simplexmodus und führt das Betriebssystem SANtricity (Controller-Firmware) aus.
+
+Dieser Controller stellt eine Verbindung zu folgenden Komponenten her:
+
+* Das Managementnetzwerk, in dem SANtricity Storage Manager installiert ist
+* Der E5600SG Controller mit dualen SAS-Pfaden (aktiv/aktiv) wobei der E2700 Controller als Ziel arbeitet
+
+
+|===
+Die SG5600 Appliance enthält je nach Modell außerdem die folgenden Komponenten:
+
+|===
+| Komponente | Modell SG5612 | Modell SG5660 
+
+
+ a| 
+Laufwerke
+ a| 
+12 NL-SAS-Laufwerke
+ a| 
+60 NL-SAS-Laufwerke
+
+
+
+ a| 
+Gehäuse
+ a| 
+DE1600 Gehäuse: Ein 2-HE-Chassis mit zwei Höheneinheiten und Controllern
+ a| 
+DE6600-Gehäuse, ein 4-HE-Chassis (Rack-Unit), das die Laufwerke und die Controller beherbergt
+
+
+
+ a| 
+Netzteile und Lüfter
+ a| 
+Zwei Power-Fan-Kanister
+ a| 
+Zwei Netzteile und zwei Lüfter
+
+|===
+
+NOTE: Der E5600SG Controller ist stark auf den Einsatz im StorageGRID-Gerät zugeschnitten. Alle anderen Komponenten arbeiten wie in der Dokumentation zur E-Series beschrieben, mit Ausnahme dieser Anweisungen.
+
+Der maximale Rohkapazität, der auf jedem StorageGRID-Appliance-Storage-Node verfügbar ist, kann anhand des Appliance-Modells und der Konfiguration festgelegt werden. Der verfügbare Storage kann nicht erweitert werden, indem ein Shelf mit zusätzlichen Laufwerken hinzugefügt wird.

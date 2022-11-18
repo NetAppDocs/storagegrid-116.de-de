@@ -1,0 +1,24 @@
+---
+permalink: monitor/index.html 
+sidebar: sidebar 
+keywords: monitor StorageGRID 
+summary: Anhand dieser Anweisungen können Sie ein StorageGRID System überwachen sowie eventuelle Probleme bewerten und beheben. 
+---
+= Überwachung und Fehlerbehebung: Übersicht
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Anhand dieser Anweisungen können Sie ein StorageGRID System überwachen sowie eventuelle Probleme bewerten und beheben.
+
+
+
+== Informationen zu diesen Anweisungen
+
+In diesen Anweisungen wird die Verwendung von Grid Manager zum Überwachen eines StorageGRID-Systems beschrieben. Sie erfahren, welche Informationen Sie regelmäßig überwachen sollten, wie Sie Warnmeldungen und ältere Alarme verwalten, wie Sie SNMP für das Monitoring verwenden und wie Sie zusätzliche StorageGRID-Daten erhalten, einschließlich Metriken und Diagnosen.
+
+Sie beschreiben außerdem die Fehlerbehebung für ein StorageGRID System und beschreiben alle Systemmeldungen, ältere Alarme und Protokolldateien.
+
+Befolgen Sie diese Anweisungen, wenn Sie nach der Installation ein StorageGRID-System überwachen und unterstützen.

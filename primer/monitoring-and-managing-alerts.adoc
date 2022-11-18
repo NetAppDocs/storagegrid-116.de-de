@@ -1,0 +1,53 @@
+---
+permalink: primer/monitoring-and-managing-alerts.html 
+sidebar: sidebar 
+keywords: how to manage alerts 
+summary: Das Warnsystem bietet eine benutzerfreundliche Oberfläche zum Erkennen, Bewerten und Beheben von Problemen, die während des StorageGRID-Betriebs auftreten können. 
+---
+= Monitoring und Management von Warnmeldungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Warnsystem bietet eine benutzerfreundliche Oberfläche zum Erkennen, Bewerten und Beheben von Problemen, die während des StorageGRID-Betriebs auftreten können.
+
+Das Alarmsystem wurde als Ihr vorrangiges Tool entwickelt, mit dem Sie alle eventuell auftretenden Probleme in Ihrem StorageGRID System überwachen können.
+
+* Das Warnsystem konzentriert sich auf umsetzbare Probleme im System. Bei Ereignissen, die eine sofortige Aktion erfordern, werden Warnmeldungen ausgelöst und nicht bei Ereignissen, die sicher ignoriert werden können.
+* Die Seiten „Current Alerts“ und „Resolved Alerts“ bieten eine benutzerfreundliche Oberfläche zum Anzeigen aktueller und historischer Probleme. Sie können die Liste nach einzelnen Warnungen und Alarmgruppen sortieren. Beispielsweise können Sie alle Meldungen nach Node/Standort sortieren, um zu sehen, welche Meldungen sich auf einen bestimmten Node auswirken. Oder Sie möchten die Meldungen in einer Gruppe nach der Zeit sortieren, die ausgelöst wird, um die letzte Instanz einer bestimmten Warnmeldung zu finden.
+* Mehrere Warnmeldungen desselben Typs werden in einer E-Mail gruppiert, um die Anzahl der Benachrichtigungen zu reduzieren. Darüber hinaus werden auf den Seiten „Current Alerts and Resolved Alerts“ mehrere Warnmeldungen desselben Typs als Gruppe angezeigt. Sie können Warnungsgruppen erweitern oder ausblenden, um die einzelnen Warnmeldungen ein- oder auszublenden. Wenn z. B. mehrere Knoten die Warnung *nicht mit Knoten* kommunizieren können, wird nur eine E-Mail gesendet und die Warnung wird als Gruppe auf der Seite Aktuelle Meldungen angezeigt.
++
+image::../media/alerts_current_page.png[Alarmseite]
+
+* Benachrichtigungen verwenden intuitive Namen und Beschreibungen, damit Sie das Problem schneller verstehen können. Meldungsbenachrichtigungen umfassen Details zum betroffenen Node und Standort, den Schweregrad der Warnmeldung, den Zeitpunkt, zu dem die Meldungsregel ausgelöst wurde, und den aktuellen Wert der Metriken in Bezug auf die Meldung.
+* Alert-E-Mail-Benachrichtigungen und die auf den Seiten „Current Alerts and Resolved Alerts“ angezeigten Warnmeldungen enthalten empfohlene Aktionen zum Beheben von Warnmeldungen. Dazu gehören häufig direkte Links zur StorageGRID Dokumentation, sodass detailliertere Informationen zur Fehlerbehebung leichter finden und abrufen können.
++
+image::../media/alerts_page_details_modal.png[Details Der Alarmseite Modal]
+
+
+
+
+NOTE: Das alte Alarmsystem ist veraltet. Die Benutzeroberfläche und APIs für das alte Alarmsystem werden in einer zukünftigen Version entfernt. Das Alarmsystem bietet erhebliche Vorteile und ist einfacher zu bedienen.
+
+
+
+== Verwalten von Meldungen
+
+Alle StorageGRID-Benutzer können Warnmeldungen anzeigen. Wenn Sie über die Berechtigung Root Access oder Manage Alerts verfügen, können Sie auch Warnmeldungen wie folgt verwalten:
+
+* Wenn Sie die Benachrichtigungen für eine Warnung vorübergehend auf einem oder mehreren Schweregraden unterdrücken müssen, können Sie ganz einfach eine bestimmte Alarmregel für eine bestimmte Dauer stummschalten. Sie können eine Alarmregel für das gesamte Raster, eine einzelne Site oder einen einzelnen Knoten stummschalten.
+* Sie können die standardmäßigen Alarmregeln nach Bedarf bearbeiten. Sie können eine Meldungsregel vollständig deaktivieren oder deren Triggerbedingungen und -Dauer ändern.
+* Sie können benutzerdefinierte Alarmregeln erstellen, um auf die für Ihre Situation relevanten spezifischen Bedingungen abzielen und eigene Empfehlungen auszuarbeiten. Um die Bedingungen für eine benutzerdefinierte Warnung zu definieren, erstellen Sie Ausdrücke mithilfe der Prometheus-Metriken, die im Abschnitt Kennzahlen der Grid Management API verfügbar sind.
++
+Dieser Ausdruck bewirkt beispielsweise, dass eine Warnung ausgelöst wird, wenn die Menge des installierten RAM für einen Node weniger als 24,000,000,000 Byte (24 GB) beträgt.
+
++
+[listing]
+----
+node_memory_MemTotal < 24000000000
+----
+
+
+xref:../monitor/index.adoc[Monitoring und Fehlerbehebung]

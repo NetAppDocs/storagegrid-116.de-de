@@ -1,0 +1,146 @@
+---
+section: sg5700
+title: SG5700 Storage-Appliances
+entries:
+- title: Überblick
+  pdf-filename: StorageGRID SG5700 Storage-Appliances
+  url: "/sg5700/index.html"
+  entries:
+  - title: Controller in StorageGRID Appliance
+    url: "/sg5700/controllers-in-storagegrid-appliance.html"
+- title: Übersicht über Installation und Implementierung
+  url: "/sg5700/installation-and-deployment-overview.html"
+- title: Installation vorbereiten (SG5700)
+  url: "/sg5700/preparing-for-installation.html"
+  entries:
+  - title: Standort vorbereiten (SG5700)
+    url: "/sg5700/preparing-site-sg5700.html"
+  - title: Auspacken (SG5700)
+    url: "/sg5700/unpacking-boxes-sg5700.html"
+  - title: Zusätzliche Ausrüstung und Tools (SG5700) erwerben
+    url: "/sg5700/obtaining-additional-equipment-and-tools-sg5700.html"
+  - title: Appliance-Netzwerkverbindungen (SG5700) prüfen
+    url: "/sg5700/reviewing-appliance-network-connections-sg5700.html"
+    entries:
+    - title: Port Bond-Modi für E5700SG Controller-Ports
+      url: "/sg5700/port-bond-modes-for-e5700sg-controller-ports.html"
+      entries:
+      - title: Netzwerk-Bond-Modi für 10/25-GbE-Ports
+        url: "/sg5700/network-bond-modes-for-10-25-gbe-ports.html"
+      - title: Netzwerk-Bond-Modi für 1-GbE-Management-Ports
+        url: "/sg5700/network-bond-modes-for-1-gbe-ports.html"
+  - title: Installationsinformationen (SG5700) erfassen
+    url: "/sg5700/gathering-installation-information-sg5700.html"
+- title: Hardware installieren (SG5700)
+  url: "/sg5700/installing-hardware.html"
+  entries:
+  - title: Hardware registrieren
+    url: "/sg5700/registering-hardware.html"
+  - title: Appliance in Schrank oder Rack (SG5700) installieren
+    url: "/sg5700/installing-appliance-in-cabinet-or-rack-sg5700.html"
+  - title: Kabel-Appliance (SG5700)
+    url: "/sg5700/cabling-appliance-sg5700.html"
+  - title: Stromkabel anschließen und Strom (SG5700) einschalten
+    url: "/sg5700/connecting-power-cords-and-applying-power-sg5700.html"
+  - title: Zeigt die SG5700-Boot-Statuscodes an
+    url: "/sg5700/viewing-sg5700-boot-up-status-codes.html"
+    entries:
+    - title: Statusanzeigen am E5700SG Controller
+      url: "/sg5700/status-indicators-on-e5700sg-controller.html"
+- title: Hardware konfigurieren (SG5700)
+  url: "/sg5700/configuring-hardware-sg5712-60.html"
+  entries:
+  - title: Konfiguration von StorageGRID-Verbindungen (SG5700)
+    url: "/sg5700/configuring-storagegrid-connections.html"
+    entries:
+    - title: Rufen Sie das Installationsprogramm für StorageGRID-Appliances auf
+      url: "/sg5700/accessing-storagegrid-appliance-installer-sg5700.html"
+    - title: Überprüfen und Aktualisieren der Installationsversion der StorageGRID
+        Appliance
+      url: "/sg5700/verifying-and-upgrading-storagegrid-appliance-installer-version.html"
+    - title: Konfigurieren von Netzwerk-Links (SG5700)
+      url: "/sg5700/configuring-network-links-sg5700.html"
+    - title: Legen Sie die IP-Konfiguration fest
+      url: "/sg5700/setting-ip-configuration-sg5700.html"
+    - title: Netzwerkverbindungen prüfen
+      url: "/sg5700/verifying-network-connections.html"
+    - title: Überprüfen Sie Netzwerkverbindungen auf Portebene
+      url: "/sg5700/verifying-port-level-network-connections.html"
+  - title: Aufrufen und Konfigurieren des SANtricity System Manager (SG5700)
+    url: "/sg5700/accessing-and-configuring-santricity-system-manager.html"
+    entries:
+    - title: Einrichten und Zugreifen auf SANtricity System Manager
+      url: "/sg5700/setting-up-and-accessing-santricity-system-manager.html"
+    - title: Überprüfen Sie den Hardwarestatus in SANtricity System Manager
+      url: "/sg5700/reviewing-hardware-status-in-santricity-system-manager.html"
+    - title: Legen Sie IP-Adressen für Storage Controller mithilfe des StorageGRID
+        Appliance Installer fest
+      url: "/sg5700/setting-ip-addresses-for-storage-controllers-using-storagegrid-appliance-installer.html"
+  - title: 'Optional: Node-Verschlüsselung aktivieren'
+    url: "/sg5700/optional-enabling-node-encryption.html"
+  - title: 'Optional: Ändern Sie den RAID-Modus (nur SG5760).'
+    url: "/sg5700/optional-changing-raid-mode-sg5760-only.html"
+  - title: 'Optional: Netzwerkports für Appliance neu zuordnen'
+    url: "/sg5700/optional-remapping-network-ports-for-appliance-sg5600-and-sg5700.html"
+- title: Appliance-Storage-Node implementieren
+  url: "/sg5700/deploying-appliance-storage-node.html"
+- title: Überwachen Sie die Installation der Storage Appliance
+  url: "/sg5700/monitoring-storage-appliance-installation.html"
+- title: Automatisierte Appliance-Installation und -Konfiguration (SG5700)
+  url: "/sg5700/automating-appliance-installation-and-configuration.html"
+  entries:
+  - title: Automatisieren Sie die Appliance-Konfiguration mit dem StorageGRID Appliance
+      Installer
+    url: "/sg5700/automating-appliance-configuration-using-storagegrid-appliance-installer.html"
+  - title: Automatisieren Sie die Installation und Konfiguration von Appliance-Nodes
+      mithilfe von configure-sga.py Skripten
+    url: "/sg5700/automating-installation-configuration-appliance-nodes-configure-sga-py-script.html"
+  - title: Automatisierte Konfiguration von StorageGRID
+    url: "/sg5700/automating-configuration-of-storagegrid.html"
+- title: Überblick über die Installations-REST-APIs
+  url: "/sg5700/overview-of-installation-rest-apis.html"
+- title: Fehlerbehebung bei der Hardware-Installation (SG5700)
+  url: "/sg5700/troubleshooting-hardware-installation.html"
+  entries:
+  - title: Hardware-Setup scheint zu hängen (SG5700)
+    url: "/sg5700/hardware-setup-appears-to-hang.html"
+    entries:
+    - title: 'HE-Fehler: Fehler beim Synchronisieren mit SANtricity OS Software'
+      url: "/sg5700/he-error-error-synchronizing-with-santricity-os-software.html"
+  - title: Fehlerbehebung bei Verbindungsproblemen (SG5700)
+    url: "/sg5700/troubleshooting-connection-issues.html"
+  - title: Starten Sie den Controller neu, während das Installationsprogramm der StorageGRID
+      Appliance ausgeführt wird
+    url: "/sg5700/rebooting-controller-while-storagegrid-appliance-installer-is-running.html"
+- title: SG5700 Appliance warten
+  url: "/sg5700/maintaining-sg5700-appliance.html"
+  entries:
+  - title: Stellen Sie das Gerät in den Wartungsmodus
+    url: "/sg5700/placing-appliance-into-maintenance-mode.html"
+  - title: Upgrade von SANtricity OS auf Storage Controller
+    url: "/sg5700/upgrading-santricity-os-on-storage-controller.html"
+    entries:
+    - title: Aktualisieren Sie SANtricity OS auf Storage-Controllern mit Grid Manager
+      url: "/sg5700/upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5700.html"
+    - title: Aktualisieren Sie SANtricity OS auf einem E2800 Controller mithilfe des
+        Wartungsmodus
+      url: "/sg5700/upgrading-santricity-os-on-e2800-controller-using-maintenance-mode.html"
+  - title: Aktualisieren Sie die Laufwerk-Firmware mit SANtricity System Manager
+    url: "/sg5700/upgrading-drive-firmware-using-santricity-system-manager.html"
+  - title: E2800 Controller austauschen
+    url: "/sg5700/replacing-e2800-controller.html"
+  - title: E5700SG Controller austauschen
+    url: "/sg5700/replacing-e5700sg-controller.html"
+  - title: Tauschen Sie andere Hardwarekomponenten aus
+    url: "/sg5700/replacing-other-hardware-components-sg5700.html"
+  - title: Ändern Sie die Link-Konfiguration des E5700SG Controllers
+    url: "/sg5700/changing-link-configuration-of-e5700sg-controller.html"
+  - title: MTU-Einstellung ändern
+    url: "/sg5700/changing-mtu-setting.html"
+  - title: Überprüfen Sie die DNS-Server-Konfiguration
+    url: "/sg5700/checking-dns-server-configuration.html"
+  - title: Überwachung der Node-Verschlüsselung im Wartungsmodus (SG5700)
+    url: "/sg5700/monitoring-node-encryption-in-maintenance-mode.html"
+    entries:
+    - title: Die Konfiguration des Verschlüsselungsmanagement-Servers löschen
+      url: "/sg5700/clearing-key-management-server-configuration.html"

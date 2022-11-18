@@ -1,0 +1,18 @@
+---
+permalink: maintain/recovering-from-gateway-node-failures.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, gateway node failure 
+summary: Sie müssen eine Reihe von Aufgaben genau durchführen, um nach einem Gateway Node-Ausfall wiederherstellen zu können. 
+---
+= Wiederherstellung nach Gateway-Node-Ausfällen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen eine Reihe von Aufgaben genau durchführen, um nach einem Gateway Node-Ausfall wiederherstellen zu können.
+
+image::../media/overview_api_gateway_node_recovery.png[Übersicht Flussdiagramm der Gateway-Knoten-Wiederherstellung]
+
+xref:../sg100-1000/index.adoc[SG100- und SG1000-Services-Appliances]

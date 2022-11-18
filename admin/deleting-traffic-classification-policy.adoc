@@ -1,0 +1,41 @@
+---
+permalink: admin/deleting-traffic-classification-policy.html 
+sidebar: sidebar 
+keywords: delete traffic classification policy 
+summary: Wenn Sie keine Traffic-Klassifizierungsrichtlinie mehr benötigen, können Sie sie löschen. 
+---
+= Löschen einer Traffic-Klassifizierungsrichtlinie
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie keine Traffic-Klassifizierungsrichtlinie mehr benötigen, können Sie sie löschen.
+
+.Was Sie und#8217;ll benötigen
+* Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+* Sie haben die Root-Zugriffsberechtigung.
+
+
+.Schritte
+. Wählen Sie *KONFIGURATION* *Netzwerk* *Verkehrsklassifizierung*.
++
+Die Seite Richtlinien zur Klassifizierung von Verkehrsdaten wird angezeigt, und die vorhandenen Richtlinien sind in der Tabelle aufgeführt.
+
++
+image::../media/traffic_classification_policies_main_screen_w_examples.png[Beispiele Für Richtlinien Zur Klassifizierung Von Verkehrsdaten]
+
+. Wählen Sie das Optionsfeld links neben der Richtlinie, die Sie löschen möchten.
+. Wählen Sie *Entfernen*.
++
+Ein Warndialogfeld wird angezeigt.
+
++
+image::../media/traffic_classification_policy_delete.png[Löschen Sie Die Richtlinie Zur Klassifizierung Von Verkehrsdaten]
+
+. Wählen Sie *OK*, um zu bestätigen, dass Sie die Richtlinie löschen möchten.
++
+Die Richtlinie wird gelöscht.
+
+

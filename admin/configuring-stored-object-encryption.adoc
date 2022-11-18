@@ -1,0 +1,37 @@
+---
+permalink: admin/configuring-stored-object-encryption.html 
+sidebar: sidebar 
+keywords: stored object encryption, grid options, encrypt 
+summary: Sie können gespeicherte Objekte verschlüsseln, wenn Sie sicherstellen möchten, dass die Daten bei einer Gefährdung eines Objektspeichers nicht in lesbarer Form abgerufen werden können. Objekte sind standardmäßig nicht verschlüsselt. 
+---
+= Gespeicherte Objektverschlüsselung konfigurieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können gespeicherte Objekte verschlüsseln, wenn Sie sicherstellen möchten, dass die Daten bei einer Gefährdung eines Objektspeichers nicht in lesbarer Form abgerufen werden können. Objekte sind standardmäßig nicht verschlüsselt.
+
+.Was Sie und#8217;ll benötigen
+* Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+* Sie haben spezifische Zugriffsberechtigungen.
+
+
+Die gespeicherte Objektverschlüsselung ermöglicht die Verschlüsselung aller Objektdaten bei der Aufnahme durch S3 oder Swift. Wenn Sie die Einstellung aktivieren, werden alle neu aufgenommenen Objekte verschlüsselt, aber es werden keine Änderungen an vorhandenen gespeicherten Objekten vorgenommen. Wenn Sie die Verschlüsselung deaktivieren, bleiben aktuell verschlüsselte Objekte verschlüsselt, neu aufgenommene Objekte werden jedoch nicht verschlüsselt.
+
+
+NOTE: Wenn Sie diese Einstellung ändern, dauert es etwa eine Minute, bis die neue Einstellung angewendet wird. Der konfigurierte Wert wird für Performance und Skalierung zwischengespeichert.
+
+Gespeicherte Objekte können mit dem Verschlüsselungsalgorithmus AES‐128 oder AES‐256 verschlüsselt werden.
+
+Die Einstellung „gespeicherte Objektverschlüsselung“ gilt nur für S3 Objekte, die nicht durch Verschlüsselung auf Bucket- oder Objektebene verschlüsselt wurden.
+
+.Schritte
+. Wählen Sie *KONFIGURATION* *System* *Gitteroptionen*.
+. Ändern Sie im Abschnitt Speicherte Objektoptionen die gespeicherte Objektverschlüsselung in *Keine* (Standard), *AES-128* oder *AES-256*.
++
+image::../media/stored_object_encryption.png[Gespeicherte Objektverschlüsselung]
+
+. Wählen Sie *Speichern*.
+

@@ -1,0 +1,14 @@
+---
+permalink: sg6000/installing-hardware.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, hardware, install, installing 
+summary: Bei der Hardware-Installation wird der SG6000-CN Controller und das Storage Controller Shelf in ein Gehäuse oder Rack installiert, die Kabel angeschlossen und mit Strom versorgt. 
+---
+= Hardware installieren (SG6000)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei der Hardware-Installation wird der SG6000-CN Controller und das Storage Controller Shelf in ein Gehäuse oder Rack installiert, die Kabel angeschlossen und mit Strom versorgt.

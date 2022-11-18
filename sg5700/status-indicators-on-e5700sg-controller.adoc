@@ -1,0 +1,289 @@
+---
+permalink: sg5700/status-indicators-on-e5700sg-controller.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, status, indicators, lights, leds, light, led, attention, link, port, ethernet, activity, indicator, boot codes, boot, code, start, startup, start up, start-up, progress, e5700sg, HI, PP, HP, RB, FP, HE, HC, HO, HA, 22, 23, 2A, 2B, 40, 41, 42, 51, 92, 93, 94, 95, 96, A0, A1, A2, A3, AB, AE, EA, E8, EU, EP 
+summary: Die sieben-Segment-Anzeige und die LEDs auf dem E5700SG-Controller zeigen Status- und Fehlercodes an, während das Gerät eingeschaltet wird und die Hardware initialisiert wird. Sie können diese Anzeigen verwenden, um den Status zu bestimmen und Fehler zu beheben. 
+---
+= Statusanzeigen am E5700SG Controller
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die sieben-Segment-Anzeige und die LEDs auf dem E5700SG-Controller zeigen Status- und Fehlercodes an, während das Gerät eingeschaltet wird und die Hardware initialisiert wird. Sie können diese Anzeigen verwenden, um den Status zu bestimmen und Fehler zu beheben.
+
+Nach dem Starten des Installationsprogramms für StorageGRID-Appliances sollten Sie die Statusanzeigen auf dem E5700SG-Controller regelmäßig überprüfen.
+
+image::../media/e5700sg_leds.gif[Statusanzeigen am E5700SG Controller]
+
+|===
+|  | Anzeige | Beschreibung 
+
+
+ a| 
+1
+ a| 
+Warnungs-LED
+ a| 
+Gelb: Der Controller ist fehlerhaft und erfordert eine Bedienerwarnung, oder das Installationsskript wurde nicht gefunden.
+
+Aus: Der Controller funktioniert ordnungsgemäß.
+
+
+
+ a| 
+2
+ a| 
+Sieben-Segment-Anzeige
+ a| 
+Zeigt einen Diagnosecode an
+
+Sieben-Segment-Anzeigesequenzen ermöglichen es Ihnen, Fehler und den Betriebszustand der Appliance zu verstehen.
+
+
+
+ a| 
+3
+ a| 
+Warn-LEDs für den Erweiterungsport
+ a| 
+Gelb: Diese LEDs sind immer gelb (keine Verbindung hergestellt), da das Gerät die Erweiterungs-Ports nicht nutzt.
+
+
+
+ a| 
+4
+ a| 
+Status-LEDs für Host-Port-Link
+ a| 
+Grün: Die Verbindung ist aktiviert.
+
+Aus: Die Verbindung ist ausgefallen.
+
+
+
+ a| 
+5
+ a| 
+Status-LEDs für Ethernet Link
+ a| 
+Grün: Es wird eine Verbindung hergestellt.
+
+Aus: Keine Verbindung hergestellt.
+
+
+
+ a| 
+6
+ a| 
+LEDs für Ethernet-Aktivität
+ a| 
+Grün: Die Verbindung zwischen dem Management-Port und dem Gerät, mit dem er verbunden ist (z. B. ein Ethernet-Switch) ist aktiviert.
+
+Aus: Es besteht keine Verbindung zwischen dem Controller und dem angeschlossenen Gerät.
+
+Blinkt grün: Es gibt Ethernet-Aktivität.
+
+|===
+
+
+== Allgemeine Startcodes
+
+Beim Hochfahren oder nach einem harten Reset des Geräts treten folgende Aktionen auf:
+
+. Die sieben-Segment-Anzeige auf dem E5700SG-Controller zeigt eine allgemeine Sequenz von Codes, die nicht spezifisch für die Steuerung ist. Die allgemeine Sequenz endet mit den Codes AA und FF.
+. Startcodes, die speziell für den E5700SG-Controller gelten, werden angezeigt.
+
+
+
+
+== Boot-Codes des E5700SG-Controllers
+
+Beim normalen Hochfahren des Geräts zeigt das siebenSegment-Display des E5700SG-Controllers die folgenden Codes in der angegebenen Reihenfolge an:
+
+|===
+| Codieren | Zeigt An 
+
+
+ a| 
+HI
+ a| 
+Das Master-Boot-Skript wurde gestartet.
+
+
+
+ a| 
+PP
+ a| 
+Das System prüft, ob das FPGA aktualisiert werden muss.
+
+
+
+ a| 
+HP
+ a| 
+Das System überprüft, ob die 10/25-GbE-Controller-Firmware aktualisiert werden muss.
+
+
+
+ a| 
+RB
+ a| 
+Das System wird nach dem Anwenden von Firmware-Updates neu gebootet.
+
+
+
+ a| 
+FP
+ a| 
+Die Update-Prüfungen der Hardware-Subsystem-Firmware wurden abgeschlossen. Die Kommunikationsdienste zwischen den Controllern werden gestartet.
+
+
+
+ a| 
+ER
+ a| 
+Das System wartet auf die Konnektivität mit dem E2800 Controller und synchronisiert mit dem Betriebssystem SANtricity.
+
+*Hinweis:* Wenn dieser Bootvorgang nicht über diese Phase hinaus läuft, überprüfen Sie die Verbindungen zwischen den beiden Controllern.
+
+
+
+ a| 
+HZ
+ a| 
+Das System prüft gerade auf vorhandene StorageGRID Installationsdaten.
+
+
+
+ a| 
+HO
+ a| 
+Das Installationsprogramm für StorageGRID-Appliance wird ausgeführt.
+
+
+
+ a| 
+HOCHVERFÜGBARKEIT
+ a| 
+StorageGRID wird ausgeführt.
+
+|===
+
+
+== E5700SG-Controller-Fehlercodes
+
+Diese Codes stellen Fehlerbedingungen dar, die auf dem E5700SG-Controller angezeigt werden können, wenn das Gerät hochfährt. Weitere zweistellige Hexadezimalcodes werden angezeigt, wenn bestimmte Hardware-Fehler auf niedriger Ebene auftreten. Wenn einer dieser Codes länger als ein oder zwei Sekunden andauert oder wenn Sie den Fehler nicht beheben können, indem Sie einem der vorgeschriebenen Fehlerbehebungsverfahren folgen, wenden Sie sich an den technischen Support.
+
+|===
+| Codieren | Zeigt An 
+
+
+ a| 
+22
+ a| 
+Kein Master-Boot-Datensatz auf einem Boot-Gerät gefunden.
+
+
+
+ a| 
+23
+ a| 
+Das interne Flash-Laufwerk ist nicht verbunden.
+
+
+
+ a| 
+2 A, 2 B
+ a| 
+Stuck-Bus, DIMM-SPD-Daten können nicht gelesen werden.
+
+
+
+ a| 
+40
+ a| 
+Ungültige DIMMs.
+
+
+
+ a| 
+41
+ a| 
+Ungültige DIMMs.
+
+
+
+ a| 
+42
+ a| 
+Speichertest fehlgeschlagen.
+
+
+
+ a| 
+51
+ a| 
+Fehler beim SPD-Lesen.
+
+
+
+ a| 
+92 bis 96
+ a| 
+PCI-Bus-Initialisierung
+
+
+
+ a| 
+A0 bis A3
+ a| 
+SATA-Laufwerk-Initialisierung
+
+
+
+ a| 
+AB
+ a| 
+Alternativer Startcode:
+
+
+
+ a| 
+AE
+ a| 
+Booten von OS:
+
+
+
+ a| 
+EA
+ a| 
+DDR4-Schulung fehlgeschlagen.
+
+
+
+ a| 
+E8
+ a| 
+Kein Speicher installiert.
+
+
+
+ a| 
+EU
+ a| 
+Das Installationsskript wurde nicht gefunden.
+
+
+
+ a| 
+EP
+ a| 
+Installation oder Kommunikation mit dem E2800-Controller ist fehlgeschlagen.
+
+|===
+xref:troubleshooting-hardware-installation.adoc[Fehlerbehebung bei der Hardware-Installation (SG5700)]
+
+https://mysupport.netapp.com/site/global/dashboard["NetApp Support"^]

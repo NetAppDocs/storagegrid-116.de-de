@@ -1,0 +1,33 @@
+---
+permalink: sg6000/expansion-shelves-do-not-appear-in-appliance-installer.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance troubleshooting, Expansion, shelves, do not appear, Appliance Installer, missing, not shown 
+summary: Wenn Sie Erweiterungseinschübe für SG6060 oder SG6060X installiert haben und diese nicht im StorageGRID Appliance Installer angezeigt werden, sollten Sie überprüfen, ob die Shelfs vollständig installiert und eingeschaltet wurden. 
+---
+= Erweiterungs-Shelfs werden nicht im Appliance Installer angezeigt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie Erweiterungseinschübe für SG6060 oder SG6060X installiert haben und diese nicht im StorageGRID Appliance Installer angezeigt werden, sollten Sie überprüfen, ob die Shelfs vollständig installiert und eingeschaltet wurden.
+
+Sie können überprüfen, ob die Erweiterungs-Shelfs mit der Appliance verbunden sind, indem Sie die folgenden Informationen im Installationsprogramm der StorageGRID Appliance anzeigen:
+
+* Die *Home* Seite enthält eine Nachricht über Erweiterungsregale.
++
+image::../media/expansion_shelf_home_page_msg.png[Erweiterungs-Shelfs Msg]
+
+* Die Seite *Advanced* *RAID-Modus* zeigt anhand der Anzahl der Laufwerke an, ob das Gerät Erweiterungseinschübe enthält oder nicht. Im folgenden Screenshot werden beispielsweise zwei SSDs und 178 HDDs angezeigt. Ein SG6060 mit zwei Erweiterungs-Shelfs enthält insgesamt 180 Laufwerke.
+
+
+image::../media/expansion_shelves_shown_by_num_of_drives.png[Anzahl Laufwerke]
+
+Wenn die Installationsseiten der StorageGRID Appliance nicht angeben, dass Erweiterungs-Shelfs vorhanden sind, befolgen Sie diese Vorgehensweise.
+
+.Schritte
+. Verifizieren Sie das xref:sg6060-cabling-optional-expansion-shelves.adoc[Alle erforderlichen Kabel sind fest angeschlossen].
+. Überprüfen Sie, ob Sie vorhanden sind xref:connecting-power-cords-and-applying-power-sg6000.adoc[Eingeschaltet sind die Erweiterungs-Shelfs].
+. Wenn Sie Hilfe bei der Behebung eines Problems benötigen, wenden Sie sich an den technischen Support.
+

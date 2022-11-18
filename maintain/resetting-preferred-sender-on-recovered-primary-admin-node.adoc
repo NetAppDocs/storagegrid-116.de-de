@@ -1,0 +1,28 @@
+---
+permalink: maintain/resetting-preferred-sender-on-recovered-primary-admin-node.html 
+sidebar: sidebar 
+keywords: storagegrid, recover, primary admin node, reset preferred sender, resetting preferred sender 
+summary: Wenn der primäre Admin-Knoten, den Sie wiederherstellen, derzeit als bevorzugter Absender von Warnmeldungen, Alarmanmeldungen und AutoSupport-Meldungen eingestellt ist, müssen Sie diese Einstellung neu konfigurieren. 
+---
+= Bevorzugter Absender auf wiederhergestellten primären Admin-Knoten zurücksetzen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn der primäre Admin-Knoten, den Sie wiederherstellen, derzeit als bevorzugter Absender von Warnmeldungen, Alarmanmeldungen und AutoSupport-Meldungen eingestellt ist, müssen Sie diese Einstellung neu konfigurieren.
+
+.Was Sie und#8217;ll benötigen
+* Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+* Sie müssen über spezifische Zugriffsberechtigungen verfügen.
+* Der wiederhergestellte Admin-Node muss installiert und ausgeführt werden.
+
+
+.Schritte
+. Wählen Sie *KONFIGURATION* *System* *Anzeigeoptionen*.
+. Wählen Sie den wiederhergestellten Admin-Knoten aus der Dropdown-Liste *bevorzugter Absender* aus.
+. Klicken Sie Auf *Änderungen Übernehmen*.
+
+
+xref:../admin/index.adoc[StorageGRID verwalten]

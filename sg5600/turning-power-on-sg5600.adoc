@@ -1,0 +1,46 @@
+---
+permalink: sg5600/turning-power-on-sg5600.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, power on, power, start 
+summary: Wenn das Gehäuse eingeschaltet wird, werden beide Controller mit Strom versorgt. 
+---
+= Einschalten (SG5600)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn das Gehäuse eingeschaltet wird, werden beide Controller mit Strom versorgt.
+
+.Schritte
+. Schalten Sie die beiden Netzteilschalter an der Rückseite des Gehäuses ein.
++
+Während der Strom eingeschaltet wird, leuchten die LEDs an den Controllern zeitweise auf und ab.
+
++
+Der Einschalprozess kann bis zu zehn Minuten dauern. Die Controller werden während der ersten Startsequenz mehrmals neu gestartet, sodass die Lüfter sich nach oben oder unten befinden und die LEDs blinken.
+
+. Überprüfen Sie die ein/aus-LED und die aktiven LEDs für den Host Link auf jedem Controller, um zu überprüfen, ob der Strom eingeschaltet wurde.
+. Warten Sie, bis alle Laufwerke eine dauerhaft grüne LED zeigen, die angibt, dass sie online sind.
+. Überprüfen Sie die grünen LEDs an der Vorder- und Rückseite des Gehäuses.
++
+Wenn gelbe LEDs angezeigt werden, notieren Sie sich die Positionen der LEDs.
+
+. Sehen Sie sich die sieben-Segment-Anzeige für den E5600SG-Controller an.
++
+Dieses Display zeigt *HO*, gefolgt von einer sich wiederholenden Sequenz von zwei Ziffern.
+
++
+[listing]
+----
+HO -- IP address for Admin Network -- IP address for Grid Network HO
+----
++
+In der Sequenz ist der erste Zahlensatz die IP-Adresse, die vom DHCP für den Management-Port 1 des Controllers zugewiesen wird. Diese Adresse wird verwendet, um den Controller mit dem Admin-Netzwerk für StorageGRID zu verbinden. Die zweite Zahlengruppe ist die durch DHCP zugewiesene IP-Adresse, die zur Verbindung des Geräts mit dem Grid Network for StorageGRID verwendet wird.
+
++
+
+NOTE: Wenn eine IP-Adresse nicht über DHCP zugewiesen werden konnte, wird 0.0.0.0 angezeigt.
+
+

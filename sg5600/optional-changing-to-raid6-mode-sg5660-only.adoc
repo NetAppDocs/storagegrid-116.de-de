@@ -1,0 +1,42 @@
+---
+permalink: sg5600/optional-changing-to-raid6-mode-sg5660-only.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, raid, raid mode, change, changing, modify, DDP, raid6 
+summary: 'Wenn Sie eine SG5660 mit 60 Laufwerken besitzen, können Sie die Volume-Konfiguration von der standardmäßigen und empfohlenen Einstellung Dynamic Disk Pools \ (DDP\) auf RAID 6 ändern. Sie können den Modus nur ändern, bevor Sie den Speicherknoten der StorageGRID-Appliance bereitstellen.' 
+---
+= Optional: Wechseln Sie in den RAID-6-Modus (nur SG5660).
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie eine SG5660 mit 60 Laufwerken besitzen, können Sie die Volume-Konfiguration von der standardmäßigen und empfohlenen Einstellung Dynamic Disk Pools (DDP) auf RAID 6 ändern. Sie können den Modus nur ändern, bevor Sie den Speicherknoten der StorageGRID-Appliance bereitstellen.
+
+.Was Sie und#8217;ll benötigen
+* Sie haben eine SG5660. Die SG5612 unterstützt RAID6 nicht. Sollten Sie über eine SG5612 verfügen, müssen Sie den DDP-Modus nutzen.
+
+
+
+IMPORTANT: Wenn bereits Volumes konfiguriert wurden oder bereits StorageGRID installiert war, werden die Volumes durch eine Änderung des RAID-Modus entfernt und ersetzt. Alle Daten auf diesen Volumes gehen verloren.
+
+Vor der Bereitstellung eines StorageGRID Appliance Storage Node können Sie zwischen zwei Optionen zur Volume-Konfiguration wählen:
+
+* *Dynamic Disk Pools (DDP)* -- Dies ist die Standardeinstellung und empfohlene Einstellung. DDP ist ein verbessertes Hardware-Datensicherungsschema, das über eine bessere Systemperformance, kürzere Wiederherstellungszeiten nach Laufwerksausfällen und ein vereinfachtes Management verfügt.
+* *RAID 6* -- Dies ist ein Hardware-Schutzschema, das auf jeder Festplatte Paritäts-Stripes verwendet und vor dem Verlust von Daten zwei Festplattenausfälle im RAID-Satz zulässt.
++
+
+IMPORTANT: Die Verwendung von RAID 6 wird für die meisten StorageGRID Umgebungen nicht empfohlen. Zwar kann RAID-6 die Storage-Effizienz auf bis zu 88 % steigern (im Vergleich zu 80 % bei DDP), doch bietet der DDP-Modus eine effizientere Recovery nach Laufwerksausfällen.
+
+
+
+.Schritte
+. Öffnen Sie mithilfe des Service-Laptops einen Webbrowser, und greifen Sie auf das Installationsprogramm der StorageGRID-Appliance: + zu
+`*https://_E5600SG_Controller_IP_:8443*`
++
+Wo `_E5600SG_Controller_IP_` Ist eine der IP-Adressen für den E5600SG-Controller.
+
+. Wählen Sie in der Menüleiste *Erweitert* *RAID-Modus*.
+. Wählen Sie auf der Seite *RAID-Modus konfigurieren* aus der Dropdown-Liste Modus die Option *RAID 6* aus.
+. Klicken Sie Auf *Speichern*.
+

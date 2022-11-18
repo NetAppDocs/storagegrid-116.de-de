@@ -1,0 +1,66 @@
+---
+permalink: tenant/creating-another-users-s3-access-keys.html 
+sidebar: sidebar 
+keywords: how to create other user access key 
+summary: Wenn Sie einen S3-Mandanten verwenden und über die entsprechenden Berechtigungen verfügen, können Sie S3-Zugriffsschlüssel für andere Benutzer erstellen, beispielsweise Applikationen, die Zugriff auf Buckets und Objekte benötigen. 
+---
+= Erstellen Sie die S3-Zugriffstasten eines anderen Benutzers
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie einen S3-Mandanten verwenden und über die entsprechenden Berechtigungen verfügen, können Sie S3-Zugriffsschlüssel für andere Benutzer erstellen, beispielsweise Applikationen, die Zugriff auf Buckets und Objekte benötigen.
+
+.Was Sie und#8217;ll benötigen
+* Sie müssen mit einem beim Mandantenmanager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+* Sie müssen über die Berechtigung Root Access verfügen.
+
+
+Sie können einen oder mehrere S3-Zugriffsschlüssel für andere Benutzer erstellen und managen, damit sie Buckets für ihr Mandantenkonto erstellen und verwalten können. Nachdem Sie einen neuen Zugriffsschlüssel erstellt haben, aktualisieren Sie die Anwendung mit der neuen Zugriffsschlüssel-ID und dem geheimen Zugriffsschlüssel. Erstellen Sie aus Sicherheitsgründen nicht mehr Schlüssel als der Benutzer benötigt, und löschen Sie die nicht verwendeten Schlüssel. Wenn Sie nur einen Schlüssel haben und demnächst ablaufen, erstellen Sie einen neuen Schlüssel, bevor der alte Schlüssel abläuft, und löschen Sie dann den alten Schlüssel.
+
+Jeder Schlüssel kann eine bestimmte Ablaufzeit haben oder keinen Ablauf haben. Beachten Sie die folgenden Richtlinien für die Ablaufzeit:
+
+* Legen Sie eine Ablaufzeit für die Schlüssel fest, um den Zugriff des Benutzers auf einen bestimmten Zeitraum zu beschränken. Durch das Festlegen einer kurzen Ablaufzeit kann das Risiko verringert werden, wenn die Zugriffsschlüssel-ID und der geheime Zugriffsschlüssel versehentlich ausgesetzt sind. Abgelaufene Schlüssel werden automatisch entfernt.
+* Wenn das Sicherheitsrisiko in Ihrer Umgebung gering ist und Sie keine regelmäßigen neuen Schlüssel erstellen müssen, müssen Sie keine Ablaufzeit für die Schlüssel festlegen. Wenn Sie sich zu einem späteren Zeitpunkt für die Erstellung neuer Schlüssel entscheiden, löschen Sie die alten Schlüssel manuell.
+
+
+
+IMPORTANT: Auf die S3-Buckets und Objekte, die zu einem Benutzer gehören, kann über die Zugriffsschlüssel-ID und den geheimen Zugriffsschlüssel zugegriffen werden, die für diesen Benutzer im Mandanten-Manager angezeigt werden. Aus diesem Grund schützen Sie Zugriffsschlüssel wie ein Passwort. Drehen Sie die Zugriffstasten regelmäßig, entfernen Sie alle nicht verwendeten Schlüssel aus dem Konto und geben Sie sie niemals anderen Benutzern zur Verfügung.
+
+.Schritte
+. Wählen Sie *ZUGRIFFSVERWALTUNG* *Benutzer*.
+. Wählen Sie den Benutzer aus, dessen S3-Zugriffsschlüssel Sie managen möchten.
++
+Die Seite mit den Benutzerdetails wird angezeigt.
+
+. Wählen Sie *Zugriffstasten*, und wählen Sie dann *Schlüssel erstellen*.
+. Führen Sie einen der folgenden Schritte aus:
++
+** Wählen Sie *Verfallszeit nicht festlegen*, um einen Schlüssel zu erstellen, der nicht abläuft. (Standard)
+** Wählen Sie *Verfallszeit festlegen*, und legen Sie das Ablaufdatum und die Uhrzeit fest.
++
+image::../media/tenant_s3_access_key_create_save.png[Screenshot des Dialogfelds Zugriffsschlüssel erstellen]
+
+
+
+. Wählen Sie *Zugriffsschlüssel erstellen*.
++
+Das Dialogfeld Zugriffsschlüssel herunterladen wird angezeigt, in dem die Zugriffsschlüssel-ID und der geheime Zugriffsschlüssel aufgeführt sind.
+
+. Kopieren Sie die Zugriffsschlüssel-ID und den Schlüssel für den geheimen Zugriff an einen sicheren Ort, oder wählen Sie *.csv herunterladen*, um eine Tabellenkalkulationsdatei mit der Zugriffsschlüssel-ID und dem geheimen Zugriffsschlüssel zu speichern.
++
+
+IMPORTANT: Schließen Sie dieses Dialogfeld erst, wenn Sie diese Informationen kopiert oder heruntergeladen haben. Nachdem das Dialogfeld geschlossen wurde, können Sie die Schlüssel nicht kopieren oder herunterladen.
+
++
+image::../media/tenant_s3_access_key_save_keys.png[Screenshot des Dialogfelds Schlüssel speichern]
+
+. Wählen Sie *Fertig*.
++
+Der neue Schlüssel wird auf der Registerkarte Zugriffsschlüssel der Seite mit den Benutzerdetails angezeigt. Änderungen können aufgrund des Caching bis zu 15 Minuten dauern.
+
+
+
+xref:tenant-management-permissions.adoc[Mandantenmanagement-Berechtigungen]

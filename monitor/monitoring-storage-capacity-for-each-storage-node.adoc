@@ -1,0 +1,73 @@
+---
+permalink: monitor/monitoring-storage-capacity-for-each-storage-node.html 
+sidebar: sidebar 
+keywords: monitor node storage capacity 
+summary: Sie müssen den gesamten nutzbaren Speicherplatz für jeden Storage-Node überwachen, um sicherzustellen, dass der Node über genügend Speicherplatz für neue Objektdaten verfügt. 
+---
+= Überwachen Sie die Storage-Kapazität für jeden Storage-Node
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen den gesamten nutzbaren Speicherplatz für jeden Storage-Node überwachen, um sicherzustellen, dass der Node über genügend Speicherplatz für neue Objektdaten verfügt.
+
+.Was Sie und#8217;ll benötigen
+* Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+
+
+Der nutzbare Speicherplatz ist der Speicherplatz, der zum Speichern von Objekten zur Verfügung steht. Der insgesamt nutzbare Speicherplatz für einen Storage-Node wird berechnet, indem der verfügbare Speicherplatz in allen Objektspeichern innerhalb des Node hinzugefügt wird.
+
+image::../media/calculating_watermarks.gif[Konzeptzeichnung für den insgesamt nutzbaren Speicherplatz]
+
+.Schritte
+. Wählen Sie *NODES* *_Storage Node_* *Storage* aus.
++
+Die Diagramme und Tabellen für den Node werden angezeigt.
+
+. Halten Sie den Mauszeiger über das Diagramm „verwendete Objekte – Objektdaten“.
++
+Die folgenden Werte werden angezeigt:
+
++
+** *Used (%)*: Der Prozentsatz des gesamten nutzbaren Speicherplatzes, der für Objektdaten verwendet wurde.
+** *Verwendet*: Die Menge des gesamten nutzbaren Speicherplatzes, der für Objektdaten verwendet wurde.
+** *Replizierte Daten*: Eine Schätzung der Menge der replizierten Objektdaten auf diesem Knoten, Standort oder Grid.
+** *Erasure-codierte Daten*: Eine Schätzung der Menge der mit der Löschung codierten Objektdaten auf diesem Knoten, Standort oder Grid.
+** *Gesamt*: Die Gesamtmenge an nutzbarem Speicherplatz auf diesem Knoten, Standort oder Grid. Der verwendete Wert ist der `storagegrid_storage_utilization_data_bytes` Metrisch.
+
+
++
+image::../media/nodes_page_storage_used_object_data.png[Knoten Seite Speicher Verwendete Objektdaten]
+
+. Überprüfen Sie die verfügbaren Werte in den Tabellen Volumes und Objektspeichern unter den Diagrammen.
++
+
+NOTE: Klicken Sie auf die Diagrammsymbole, um Diagramme dieser Werte anzuzeigen image:../media/icon_chart_new_for_11_5.png["Diagrammsymbol"] In den Spalten verfügbar.
+
++
+image::../media/nodes_page_storage_tables.png[Im Objekt werden Tabellen gespeichert]
+
+. Überwachen Sie die Werte im Zeitbereich, um die Rate abzuschätzen, mit der der nutzbare Speicherplatz belegt wird.
+. Um normale Systemvorgänge aufrechtzuerhalten, fügen Sie Storage-Nodes hinzu, fügen Storage Volumes oder Archivdaten hinzu, bevor der nutzbare Speicherplatz verbraucht wird.
++
+Berücksichtigen Sie bei der Planung des Zeitplans für eine Erweiterung, wie lange die Beschaffung und Installation von zusätzlichem Storage dauern wird.
+
++
+
+NOTE: Wenn Ihre ILM-Richtlinie Erasure Coding verwendet, wird es möglicherweise besser erweitert, wenn vorhandene Storage-Nodes ungefähr 70 % ausgelastet sind, um die Anzahl der hinzugefügten Nodes zu verringern.
+
++
+Weitere Informationen zur Planung einer Speichererweiterung finden Sie in den Anweisungen zur Erweiterung von StorageGRID.
+
++
+Die Warnmeldung * Low Object Data Storage* wird ausgelöst, wenn nicht genügend Speicherplatz zum Speichern von Objektdaten auf einem Storage Node verbleibt.
+
+
+
+xref:../admin/index.adoc[StorageGRID verwalten]
+
+xref:troubleshooting-storagegrid-system.adoc[Beheben Sie die Warnung „Niedrig Object Data Storage“]
+
+xref:../expand/index.adoc[Erweitern Sie Ihr Raster]

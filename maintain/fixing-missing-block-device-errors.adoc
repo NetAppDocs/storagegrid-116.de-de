@@ -1,0 +1,42 @@
+---
+permalink: maintain/fixing-missing-block-device-errors.html 
+sidebar: sidebar 
+keywords: storagegrid, missing block device, block device error 
+summary: 'Das System überprüft, ob jeder wiederhergestellte Knoten einer gültigen Blockgerätespezialldatei oder einem gültigen Softlink zu einer speziellen Blockgerätedatei zugeordnet wird. Wenn StorageGRID eine ungültige Zuordnung im findet `/etc/storagegrid/nodes/_node-name_.conf` Datei: Es wird ein Fehler des Blockgerätes angezeigt.' 
+---
+= Beheben Sie fehlende Blockgerätfehler
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das System überprüft, ob jeder wiederhergestellte Knoten einer gültigen Blockgerätespezialldatei oder einem gültigen Softlink zu einer speziellen Blockgerätedatei zugeordnet wird. Wenn StorageGRID eine ungültige Zuordnung im findet `/etc/storagegrid/nodes/_node-name_.conf` Datei: Es wird ein Fehler des Blockgerätes angezeigt.
+
+Wenn Sie einen Fehler beobachten, der diesem Muster entspricht:
+
+`Checking configuration file /etc/storagegrid/nodes/_node-name_.conf for node _node-name_...`
+`ERROR: _node-name_: BLOCK_DEVICE_PURPOSE = _path-name_`` _Node-Name_: _Path-Name_ existiert nicht`
+
+Es bedeutet das `/etc/storagegrid/nodes/_node-name_.conf` Ordnet das von _Node-Name_ verwendete Blockgerät dem angegebenen Pfad-Namen im Linux-Dateisystem zu, aber an diesem Speicherort gibt es keine gültige Sonderdatei für Blockgeräte oder keinen Softlink zu einer Sonderdatei für Blockgeräte.
+
+Stellen Sie sicher, dass Sie die Schritte in abgeschlossen haben xref:deploying-new-linux-hosts.adoc[Implementieren Sie neue Linux-Hosts]. Verwenden Sie für alle Blockgeräte dieselben persistenten Gerätenamen, die auf dem ursprünglichen Host verwendet wurden.
+
+Wenn Sie die fehlende Sonderdatei für Blockgeräte nicht wiederherstellen oder neu erstellen können, können Sie ein neues Blockgerät mit der entsprechenden Größe und Speicherkategorie zuweisen und die Knotenkonfigurationsdatei bearbeiten, um den Wert VON BLOCK_DEVICE_PURPOSE zu ändern, um auf die neue Sonderdatei für Blockgeräte zu verweisen.
+
+Bestimmen Sie die geeignete Größe und Speicherkategorie aus den Tabellen im Abschnitt „`STorage Requirements`“ der Installationsanleitung für Ihr Linux-Betriebssystem. Lesen Sie die Empfehlungen unter „`Hostspeicher konfigurieren`“, bevor Sie mit dem Austausch von Blockgeräten fortfahren.
+
+
+IMPORTANT: Wenn Sie ein neues Blockspeichergerät für eine der Konfigurationsdateivariablen angeben müssen, die mit beginnen `BLOCK_DEVICE_` Da das ursprüngliche Blockgerät mit dem ausgefallenen Host verloren gegangen ist, stellen Sie sicher, dass das neue Blockgerät nicht formatiert ist, bevor Sie weitere Wiederherstellungsverfahren durchführen. Das neue Blockgerät wird unformatiert, wenn Sie gemeinsam genutzten Speicher verwenden und ein neues Volume erstellt haben. Wenn Sie sich nicht sicher sind, führen Sie den folgenden Befehl gegen neue Spezialdateien für das Blockspeichergerät aus.
+
+ACHTUNG:
+
+Führen Sie den folgenden Befehl nur für neue Block Storage-Geräte aus. Führen Sie diesen Befehl nicht aus, wenn Sie glauben, dass der Block Storage noch gültige Daten für den wiederherzustellenden Node enthält, da alle Daten auf dem Gerät verloren gehen.
+
+[listing]
+----
+sudo dd if=/dev/zero of=/dev/mapper/my-block-device-name bs=1G count=1
+----
+xref:../rhel/index.adoc[Installieren Sie Red hat Enterprise Linux oder CentOS]
+
+xref:../ubuntu/index.adoc[Installieren Sie Ubuntu oder Debian]

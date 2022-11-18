@@ -1,0 +1,141 @@
+---
+permalink: ilm/working-with-ilm-rules-and-ilm-policies.html 
+sidebar: sidebar 
+keywords: delete ilm rule, edit ilm rule, clone ilm rule, ilm queue 
+summary: Nachdem Sie ILM-Regeln und eine ILM-Richtlinie erstellt haben, können Sie weiterhin mit diesen Regeln arbeiten und ihre Konfiguration an den sich ändernden Storage-Anforderungen anpassen. 
+---
+= Arbeiten Sie mit ILM-Regeln und ILM-Richtlinien
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sobald Sie ILM-Regeln und eine ILM-Richtlinie erstellt haben, können Sie sie weiterhin verwenden und ihre Konfiguration an die sich ändernden Storage-Anforderungen anpassen.
+
+.Was Sie und#8217;ll benötigen
+* Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+* Sie haben spezifische Zugriffsberechtigungen.
+
+
+
+
+== Löschen einer ILM-Regel
+
+Löschen Sie alle ILM-Regeln, die Sie wahrscheinlich nicht verwenden, um die Liste der aktuellen ILM-Regeln überschaubar zu halten.
+
+Eine ILM-Regel kann nicht gelöscht werden, wenn sie derzeit in der aktiven Richtlinie oder in der vorgeschlagenen Richtlinie verwendet wird. Wenn Sie eine ILM-Regel löschen müssen, die eine Richtlinie verwendet, müssen Sie zuerst die folgenden Schritte durchführen:
+
+. Klonen Sie die aktive Richtlinie, oder bearbeiten Sie die vorgeschlagene Richtlinie.
+. Entfernen Sie die ILM-Regel aus der Richtlinie.
+. Speichern, simulieren und aktivieren Sie die neue Richtlinie, um sicherzustellen, dass Objekte wie erwartet geschützt sind.
+
+
+.Schritte
+. Wählen Sie *ILM* *Regeln*.
+. Überprüfen Sie den Tabelleneintrag für die Regel, die Sie entfernen möchten.
++
+Vergewissern Sie sich, dass die Regel nicht in der aktiven ILM-Richtlinie oder der vorgeschlagenen ILM-Richtlinie verwendet wird.
+
+. Wenn die Regel, die Sie entfernen möchten, nicht verwendet wird, wählen Sie die Optionsschaltfläche und wählen Sie *Entfernen*.
+. Wählen Sie *OK* aus, um zu bestätigen, dass Sie die ILM-Regel löschen möchten.
++
+Die ILM-Regel wird gelöscht.
+
++
+[NOTE]
+====
+Wenn Sie eine Regel löschen, die in einer historischen Richtlinie verwendet wird, wird ein image:../media/icon_ilm_rule_historical.png["Verlauf der Symbol-ILM-Regel"] Wenn Sie die Richtlinie anzeigen, wird das Symbol für die Regel angezeigt. Dies bedeutet, dass die Regel zu einer historischen Regel geworden ist.
+
+image::../media/ilm_rule_historical.png[ILM-Regel „Historical“]
+
+====
+
+
+
+
+== Bearbeiten einer ILM-Regel
+
+Möglicherweise müssen Sie eine ILM-Regel bearbeiten, um einen Filter oder eine Platzierungsanweisung zu ändern.
+
+Eine Regel kann nicht bearbeitet werden, wenn sie in der vorgeschlagenen ILM-Richtlinie oder der aktiven ILM-Richtlinie verwendet wird. Stattdessen können Sie diese Regeln klonen und erforderliche Änderungen an der geklonten Kopie vornehmen. Sie können auch die ILM-Regel (2 Kopien erstellen) oder ILM-Regeln, die vor StorageGRID Version 10.3 erstellt wurden, nicht bearbeiten.
+
+
+NOTE: Bevor Sie einer aktiven ILM-Richtlinie eine bearbeitete Regel hinzufügen, müssen Sie beachten, dass eine Änderung der Anweisungen zur Platzierung eines Objekts zu einer erhöhten Systemauslastung führen kann.
+
+.Schritte
+. Wählen Sie *ILM* *Regeln*.
++
+Die Seite ILM-Regeln wird angezeigt. Diese Seite zeigt alle verfügbaren Regeln an und gibt an, welche Regeln in der aktiven Richtlinie oder in der vorgeschlagenen Richtlinie verwendet werden.
+
++
+image::../media/ilm_rules_page_with_edit_and_clone_enabled.png[Seite mit ILM-Regeln]
+
+. Wählen Sie eine Regel aus, die nicht verwendet wird, und wählen Sie *Bearbeiten*.
++
+Der Assistent zum Bearbeiten der ILM-Regel wird geöffnet.
+
++
+image::../media/edit_ilm_rule_step_1.png[Seite „ILM-Regel bearbeiten“]
+
+. Füllen Sie die Seiten des Assistenten zum Bearbeiten von ILM-Regeln aus, und befolgen Sie die Schritte für xref:access-create-ilm-rule-wizard.adoc[Erstellen einer ILM-Regel] Und xref:using-advanced-filters-in-ilm-rules.adoc[Verwenden von erweiterten Filtern], Nach Bedarf.
++
+Beim Bearbeiten einer ILM-Regel können Sie ihren Namen nicht ändern.
+
+. Wählen Sie *Speichern*.
++
+[NOTE]
+====
+Wenn Sie eine Regel bearbeiten, die in einer historischen Richtlinie verwendet wird, wird ein image:../media/icon_ilm_rule_historical.png["Verlauf der Symbol-ILM-Regel"] Wenn Sie die Richtlinie anzeigen, wird das Symbol für die Regel angezeigt. Dies bedeutet, dass die Regel zu einer historischen Regel geworden ist.
+
+image::../media/ilm_rule_historical.png[ILM-Regel „Historical“]
+
+====
+
+
+
+
+== Klonen einer ILM-Regel
+
+Eine Regel kann nicht bearbeitet werden, wenn sie in der vorgeschlagenen ILM-Richtlinie oder der aktiven ILM-Richtlinie verwendet wird. Stattdessen können Sie eine Regel klonen und alle erforderlichen Änderungen an der geklonten Kopie vornehmen. Anschließend können Sie die ursprüngliche Regel bei Bedarf aus der vorgeschlagenen Richtlinie entfernen und durch die geänderte Version ersetzen. Sie können keine ILM-Regel klonen, wenn sie mit StorageGRID Version 10.2 oder früher erstellt wurde.
+
+Bevor Sie einer aktiven ILM-Richtlinie eine geklonte Regel hinzufügen, sollten Sie beachten, dass eine Änderung der Anweisungen zur Platzierung eines Objekts zu einer erhöhten Systemauslastung führen kann.
+
+.Schritte
+. Wählen Sie *ILM* *Regeln*.
++
+Die Seite ILM-Regeln wird angezeigt.
+
++
+image::../media/ilm_rules_page_with_edit_and_clone_enabled.png[ILM-Rule-Seite]
+
+. Wählen Sie die ILM-Regel aus, die Sie klonen möchten, und wählen Sie *Clone*.
++
+Der Assistent für die Erstellung von ILM-Regeln wird geöffnet.
+
+. Aktualisieren Sie die geklonte Regel, indem Sie die Schritte zum Bearbeiten einer ILM-Regel und Verwenden erweiterter Filter ausführen.
++
+Beim Klonen einer ILM-Regel müssen Sie einen neuen Namen eingeben.
+
+. Wählen Sie *Speichern*.
++
+Die neue ILM-Regel wird erstellt.
+
+
+
+
+
+== Zeigen Sie die Aktivitätswarteschlange für ILM-Richtlinien an
+
+Sie können jederzeit die Anzahl der Objekte anzeigen, die sich in der Warteschlange befinden, die mit der ILM-Richtlinie bewertet werden sollen. Möglicherweise möchten Sie die ILM-Verarbeitungswarteschlange überwachen, um die System-Performance zu ermitteln. Eine große Warteschlange könnte darauf hindeuten, dass das System nicht mit der Aufnahmerate Schritt halten kann, dass die Last von den Client-Anwendungen zu groß ist oder dass ein anormaler Zustand vorhanden ist.
+
+.Schritte
+. Wählen Sie *Dashboard*.
++
+image::../media/grid_manager_dashboard.png[Dashboard in der Grid-Managementoberfläche]
+
+. Überwachen Sie den Abschnitt Information Lifecycle Management (ILM).
++
+Sie können das Fragezeichen auswählen image:../media/icon_nms_question.png["Fragezeichen-Symbol"] Um eine Beschreibung der Elemente in diesem Abschnitt anzuzeigen.
+
+

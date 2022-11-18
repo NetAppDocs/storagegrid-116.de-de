@@ -1,0 +1,79 @@
+---
+permalink: s3/put-bucket-consistency-request.html 
+sidebar: sidebar 
+keywords: S3 REST API, S3 operations, PUT bucket consistency request 
+summary: In der PUT Bucket-Konsistenzanforderung können Sie die Konsistenzstufe für Operationen angeben, die in einem Bucket durchgeführt werden. 
+---
+= PUT Bucket-Konsistenzanforderung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In der PUT Bucket-Konsistenzanforderung können Sie die Konsistenzstufe für Operationen angeben, die in einem Bucket durchgeführt werden.
+
+Die standardmäßigen Konsistenzkontrollen garantieren „Read-after-Write“ für neu erstellte Objekte.
+
+Sie haben die s3:PutBucketConsistency-Berechtigung, oder als Account-Root, um diesen Vorgang abzuschließen.
+
+
+
+== Anfrage
+
+Der `x-ntap-sg-consistency` Parameter muss einen der folgenden Werte enthalten:
+
+|===
+| Konsistenzkontrolle | Beschreibung 
+
+
+ a| 
+Alle
+ a| 
+Alle Nodes erhalten die Daten sofort, sonst schlägt die Anfrage fehl.
+
+
+
+ a| 
+Stark global
+ a| 
+Garantierte Konsistenz bei Lese-nach-Schreibvorgängen für alle Client-Anfragen an allen Standorten.
+
+
+
+ a| 
+Stark vor Ort
+ a| 
+Garantiert Konsistenz bei Lese-nach-Schreibvorgängen für alle Client-Anfragen innerhalb eines Standorts.
+
+
+
+ a| 
+Read-after-New-Write-Funktion
+ a| 
+(Standard) konsistente Lese-/Schreibvorgänge für neue Objekte und eventuelle Konsistenz bei Objekt-Updates. Hochverfügbarkeit und garantierte Datensicherung Am ehesten entspricht die Konsistenzgarantie von Amazon S3.
+
+*Hinweis:* Wenn Ihre Anwendung HEAD Requests für Objekte verwendet, die nicht vorhanden sind, erhalten Sie möglicherweise eine hohe Anzahl von 500 internen Serverfehlern, wenn ein oder mehrere Speicherknoten nicht verfügbar sind. Um diese Fehler zu vermeiden, setzen Sie das Consistency Control auf „`available`“, es sei denn, Sie benötigen Konsistenzgarantien ähnlich wie Amazon S3.
+
+
+
+ a| 
+Verfügbar (eventuelle Konsistenz für DEN HAUPTBETRIEB)
+ a| 
+Verhält sich wie die Konsistenzstufe „`read-after-New-write`“, bietet aber nur eventuelle Konsistenz für DEN KOPFBETRIEB. Bietet höhere Verfügbarkeit FÜR HEAD-Operationen als „`read-after-New-write`“, wenn Storage Nodes nicht verfügbar sind. Unterschied zu Amazon S3 Konsistenzgarantien nur für HEAD-Operationen.
+
+|===
+*Hinweis:* im Allgemeinen sollten Sie den Wert der Consistency consistency consistency control "`read-after-New-write`" verwenden. Wenn Anforderungen nicht korrekt funktionieren, ändern Sie das Verhalten des Anwendungs-Clients, wenn möglich. Oder konfigurieren Sie den Client so, dass für jede API-Anforderung das Consistency Control angegeben wird. Legen Sie die Consistency Control auf Bucket-Ebene nur als letztes Resort fest.
+
+
+
+== Anforderungsbeispiel
+
+[source, subs="specialcharacters,quotes"]
+----
+PUT /bucket?x-ntap-sg-consistency=strong-global HTTP/1.1
+Date: _date_
+Authorization: _authorization string_
+Host: _host_
+----
+xref:consistency-controls.adoc[Konsistenzkontrollen]

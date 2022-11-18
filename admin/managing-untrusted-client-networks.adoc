@@ -1,0 +1,41 @@
+---
+permalink: admin/managing-untrusted-client-networks.html 
+sidebar: sidebar 
+keywords: untrusted client network 
+summary: Wenn Sie ein Client-Netzwerk verwenden, können Sie StorageGRID vor feindlichen Angriffen schützen, indem Sie eingehenden Client-Datenverkehr nur auf explizit konfigurierten Endpunkten akzeptieren. 
+---
+= Verwaltung von nicht vertrauenswürdigen Client-Netzwerken: Übersicht
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie ein Client-Netzwerk verwenden, können Sie StorageGRID vor feindlichen Angriffen schützen, indem Sie eingehenden Client-Datenverkehr nur auf explizit konfigurierten Endpunkten akzeptieren.
+
+Standardmäßig ist das Client-Netzwerk auf jedem Grid-Knoten _Trusted_. Das heißt, StorageGRID vertraut standardmäßig eingehende Verbindungen zu jedem Grid-Knoten auf allen verfügbaren externen Ports (siehe Informationen über externe Kommunikation in xref:../network/index.adoc[Netzwerkrichtlinien]).
+
+Sie können die Bedrohung durch feindliche Angriffe auf Ihrem StorageGRID-System verringern, indem Sie angeben, dass das Client-Netzwerk auf jedem Knoten _unvertrauenswürdig_ ist. Wenn das Client-Netzwerk eines Node nicht vertrauenswürdig ist, akzeptiert der Knoten nur eingehende Verbindungen an Ports, die explizit als Load Balancer-Endpunkte konfiguriert sind. Siehe xref:configuring-load-balancer-endpoints.adoc[Konfigurieren von Load Balancer-Endpunkten].
+
+
+
+== Beispiel 1: Der Gateway-Node akzeptiert nur HTTPS-S3-Anforderungen
+
+Angenommen, ein Gateway-Node soll den gesamten eingehenden Datenverkehr im Client-Netzwerk mit Ausnahme von HTTPS S3-Anforderungen ablehnen. Sie würden folgende allgemeine Schritte durchführen:
+
+. Konfigurieren Sie auf der Seite Load Balancer Endpoints einen Endpunkt für den Load Balancer für S3 über HTTPS am Port 443.
+. Geben Sie auf der Seite nicht vertrauenswürdige Clientnetzwerke an, dass das Client-Netzwerk auf dem Gateway-Node nicht vertrauenswürdig ist.
+
+
+Nachdem Sie Ihre Konfiguration gespeichert haben, wird der gesamte eingehende Datenverkehr im Client-Netzwerk des Gateway-Knotens außer HTTPS-S3-Anfragen auf Port 443- und ICMP-Echo-(Ping-)Anfragen verworfen.
+
+
+
+== Beispiel 2: Storage-Node sendet Anforderungen von S3-Plattform-Services
+
+Angenommen, Sie möchten den Datenverkehr des Outbound-S3-Plattformdienstes von einem Speicherknoten aktivieren, jedoch eingehende Verbindungen zu diesem Storage-Node im Client-Netzwerk verhindern. Sie würden diesen allgemeinen Schritt durchführen:
+
+* Geben Sie auf der Seite nicht vertrauenswürdige Clientnetzwerke an, dass das Client-Netzwerk auf dem Speicherknoten nicht vertrauenswürdig ist.
+
+
+Nachdem Sie Ihre Konfiguration gespeichert haben, akzeptiert der Speicherknoten keinen eingehenden Datenverkehr im Client-Netzwerk mehr, aber er erlaubt weiterhin ausgehende Anfragen an Amazon Web Services.

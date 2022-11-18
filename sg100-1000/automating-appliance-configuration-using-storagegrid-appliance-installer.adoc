@@ -1,0 +1,102 @@
+---
+permalink: sg100-1000/automating-appliance-configuration-using-storagegrid-appliance-installer.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, automate, automating, automation, automatic, configuration, configure, appliance installer 
+summary: Sie können die Konfiguration einer Appliance mithilfe einer JSON-Datei mit den Konfigurationsinformationen automatisieren. Sie laden die Datei mithilfe des StorageGRID-Appliance-Installationsprogramms hoch. 
+---
+= Automatisieren Sie die Appliance-Konfiguration mit dem StorageGRID Appliance Installer
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Konfiguration einer Appliance mithilfe einer JSON-Datei mit den Konfigurationsinformationen automatisieren. Sie laden die Datei mithilfe des StorageGRID-Appliance-Installationsprogramms hoch.
+
+.Was Sie und#8217;ll benötigen
+* Ihr Gerät muss mit der neuesten Firmware ausgestattet sein, die mit StorageGRID 11.5 oder höher kompatibel ist.
+* Sie müssen mit dem Installationsprogramm für StorageGRID-Geräte auf der Appliance verbunden sein, die Sie mit einem konfigurieren xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+
+
+Sie können Appliance-Konfigurationsaufgaben automatisieren, z. B. die Konfiguration folgender Komponenten:
+
+* IP-Adressen für Grid-Netzwerk, Admin-Netzwerk und Client-Netzwerk
+* BMC Schnittstelle
+* Netzwerkverbindungen
++
+** Port Bond-Modus
+** Netzwerk-Bond-Modus
+** Verbindungsgeschwindigkeit
+
+
+
+
+Die Konfiguration Ihrer Appliance mit einer hochgeladenen JSON-Datei ist häufig effizienter als die manuelle Ausführung der Konfiguration mit mehreren Seiten im StorageGRID-Appliance-Installationsprogramm, insbesondere wenn Sie viele Knoten konfigurieren müssen. Sie müssen die Konfigurationsdatei für jeden Knoten einzeln anwenden.
+
+
+NOTE: Erfahrene Benutzer, die sowohl die Installation als auch die Konfiguration ihrer Appliances automatisieren möchten, können dies tun xref:automating-installation-configuration-appliance-nodes-configure-sga-py-script.adoc[Verwenden Sie das Skript configure-sga.py].
+
+.Schritte
+. Generieren Sie die JSON-Datei mit einer der folgenden Methoden:
++
+** Der https://configbuilder.netapp.com/["ConfigBuilder-Applikation"^].
+** Der xref:automating-installation-configuration-appliance-nodes-configure-sga-py-script.adoc[configure-sga.py Konfigurationsskript für die Appliance]. Sie können das Skript vom Installationsprogramm für StorageGRID-Geräte herunterladen (*Hilfe* *Konfigurationsskript für Geräte*).
++
+Die Node-Namen in der JSON-Datei müssen die folgenden Anforderungen erfüllen:
+
++
+*** Muss ein gültiger Hostname mit mindestens 1 und nicht mehr als 32 Zeichen sein
+*** Kann Buchstaben, Zahlen und Bindestriche verwenden
+*** Ein Bindestrich darf nicht beginnen oder enden
+*** Darf nicht nur Zahlen enthalten
++
+
+IMPORTANT: Stellen Sie sicher, dass die Node-Namen (die Top-Level-Namen) in der JSON-Datei eindeutig sind, oder Sie können mit der JSON-Datei nicht mehr als einen Node konfigurieren.
+
+
+
+
+
+. Wählen Sie *Erweitert* *Gerätekonfiguration Aktualisieren*.
++
+Die Seite Gerätekonfiguration aktualisieren wird angezeigt.
+
++
+image::../media/update_appliance_configuration.png[Aktualisieren Sie die Konfigurationsseite für die Appliance]
+
+. Wählen Sie die JSON-Datei mit der Konfiguration aus, die Sie hochladen möchten.
++
+.. Wählen Sie *Durchsuchen*.
+.. Suchen und wählen Sie die Datei aus.
+.. Wählen Sie *Offen*.
++
+Die Datei wird hochgeladen und validiert. Wenn der Validierungsprozess abgeschlossen ist, wird der Dateiname neben einem grünen Häkchen angezeigt.
+
++
+
+IMPORTANT: Möglicherweise verlieren Sie die Verbindung zur Appliance, wenn die Konfiguration aus der JSON-Datei Abschnitte für „Link_config“, „Netzwerke“ oder beide enthält. Wenn Sie nicht innerhalb einer Minute eine Verbindung hergestellt haben, geben Sie die Appliance-URL mithilfe einer der anderen IP-Adressen, die der Appliance zugewiesen sind, erneut ein.
+
++
+image::../media/update_appliance_configuration_valid_json.png[Aktualisieren Sie die Appliance-Konfiguration JSON hochgeladen]
+
++
+Das Dropdown-Menü *Node Name* enthält die in der JSON-Datei definierten Node-Namen auf oberster Ebene.
+
++
+
+NOTE: Wenn die Datei nicht gültig ist, wird der Dateiname rot angezeigt und eine Fehlermeldung in einem gelben Banner angezeigt. Die ungültige Datei wird nicht auf die Appliance angewendet. Sie können ConfigBuilder verwenden, um sicherzustellen, dass Sie über eine gültige JSON-Datei verfügen.
+
+
+
+. Wählen Sie einen Knoten aus der Liste im Dropdown-Menü *Knotenname* aus.
++
+Die Schaltfläche *JSON-Konfiguration anwenden* ist aktiviert.
+
++
+image::../media/update_appliance_configuration_apply_button_enabled.png[Schaltfläche „Appliance-Konfiguration aktualisieren anwenden“ aktiviert]
+
+. Wählen Sie *JSON-Konfiguration anwenden*.
++
+Die Konfiguration wird auf den ausgewählten Knoten angewendet.
+
+

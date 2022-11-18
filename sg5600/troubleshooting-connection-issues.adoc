@@ -1,0 +1,48 @@
+---
+permalink: sg5600/troubleshooting-connection-issues.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, troubleshoot, troubleshooting, connection 
+summary: Wenn während der Installation der StorageGRID-Appliance Verbindungsprobleme auftreten, führen Sie die hier aufgeführten Korrekturmaßnahmen durch. 
+---
+= Fehlerbehebung bei Verbindungsproblemen (SG5600)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn während der Installation der StorageGRID-Appliance Verbindungsprobleme auftreten, führen Sie die hier aufgeführten Korrekturmaßnahmen durch.
+
+
+
+== Die Verbindung zur StorageGRID Appliance kann nicht über das Netzwerk hergestellt werden
+
+Wenn Sie keine Verbindung zur Appliance herstellen können, liegt möglicherweise ein Netzwerkproblem vor, oder die Hardwareinstallation wurde möglicherweise nicht erfolgreich abgeschlossen.
+
+* *Ausgabe*
++
+Sie können keine Verbindung zum Gerät herstellen.
+
+* *Ursache*
++
+Dies kann auftreten, wenn ein Netzwerkproblem auftritt oder die Hardwareinstallation nicht erfolgreich abgeschlossen wurde.
+
+* *Korrekturmaßnahmen*
++
+.. Pingen des Geräts: +
+`*ping _E5600_controller_IP_*`
+.. Öffnen Sie den StorageGRID Appliance Installer, indem Sie einen Browser öffnen und Folgendes eingeben: +
+`*https://_Management_Port_IP_:8443*`
++
+Geben Sie für Management_Port_IP die IP-Adresse für Management-Port 1 auf dem E5600SG-Controller ein (während der physischen Installation bereitgestellt).
+
+.. Klicken Sie auf *Admin-Netzwerk konfigurieren*, und überprüfen Sie die IP.
+.. Wenn Sie eine Antwort vom Ping erhalten, überprüfen Sie, ob Port 8443 in den Firewalls geöffnet ist.
+.. Starten Sie die Appliance neu.
+.. Aktualisieren Sie die Installationsseite.
+.. Wenn das Verbindungsproblem dadurch nicht behoben werden kann, wenden Sie sich an den technischen Support über die NetApp Support Site unter http://mysupport.netapp.com/["mysupport.netapp.com"^].
+
+
+
+
+xref:e5600sg-controller-seven-segment-display-codes.adoc[E5600SG-Controller-Anzeigecodes für sieben Segmente]

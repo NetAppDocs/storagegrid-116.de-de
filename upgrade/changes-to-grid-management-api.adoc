@@ -1,0 +1,88 @@
+---
+permalink: upgrade/changes-to-grid-management-api.html 
+sidebar: sidebar 
+keywords: grid management api, api, api version, swagger, rest api 
+summary: StorageGRID 11.6 verwendet Version 3 der Grid Management API. Version 3 depretiert Version 2; jedoch werden Version 1 und Version 2 weiterhin unterstützt. 
+---
+= Änderungen an der Grid-Management-API
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+StorageGRID 11.6 verwendet Version 3 der Grid Management API. Version 3 depretiert Version 2; jedoch werden Version 1 und Version 2 weiterhin unterstützt.
+
+
+IMPORTANT: Sie können weiterhin Version 1 und Version 2 der Management-API mit StorageGRID 11.6 verwenden. Die Unterstützung für diese Versionen der API wird jedoch in einem zukünftigen Release von StorageGRID entfernt. Nach dem Upgrade auf StorageGRID 11.6 können die veralteten v1- und v2-APIs mit dem deaktiviert werden `PUT /grid/config/management` API:
+
+Weitere Informationen finden Sie unter xref:../admin/using-grid-management-api.adoc[Verwenden Sie die Grid-Management-API].
+
+
+
+== Die Swagger-Dokumente können für private API-Operationen verwendet werden
+
+Sie können jetzt über den Grid Manager auf die Swagger-Dokumentation für die private API zugreifen. Um die verfügbaren Vorgänge anzuzeigen, wählen Sie das Hilfesymbol für den Grid Manager aus, und wählen Sie *API-Dokumentation* aus. Wählen Sie dann auf der StorageGRID Management API-Seite *Gehe zur privaten API-Dokumentation* aus.
+
+StorageGRID Private APIs können ohne vorherige Ankündigung geändert werden. Private StorageGRID-Endpunkte ignorieren auch die API-Version der Anforderung.
+
+
+
+== Veraltete alarmbasierte APIs
+
+Die Version 11.6 depretiert alle Alarm-basierten APIs. Die folgenden APIs sind von dieser Änderung betroffen:
+
+* `GET /grid/alarms`: Völlig veraltet
+* `GET /grid/health/topology`: Völlig veraltet
+* `GET /grid/health`: Das `alarm-counts` Der Abschnitt der Antwort ist veraltet
+
+
+
+
+== S3-Zugriffsschlüssel können importiert werden
+
+Sie können jetzt die Grid Management API verwenden, um S3-Zugriffsschlüssel für Mandantenbenutzer zu importieren. Sie können beispielsweise Zugriffsschlüssel von einem anderen S3-Provider zu StorageGRID migrieren oder diese Funktion verwenden, um Benutzer-Anmeldedaten zwischen den Grids identisch zu halten.
+
+
+IMPORTANT: Wenn diese Funktion aktiviert ist, hat jeder Grid Manager-Benutzer mit der Berechtigung zum Ändern des Mandanten-Root-Passworts vollständigen Zugriff auf Mandantendaten. Deaktivieren Sie diese Funktion unmittelbar nach der Verwendung zum Schutz von Mandantendaten.
+
+
+
+== Neue Konto-Operationen
+
+Drei neue `grid/account` API-Operationen wurden hinzugefügt:
+
+* `POST /grid​/account-enable-s3-key-import`: Diese Anforderung ermöglicht die Funktion S3-Anmeldeinformationen importieren. Sie müssen über die Root-Zugriffsberechtigung verfügen, um diese Funktion zu aktivieren.
+* `POST /grid​/accounts​/{id}​/users​/{user_id}​/s3-access-keys`: Diese Anfrage importiert S3-Anmeldeinformationen für einen bestimmten Benutzer in einem Mandantenkonto. Sie müssen über die Berechtigung Root-Zugriff oder das Ändern des Root-Passworts für Mandanten verfügen, und Sie müssen die Benutzer-ID und die Mandanten-Konto-ID kennen.
+* `POST /grid​/account-disable-s3-key-import`: Diese Anforderung deaktiviert die Funktion S3-Anmeldeinformationen importieren. Sie müssen über die Berechtigung Root Access verfügen, um diese Funktion zu deaktivieren.
+
+
+
+
+== PATCH-Methode ist veraltet
+
+Die PATCH-Methode wurde jetzt veraltet und wird in einer zukünftigen Version entfernt. Führen Sie bei Bedarf einen PUT-Vorgang durch, um eine Ressource zu ersetzen, anstatt einen PATCH-Vorgang zum Ändern der Ressource zu verwenden.
+
+
+
+== Ergänzung zum Grid/Protokollen/Erfassungs-Endpunkt
+
+Dem wurden vier boolesche Werte hinzugefügt `grid/logs/collect` endpunkt:
+
+* `applicationLogs`: Anwendungsspezifische Protokolle, die der technische Support am häufigsten für die Fehlersuche verwendet. Die gesammelten Protokolle sind eine Teilmenge der verfügbaren Anwendungsprotokolle. Die Standardeinstellung lautet `true`.
+* `auditLogs`: Protokolle, die die während des normalen Systembetriebs erzeugten Audit-Meldungen enthalten. Die Standardeinstellung lautet `true`.
+* `networkTrace`: Protokolle zum Debuggen von Netzwerken verwendet. Die Standardeinstellung lautet `false`.
+* `prometheusDatabase`: Zeitreihenkennzahlen aus den Diensten auf allen Knoten. Die Standardeinstellung lautet `false`.
+
+
+
+
+== Neuer Endpunkt für ​node-Details /grid​/Service-ids
+
+Das neue `​/grid​/service-ids` endpoint bietet eine Zuordnung von Node-UUIDs zu den zugeordneten Node-Namen, Service-IDs und Servicetypen.
+
+
+
+== Kann Passwörter für die Grid-Node-Konsole abrufen
+
+Jetzt können Sie verwenden `POST ​/grid​/node-console-passwords` Um die Liste der Grid-Nodes und die zugehörigen Konsolenpasswörter abzurufen.

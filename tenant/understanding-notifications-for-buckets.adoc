@@ -1,0 +1,68 @@
+---
+permalink: tenant/understanding-notifications-for-buckets.html 
+sidebar: sidebar 
+keywords: s3 bucket event notification, sequencer key 
+summary: 'Sie können die Ereignisbenachrichtigung für einen S3-Bucket aktivieren, wenn StorageGRID Benachrichtigungen zu bestimmten Ereignissen an einen Amazon Simple Notification Service \ (SNS\) als Ziel senden soll.' 
+---
+= Informieren Sie sich über Benachrichtigungen für Buckets
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Ereignisbenachrichtigung für einen S3-Bucket aktivieren, wenn StorageGRID Benachrichtigungen zu bestimmten Ereignissen an einen Amazon Simple Notification Service (SNS) als Ziel senden soll.
+
+Das können Sie xref:configuring-event-notifications.adoc[Konfigurieren Sie Ereignisbenachrichtigungen] Durch Verknüpfung von XML für die Benachrichtigungskonfiguration mit einem Quell-Bucket. Die Benachrichtigungskonfiguration-XML folgt den S3-Konventionen für die Konfiguration von Bucket-Benachrichtigungen, wobei das Ziel-SNS-Thema als URN eines Endpunkts angegeben ist.
+
+Ereignisbenachrichtigungen werden auf dem Quell-Bucket erstellt, wie in der Benachrichtigungskonfiguration angegeben, und werden an das Ziel übergeben. Wenn ein Ereignis, das einem Objekt zugeordnet ist, erfolgreich ist, wird eine Benachrichtigung über dieses Ereignis erstellt und für die Bereitstellung in die Warteschlange verschoben.
+
+Die Einzigartigkeit und Bestellung von Benachrichtigungen ist nicht garantiert. Möglicherweise werden mehrere Benachrichtigungen zu einem Ereignis an das Ziel übermittelt, da die Maßnahmen zur Sicherstellung des Liefererfolgs durchgeführt werden. Da die Bereitstellung asynchron ist, entspricht die Reihenfolge der Benachrichtigungen am Ziel nicht der Reihenfolge der Ereignisse auf dem Quell-Bucket. Dies gilt insbesondere für Vorgänge, die von unterschiedlichen StorageGRID-Standorten stammen. Sie können das verwenden `sequencer` Schlüssel in der Ereignismeldung, um die Reihenfolge der Ereignisse für ein bestimmtes Objekt zu bestimmen, wie in der Amazon S3-Dokumentation beschrieben.
+
+
+
+== Unterstützte Benachrichtigungen und Meldungen
+
+Die StorageGRID-Ereignisbenachrichtigung folgt der Amazon S3-API und unterliegt folgenden Einschränkungen:
+
+* Sie können keine Benachrichtigung für die folgenden Ereignistypen konfigurieren. Diese Ereignistypen werden *nicht* unterstützt.
++
+** `s3:ReducedRedundancyLostObject`
+** `s3:ObjectRestore:Completed`
+
+
+* Von StorageGRID gesendete Ereignisbenachrichtigungen verwenden das Standard-JSON-Format, mit der Ausnahme, dass sie einige Schlüssel nicht enthalten und bestimmte Werte für andere verwenden, wie in der Tabelle dargestellt:
+
+
+[cols="1a,2a"]
+|===
+| Schlüsselname | Wert von StorageGRID 
+
+
+ a| 
+EventSource
+ a| 
+`sgws:s3`
+
+
+
+ a| 
+AwsRegion
+ a| 
+Nicht enthalten
+
+
+
+ a| 
+X-amz-id-2
+ a| 
+Nicht enthalten
+
+
+
+ a| 
+arn
+ a| 
+`urn:sgws:s3:::bucket_name`
+
+|===

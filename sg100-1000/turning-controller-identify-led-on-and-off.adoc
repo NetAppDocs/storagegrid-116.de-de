@@ -1,0 +1,46 @@
+---
+permalink: sg100-1000/turning-controller-identify-led-on-and-off.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, locate, find, locating, finding, identify, blue led, blue light 
+summary: Die blaue Identify-LED auf der Vorder- und Rückseite des Controllers kann eingeschaltet werden, um das Gerät in einem Datacenter zu lokalisieren. 
+---
+= Ein- und Ausschalten der Controller-ID-LED
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die blaue Identify-LED auf der Vorder- und Rückseite des Controllers kann eingeschaltet werden, um das Gerät in einem Datacenter zu lokalisieren.
+
+Sie müssen über die BMC-IP-Adresse des Controllers verfügen, den Sie identifizieren möchten.
+
+.Schritte
+. Greifen Sie auf die BMC-Schnittstelle des Controllers zu.
+. Wählen Sie *Server Identify* Aus.
+. Wählen Sie *EIN* und dann *Aktion durchführen* aus.
++
+image::../media/sg6060_service_identify_turn_on.jpg[Schalten Sie die Controller Identify LED von BMC ein]
+
+
+
+Die blaue LED-Leuchte an der Vorder- (Abbildung) und Rückseite des Controllers.
+
+image::../media/sg6060_front_panel_service_led_on.jpg[Vordere Identify-LED - ein]
+
+
+NOTE: Wenn eine Blende auf dem Controller installiert ist, kann es schwierig sein, die vordere Identify-LED zu erkennen.
+
+Um den Controller auszuschalten, identifizieren Sie die LED:
+
+* Drücken Sie den Schalter Identifikation LED an der Vorderseite des Controllers.
+* Wählen Sie auf der BMC-Controller-Schnittstelle *Server Identify*, wählen Sie *AUS* und dann *Aktion* ausführen.
+
+
+Die blauen LEDs an der Vorder- und der Rückseite des Controllers werden ausgeschaltet.
+
+image::../media/sg6060_front_panel_service_led_off.jpg[Vordere Identify-LED - aus]
+
+xref:locating-controller-in-data-center.adoc[Controller im Datacenter finden]
+
+xref:accessing-bmc-interface-sg1000.adoc[Greifen Sie auf die BMC-Schnittstelle zu]

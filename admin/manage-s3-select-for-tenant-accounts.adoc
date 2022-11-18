@@ -1,0 +1,47 @@
+---
+permalink: admin/manage-s3-select-for-tenant-accounts.html 
+sidebar: sidebar 
+keywords: s3 select, selectobjectcontent, best practices 
+summary: Bestimmte S3-Mandanten können S3 Select verwenden, um SelectObjectContent-Anfragen für einzelne Objekte auszulösen. 
+---
+= Management von S3 Select für Mandantenkonten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bestimmte S3-Mandanten können S3 Select verwenden, um SelectObjectContent-Anfragen für einzelne Objekte auszulösen.
+
+S3 Select bietet eine effiziente Möglichkeit, große Datenmengen zu durchsuchen, ohne eine Datenbank und zugehörige Ressourcen bereitstellen zu müssen, um die Suche zu ermöglichen. Es senkt auch die Kosten und die Latenz beim Abrufen der Daten.
+
+
+
+== Was ist S3 Select?
+
+Mit S3 Select können S3-Clients SelectObjectContent-Anfragen verwenden, um nur die von einem Objekt benötigten Daten zu filtern und abzurufen. Die StorageGRID Implementierung von S3 Select enthält eine Untergruppe von S3 Select-Befehlen und -Funktionen.
+
+
+
+== Überlegungen und Anforderungen bei der Verwendung von S3 Select
+
+StorageGRID erfordert für S3 Select-Abfragen Folgendes:
+
+* Das Objekt, das Sie abfragen möchten, ist im CSV-Format oder eine komprimierte Datei mit GZIP oder BZIP2, die eine Datei im CSV-Format enthält.
+* Mandanten müssen vom Grid-Administrator die S3-Select-Fähigkeit erhalten. Wählen Sie *S3-Auswahl zulassen* aus, wann xref:creating-tenant-account.adoc[Erstellen eines Mandanten] Oder xref:editing-tenant-account.adoc[Bearbeiten eines Mandanten].
+* Die SelectObjectContent-Anforderung muss an ein gesendet werden xref:configuring-load-balancer-endpoints.adoc[Endpunkt des StorageGRID-Load-Balancer]. Die vom Endpunkt verwendeten Admin- und Gateway-Nodes müssen SG100- oder SG1000-Appliance-Nodes oder VMware-basierte Software-Nodes sein.
+
+
+Beachten Sie die folgenden Einschränkungen:
+
+* Bare-Metal-Load-Balancer-Nodes werden nicht unterstützt.
+* Abfragen können nicht direkt an Speicherknoten gesendet werden.
+* Abfragen, die über den veralteten CLB-Dienst gesendet wurden, werden nicht unterstützt.
+
+
+
+IMPORTANT: SelectObjectContent-Anforderungen können die Load Balancer-Performance für alle S3-Clients und alle Mandanten reduzieren. Aktivieren Sie diese Funktion nur bei Bedarf und nur für vertrauenswürdige Mandanten.
+
+Siehe xref:../s3/use-s3-select.adoc[Anweisungen zur Verwendung von S3 Select].
+
+Um sie anzuzeigen xref:../monitor/reviewing-support-metrics.adoc[Grafana-Diagramme] Für S3 Wählen Sie im Grid Manager Operationen im Zeitdauer aus, wählen Sie im Grid Manager * SUPPORT* *Tools* *Metrics* aus.

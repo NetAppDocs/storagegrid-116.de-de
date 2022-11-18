@@ -1,0 +1,134 @@
+---
+permalink: s3/get-object.html 
+sidebar: sidebar 
+keywords: get object 
+summary: Sie können die S3-GET-Objektanfrage verwenden, um ein Objekt aus einem S3-Bucket abzurufen. 
+---
+= GET Objekt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die S3-GET-Objektanfrage verwenden, um ein Objekt aus einem S3-Bucket abzurufen.
+
+
+
+== ABRUFEN von Objekten und Objekten mit mehreren Teilen
+
+Sie können das verwenden `partNumber` Parameter anfordern, um einen bestimmten Teil eines mehrteiligen oder segmentierten Objekts abzurufen. Der `x-amz-mp-parts-count` Das Antwortelement gibt an, wie viele Teile das Objekt hat.
+
+Sie können festlegen `partNumber` Zu 1 für segmentierte/mehrteilige Objekte und nicht segmentierte/nicht-mehrteilige Objekte; jedoch der `x-amz-mp-parts-count` Antwortelement wird nur für segmentierte oder mehrteilige Objekte zurückgegeben.
+
+
+
+== Kopfzeilen zur serverseitigen Verschlüsselung mit vom Kunden bereitgestellten Verschlüsselungsschlüsseln anfordern (SSE-C)
+
+Verwenden Sie alle drei Kopfzeilen, wenn das Objekt mit einem eindeutigen Schlüssel verschlüsselt ist, den Sie angegeben haben.
+
+* `x-amz-server-side-encryption-customer-algorithm`: Angabe `AES256`.
+* `x-amz-server-side-encryption-customer-key`: Geben Sie Ihren Verschlüsselungsschlüssel für das Objekt an.
+* `x-amz-server-side-encryption-customer-key-MD5`: Geben Sie den MD5-Digest des Verschlüsselungsschlüssels des Objekts an.
+
+
+
+IMPORTANT: Die von Ihnen zur Verfügung gelegten Schlüssel werden niemals gespeichert. Wenn Sie einen Verschlüsselungsschlüssel verlieren, verlieren Sie das entsprechende Objekt. Bevor Sie vom Kunden zur Sicherung von Objektdaten bereitgestellte Schlüssel verwenden, prüfen Sie die Überlegungen unter „`serverseitige Verschlüsselung verwenden`“.
+
+
+
+== UTF-8 Zeichen in Benutzermetadaten
+
+StorageGRID parst oder interpretiert die entgangenen UTF-8-Zeichen nicht in benutzerdefinierten Metadaten. ABFRAGEN für ein Objekt mit entgangenen UTF-8 Zeichen in benutzerdefinierten Metadaten WERDEN nicht zurückgegeben `x-amz-missing-meta` Kopfzeile, wenn der Schlüsselname oder -Wert nicht druckbare Zeichen enthält.
+
+
+
+== Nicht unterstützte Anforderungsüberschrift
+
+Die folgende Anforderungsüberschrift wird nicht unterstützt und kehrt zurück `XNotImplemented`:
+
+* `x-amz-website-redirect-location`
+
+
+
+
+== Versionierung
+
+Wenn A `versionId` unterressource wird nicht angegeben. Der Vorgang ruft die aktuellste Version des Objekts in einem versionierten Bucket ab. Wenn die aktuelle Version des Objekts eine Löschmarkierung ist, wird mit dem ein Status „`not found`“ zurückgegeben `x-amz-delete-marker` Antwortkopfzeile auf gesetzt `true`.
+
+
+
+== Verhalten DES GET Object für Cloud-Storage-Pool-Objekte
+
+Wenn ein Objekt in einem Cloud-Storage-Pool gespeichert wurde (siehe Anweisungen zum Managen von Objekten mit Information Lifecycle Management), hängt das Verhalten einer GET-Objektanforderung vom Status des Objekts ab. Weitere Informationen finden Sie unter „`HEAD Object`“.
+
+
+NOTE: Wenn ein Objekt in einem Cloud-Storage-Pool gespeichert ist und eine oder mehrere Kopien des Objekts auch im Grid vorhanden sind, werden GET-Objektanfragen versuchen, Daten aus dem Grid abzurufen, bevor sie aus dem Cloud-Storage-Pool abgerufen werden.
+
+|===
+| Status des Objekts | Verhalten VON GET Object 
+
+
+ a| 
+Objekt, das in StorageGRID aufgenommen wurde, durch ILM jedoch noch nicht evaluiert wurde, oder Objekt, das in einem herkömmlichen Storage-Pool gespeichert ist oder Erasure Coding verwendet
+ a| 
+`200 OK`
+
+Eine Kopie des Objekts wird abgerufen.
+
+
+
+ a| 
+Objekt in Cloud-Storage-Pool, ist aber noch nicht in einen Zustand übergegangen, der nicht abrufbar ist
+ a| 
+`200 OK`
+
+Eine Kopie des Objekts wird abgerufen.
+
+
+
+ a| 
+Das Objekt wurde in einen nicht aufrufbaren Zustand überführt
+ a| 
+`403 Forbidden`, `InvalidObjectState`
+
+Verwenden Sie eine Wiederherstellungsanforderung FÜR DAS OBJEKT NACH DEM Wiederherstellen, um das Objekt in einen aufrufbaren Zustand wiederherzustellen.
+
+
+
+ a| 
+Objekt wird aus einem nicht aufrufbaren Zustand wiederhergestellt
+ a| 
+`403 Forbidden`, `InvalidObjectState`
+
+Warten Sie, bis die Anforderung zur Wiederherstellung DES POSTOBJEKTS abgeschlossen ist.
+
+
+
+ a| 
+Das Objekt wird im Cloud-Storage-Pool vollständig wiederhergestellt
+ a| 
+`200 OK`
+
+Eine Kopie des Objekts wird abgerufen.
+
+|===
+
+
+== Mehrteilige oder segmentierte Objekte in einem Cloud Storage-Pool
+
+Wenn Sie ein mehrteilige Objekt hochgeladen StorageGRID oder ein großes Objekt in Segmente aufgeteilt haben, bestimmt StorageGRID, ob das Objekt im Cloud-Storage-Pool verfügbar ist, indem Sie eine Teilmenge der Teile oder Segmente des Objekts testen. In manchen Fällen wird eine GET Object-Anforderung möglicherweise falsch zurückgegeben `200 OK` Wenn bereits Teile des Objekts in einen nicht aufrufbaren Zustand überführt wurden oder Teile des Objekts noch nicht wiederhergestellt wurden.
+
+In diesen Fällen:
+
+* Die GET Object-Anforderung gibt möglicherweise einige Daten zurück, stoppt jedoch mitten durch die Übertragung.
+* Eine nachfolgende GET Object-Anforderung kann zurückgegeben werden `403 Forbidden`.
+
+
+xref:using-server-side-encryption.adoc[Serverseitige Verschlüsselung]
+
+xref:../ilm/index.adoc[Objektmanagement mit ILM]
+
+xref:post-object-restore.adoc[WIEDERHERSTELLUNG VON POSTOBJEKTEN]
+
+xref:s3-operations-tracked-in-audit-logs.adoc[S3-Vorgänge werden in Prüfprotokollen nachverfolgt]

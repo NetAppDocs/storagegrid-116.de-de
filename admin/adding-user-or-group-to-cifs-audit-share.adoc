@@ -1,0 +1,115 @@
+---
+permalink: admin/adding-user-or-group-to-cifs-audit-share.html 
+sidebar: sidebar 
+keywords: CIFS, add user to audit share, add group to audit share, ad authentication 
+summary: Sie können einen Benutzer oder eine Gruppe zu einer CIFS-Revisionsfreigabe hinzufügen, die in die AD-Authentifizierung integriert ist. 
+---
+= Fügen Sie einen Benutzer oder eine Gruppe zu einer CIFS-Revisionsfreigabe hinzu
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Benutzer oder eine Gruppe zu einer CIFS-Revisionsfreigabe hinzufügen, die in die AD-Authentifizierung integriert ist.
+
+.Was Sie und#8217;ll benötigen
+* Sie haben die `Passwords.txt` Datei mit dem Root-/Admin-Passwort (im GENANNTEN Paket verfügbar).
+* Sie haben die `Configuration.txt` Datei (im GENANNTEN Paket verfügbar).
+
+
+Das folgende Verfahren gilt für eine mit AD-Authentifizierung integrierte Audit-Freigabe.
+
+
+NOTE: Der Audit-Export über CIFS/Samba wurde veraltet und wird in einer zukünftigen StorageGRID-Version entfernt.
+
+.Schritte
+. Melden Sie sich beim primären Admin-Node an:
++
+.. Geben Sie den folgenden Befehl ein: `ssh admin@_primary_Admin_Node_IP_`
+.. Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+.. Geben Sie den folgenden Befehl ein, um zum Root zu wechseln: `su -`
+.. Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
++
+Wenn Sie als root angemeldet sind, ändert sich die Eingabeaufforderung von `$` Bis `#`.
+
+
+
+. Vergewissern Sie sich, dass alle Dienste den Status „ausgeführt“ oder „verifiziert“ aufweisen. Geben Sie Ein: `storagegrid-status`
++
+Wenn nicht alle Dienste ausgeführt oder verifiziert werden, beheben Sie Probleme, bevor Sie fortfahren.
+
+. Kehren Sie zur Befehlszeile zurück und drücken Sie *Strg*+*C*.
+. Starten Sie das CIFS-Konfigurationsprogramm: `config_cifs.rb`
++
+[listing]
+----
+
+---------------------------------------------------------------------
+| Shares                 | Authentication         | Config          |
+---------------------------------------------------------------------
+| add-audit-share        | set-authentication     | validate-config |
+| enable-disable-share   | set-netbios-name       | help            |
+| add-user-to-share      | join-domain            | exit            |
+| remove-user-from-share | add-password-server    |                 |
+| modify-group           | remove-password-server |                 |
+|                        | add-wins-server        |                 |
+|                        | remove-wins-server     |                 |
+---------------------------------------------------------------------
+----
+. Beginnen Sie mit dem Hinzufügen eines Benutzers oder einer Gruppe: `add-user-to-share`
++
+Eine nummerierte Liste der konfigurierten Audit-Shares wird angezeigt.
+
+. Wenn Sie dazu aufgefordert werden, geben Sie die Nummer für die Revisionsfreigabe ein (Audit-Export): `_audit_share_number_`
++
+Sie werden gefragt, ob Sie einem Benutzer oder einer Gruppe Zugriff auf diese Revisionsfreigabe gewähren möchten.
+
+. Wenn Sie dazu aufgefordert werden, fügen Sie einen Benutzer oder eine Gruppe hinzu: `user` Oder `group`
+. Wenn Sie zur Eingabe des Benutzer- oder Gruppennamens für diese AD-Revisionsfreigabe aufgefordert werden, geben Sie den Namen ein.
++
+Der Benutzer oder die Gruppe wird als schreibgeschützt für die Revisionsfreigabe sowohl im Betriebssystem des Servers als auch im CIFS-Dienst hinzugefügt. Die Samba-Konfiguration wird neu geladen, damit der Benutzer oder die Gruppe auf die Audit-Client-Freigabe zugreifen können.
+
+. Drücken Sie auf der entsprechenden Aufforderung *Enter*.
++
+Das CIFS-Konfigurationsprogramm wird angezeigt.
+
+. Wiederholen Sie diese Schritte für jeden Benutzer oder jede Gruppe, der Zugriff auf die Revisionsfreigabe hat.
+. Überprüfen Sie optional die Konfiguration: `validate-config`
++
+Die Dienste werden überprüft und angezeigt. Sie können die folgenden Meldungen ohne Bedenken ignorieren:
+
++
+** Kann die Datei /etc/samba/includes/cifs-interfaces.inc nicht finden
+** Kann die Datei /etc/samba/includes/cifs-filesystem.inc nicht finden
+** Kann die Datei /etc/samba/includes/cifs-custom-config.inc nicht finden
+** Kann die Datei /etc/samba/includes/cifs-shares.inc nicht finden
++
+... Wenn Sie dazu aufgefordert werden, drücken Sie *Enter*, um die Konfiguration des Audit-Clients anzuzeigen.
+... Drücken Sie auf der entsprechenden Aufforderung *Enter*.
+
+
+
+
+. Schließen Sie das CIFS-Konfigurationsprogramm: `exit`
+. Ermitteln Sie wie folgt, ob zusätzliche Audit-Shares aktiviert werden müssen:
++
+** Wenn es sich bei der StorageGRID-Implementierung um einen einzelnen Standort handelt, mit dem nächsten Schritt fortfahren.
+** Wenn die StorageGRID-Bereitstellung Admin-Nodes an anderen Standorten umfasst, aktivieren Sie die folgenden Audit-Freigaben nach Bedarf:
++
+... Remote-Anmeldung beim Admin-Node eines Standorts:
++
+.... Geben Sie den folgenden Befehl ein: `ssh admin@_grid_node_IP_`
+.... Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+.... Geben Sie den folgenden Befehl ein, um zum Root zu wechseln: `su -`
+.... Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+
+
+... Wiederholen Sie diese Schritte, um die Revisionsfreigaben für jeden Admin-Knoten zu konfigurieren.
+... Schließen Sie die sichere Remote-Shell-Anmeldung am Remote-Admin-Node: `exit`
+
+
+
+
+. Melden Sie sich aus der Befehlsshell ab: `exit`
+

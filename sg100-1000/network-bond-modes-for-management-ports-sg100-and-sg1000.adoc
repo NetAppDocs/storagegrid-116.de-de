@@ -1,0 +1,47 @@
+---
+permalink: sg100-1000/network-bond-modes-for-management-ports-sg100-and-sg1000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, Network bond, Network bonding, Network bond mode, Network-bond mode, independent, active-backup, active backup, management, management port, management ports 
+summary: Für die beiden 1-GbE-Management-Ports auf der Services-Appliance können Sie den unabhängigen Netzwerk-Bond-Modus oder den aktiv-Backup-Netzwerk-Bond-Modus wählen, um eine Verbindung mit dem optionalen Admin-Netzwerk herzustellen. 
+---
+= Network Bond-Modi für Management-Ports
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Für die beiden 1-GbE-Management-Ports auf der Services-Appliance können Sie den unabhängigen Netzwerk-Bond-Modus oder den aktiv-Backup-Netzwerk-Bond-Modus wählen, um eine Verbindung mit dem optionalen Admin-Netzwerk herzustellen.
+
+*SG100 Netzwerkverwaltungs-Ports*
+
+image::../media/sg100_bonded_management_ports.png[sg100 verbundene Management-Ports]
+
+*SG1000 Netzwerk-Management-Ports*
+
+image::../media/sg1000_bonded_management_ports.png[SG1000 Netzwerk-Management-Ports]
+
+Im Independent-Modus ist nur der Management-Port links mit dem Admin-Netzwerk verbunden. Dieser Modus stellt keinen redundanten Pfad bereit. Der Management Port auf der rechten Seite ist nicht verbunden und für temporäre lokale Verbindungen verfügbar (verwendet IP-Adresse 169.254.0.1)
+
+Im Active-Backup-Modus sind beide Management-Ports mit dem Admin-Netzwerk verbunden. Es ist jeweils nur ein Port aktiv. Wenn der aktive Port ausfällt, stellt sein Backup-Port automatisch eine Failover-Verbindung bereit. Die Verbindung dieser beiden physischen Ports zu einem logischen Management-Port bietet einen redundanten Pfad zum Admin-Netzwerk.
+
+
+NOTE: Wenn Sie eine temporäre lokale Verbindung zur Services-Appliance herstellen müssen, wenn die 1-GbE-Management-Ports für den aktiv-Backup-Modus konfiguriert sind, entfernen Sie die Kabel von beiden Management-Ports, schließen Sie das temporäre Kabel an den Verwaltungsport rechts an und greifen Sie über die IP-Adresse 169.254.0 auf das Gerät zu.
+
+|===
+| Legende | Netzwerk-Bond-Modus 
+
+
+ a| 
+A
+ a| 
+Aktiv-Backup-Modus. Beide Management-Ports sind mit einem logischen Management-Port verbunden, der mit dem Admin-Netzwerk verbunden ist.
+
+
+
+ a| 
+ICH
+ a| 
+Unabhängiger Modus. Der Port auf der linken Seite ist mit dem Admin-Netzwerk verbunden. Der Anschluss rechts ist für temporäre lokale Verbindungen verfügbar (IP-Adresse 169.254.0.1).
+
+|===

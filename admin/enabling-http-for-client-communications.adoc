@@ -1,0 +1,43 @@
+---
+permalink: admin/enabling-http-for-client-communications.html 
+sidebar: sidebar 
+keywords: enable http, clb connections, storage node connections 
+summary: Standardmäßig verwenden Client-Anwendungen das HTTPS-Netzwerkprotokoll für alle Verbindungen zu Storage-Nodes oder zum veralteten CLB-Dienst auf Gateway-Nodes. Optional können Sie HTTP für diese Verbindungen aktivieren, z. B. beim Testen eines nicht produktiven Grids. 
+---
+= Aktivieren Sie HTTP für die Clientkommunikation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Standardmäßig verwenden Client-Anwendungen das HTTPS-Netzwerkprotokoll für alle Verbindungen zu Storage-Nodes oder zum veralteten CLB-Dienst auf Gateway-Nodes. Optional können Sie HTTP für diese Verbindungen aktivieren, z. B. beim Testen eines nicht produktiven Grids.
+
+.Was Sie und#8217;ll benötigen
+* Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
+* Sie haben spezifische Zugriffsberechtigungen.
+
+
+Führen Sie diese Aufgabe nur aus, wenn S3- und Swift-Clients HTTP-Verbindungen direkt zu Storage-Nodes oder zum veralteten CLB-Service auf Gateway-Nodes herstellen müssen.
+
+Sie müssen diese Aufgabe nicht für Clients abschließen, die nur HTTPS-Verbindungen verwenden oder für Clients, die eine Verbindung zum Load Balancer-Dienst herstellen (da Sie jeden Load Balancer-Endpunkt so konfigurieren können, dass entweder HTTP oder HTTPS verwendet werden). Weitere Informationen finden Sie in den Informationen zum Konfigurieren von Load Balancer-Endpunkten.
+
+Siehe xref:summary-ip-addresses-and-ports-for-client-connections.adoc[Zusammenfassung: IP-Adressen und Ports für Client-Verbindungen] Um zu erfahren, welche S3- und Swift-Clients beim Herstellen einer Verbindung zu Storage-Nodes oder zum veralteten CLB-Dienst über HTTP oder HTTPS verwenden
+
+
+IMPORTANT: Gehen Sie vorsichtig vor, wenn Sie HTTP für ein Produktions-Grid aktivieren, da die Anforderungen unverschlüsselt gesendet werden.
+
+.Schritte
+. Wählen Sie *KONFIGURATION* *System* *Gitteroptionen*.
+. Aktivieren Sie im Abschnitt Netzwerkoptionen das Kontrollkästchen *HTTP-Verbindung aktivieren*.
++
+image::../media/http_enabled.png[HTTP-Verbindung aktivieren]
+
+. Wählen Sie *Speichern*.
+
+
+.Verwandte Informationen
+* xref:configuring-load-balancer-endpoints.adoc[Konfigurieren von Load Balancer-Endpunkten]
+* xref:../s3/index.adoc[S3 verwenden]
+* xref:../swift/index.adoc[Verwenden Sie Swift]
+

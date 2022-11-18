@@ -1,0 +1,21 @@
+---
+permalink: maintain/hotfix-planning-and-preparation.html 
+sidebar: sidebar 
+keywords: storagegrid, hotfix, prepare for a hotfix, plan for a hotfix 
+summary: Sie müssen vor dem Anwenden eines Hotfix planen, um eine minimale Störung Ihres StorageGRID-Systems zu gewährleisten. 
+---
+= Planen und bereiten Sie sich auf einen Hotfix vor
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen vor dem Anwenden eines Hotfix planen, um eine minimale Störung Ihres StorageGRID-Systems zu gewährleisten.
+
+.Schritte
+* xref:how-your-system-is-affected-when-you-apply-hotfix.adoc[Auswirkungen auf Ihr System beim Anwenden eines Hotfix]
+* xref:obtaining-required-materials-for-hotfix.adoc[Beschaffung der erforderlichen Materialien für einen Hotfix]
+* xref:downloading-hotfix-file.adoc[Hotfix-Datei wird heruntergeladen]
+* xref:checking-systems-condition-before-applying-hotfix.adoc[Überprüfen Sie den Zustand des Systems, bevor Sie einen Hotfix anwenden]
+

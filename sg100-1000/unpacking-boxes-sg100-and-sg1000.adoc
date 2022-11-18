@@ -1,0 +1,43 @@
+---
+permalink: sg100-1000/unpacking-boxes-sg100-and-sg1000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, install, installation, unpack, unbox, prepare, inventory, components, contents 
+summary: Packen Sie vor der Installation des StorageGRID-Geräts alle Kartons aus und vergleichen Sie den Inhalt mit den Artikeln auf dem Verpackungsschein. 
+---
+= Auspacken (SG100 und SG1000)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Packen Sie vor der Installation des StorageGRID-Geräts alle Kartons aus und vergleichen Sie den Inhalt mit den Artikeln auf dem Verpackungsschein.
+
+
+
+== Appliance-Hardware
+
+* *SG100 oder SG1000*
++
+image::../media/sg6000_cn_front_without_bezel.gif[Laufwerke SG 100 oder SG1000 Services-Appliance als Front]
+
+* *Rail Kit mit Anweisungen*
++
+image::../media/rail_kit.gif[Schienensatz]
+
+
+
+
+
+== Stromkabel
+
+Die im Lieferumfang der StorageGRID Appliance aufgeführten Netzkabel sind enthalten:
+
+* * Zwei Netzkabel für Ihr Land*
++
+image::../media/power_cords.gif[Stromkabel]
+
++
+Ihr Schrank verfügt möglicherweise über spezielle Netzkabel, die Sie anstelle der Netzkabel verwenden, die Sie zur Einheit mit dem Gerät anschließen.
+
+

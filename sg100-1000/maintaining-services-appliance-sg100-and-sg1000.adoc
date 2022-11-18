@@ -1,0 +1,14 @@
+---
+permalink: sg100-1000/maintaining-services-appliance-sg100-and-sg1000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, maintain, maintaining, hardware, procedures, tasks 
+summary: Möglicherweise müssen Sie Wartungsarbeiten am Gerät durchführen. Bei den Verfahren in diesem Abschnitt wird davon ausgegangen, dass die Appliance bereits als Gateway-Node oder Admin-Node in einem StorageGRID-System bereitgestellt wurde. 
+---
+= Warten Sie die Appliance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Möglicherweise müssen Sie Wartungsarbeiten am Gerät durchführen. Bei den Verfahren in diesem Abschnitt wird davon ausgegangen, dass die Appliance bereits als Gateway-Node oder Admin-Node in einem StorageGRID-System bereitgestellt wurde.

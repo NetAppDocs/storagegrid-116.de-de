@@ -1,0 +1,64 @@
+---
+permalink: sg5600/configuring-autosupport.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5600, storage node, storage appliance, configure, configuring, set up, setup, autosupport, auto support 
+summary: Das AutoSupport Tool erfasst Daten in einem Kunden-Support-Bundle von der Appliance und sendet die Daten automatisch an den technischen Support. Konfigurieren von AutoSupport unterstützt den technischen Support durch Remote-Fehlerbehebung und Problemanalyse. 
+---
+= Konfigurieren Sie AutoSupport
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das AutoSupport Tool erfasst Daten in einem Kunden-Support-Bundle von der Appliance und sendet die Daten automatisch an den technischen Support. Konfigurieren von AutoSupport unterstützt den technischen Support durch Remote-Fehlerbehebung und Problemanalyse.
+
+.Was Sie und#8217;ll benötigen
+* Die AutoSupport-Funktion muss auf der Appliance aktiviert sein.
++
+Die AutoSupport-Funktion wird global auf einer Storage Management Station aktiviert und deaktiviert.
+
+* Der Storage Manager-Ereignismonitor muss auf mindestens einem Gerät mit Zugang zum Gerät und vorzugsweise auf maximal einer Maschine ausgeführt werden.
+
+
+Alle Daten werden an dem von Ihnen angegebenen Speicherort in ein einziges komprimiertes Archivdateiformat (.7z) komprimiert.
+
+AutoSupport bietet die folgenden Meldungsarten:
+
+|===
+| Nachrichtentypen | Beschreibung 
+
+
+ a| 
+Ereignismeldungen
+ a| 
+* Wird gesendet, wenn ein Supportereignis auf der verwalteten Appliance auftritt
+* Nehmen Sie Informationen zur Systemkonfiguration und Diagnose mit auf
+
+
+
+
+ a| 
+Tägliche Nachrichten
+ a| 
+* Wird einmal täglich während eines vom Benutzer konfigurierbaren Zeitintervalls in der lokalen Zeit der Appliance gesendet
+* Berücksichtigen Sie die aktuellen Systemereignisprotokolle und Performance-Daten
+
+
+
+
+ a| 
+Wöchentliche Nachrichten
+ a| 
+* Wird einmal wöchentlich während eines vom Benutzer konfigurierbaren Zeitintervalls in der lokalen Zeit der Appliance gesendet
+* Konfigurations- und Informationen für den Systemstatus einschließen
+
+
+|===
+.Schritte
+. Wählen Sie im Fenster Enterprise Management im SANtricity Storage Manager die Registerkarte *Geräte* aus, und wählen Sie dann *erkannte Speicherarrays* aus.
+. Wählen Sie *Werkzeuge* *AutoSupport* *Konfiguration*.
+. Verwenden Sie die Online-Hilfe des SANtricity Storage Managers, falls erforderlich, um die Aufgabe abzuschließen.
+
+
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61197["NetApp Dokumentation: SANtricity Storage Manager"^]

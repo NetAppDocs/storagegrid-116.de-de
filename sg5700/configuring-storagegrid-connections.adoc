@@ -1,0 +1,23 @@
+---
+permalink: sg5700/configuring-storagegrid-connections.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, storagegrid connections, connections, configure, setup, set up 
+summary: 'Bevor Sie eine StorageGRID Appliance als Storage Node in einem StorageGRID-Grid bereitstellen können, müssen Sie die Verbindungen zwischen der Appliance und den zu verwendenden Netzwerken konfigurieren. Sie können das Netzwerk konfigurieren, indem Sie im StorageGRID Appliance Installer navigieren, der im E5700SG Controller \ (dem Computing-Controller in der Appliance\) enthalten ist.' 
+---
+= Konfiguration von StorageGRID-Verbindungen (SG5700)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie eine StorageGRID Appliance als Storage Node in einem StorageGRID-Grid bereitstellen können, müssen Sie die Verbindungen zwischen der Appliance und den zu verwendenden Netzwerken konfigurieren. Sie können das Netzwerk konfigurieren, indem Sie im StorageGRID Appliance Installer navigieren, der im E5700SG Controller (dem Computing-Controller in der Appliance) enthalten ist.
+
+.Schritte
+* xref:accessing-storagegrid-appliance-installer-sg5700.adoc[Rufen Sie das Installationsprogramm für StorageGRID-Appliances auf]
+* xref:verifying-and-upgrading-storagegrid-appliance-installer-version.adoc[Überprüfen und Aktualisieren der Installationsversion der StorageGRID Appliance]
+* xref:configuring-network-links-sg5700.adoc[Konfigurieren von Netzwerk-Links (SG5700)]
+* xref:setting-ip-configuration-sg5700.adoc[Legen Sie die IP-Konfiguration fest]
+* xref:verifying-network-connections.adoc[Netzwerkverbindungen prüfen]
+* xref:verifying-port-level-network-connections.adoc[Überprüfen Sie Netzwerkverbindungen auf Portebene]
+

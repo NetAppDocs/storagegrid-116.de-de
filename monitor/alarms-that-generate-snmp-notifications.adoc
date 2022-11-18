@@ -1,0 +1,525 @@
+---
+permalink: monitor/alarms-that-generate-snmp-notifications.html 
+sidebar: sidebar 
+keywords: alarms, monitor alarms, snmp notification, snmp 
+summary: In der folgenden Tabelle sind die älteren Alarme aufgeführt, die SNMP-Benachrichtigungen generieren. Im Gegensatz zu Warnmeldungen generieren nicht alle Alarme SNMP-Benachrichtigungen. Nur die aufgeführten Alarme erzeugen SNMP-Benachrichtigungen und nur bei dem angegebenen Schweregrad oder höher. 
+---
+= Warnmeldungen, die SNMP-Benachrichtigungen generieren (Legacy-System)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In der folgenden Tabelle sind die älteren Alarme aufgeführt, die SNMP-Benachrichtigungen generieren. Im Gegensatz zu Warnmeldungen generieren nicht alle Alarme SNMP-Benachrichtigungen. Nur die aufgeführten Alarme erzeugen SNMP-Benachrichtigungen und nur bei dem angegebenen Schweregrad oder höher.
+
+
+NOTE: Das alte Alarmsystem wird zwar weiterhin unterstützt, bietet jedoch deutliche Vorteile und ist einfacher zu bedienen.
+
+[cols="1a,2a,1a"]
+|===
+| Codieren | Name | Schweregrad 
+
+
+ a| 
+ACMS
+ a| 
+Verfügbare Metadaten
+ a| 
+Kritisch
+
+
+
+ a| 
+AITE
+ a| 
+Status Abrufen
+ a| 
+Gering
+
+
+
+ a| 
+AITU
+ a| 
+Status Abrufen
+ a| 
+Major
+
+
+
+ a| 
+AMQS
+ a| 
+Audit-Nachrichten In Queued
+ a| 
+Hinweis
+
+
+
+ a| 
+AOTE
+ a| 
+Store State
+ a| 
+Gering
+
+
+
+ a| 
+AOTU
+ a| 
+Speicherstatus
+ a| 
+Major
+
+
+
+ a| 
+AROQ
+ a| 
+Objekte In Queued
+ a| 
+Gering
+
+
+
+ a| 
+ARRF
+ a| 
+Anfragefehler
+ a| 
+Major
+
+
+
+ a| 
+ARRV
+ a| 
+Verifizierungsfehler
+ a| 
+Major
+
+
+
+ a| 
+ARVF
+ a| 
+Speicherfehler
+ a| 
+Major
+
+
+
+ a| 
+ASXP
+ a| 
+Revisionsfreigaben
+ a| 
+Gering
+
+
+
+ a| 
+AUMA
+ a| 
+AMS-Status
+ a| 
+Gering
+
+
+
+ a| 
+AUXS
+ a| 
+Exportstatus Prüfen
+ a| 
+Gering
+
+
+
+ a| 
+BTOF
+ a| 
+Offset
+ a| 
+Hinweis
+
+
+
+ a| 
+CAHP
+ a| 
+Java Heap-Nutzung In Prozent
+ a| 
+Major
+
+
+
+ a| 
+CAQH
+ a| 
+Anzahl Der Verfügbaren Ziele
+ a| 
+Hinweis
+
+
+
+ a| 
+CASA
+ a| 
+Data Store-Status
+ a| 
+Major
+
+
+
+ a| 
+CDLP
+ a| 
+Belegter Speicherplatz Für Metadaten (Prozent)
+ a| 
+Major
+
+
+
+ a| 
+CLBE
+ a| 
+Der Status des CLB
+ a| 
+Kritisch
+
+
+
+ a| 
+DNST
+ a| 
+DNS-Status
+ a| 
+Kritisch
+
+
+
+ a| 
+ACST
+ a| 
+Verifizierungsstatus
+ a| 
+Major
+
+
+
+ a| 
+HSTE
+ a| 
+HTTP-Status
+ a| 
+Major
+
+
+
+ a| 
+HTAS
+ a| 
+Automatisches Starten von HTTP
+ a| 
+Hinweis
+
+
+
+ a| 
+VERLOREN
+ a| 
+Verlorene Objekte
+ a| 
+Major
+
+
+
+ a| 
+MINQ
+ a| 
+E-Mail-Benachrichtigungen in Warteschlange
+ a| 
+Hinweis
+
+
+
+ a| 
+MIN
+ a| 
+E-Mail-Benachrichtigungsstatus
+ a| 
+Gering
+
+
+
+ a| 
+NANG
+ a| 
+Einstellung Für Automatische Netzwerkaushandlung
+ a| 
+Hinweis
+
+
+
+ a| 
+NDUP
+ a| 
+Einstellungen Für Den Netzwerkduplex
+ a| 
+Gering
+
+
+
+ a| 
+NLNK
+ a| 
+Network Link Detect
+ a| 
+Gering
+
+
+
+ a| 
+RER
+ a| 
+Fehler Beim Empfang
+ a| 
+Hinweis
+
+
+
+ a| 
+NSPD
+ a| 
+Schnell
+ a| 
+Hinweis
+
+
+
+ a| 
+NTER
+ a| 
+Übertragungsfehler
+ a| 
+Hinweis
+
+
+
+ a| 
+NTFQ
+ a| 
+NTP-Frequenzverschiebung
+ a| 
+Gering
+
+
+
+ a| 
+NTLK
+ a| 
+NTP Lock
+ a| 
+Gering
+
+
+
+ a| 
+NTOF
+ a| 
+NTP-Zeitverschiebung
+ a| 
+Gering
+
+
+
+ a| 
+NTSJ
+ a| 
+Gewählte Zeitquelle Jitter
+ a| 
+Gering
+
+
+
+ a| 
+NTSU
+ a| 
+NTP-Status
+ a| 
+Major
+
+
+
+ a| 
+OPST
+ a| 
+Gesamtstromstatus
+ a| 
+Major
+
+
+
+ a| 
+ORSU
+ a| 
+Status Der Ausgehenden Replikation
+ a| 
+Hinweis
+
+
+
+ a| 
+PSAS
+ a| 
+Stromversorgung A-Status
+ a| 
+Major
+
+
+
+ a| 
+PSBS
+ a| 
+Netzteil B Status
+ a| 
+Major
+
+
+
+ a| 
+RDTE
+ a| 
+Status Von Tivoli Storage Manager
+ a| 
+Hinweis
+
+
+
+ a| 
+RDTU
+ a| 
+Status Von Tivoli Storage Manager
+ a| 
+Major
+
+
+
+ a| 
+SAVP
+ a| 
+Nutzbarer Speicherplatz (Prozent)
+ a| 
+Hinweis
+
+
+
+ a| 
+SHLH.
+ a| 
+Systemzustand
+ a| 
+Hinweis
+
+
+
+ a| 
+SLSA
+ a| 
+CPU-Auslastung durchschnittlich
+ a| 
+Hinweis
+
+
+
+ a| 
+SMTT
+ a| 
+Ereignisse Insgesamt
+ a| 
+Hinweis
+
+
+
+ a| 
+SNST
+ a| 
+Status
+ a| 
+
+
+
+ a| 
+SOSS
+ a| 
+Status Des Storage-Betriebssystems
+ a| 
+Hinweis
+
+
+
+ a| 
+SSTS
+ a| 
+Storage-Status
+ a| 
+Hinweis
+
+
+
+ a| 
+SVST
+ a| 
+Status
+ a| 
+Hinweis
+
+
+
+ a| 
+TMEM.
+ a| 
+Installierter Speicher
+ a| 
+Gering
+
+
+
+ a| 
+UMEM
+ a| 
+Verfügbarer Speicher
+ a| 
+Gering
+
+
+
+ a| 
+VMST
+ a| 
+Status
+ a| 
+Gering
+
+
+
+ a| 
+VPRI
+ a| 
+Überprüfungspriorität
+ a| 
+Hinweis
+
+
+
+ a| 
+VSTU
+ a| 
+Status Der Objektüberprüfung
+ a| 
+Hinweis
+
+|===
