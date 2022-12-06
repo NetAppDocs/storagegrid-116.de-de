@@ -17129,7 +17129,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-19 04:20:43 +0000">11/19/2022</time>
+    <time datetime="2022-12-06 18:03:50 +0000">12/06/2022</time>
     
   
 
@@ -17145,7 +17145,7 @@
 <p>Wenn der <code>sn-recovery-postinstall.sh</code> Skript ist erforderlich, um ein oder mehrere fehlgeschlagene Speicher-Volumes neu zu formatieren, müssen Sie Objektdaten auf dem neu formatierten Speicher-Volume von anderen Speicherknoten und Archiv-Nodes wiederherstellen. Diese Schritte sind erst dann erforderlich, wenn ein oder mehrere Storage Volumes neu formatiert wurden.</p>
 </div>
 <div class="ulist">
-<div class="title">Was Sie und#8217;ll benötigen</div>
+<div class="title">Was Sie benötigen</div>
 <ul>
 <li>
 <p>Sie müssen bestätigt haben, dass der wiederhergestellte Speicherknoten einen Verbindungsstatus von <strong>verbunden</strong> hat <span class="image"><img src="../media/icon_alert_green_checkmark.png" alt="Grünes Häkchen für Symbolwarnung"></span> Auf der Registerkarte <strong>NODES</strong> <strong>Übersicht</strong> im Grid Manager.</p>
@@ -17153,6 +17153,7 @@
 </ul>
 </div>
 <div class="paragraph">
+<div class="title">Über diese Aufgabe</div>
 <p>Objektdaten können von anderen Storage-Nodes, einem Archiv-Node oder einem Cloud Storage-Pool wiederhergestellt werden, wenn die ILM-Regeln des Grid so konfiguriert wurden, dass Objektkopien verfügbar sind.</p>
 </div>
 <div class="paragraph">
@@ -17174,7 +17175,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="über-das-skript-für-reparaturdaten">Über das Skript für Reparaturdaten</h2>
+<h2 id="informationen-zum-repair-data-skript">Informationen zum <code>repair-data</code> Skript</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Zum Wiederherstellen von Objektdaten führen Sie den aus <code>repair-data</code> Skript: Dieses Skript startet den Prozess der Wiederherstellung von Objektdaten und arbeitet mit ILM-Scans zusammen, um sicherzustellen, dass ILM-Regeln eingehalten werden.</p>
@@ -17308,7 +17309,7 @@ Der EC-Reparaturauftrag reserviert vorübergehend eine große Menge an Lagerung.
 <p>Wenn alle Storage-Volumes ausgefallen sind, reparieren Sie den gesamten Node. Befolgen Sie die Anweisungen für <strong>replizierte Daten</strong>, <strong>Erasure-codierte (EC) Daten</strong> oder beide, je nachdem, ob Sie replizierte Daten, Erasure-codierte (EC) Daten oder beide verwenden.</p>
 </div>
 <div class="paragraph">
-<p>Wenn nur einige Volumes gescheitert sind, gehen Sie zu  data if only some volumes have failed.</p>
+<p>Wenn nur einige Volumes gescheitert sind, gehen Sie zu <a href="#Reparieren Sie Daten">wenn nur einige Volumes ausgefallen sind</a>.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -17390,7 +17391,7 @@ Reparaturen von Daten, die auf Löschung codiert wurden, können beginnen, währ
 <p>Wenn nur einige Volumes ausgefallen sind, die betroffenen Volumes reparieren. Befolgen Sie die Anweisungen für <strong>replizierte Daten</strong>, <strong>Erasure-codierte (EC) Daten</strong> oder beide, je nachdem, ob Sie replizierte Daten, Erasure-codierte (EC) Daten oder beide verwenden.</p>
 </div>
 <div class="paragraph">
-<p>Wenn alle Volumes ausgefallen sind, gehen Sie zu  data if all volumes have failed.</p>
+<p>Wenn alle Volumes ausgefallen sind, gehen Sie zu <a href="#Reparieren Sie Daten">wenn alle Volumes ausgefallen sind</a>.</p>
 </div>
 <div class="paragraph">
 <p>Geben Sie die Volume-IDs in hexadezimal ein. Beispiel: <code>0000</code> Ist der erste Band und <code>000F</code> Ist der sechzehnte Band. Sie können ein Volume, einen Bereich von Volumes oder mehrere Volumes angeben, die sich nicht in einer Sequenz befinden.</p>

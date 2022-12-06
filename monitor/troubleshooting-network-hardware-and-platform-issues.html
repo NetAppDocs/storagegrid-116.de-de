@@ -17129,7 +17129,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-19 04:20:43 +0000">11/19/2022</time>
+    <time datetime="2022-12-06 18:03:50 +0000">12/06/2022</time>
     
   
 
@@ -17147,7 +17147,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="fehler-422-unbearbeitbare-einheit-beheben">Fehler „422: Unbearbeitbare Einheit“ beheben</h2>
+<h2 id="fehler-bei-422-unbearbeitbare-einheit-beheben">Fehler bei „<code>422: Unbearbeitbare Einheit</code>“ beheben</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Der Fehler 422: Unbearbeitbare Einheit kann unter verschiedenen Umständen auftreten. Überprüfen Sie die Fehlermeldung, um festzustellen, welche Ursache Ihr Problem verursacht hat.</p>
@@ -17224,17 +17224,19 @@ TLS handshake failed
 </tbody>
 </table>
 <div class="paragraph">
+<div class="title">Verwandte Informationen</div>
 <p><a href="../admin/index.html">StorageGRID verwalten</a></p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="fehler-bei-der-warnmeldung-zur-nichtübereinstimmung-bei-grid-network-mtu">Fehler bei der Warnmeldung zur Nichtübereinstimmung bei Grid Network MTU</h2>
+<h2 id="fehlerbehebung-bei-der-mtu-warnung-für-das-grid-network"><a id="Troubleshooting_MTU_Alert"></a>Fehlerbehebung bei der MTU-Warnung für das Grid Network</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Die Warnung <strong>Grid Network MTU mismatch</strong> wird ausgelöst, wenn sich die MTU-Einstellung (Maximum Transmission Unit) für die Grid Network Interface (eth0) über Knoten im Grid deutlich unterscheidet.</p>
 </div>
 <div class="paragraph">
+<div class="title">Über diese Aufgabe</div>
 <p>Die Unterschiede in den MTU-Einstellungen könnten darauf hinweisen, dass einige, aber nicht alle, eth0-Netzwerke für Jumbo Frames konfiguriert sind. Eine MTU-Größe von mehr als 1000 kann zu Problemen mit der Netzwerkleistung führen.</p>
 </div>
 <div class="olist arabic">
@@ -17358,6 +17360,7 @@ TLS handshake failed
 </ol>
 </div>
 <div class="paragraph">
+<div class="title">Verwandte Informationen</div>
 <p><a href="../sg100-1000/index.html">SG100- und SG1000-Services-Appliances</a></p>
 </div>
 <div class="paragraph">
@@ -17378,6 +17381,7 @@ TLS handshake failed
 <p>NRER-Alarme (Network Receive Error) können durch Verbindungsprobleme zwischen StorageGRID und Ihrer Netzwerk-Hardware verursacht werden. In einigen Fällen können NRER-Fehler ohne manuelles Eingreifen gelöscht werden. Wenn die Fehler nicht behoben werden, führen Sie die empfohlenen Maßnahmen durch.</p>
 </div>
 <div class="paragraph">
+<div class="title">Über diese Aufgabe</div>
 <p>NRER-Alarme können durch die folgenden Probleme mit Netzwerk-Hardware verursacht werden, die eine Verbindung mit StorageGRID herstellt:</p>
 </div>
 <div class="ulist">
@@ -17518,7 +17522,8 @@ In einer Umgebung mit hohem elektrischen Rauschen können hohe Fehlerraten festg
 </ol>
 </div>
 <div class="paragraph">
-<p>,Fehler bei der Warnmeldung zur Nichtübereinstimmung bei Grid Network MTU</p>
+<div class="title">Verwandte Informationen</div>
+<p><a href="#troubleshoot_MTU_alert">Fehler bei der Warnmeldung zur Nichtübereinstimmung bei Grid Network MTU</a></p>
 </div>
 <div class="paragraph">
 <p><a href="alarms-reference.html">Alarmreferenz (Altsystem)</a></p>
@@ -17559,6 +17564,7 @@ Wenn Sie die externe NTP-Quelle für eine StorageGRID-Installation auf Produktio
 </table>
 </div>
 <div class="paragraph">
+<div class="title">Verwandte Informationen</div>
 <p><a href="../maintain/index.html">Recovery und Wartung</a></p>
 </div>
 </div>
@@ -17596,6 +17602,7 @@ Erstellen Sie separate virtuelle Netzwerkschnittstellen, die vom Linux Host-Betr
 <p>Wenn Sie kein Klonen der MAC-Adresse verwenden möchten und lieber alle Schnittstellen Daten für andere MAC-Adressen als die vom Hypervisor zugewiesenen empfangen und übertragen möchten, Stellen Sie sicher, dass die Sicherheitseigenschaften auf der Ebene der virtuellen Switch- und Portgruppen auf <strong>Accept</strong> für den Promiscuous-Modus, MAC-Adressänderungen und Forged-Übertragungen eingestellt sind. Die auf dem virtuellen Switch eingestellten Werte können von den Werten auf der Portgruppenebene außer Kraft gesetzt werden. Stellen Sie also sicher, dass die Einstellungen an beiden Stellen identisch sind.</p>
 </div>
 <div class="paragraph">
+<div class="title">Verwandte Informationen</div>
 <p><a href="../rhel/index.html">Installieren Sie Red hat Enterprise Linux oder CentOS</a></p>
 </div>
 <div class="paragraph">
@@ -17605,12 +17612,13 @@ Erstellen Sie separate virtuelle Netzwerkschnittstellen, die vom Linux Host-Betr
 </div>
 </div>
 <div class="sect1">
-<h2 id="linux-node-status-ist-verwaist">Linux: Node-Status ist „verwaist“</h2>
+<h2 id="linux-node-status-lautet-verwaiste">Linux: Node-Status lautet „<code>verwaiste</code>“</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Ein Linux-Node in einem verwaisten Status gibt in der Regel an, dass entweder der StorageGRID-Service oder der StorageGRID-Node-Daemon, der den Container steuert, unerwartet gestorben ist.</p>
 </div>
 <div class="paragraph">
+<div class="title">Über diese Aufgabe</div>
 <p>Wenn ein Linux-Knoten meldet, dass er sich in einem verwaisten Status befindet, sollten Sie Folgendes tun:</p>
 </div>
 <div class="ulist">
@@ -17684,6 +17692,7 @@ Erstellen Sie separate virtuelle Netzwerkschnittstellen, die vom Linux Host-Betr
 <p>Möglicherweise müssen Sie die IPv6-Unterstützung im Kernel aktivieren, wenn Sie StorageGRID-Knoten auf Linux-Hosts installiert haben und Sie bemerken, dass den Knoten-Containern keine IPv6-Adressen wie erwartet zugewiesen wurden.</p>
 </div>
 <div class="paragraph">
+<div class="title">Über diese Aufgabe</div>
 <p>Die IPv6-Adresse, die einem Grid-Node zugewiesen wurde, wird in den folgenden Speicherorten im Grid Manager angezeigt:</p>
 </div>
 <div class="ulist">

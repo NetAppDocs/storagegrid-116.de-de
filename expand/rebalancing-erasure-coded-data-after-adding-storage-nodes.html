@@ -17129,7 +17129,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-19 04:20:43 +0000">11/19/2022</time>
+    <time datetime="2022-12-06 18:03:50 +0000">12/06/2022</time>
     
   
 
@@ -17143,7 +17143,7 @@
 <p>In einigen Fällen müssen Sie möglicherweise nach dem Hinzufügen neuer Storage-Nodes einen Ausgleich für Daten schaffen, die mit Erasure Coding versehen sind.</p>
 </div>
 <div class="ulist">
-<div class="title">Was Sie und#8217;ll benötigen</div>
+<div class="title">Was Sie benötigen</div>
 <ul>
 <li>
 <p>Sie haben die Erweiterungsschritte zum Hinzufügen der neuen Speicherknoten abgeschlossen.</p>
@@ -17172,6 +17172,7 @@ Führen Sie diesen Vorgang nur aus, wenn die Warnung <strong>Low Object Storage<
 </ul>
 </div>
 <div class="paragraph">
+<div class="title">Über diese Aufgabe</div>
 <p>Wenn das EC-Ausgleichverfahren ausgeführt wird, ist die Performance von ILM-Vorgängen sowie S3- und Swift-Client-Operationen wahrscheinlich beeinträchtigt. Aus diesem Grund sollten Sie dieses Verfahren nur in begrenzten Fällen durchführen.</p>
 </div>
 <div class="admonitionblock note">
@@ -17319,10 +17320,10 @@ Das EG-Ausgleichverfahren reserviert vorübergehend einen großen Speicher. Stor
 <p>Wenn der Status lautet <code>In progress</code>, Der EC-Ausgleichsoperation läuft noch. Sie sollten das Verfahren regelmäßig überwachen, bis es abgeschlossen ist.</p>
 </li>
 <li>
-<p>Wenn der Status lautet <code>Failure</code>, Führen Sie die ,Fehlerschritte.</p>
+<p>Wenn der Status lautet <code>Failure</code>, Führen Sie die <a href="#rebalance_fail">Fehlerschritte</a>.</p>
 </li>
 <li>
-<p>Wenn der Status lautet <code>Success</code>, Führen Sie die ,Erfolg.</p>
+<p>Wenn der Status lautet <code>Success</code>, Führen Sie die <a href="#rebalance_succeed">Erfolg</a>.</p>
 </li>
 </ul>
 </div>
@@ -17375,7 +17376,7 @@ Wenn Sie ein EC-Ausgleichverfahren beenden, verbleiben alle bereits verschobenen
 </div>
 </li>
 <li>
-<p><a id="Ausgleichs_erfolgreich"></a> Wenn der Status des EC-Ausgleichs-Verfahrens lautet <code>Success</code>, Optional ,Prüfen von Objekt-Storage Um die aktualisierten Details für die Site anzuzeigen.</p>
+<p><a id="Ausgleichs_erfolgreich"></a> Wenn der Status des EC-Ausgleichs-Verfahrens lautet <code>Success</code>, Optional <a href="#review_object_storage">Prüfen von Objekt-Storage</a> Um die aktualisierten Details für die Site anzuzeigen.</p>
 <div class="paragraph">
 <p>Daten mit Erasure-Coding-Verfahren sollten nun besser auf die Storage-Nodes am Standort abgestimmt sein.</p>
 </div>

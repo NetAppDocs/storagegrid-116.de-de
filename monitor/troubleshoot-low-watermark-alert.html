@@ -17129,7 +17129,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-19 04:20:43 +0000">11/19/2022</time>
+    <time datetime="2022-12-06 18:03:50 +0000">12/06/2022</time>
     
   
 
@@ -17226,7 +17226,7 @@
 <p>Befolgen Sie diese Schritte, wenn eine oder mehrere <strong>Low Read-Only-Wasserzeichen überschreiben</strong>-Warnungen ausgelöst wurden. Sie können diese Anweisungen auch verwenden, wenn Sie derzeit benutzerdefinierte Wasserzeichen-Einstellungen verwenden und optimierte Einstellungen auch dann verwenden möchten, wenn keine Warnungen ausgelöst wurden.</p>
 </div>
 <div class="ulist">
-<div class="title">Was Sie und#8217;ll benötigen</div>
+<div class="title">Was Sie benötigen</div>
 <ul>
 <li>
 <p>Sie haben das Upgrade auf StorageGRID 11.6 abgeschlossen.</p>
@@ -17240,6 +17240,7 @@
 </ul>
 </div>
 <div class="paragraph">
+<div class="title">Über diese Aufgabe</div>
 <p>Sie können die Warnung <strong>Low read-only Watermark override</strong> lösen, indem Sie benutzerdefinierte Wasserzeichen-Einstellungen auf die neuen Wasserzeichen-Überschreibungen aktualisieren. Wenn jedoch ein oder mehrere Speicherknoten nahe voll sind oder Sie spezielle ILM-Anforderungen haben, sollten Sie zunächst die optimierten Speicherabdrücke anzeigen und feststellen, ob sie sicher verwendet werden können.</p>
 </div>
 <div class="sect2">
@@ -17261,7 +17262,7 @@
 </div>
 </li>
 <li>
-<p>Wenn keiner der Speicherknoten fast voll ist (zum Beispiel sind alle <strong>Objektdaten verwendet</strong> Werte kleiner als 80%), können Sie die Überschreibeinstellungen verwenden. Gehen Sie zu  optimized watermarks.</p>
+<p>Wenn keiner der Speicherknoten fast voll ist (zum Beispiel sind alle <strong>Objektdaten verwendet</strong> Werte kleiner als 80%), können Sie die Überschreibeinstellungen verwenden. Gehen Sie zu <a href="#verwenden-sie-optimierte-wasserzeichen">Verwenden Sie optimierte Wasserzeichen</a>.</p>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -17269,14 +17270,14 @@
 <img src="/us-en/storagegrid-116/images/note.svg" alt="Anmerkung">
 </td>
 <td class="content">
-Es gibt einige Ausnahmen von dieser allgemeinen Regel. Wenn ILM-Regeln beispielsweise ein strenges Aufnahmeverhalten verwenden oder bestimmte Storage-Pools nahezu vollständig sind, sollten Sie zuerst die Schritte in durchführen  optimized storage watermarks Und  if you can use optimized watermarks.
+Es gibt einige Ausnahmen von dieser allgemeinen Regel. Wenn ILM-Regeln beispielsweise ein strenges Aufnahmeverhalten verwenden oder bestimmte Storage-Pools nahezu vollständig sind, sollten Sie zuerst die Schritte in durchführen <a href="#anzeigen-optimierter-speicherabdrücke">Anzeigen optimierter Speicherabdrücke</a> Und <a href="#Bestimmen Sie">ob Sie optimierte Wasserzeichen verwenden können</a>.
 </td>
 </tr>
 </table>
 </div>
 </li>
 <li>
-<p>Wenn mehrere Speicherknoten nahezu voll sind, führen Sie die Schritte unter aus  optimized storage watermarks Und  if you can use optimized watermarks.</p>
+<p>Wenn mehrere Speicherknoten nahezu voll sind, führen Sie die Schritte unter aus <a href="#anzeigen-optimierter-speicherabdrücke">Anzeigen optimierter Speicherabdrücke</a> Und <a href="#Bestimmen Sie">ob Sie optimierte Wasserzeichen verwenden können</a>.</p>
 </li>
 </ol>
 </div>
@@ -17342,9 +17343,9 @@ Es gibt einige Ausnahmen von dieser allgemeinen Regel. Wenn ILM-Regeln beispiels
 </div>
 </li>
 <li>
-<p>Wenn mindestens ein Volume auf jedem Online-Speicherknoten mehr Speicherplatz als das maximal optimierte Wasserzeichen für diesen Knoten hat, gehen Sie zu  optimized watermarks Um die optimierten Wasserzeichen zu verwenden.</p>
+<p>Wenn mindestens ein Volume auf jedem Online-Speicherknoten mehr Speicherplatz als das maximal optimierte Wasserzeichen für diesen Knoten hat, gehen Sie zu <a href="#verwenden-sie-optimierte-wasserzeichen">Verwenden Sie optimierte Wasserzeichen</a> Um die optimierten Wasserzeichen zu verwenden.</p>
 <div class="paragraph">
-<p>Andernfalls <a href="../expand/index.html">Erweitern Sie Ihr Raster</a> So bald wie möglich. Fügen Sie einem vorhandenen Node entweder Storage Volumes hinzu oder fügen Sie neue Storage-Nodes hinzu. Fahren Sie dann mit fort  optimized watermarks Zum Aktualisieren der Einstellungen für Wasserzeichen.</p>
+<p>Andernfalls <a href="../expand/index.html">Erweitern Sie Ihr Raster</a> So bald wie möglich. Fügen Sie einem vorhandenen Node entweder Storage Volumes hinzu oder fügen Sie neue Storage-Nodes hinzu. Fahren Sie dann mit fort <a href="#verwenden-sie-optimierte-wasserzeichen">Verwenden Sie optimierte Wasserzeichen</a> Zum Aktualisieren der Einstellungen für Wasserzeichen.</p>
 </div>
 </li>
 <li>

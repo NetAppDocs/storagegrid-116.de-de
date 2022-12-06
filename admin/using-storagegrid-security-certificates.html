@@ -17129,7 +17129,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-19 04:20:43 +0000">11/19/2022</time>
+    <time datetime="2022-12-06 18:03:50 +0000">12/06/2022</time>
     
   
 
@@ -17256,10 +17256,10 @@ StorageGRID enthält auch CA-Zertifikate für das Betriebssystem, die in allen G
 <div class="ulist">
 <ul>
 <li>
-<p>interface certificate: Sichert Client-Web-Browser-Verbindungen zu StorageGRID-Management-Schnittstellen.</p>
+<p><a href="#zertifikat-für-die-managementoberfläche">Zertifikat für die Managementoberfläche</a>: Sichert Client-Web-Browser-Verbindungen zu StorageGRID-Management-Schnittstellen.</p>
 </li>
 <li>
-<p>and Swift API certificate: Sichert Client-API-Verbindungen zu Storage-Nodes, Admin-Nodes und Gateway-Nodes, über die S3- und Swift-Client-Applikationen Objektdaten hochladen und herunterladen.</p>
+<p><a href="#s3-und-swift-api-zertifikat">S3- und Swift-API-Zertifikat</a>: Sichert Client-API-Verbindungen zu Storage-Nodes, Admin-Nodes und Gateway-Nodes, über die S3- und Swift-Client-Applikationen Objektdaten hochladen und herunterladen.</p>
 </li>
 </ul>
 </div>
@@ -17320,7 +17320,7 @@ StorageGRID enthält auch CA-Zertifikate für das Betriebssystem, die in allen G
 <div class="title">Grid CA</div>
 <div class="content">
 <div class="paragraph">
-<p>Der ,Grid-CA-Zertifikat, Von der StorageGRID-Zertifizierungsstelle während der StorageGRID-Installation erzeugt, sichert den gesamten internen StorageGRID-Verkehr.</p>
+<p>Der <a href="#gridca_details">Grid-CA-Zertifikat</a>, Von der StorageGRID-Zertifizierungsstelle während der StorageGRID-Installation erzeugt, sichert den gesamten internen StorageGRID-Verkehr.</p>
 </div>
 <div class="paragraph">
 <p>Zertifikatsinformationen umfassen das Ablaufdatum des Zertifikats und den Zertifikatinhalt.</p>
@@ -17334,7 +17334,7 @@ StorageGRID enthält auch CA-Zertifikate für das Betriebssystem, die in allen G
 <div class="title">Client</div>
 <div class="content">
 <div class="paragraph">
-<p>,Client-Zertifikate, Generiert von einer externen Zertifizierungsstelle, sichern Sie die Verbindungen zwischen externen Monitoring-Tools und der StorageGRID Prometheus Datenbank.</p>
+<p><a href="#adminclientcert_details">Client-Zertifikate</a>, Generiert von einer externen Zertifizierungsstelle, sichern Sie die Verbindungen zwischen externen Monitoring-Tools und der StorageGRID Prometheus Datenbank.</p>
 </div>
 <div class="paragraph">
 <p>Die Zertifikatstabelle verfügt über eine Zeile für jedes konfigurierte Clientzertifikat und gibt an, ob das Zertifikat zusammen mit dem Ablaufdatum des Zertifikats für den Zugriff auf die Prometheus-Datenbank verwendet werden kann.</p>
@@ -17379,10 +17379,8 @@ StorageGRID enthält auch CA-Zertifikate für das Betriebssystem, die in allen G
 <div class="openblock">
 <div class="title">Load Balancer-Endpunkte</div>
 <div class="content">
-<div class="literalblock">
-<div class="content">
-<pre>balancer endpoint certificate,Load Balancer-Endpunktzertifikate, Dass Sie die Verbindungen zwischen S3 und Swift Clients und dem StorageGRID Load Balancer Service auf Gateway Nodes und Admin Nodes hochladen oder generieren.</pre>
-</div>
+<div class="paragraph">
+<p><a href="#endpunkt-zertifikat-für-load-balancer">Load Balancer-Endpunktzertifikate</a>, Dass Sie die Verbindungen zwischen S3 und Swift Clients und dem StorageGRID Load Balancer Service auf Gateway Nodes und Admin Nodes hochladen oder generieren.</p>
 </div>
 <div class="paragraph">
 <p>Die Endpunkttabelle für Load Balancer verfügt über eine Reihe für jeden konfigurierten Load Balancer-Endpunkt und gibt an, ob das globale S3- und Swift-API-Zertifikat oder ein benutzerdefiniertes Load Balancer-Endpoint-Zertifikat für den Endpunkt verwendet wird. Es wird auch das Ablaufdatum für jedes Zertifikat angezeigt.</p>
@@ -17421,7 +17419,7 @@ StorageGRID enthält auch CA-Zertifikate für das Betriebssystem, die in allen G
 <div class="title">Mandanten</div>
 <div class="content">
 <div class="paragraph">
-<p>Die Mandanten nutzen können  federation certificate,Identity Federation Server-Zertifikate Oder  services endpoint certificate,Endpoint-Zertifikate für Plattformservice Um ihre Verbindungen mit StorageGRID zu sichern.</p>
+<p>Die Mandanten nutzen können <a href="#zertifikat-für-identitätsföderation">Identity Federation Server-Zertifikate</a> Oder <a href="#endpoint-zertifikat-für-plattform-services">Endpoint-Zertifikate für Plattformservice</a> Um ihre Verbindungen mit StorageGRID zu sichern.</p>
 </div>
 <div class="paragraph">
 <p>Die Mandantentabelle verfügt über eine Zeile für jeden Mandanten und gibt an, ob jeder Mandant die Berechtigung hat, seine eigenen Identitätsquellen- oder Plattform-Services zu nutzen.</p>
@@ -17456,22 +17454,22 @@ StorageGRID enthält auch CA-Zertifikate für das Betriebssystem, die in allen G
 <div class="ulist">
 <ul>
 <li>
-<p>federation certificate,Zertifikate für Identitätsföderation</p>
+<p><a href="#zertifikat-für-identitätsföderation">Zertifikate für Identitätsföderation</a></p>
 </li>
 <li>
-<p>Storage Pool endpoint certificate,Cloud Storage Pool-Zertifikate</p>
+<p><a href="#endpunkt-zertifikat-für-cloud-storage-pool">Cloud Storage Pool-Zertifikate</a></p>
 </li>
 <li>
-<p>management server (KMS) certificate,KMS-Zertifikate (Key Management Server)</p>
+<p><a href="#kms-zertifikat-key-management-server">KMS-Zertifikate (Key Management Server)</a></p>
 </li>
 <li>
-<p>sign-on (SSO) certificate,Einzelanmelde-Zertifikate</p>
+<p><a href="#sso-zertifikat-single-sign-on">Einzelanmelde-Zertifikate</a></p>
 </li>
 <li>
-<p>alert notification certificate,Benachrichtigungszertifikate per E-Mail senden</p>
+<p><a href="#zertifikat-für-eine-e-mail-benachrichtigung">Benachrichtigungszertifikate per E-Mail senden</a></p>
 </li>
 <li>
-<p>syslog server certificate,Externe Syslog-Server-Zertifikate</p>
+<p><a href="#externes-syslog-serverzertifikat">Externe Syslog-Server-Zertifikate</a></p>
 </li>
 </ul>
 </div>
@@ -17606,7 +17604,7 @@ Sie können nur Informationen zu anderen Zertifikaten anzeigen und darauf zugrei
 <div class="sect2">
 <h3 id="grid-ca-zertifikat">Grid-CA-Zertifikat</h3>
 <div class="paragraph">
-<p>Siehe ,Beschreibung des Standard Grid CA-Zertifikats.</p>
+<p>Siehe <a href="#gridca_details">Beschreibung des Standard Grid CA-Zertifikats</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -17680,7 +17678,7 @@ Sie können nur Informationen zu anderen Zertifikaten anzeigen und darauf zugrei
 <p>Authentifiziert die Verbindung zwischen S3- oder Swift-Clients und dem StorageGRID Load Balancer-Service auf Gateway-Nodes und Admin-Nodes. Sie können ein Load Balancer-Zertifikat hochladen oder generieren, wenn Sie einen Load Balancer-Endpunkt konfigurieren. Client-Applikationen verwenden das Load Balancer-Zertifikat, wenn Sie eine Verbindung zu StorageGRID herstellen, um Objektdaten zu speichern und abzurufen.</p>
 </div>
 <div class="paragraph">
-<p>Sie können auch eine benutzerdefinierte Version des globalen verwenden  and Swift API certificate Zertifikat zur Authentifizierung von Verbindungen zum Lastverteilungsservice. Wenn das globale Zertifikat zur Authentifizierung von Load Balancer-Verbindungen verwendet wird, müssen Sie für jeden Load Balancer-Endpunkt kein separates Zertifikat hochladen oder generieren.</p>
+<p>Sie können auch eine benutzerdefinierte Version des globalen verwenden <a href="#s3-und-swift-api-zertifikat">S3- und Swift-API-Zertifikat</a> Zertifikat zur Authentifizierung von Verbindungen zum Lastverteilungsservice. Wenn das globale Zertifikat zur Authentifizierung von Load Balancer-Verbindungen verwendet wird, müssen Sie für jeden Load Balancer-Endpunkt kein separates Zertifikat hochladen oder generieren.</p>
 </div>
 <div class="paragraph">
 <p><strong>Hinweis:</strong> das Zertifikat, das für die Load Balancer Authentifizierung verwendet wird, ist das am häufigsten verwendete Zertifikat während des normalen StorageGRID-Betriebs.</p>
