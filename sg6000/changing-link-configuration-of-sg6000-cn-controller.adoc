@@ -13,8 +13,10 @@ summary: Sie können die Ethernet-Link-Konfiguration des SG6000-CN Controllers �
 [role="lead"]
 Sie können die Ethernet-Link-Konfiguration des SG6000-CN Controllers ändern. Sie können den Port Bond-Modus, den Netzwerk-Bond-Modus und die Verbindungsgeschwindigkeit ändern.
 
+.Was Sie benötigen
 Das Gerät war xref:placing-appliance-into-maintenance-mode.adoc[In den Wartungsmodus versetzt].
 
+.Über diese Aufgabe
 Zum Ändern der Ethernet-Link-Konfiguration des SG6000-CN Controllers gehören folgende Optionen:
 
 * Ändern des *Port Bond Modus* von Fixed zu Aggregate oder von Aggregat zu Fixed
@@ -45,9 +47,9 @@ Wenn Sie Änderungen an den VLAN-Einstellungen vorgenommen haben, hat sich das S
 xref:configuring-storagegrid-ip-addresses-sg6000.adoc[Konfigurieren Sie StorageGRID-IP-Adressen]
 
 . Wählen Sie im Menü * Netzwerk konfigurieren* *Ping Test* aus.
-. Verwenden Sie das Ping-Test-Tool, um die Verbindung zu IP-Adressen in allen Netzwerken zu überprüfen, die möglicherweise von den in vorgenommenen Änderungen der Verbindungskonfiguration betroffen sind ,Änderungen der Linkkonfiguration Schritt:
+. Verwenden Sie das Ping-Test-Tool, um die Verbindung zu IP-Adressen in allen Netzwerken zu überprüfen, die möglicherweise von den in vorgenommenen Änderungen der Verbindungskonfiguration betroffen sind <<link_config_changes,Änderungen der Linkkonfiguration>> Schritt:
 +
-Zusätzlich zu allen anderen Tests, die Sie durchführen möchten, bestätigen Sie, dass Sie die Grid-Netzwerk-IP-Adresse des primären Admin-Knotens und die Grid-Netzwerk-IP-Adresse von mindestens einem anderen Speicherknoten pingen können. Falls erforderlich, kehren Sie zum zurück ,Änderungen der Linkkonfiguration Führen Sie Schritte aus, und beheben Sie alle Probleme mit der Link-Konfiguration.
+Zusätzlich zu allen anderen Tests, die Sie durchführen möchten, bestätigen Sie, dass Sie die Grid-Netzwerk-IP-Adresse des primären Admin-Knotens und die Grid-Netzwerk-IP-Adresse von mindestens einem anderen Speicherknoten pingen können. Falls erforderlich, kehren Sie zum zurück <<link_config_changes,Änderungen der Linkkonfiguration>> Führen Sie Schritte aus, und beheben Sie alle Probleme mit der Link-Konfiguration.
 
 . Wenn Sie zufrieden sind, dass die Änderungen an der Link-Konfiguration funktionieren und zusätzliche Verfahren erforderlich sind, während der Node sich im Wartungsmodus befindet, führen Sie diese jetzt aus. Wenn Sie fertig sind oder Fehler auftreten und von vorne beginnen möchten, wählen Sie *Erweitert* *Controller neu starten* aus, und wählen Sie dann eine der folgenden Optionen aus:
 +

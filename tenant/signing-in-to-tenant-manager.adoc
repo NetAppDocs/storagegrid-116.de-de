@@ -13,7 +13,7 @@ summary: Sie greifen auf den Tenant Manager zu, indem Sie die URL für den Manda
 [role="lead"]
 Sie greifen auf den Mandanten-Manager zu, indem Sie die URL für den Mandanten in die Adresszeile von A eingeben xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen über Ihre Anmeldedaten verfügen.
 * Sie müssen über eine URL auf den Tenant Manager zugreifen können, die von Ihrem Grid-Administrator bereitgestellt wird. Die URL sieht wie ein Beispiel aus:
 +

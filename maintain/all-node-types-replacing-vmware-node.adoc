@@ -13,8 +13,10 @@ summary: Wenn Sie einen ausgefallenen StorageGRID-Node wiederherstellen, der auf
 [role="lead"]
 Wenn Sie einen ausgefallenen StorageGRID-Node wiederherstellen, der auf VMware gehostet wurde, müssen Sie den ausgefallenen Node entfernen und einen Recovery-Node implementieren.
 
+.Was Sie benötigen
 Sie müssen festgestellt haben, dass die virtuelle Maschine nicht wiederhergestellt werden kann und ersetzt werden muss.
 
+.Über diese Aufgabe
 Sie verwenden den VMware vSphere Web Client, um zuerst die dem ausgefallenen Grid-Node zugeordnete virtuelle Maschine zu entfernen. Anschließend können Sie eine neue Virtual Machine implementieren.
 
 Dieses Verfahren ist nur ein Schritt im Recovery-Prozess des Grid Node. Das Verfahren zum Entfernen und Implementieren eines Node ist für alle VMware Nodes identisch, einschließlich Admin-Nodes, Storage-Nodes, Gateway-Nodes und Archiv-Nodes.

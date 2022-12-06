@@ -13,7 +13,7 @@ summary: 'Sie können hochverfügbare \(HA\)-Gruppen konfigurieren, um hochverf�
 [role="lead"]
 Sie können Hochverfügbarkeitsgruppen (High Availability groups, HA-Gruppen) konfigurieren, um hochverfügbaren Zugriff auf die Services in Admin-Nodes oder Gateway-Nodes bereitzustellen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben die Root-Zugriffsberechtigung.
 * Wenn Sie eine VLAN-Schnittstelle in einer HA-Gruppe verwenden möchten, haben Sie die VLAN-Schnittstelle erstellt. Siehe xref:../admin/configure-vlan-interfaces.adoc[Konfigurieren Sie die VLAN-Schnittstellen].

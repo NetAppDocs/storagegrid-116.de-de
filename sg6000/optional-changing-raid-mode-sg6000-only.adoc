@@ -13,11 +13,12 @@ summary: Sie können zu einem anderen RAID-Modus auf der Appliance wechseln, um 
 [role="lead"]
 Sie können zu einem anderen RAID-Modus auf der Appliance wechseln, um Ihre Anforderungen an Storage und Recovery zu erfüllen. Sie können den Modus nur ändern, bevor Sie den Appliance-Speicherknoten bereitstellen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie verwenden jeden Client, der eine Verbindung zu StorageGRID herstellen kann.
 * Der Client verfügt über eine xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 
 
+.Über diese Aufgabe
 Vor der Bereitstellung der Appliance als Storage Node können Sie eine der folgenden Volume-Konfigurationsoptionen wählen:
 
 * *DDP*: Dieser Modus verwendet zwei Paritätslaufwerke pro acht Datenlaufwerke. Dies ist der Standard- und empfohlene Modus für alle Appliances. Im Vergleich zu RAID 6 bietet DDP eine bessere System-Performance, geringere Wiederherstellungszeiten nach Laufwerksausfällen und einfaches Management.
@@ -44,4 +45,5 @@ Die Startseite des StorageGRID-Appliance-Installationsprogramms wird angezeigt.
 . Klicken Sie Auf *Speichern*.
 
 
+.Verwandte Informationen
 http://mysupport.netapp.com/info/web/ECMP1658252.html["NetApp E-Series Systems Documentation Site"^]

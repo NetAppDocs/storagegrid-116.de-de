@@ -183,6 +183,7 @@ In diesem Beispiel sind die Objektmetadaten für Objekte mit dem Präfix überei
     </Rule>
 </MetadataNotificationConfiguration>
 ----
+.Verwandte Informationen
 xref:../s3/index.adoc[S3 verwenden]
 
 xref:object-metadata-included-in-metadata-notifications.adoc[Objektmetadaten sind in Metadaten-Benachrichtigungen enthalten]

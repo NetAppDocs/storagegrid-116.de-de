@@ -48,4 +48,5 @@ Befolgen Sie die Anweisungen für xref:rebooting-grid-node.adoc[Neubooten eines 
 . Wiederholen Sie diese Schritte auf jedem Admin-Node und Gateway-Node mit gegensätzlichen neu zugeordneten Ports.
 
 
+.Verwandte Informationen
 xref:../admin/index.adoc[StorageGRID verwalten]

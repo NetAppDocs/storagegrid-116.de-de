@@ -14,11 +14,13 @@ summary: Sie können die Storage-Kapazität von Storage-Nodes mit maximal 16 Sto
 [role="lead"]
 Sie können die Storage-Kapazität von Storage-Nodes mit maximal 16 Storage-Volumes erweitern, indem Sie zusätzliche Storage-Volumes hinzufügen. Möglicherweise müssen Sie Storage Volumes zu mehr als einem Storage Node hinzufügen, um ILM-Anforderungen für replizierte oder mit Erasure Coding versehenen Kopien zu erfüllen.
 
+.Was Sie benötigen
 Prüfen Sie vor dem Hinzufügen von Speicher-Volumes den xref:guidelines-for-adding-object-capacity.adoc[Richtlinien zum Hinzufügen von Objektkapazität] Um sicherzustellen, dass Sie wissen, wo Volumes hinzugefügt werden müssen, um die Anforderungen Ihrer ILM-Richtlinie zu erfüllen.
 
 
 NOTE: Diese Anweisungen gelten nur für softwarebasierte Speicherknoten. Siehe xref:../sg6000/adding-expansion-shelf-to-deployed-sg6060.adoc[Erweiterungs-Shelf für das implementierte SG6060 oder SG6060X hinzufügen] Erfahren Sie, wie Sie Storage Volumes zum SG6060 oder SG6060X durch Installation von Erweiterungs-Shelfs hinzufügen. Andere Appliance-Speicherknoten können nicht erweitert werden.
 
+.Über diese Aufgabe
 Der zugrunde liegende Storage eines Storage-Node ist in eine Reihe von Storage-Volumes unterteilt. Storage Volumes sind blockbasierte Storage-Geräte, die vom StorageGRID System formatiert und zum Speichern von Objekten gemountet werden. Jeder Storage Node kann bis zu 16 Storage Volumes unterstützen, die im Grid Manager als _Object Stores_ bezeichnet werden.
 
 

@@ -13,6 +13,7 @@ summary: Bei der Installation und Konfiguration der StorageGRID Appliance sind E
 [role="lead"]
 Bei der Installation und Konfiguration der StorageGRID Appliance sind Entscheidungen zu treffen und Informationen zu Ethernet Switch-Ports, IP-Adressen sowie zu Port- und Netzwerk-Bond-Modi zu sammeln.
 
+.Über diese Aufgabe
 Die folgenden Tabellen enthalten die erforderlichen Informationen für jedes Netzwerk, das Sie mit der Appliance verbinden. Diese Werte sind für die Installation und Konfiguration der Hardware erforderlich.
 
 
@@ -423,6 +424,7 @@ Statische IP-Adresse, die Sie für den BMC-Verwaltungsport verwenden möchten
 
 
 |===
+.Verwandte Informationen
 xref:controllers-in-sg6000-appliances.adoc[Controller in SG6000 Appliances]
 
 xref:reviewing-appliance-network-connections-sg6000.adoc[Appliance-Netzwerkverbindungen prüfen (SG6000)]

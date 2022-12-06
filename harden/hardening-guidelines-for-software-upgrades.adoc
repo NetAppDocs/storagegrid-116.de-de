@@ -41,12 +41,13 @@ Mit dem NetApp Interoperabilitäts-Matrix-Tool können Sie eine Liste der unters
 
 
 
-== Upgrade auf Linux-Knoten
+== *Upgrade auf Linux-Knoten*
 
 Wenn Ihre StorageGRID-Knoten Linux-Hostplattformen verwenden, müssen Sie sicherstellen, dass Sicherheitsupdates und Kernel-Updates auf das Host-Betriebssystem angewendet werden. Darüber hinaus müssen Sie Firmware-Updates auf anfällige Hardware anwenden, wenn diese Updates verfügbar sind.
 
 Mit dem NetApp Interoperabilitäts-Matrix-Tool können Sie eine Liste der unterstützten Versionen abrufen.
 
+.Verwandte Informationen
 https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["NetApp Downloads: StorageGRID"^]
 
 xref:../upgrade/index.adoc[Software-Upgrade]

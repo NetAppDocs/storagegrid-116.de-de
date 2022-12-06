@@ -13,7 +13,7 @@ summary: Mit SANtricity System Manager können Sie die einzelnen Hardwarekompone
 [role="lead"]
 Mit SANtricity System Manager können Sie die einzelnen Hardwarekomponenten im Storage Controller-Shelf überwachen und verwalten. Darüber hinaus werden Hardware-Diagnose- und Umgebungsinformationen, z. B. Komponentententententemperaturen oder Problemen mit den Laufwerken, überprüft.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie verwenden ein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Um über den Grid Manager auf SANtricity System Manager zuzugreifen, müssen Sie über die Administratorberechtigung für die Speicheranwendung oder über die Berechtigung für den Root-Zugriff verfügen.
 * Um mit dem StorageGRID-Appliance-Installationsprogramm auf SANtricity System Manager zuzugreifen, müssen Sie über den Benutzernamen und das Kennwort des SANtricity-System-Managers verfügen.

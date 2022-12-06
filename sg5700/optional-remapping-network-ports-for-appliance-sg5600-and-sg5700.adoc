@@ -13,7 +13,7 @@ summary: Möglicherweise müssen Sie die internen Ports auf dem Appliance Storag
 [role="lead"]
 Möglicherweise müssen Sie die internen Ports auf dem Appliance Storage Node zu verschiedenen externen Ports neu zuordnen. Aufgrund eines Firewall-Problems müssen Sie möglicherweise Ports neu zuordnen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben zuvor auf das Installationsprogramm für StorageGRID-Geräte zugegriffen.
 * Sie sind nicht konfiguriert und planen keine Konfiguration von Load Balancer-Endpunkten.
 +

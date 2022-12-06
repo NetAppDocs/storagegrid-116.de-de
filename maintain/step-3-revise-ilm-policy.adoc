@@ -13,10 +13,12 @@ summary: 'Ab Schritt 3 \(ILM-Richtlinie überarbeiten\) des Assistenten für die
 [role="lead"]
 Ab Schritt 3 (ILM-Richtlinie überarbeiten) des Assistenten für die Dekommission-Site können Sie feststellen, ob die Site von der aktiven ILM-Richtlinie angesprochen wird.
 
+.Was Sie benötigen
 Sie wissen gut, wie ILM funktioniert und kennen die Erstellung von Storage-Pools, Erasure Coding-Profilen, ILM-Regeln und die Simulation und Aktivierung einer ILM-Richtlinie bereits.
 
 xref:../ilm/index.adoc[Objektmanagement mit ILM]
 
+.Über diese Aufgabe
 StorageGRID kann einen Standort nicht stilllegen, wenn auf diesen Standort durch eine ILM-Regel in der aktiven ILM-Richtlinie verwiesen wird.
 
 Wenn sich Ihre aktuelle ILM-Richtlinie auf die Site bezieht, die Sie entfernen möchten, müssen Sie eine neue ILM-Richtlinie aktivieren, die bestimmte Anforderungen erfüllt. Insbesondere die neue ILM-Richtlinie:

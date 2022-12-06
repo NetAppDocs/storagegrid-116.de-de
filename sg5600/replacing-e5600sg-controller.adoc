@@ -13,6 +13,7 @@ summary: Möglicherweise müssen Sie den E5600SG-Controller austauschen.
 [role="lead"]
 Möglicherweise müssen Sie den E5600SG-Controller austauschen.
 
+.Was Sie benötigen
 Sie müssen Zugriff auf die folgenden Ressourcen haben:
 
 * Informationen zum Austausch der E-Series Hardware auf der NetApp Support-Website unter +http://mysupport.netapp.com/["mysupport.netapp.com"^]
@@ -20,6 +21,7 @@ Sie müssen Zugriff auf die folgenden Ressourcen haben:
 * Das Gerät war xref:placing-appliance-into-maintenance-mode.adoc[In den Wartungsmodus versetzt].
 
 
+.Über diese Aufgabe
 Wenn beide Controller ausreichend funktionieren, um eine kontrollierte Abschaltung zu ermöglichen, können Sie zuerst den E5600SG Controller herunterfahren, um die Verbindung zum E2700 Controller zu unterbrechen.
 
 
@@ -73,6 +75,7 @@ Vergewissern Sie sich, dass die Appliance Storage Nodes den erwarteten Status au
 
 
 
+.Verwandte Informationen
 https://mysupport.netapp.com/info/web/ECMP11751516.html["Verfahren zum Austausch von Hardware der NetApp E-Series und EF-Series"^]
 
 http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61893["NetApp Dokumentation: E5600 Serie"^]

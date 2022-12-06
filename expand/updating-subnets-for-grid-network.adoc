@@ -15,13 +15,14 @@ Wenn Sie Grid-Nodes oder einen neuen Standort in einer Erweiterung hinzufügen, 
 
 StorageGRID pflegt eine Liste der für die Kommunikation zwischen den Grid-Nodes im Grid-Netzwerk (eth0) verwendeten Subnetze. Zu diesen Einträgen gehören die Subnetze, die von jedem Standort im StorageGRID-System für das Grid-Netzwerk verwendet werden, sowie alle Subnetze, die für NTP, DNS, LDAP oder andere externe Server verwendet werden, auf die über das Grid-Netzwerk-Gateway zugegriffen wird.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben die Berechtigung Wartung oder Stammzugriff.
 * Sie haben die Provisionierungs-Passphrase.
 * Sie haben die Netzwerkadressen in CIDR-Notation der Subnetze, die Sie konfigurieren möchten.
 
 
+.Über diese Aufgabe
 Wenn einer der neuen Knoten eine Grid-Netzwerk-IP-Adresse in einem Subnetz hat, das zuvor nicht verwendet wurde, müssen Sie das neue Subnetz der Netznetzwerkliste hinzufügen, bevor Sie die Erweiterung starten. Andernfalls müssen Sie die Erweiterung abbrechen, das neue Subnetz hinzufügen und den Vorgang erneut starten.
 
 .Schritte

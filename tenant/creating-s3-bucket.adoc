@@ -13,7 +13,7 @@ summary: Sie können im Mandanten-Manager S3-Buckets für Objektdaten erstellen.
 [role="lead"]
 Sie können im Mandanten-Manager S3-Buckets für Objektdaten erstellen. Wenn Sie einen Bucket erstellen, müssen Sie Namen und Region des Bucket angeben. Wenn die globale S3-Objektsperre für das StorageGRID-System aktiviert ist, können Sie optional die S3-Objektsperre für den Bucket aktivieren.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem beim Mandantenmanager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie gehören zu einer Benutzergruppe mit den Berechtigungen Alle Buckets verwalten oder Root Access. Diese Berechtigungen überschreiben die Berechtigungseinstellungen in Gruppen- oder Bucket-Richtlinien.
 +
@@ -85,6 +85,7 @@ Der Bucket wird erstellt und der Tabelle auf der Seite Buckets hinzugefügt.
 
 
 
+.Verwandte Informationen
 xref:../ilm/index.adoc[Objektmanagement mit ILM]
 
 xref:understanding-tenant-management-api.adoc[Mandantenmanagement-API verstehen]

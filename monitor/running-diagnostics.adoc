@@ -17,11 +17,12 @@ Bei der Fehlerbehebung eines Problems können Sie gemeinsam mit dem technischen 
 * xref:commonly-used-prometheus-metrics.adoc[Häufig verwendete Prometheus-Kennzahlen]
 
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben spezifische Zugriffsberechtigungen.
 
 
+.Über diese Aufgabe
 Die Seite Diagnose führt eine Reihe von diagnostischen Prüfungen zum aktuellen Status des Rasters durch. Jede diagnostische Prüfung kann einen von drei Zuständen haben:
 
 * image:../media/icon_alert_green_checkmark.png["Häkchen Für Symbolwarnung Grün"] *Normal*: Alle Werte liegen im Normalbereich.

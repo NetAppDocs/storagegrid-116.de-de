@@ -13,7 +13,7 @@ summary: Sie können eine benutzerdefinierte Alarmregel entfernen, wenn Sie sie 
 [role="lead"]
 Sie können eine benutzerdefinierte Alarmregel entfernen, wenn Sie sie nicht mehr verwenden möchten.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie verfügen über die Berechtigung zum Verwalten von Warnungen oder Stammzugriff.
 

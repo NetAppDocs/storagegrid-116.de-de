@@ -13,6 +13,7 @@ summary: 'Client-Applikationen können sich mithilfe der IP-Adresse eines Grid-N
 [role="lead"]
 Client-Applikationen können sich mithilfe der IP-Adresse eines Grid-Node und der Port-Nummer eines Service auf diesem Node mit StorageGRID verbinden. Bei Konfiguration von Hochverfügbarkeitsgruppen (High Availability, HA) können Client-Applikationen eine Verbindung über die virtuelle IP-Adresse der HA-Gruppe herstellen.
 
+.Über diese Aufgabe
 In dieser Tabelle sind die verschiedenen Verbindungsmethoden aufgeführt, mit denen Clients eine Verbindung zu StorageGRID herstellen können, sowie die für den jeweiligen Verbindungstyp verwendeten IP-Adressen und Ports. Die Anleitung beschreibt das Auffinden dieser Informationen im Grid Manager, wenn die Endpunkte des Load Balancer und Gruppen für Hochverfügbarkeit (HA) bereits konfiguriert sind.
 
 [cols="1a,1a,1a,1a"]
@@ -124,6 +125,7 @@ Swift-Standardports:
 
 
 |===
+.Beispiele
 Verwenden Sie eine strukturierte URL, wie unten gezeigt, um einen S3-Client mit dem Load Balancer-Endpunkt einer HA-Gruppe von Gateway-Nodes zu verbinden:
 
 * `https://_VIP-of-HA-group:LB-endpoint-port_`

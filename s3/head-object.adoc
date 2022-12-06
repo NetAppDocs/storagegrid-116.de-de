@@ -145,6 +145,7 @@ Wenn Sie ein mehrteilige Objekt hochgeladen StorageGRID oder ein großes Objekt 
 
 Wenn A `versionId` unterressource wird nicht angegeben. Der Vorgang ruft die aktuellste Version des Objekts in einem versionierten Bucket ab. Wenn die aktuelle Version des Objekts eine Löschmarkierung ist, wird mit dem ein Status „`not found`“ zurückgegeben `x-amz-delete-marker` Antwortkopfzeile auf gesetzt `true`.
 
+.Verwandte Informationen
 xref:using-server-side-encryption.adoc[Serverseitige Verschlüsselung]
 
 xref:../ilm/index.adoc[Objektmanagement mit ILM]

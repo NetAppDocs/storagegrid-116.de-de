@@ -13,12 +13,13 @@ summary: Audit-Meldungen werden von StorageGRID-Diensten generiert und in Text-L
 [role="lead"]
 Audit-Meldungen werden von StorageGRID-Diensten generiert und in Text-Log-Dateien gespeichert. API-spezifische Audit-Meldungen in den Audit-Protokollen stellen kritische Daten zum Monitoring von Sicherheit, Betrieb und Performance bereit, die Ihnen bei der Bewertung des Systemzustands helfen können.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben spezifische Zugriffsberechtigungen.
 * Sie haben die `Passwords.txt` Datei:
 * Sie kennen die IP-Adresse eines Admin-Knotens.
 
 
+.Über diese Aufgabe
 Der Name der aktiven Audit-Log-Datei `audit.log`, Und es wird auf Admin-Knoten gespeichert.
 
 Einmal am Tag wird die aktive audit.log-Datei gespeichert und eine neue `audit.log` Datei wird gestartet. Der Name der gespeicherten Datei gibt an, wann sie gespeichert wurde, im Format `_yyyy-mm-dd.txt_`.

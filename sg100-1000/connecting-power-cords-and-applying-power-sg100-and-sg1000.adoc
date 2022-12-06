@@ -24,4 +24,5 @@ Drücken Sie den Netzschalter während des Einschaltvorgangs nicht erneut.
 . Befestigen Sie die Frontverkleidung am Gerät, falls sie entfernt wurde.
 
 
+.Verwandte Informationen
 xref:viewing-status-indicators-on-sg100-and-sg1000-appliances.adoc[Anzeigen von Statusanzeigen für SG100- und SG1000-Geräte]

@@ -37,6 +37,7 @@ Führen Sie den folgenden Befehl nur für neue Block Storage-Geräte aus. Führe
 ----
 sudo dd if=/dev/zero of=/dev/mapper/my-block-device-name bs=1G count=1
 ----
+.Verwandte Informationen
 xref:../rhel/index.adoc[Installieren Sie Red hat Enterprise Linux oder CentOS]
 
 xref:../ubuntu/index.adoc[Installieren Sie Ubuntu oder Debian]

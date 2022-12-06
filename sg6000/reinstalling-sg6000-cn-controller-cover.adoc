@@ -13,6 +13,7 @@ summary: Setzen Sie die Controllerabdeckung wieder ein, wenn die interne Hardwar
 [role="lead"]
 Setzen Sie die Controllerabdeckung wieder ein, wenn die interne Hardwarewartung abgeschlossen ist.
 
+.Was Sie benötigen
 Sie haben alle Wartungsarbeiten im Controller abgeschlossen.
 
 .Schritte
@@ -27,6 +28,7 @@ Wenn die Abdeckung nicht vollständig eingesetzt ist, können Sie den SG6000-CN-
 . Optional: Drehen Sie die blaue Kunststoffverriegelung um eine Vierteldrehung in die Schlossrichtung, wie auf der Verriegelung gezeigt, um sie zu verriegeln.
 
 
+.Nachdem Sie fertig sind
 Setzen Sie den Controller wieder in den Schrank oder Rack ein.
 
 xref:reinstalling-sg6000-cn-controller-into-cabinet-or-rack.adoc[Installieren Sie den SG6000-CN Controller wieder in den Schrank oder Rack]

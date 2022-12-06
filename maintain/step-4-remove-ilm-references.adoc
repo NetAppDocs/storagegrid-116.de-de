@@ -13,6 +13,7 @@ summary: 'Ab Schritt 4 \(ILM-Referenzen entfernen\) des Assistenten für die Dec
 [role="lead"]
 Ab Schritt 4 (Entfernen von ILM-Referenzen) des Decommission Site Wizard können Sie die vorgeschlagene Richtlinie entfernen, wenn diese vorhanden ist, und alle nicht verwendeten ILM-Regeln löschen oder bearbeiten, die sich noch auf die Site beziehen.
 
+.Über diese Aufgabe
 In den folgenden Fällen können Sie den Ablauf zur Deaktivierung der Website nicht starten:
 
 * Es gibt eine vorgeschlagene ILM-Richtlinie. Wenn Sie über eine vorgeschlagene Richtlinie verfügen, müssen Sie diese löschen.

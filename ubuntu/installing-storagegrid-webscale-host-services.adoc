@@ -13,6 +13,7 @@ summary: Sie verwenden das DEB-Paket von StorageGRID, um die StorageGRID-Host-Di
 [role="lead"]
 Sie verwenden das DEB-Paket von StorageGRID, um die StorageGRID-Host-Dienste zu installieren.
 
+.Über diese Aufgabe
 In diesen Anweisungen wird beschrieben, wie die Host-Services aus den DEB-Paketen installiert werden. Alternativ können Sie die im Installationarchiv enthaltenen APT-Repository-Metadaten verwenden, um die DEB-Pakete Remote zu installieren. Lesen Sie die APT-Repository-Anweisungen für Ihr Linux-Betriebssystem.
 
 .Schritte

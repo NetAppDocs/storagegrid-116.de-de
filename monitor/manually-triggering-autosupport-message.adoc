@@ -13,7 +13,7 @@ summary: Um den technischen Support bei der Fehlerbehebung bei Problemen mit Ihr
 [role="lead"]
 Um den technischen Support bei der Fehlerbehebung bei Problemen mit Ihrem StorageGRID System zu unterstützen, können Sie manuell eine AutoSupport Meldung auslösen, die gesendet werden soll.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie müssen über die Berechtigung Root Access oder andere Grid-Konfiguration verfügen.
 
@@ -33,4 +33,5 @@ NOTE: Nachdem Sie eine vom Benutzer ausgelöste AutoSupport-Nachricht gesendet h
 
 
 
+.Verwandte Informationen
 xref:managing-alarms.adoc[E-Mail-Servereinstellungen für Alarme konfigurieren (Legacy-System)]

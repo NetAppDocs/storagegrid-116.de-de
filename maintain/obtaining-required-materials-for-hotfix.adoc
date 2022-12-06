@@ -59,4 +59,5 @@ Zugehörige Dokumentation
 `readme.txt` Datei für den Hotfix. Diese Datei ist auf der Download-Seite des Hotfix enthalten. Schauen Sie sich die an `readme` Vor dem Anwenden des Hotfix sorgfältig ablesen.
 
 |===
+.Verwandte Informationen
 xref:downloading-hotfix-file.adoc[Hotfix-Datei herunterladen]

@@ -15,6 +15,7 @@ Sie müssen eine Reihe von Aufgaben genau durchführen, um nach einem Ausfall de
 
 image::../media/overview_archive_node_recovery.gif[Übersicht Flussdiagramm der Archiv Knoten Wiederherstellung]
 
+.Über diese Aufgabe
 Die Wiederherstellung von Archivknoten ist von den folgenden Problemen betroffen:
 
 * Wenn die ILM-Richtlinie für die Replizierung einer einzelnen Kopie konfiguriert ist

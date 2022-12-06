@@ -97,6 +97,7 @@ Sie müssen Informationen erfassen, um Ihr Raster zu konfigurieren:
 * IP-Adressen des DNS-Servers (Domain Name System
 
 
+.Verwandte Informationen
 xref:how-grid-nodes-discover-primary-admin-node.adoc[Ermitteln der primären Admin-Node durch Grid-Nodes]
 
 xref:storage-and-performance-requirements.adoc[Storage- und Performance-Anforderungen erfüllt]

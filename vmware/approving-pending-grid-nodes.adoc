@@ -13,6 +13,7 @@ summary: Sie müssen jeden Grid-Node genehmigen, bevor er dem StorageGRID System
 [role="lead"]
 Sie müssen jeden Grid-Node genehmigen, bevor er dem StorageGRID System beitreten kann.
 
+.Was Sie benötigen
 Sie haben alle virtuellen und StorageGRID Appliance Grid-Nodes implementiert.
 
 

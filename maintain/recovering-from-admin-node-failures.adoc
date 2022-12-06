@@ -13,12 +13,14 @@ summary: Der Wiederherstellungsprozess für einen Admin-Knoten hängt davon ab, 
 [role="lead"]
 Der Wiederherstellungsprozess für einen Admin-Knoten hängt davon ab, ob es sich um den primären Admin-Knoten oder einen nicht-primären Admin-Knoten handelt.
 
+.Über diese Aufgabe
 Die Schritte für die Wiederherstellung eines primären oder nicht primären Admin-Knotens auf hoher Ebene sind identisch, wobei sich die Details der einzelnen Schritte unterscheiden.
 
 image::../media/overview_admin_node_recovery.png[Übersicht über die Wiederherstellung für primären oder nicht-primären Admin-Knoten]
 
 Befolgen Sie immer den richtigen Wiederherstellungsvorgang für den Admin-Knoten, den Sie wiederherstellen. Die Verfahren sehen auf hohem Niveau gleich aus, unterscheiden sich aber in den Details.
 
+.Verwandte Informationen
 xref:../sg100-1000/index.adoc[SG100- und SG1000-Services-Appliances]
 
 .Wahlmöglichkeiten

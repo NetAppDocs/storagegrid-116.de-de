@@ -14,11 +14,12 @@ summary: Nachdem Sie das StorageGRID-System untersucht und überprüft haben, ob
 [role="lead"]
 Nachdem Sie das StorageGRID-System untersucht und überprüft haben, ob alle aufgezeichneten verlorenen Objekte dauerhaft verloren gehen oder dass es sich um einen falschen Alarm handelt, können Sie den Wert des Attributs Lost Objects auf Null zurücksetzen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie müssen über spezifische Zugriffsberechtigungen verfügen.
 
 
+.Über diese Aufgabe
 Sie können den Zähler „Lost Objects“ von einer der folgenden Seiten zurücksetzen:
 
 * *UNTERSTÜTZUNG* *Tools* *Grid-Topologie* *_Site_* *_Storage-Node_* *LDR* *Data Store* *Übersicht* *Haupt*

@@ -100,6 +100,7 @@ Diese Vorgänge sind individuell für StorageGRID.
 |===
 Anweisungen zur Implementierung von S3-Client-Applikationen finden Sie in der Anleitung, wie StorageGRID diese APIs implementiert.
 
+.Verwandte Informationen
 xref:considerations-for-using-platform-services.adoc[Überlegungen bei der Verwendung von Plattform-Services]
 
 xref:../s3/index.adoc[S3 verwenden]

@@ -14,7 +14,7 @@ summary: Nach der Installation können Sie einem Linux-Knoten zusätzliche Trunk
 [role="lead"]
 Nach der Installation können Sie einem Linux-Knoten zusätzliche Trunk- oder Zugangsschnittstellen hinzufügen. Die fügen Sie Schnittstellen hinzu, werden auf der Seite VLAN-Schnittstellen und auf der Seite HA-Gruppen angezeigt.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben Zugriff auf die Anweisungen für die Installation von StorageGRID auf Ihrer Linux-Plattform.
 +
 ** xref:../rhel/index.adoc[Installieren Sie Red hat Enterprise Linux oder CentOS]
@@ -28,6 +28,7 @@ Nach der Installation können Sie einem Linux-Knoten zusätzliche Trunk- oder Zu
 
 IMPORTANT: Versuchen Sie nicht, einem Node Schnittstellen hinzuzufügen, während ein Software-Upgrade, ein Wiederherstellungsverfahren oder ein Erweiterungsvorgang aktiv ist.
 
+.Über diese Aufgabe
 Verwenden Sie diese Schritte, um einem Linux-Knoten eine oder mehrere zusätzliche Schnittstellen hinzuzufügen, nachdem der Knoten installiert wurde. Beispielsweise möchten Sie einem Admin oder Gateway Node eine Trunk-Schnittstelle hinzufügen, sodass Sie den Datenverkehr zwischen verschiedenen Applikationen oder Mandanten über VLAN-Schnittstellen trennen können. Oder auch, wenn Sie eine Access-Schnittstelle hinzufügen möchten, um sie in einer HA-Gruppe (High Availability, Hochverfügbarkeit) zu verwenden.
 
 Wenn Sie eine Trunk-Schnittstelle hinzufügen, müssen Sie eine VLAN-Schnittstelle in StorageGRID konfigurieren. Wenn Sie eine Zugriffsoberfläche hinzufügen, können Sie die Schnittstelle direkt einer HA-Gruppe hinzufügen. Sie müssen keine VLAN-Schnittstelle konfigurieren.

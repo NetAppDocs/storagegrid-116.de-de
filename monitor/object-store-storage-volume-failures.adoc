@@ -27,4 +27,5 @@ image::../media/storage_node_object_stores.png[Storage-Node-Objektspeicher]
 
 Je nach Art des Ausfalls können Fehler bei einem Storage-Volume in einem Alarm über den Storage-Status oder den Zustand eines Objektspeicher gespiegelt werden. Wenn ein Speichervolume ausfällt, sollten Sie das ausgefallene Speichervolume reparieren, um den Speicherknoten so bald wie möglich wieder voll zu machen. Wenn nötig, können Sie auf die Registerkarte *Konfiguration* gehen und den Speicherknoten in einen Read‐only Zustand setzen, so dass das StorageGRID System ihn für den Datenabruf verwenden kann, während Sie sich auf eine vollständige Wiederherstellung des Servers vorbereiten.
 
+.Verwandte Informationen
 xref:../maintain/index.adoc[Recovery und Wartung]

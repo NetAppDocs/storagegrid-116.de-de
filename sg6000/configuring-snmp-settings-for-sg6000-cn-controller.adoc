@@ -13,7 +13,7 @@ summary: Wenn Sie mit der Konfiguration von SNMP für Hardware vertraut sind, k�
 [role="lead"]
 Wenn Sie mit der Konfiguration von SNMP für Hardware vertraut sind, können Sie die SNMP-Einstellungen für den SG6000-CN-Controller über die BMC-Schnittstelle konfigurieren. Sie können sichere Community-Strings bereitstellen, SNMP-Trap aktivieren und bis zu fünf SNMP-Ziele angeben.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Wissen Sie, wie Sie auf das BMC-Dashboard zugreifen können.
 * Sie haben Erfahrung in der Konfiguration von SNMP-Einstellungen für SNMPv1-v2c Geräte.
 

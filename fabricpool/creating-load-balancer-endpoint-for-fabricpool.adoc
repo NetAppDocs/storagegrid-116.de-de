@@ -13,7 +13,7 @@ summary: Wenn Sie StorageGRID für die Verwendung mit FabricPool konfigurieren, 
 [role="lead"]
 Wenn Sie StorageGRID für die Verwendung mit FabricPool konfigurieren, müssen Sie einen Endpunkt für den Load Balancer konfigurieren und das Endpoint-Zertifikat für den Load Balancer hochladen, das zum Sichern der Verbindung zwischen ONTAP und StorageGRID verwendet wird.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben die Root-Zugriffsberechtigung.
 * Sie haben die folgenden Dateien:
@@ -25,6 +25,7 @@ Wenn Sie StorageGRID für die Verwendung mit FabricPool konfigurieren, müssen S
 
 
 
+.Über diese Aufgabe
 Weitere Informationen zu dieser Aufgabe finden Sie unter xref:../admin/configuring-load-balancer-endpoints.adoc[Konfigurieren von Load Balancer-Endpunkten].
 
 .Schritte

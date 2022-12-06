@@ -26,6 +26,7 @@ Sie sollten alle *Objekte Lost*-Warnungen sofort untersuchen, um die Ursache des
 
 Wenn Objekt-Daten ohne Kopien verloren gehen, gibt es keine Recovery-Lösung. Sie müssen jedoch den Zähler „Lost Objects“ zurücksetzen, um zu verhindern, dass bekannte verlorene Objekte neue verlorene Objekte maskieren.
 
+.Verwandte Informationen
 xref:investigating-lost-objects.adoc[Untersuchen Sie verlorene Objekte]
 
 xref:resetting-lost-and-missing-object-counts.adoc[Verlorene und fehlende Objektanzahl zurücksetzen]

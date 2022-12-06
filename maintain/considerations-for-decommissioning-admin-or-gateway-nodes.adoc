@@ -20,4 +20,5 @@ Prüfen Sie die folgenden Überlegungen, bevor Sie einen Admin-Node oder einen G
 * Wenn Sie einen Admin-Node deaktivieren und Single Sign-On (SSO) für Ihr StorageGRID-System aktiviert ist, müssen Sie daran denken, das Vertrauen des Knotens zu entfernen, das auf die Grundlage von Active Directory Federation Services (AD FS) basiert.
 
 
+.Verwandte Informationen
 xref:../admin/index.adoc[StorageGRID verwalten]

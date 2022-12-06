@@ -13,7 +13,7 @@ summary: Nachdem Sie einen Gateway-Node ersetzt haben, müssen Sie im Grid Manag
 [role="lead"]
 Nachdem Sie einen Gateway-Node ersetzt haben, müssen Sie im Grid Manager Recovery starten auswählen, um den neuen Node als Ersatz für den ausgefallenen Node zu konfigurieren.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie müssen über die Berechtigung Wartung oder Stammzugriff verfügen.
 * Sie müssen über eine Passphrase für die Bereitstellung verfügen.
@@ -50,4 +50,5 @@ Wenn Sie die Recovery nach dem Zurücksetzen der Prozedur erneut versuchen möch
 
 
 
+.Verwandte Informationen
 xref:preparing-appliance-for-reinstallation-platform-replacement-only.adoc[Appliance für die Neuinstallation vorbereiten (nur Plattformaustausch)]

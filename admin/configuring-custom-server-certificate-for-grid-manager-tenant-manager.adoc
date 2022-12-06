@@ -13,6 +13,7 @@ summary: Sie können das standardmäßige StorageGRID-Serverzertifikat durch ein
 [role="lead"]
 Sie können das Standardzertifikat für die Verwaltungsschnittstelle durch ein einzelnes benutzerdefiniertes Zertifikat ersetzen, das Benutzern den Zugriff auf den Grid Manager und den Tenant Manager ermöglicht, ohne dass Sicherheitswarnungen auftreten. Sie können auch das Standard-Zertifikat für die Managementoberfläche zurücksetzen oder ein neues erstellen.
 
+.Über diese Aufgabe
 Standardmäßig wird jeder Admin-Node ein von der Grid-CA signiertes Zertifikat ausgestellt. Diese CA-signierten Zertifikate können durch ein einziges allgemeines Zertifikat für benutzerdefinierte Verwaltungsschnittstellen und einen entsprechenden privaten Schlüssel ersetzt werden.
 
 Da für alle Admin-Nodes ein einzelnes Zertifikat für eine benutzerdefinierte Managementoberfläche verwendet wird, müssen Sie das Zertifikat als Platzhalter- oder Multi-Domain-Zertifikat angeben, wenn Clients den Hostnamen bei der Verbindung mit Grid Manager und Tenant Manager überprüfen müssen. Definieren Sie das benutzerdefinierte Zertifikat so, dass es mit allen Admin-Nodes im Raster übereinstimmt.
@@ -27,7 +28,7 @@ NOTE: Um sicherzustellen, dass die Vorgänge durch ein Serverzertifikat nicht un
 Wenn Sie mit einem Domänennamen anstelle einer IP-Adresse auf den Grid Manager oder den Tenant Manager zugreifen, zeigt der Browser einen Zertifikatfehler ohne eine Option zum Umgehen an, wenn eine der folgenden Fälle auftritt:
 
 * Ihr Zertifikat für die benutzerdefinierte Managementoberfläche läuft ab.
-* Du  the default management interface certificate,Zurücksetzen von einem Zertifikat der benutzerdefinierten Managementoberfläche auf das Standard-Serverzertifikat.
+* Du <<Stellen Sie das Standardzertifikat für die Managementoberfläche wieder her,Zurücksetzen von einem Zertifikat der benutzerdefinierten Managementoberfläche auf das Standard-Serverzertifikat>>.
 
 
 ====
@@ -141,11 +142,12 @@ Wenn Sie das Standardzertifikat für die Verwaltungsschnittstelle wiederherstell
 
 Wenn eine strikte Host-Validierung erforderlich ist, können Sie das Zertifikat der Managementoberfläche mithilfe eines Skripts generieren.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben spezifische Zugriffsberechtigungen.
 * Sie haben die `Passwords.txt` Datei:
 
 
+.Über diese Aufgabe
 Die beste Vorgehensweise für eine Produktionsumgebung ist die Verwendung eines Zertifikats, das von einer externen Zertifizierungsstelle signiert wurde.
 
 .Schritte

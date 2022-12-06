@@ -13,7 +13,7 @@ summary: Sie können den Anzeigenamen für eine Gruppe bearbeiten. Sie können d
 [role="lead"]
 Sie können den Anzeigenamen für eine Gruppe bearbeiten. Sie können den eindeutigen Namen für eine Gruppe nicht bearbeiten.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Mandantenmanager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie müssen einer Benutzergruppe mit Root Access-Berechtigung angehören. Siehe xref:tenant-management-permissions.adoc[Mandantenmanagement-Berechtigungen].
 

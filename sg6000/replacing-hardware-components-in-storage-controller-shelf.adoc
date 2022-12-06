@@ -13,7 +13,7 @@ summary: Wenn ein Hardwareproblem auftritt, müssen Sie möglicherweise eine Kom
 [role="lead"]
 Wenn ein Hardwareproblem auftritt, müssen Sie möglicherweise eine Komponente im Storage-Controller-Shelf ersetzen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben das Verfahren zum Austausch der E-Series Hardware.
 * Sie haben die Storage Appliance physisch gefunden, bei der die Storage Shelf-Hardwarekomponenten im Datacenter ausgetauscht werden.
 +
@@ -21,6 +21,7 @@ xref:locating-controller-in-data-center.adoc[Controller im Datacenter finden]
 
 
 
+.Über diese Aufgabe
 Informationen zum Austauschen des Akkus im Speicher-Controller finden Sie in den Anweisungen zum Austauschen eines Speichercontrollers. Diese Anweisungen beschreiben, wie Sie einen Controller aus dem Gerät entfernen, den Akku aus dem Controller entfernen, den Akku einbauen und den Controller austauschen.
 
 Anweisungen zu den anderen Field Replaceable Units (FRUs) in den Controller-Shelfs finden Sie in den Verfahren der E-Series zur Systemwartung.
@@ -71,6 +72,7 @@ Laufwerkseinschub (nur Shelfs mit 60 Laufwerken)
 E-Series: Auswechseln der Laufwerkschublade (60 Laufwerke)
 
 |===
+.Verwandte Informationen
 http://mysupport.netapp.com/info/web/ECMP1658252.html["NetApp E-Series Systems Documentation Site"^]
 
 xref:replacing-storage-controller-sg6000.adoc[Austausch des Storage Controllers]

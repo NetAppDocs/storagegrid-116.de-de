@@ -13,7 +13,7 @@ summary: Sobald Sie eine ILM-Richtlinie aktiviert haben, sollten Sie repräsenta
 [role="lead"]
 Sobald Sie eine ILM-Richtlinie aktiviert haben, sollten Sie repräsentative Testobjekte in das StorageGRID System aufnehmen. Anschließend sollten Sie eine Objektmetadaten abfragen durchführen, um zu bestätigen, ob Kopien wie vorgesehen erstellt und an den richtigen Orten platziert werden.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben eine Objektkennung, die einer der folgenden sein kann:
 +
 ** *UUID*: Der Universally Unique Identifier des Objekts. Geben Sie die UUID in allen Großbuchstaben ein.

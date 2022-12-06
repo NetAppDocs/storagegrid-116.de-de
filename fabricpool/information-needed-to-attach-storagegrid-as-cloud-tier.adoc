@@ -13,6 +13,7 @@ summary: Bevor Sie StorageGRID als Cloud Tier für FabricPool hinzufügen könne
 [role="lead"]
 Bevor Sie StorageGRID als Cloud Tier für FabricPool hinzufügen können, müssen Sie einige Konfigurationsschritte in StorageGRID ausführen, um bestimmte Werte zu erhalten.
 
+.Über diese Aufgabe
 In der folgenden Tabelle werden die Informationen aufgeführt, die Sie ONTAP bereitstellen müssen, wenn Sie StorageGRID als Cloud-Tier für FabricPool anhängen. In den Themen in diesem Abschnitt wird erläutert, wie Sie den StorageGRID Grid Manager und den Tenant Manager verwenden, um die Informationen zu erhalten, die Sie benötigen.
 
 
@@ -111,4 +112,5 @@ Das CA-Zertifikat, das Sie beim Erstellen des StorageGRID Load Balancer-Endpunkt
 xref:creating-load-balancer-endpoint-for-fabricpool.adoc[Erstellen eines Load Balancer-Endpunkts für FabricPool]
 
 |===
+.Nachdem Sie fertig sind
 Nachdem Sie die erforderlichen StorageGRID Informationen erhalten haben, können Sie unter ONTAP StorageGRID als Cloud-Tier hinzufügen, die Cloud-Ebene als Aggregat hinzufügen und die Tiering-Richtlinien für Volumes festlegen.

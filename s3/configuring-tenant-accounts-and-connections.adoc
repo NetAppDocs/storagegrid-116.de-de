@@ -40,6 +40,7 @@ Nachdem ein S3-Mandantenkonto erstellt wurde, können Mandantenbenutzer auf den 
 
 IMPORTANT: Benutzer von S3-Mandanten können mit Mandanten-Manager S3-Buckets erstellen und managen. Dafür sind jedoch S3-Zugriffsschlüssel sowie die S3-REST-API erforderlich, um Objekte aufzunehmen und zu managen.
 
+.Verwandte Informationen
 xref:../admin/index.adoc[StorageGRID verwalten]
 
 xref:../tenant/index.adoc[Verwenden Sie das Mandantenkonto]
@@ -79,6 +80,7 @@ Wenn ein Administrator eine HA-Gruppe erstellt, werden die Netzwerkschnittstelle
 
 Weitere Informationen zu den einzelnen Optionen finden Sie in den Anweisungen zur Administration von StorageGRID.
 
+.Verwandte Informationen
 xref:../admin/index.adoc[StorageGRID verwalten]
 
 
@@ -199,6 +201,7 @@ Wenn beispielsweise die virtuelle IP-Adresse der HA-Gruppe 192.0.2.5 lautet und 
 
 Ein DNS-Name kann für die IP-Adresse konfiguriert werden, die Clients zum Herstellen der Verbindung mit StorageGRID verwenden. Wenden Sie sich an Ihren Netzwerkadministrator vor Ort.
 
+.Verwandte Informationen
 xref:../admin/index.adoc[StorageGRID verwalten]
 
 
@@ -217,6 +220,7 @@ NOTE: Der CLB-Service ist veraltet.
 
 Wenn die Option *HTTP-Verbindung aktivieren* ausgewählt ist, müssen Clients für HTTP unterschiedliche Ports verwenden als für HTTPS. Lesen Sie die Anweisungen zum Verwalten von StorageGRID.
 
+.Verwandte Informationen
 xref:../admin/index.adoc[StorageGRID verwalten]
 
 xref:benefits-of-active-idle-and-concurrent-http-connections.adoc[Vorteile von aktiven, inaktiven und gleichzeitigen HTTP-Verbindungen]
@@ -227,6 +231,7 @@ xref:benefits-of-active-idle-and-concurrent-http-connections.adoc[Vorteile von a
 
 Bevor Sie S3-Domänennamen für Client-Anforderungen verwenden können, muss ein StorageGRID-Administrator das System so konfigurieren, dass Verbindungen angenommen werden, die S3-Domänennamen im S3-Pfadstil und virtuelle S3-Hosted-Style-Anforderungen verwenden.
 
+.Über diese Aufgabe
 Um Ihnen die Verwendung von virtuellen S3-Hosted-Style-Anforderungen zu ermöglichen, muss ein Grid-Administrator die folgenden Aufgaben durchführen:
 
 * Verwenden Sie den Grid-Manager, um dem StorageGRID System die S3-Endpunkt-Domain-Namen hinzuzufügen.
@@ -251,6 +256,7 @@ Weitere Informationen finden Sie in den Anweisungen zum Verwalten von StorageGRI
 
 Nach Abschluss dieser Schritte können Sie virtuelle Anfragen im Hosted-Style verwenden (z. B. `bucket.s3.company.com`).
 
+.Verwandte Informationen
 xref:../admin/index.adoc[StorageGRID verwalten]
 
 xref:configuring-security-for-rest-api.adoc[Konfigurieren Sie die Sicherheit für DIE REST API]
@@ -261,7 +267,7 @@ xref:configuring-security-for-rest-api.adoc[Konfigurieren Sie die Sicherheit fü
 
 Mit der Amazon Web Services Command Line Interface (AWS CLI) können Sie die Verbindung zum System testen und überprüfen, ob Sie Objekte lesen und in das System schreiben können.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben die AWS CLI von heruntergeladen und installiert https://aws.amazon.com/cli["aws.amazon.com/cli"^].
 * Sie haben im StorageGRID System ein S3-Mandantenkonto erstellt.
 

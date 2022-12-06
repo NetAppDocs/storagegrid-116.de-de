@@ -13,12 +13,13 @@ summary: Auf der Registerkarte Task können Sie den ausgewählten Knoten neu sta
 [role="lead"]
 Auf der Registerkarte Task können Sie den ausgewählten Knoten neu starten. Die Registerkarte Task wird für alle Knoten angezeigt.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben die Berechtigung Wartung oder Stammzugriff.
 * Sie haben die Provisionierungs-Passphrase.
 
 
+.Über diese Aufgabe
 Auf der Registerkarte Task können Sie einen Knoten neu starten. Für Geräteknoten können Sie die Registerkarte Aufgabe auch verwenden, um das Gerät in den Wartungsmodus zu versetzen.
 
 * Beim Neubooten eines Grid-Node auf der Registerkarte Task wird der Befehl zum Neubooten auf dem Ziel-Node ausgegeben. Beim Neubooten eines Node wird der Node heruntergefahren und neu gestartet. Alle Dienste werden automatisch neu gestartet.
@@ -65,6 +66,7 @@ Wenn der Knoten neu gestartet wird, wird das graue Symbol (Administrativ Down) a
 
 
 
+.Verwandte Informationen
 xref:../sg6000/index.adoc[SG6000 Storage-Appliances]
 
 xref:../sg5700/index.adoc[SG5700 Storage-Appliances]

@@ -48,11 +48,12 @@ image::../media/aggregate_text_report.gif[Screenshot mit Aggregat-Textbericht]
 
 Textberichte zeigen eine textuelle Darstellung von Attributdatenwerten an, die vom NMS-Dienst verarbeitet wurden. Die Berichte können an Datacenter-Standorten, Grid-Node, Komponenten oder Service erstellt werden.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie müssen über spezifische Zugriffsberechtigungen verfügen.
 
 
+.Über diese Aufgabe
 Für Attributdaten, die voraussichtlich kontinuierlich geändert werden, werden diese Attributdaten in regelmäßigen Abständen vom NMS-Dienst (an der Quelle) erfasst. Bei selten veränderlichen Attributdaten (z. B. Daten, die auf Ereignissen wie Statusänderungen basieren) wird ein Attributwert an den NMS-Dienst gesendet, wenn sich der Wert ändert.
 
 Der angezeigte Berichtstyp hängt vom konfigurierten Zeitraum ab. Standardmäßig werden zusammengefasste Textberichte für Zeiträume generiert, die länger als eine Woche sind.
@@ -88,6 +89,7 @@ Nach wenigen Augenblicken wird ein Textbericht erstellt. Lassen Sie mehrere Minu
 
 Exportierte Textberichte öffnen eine neue Browser-Registerkarte, auf der Sie die Daten auswählen und kopieren können.
 
+.Über diese Aufgabe
 Die kopierten Daten können dann in einem neuen Dokument (z. B. in einer Tabelle) gespeichert und zur Analyse der Performance des StorageGRID-Systems verwendet werden.
 
 .Schritte

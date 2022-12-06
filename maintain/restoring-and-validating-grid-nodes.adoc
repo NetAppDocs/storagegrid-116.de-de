@@ -13,6 +13,7 @@ summary: Sie müssen die Grid-Konfigurationsdateien für alle ausgefallenen Grid
 [role="lead"]
 Sie müssen die Grid-Konfigurationsdateien für alle ausgefallenen Grid-Nodes wiederherstellen, dann die Grid-Konfigurationsdateien validieren und Fehler beheben.
 
+.Über diese Aufgabe
 Sie können jeden Grid-Node importieren, der auf dem Host vorhanden sein soll, solange er vorhanden ist `/var/local` Das Volume ging aufgrund des Ausfalls des vorherigen Hosts nicht verloren. Beispiel: Der `/var/local` Möglicherweise ist das Volume immer noch vorhanden, wenn Sie gemeinsam genutzten Storage für Daten-Volumes von StorageGRID Systemen verwendet haben, wie in der StorageGRID Installationsanleitung für Ihr Linux Betriebssystem beschrieben. Durch das Importieren des Knotens wird seine Knotenkonfigurationsdatei auf den Host wiederhergestellt.
 
 Wenn fehlende Knoten nicht importiert werden können, müssen Sie ihre Grid-Konfigurationsdateien neu erstellen.
@@ -83,6 +84,7 @@ Sie müssen alle Fehler oder Warnungen beheben, bevor Sie den StorageGRID-Hostdi
 
 
 
+.Verwandte Informationen
 xref:../rhel/index.adoc[Installieren Sie Red hat Enterprise Linux oder CentOS]
 
 xref:../ubuntu/index.adoc[Installieren Sie Ubuntu oder Debian]

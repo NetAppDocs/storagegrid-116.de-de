@@ -13,13 +13,14 @@ summary: Möglicherweise müssen Sie den E2700 Controller austauschen, wenn er n
 [role="lead"]
 Möglicherweise müssen Sie den E2700 Controller austauschen, wenn er nicht optimal funktioniert oder ausgefallen ist.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie verfügen über einen Ersatzcontroller mit derselben Teilenummer wie der zu ersetzenden Controller.
 * Sie verfügen über Etiketten, um jedes Kabel, das mit dem Controller verbunden ist, zu identifizieren.
 * Sie haben antistatischen Schutz.
 * Sie müssen über die Berechtigung Wartung oder Stammzugriff verfügen. Weitere Informationen finden Sie in den Anweisungen zum Verwalten von StorageGRID.
 
 
+.Über diese Aufgabe
 Sie können feststellen, ob ein ausgefallener Controller vorhanden ist, indem Sie die gelbe Service Action required LED am Controller überprüfen (in der Abbildung 1). Wenn diese LED leuchtet, sollte der Controller ersetzt werden.
 
 image::../media/e2700_controller_sar_led.gif[LED für Serviceaktionen am E2700 Controller]
@@ -96,6 +97,7 @@ image::../media/node_rejoin_grid_confirmation.png[Das Raster des Appliance-Node 
 . Überprüfen Sie vom SANtricity Storage Manager, ob der neue Controller optimal ist, und sammeln Sie Support-Daten.
 
 
+.Verwandte Informationen
 https://mysupport.netapp.com/info/web/ECMP11751516.html["Verfahren zum Austausch von Hardware der NetApp E-Series und EF-Series"^]
 
 http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61765["NetApp Dokumentation: E2700 Serie"^]

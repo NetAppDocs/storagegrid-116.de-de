@@ -13,19 +13,20 @@ summary: Sie erstellen Storage-Pools, um zu bestimmen, wo das StorageGRID-System
 [role="lead"]
 Sie erstellen Storage-Pools, um zu bestimmen, wo das StorageGRID-System Objektdaten und den verwendeten Storage-Typ speichert. Jeder Speicherpool umfasst einen oder mehrere Standorte und eine oder mehrere Speicherklassen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben spezifische Zugriffsberechtigungen.
 * Sie haben die Richtlinien zum Erstellen von Speicherpools überprüft.
 
 
+.Über diese Aufgabe
 Storage Pools legen fest, wo Objektdaten gespeichert sind. Die Anzahl der erforderlichen Storage-Pools hängt von der Anzahl der Standorte in Ihrem Grid und den gewünschten Kopien ab: Repliziert oder Erasure Coding.
 
 * Für Replizierung und Erasure Coding für einen Standort erstellen Sie für jeden Standort einen Storage-Pool. Wenn Sie beispielsweise replizierte Objektkopien an drei Standorten speichern möchten, erstellen Sie drei Storage Pools.
 * Erstellen Sie für das Erasure Coding an drei oder mehr Standorten einen Storage-Pool mit einem Eintrag für jeden Standort. Wenn Sie beispielsweise Objekte aus drei Standorten löschen möchten, erstellen Sie einen Speicherpool. Wählen Sie das Plus-Symbol image:../media/icon_plus_sign_black_on_white.gif["Symbol einfügen"] So fügen Sie für jede Site einen Eintrag hinzu:
 +
 
-IMPORTANT: Schließen Sie den standardmäßigen Standort „Alle Standorte“ nicht in einen Speicherpool ein, der in einem Erasure-Coding-Profil verwendet wird. Fügen Sie stattdessen für jeden Standort, der Daten mit dem Erasure Coding speichert, einen separaten Eintrag in den Storage-Pool ein. Siehe ,Diesem Schritt Beispiel:
+IMPORTANT: Schließen Sie den standardmäßigen Standort „Alle Standorte“ nicht in einen Speicherpool ein, der in einem Erasure-Coding-Profil verwendet wird. Fügen Sie stattdessen für jeden Standort, der Daten mit dem Erasure Coding speichert, einen separaten Eintrag in den Storage-Pool ein. Siehe <<entries,Diesem Schritt>> Beispiel:
 
 * Wenn Sie über mehrere Speicherklassen verfügen, erstellen Sie keinen Speicherpool, der unterschiedliche Speicherklassen an einem einzelnen Standort enthält. Siehe xref:guidelines-for-creating-storage-pools.adoc[Richtlinien zur Erstellung von Speicherpools].
 

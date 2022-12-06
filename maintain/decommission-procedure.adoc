@@ -29,6 +29,7 @@ Wenn ein Standort eine Mischung aus verbundenen (image:../media/icon_alert_green
 
 NOTE: Wenn Sie eine zweite Wartung durchführen müssen, können Sie xref:pausing-and-resuming-decommission-process-for-storage-nodes.adoc[Unterbrechen Sie die Deaktivierung, während die Speicherknoten entfernt werden]. Die Schaltfläche *Pause* ist nur aktiviert, wenn die ILM-Bewertung oder die mit Erasure Coding versehenen Phasen der Datenauswertung erreicht sind. Die ILM-Evaluierung (Datenmigration) wird jedoch weiterhin im Hintergrund ausgeführt. Nach Abschluss des zweiten Wartungsverfahrens können Sie die Außerbetriebnahme fortsetzen.
 
+.Verwandte Informationen
 xref:grid-node-decommissioning.adoc[Der Grid-Node wird deaktiviert]
 
 xref:site-decommissioning.adoc[Deaktivierung der Website]

@@ -37,4 +37,5 @@ OPTIONEN /
 Client-Applikationen können Probleme haben `OPTIONS /` Anfragen an den S3-Port auf einem Storage-Node ohne die Zugangsdaten für die S3-Authentifizierung, um zu ermitteln, ob der Storage-Node verfügbar ist. Sie können diese Anforderung zum Monitoring verwenden oder um zu ermöglichen, dass externe Load Balancer eingesetzt werden, wenn ein Storage-Node ausfällt.
 
 |===
+.Verwandte Informationen
 xref:get-storage-usage-request.adoc[Storage-Nutzungsanforderung ABRUFEN]

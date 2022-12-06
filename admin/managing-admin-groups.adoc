@@ -13,7 +13,7 @@ summary: Sie können Administratorgruppen erstellen, um die Sicherheitsberechtig
 [role="lead"]
 Sie können Administratorgruppen erstellen, um die Sicherheitsberechtigungen für einen oder mehrere Admin-Benutzer zu verwalten. Benutzer müssen zu einer Gruppe gehören, die Zugriff auf das StorageGRID-System gewährt.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben spezifische Zugriffsberechtigungen.
 * Wenn Sie eine föderierte Gruppe importieren möchten, haben Sie einen Identitätsverbund konfiguriert, und die föderierte Gruppe ist bereits in der konfigurierten Identitätsquelle vorhanden.
@@ -83,7 +83,7 @@ NOTE: Wenn ein Benutzer zu mehreren Gruppen gehört und eine beliebige Gruppe au
 
 
 
-. Wählen Sie eine oder mehrere Antworten aus  permissions.
+. Wählen Sie eine oder mehrere Antworten aus <<Gruppenberechtigungen>>.
 +
 Sie müssen jeder Gruppe mindestens eine Berechtigung zuweisen. Andernfalls können sich Benutzer der Gruppe nicht bei StorageGRID anmelden.
 
@@ -149,13 +149,13 @@ Zugriffsmodus oder Berechtigungen bearbeiten
 .. Aktivieren Sie das Kontrollkästchen für die Gruppe.
 .. Wählen Sie *Aktionen* *Gruppendetails anzeigen*.
 .. Ändern Sie optional den Zugriffsmodus der Gruppe.
-.. Wählen Sie optional aus oder heben Sie die Auswahl ab  permissions.
+.. Wählen Sie optional aus oder heben Sie die Auswahl ab <<Gruppenberechtigungen>>.
 .. Wählen Sie *Änderungen speichern*.
 
  a| 
 .. Wählen Sie den Gruppennamen aus, um die Details anzuzeigen.
 .. Ändern Sie optional den Zugriffsmodus der Gruppe.
-.. Wählen Sie optional aus oder heben Sie die Auswahl ab  permissions.
+.. Wählen Sie optional aus oder heben Sie die Auswahl ab <<Gruppenberechtigungen>>.
 .. Wählen Sie *Änderungen speichern*.
 
 

@@ -13,6 +13,7 @@ summary: Wenn StorageGRID Nodes auf Linux-Hosts bereitgestellt werden, müssen a
 [role="lead"]
 Wenn StorageGRID Nodes auf Linux-Hosts bereitgestellt werden, müssen auf jedem dieser Hosts ein zusätzliches RPM oder DEB-Paket installiert werden, bevor Sie das Upgrade starten.
 
+.Was Sie benötigen
 Sie müssen eine der folgenden Komponenten heruntergeladen haben `.tgz` Oder `.zip` Dateien von der NetApp Downloads Seite für StorageGRID.
 
 

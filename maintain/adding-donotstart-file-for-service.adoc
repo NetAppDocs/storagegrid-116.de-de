@@ -13,6 +13,7 @@ summary: Sie können verhindern, dass ein einzelner Dienst gestartet wird, indem
 [role="lead"]
 Sie können verhindern, dass ein einzelner Dienst gestartet wird, indem Sie dem Verzeichnis dieses Dienstes auf einem Grid-Node eine DoNotStart-Datei hinzufügen.
 
+.Was Sie benötigen
 Sie müssen die haben `Passwords.txt` Datei:
 
 .Schritte

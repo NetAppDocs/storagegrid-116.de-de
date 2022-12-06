@@ -13,7 +13,7 @@ summary: Um zu bestimmen, ob eine Site deaktiviert werden kann, öffnen Sie zun�
 [role="lead"]
 Um zu bestimmen, ob eine Site deaktiviert werden kann, öffnen Sie zunächst den Assistenten zur Deaktivierung der Site.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen alle erforderlichen Materialien erhalten haben.
 * Sie müssen die Überlegungen zum Entfernen eines Standorts geprüft haben.
 * Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
@@ -59,7 +59,7 @@ Grünes Häkchen (image:../media/icon_alert_green_checkmark.png["Häkchen Für S
  a| 
 Sie können diese Website außer Betrieb nehmen.
  a| 
-Gehen Sie zu ,Im nächsten Schritt.
+Gehen Sie zu <<decommission_possible,Im nächsten Schritt>>.
 
 
 

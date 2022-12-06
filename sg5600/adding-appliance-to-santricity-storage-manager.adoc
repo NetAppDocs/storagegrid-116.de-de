@@ -13,8 +13,10 @@ summary: Der E2700 Controller in der Appliance wird mit dem SANtricity Storage M
 [role="lead"]
 Der E2700 Controller in der Appliance wird mit dem SANtricity Storage Manager verbunden und dann die Appliance als Storage-Array hinzugefügt.
 
+.Was Sie benötigen
 Sie verwenden ein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 
+.Über diese Aufgabe
 Ausführliche Anweisungen finden Sie in der Dokumentation zum SANtricity-Storage-Manager.
 
 .Schritte
@@ -44,4 +46,5 @@ NOTE: Nur einer der Controller der Appliance ist mit dem SANtricity Storage Mana
 . Klicken Sie Auf *Hinzufügen*.
 
 
+.Verwandte Informationen
 http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61197["NetApp Dokumentation: SANtricity Storage Manager"^]

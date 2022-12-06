@@ -13,11 +13,12 @@ summary: Wenn Sie zum Verwalten von Client-Verbindungen zu StorageGRID einen Loa
 [role="lead"]
 Wenn Sie zum Verwalten von Client-Verbindungen zu StorageGRID einen Load Balancer verwenden, sollten Sie die Lastausgleichvorgänge überwachen, nachdem Sie das System zunächst und nachdem Sie Konfigurationsänderungen vorgenommen oder eine Erweiterung durchgeführt haben.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie müssen über spezifische Zugriffsberechtigungen verfügen.
 
 
+.Über diese Aufgabe
 Sie können den Load Balancer-Service auf Admin-Nodes oder Gateway-Nodes, einen externen Load Balancer eines Drittanbieters oder den CLB-Service auf Gateway-Knoten verwenden, um Client-Anforderungen über mehrere Storage-Nodes zu verteilen.
 
 
@@ -73,6 +74,7 @@ Die Anzahl der Sitzungen sollte ungefähr auf allen Storage-Nodes gleich sein.
 
 
 
+.Verwandte Informationen
 xref:../admin/index.adoc[StorageGRID verwalten]
 
 xref:viewing-load-balancer-tab.adoc[Zeigen Sie die Registerkarte Load Balancer an]

@@ -24,6 +24,7 @@ Wenn das optionale BMC-Managementnetzwerk nicht verbunden ist, sind einige Suppo
 
 
 
+.Verwandte Informationen
 xref:gathering-installation-information-sg100-and-sg1000.adoc[Erfassen von Installationsinformationen (SG100 und SG1000)]
 
 xref:cabling-appliance-sg100-and-sg1000.adoc[Kabelgerät SG100 und SG1000]

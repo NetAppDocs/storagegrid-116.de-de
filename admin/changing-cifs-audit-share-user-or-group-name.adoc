@@ -13,6 +13,7 @@ summary: Sie können den Namen eines Benutzers oder einer Gruppe für eine CIFS-
 [role="lead"]
 Sie können den Namen eines Benutzers oder einer Gruppe für eine CIFS-Revisionsfreigabe ändern, indem Sie einen neuen Benutzer oder eine neue Gruppe hinzufügen und dann den alten löschen.
 
+.Über diese Aufgabe
 Der Audit-Export über CIFS/Samba wurde veraltet und wird in einer zukünftigen StorageGRID-Version entfernt.
 
 .Schritte

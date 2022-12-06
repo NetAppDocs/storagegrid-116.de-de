@@ -68,8 +68,8 @@ Jede Registerkarte wird unten mit Links zu weiteren Zertifikatdetails beschriebe
 --
 Die globalen Zertifikate sichern den StorageGRID-Zugriff über Webbrowser und externe S3 und Swift API-Clients. Zwei globale Zertifikate werden zunächst von der StorageGRID-Zertifizierungsstelle während der Installation generiert. Die beste Vorgehensweise für eine Produktionsumgebung besteht darin, benutzerdefinierte Zertifikate zu verwenden, die von einer externen Zertifizierungsstelle signiert wurden.
 
-*  interface certificate: Sichert Client-Web-Browser-Verbindungen zu StorageGRID-Management-Schnittstellen.
-*  and Swift API certificate: Sichert Client-API-Verbindungen zu Storage-Nodes, Admin-Nodes und Gateway-Nodes, über die S3- und Swift-Client-Applikationen Objektdaten hochladen und herunterladen.
+* <<Zertifikat für die Managementoberfläche>>: Sichert Client-Web-Browser-Verbindungen zu StorageGRID-Management-Schnittstellen.
+* <<S3- und Swift-API-Zertifikat>>: Sichert Client-API-Verbindungen zu Storage-Nodes, Admin-Nodes und Gateway-Nodes, über die S3- und Swift-Client-Applikationen Objektdaten hochladen und herunterladen.
 
 
 Informationen zu den installierten globalen Zertifikaten umfassen:
@@ -97,7 +97,7 @@ Ihre Vorteile:
 --
 .Grid CA
 --
-Der ,Grid-CA-Zertifikat, Von der StorageGRID-Zertifizierungsstelle während der StorageGRID-Installation erzeugt, sichert den gesamten internen StorageGRID-Verkehr.
+Der <<gridca_details,Grid-CA-Zertifikat>>, Von der StorageGRID-Zertifizierungsstelle während der StorageGRID-Installation erzeugt, sichert den gesamten internen StorageGRID-Verkehr.
 
 Zertifikatsinformationen umfassen das Ablaufdatum des Zertifikats und den Zertifikatinhalt.
 
@@ -106,7 +106,7 @@ Das können Sie xref:copying-storagegrid-system-ca-certificate.adoc[Kopieren Sie
 --
 .Client
 --
-,Client-Zertifikate, Generiert von einer externen Zertifizierungsstelle, sichern Sie die Verbindungen zwischen externen Monitoring-Tools und der StorageGRID Prometheus Datenbank.
+<<adminclientcert_details,Client-Zertifikate>>, Generiert von einer externen Zertifizierungsstelle, sichern Sie die Verbindungen zwischen externen Monitoring-Tools und der StorageGRID Prometheus Datenbank.
 
 Die Zertifikatstabelle verfügt über eine Zeile für jedes konfigurierte Clientzertifikat und gibt an, ob das Zertifikat zusammen mit dem Ablaufdatum des Zertifikats für den Zugriff auf die Prometheus-Datenbank verwendet werden kann.
 
@@ -128,7 +128,7 @@ Ihre Vorteile:
 --
 .Load Balancer-Endpunkte
 --
- balancer endpoint certificate,Load Balancer-Endpunktzertifikate, Dass Sie die Verbindungen zwischen S3 und Swift Clients und dem StorageGRID Load Balancer Service auf Gateway Nodes und Admin Nodes hochladen oder generieren.
+<<Endpunkt-Zertifikat für Load Balancer,Load Balancer-Endpunktzertifikate>>, Dass Sie die Verbindungen zwischen S3 und Swift Clients und dem StorageGRID Load Balancer Service auf Gateway Nodes und Admin Nodes hochladen oder generieren.
 
 Die Endpunkttabelle für Load Balancer verfügt über eine Reihe für jeden konfigurierten Load Balancer-Endpunkt und gibt an, ob das globale S3- und Swift-API-Zertifikat oder ein benutzerdefiniertes Load Balancer-Endpoint-Zertifikat für den Endpunkt verwendet wird. Es wird auch das Ablaufdatum für jedes Zertifikat angezeigt.
 
@@ -145,7 +145,7 @@ Ihre Vorteile:
 --
 .Mandanten
 --
-Die Mandanten nutzen können  federation certificate,Identity Federation Server-Zertifikate Oder  services endpoint certificate,Endpoint-Zertifikate für Plattformservice Um ihre Verbindungen mit StorageGRID zu sichern.
+Die Mandanten nutzen können <<Zertifikat für Identitätsföderation,Identity Federation Server-Zertifikate>> Oder <<Endpoint-Zertifikat für Plattform-Services,Endpoint-Zertifikate für Plattformservice>> Um ihre Verbindungen mit StorageGRID zu sichern.
 
 Die Mandantentabelle verfügt über eine Zeile für jeden Mandanten und gibt an, ob jeder Mandant die Berechtigung hat, seine eigenen Identitätsquellen- oder Plattform-Services zu nutzen.
 
@@ -162,12 +162,12 @@ Ihre Vorteile:
 --
 StorageGRID verwendet andere Sicherheitszertifikate zu bestimmten Zwecken. Diese Zertifikate werden nach ihrem Funktionsnamen aufgelistet. Weitere Sicherheitszertifikate:
 
-*  federation certificate,Zertifikate für Identitätsföderation
-*  Storage Pool endpoint certificate,Cloud Storage Pool-Zertifikate
-*  management server (KMS) certificate,KMS-Zertifikate (Key Management Server)
-*  sign-on (SSO) certificate,Einzelanmelde-Zertifikate
-*  alert notification certificate,Benachrichtigungszertifikate per E-Mail senden
-*  syslog server certificate,Externe Syslog-Server-Zertifikate
+* <<Zertifikat für Identitätsföderation,Zertifikate für Identitätsföderation>>
+* <<Endpunkt-Zertifikat für Cloud Storage Pool,Cloud Storage Pool-Zertifikate>>
+* <<KMS-Zertifikat (Key Management Server),KMS-Zertifikate (Key Management Server)>>
+* <<SSO-Zertifikat (Single Sign On),Einzelanmelde-Zertifikate>>
+* <<Zertifikat für eine E-Mail-Benachrichtigung,Benachrichtigungszertifikate per E-Mail senden>>
+* <<Externes Syslog-Serverzertifikat,Externe Syslog-Server-Zertifikate>>
 
 
 Informationen geben den Zertifikattyp an, den eine Funktion verwendet, sowie die Gültigkeitsdaten des Server- und Clientzertifikats. Wenn Sie einen Funktionsnamen auswählen, wird eine Browserregisterkarte geöffnet, auf der Sie die Zertifikatdetails anzeigen und bearbeiten können.
@@ -239,7 +239,7 @@ xref:configuring-custom-server-certificate-for-storage-node-or-clb.adoc[Konfigur
 
 === Grid-CA-Zertifikat
 
-Siehe ,Beschreibung des Standard Grid CA-Zertifikats.
+Siehe <<gridca_details,Beschreibung des Standard Grid CA-Zertifikats>>.
 
 
 
@@ -278,7 +278,7 @@ Server
  a| 
 Authentifiziert die Verbindung zwischen S3- oder Swift-Clients und dem StorageGRID Load Balancer-Service auf Gateway-Nodes und Admin-Nodes. Sie können ein Load Balancer-Zertifikat hochladen oder generieren, wenn Sie einen Load Balancer-Endpunkt konfigurieren. Client-Applikationen verwenden das Load Balancer-Zertifikat, wenn Sie eine Verbindung zu StorageGRID herstellen, um Objektdaten zu speichern und abzurufen.
 
-Sie können auch eine benutzerdefinierte Version des globalen verwenden  and Swift API certificate Zertifikat zur Authentifizierung von Verbindungen zum Lastverteilungsservice. Wenn das globale Zertifikat zur Authentifizierung von Load Balancer-Verbindungen verwendet wird, müssen Sie für jeden Load Balancer-Endpunkt kein separates Zertifikat hochladen oder generieren.
+Sie können auch eine benutzerdefinierte Version des globalen verwenden <<S3- und Swift-API-Zertifikat>> Zertifikat zur Authentifizierung von Verbindungen zum Lastverteilungsservice. Wenn das globale Zertifikat zur Authentifizierung von Load Balancer-Verbindungen verwendet wird, müssen Sie für jeden Load Balancer-Endpunkt kein separates Zertifikat hochladen oder generieren.
 
 *Hinweis:* das Zertifikat, das für die Load Balancer Authentifizierung verwendet wird, ist das am häufigsten verwendete Zertifikat während des normalen StorageGRID-Betriebs.
  a| 

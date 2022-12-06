@@ -13,6 +13,7 @@ summary: Möglicherweise müssen Sie den SG6000-CN-Controller neu starten, währ
 [role="lead"]
 Möglicherweise müssen Sie den SG6000-CN-Controller neu starten, während das Installationsprogramm der StorageGRID-Appliance ausgeführt wird. Beispielsweise müssen Sie möglicherweise den Controller neu booten, wenn die Installation fehlschlägt.
 
+.Über diese Aufgabe
 Dieses Verfahren gilt nur, wenn der SG6000-CN-Controller das Installationsprogramm der StorageGRID-Appliance ausführt. Nach Abschluss der Installation funktioniert dieser Schritt nicht mehr, da das Installationsprogramm für StorageGRID-Geräte nicht mehr verfügbar ist.
 
 .Schritte

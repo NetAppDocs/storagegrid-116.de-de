@@ -13,7 +13,7 @@ summary: Sie müssen möglicherweise auf SANtricity System Manager auf dem Stora
 [role="lead"]
 Sie müssen möglicherweise auf SANtricity System Manager auf dem Storage Controller zugreifen, um die Hardware im Storage Controller Shelf zu überwachen oder um E-Series AutoSupport zu konfigurieren.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie verwenden ein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Um über den Grid Manager auf SANtricity-System-Manager zuzugreifen, müssen Sie StorageGRID installiert haben, und Sie müssen über die Berechtigung zum Administrator der Speichergeräte oder Root-Zugriff verfügen.
 * Um mit dem StorageGRID-Appliance-Installationsprogramm auf SANtricity System Manager zuzugreifen, müssen Sie über den Benutzernamen und das Kennwort des SANtricity-System-Managers verfügen.
@@ -26,6 +26,7 @@ NOTE: Sie müssen über die SANtricity-Firmware 8.70 (11.70) oder höher verfüg
 
 IMPORTANT: Der Zugriff auf den SANtricity System Manager über den Grid Manager oder über den Appliance Installer beschränkt sich im Allgemeinen nur auf die Überwachung der Hardware und die Konfiguration von E-Series AutoSupport. Viele Funktionen und Vorgänge in SANtricity System Manager, z. B. ein Firmware-Upgrade, gelten nicht für das Monitoring Ihrer StorageGRID Appliance. Um Probleme zu vermeiden, befolgen Sie immer die Hardware-Installations- und Wartungsanweisungen für Ihr Gerät.
 
+.Über diese Aufgabe
 Es gibt drei Möglichkeiten, auf den SANtricity System Manager zuzugreifen, je nachdem, in welcher Phase des Installations- und Konfigurationsprozesses Sie sich befinden:
 
 * Wenn die Appliance noch nicht als Knoten in Ihrem StorageGRID-System bereitgestellt wurde, sollten Sie die Registerkarte Erweitert im StorageGRID-Appliance-Installationsprogramm verwenden.
@@ -37,7 +38,7 @@ NOTE: Sobald der Knoten bereitgestellt ist, können Sie den StorageGRID Applianc
 * Wenn Sie den StorageGRID-Appliance-Installer oder den Grid-Manager nicht verwenden können, können Sie über einen Webbrowser, der mit dem Management-Port verbunden ist, direkt auf SANtricity System Manager zugreifen.
 
 
-Diese Vorgehensweise umfasst Schritte für den ersten Zugriff auf den SANtricity System Manager. Wenn Sie SANtricity System Manager bereits eingerichtet haben, fahren Sie mit fort ,Schritt für die Hardware-Warnmeldungen konfigurieren.
+Diese Vorgehensweise umfasst Schritte für den ersten Zugriff auf den SANtricity System Manager. Wenn Sie SANtricity System Manager bereits eingerichtet haben, fahren Sie mit fort <<config_hardware_alerts_sg6000,Schritt für die Hardware-Warnmeldungen konfigurieren>>.
 
 
 NOTE: Wenn Sie entweder den Grid-Manager oder den StorageGRID-Appliance-Installer verwenden, können Sie auf SANtricity System Manager zugreifen, ohne den Management-Port der Appliance konfigurieren oder verbinden zu müssen.

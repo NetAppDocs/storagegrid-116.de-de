@@ -40,4 +40,5 @@ Die StorageGRID Installations-API umfasst die folgenden Abschnitte:
 * *Standorte* -- Konfigurationsvorgänge auf Standortebene. Sie können eine Site erstellen, anzeigen, löschen und ändern.
 
 
+.Verwandte Informationen
 xref:automating-installation.adoc[Automatisierung der Installation]

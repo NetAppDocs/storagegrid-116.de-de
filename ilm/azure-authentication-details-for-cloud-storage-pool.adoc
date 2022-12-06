@@ -13,7 +13,7 @@ summary: Wenn Sie einen Cloud Storage Pool für Azure Blob Storage erstellen, m�
 [role="lead"]
 Wenn Sie einen Cloud Storage Pool für Azure Blob Storage erstellen, müssen Sie einen Kontonamen und Kontoschlüssel für den externen Container angeben, den StorageGRID zum Speichern von Objekten verwendet.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben die Basisinformationen für den Cloud Storage Pool eingegeben und als Provider-Typ *Azure Blob Storage* angegeben. *Gemeinsamer Schlüssel* wird im Feld *Authentifizierungstyp* angezeigt.
 +
 image::../media/cloud_storage_pool_create_azure.png[Cloud Storage Pool Create Azure]

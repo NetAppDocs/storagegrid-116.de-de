@@ -13,7 +13,7 @@ summary: Der Hotfix wird zuerst automatisch auf den primären Admin-Knoten angew
 [role="lead"]
 Der Hotfix wird zuerst automatisch auf den primären Admin-Knoten angewendet. Anschließend müssen Sie die Anwendung des Hotfix für andere Grid-Knoten genehmigen, bis alle Knoten dieselbe Softwareversion ausführen. Sie können die Genehmigungssequenz anpassen, indem Sie auswählen, ob einzelne Grid-Nodes, Gruppen von Grid-Nodes oder alle Grid-Nodes genehmigt werden sollen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben die Überlegungen geprüft und die Schritte unter ausgeführt xref:hotfix-planning-and-preparation.adoc[Planen und bereiten Sie sich auf einen Hotfix vor].
 * Sie haben die Provisionierungs-Passphrase.
 * Sie haben Root-Zugriff oder die Wartungsberechtigung.
@@ -132,6 +132,7 @@ Der Vorgang ist erst abgeschlossen, wenn der Hotfix auf alle Knoten angewendet w
 
 
 
+.Verwandte Informationen
 xref:../admin/index.adoc[StorageGRID verwalten]
 
 xref:../monitor/index.adoc[Monitoring und Fehlerbehebung]

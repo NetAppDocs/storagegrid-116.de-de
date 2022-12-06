@@ -13,7 +13,7 @@ summary: Mit Azure AD erstellen Sie für jeden Admin-Node in Ihrem System eine E
 [role="lead"]
 Mit Azure AD erstellen Sie für jeden Admin-Node in Ihrem System eine Enterprise-Applikation.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben mit der Konfiguration der Single Sign-On-Funktion für StorageGRID begonnen und als SSO-Typ *Azure* ausgewählt.
 * *Der Sandbox-Modus* ist auf der Single Sign-On-Seite im Grid Manager ausgewählt. Siehe xref:../admin/using-sandbox-mode.adoc[Verwenden Sie den Sandbox-Modus].
 * Sie haben den *Enterprise-Anwendungsnamen* für jeden Admin-Knoten in Ihrem System. Sie können diese Werte aus der Detailtabelle „Admin-Knoten“ auf der Seite „StorageGRID Single Sign-On“ kopieren.

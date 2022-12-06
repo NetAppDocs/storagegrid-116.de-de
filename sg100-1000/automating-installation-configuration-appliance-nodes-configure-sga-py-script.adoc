@@ -13,7 +13,7 @@ summary: Mit dem Skript configure-sga.py können Sie viele Installations- und Ko
 [role="lead"]
 Sie können das verwenden `configure-sga.py` Skript zur Automatisierung vieler Installations- und Konfigurationsaufgaben für StorageGRID-Appliance-Nodes, einschließlich der Installation und Konfiguration eines primären Admin-Knotens Dieses Skript kann nützlich sein, wenn Sie über eine große Anzahl von Geräten verfügen, die konfiguriert werden müssen. Sie können das Skript auch zum Generieren einer JSON-Datei verwenden, die Informationen zur Appliance-Konfiguration enthält.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Die Appliance wurde in einem Rack installiert, mit Ihren Netzwerken verbunden und eingeschaltet.
 * Mithilfe des StorageGRID Appliance Installer wurden Netzwerkverbindungen und IP-Adressen für den primären Administratorknoten konfiguriert.
 * Wenn Sie den primären Admin-Node installieren, kennen Sie dessen IP-Adresse.

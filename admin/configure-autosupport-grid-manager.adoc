@@ -13,7 +13,7 @@ summary: Sie können die AutoSupport-Funktion und die einzelnen AutoSupport-Opti
 [role="lead"]
 Sie können die AutoSupport-Funktion und die einzelnen AutoSupport-Optionen bei der Erstinstallation von StorageGRID aktivieren oder später aktivieren.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben die Berechtigung Root-Zugriff oder andere Grid-Konfigurationen.
 * Wenn Sie das HTTPS- oder HTTP-Protokoll für das Senden von AutoSupport-Meldungen verwenden, haben Sie Outbound-Internetzugang für den primären Admin-Node entweder direkt oder über einen Proxy-Server bereitgestellt (eingehende Verbindungen sind nicht erforderlich).
@@ -135,7 +135,7 @@ Bei Bedarf können Sie optional die Prüfung auf Softwareupdates deaktivieren. W
 
 Wenn Sie AutoSupport aktivieren, werden Zustandsmeldungen und Statusmeldungen an den NetApp Support gesendet. Sie können ein zusätzliches Ziel für alle AutoSupport Meldungen angeben.
 
-Informationen zum Überprüfen oder Ändern des Protokolls zum Senden von AutoSupport Meldungen finden Sie in den Anweisungen an  the protocol for AutoSupport messages.
+Informationen zum Überprüfen oder Ändern des Protokolls zum Senden von AutoSupport Meldungen finden Sie in den Anweisungen an <<Geben Sie das Protokoll für AutoSupport Meldungen an>>.
 
 
 NOTE: Sie können das SMTP-Protokoll nicht zum Senden von AutoSupport Meldungen an ein zusätzliches Ziel verwenden.

@@ -108,6 +108,7 @@ IMPORTANT: Die von Ihnen zur Verfügung gelegten Schlüssel werden niemals gespe
 * Wenn die CloudMirror-Replikation für den Bucket konfiguriert ist, können Sie SSE-C-Objekte nicht aufnehmen. Der Aufnahmevorgang schlägt fehl.
 
 
+.Verwandte Informationen
 xref:get-object.adoc[GET Objekt]
 
 xref:head-object.adoc[HEAD Objekt]

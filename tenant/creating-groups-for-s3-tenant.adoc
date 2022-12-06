@@ -13,7 +13,7 @@ summary: Sie können Berechtigungen für S3-Benutzergruppen managen, indem Sie f
 [role="lead"]
 Sie können Berechtigungen für S3-Benutzergruppen managen, indem Sie föderierte Gruppen importieren oder lokale Gruppen erstellen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Mandantenmanager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie müssen einer Benutzergruppe mit Root Access-Berechtigung angehören. Siehe xref:tenant-management-permissions.adoc[Mandantenmanagement-Berechtigungen].
 * Wenn Sie eine föderierte Gruppe importieren möchten, haben Sie einen Identitätsverbund konfiguriert, und die föderierte Gruppe ist bereits in der konfigurierten Identitätsquelle vorhanden.

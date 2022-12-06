@@ -13,7 +13,7 @@ summary: Sie müssen Schienen in Ihrem Schrank oder Rack installieren und das Ge
 [role="lead"]
 Sie müssen Schienen in Ihrem Schrank oder Rack installieren und das Gerät dann auf die Schienen schieben. Wenn Sie über eine SG5660 verfügen, müssen Sie die Laufwerke auch nach der Installation der Appliance installieren.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben das im Lieferumfang enthaltene Sicherheitshinweisen geprüft und die Vorsichtsmaßnahmen für das Bewegen und Installieren von Hardware verstanden.
 * Sie verfügen über die Installationsanweisungen für die Hardware der E-Series.
 
@@ -30,6 +30,7 @@ CAUTION: Die SG5660 wiegt etwa 60 kg (132 lb), ohne dass Laufwerke installiert w
 
 CAUTION: Um Hardware-Schäden zu vermeiden, verschieben Sie niemals eine SG5660, wenn Laufwerke installiert sind. Vor dem Umstellen des Geräts müssen alle Laufwerke entfernt werden.
 
+.Über diese Aufgabe
 Führen Sie die folgenden Aufgaben aus, um die SG5660 Appliance in einem Rack oder Schrank zu installieren.
 
 * *Installieren Sie die Befestigungsschienen*
@@ -75,6 +76,7 @@ image::../media/appliance_drive_insertion.gif[Einschub des Laufwerks]
 
 
 
+.Verwandte Informationen
 https://library.netapp.com/ecm/ecm_download_file/ECMLP2344477["E2700 – Installationshandbuch für Controller-Laufwerke und zugehörige Laufwerksfächer"^]
 
 https://library.netapp.com/ecm/ecm_download_file/ECMP1532527["E5600 – Installationshandbuch für Controller-Laufwerke und zugehörige Laufwerksfächer"^]

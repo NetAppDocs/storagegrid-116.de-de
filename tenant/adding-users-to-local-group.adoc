@@ -13,7 +13,7 @@ summary: Sie können bei Bedarf Benutzer zu einer lokalen Gruppe hinzufügen.
 [role="lead"]
 Sie können bei Bedarf Benutzer zu einer lokalen Gruppe hinzufügen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Mandantenmanager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie müssen einer Benutzergruppe mit Root Access-Berechtigung angehören.
 

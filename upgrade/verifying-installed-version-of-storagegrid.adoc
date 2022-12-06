@@ -13,9 +13,10 @@ summary: Bevor Sie mit dem Upgrade beginnen, müssen Sie überprüfen, ob die vo
 [role="lead"]
 Bevor Sie mit dem Upgrade beginnen, müssen Sie überprüfen, ob die vorherige Version von StorageGRID derzeit mit dem neuesten verfügbaren Hotfix installiert ist.
 
+.Über diese Aufgabe
 Bevor Sie ein Upgrade auf StorageGRID 11.6 durchführen, muss StorageGRID 11.5 installiert sein. Wenn Sie derzeit eine ältere Version von StorageGRID verwenden, müssen Sie alle früheren Upgrade-Dateien zusammen mit ihren neuesten Hotfixes installieren (dringend empfohlen), bis die aktuelle Version Ihres Rasters StorageGRID 11.5._x.y_ ist.
 
-Ein möglicher Upgrade-Pfad wird im angezeigt  Upgrade to StorageGRID 11.5 from version 11.3.0.8,Beispiel.
+Ein möglicher Upgrade-Pfad wird im angezeigt <<Beispiel: Upgrade auf StorageGRID 11.5 von Version 11.3.0.8,Beispiel>>.
 
 
 IMPORTANT: NetApp empfiehlt dringend, vor dem Upgrade auf die nächste Version den aktuellen Hotfix für jede StorageGRID-Version anzuwenden und den aktuellen Hotfix für jede installierte neue Version anzuwenden. In einigen Fällen müssen Sie einen Hotfix anwenden, um das Risiko eines Datenverlusts zu vermeiden. Siehe https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["NetApp Downloads: StorageGRID"^] Und die Release Notes für jeden Hotfix, um mehr zu erfahren.

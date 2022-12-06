@@ -62,12 +62,13 @@ Im Abschnitt „Vorgänge“ werden zusammenfassende Informationen für den ausg
 
 Audit-Meldungen werden von StorageGRID-Diensten generiert und in Text-Log-Dateien gespeichert. API-spezifische Audit-Meldungen in den Audit-Protokollen stellen kritische Daten zum Monitoring von Sicherheit, Betrieb und Performance bereit, die Ihnen bei der Bewertung des Systemzustands helfen können.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen über spezifische Zugriffsberechtigungen verfügen.
 * Sie müssen die haben `Passwords.txt` Datei:
 * Sie müssen die IP-Adresse eines Admin-Knotens kennen.
 
 
+.Über diese Aufgabe
 Der Name der aktiven Audit-Log-Datei `audit.log`, Und es wird auf Admin-Knoten gespeichert.
 
 Einmal am Tag wird die aktive audit.log-Datei gespeichert und eine neue audit.log-Datei gestartet. Der Name der gespeicherten Datei gibt an, wann sie gespeichert wurde, im Format `yyyy-mm-dd.txt`.
@@ -93,6 +94,7 @@ audit.log
 . Sehen Sie sich die aktuelle oder gespeicherte Audit-Protokolldatei nach Bedarf an.
 
 
+.Verwandte Informationen
 xref:../audit/index.adoc[Prüfung von Audit-Protokollen]
 
 
@@ -131,6 +133,7 @@ Weitere Informationen zu den für die folgenden Swift-Vorgänge erfassten Inform
 * PUT Objekt
 
 
+.Verwandte Informationen
 xref:../audit/index.adoc[Prüfung von Audit-Protokollen]
 
 xref:account-operations.adoc[Konto-Operationen]

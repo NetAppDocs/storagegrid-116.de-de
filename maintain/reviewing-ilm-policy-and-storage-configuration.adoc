@@ -59,6 +59,7 @@ Storage-Typ
 Wird es genügend Storage des entsprechenden Typs geben, nachdem die Ausmusterung abgeschlossen ist? So kann es beispielsweise aufgrund von ILM-Regeln geben, dass Inhalte je nach Alter von einem Storage-Typ auf einen anderen verschoben werden. Wenn dies der Fall ist, müssen Sie sicherstellen, dass in der endgültigen Konfiguration des StorageGRID Systems genügend Storage des entsprechenden Typs verfügbar ist.
 
 |===
+.Verwandte Informationen
 xref:../ilm/index.adoc[Objektmanagement mit ILM]
 
 xref:../expand/index.adoc[Erweitern Sie Ihr Raster]

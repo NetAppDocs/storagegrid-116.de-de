@@ -13,7 +13,7 @@ summary: 'Für Storage-Controller, die derzeit SANtricity OS verwenden, die ält
 [role="lead"]
 Für Storage-Controller, die derzeit SANtricity OS verwenden, die älter als 08.42.20.00 (11.42) sind, müssen Sie das Verfahren des Wartungsmodus verwenden, um ein Upgrade durchzuführen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben das NetApp Interoperabilitäts-Matrix-Tool (IMT) konsultiert, um zu überprüfen, ob die für das Upgrade verwendete SANtricity Betriebssystemversion mit Ihrer Appliance kompatibel ist.
 * Wenn die StorageGRID-Appliance in einem StorageGRID-System ausgeführt wird, war der SG6000-CN Controller xref:placing-appliance-into-maintenance-mode.adoc[Wird in den Wartungsmodus versetzt].
 +
@@ -22,6 +22,7 @@ NOTE: Im Wartungsmodus wird die Verbindung zum Storage Controller unterbrochen.
 
 
 
+.Über diese Aufgabe
 Aktualisieren Sie das SANtricity Betriebssystem und NVSRAM im E-Series Controller nicht auf mehr als einer StorageGRID Appliance gleichzeitig.
 
 
@@ -57,6 +58,7 @@ image::../media/node_rejoin_grid_confirmation.png[Das Raster des Appliance-Node 
 
 
 
+.Verwandte Informationen
 https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^]
 
 xref:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6000.adoc[Aktualisieren Sie SANtricity OS auf Storage-Controllern mit Grid Manager]

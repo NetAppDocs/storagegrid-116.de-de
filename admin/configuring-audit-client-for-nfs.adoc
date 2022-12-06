@@ -13,12 +13,13 @@ summary: Die Revisionsfreigabe wird automatisch als schreibgeschützte Freigabe 
 [role="lead"]
 Die Revisionsfreigabe wird automatisch als schreibgeschützte Freigabe aktiviert.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben die `Passwords.txt` Datei mit dem Root-/Admin-Passwort (im GENANNTEN Paket verfügbar).
 * Sie haben die `Configuration.txt` Datei (im GENANNTEN Paket verfügbar).
 * Der Audit-Client verwendet die NFS-Version 3 (NFSv3).
 
 
+.Über diese Aufgabe
 Führen Sie dieses Verfahren für jeden Admin-Knoten in einer StorageGRID-Bereitstellung durch, von der aus Sie Audit-Nachrichten abrufen möchten.
 
 .Schritte

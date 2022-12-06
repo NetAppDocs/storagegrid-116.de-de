@@ -45,4 +45,5 @@ Beschreibung der Topologie des StorageGRID Systems vor der Stilllegung
 Falls verfügbar, finden Sie eine Dokumentation, die die aktuelle Topologie des Systems beschreibt.
 
 |===
+.Verwandte Informationen
 xref:../admin/web-browser-requirements.adoc[Anforderungen an einen Webbrowser]

@@ -23,8 +23,8 @@ Verwenden Sie bei der Konfiguration eines Erasure Coding-Profils die folgenden R
 NOTE: Sie können kein Erasure Coding-Profil konfigurieren, wenn der Speicherpool zwei Standorte umfasst.
 
 +
-**  schemes for storage pools containing three or more sites,Verfahren zur Einhaltung von Datenkonsistenz für Storage-Pools mit drei oder mehr Standorten
-**  schemes for one-site storage pools,Verfahren zur Einhaltung von Datenkonsistenz für Storage-Pools an einem Standort
+** <<Verfahren zur Einhaltung von Datenkonsistenz für Storage-Pools mit drei oder mehr Standorten,Verfahren zur Einhaltung von Datenkonsistenz für Storage-Pools mit drei oder mehr Standorten>>
+** <<Verfahren zur Einhaltung von Datenkonsistenz für Storage-Pools an einem Standort,Verfahren zur Einhaltung von Datenkonsistenz für Storage-Pools an einem Standort>>
 
 
 * Verwenden Sie nicht den Standardspeicherpool, alle Speicherknoten oder einen Speicherpool, der den Standardstandort, Alle Standorte, enthält.
@@ -316,4 +316,5 @@ Die erforderliche Mindestanzahl an Storage-Nodes beträgt _k+m_, es wird jedoch 
 71 % erzielt
 
 |===
+.Verwandte Informationen
 xref:../expand/index.adoc[Erweitern Sie Ihr Raster]

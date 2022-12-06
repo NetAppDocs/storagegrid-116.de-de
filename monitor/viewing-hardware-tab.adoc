@@ -179,7 +179,7 @@ Größe der Speicherdatenlaufwerk
  a| 
 Die effektive Größe eines Datenlaufwerks.
 
-*Hinweis*: Für Knoten mit Erweiterungs-Shelfs, verwenden Sie das ,Datenlaufwerk-Größe für jedes Shelf Stattdessen. Die effektive Laufwerksgröße kann je nach Shelf abweichen.
+*Hinweis*: Für Knoten mit Erweiterungs-Shelfs, verwenden Sie das <<shelf_data_drive_size,Datenlaufwerk-Größe für jedes Shelf>> Stattdessen. Die effektive Laufwerksgröße kann je nach Shelf abweichen.
 
 
 
@@ -476,6 +476,7 @@ image::../media/nodes_page_storage_tables.png[Knoten Seitentabellen]
 
 
 
+.Verwandte Informationen
 xref:../sg6000/index.adoc[SG6000 Storage-Appliances]
 
 xref:../sg5700/index.adoc[SG5700 Storage-Appliances]
@@ -712,4 +713,5 @@ image::../media/nodes_page_storage_tab_services_appliance.png[Knoten Seite Speic
 
 
 
+.Verwandte Informationen
 xref:../sg100-1000/index.adoc[SG100- und SG1000-Services-Appliances]

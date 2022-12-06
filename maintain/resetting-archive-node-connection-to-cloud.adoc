@@ -16,6 +16,7 @@ Nachdem Sie einen Archiv-Node wiederhergestellt haben, der die Cloud über die S
 
 NOTE: Wenn der Archivknoten über die TSM Middleware mit externem Storage verbunden ist, wird der Node automatisch zurückgesetzt und Sie müssen es nicht neu konfigurieren.
 
+.Was Sie benötigen
 Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 
 .Schritte

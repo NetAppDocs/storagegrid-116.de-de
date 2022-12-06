@@ -13,7 +13,7 @@ summary: Nach der Installation und Konfiguration der Storage Appliance können S
 [role="lead"]
 Nach der Installation und Konfiguration der Storage Appliance können Sie sie als Storage Node in einem StorageGRID System bereitstellen. Wenn Sie eine Appliance als Speicherknoten bereitstellen, verwenden Sie das StorageGRID-Appliance-Installationsprogramm, das in der Appliance enthalten ist.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Wenn Sie einen Appliance-Node klonen, fahren Sie den Recovery- und Wartungsvorgang fort.
 +
 xref:../maintain/index.adoc[Recovery und Wartung]
@@ -26,6 +26,7 @@ xref:../maintain/index.adoc[Recovery und Wartung]
 * Sie verfügen über einen Service-Laptop mit einem unterstützten Webbrowser.
 
 
+.Über diese Aufgabe
 Jede Storage Appliance arbeitet als einzelner Storage-Node. Jede Appliance kann eine Verbindung zum Grid-Netzwerk, dem Admin-Netzwerk und dem Client-Netzwerk herstellen
 
 Um einen Appliance-Speicherknoten in einem StorageGRID-System bereitzustellen, greifen Sie auf das Installationsprogramm der StorageGRID-Appliance zu und führen Sie die folgenden Schritte aus:
@@ -117,6 +118,7 @@ NOTE: Wenn Sie mehrere Appliance Storage Nodes gleichzeitig bereitstellen müsse
 
 
 
+.Verwandte Informationen
 xref:../expand/index.adoc[Erweitern Sie Ihr Raster]
 
 xref:../maintain/index.adoc[Recovery und Wartung]

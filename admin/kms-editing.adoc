@@ -13,7 +13,7 @@ summary: Möglicherweise müssen Sie die Konfiguration eines Schlüsselverwaltun
 [role="lead"]
 Möglicherweise müssen Sie die Konfiguration eines Schlüsselverwaltungsservers bearbeiten, z. B. wenn ein Zertifikat kurz vor dem Ablauf steht.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben die geprüft xref:kms-considerations-and-requirements.adoc[Überlegungen und Anforderungen für die Verwendung eines Verschlüsselungsmanagement-Servers].
 * Wenn Sie die für einen KMS ausgewählte Site aktualisieren möchten, haben Sie die geprüft xref:kms-considerations-for-changing-for-site.adoc[Überlegungen für das Ändern des KMS für einen Standort].
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].

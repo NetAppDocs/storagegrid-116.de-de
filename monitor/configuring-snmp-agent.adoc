@@ -13,11 +13,12 @@ summary: Sie können den StorageGRID SNMP-Agent konfigurieren, wenn Sie ein Drit
 [role="lead"]
 Sie können den StorageGRID SNMP-Agent konfigurieren, wenn Sie ein Drittanbieter-SNMP-Verwaltungssystem für schreibgeschützten MIB-Zugriff und Benachrichtigungen verwenden möchten.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben die Berechtigung Root Access.
 
 
+.Über diese Aufgabe
 Der StorageGRID SNMP Agent unterstützt alle drei Versionen des SNMP-Protokolls. Sie können den Agent für eine oder mehrere Versionen konfigurieren.
 
 .Schritte
@@ -55,7 +56,7 @@ Die Felder in diesem Abschnitt werden für die Community-basierte Authentifizier
 +
 .. Geben Sie im Feld *Default Trap Community* optional die Standard-Community-Zeichenfolge ein, die Sie für Trap-Ziele verwenden möchten.
 +
-Bei Bedarf können Sie eine andere („`Custom`")-Community-Zeichenfolge angeben ,Definieren Sie ein bestimmtes Trap-Ziel.
+Bei Bedarf können Sie eine andere („`Custom`")-Community-Zeichenfolge angeben <<select_trap_destination,Definieren Sie ein bestimmtes Trap-Ziel>>.
 
 +
 *Standard Trap Community* kann maximal 32 Zeichen lang sein und darf keine Leerzeichen enthalten.
@@ -268,4 +269,5 @@ Die neue SNMP-Agent-Konfiguration wird aktiv.
 
 
 
+.Verwandte Informationen
 xref:silencing-alert-notifications.adoc[Benachrichtigung über Stille]

@@ -13,7 +13,7 @@ summary: Sie können einen Cloud-Storage-Pool entfernen, der nicht in einer ILM-
 [role="lead"]
 Sie können einen Cloud-Storage-Pool entfernen, der nicht in einer ILM-Regel verwendet wird und der keine Objektdaten enthält.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben spezifische Zugriffsberechtigungen.
 * Sie haben bestätigt, dass der S3-Bucket oder der Azure-Container keine Objekte enthält. Ein Fehler tritt auf, wenn Sie versuchen, einen Cloud-Speicherpool zu entfernen, wenn er Objekte enthält. Siehe xref:troubleshooting-cloud-storage-pools.adoc[Fehlerbehebung Bei Cloud Storage Pools].

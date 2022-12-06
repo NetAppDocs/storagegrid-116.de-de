@@ -13,13 +13,14 @@ summary: Wenn Sie Audit-Protokolle, Anwendungsprotokolle und Sicherheitsereignis
 [role="lead"]
 Wenn Sie Audit-Protokolle, Anwendungsprotokolle und Sicherheitsereignisprotokolle an einem Speicherort außerhalb des Grid speichern möchten, konfigurieren Sie einen externen Syslog-Server mithilfe dieses Verfahrens.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie verfügen über Wartungs- oder Root-Zugriffsberechtigungen.
 * Sie verfügen über einen Syslog-Server mit der Kapazität, die Protokolldateien zu empfangen und zu speichern. Weitere Informationen finden Sie unter xref:../monitor/considerations-for-external-syslog-server.adoc[Überlegungen für externen Syslog-Server].
 * Sie haben die richtigen Server- und Client-Zertifizierungen, wenn Sie TLS oder RELP/TLS verwenden möchten.
 
 
+.Über diese Aufgabe
 Wenn Sie Audit-Informationen an einen externen Syslog-Server senden möchten, müssen Sie zuerst den externen Server konfigurieren.
 
 Durch das Senden von Audit-Informationen an einen externen Syslog-Server können Sie:
@@ -563,6 +564,7 @@ Neue Protokolle werden an die ausgewählten Ziele gesendet. Vorhandene Protokoll
 
 
 
+.Verwandte Informationen
 xref:../audit/index.adoc[Übersicht über Überwachungsnachrichten]
 
 xref:../monitor/configure-audit-messages.adoc[Konfigurieren von Überwachungsmeldungen und Protokollzielen]

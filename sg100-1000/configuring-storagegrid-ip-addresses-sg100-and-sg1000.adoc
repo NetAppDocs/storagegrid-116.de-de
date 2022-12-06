@@ -13,6 +13,7 @@ summary: Mit dem Installationsprogramm der StorageGRID Appliance können Sie die
 [role="lead"]
 Mit dem Installationsprogramm der StorageGRID Appliance können Sie die IP-Adressen und Routing-Informationen konfigurieren, die für die Services-Appliance in StorageGRID Grid, Administrator und Client-Netzwerken verwendet werden.
 
+.Über diese Aufgabe
 Sie müssen entweder auf jedem verbundenen Netzwerk eine statische IP-Adresse für das Gerät zuweisen oder einen permanenten Leasing für die Adresse des DHCP-Servers zuweisen.
 
 Wenn Sie die Verbindungskonfiguration ändern möchten, lesen Sie die Anweisungen zum Ändern der Link-Konfiguration der Services Appliance.
@@ -225,4 +226,5 @@ IMPORTANT: Der MTU-Wert des Netzwerks muss mit dem Wert übereinstimmen, der auf
 
 
 
+.Verwandte Informationen
 xref:changing-link-configuration-of-services-appliance.adoc[Ändern der Verbindungskonfiguration der Services Appliance]

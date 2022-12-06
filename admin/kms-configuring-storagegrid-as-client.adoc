@@ -13,6 +13,7 @@ summary: Sie müssen StorageGRID als Client für jeden externen Verschlüsselung
 [role="lead"]
 Sie müssen StorageGRID als Client für jeden externen Verschlüsselungsmanagement-Server oder KMS-Cluster konfigurieren, bevor Sie den KMS StorageGRID hinzufügen können.
 
+.Über diese Aufgabe
 Diese Anweisungen gelten für Thales CipherTrust Manager k170v, Versionen 2.0, 2.1 und 2.2. Wenn Sie Fragen zur Verwendung eines anderen Verschlüsselungsmanagementservers mit StorageGRID haben, wenden Sie sich an den technischen Support.
 
 https://thalesdocs.com/ctp/cm/latest/["Thales CipherTrust Manager"^]

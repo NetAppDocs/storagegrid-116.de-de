@@ -13,7 +13,7 @@ summary: Möglicherweise müssen Sie die internen Ports auf dem Appliance Storag
 [role="lead"]
 Möglicherweise müssen Sie die internen Ports auf dem Appliance Storage Node zu verschiedenen externen Ports neu zuordnen. Aufgrund eines Firewall-Problems müssen Sie möglicherweise Ports neu zuordnen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben zuvor auf das Installationsprogramm für StorageGRID-Geräte zugegriffen.
 * Sie sind nicht konfiguriert und planen keine Konfiguration von Load Balancer-Endpunkten.
 +
@@ -42,4 +42,5 @@ image::../media/remap_ports.gif[Screenshot mit der Option „Remop Ports“ im S
 . Um eine Portzuordnung zu entfernen, aktivieren Sie das Optionsfeld für die Regel, die Sie entfernen möchten, und klicken Sie auf *Ausgewählte Regel entfernen*.
 
 
+.Verwandte Informationen
 xref:../maintain/index.adoc[Recovery und Wartung]

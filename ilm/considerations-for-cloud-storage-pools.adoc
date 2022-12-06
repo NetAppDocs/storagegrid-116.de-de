@@ -93,7 +93,7 @@ Die Bucket-Richtlinie für den externen S3-Bucket, der für Cloud Storage Pool v
 
 
 
-== S3: Überlegungen für den Lebenszyklus des externen Buckets
+== S3: Überlegungen für den Lebenszyklus externer Buckets
 
 Das Verschieben von Objekten zwischen StorageGRID und dem im Cloud Storage Pool angegebenen externen S3-Bucket wird durch ILM-Regeln und die aktive ILM-Richtlinie in StorageGRID gesteuert. Im Gegensatz dazu wird die Transition von Objekten vom im Cloud Storage Pool angegebenen externen S3-Bucket auf Amazon S3 Glacier oder S3 Glacier Deep Archive (oder auf eine Storage-Lösung, die die Glacier Storage-Klasse implementiert) über die Lifecycle-Konfiguration dieses Buckets gesteuert.
 

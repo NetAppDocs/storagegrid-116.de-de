@@ -230,7 +230,7 @@ image::../media/storage_used_object_metadata_allowed.png[Verwendeter Speicher - 
 
 
 
-Im Screenshot beträgt der *zulässige*-Wert 2.64 TB, was der maximale Wert für einen Storage Node ist, dessen tatsächlicher reservierter Speicherplatz für Metadaten mehr als 4 TB beträgt.
+Im Screenshot beträgt der *zulässige*-Wert 3.96 TB, was der maximale Wert für einen Storage Node ist, dessen tatsächlicher reservierter Speicherplatz für Metadaten mehr als 4 TB beträgt.
 
 Der *zulässige*-Wert entspricht dieser Prometheus-Metrik:
 
@@ -244,7 +244,7 @@ Angenommen, Sie installieren ein StorageGRID System mit Version 11.6. Nehmen Sie
 
 * Der systemweite *Metadaten reservierter Platz* ist auf 8 TB eingestellt. (Dies ist der Standardwert für StorageGRID 11.6, wenn jeder Speicherknoten mehr als 128 GB RAM hat.)
 * Der tatsächlich reservierte Speicherplatz für Metadaten von SN1 beträgt 6 TB. (Das gesamte Volume ist reserviert, da Volume 0 kleiner ist als die Einstellung *Metadaten reservierter Speicherplatz*.)
-* Der zulässige Speicherplatz für Metadaten auf SN1 beträgt 2.64 TB. (Dies ist der höchste Wert für den tatsächlich reservierten Speicherplatz.)
+* Der zulässige Speicherplatz für Metadaten auf SN1 beträgt 3 TB, basierend auf der im angegebenen Berechnung <<actual-reserved-space-for-metadata,Tabelle für den tatsächlich reservierten Speicherplatz für Metadaten>>: (Tatsächlich reservierter Platz für Metadaten − 1 TB) × 60%, bis zu einem Maximum von 3.96 TB.
 
 
 

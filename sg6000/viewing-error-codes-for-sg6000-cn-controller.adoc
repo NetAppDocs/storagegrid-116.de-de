@@ -13,7 +13,7 @@ summary: Wenn beim Starten des SG6000-CN Controllers ein Hardwarefehler auftritt
 [role="lead"]
 Wenn beim Starten des SG6000-CN Controllers ein Hardwarefehler auftritt, meldet der BMC einen Fehlercode. Bei Bedarf können Sie diese Fehlercodes über die BMC-Schnittstelle anzeigen und dann mit dem technischen Support zusammenarbeiten, um das Problem zu lösen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Wissen Sie, wie Sie auf das BMC-Dashboard zugreifen können.
 
 

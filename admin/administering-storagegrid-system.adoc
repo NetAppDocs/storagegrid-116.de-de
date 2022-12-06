@@ -22,7 +22,7 @@ Die Anweisungen zum Management von Objekten mit Regeln und Richtlinien für das 
 ====
 Diese Anweisungen richtet sich an technische Mitarbeiter, die nach der Installation ein StorageGRID System konfigurieren, verwalten und unterstützen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie verfügen über allgemeine Kenntnisse des StorageGRID Systems.
 * Sie verfügen über ziemlich detaillierte Kenntnisse über Linux-Befehlssells, das Netzwerk und die Einrichtung und Konfiguration von Serverhardware.
 

@@ -13,8 +13,10 @@ summary: Wenn der Node aufgrund eines Fehlers deaktiviert wird, können Sie spez
 [role="lead"]
 Wenn der Node aufgrund eines Fehlers deaktiviert wird, können Sie spezifische Schritte zum Beheben des Problems durchführen.
 
+.Was Sie benötigen
 Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 
+.Über diese Aufgabe
 Wenn Sie den stillgelegten Grid-Node herunterfahren, wird die Aufgabe angehalten, bis der Grid-Node neu gestartet wird. Der Grid-Node muss sich online sein.
 
 .Schritte

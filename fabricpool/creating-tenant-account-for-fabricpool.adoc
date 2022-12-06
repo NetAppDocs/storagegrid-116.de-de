@@ -13,11 +13,12 @@ summary: Sie müssen ein Mandantenkonto im Grid Manager for FabricPool Use erste
 [role="lead"]
 Sie müssen ein Mandantenkonto im Grid Manager for FabricPool Use erstellen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben spezifische Zugriffsberechtigungen.
 
 
+.Über diese Aufgabe
 Mandantenkonten ermöglichen Client-Applikationen, Objekte auf StorageGRID zu speichern und abzurufen. Jedes Mandantenkonto verfügt über eine eigene Account-ID, autorisierte Gruppen und Benutzer, Buckets und Objekte.
 
 Sie können dasselbe Mandantenkonto für mehrere ONTAP Cluster verwenden. Oder Sie können bei Bedarf ein dediziertes Mandantenkonto für jedes ONTAP Cluster erstellen.

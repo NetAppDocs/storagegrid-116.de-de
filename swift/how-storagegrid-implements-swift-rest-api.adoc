@@ -35,6 +35,7 @@ Standardmäßig bietet StorageGRID Lese-/Nachher-Konsistenz für neu erstellte O
 
 StorageGRID ermöglicht Ihnen außerdem die Kontrolle der Konsistenz einzelner Container. Sie können die Consistency Control ändern, um je nach Anforderung zwischen der Verfügbarkeit der Objekte und der Konsistenz dieser Objekte in verschiedenen Storage Nodes und Standorten einen Kompromiss zwischen der Verfügbarkeit der Objekte herzustellen.
 
+.Verwandte Informationen
 xref:../ilm/index.adoc[Objektmanagement mit ILM]
 
 xref:get-container-consistency-request.adoc[ABRUFEN der Container-Konsistenzanforderung]

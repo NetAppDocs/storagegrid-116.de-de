@@ -13,6 +13,7 @@ summary: 'Sie müssen Informationen zum Domain Name System \ (DNS\) für Ihr Sto
 [role="lead"]
 Sie müssen DNS-Informationen (Domain Name System) für Ihr StorageGRID-System angeben, damit Sie auf externe Server zugreifen können, indem Sie Hostnamen anstelle von IP-Adressen verwenden.
 
+.Über diese Aufgabe
 Wenn Sie DNS-Serverinformationen angeben, können Sie vollständig qualifizierte Domänennamen (FQDN)-Hostnamen anstelle von IP-Adressen für E-Mail-Benachrichtigungen und AutoSupport verwenden. Es wird empfohlen, mindestens zwei DNS-Server anzugeben.
 
 
@@ -32,4 +33,5 @@ Als Best Practice empfehlen wir, mindestens zwei DNS-Server anzugeben. Sie könn
 . Wählen Sie *Weiter*.
 
 
+.Verwandte Informationen
 xref:../maintain/index.adoc[Recovery und Wartung]

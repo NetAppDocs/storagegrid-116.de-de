@@ -13,10 +13,11 @@ summary: Sie sollten einzelne Grid-Nodes überwachen, um die Ressourcenauslastun
 [role="lead"]
 Sie sollten einzelne Grid-Nodes überwachen, um die Ressourcenauslastung zu überprüfen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 
 
+.Über diese Aufgabe
 Sind Nodes konsistent überlastet, sind möglicherweise mehr Nodes erforderlich, um einen effizienten Betrieb zu gewährleisten.
 
 .Schritte
@@ -33,6 +34,7 @@ image::../media/nodes_page_hardware_tab_graphs.png[Registerkarte Knoten Hardware
 
 
 
+.Verwandte Informationen
 xref:viewing-hardware-tab.adoc#view-information-about-appliance-storage-nodes[Zeigen Sie Informationen zu Appliance Storage Nodes an]
 
 xref:viewing-hardware-tab.adoc#view-information-about-appliance-admin-nodes-and-gateway-nodes[Zeigen Sie Informationen zu Appliance Admin Nodes und Gateway Nodes an]

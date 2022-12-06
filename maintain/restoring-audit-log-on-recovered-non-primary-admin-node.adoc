@@ -68,4 +68,5 @@ Geben Sie bei der entsprechenden Eingabeaufforderung das Passwort für den Admin
 
 Sie müssen auch alle bereits vorhandenen Clientzugriffe auf die Revisionsfreigabe wiederherstellen. Weitere Informationen finden Sie in den Anweisungen zum Verwalten von StorageGRID.
 
+.Verwandte Informationen
 xref:../admin/index.adoc[StorageGRID verwalten]

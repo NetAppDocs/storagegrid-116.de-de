@@ -45,6 +45,7 @@ Verschiedene Bucket-Vorgänge und Objektvorgänge werden in den StorageGRID-Prü
 * PUT Objekt - Kopieren
 
 
+.Verwandte Informationen
 xref:operations-on-buckets.adoc[Operationen auf Buckets]
 
 xref:operations-on-objects.adoc[Operationen für Objekte]

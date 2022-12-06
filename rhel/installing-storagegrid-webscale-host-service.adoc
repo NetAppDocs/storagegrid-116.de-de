@@ -13,6 +13,7 @@ summary: Sie verwenden das StorageGRID RPM-Paket, um die StorageGRID-Hostdienste
 [role="lead"]
 Sie verwenden das StorageGRID RPM-Paket, um die StorageGRID-Hostdienste zu installieren.
 
+.Über diese Aufgabe
 In diesen Anweisungen wird beschrieben, wie die Host-Services aus den RPM-Paketen installiert werden. Alternativ können Sie die im Installationarchiv enthaltenen Yum Repository-Metadaten verwenden, um die RPM-Pakete Remote zu installieren. Weitere Informationen zu Ihrem Linux-Betriebssystem finden Sie in der Yum-Repository-Anleitung.
 
 .Schritte

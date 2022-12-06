@@ -13,6 +13,7 @@ summary: Bei der Installation und Konfiguration der StorageGRID Appliance sind E
 [role="lead"]
 Bei der Installation und Konfiguration der StorageGRID Appliance sind Entscheidungen zu treffen und Informationen zu Ethernet Switch-Ports, IP-Adressen sowie zu Port- und Netzwerk-Bond-Modi zu sammeln.
 
+.Über diese Aufgabe
 Die folgenden Tabellen enthalten die erforderlichen Informationen für jedes Netzwerk, das Sie mit der Appliance verbinden. Diese Werte sind für die Installation und Konfiguration der Hardware erforderlich.
 
 
@@ -362,6 +363,7 @@ Statische IP-Adresse, die Sie für den Appliance-Speicherknoten im Client-Netzwe
 
 
 |===
+.Verwandte Informationen
 xref:reviewing-appliance-network-connections-sg5700.adoc[Appliance-Netzwerkverbindungen (SG5700) prüfen]
 
 xref:port-bond-modes-for-e5700sg-controller-ports.adoc[Port Bond-Modi für E5700SG Controller-Ports]

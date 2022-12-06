@@ -13,6 +13,7 @@ summary: 'Schritt 3 \(Ingest Behavior definieren\) des Assistenten Create ILM Ru
 [role="lead"]
 Schritt 3 (Ingest Behavior definieren) des Assistenten Create ILM Rule ermöglicht es Ihnen, festzulegen, wie die Objekte, die von dieser Regel gefiltert werden, beim Einnehmen geschützt werden.
 
+.Über diese Aufgabe
 StorageGRID erstellt Zwischenkopien und stellt die Objekte später zur ILM-Evaluierung in einen Warteschleife. Außerdem kann es Kopien erstellen, um sofort die Anweisungen zur Platzierung der Regel zu erfüllen.
 
 image::../media/define_ingest_behavior_for_ilm_rule.png[Erstellen Sie die ILM-Regel Schritt 3 von 3]

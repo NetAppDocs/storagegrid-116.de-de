@@ -20,16 +20,18 @@ IMPORTANT: Der MTU-Wert des Netzwerks muss mit dem Wert übereinstimmen, der auf
 
 IMPORTANT: Für die beste Netzwerkleistung sollten alle Knoten auf ihren Grid Network Interfaces mit ähnlichen MTU-Werten konfiguriert werden. Die Warnung *Grid Network MTU mismatch* wird ausgelöst, wenn sich die MTU-Einstellungen für das Grid Network auf einzelnen Knoten erheblich unterscheiden. Die MTU-Werte müssen nicht für alle Netzwerktypen identisch sein.
 
-Um die MTU-Einstellung zu ändern, ohne den Appliance-Node neu zu booten,  the MTU setting using the Change IP tool,Verwenden Sie das Werkzeug IP ändern.
+Um die MTU-Einstellung zu ändern, ohne den Appliance-Node neu zu booten, <<Ändern Sie die MTU-Einstellung mit dem Tool IP ändern,Verwenden Sie das Werkzeug IP ändern>>.
 
-Wenn das Client- oder Admin-Netzwerk während der ersten Installation nicht im Installationsprogramm der StorageGRID-Appliance konfiguriert wurde,  the MTU setting using maintenance mode,Ändern Sie die MTU-Einstellung im Wartungsmodus.
+Wenn das Client- oder Admin-Netzwerk während der ersten Installation nicht im Installationsprogramm der StorageGRID-Appliance konfiguriert wurde, <<Ändern Sie die MTU-Einstellung im Wartungsmodus,Ändern Sie die MTU-Einstellung im Wartungsmodus>>.
 
 
 
 == Ändern Sie die MTU-Einstellung mit dem Tool IP ändern
 
+.Was Sie benötigen
 Sie haben die `Passwords.txt` Datei zum Verwenden des Tools zum Ändern der IP-Adresse.
 
+.Schritte
 Greifen Sie auf das Change IP-Tool zu und aktualisieren Sie die MTU-Einstellungen, wie in beschrieben xref:../maintain/changing-nodes-network-configuration.adoc[Ändern der Node-Netzwerkkonfiguration].
 
 
@@ -38,6 +40,7 @@ Greifen Sie auf das Change IP-Tool zu und aktualisieren Sie die MTU-Einstellunge
 
 Ändern Sie die MTU-Einstellung unter Verwendung des Wartungsmodus, wenn Sie mit dem Tool IP ändern nicht auf diese Einstellungen zugreifen können.
 
+.Was Sie benötigen
 Das Gerät war xref:placing-appliance-into-maintenance-mode.adoc[In den Wartungsmodus versetzt].
 
 .Schritte
@@ -64,4 +67,5 @@ image::../media/nodes_menu.png[Das Raster des Appliance-Node wurde neu verbunden
 
 
 
+.Verwandte Informationen
 xref:../admin/index.adoc[StorageGRID verwalten]

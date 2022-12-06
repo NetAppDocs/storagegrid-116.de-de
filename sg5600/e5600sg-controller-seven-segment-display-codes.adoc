@@ -293,6 +293,7 @@ EP
 Der „ManageSGA“-Code zeigt an, dass die vorGrid-Kommunikation mit dem E2700 Controller fehlgeschlagen ist.
 
 |===
+.Verwandte Informationen
 xref:troubleshooting-hardware-installation.adoc[Fehlerbehebung bei der Hardware-Installation (SG5600)]
 
 https://mysupport.netapp.com/site/global/dashboard["NetApp Support"^]

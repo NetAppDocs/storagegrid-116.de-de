@@ -74,6 +74,6 @@ Enter command [`add search <domain>|remove search <domain>|add nameserver <ip>`]
 . Befolgen Sie die Anweisungen, wenn Sie dazu aufgefordert werden, weitere Befehle einzugeben.
 . Speichern Sie Ihre Änderungen und beenden Sie die Anwendung: `save`
 . [[close_cmd_Shell]]Schließen Sie die Befehlsshell auf dem Server: `exit`
-. Wiederholen Sie für jeden Grid-Node die Schritte von ,Anmeldung beim Node Bis ,Schließen der Befehlsshell.
+. Wiederholen Sie für jeden Grid-Node die Schritte von <<log_in_to_node,Anmeldung beim Node>> Bis <<close_cmd_shell,Schließen der Befehlsshell>>.
 . Wenn Sie keinen passwortlosen Zugriff auf andere Server mehr benötigen, entfernen Sie den privaten Schlüssel vom SSH-Agent. Geben Sie Ein: `ssh-add -D`
 

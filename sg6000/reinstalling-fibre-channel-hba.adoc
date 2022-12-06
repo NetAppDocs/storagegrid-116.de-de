@@ -13,7 +13,7 @@ summary: Der Ersatz-Fibre Channel HBA wird an demselben Standort installiert wie
 [role="lead"]
 Der Ersatz-Fibre Channel HBA wird an demselben Standort installiert wie der zuvor entfernte.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben den richtigen Fibre Channel HBA für den Austausch.
 * Sie haben den vorhandenen Fibre Channel HBA entfernt.
 +
@@ -40,6 +40,7 @@ image::../media/sg6060_riser_alignment_hole.jpg[Ausrichtbohrung an SG6060 Riser-
 . Entfernen Sie die Schutzkappen von den Fibre Channel HBA-Ports, an denen Sie die Kabel neu installieren.
 
 
+.Nachdem Sie fertig sind
 Wenn Sie keine weiteren Wartungsvorgänge im Controller ausführen müssen, setzen Sie die Controllerabdeckung wieder ein.
 
 xref:reinstalling-sg6000-cn-controller-cover.adoc[Bringen Sie die SG6000-CN Controller-Abdeckung wieder an]

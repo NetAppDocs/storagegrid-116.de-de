@@ -13,7 +13,7 @@ summary: Load Balancer-Endpunkte bestimmen die Ports und Netzwerkprotokolle S3 u
 [role="lead"]
 Load Balancer-Endpunkte bestimmen die Ports und Netzwerkprotokolle S3 und Swift-Clients können beim Herstellen einer Verbindung zum StorageGRID Load Balancer auf Gateway und Admin-Nodes verwendet werden.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben die Root-Zugriffsberechtigung.
 * Wenn Sie zuvor einen Port neu zugeordnet haben, den Sie für den Load Balancer-Endpunkt verwenden möchten, haben Sie diesen xref:../maintain/removing-port-remaps.adoc[Port-Remap wurde entfernt].
@@ -153,7 +153,7 @@ image::../media/load_balancer_endpoint_node_interfaces_binding_mode.png[Bindungs
 +
 image::../media/load_balancer_endpoint_ha_group_vips_binding_mode.png[Bindungsmodus für VIPs der Endpoint HA-Gruppe]
 
-. Wenn Sie einen *HTTP*-Endpunkt erstellen, müssen Sie kein Zertifikat anhängen. Wählen Sie *Erstellen*, um den neuen Load Balancer-Endpunkt hinzuzufügen. Fahren Sie dann mit fort ,Nachdem Sie fertig sind. Andernfalls wählen Sie *Weiter*, um das Zertifikat anzuhängen.
+. Wenn Sie einen *HTTP*-Endpunkt erstellen, müssen Sie kein Zertifikat anhängen. Wählen Sie *Erstellen*, um den neuen Load Balancer-Endpunkt hinzuzufügen. Fahren Sie dann mit fort <<After-you-finish,Nachdem Sie fertig sind>>. Andernfalls wählen Sie *Weiter*, um das Zertifikat anzuhängen.
 
 
 
@@ -243,7 +243,7 @@ Der Endpunkt des Load Balancer wird erstellt. Das individuelle Zertifikat wird f
 
 
 
-=== Nachdem Sie fertig sind
+=== [[After-you-Finish]]nach dem Ende
 
 . Wenn Sie ein Domain Name System (DNS) verwenden, stellen Sie sicher, dass der DNS einen Datensatz enthält, um den vollqualifizierten StorageGRID-Domänennamen jeder IP-Adresse zuzuordnen, die von Clients zum Herstellen von Verbindungen verwendet wird.
 +

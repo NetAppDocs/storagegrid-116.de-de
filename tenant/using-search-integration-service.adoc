@@ -25,6 +25,7 @@ Siehe xref:../s3/index.adoc[Anweisungen zur Implementierung von S3-Client-Applik
 * PUT Anforderung der Bucket-Metadaten-Benachrichtigung
 
 
+.Verwandte Informationen
 xref:configuration-xml-for-search-configuration.adoc[Konfigurations-XML für die Integration der Suche]
 
 xref:object-metadata-included-in-metadata-notifications.adoc[Objektmetadaten sind in Metadaten-Benachrichtigungen enthalten]

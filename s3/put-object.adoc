@@ -129,7 +129,7 @@ xref:using-s3-object-lock.adoc[Verwenden Sie die S3-Objektsperre]
 ** `x-amz-server-side-encryption-customer-key`
 ** `x-amz-server-side-encryption-customer-algorithm`
 +
-Siehe  headers for server-side encryption
+Siehe <<Anforderungsheader für serverseitige Verschlüsselung>>
 
 
 
@@ -213,6 +213,7 @@ Wenn die Versionierung für einen Bucket aktiviert ist, ist dies ein eindeutiger
 
 Wenn die Versionierung unterbrochen wird, wird die Objektversion mit einem Null gespeichert `versionId` Und wenn bereits eine Null-Version vorhanden ist, wird sie überschrieben.
 
+.Verwandte Informationen
 xref:../ilm/index.adoc[Objektmanagement mit ILM]
 
 xref:operations-on-buckets.adoc[Operationen auf Buckets]

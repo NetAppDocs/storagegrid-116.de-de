@@ -97,6 +97,7 @@ Wenn der neue Legal-Hold-Wert AKTIVIERT ist, wird das Objekt unter einer gesetzl
 
 
 
+.Verwandte Informationen
 xref:../ilm/index.adoc[Objektmanagement mit ILM]
 
 xref:../tenant/index.adoc[Verwenden Sie das Mandantenkonto]

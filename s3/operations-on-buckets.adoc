@@ -366,6 +366,7 @@ Wenn der Standardaufbewahrungszeitraum geändert wird, bleiben die bisherigen Ob
 Siehe xref:../s3/use-s3-object-lock-default-bucket-retention.adoc#put-object-lock-configuration[PUT Objekt Lock-Konfiguration] Ausführliche Informationen finden Sie unter.
 
 |===
+.Verwandte Informationen
 xref:consistency-controls.adoc[Konsistenzkontrollen]
 
 xref:get-bucket-last-access-time-request.adoc[Anforderung der Uhrzeit des letzten Bucket-Zugriffs ABRUFEN]

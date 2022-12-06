@@ -50,7 +50,7 @@ Sie können alle Schritte zur Vorbereitung der Hosts automatisieren und virtuell
 
 Nach der Implementierung der Grid-Nodes können Sie die Konfiguration des StorageGRID Systems automatisieren.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie kennen den Speicherort der folgenden Dateien aus dem Installationsarchiv.
 +
 [cols="1a,1a"]
@@ -75,6 +75,7 @@ Leere Konfigurationsdatei für die Verwendung mit dem Skript
 * Sie haben ein erstellt `configure-storagegrid.json` Konfigurationsdatei Um diese Datei zu erstellen, können Sie die Beispielkonfigurationsdatei ändern (`configure-storagegrid.sample.json`) Oder die leere Konfigurationsdatei (`configure-storagegrid.blank.json`).
 
 
+.Über diese Aufgabe
 Sie können das verwenden `configure-storagegrid.py` Python-Skript und das `configure-storagegrid.json` Konfigurationsdatei zur automatischen Konfiguration des StorageGRID Systems
 
 
@@ -105,6 +106,7 @@ Beispiel:
 ----
 
 
+.Ergebnis
 Ein Wiederherstellungspaket `.zip` Die Datei wird während des Konfigurationsprozesses generiert und in das Verzeichnis heruntergeladen, in dem Sie den Installations- und Konfigurationsprozess ausführen. Sie müssen die Recovery-Paket-Datei sichern, damit Sie das StorageGRID-System wiederherstellen können, wenn ein oder mehrere Grid-Knoten ausfallen. Zum Beispiel kopieren Sie den Text auf einen sicheren, gesicherten Netzwerkstandort und an einen sicheren Cloud-Storage-Standort.
 
 
@@ -127,4 +129,5 @@ Das StorageGRID System wird installiert und konfiguriert, wenn eine Bestätigung
 ----
 StorageGRID has been configured and installed.
 ----
+.Verwandte Informationen
 xref:overview-of-installation-rest-api.adoc[Überblick über DIE REST API zur Installation]

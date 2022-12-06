@@ -128,4 +128,5 @@ Versuchen Sie mindestens einen der folgenden Schritte, um das Problem zu beheben
 * Überprüfen Sie die Netzwerkkonfiguration des Storage Proxy-Servers.
 
 
+.Verwandte Informationen
 xref:lifecycle-of-cloud-storage-pool-object.adoc[Lebenszyklus eines Cloud-Storage-Pool-Objekts]

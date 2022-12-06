@@ -51,6 +51,7 @@ Eine vollständige Härtungslösung muss auch Sicherheitsmechanismen außerhalb 
 
 Für nicht vertrauenswürdigen Client-Datenverkehr wird ein Load Balancer eines Drittanbieters empfohlen. Der Lastausgleich von Drittanbietern bietet mehr Kontrolle und zusätzlichen Schutz vor Angriffen.
 
+.Verwandte Informationen
 xref:../monitor/index.adoc[Monitoring und Fehlerbehebung]
 
 xref:../audit/index.adoc[Prüfung von Audit-Protokollen]

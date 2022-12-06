@@ -13,6 +13,7 @@ summary: Wenn während des Grid-Erweiterungsprozesses Fehler auftreten, die nich
 [role="lead"]
 Wenn während des Grid-Erweiterungsprozesses Fehler auftreten, die nicht behoben werden können, oder wenn eine Grid-Aufgabe fehlschlägt, wenden Sie sich an den technischen Support.
 
+.Über diese Aufgabe
 Wenn Sie sich an den technischen Support wenden, müssen Sie die erforderlichen Protokolldateien bereitstellen, um bei der Fehlerbehebung der Fehler zu helfen, die auftreten.
 
 .Schritte

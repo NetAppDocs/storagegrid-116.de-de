@@ -31,6 +31,7 @@ Andere Node-Typen, wie beispielsweise Admin-Nodes oder Gateway-Nodes, können au
 
 Weitere Informationen finden Sie unter „`Node Migration Requirements`“ in der StorageGRID-Installationsanleitung für Ihr Linux-Betriebssystem.
 
+.Verwandte Informationen
 xref:deploying-new-linux-hosts.adoc[Implementieren Sie neue Linux-Hosts]
 
 xref:../rhel/index.adoc[Installieren Sie Red hat Enterprise Linux oder CentOS]

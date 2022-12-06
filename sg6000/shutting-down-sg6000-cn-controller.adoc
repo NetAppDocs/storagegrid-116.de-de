@@ -13,7 +13,7 @@ summary: Fahren Sie den SG6000-CN-Controller herunter, um die Hardware zu warten
 [role="lead"]
 Fahren Sie den SG6000-CN-Controller herunter, um die Hardware zu warten.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Der SG6000-CN Controller ist physisch zu finden, der im Datacenter gewartet werden muss.
 +
 xref:locating-controller-in-data-center.adoc[Controller im Datacenter finden]
@@ -21,6 +21,7 @@ xref:locating-controller-in-data-center.adoc[Controller im Datacenter finden]
 * Das Gerät war xref:placing-appliance-into-maintenance-mode.adoc[Wird in den Wartungsmodus versetzt].
 
 
+.Über diese Aufgabe
 Um Serviceunterbrechungen zu vermeiden, vergewissern Sie sich, dass alle anderen Storage-Nodes mit dem Grid verbunden sind, bevor Sie den Controller herunterfahren oder den Controller während eines geplanten Wartungsfensters herunterfahren, wenn die Serviceunterbrechungen akzeptabel sind. Informationen zum Bestimmen von Knotenverbindungsstatus finden Sie in den Anweisungen zum Verwalten von Objekten mit Information Lifecycle Management.
 
 
@@ -80,4 +81,5 @@ image::../media/bmc_power_control_page_controller_off.png[BMC Power Control Seit
 
 
 
+.Verwandte Informationen
 xref:removing-sg6000-cn-controller-from-cabinet-or-rack.adoc[Entfernen Sie den SG6000-CN Controller aus dem Schrank oder Rack]

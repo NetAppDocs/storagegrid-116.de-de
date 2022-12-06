@@ -13,7 +13,7 @@ summary: Um einen Gateway-Node oder Admin-Node auf einer SG100- oder SG1000-Serv
 [role="lead"]
 Um einen Gateway-Node oder Admin-Node auf einer SG100- oder SG1000-Service-Appliance zu installieren, verwenden Sie das Installationsprogramm der StorageGRID-Appliance, das auf der Appliance enthalten ist.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Die Appliance muss in einem Rack installiert, mit dem Netzwerk verbunden und eingeschaltet sein.
 * Netzwerkverbindungen und IP-Adressen müssen für die Appliance mithilfe des StorageGRID Appliance Installer konfiguriert werden.
 * Wenn Sie einen Gateway-Node oder einen nicht-primären Admin-Node installieren, kennen Sie die IP-Adresse des primären Admin-Nodes für das StorageGRID-Grid.
@@ -31,6 +31,7 @@ NOTE: Eine aktuelle Version der StorageGRID-Software wird während der Fertigung
 
 
 
+.Über diese Aufgabe
 So installieren Sie die StorageGRID-Software auf einer SG100- oder SG1000-Services-Appliance:
 
 * Für einen primären Admin-Node geben Sie den Namen des Knotens an und laden dann die entsprechenden Softwarepakete hoch (falls erforderlich).
@@ -57,7 +58,7 @@ image::../media/services_appliance_installer_gateway_node.png[Home Page Für App
 .. Geben Sie im Feld *Knotenname* den gleichen Namen ein, der für den Knoten verwendet wurde, den Sie wiederherstellen, und klicken Sie auf *Speichern*.
 .. Überprüfen Sie im Abschnitt Installation die unter Aktueller Status aufgeführte Softwareversion
 +
-Wenn die Version der zu installierenden Software richtig ist, fahren sie mit fort ,Installationsschritt.
+Wenn die Version der zu installierenden Software richtig ist, fahren sie mit fort <<installation_section_step,Installationsschritt>>.
 
 .. Wenn Sie eine andere Version der Software hochladen möchten, wählen Sie im Menü * Erweitert* die Option *StorageGRID-Software hochladen*.
 +
@@ -125,4 +126,5 @@ NOTE: Wenn Sie manuell auf die Seite Monitor-Installation zugreifen müssen, kli
 
 
 
+.Verwandte Informationen
 xref:../sg100-1000/index.adoc[SG100- und SG1000-Services-Appliances]

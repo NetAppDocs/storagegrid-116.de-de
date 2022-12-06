@@ -13,7 +13,7 @@ summary: 'Bei Storage-Controllern, die derzeit SANtricity OS 08.42.20.00 \(11.42
 [role="lead"]
 Bei Storage-Controllern, die derzeit SANtricity OS 08.42.20.00 (11.42) oder eine neuere Version verwenden, müssen Sie zum Anwenden eines Upgrades den Grid-Manager verwenden.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben das NetApp Interoperabilitäts-Matrix-Tool (IMT) konsultiert, um zu überprüfen, ob die für das Upgrade verwendete SANtricity Betriebssystemversion mit Ihrer Appliance kompatibel ist.
 * Sie haben die Berechtigung Wartung oder Stammzugriff.
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
@@ -21,6 +21,7 @@ Bei Storage-Controllern, die derzeit SANtricity OS 08.42.20.00 (11.42) oder eine
 * Sie haben Zugriff auf die NetApp Download-Seite für SANtricity OS.
 
 
+.Über diese Aufgabe
 Sie können keine anderen Softwareupdates (StorageGRID Software-Upgrade oder Hotfix) durchführen, bis Sie den SANtricity OS-Upgrade-Prozess abgeschlossen haben. Wenn Sie versuchen, vor Abschluss des SANtricity OS-Upgrades einen Hotfix oder ein StorageGRID-Software-Upgrade zu starten, werden Sie zur Upgrade-Seite von SANtricity OS umgeleitet.
 
 Das Verfahren ist erst abgeschlossen, wenn das SANtricity OS Upgrade erfolgreich auf alle zutreffenden Nodes angewendet wurde, die für das Upgrade ausgewählt wurden. Das SANtricity Betriebssystem kann länger als 30 Minuten dauern, bis das Betriebssystem auf jedem Node (sequenziell) und bis zu 90 Minuten zum Neustart jeder StorageGRID Storage Appliance benötigt wird.
@@ -167,7 +168,7 @@ IMPORTANT: Das SANtricity OS-Upgrade ist erst abgeschlossen, wenn Sie das SANtri
 Es wird eine Warnung angezeigt, wenn Sie sicher sind, dass Sie den Upgrade-Prozess ohne Upgrade auf alle Nodes abschließen möchten.
 
 .. Wählen Sie * OK* aus, um zur Seite *SANtricity OS* zurückzukehren.
-.. Wenn Sie bereit sind, mit dem Genehmigen von Knoten fortzufahren, fahren Sie mit fort ,Laden Sie das SANtricity Betriebssystem herunter Um den Upgrade-Vorgang neu zu starten.
+.. Wenn Sie bereit sind, mit dem Genehmigen von Knoten fortzufahren, fahren Sie mit fort <<download_santricity_os,Laden Sie das SANtricity Betriebssystem herunter>> Um den Upgrade-Vorgang neu zu starten.
 
 
 +
@@ -187,6 +188,7 @@ NOTE: Wenn Sie das Upgrade wiederholen, müssen Sie zuvor aktualisierte Knoten g
 
 
 
+.Verwandte Informationen
 https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^]
 
 xref:upgrading-santricity-os-on-e2700-controller-using-maintenance-mode.adoc[Aktualisieren Sie SANtricity OS auf einem E2700 Controller mithilfe des Wartungsmodus]

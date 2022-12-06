@@ -13,7 +13,7 @@ summary: Sie müssen die Speicher-Controller mit dem SG6000-CN-Controller verbin
 [role="lead"]
 Sie müssen die Speicher-Controller mit dem SG6000-CN-Controller verbinden, die Management-Ports auf allen drei Controllern verbinden und die Netzwerkports des SG6000-CN-Controllers mit dem Grid-Netzwerk und dem optionalen Client-Netzwerk für StorageGRID verbinden.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Das Gerät verfügt über die vier optischen Kabel zum Anschließen der beiden Speicher-Controller an den SG6000-CN-Controller.
 * Sie verfügen über RJ-45-Ethernet-Kabel (mindestens vier) für den Anschluss der Management-Ports.
 * Sie haben eine der folgenden Optionen für die Netzwerkanschlüsse. Diese Artikel sind nicht im Lieferumfang des Geräts enthalten.
@@ -28,6 +28,7 @@ CAUTION: *Gefahr der Laserstrahlung* -- kein Teil eines SFP-Transceivers zerlege
 
 
 
+.Über diese Aufgabe
 Dieser Abschnitt enthält Anweisungen zur Verkabelung der folgenden Geräte:
 
 * SG6060 und SG6060X
@@ -207,6 +208,7 @@ Verwenden Sie keinen Managementport 2 (P2 auf E2800A und 0b auf E2800B) an den S
 
 
 
+.Verwandte Informationen
 xref:port-bond-modes-for-sg6000-cn-controller.adoc[Port Bond-Modi für SG6000-CN Controller]
 
 xref:reinstalling-sg6000-cn-controller-into-cabinet-or-rack.adoc[Installieren Sie den SG6000-CN Controller wieder in den Schrank oder Rack]

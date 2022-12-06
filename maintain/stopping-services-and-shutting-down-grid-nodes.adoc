@@ -13,6 +13,7 @@ summary: Bevor Sie ein StorageGRID System ausschalten können, müssen Sie alle 
 [role="lead"]
 Bevor Sie ein StorageGRID System ausschalten können, müssen Sie alle Services, die auf jedem Grid-Node ausgeführt werden, anhalten und anschließend alle VMware Virtual Machines, Container-Engines und StorageGRID Appliances herunterfahren.
 
+.Über diese Aufgabe
 Stoppen Sie zuerst die Dienste auf Admin-Nodes und API-Gateway-Knoten, und stoppen Sie dann die Dienste auf Storage-Nodes.
 
 Dieser Ansatz ermöglicht Ihnen, den primären Admin-Knoten so lange wie möglich zu verwenden, um den Status der anderen Grid-Knoten zu überwachen.
@@ -50,7 +51,7 @@ Sie können die Dienste auf diesen Knoten in beliebiger Reihenfolge anhalten.
 
 NOTE: Wenn Sie das ausgeben `service servermanager stop` Befehl zum Beenden der Dienste auf einem Appliance-Speicherknoten müssen Sie die Appliance aus- und wieder einschalten, um den Node neu zu starten.
 
-. Wiederholen Sie für den primären Admin-Knoten die Schritte für ,Anmeldung beim Node Und ,Anhalten aller Dienste auf dem Knoten.
+. Wiederholen Sie für den primären Admin-Knoten die Schritte für <<log_in_to_gn,Anmeldung beim Node>> Und <<stop_all_services,Anhalten aller Dienste auf dem Knoten>>.
 . Für Knoten, die auf Linux-Hosts ausgeführt werden:
 +
 .. Melden Sie sich beim Host-Betriebssystem an.
@@ -99,6 +100,7 @@ Das StorageGRID-Grid wurde jetzt heruntergefahren.
 
 
 
+.Verwandte Informationen
 xref:../sg100-1000/index.adoc[SG100- und SG1000-Services-Appliances]
 
 xref:../sg6000/index.adoc[SG6000 Storage-Appliances]

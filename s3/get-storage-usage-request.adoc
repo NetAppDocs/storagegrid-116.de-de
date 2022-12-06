@@ -71,4 +71,5 @@ Content-Type: application/xml
 
 Jede gespeicherte Objektversion trägt zum bei `ObjectCount` Und `DataBytes` Werte in der Antwort. Markierungen löschen werden dem nicht hinzugefügt `ObjectCount` Gesamt:
 
+.Verwandte Informationen
 xref:consistency-controls.adoc[Konsistenzkontrollen]

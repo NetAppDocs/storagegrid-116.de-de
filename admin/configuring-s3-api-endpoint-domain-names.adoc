@@ -13,7 +13,7 @@ summary: Um virtuelle S3-Hosted-Style-Anforderungen zu unterstützen, müssen Si
 [role="lead"]
 Um virtuelle S3-Hosted-Style-Anforderungen zu unterstützen, müssen Sie die Liste der Endpunkt-Domain-Namen, mit denen S3-Clients verbunden werden, mit konfigurieren.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben spezifische Zugriffsberechtigungen.
 * Sie haben bestätigt, dass ein Grid-Upgrade nicht ausgeführt wird.
@@ -23,6 +23,7 @@ CAUTION: Nehmen Sie keine Änderungen an der Domänennamenkonfiguration vor, wen
 
 
 
+.Über diese Aufgabe
 Um Clients die Verwendung von S3-Endpunkt-Domain-Namen zu ermöglichen, müssen Sie folgende Aktionen durchführen:
 
 * Verwenden Sie den Grid-Manager, um dem StorageGRID System die S3-Endpunkt-Domain-Namen hinzuzufügen.
@@ -65,6 +66,7 @@ Wenn diese Liste leer ist, ist die Unterstützung für virtuelle S3-Hosted-Style
 . Fügen Sie die erforderlichen DNS-Einträge hinzu, um sicherzustellen, dass die Anforderungen für den Domänennamen des Endpunkts aufgelöst werden können.
 
 
+.Ergebnis
 Wenn Clients nun den Endpunkt verwenden `bucket.s3.company.com`, Der DNS-Server löst sich auf den richtigen Endpunkt und das Zertifikat authentifiziert den Endpunkt wie erwartet.
 
 .Verwandte Informationen

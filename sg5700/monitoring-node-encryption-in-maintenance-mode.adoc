@@ -13,7 +13,7 @@ summary: 'Wenn Sie während der Installation die Node-Verschlüsselung für die 
 [role="lead"]
 Wenn Sie während der Installation die Node-Verschlüsselung für die Appliance aktiviert haben, können Sie den Verschlüsselungsstatus aller Appliance-Nodes überwachen, einschließlich Details zur Node-Verschlüsselung und zum Key Management Server (KMS).
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Die Node-Verschlüsselung muss während der Installation für die Appliance aktiviert sein. Nach der Installation der Appliance können Sie die Node-Verschlüsselung nicht aktivieren.
 * Das Gerät war xref:placing-appliance-into-maintenance-mode.adoc[Wird in den Wartungsmodus versetzt].
 
@@ -65,4 +65,5 @@ image::../media/nodes_menu.png[Das Raster des Appliance-Node wurde neu verbunden
 
 
 
+.Verwandte Informationen
 xref:../admin/index.adoc[StorageGRID verwalten]

@@ -13,11 +13,12 @@ summary: Speicherklassen identifizieren den Speichertyp, der von einem Speicherk
 [role="lead"]
 Speicherklassen identifizieren den Speichertyp, der von einem Speicherknoten verwendet wird. Sie können Storage-Klassen erstellen, wenn ILM-Regeln bestimmte Objekte auf bestimmten Storage-Nodes anstatt auf allen Nodes am Standort platzieren sollen. Möglicherweise möchten Sie beispielsweise bestimmte Objekte auf Ihren schnellsten Storage-Nodes wie z. B. StorageGRID All-Flash Storage Appliances speichern.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben spezifische Zugriffsberechtigungen.
 
 
+.Über diese Aufgabe
 Wenn Sie mehr als einen Storage-Typ verwenden, können Sie optional eine Storage-Klasse erstellen, um jeden Typ zu identifizieren. Beim Erstellen von Speicherklassen können Sie bei der Konfiguration von Speicherpools einen bestimmten Typ von Speicherknoten auswählen.
 
 Wenn die Speicherklasse kein Problem ist (beispielsweise sind alle Speicherknoten identisch), können Sie dieses Verfahren überspringen und bei der Konfiguration von Speicherpools die Standardspeicherklasse Alle Speicherknoten verwenden.

@@ -15,4 +15,5 @@ Sie müssen eine Reihe von Aufgaben genau durchführen, um nach einem Gateway No
 
 image::../media/overview_api_gateway_node_recovery.png[Übersicht Flussdiagramm der Gateway-Knoten-Wiederherstellung]
 
+.Verwandte Informationen
 xref:../sg100-1000/index.adoc[SG100- und SG1000-Services-Appliances]

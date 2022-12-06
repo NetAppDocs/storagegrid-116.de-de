@@ -70,12 +70,13 @@ Die Warnung *Low read-only Watermark override* wird für Storage Node A ausgelö
 
 Befolgen Sie diese Schritte, wenn eine oder mehrere *Low Read-Only-Wasserzeichen überschreiben*-Warnungen ausgelöst wurden. Sie können diese Anweisungen auch verwenden, wenn Sie derzeit benutzerdefinierte Wasserzeichen-Einstellungen verwenden und optimierte Einstellungen auch dann verwenden möchten, wenn keine Warnungen ausgelöst wurden.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben das Upgrade auf StorageGRID 11.6 abgeschlossen.
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben die Root-Zugriffsberechtigung.
 
 
+.Über diese Aufgabe
 Sie können die Warnung *Low read-only Watermark override* lösen, indem Sie benutzerdefinierte Wasserzeichen-Einstellungen auf die neuen Wasserzeichen-Überschreibungen aktualisieren. Wenn jedoch ein oder mehrere Speicherknoten nahe voll sind oder Sie spezielle ILM-Anforderungen haben, sollten Sie zunächst die optimierten Speicherabdrücke anzeigen und feststellen, ob sie sicher verwendet werden können.
 
 
@@ -88,12 +89,12 @@ Sie können die Warnung *Low read-only Watermark override* lösen, indem Sie ben
 +
 image::../media/nodes_page_object_data_used_with_alert.png[Seite Knoten mit Objektdaten, die für 3 SNS verwendet werden]
 
-. Wenn keiner der Speicherknoten fast voll ist (zum Beispiel sind alle *Objektdaten verwendet* Werte kleiner als 80%), können Sie die Überschreibeinstellungen verwenden. Gehen Sie zu  optimized watermarks.
+. Wenn keiner der Speicherknoten fast voll ist (zum Beispiel sind alle *Objektdaten verwendet* Werte kleiner als 80%), können Sie die Überschreibeinstellungen verwenden. Gehen Sie zu <<Verwenden Sie optimierte Wasserzeichen>>.
 +
 
-NOTE: Es gibt einige Ausnahmen von dieser allgemeinen Regel. Wenn ILM-Regeln beispielsweise ein strenges Aufnahmeverhalten verwenden oder bestimmte Storage-Pools nahezu vollständig sind, sollten Sie zuerst die Schritte in durchführen  optimized storage watermarks Und  if you can use optimized watermarks.
+NOTE: Es gibt einige Ausnahmen von dieser allgemeinen Regel. Wenn ILM-Regeln beispielsweise ein strenges Aufnahmeverhalten verwenden oder bestimmte Storage-Pools nahezu vollständig sind, sollten Sie zuerst die Schritte in durchführen <<Anzeigen optimierter Speicherabdrücke>> Und <<Bestimmen Sie, ob Sie optimierte Wasserzeichen verwenden können>>.
 
-. Wenn mehrere Speicherknoten nahezu voll sind, führen Sie die Schritte unter aus  optimized storage watermarks Und  if you can use optimized watermarks.
+. Wenn mehrere Speicherknoten nahezu voll sind, führen Sie die Schritte unter aus <<Anzeigen optimierter Speicherabdrücke>> Und <<Bestimmen Sie, ob Sie optimierte Wasserzeichen verwenden können>>.
 
 
 
@@ -133,9 +134,9 @@ In der letzten Spalte wird der maximal optimierte Wert des „Soft Read-Only“-
 .. Vergleichen Sie den *verfügbaren*-Wert für jeden Objektspeicher (Volumen) mit dem für diesen Speicherknoten angegebenen maximalen optimierten Wasserzeichen.
 
 
-. Wenn mindestens ein Volume auf jedem Online-Speicherknoten mehr Speicherplatz als das maximal optimierte Wasserzeichen für diesen Knoten hat, gehen Sie zu  optimized watermarks Um die optimierten Wasserzeichen zu verwenden.
+. Wenn mindestens ein Volume auf jedem Online-Speicherknoten mehr Speicherplatz als das maximal optimierte Wasserzeichen für diesen Knoten hat, gehen Sie zu <<Verwenden Sie optimierte Wasserzeichen>> Um die optimierten Wasserzeichen zu verwenden.
 +
-Andernfalls xref:../expand/index.adoc[Erweitern Sie Ihr Raster] So bald wie möglich. Fügen Sie einem vorhandenen Node entweder Storage Volumes hinzu oder fügen Sie neue Storage-Nodes hinzu. Fahren Sie dann mit fort  optimized watermarks Zum Aktualisieren der Einstellungen für Wasserzeichen.
+Andernfalls xref:../expand/index.adoc[Erweitern Sie Ihr Raster] So bald wie möglich. Fügen Sie einem vorhandenen Node entweder Storage Volumes hinzu oder fügen Sie neue Storage-Nodes hinzu. Fahren Sie dann mit fort <<Verwenden Sie optimierte Wasserzeichen>> Zum Aktualisieren der Einstellungen für Wasserzeichen.
 
 . Wenn Sie mit der Verwendung benutzerdefinierter Werte für die Speichervolumen-Wasserzeichen fortfahren müssen, xref:../monitor/silencing-alert-notifications.adoc[Stille] Oder xref:../monitor/disabling-alert-rules.adoc[Deaktivieren] Die Warnung * Low read-only Watermark override*.
 +

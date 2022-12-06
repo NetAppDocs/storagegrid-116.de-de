@@ -13,6 +13,7 @@ summary: 'Durch Löschen der Konfiguration des Verschlüsselungsmanagement-Serve
 [role="lead"]
 Durch Löschen der KMS-Konfiguration (Key Management Server) wird die Node-Verschlüsselung auf der Appliance deaktiviert. Nach dem Löschen der KMS-Konfiguration werden die Daten auf der Appliance dauerhaft gelöscht und sind nicht mehr zugänglich. Diese Daten können nicht wiederhergestellt werden.
 
+.Was Sie benötigen
 Wenn Daten auf der Appliance aufbewahrt werden müssen, müssen Sie einen Node außer Betrieb nehmen oder den Node klonen, bevor Sie die KMS-Konfiguration löschen.
 
 
@@ -20,6 +21,7 @@ IMPORTANT: Wenn KMS gelöscht wird, werden die Daten auf der Appliance dauerhaft
 
 xref:../maintain/grid-node-decommissioning.adoc[Bauen Sie den Node aus] Um beliebige Daten zu anderen Nodes im Grid zu verschieben.
 
+.Über diese Aufgabe
 Beim Löschen der Appliance-KMS-Konfiguration wird die Node-Verschlüsselung deaktiviert, wodurch die Zuordnung zwischen dem Appliance-Node und der KMS-Konfiguration für den StorageGRID-Standort entfernt wird. Die Daten auf dem Gerät werden gelöscht und das Gerät wird im Installationszustand zurückgelassen. Dieser Vorgang kann nicht rückgängig gemacht werden.
 
 Sie müssen die KMS-Konfiguration löschen:
@@ -80,6 +82,8 @@ Die Node-Verschlüsselung kann auf der Appliance erst wieder aktiviert werden, w
 
 
 
+.Nachdem Sie fertig sind
 Nachdem die Appliance neu gebootet wurde und Sie überprüft haben, dass der KMS gelöscht wurde und sich die Appliance im Installationszustand befindet, können Sie die Appliance physisch aus dem StorageGRID System entfernen. Siehe xref:../maintain/preparing-appliance-for-reinstallation-platform-replacement-only.adoc[Anweisungen zur Vorbereitung des Geräts für die Neuinstallation].
 
+.Verwandte Informationen
 xref:../admin/index.adoc[StorageGRID verwalten]

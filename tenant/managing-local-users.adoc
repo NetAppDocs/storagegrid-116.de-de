@@ -13,7 +13,7 @@ summary: 'Sie können lokale Benutzer erstellen und lokalen Gruppen zuweisen, um
 [role="lead"]
 Sie können lokale Benutzer erstellen und lokalen Gruppen zuweisen, um zu bestimmen, auf welche Funktionen diese Benutzer zugreifen können. Der Mandantenmanager enthält einen vordefinierten lokalen Benutzer mit dem Namen „`root`“. Obwohl Sie lokale Benutzer hinzufügen und entfernen können, können Sie den Root-Benutzer nicht entfernen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Mandantenmanager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie müssen zu einer Lese-/Schreib-Benutzergruppe mit Root Access-Berechtigung gehören. Siehe xref:tenant-management-permissions.adoc[Mandantenmanagement-Berechtigungen].
 

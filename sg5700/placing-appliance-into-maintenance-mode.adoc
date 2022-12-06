@@ -13,11 +13,12 @@ summary: Sie müssen das Gerät in den Wartungsmodus versetzen, bevor Sie bestim
 [role="lead"]
 Sie müssen das Gerät in den Wartungsmodus versetzen, bevor Sie bestimmte Wartungsarbeiten durchführen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben die Berechtigung Wartung oder Stammzugriff. Weitere Informationen finden Sie in den Anweisungen zum Verwalten von StorageGRID.
 
 
+.Über diese Aufgabe
 In seltenen Fällen kann es vorkommen, dass eine StorageGRID Appliance in den Wartungsmodus versetzt wird, damit die Appliance für den Remote-Zugriff nicht verfügbar ist.
 
 

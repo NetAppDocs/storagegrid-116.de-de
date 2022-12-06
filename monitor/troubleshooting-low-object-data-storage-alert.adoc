@@ -14,11 +14,12 @@ summary: Der Alarm * Low Object Data Storage* überwacht, wie viel Speicherplatz
 [role="lead"]
 Der Alarm * Low Object Data Storage* überwacht, wie viel Speicherplatz zum Speichern von Objektdaten auf jedem Storage Node verfügbar ist.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie müssen über spezifische Zugriffsberechtigungen verfügen.
 
 
+.Über diese Aufgabe
 Die Warnung * Low Object Data Storage* wird ausgelöst, wenn die Gesamtzahl der replizierten und Erasure codierten Objektdaten auf einem Storage Node einer der Bedingungen entspricht, die in der Warnungsregel konfiguriert sind.
 
 Standardmäßig wird eine wichtige Warnmeldung ausgelöst, wenn diese Bedingung als „true“ bewertet wird:
@@ -83,6 +84,7 @@ NOTE: Informationen zum Verwalten eines vollständigen Speicherknoten finden Sie
 
 
 
+.Verwandte Informationen
 xref:troubleshooting-storage-status-alarm.adoc[Fehlersuche im SSTS-Alarm (Storage Status) durchführen]
 
 xref:../expand/index.adoc[Erweitern Sie Ihr Raster]

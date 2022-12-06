@@ -47,4 +47,5 @@ StorageGRID unterstützt Endpunkte für die Suchintegration, die Elasticsearch-C
 
 Der Endpunkt der Suchintegration bezieht sich auf einen bestimmten Elasticsearch-Index und -Typ. Sie müssen den Index in Elasticsearch erstellen, bevor Sie den Endpunkt in StorageGRID erstellen, sonst schlägt die Erstellung des Endpunkts fehl. Sie müssen den Typ nicht erstellen, bevor Sie den Endpunkt erstellen. Bei Bedarf erstellt StorageGRID den Typ, wenn Objektmetadaten an den Endpunkt gesendet werden.
 
+.Verwandte Informationen
 xref:../admin/index.adoc[StorageGRID verwalten]

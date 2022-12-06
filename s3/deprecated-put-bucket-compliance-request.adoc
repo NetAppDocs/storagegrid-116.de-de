@@ -106,6 +106,7 @@ Consistency-Control: strong-site
 * Wenn `RetentionPeriodMinutes` In der Anforderung ist kleiner als der aktuelle Aufbewahrungszeitraum des Buckets, lautet der HTTP-Statuscode `400 Bad Request`.
 
 
+.Verwandte Informationen
 xref:deprecated-put-bucket-request-modifications-for-compliance.adoc[Veraltet: PUT Bucket-Request-Änderungen aus Compliance-Gründen]
 
 xref:../tenant/index.adoc[Verwenden Sie das Mandantenkonto]

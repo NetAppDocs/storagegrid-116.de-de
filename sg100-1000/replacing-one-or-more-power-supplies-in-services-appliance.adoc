@@ -13,7 +13,7 @@ summary: Das Services-Gerät verfügt über zwei Netzteile für Redundanz. Wenn 
 [role="lead"]
 Das Services-Gerät verfügt über zwei Netzteile für Redundanz. Wenn eines der Netzteile ausfällt, müssen Sie es so schnell wie möglich ersetzen, um sicherzustellen, dass der Compute-Controller über redundante Stromversorgung verfügt. Beide im Controller ausgeführten Netzteile müssen das gleiche Modell und die gleiche Stromleistung aufweisen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Das ist schon xref:locating-controller-in-data-center.adoc[Physisch gelegener Controller] Bei zu ersetzenden Netzteilen.
 * Wenn Sie nur ein Netzteil ersetzen:
 +
@@ -28,6 +28,7 @@ Das Services-Gerät verfügt über zwei Netzteile für Redundanz. Wenn eines der
 
 
 
+.Über diese Aufgabe
 Die Abbildung zeigt die beiden Netzteile des SG100, auf die von der Rückseite des Geräts zugegriffen werden kann.
 
 image::../media/sg1000_power_supplies.png[Rückseite des SG100 mit zwei Netzteilen]
@@ -36,7 +37,7 @@ image::../media/sg1000_power_supplies.png[Rückseite des SG100 mit zwei Netzteil
 NOTE: Die Netzteile für den SG1000 sind identisch.
 
 .Schritte
-. Wenn Sie nur ein Netzteil ersetzen, müssen Sie das Gerät nicht herunterfahren. Wechseln Sie zum ,Ziehen Sie das Netzkabel ab Schritt: Wenn Sie beide Netzteile gleichzeitig ersetzen, gehen Sie folgendermaßen vor, bevor Sie die Netzkabel abziehen:
+. Wenn Sie nur ein Netzteil ersetzen, müssen Sie das Gerät nicht herunterfahren. Wechseln Sie zum <<Unplug_the_power_cord,Ziehen Sie das Netzkabel ab>> Schritt: Wenn Sie beide Netzteile gleichzeitig ersetzen, gehen Sie folgendermaßen vor, bevor Sie die Netzkabel abziehen:
 +
 .. xref:placing-appliance-into-maintenance-mode.adoc[Stellen Sie das Gerät in den Wartungsmodus].
 .. xref:shut-down-sg100-and-sg1000.adoc[Schalten Sie das Gerät aus].

@@ -36,7 +36,7 @@ Admin-Datenverkehr
  a| 
 Der für die Systemadministration und -Wartung verwendete Datenverkehr.
  a| 
-Admin-Netzwerk (optional),  VLAN networks,VLAN-Netzwerk (optional)
+Admin-Netzwerk (optional), <<Optionale VLAN-Netzwerke,VLAN-Netzwerk (optional)>>
 
 
 
@@ -45,7 +45,7 @@ Client-Traffic
  a| 
 Der Datenverkehr zwischen externen Client-Applikationen und dem Grid, einschließlich aller Objekt-Storage-Anforderungen von S3 und Swift Clients
  a| 
-Client-Netzwerk (optional),  VLAN networks,VLAN-Netzwerk (optional)
+Client-Netzwerk (optional), <<Optionale VLAN-Netzwerke,VLAN-Netzwerk (optional)>>
 
 |===
 Sie haben folgende Möglichkeiten zur Konfiguration des Netzwerks:

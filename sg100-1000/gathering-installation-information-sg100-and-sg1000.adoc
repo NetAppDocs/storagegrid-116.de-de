@@ -357,6 +357,7 @@ Statische IP-Adresse, die Sie für den BMC-Verwaltungsport verwenden möchten
 
 
 |===
+.Verwandte Informationen
 xref:sg100-and-sg1000-appliances-overview.adoc[SG100- und SG1000-Geräte im Überblick]
 
 xref:cabling-appliance-sg100-and-sg1000.adoc[Kabelgerät SG100 und SG1000]

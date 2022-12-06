@@ -13,13 +13,14 @@ summary: 'Der Benachrichtigungsservice ist einer der drei StorageGRID-Plattformd
 [role="lead"]
 Der Benachrichtigungsservice ist einer der drei StorageGRID-Plattformdienste. Sie können Benachrichtigungen aktivieren, damit ein Bucket Informationen zu bestimmten Ereignissen an einen Zieldienst sendet, der den AWS Simple Notification Service™ (SNS) unterstützt.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Plattform-Services müssen von einem StorageGRID-Administrator für Ihr Mandantenkonto aktiviert werden.
 * Sie müssen bereits einen Bucket erstellt haben, um als Quelle für Benachrichtigungen zu fungieren.
 * Der Endpunkt, den Sie als Ziel für Ereignisbenachrichtigungen verwenden möchten, muss bereits vorhanden sein, und Sie müssen über seinen URN verfügen.
 * Sie müssen zu einer Benutzergruppe gehören, die über die Berechtigung Alle Buckets verwalten oder Stammzugriff verfügt, sodass Sie die Einstellungen für alle S3-Buckets in Ihrem Mandantenkonto verwalten können. Diese Berechtigungen überschreiben die Berechtigungseinstellungen in Gruppen- oder Bucket-Richtlinien bei der Konfiguration des Buckets mithilfe des Mandanten-Manager.
 
 
+.Über diese Aufgabe
 Nachdem Sie Ereignisbenachrichtigungen konfiguriert haben, wird eine Benachrichtigung generiert und an das Thema Simple Notification Service (SNS) gesendet, das als Zielendpunkt verwendet wird, sobald ein bestimmtes Ereignis für ein Objekt im Quell-Bucket eintritt. Um Benachrichtigungen für einen Bucket zu aktivieren, müssen Sie eine gültige XML-Benachrichtigungskonfiguration erstellen und anwenden. Die XML-ID für die Benachrichtigungskonfiguration muss den URN eines Endpunkt für Ereignisbenachrichtigungen für jedes Ziel verwenden.
 
 Allgemeine Informationen zu Ereignisbenachrichtigungen und deren Konfiguration finden Sie in der Amazon-Dokumentation. Informationen dazu, wie StorageGRID die S3-Bucket-Benachrichtigungs-API implementiert, finden Sie in den Anweisungen zur Implementierung von S3-Client-Applikationen.
@@ -124,6 +125,7 @@ Wenn die Benachrichtigung im Zielthema empfangen wird, haben Sie Ihren Quell-Buc
 
 
 
+.Verwandte Informationen
 xref:understanding-notifications-for-buckets.adoc[Informieren Sie sich über Benachrichtigungen für Buckets]
 
 xref:../s3/index.adoc[S3 verwenden]

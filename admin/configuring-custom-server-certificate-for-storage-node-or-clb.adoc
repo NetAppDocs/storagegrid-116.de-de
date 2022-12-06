@@ -13,6 +13,7 @@ summary: Sie können das Serverzertifikat, das für S3- oder Swift-Client-Verbin
 [role="lead"]
 Sie können das Serverzertifikat, das für S3- oder Swift-Client-Verbindungen zu Storage-Nodes verwendet wird, ersetzen oder wiederherstellen, den veralteten Connection Load Balancer (CLB)-Service auf Gateway-Nodes oder zum Laden von Balancer-Endpunkten. Das benutzerdefinierte Ersatzserverzertifikat ist speziell für Ihr Unternehmen bestimmt.
 
+.Über diese Aufgabe
 Standardmäßig wird jeder Speicherknoten ein X.509-Serverzertifikat ausgestellt, das von der Grid-CA signiert wurde. Diese CA-signierten Zertifikate können durch ein einziges allgemeines benutzerdefiniertes Serverzertifikat und den entsprechenden privaten Schlüssel ersetzt werden.
 
 Für alle Speicherknoten wird ein einzelnes benutzerdefiniertes Serverzertifikat verwendet. Sie müssen daher das Zertifikat als Platzhalter- oder Multidomain-Zertifikat angeben, wenn Clients den Hostnamen bei der Verbindung mit dem Speicherendpunkt überprüfen müssen. Definieren Sie das benutzerdefinierte Zertifikat, sodass es mit allen Speicherknoten im Raster übereinstimmt.

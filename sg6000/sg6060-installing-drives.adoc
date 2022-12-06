@@ -13,6 +13,7 @@ summary: Nach der Installation des Shelf für 60 Laufwerke in einem Rack oder Ra
 [role="lead"]
 Nach der Installation des Shelf für 60 Laufwerke in einem Rack oder Rack müssen alle 60 Laufwerke im Shelf installiert werden. Der Versand für das E2860 Controller-Shelf umfasst zwei SSD-Laufwerke, die Sie im oberen Einschub des Controller Shelf installieren sollten. Jedes optionale Erweiterungs-Shelf umfasst 60 HDD-Laufwerke und keine SSD-Laufwerke.
 
+.Was Sie benötigen
 Sie haben das E2860 Controller-Shelf oder optionale Erweiterungs-Shelfs (ein oder zwei) im Rack oder Rack installiert.
 
 

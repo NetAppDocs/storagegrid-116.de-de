@@ -16,7 +16,7 @@ ILM-Regeln ermöglichen es Ihnen, die Platzierung von Objektdaten im Laufe der Z
 
 NOTE: Wenn Sie die Standard-ILM-Regel für eine Richtlinie erstellen, verwenden Sie stattdessen diese Vorgehensweise: xref:creating-default-ilm-rule.adoc[Erstellen einer Standard-ILM-Regel].
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben spezifische Zugriffsberechtigungen.
 * Wenn Sie angeben möchten, für welche Mandantenkonten diese Regel gilt, haben Sie die Berechtigung für Mandantenkonten, oder Sie kennen die Konto-ID für jedes Konto.
@@ -32,6 +32,7 @@ image::../media/video-screenshot-ilm-rules.png[Video: StorageGRID ILM-Regeln: Er
 
 
 
+.Über diese Aufgabe
 Wenn ILM-Regeln erstellt werden:
 
 * Dabei sind die Topologie und Storage-Konfigurationen des StorageGRID Systems zu berücksichtigen.

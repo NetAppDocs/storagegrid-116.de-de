@@ -13,11 +13,12 @@ summary: Möglicherweise müssen Sie einen Controller-Akku, ein Laufwerk, einen 
 [role="lead"]
 Möglicherweise müssen Sie einen Controller-Akku, ein Laufwerk, einen Lüfter oder ein Netzteil in dem StorageGRID-Gerät austauschen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben das Verfahren zum Austausch der E-Series Hardware.
 * Das Gerät war xref:placing-appliance-into-maintenance-mode.adoc[In den Wartungsmodus versetzt] Wenn das Verfahren zum Austausch von Komponenten erfordert, schalten Sie das Gerät aus.
 
 
+.Über diese Aufgabe
 Anweisungen zum Austauschen des E2800 Controllers finden Sie in diesen Anweisungen. Diese Anweisungen beschreiben, wie Sie den Controller aus dem Gerät entfernen, den Akku aus dem Controller entfernen, den Akku einbauen und den Controller austauschen.
 
 Um ein Laufwerk, einen Behälter mit Netzlüfter, einen Lüfterbehälter, einen Netzbehälter oder eine Laufwerkschublade im Gerät zu ersetzen, greifen Sie auf die Verfahren der E-Series zu, um die E2800 Hardware zu warten.
@@ -78,6 +79,7 @@ Laufwerksschublade
 Austauschen eines Laufwerksschubs in E2860 Shelfs
 
 |===
+.Verwandte Informationen
 xref:replacing-e2800-controller.adoc[E2800 Controller austauschen]
 
 http://mysupport.netapp.com/info/web/ECMP1658252.html["NetApp E-Series Systems Documentation Site"^]

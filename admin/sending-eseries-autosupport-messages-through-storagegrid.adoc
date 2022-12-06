@@ -13,7 +13,7 @@ summary: Sie können AutoSupport Meldungen von E-Series SANtricity System Manage
 [role="lead"]
 Sie können AutoSupport Meldungen von E-Series SANtricity System Manager über einen StorageGRID Admin-Node anstelle des Storage Appliance Management-Ports an den technischen Support senden.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind im Grid Manager mit einem angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie verfügen über die Berechtigung zum Administrator oder Root-Zugriff.
 
@@ -21,6 +21,7 @@ Sie können AutoSupport Meldungen von E-Series SANtricity System Manager über e
 
 NOTE: Sie müssen über die SANtricity-Firmware 8.70 (11.7) oder höher verfügen, um mithilfe des Grid-Managers auf den SANtricity-System-Manager zuzugreifen.
 
+.Über diese Aufgabe
 E-Series AutoSupport-Meldungen enthalten Details zur Storage Hardware und sind spezifischer als andere AutoSupport-Meldungen, die vom StorageGRID System gesendet werden.
 
 Konfigurieren Sie eine spezielle Proxy-Server-Adresse in SANtricity System Manager, damit die AutoSupport-Meldungen ohne Verwendung des Managementports der Appliance über einen StorageGRID-Admin-Node übertragen werden. Auf diese Weise übertragene AutoSupport-Nachrichten gelten für die Proxyeinstellungen für bevorzugte Sender und Admin, die möglicherweise im Grid Manager konfiguriert wurden.

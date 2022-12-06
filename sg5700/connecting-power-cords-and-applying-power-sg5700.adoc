@@ -13,6 +13,7 @@ summary: Wenn Sie das Gerät mit Strom versorgen, werden beide Controller gestar
 [role="lead"]
 Wenn Sie das Gerät mit Strom versorgen, werden beide Controller gestartet.
 
+.Was Sie benötigen
 Vor dem Anschließen an die Stromversorgung müssen beide Netzschalter des Geräts ausgeschaltet sein.
 
 

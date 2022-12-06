@@ -13,6 +13,7 @@ summary: Möglicherweise müssen Sie die Services-Appliance neu starten, währen
 [role="lead"]
 Möglicherweise müssen Sie die Services-Appliance neu starten, während das Installationsprogramm für die StorageGRID-Appliance ausgeführt wird. Beispielsweise müssen Sie die Services-Appliance möglicherweise neu booten, wenn die Installation fehlschlägt.
 
+.Über diese Aufgabe
 Dieses Verfahren gilt nur, wenn auf der Services-Appliance das Installationsprogramm der StorageGRID-Appliance ausgeführt wird. Nach Abschluss der Installation funktioniert dieser Schritt nicht mehr, da das Installationsprogramm für StorageGRID-Geräte nicht mehr verfügbar ist.
 
 .Schritte

@@ -13,7 +13,7 @@ summary: Wenn Sie einen S3-Mandanten verwenden und über die entsprechenden Bere
 [role="lead"]
 Wenn Sie einen S3-Mandanten verwenden und über die entsprechenden Berechtigungen verfügen, können Sie eine Liste Ihrer S3-Zugriffsschlüssel anzeigen. Sie können die Liste nach Ablauf der Zeit sortieren, sodass Sie feststellen können, welche Schlüssel bald ablaufen. Nach Bedarf können Sie neue Schlüssel erstellen oder Schlüssel löschen, die Sie nicht mehr verwenden.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Mandantenmanager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie müssen über die Berechtigung zum Verwalten Ihrer eigenen S3-Anmeldedaten verfügen.
 
@@ -39,6 +39,7 @@ Abgelaufene Schlüssel werden automatisch entfernt.
 
 
 
+.Verwandte Informationen
 xref:creating-your-own-s3-access-keys.adoc[Erstellen Ihrer eigenen S3-Zugriffsschlüssel]
 
 xref:deleting-your-own-s3-access-keys.adoc[Löschen Ihrer eigenen S3-Zugriffsschlüssel]

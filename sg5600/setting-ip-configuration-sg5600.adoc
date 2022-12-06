@@ -13,6 +13,7 @@ summary: Mit dem Installationsprogramm der StorageGRID-Appliance können Sie die
 [role="lead"]
 Mit dem Installationsprogramm der StorageGRID-Appliance können Sie die für den Appliance-Speicherknoten verwendeten IP-Adressen und Routing-Informationen im StorageGRID-Raster, Administrator und Client-Netzwerke konfigurieren.
 
+.Über diese Aufgabe
 Sie müssen entweder auf jedem verbundenen Netzwerk eine statische IP-Adresse für das Gerät zuweisen oder einen permanenten Leasing für die Adresse des DHCP-Servers zuweisen.
 
 Wenn Sie die Link-Konfiguration ändern möchten, lesen Sie die Anweisungen zum Ändern der Link-Konfiguration des E5600SG-Controllers.
@@ -225,4 +226,5 @@ IMPORTANT: Der MTU-Wert des Netzwerks muss mit dem Wert übereinstimmen, der auf
 
 
 
+.Verwandte Informationen
 xref:changing-link-configuration-of-e5600sg-controller.adoc[Ändern Sie die Link-Konfiguration des E5600SG-Controllers]

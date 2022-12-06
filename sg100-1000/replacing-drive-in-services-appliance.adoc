@@ -13,7 +13,7 @@ summary: Die SSDs in der Services-Appliance enthalten das Betriebssystem Storage
 [role="lead"]
 Die SSDs in der Services-Appliance enthalten das Betriebssystem StorageGRID. Wenn die Appliance als Admin-Node konfiguriert ist, enthalten die SSDs außerdem Prüfprotokolle, Kennzahlen und Datenbanktabellen. Die Laufwerke werden aus Redundanzgründen mithilfe von RAID1 gespiegelt. Wenn eines der Laufwerke ausfällt, müssen Sie es so schnell wie möglich ersetzen, um Redundanz sicherzustellen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Das ist schon xref:locating-controller-in-data-center.adoc[Das Gerät befindet sich physisch].
 * Sie haben überprüft, welches Laufwerk ausgefallen ist, indem Sie die linke LED gelb blinken.
 +

@@ -13,7 +13,7 @@ summary: 'Sie greifen auf die Anmeldeseite des Grid Manager zu, indem Sie den vo
 [role="lead"]
 Sie greifen auf die Anmeldeseite des Grid Manager zu, indem Sie den vollständig qualifizierten Domänennamen (FQDN) oder die IP-Adresse eines Admin-Knotens in die Adressleiste eines unterstützten Webbrowsers eingeben.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben Ihre Anmeldedaten.
 * Sie haben die URL für den Grid Manager.
 * Sie verwenden ein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
@@ -21,6 +21,7 @@ Sie greifen auf die Anmeldeseite des Grid Manager zu, indem Sie den vollständig
 * Sie haben spezifische Zugriffsberechtigungen.
 
 
+.Über diese Aufgabe
 Jedes StorageGRID System umfasst einen primären Admin-Node und eine beliebige Anzahl nicht primärer Admin-Nodes. Sie können sich bei einem beliebigen Admin-Knoten beim Grid-Manager anmelden, um das StorageGRID-System zu verwalten. Die Admin-Nodes sind jedoch nicht genau die gleichen:
 
 * Die auf einem Admin-Knoten ausgemachten Alarmbestätigungen (Legacy-System) werden nicht auf andere Admin-Knoten kopiert. Aus diesem Grund sehen die für Alarme angezeigten Informationen auf jedem Administratorknoten möglicherweise nicht gleich aus.

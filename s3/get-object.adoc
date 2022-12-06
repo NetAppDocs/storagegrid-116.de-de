@@ -125,6 +125,7 @@ In diesen Fällen:
 * Eine nachfolgende GET Object-Anforderung kann zurückgegeben werden `403 Forbidden`.
 
 
+.Verwandte Informationen
 xref:using-server-side-encryption.adoc[Serverseitige Verschlüsselung]
 
 xref:../ilm/index.adoc[Objektmanagement mit ILM]

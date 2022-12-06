@@ -13,7 +13,7 @@ summary: 'Wenn Sie sich nicht sicher sind, welcher Fibre-Channel-Host-Bus-Adapte
 [role="lead"]
 Wenn Sie sich nicht sicher sind, welcher Fibre Channel-Host Bus Adapter (HBA) ersetzt werden soll, führen Sie dieses Verfahren aus, um ihn zu identifizieren.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben die Seriennummer der Speicher-Appliance oder SG6000-CN-Controller, wo der Fibre Channel HBA ersetzt werden muss.
 +
 
@@ -47,4 +47,5 @@ xref:turning-controller-identify-led-on-and-off.adoc[Schalten Sie die Controller
 
 
 
+.Verwandte Informationen
 xref:removing-fibre-channel-hba.adoc[Entfernen Sie den Fibre Channel HBA]

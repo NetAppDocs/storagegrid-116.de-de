@@ -37,6 +37,7 @@ Nachdem Sie einem Bucket die XML-Benachrichtigungskonfiguration für Metadaten h
 
 Der StorageGRID Such-Integrationsservice unterstützt ein Elasticsearch-Cluster als Ziel. Wie bei den anderen Plattformdiensten wird das Ziel im Endpunkt angegeben, dessen URN in der Konfigurations-XML für den Dienst verwendet wird. Verwenden Sie die https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] Um die unterstützten Versionen von Elasticsearch zu ermitteln.
 
+.Verwandte Informationen
 xref:configuration-xml-for-search-configuration.adoc[Konfigurations-XML für die Integration der Suche]
 
 xref:object-metadata-included-in-metadata-notifications.adoc[Objektmetadaten sind in Metadaten-Benachrichtigungen enthalten]

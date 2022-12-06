@@ -13,7 +13,7 @@ summary: Wenn Sie die Grid-Netzwerk-IP-Adresse für alle Knoten im Raster änder
 [role="lead"]
 Wenn Sie die Grid-Netzwerk-IP-Adresse für alle Knoten im Raster ändern müssen, müssen Sie dieses spezielle Verfahren befolgen. Sie können eine Grid-Netzwerk-IP-Änderung nicht unter Verwendung des Verfahrens zum Ändern einzelner Knoten vornehmen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen die haben `Passwords.txt` Datei:
 
 
@@ -140,6 +140,7 @@ IMPORTANT: Das gesamte Grid muss gleichzeitig heruntergefahren werden, um alle N
 
 
 
+.Verwandte Informationen
 xref:../admin/index.adoc[StorageGRID verwalten]
 
 xref:adding-to-or-changing-subnet-lists-on-grid-network.adoc[Fügen Sie zu Subnetzlisten im Grid-Netzwerk hinzu oder ändern Sie diese]

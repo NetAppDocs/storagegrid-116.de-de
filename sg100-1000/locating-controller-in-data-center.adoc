@@ -13,7 +13,7 @@ summary: Suchen Sie den Controller, um Hardware-Wartungsarbeiten oder Upgrades d
 [role="lead"]
 Suchen Sie den Controller, um Hardware-Wartungsarbeiten oder Upgrades durchzuführen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben festgestellt, welcher Controller gewartet werden muss.
 * (Optional) um den Controller in Ihrem Datacenter zu finden, xref:turning-controller-identify-led-on-and-off.adoc[Schalten Sie die blaue Identify-LED ein].
 

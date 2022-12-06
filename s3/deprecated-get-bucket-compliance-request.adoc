@@ -93,6 +93,7 @@ Automatisches Löschen
 
 Wenn der Bucket nicht für konform erstellt wurde, lautet der HTTP-Statuscode für die Antwort `404 Not Found`, Mit einem S3-Fehlercode von `XNoSuchBucketCompliance`.
 
+.Verwandte Informationen
 xref:../ilm/index.adoc[Objektmanagement mit ILM]
 
 xref:../tenant/index.adoc[Verwenden Sie das Mandantenkonto]

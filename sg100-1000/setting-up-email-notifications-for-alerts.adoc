@@ -16,8 +16,10 @@ Wenn E-Mail-Benachrichtigungen gesendet werden sollen, wenn Warnmeldungen auftre
 
 NOTE: Die durch diese Vorgehensweise vorgenommenen BMC-Einstellungen bleiben möglicherweise nicht erhalten, wenn das Gerät ausfällt und ersetzt werden muss. Stellen Sie sicher, dass Sie über eine Aufzeichnung aller Einstellungen verfügen, die Sie angewendet haben, so dass sie nach einem Hardware-Austausch bei Bedarf leicht wieder angewendet werden können.
 
+.Was Sie benötigen
 Wissen Sie, wie Sie auf das BMC-Dashboard zugreifen können.
 
+.Über diese Aufgabe
 In der BMC-Schnittstelle verwenden Sie die Optionen *SMTP-Einstellungen*, *Benutzerverwaltung* und *Platform Event Filters* auf der Seite Einstellungen, um E-Mail-Benachrichtigungen zu konfigurieren.
 
 image::../media/bmc_settings_menu.png[BMC-Einstellungsmenü]

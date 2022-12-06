@@ -133,4 +133,5 @@ Eine erfolgreiche Ausführung gibt die folgenden Header mit einer "HTTP/1.1 201 
 
 Container-Name muss im StorageGRID-Namespace eindeutig sein. Wenn der Container unter einem anderen Konto vorhanden ist, wird der folgende Header zurückgegeben: „HTTP/1.1 409-Konflikt“.
 
+.Verwandte Informationen
 xref:monitoring-and-auditing-operations.adoc[Monitoring und Prüfung von Vorgängen]

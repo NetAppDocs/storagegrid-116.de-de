@@ -78,4 +78,5 @@ Sie können eine beliebige Kombination der folgenden Optionen verwenden, um Auto
 * *Vom Benutzer ausgelöst*: Senden Sie AutoSupport-Nachrichten jederzeit manuell.
 
 
+.Verwandte Informationen
 https://mysupport.netapp.com/site/global/dashboard["NetApp Support"^]

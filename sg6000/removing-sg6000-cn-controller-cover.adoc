@@ -13,6 +13,7 @@ summary: Entfernen Sie die Controllerabdeckung, um zu Wartungszwecken auf intern
 [role="lead"]
 Entfernen Sie die Controllerabdeckung, um zu Wartungszwecken auf interne Komponenten zuzugreifen.
 
+.Was Sie benötigen
 Entfernen Sie den Controller aus dem Schrank oder Rack, um auf die obere Abdeckung zuzugreifen.
 
 xref:removing-sg6000-cn-controller-from-cabinet-or-rack.adoc[Entfernen Sie den SG6000-CN Controller aus dem Schrank oder Rack]
@@ -29,4 +30,5 @@ IMPORTANT: Wickeln Sie das Riemen eines ESD-Armbands um Ihr Handgelenk, und befe
 
 
 
+.Verwandte Informationen
 xref:removing-fibre-channel-hba.adoc[Entfernen Sie den Fibre Channel HBA]

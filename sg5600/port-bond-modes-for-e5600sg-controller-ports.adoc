@@ -13,4 +13,5 @@ summary: Wenn Sie Netzwerkverbindungen für die Controller-Ports E5600SG konfigu
 [role="lead"]
 Wenn Sie Netzwerkverbindungen für die Controller-Ports E5600SG konfigurieren, können Sie die Portbindung für die 10-GbE-Ports verwenden, die mit dem Grid-Netzwerk und dem optionalen Client-Netzwerk verbunden sind, sowie die 1-GbE-Management-Ports, die eine Verbindung zum optionalen Admin-Netzwerk herstellen. Mit Port-Bonding sichern Sie Ihre Daten, indem Sie redundante Pfade zwischen StorageGRID-Netzwerken und der Appliance bereitstellen.
 
+.Verwandte Informationen
 xref:configuring-network-links-sg5600.adoc[Konfigurieren von Netzwerkverbindungen (SG5600)]

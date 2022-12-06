@@ -65,7 +65,7 @@ Die PATCH-Methode wurde jetzt veraltet und wird in einer zukünftigen Version en
 
 
 
-== Ergänzung zum Grid/Protokollen/Erfassungs-Endpunkt
+== Ergänzungen zu `grid/logs/collect` endpunkt
 
 Dem wurden vier boolesche Werte hinzugefügt `grid/logs/collect` endpunkt:
 
@@ -77,7 +77,7 @@ Dem wurden vier boolesche Werte hinzugefügt `grid/logs/collect` endpunkt:
 
 
 
-== Neuer Endpunkt für ​node-Details /grid​/Service-ids
+== Neu `​node-details /grid​/service-ids` endpunkt
 
 Das neue `​/grid​/service-ids` endpoint bietet eine Zuordnung von Node-UUIDs zu den zugeordneten Node-Namen, Service-IDs und Servicetypen.
 

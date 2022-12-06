@@ -23,7 +23,7 @@ StorageGRID Installationsarchiv
  a| 
 Wenn Sie neue Grid-Nodes oder einen neuen Standort hinzufügen, müssen Sie das StorageGRID Installationsarchiv herunterladen und extrahieren. Sie müssen dieselbe Version verwenden, die derzeit im Raster ausgeführt wird.
 
-Weitere Informationen finden Sie in den Anweisungen für ,Herunterladen und Extrahieren der StorageGRID-Installationsdateien.
+Weitere Informationen finden Sie in den Anweisungen für <<download-and-extract-install-files,Herunterladen und Extrahieren der StorageGRID-Installationsdateien>>.
 
 *Hinweis:* Sie müssen keine Dateien herunterladen, wenn Sie vorhandenen Speicherknoten neue Speichervolumen hinzufügen oder eine neue StorageGRID Appliance installieren.
 
@@ -81,8 +81,10 @@ Informationen zu unterstützten Versionen finden Sie im https://mysupport.netapp
 
 == Laden Sie die StorageGRID Installationsdateien herunter und extrahieren Sie sie
 
+.[[Download-and-Extract-install-files]]
 Bevor Sie neue Grid-Nodes oder einen neuen Standort hinzufügen können, müssen Sie das entsprechende StorageGRID-Installationsarchiv herunterladen und die Dateien extrahieren.
 
+.Über diese Aufgabe
 Sie müssen Erweiterungsvorgänge mit der Version von StorageGRID durchführen, die derzeit im Grid ausgeführt wird.
 
 .Schritte

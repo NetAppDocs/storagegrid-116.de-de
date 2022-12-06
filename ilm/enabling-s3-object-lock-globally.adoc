@@ -13,7 +13,7 @@ summary: Falls ein S3-Mandantenkonto Vorschriften beim Speichern von Objektdaten
 [role="lead"]
 Falls ein S3-Mandantenkonto Vorschriften beim Speichern von Objektdaten einhalten muss, muss die S3-Objektsperre für Ihr gesamtes StorageGRID System aktiviert werden. Wenn Sie die globale S3-Objektsperre aktivieren, können alle S3-Mandantenbenutzer Buckets und Objekte mit S3 Object Lock erstellen und verwalten.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben die Root-Zugriffsberechtigung.
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben den S3 Object Lock Workflow überprüft und müssen die Überlegungen verstehen.
@@ -25,6 +25,7 @@ Falls ein S3-Mandantenkonto Vorschriften beim Speichern von Objektdaten einhalte
 
 
 
+.Über diese Aufgabe
 Ein Grid-Administrator muss die globale S3-Objektsperre aktivieren, damit Mandantenbenutzer neue Buckets erstellen können, für die S3-Objektsperre aktiviert ist. Nachdem diese Einstellung aktiviert ist, kann sie nicht deaktiviert werden.
 
 
@@ -66,6 +67,7 @@ image::../media/s3_object_lock_global_setting_error.gif[Globaler S3-Objektsperre
 
 
 
+.Nachdem Sie fertig sind
 Nachdem Sie die globale S3-Objektsperre aktiviert haben, müssen Sie dies möglicherweise ändern xref:../ilm/creating-default-ilm-rule.adoc[Standardregel erstellen] Die Compliance-Anforderungen und erfüllen xref:creating-ilm-policy-after-s3-object-lock-is-enabled.adoc[ILM-Richtlinie erstellen] Die Compliance-Anforderungen erfüllt. Nach Aktivierung der Einstellung kann die ILM-Richtlinie optional sowohl eine konforme Standardregel als auch eine nicht konforme Standardregel enthalten. Beispielsweise möchten Sie eine nicht-konforme Regel verwenden, die keine Filter für Objekte in Buckets enthält, für die die S3-Objektsperre nicht aktiviert ist.
 
 .Verwandte Informationen

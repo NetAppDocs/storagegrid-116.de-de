@@ -13,11 +13,12 @@ summary: Sie können die Option „Client Modification Grid verhindern“ auswä
 [role="lead"]
 Sie können die Option „Client Modification Grid verhindern“ auswählen, um bestimmte HTTP-Client-Vorgänge zu verweigern.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben spezifische Zugriffsberechtigungen.
 
 
+.Über diese Aufgabe
 „Client-Änderung verhindern“ ist eine systemweite Einstellung. Wenn die Option „Client-Änderung verhindern“ ausgewählt ist, werden die folgenden Anfragen verweigert:
 
 * *S3 REST API*

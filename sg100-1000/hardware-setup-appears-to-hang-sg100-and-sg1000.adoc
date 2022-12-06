@@ -18,6 +18,7 @@ Das Installationsprogramm von StorageGRID Appliance ist möglicherweise nicht ve
 . Wenn Sie Hilfe bei der Behebung eines Problems benötigen, wenden Sie sich an den technischen Support.
 
 
+.Verwandte Informationen
 xref:viewing-boot-up-codes-for-appliance-sg100-and-sg1000.adoc[Anzeigen von Startcodes für die Appliance]
 
 xref:viewing-error-codes-for-sg1000-controller-sg100-and-sg1000.adoc[Fehlercodes für das Gerät anzeigen]

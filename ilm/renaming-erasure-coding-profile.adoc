@@ -13,7 +13,7 @@ summary: Vielleicht möchten Sie ein Erasure Coding-Profil umbenennen, um es off
 [role="lead"]
 Vielleicht möchten Sie ein Erasure Coding-Profil umbenennen, um es offensichtlicher zu machen, was das Profil tut.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben spezifische Zugriffsberechtigungen.
 

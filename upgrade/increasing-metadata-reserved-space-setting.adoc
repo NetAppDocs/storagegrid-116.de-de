@@ -13,12 +13,13 @@ summary: Nach dem Upgrade auf StorageGRID 11.6 können Sie die Einstellung für 
 [role="lead"]
 Nach dem Upgrade auf StorageGRID 11.6 können Sie die Einstellung für das System „Metadaten reserviert Speicherplatz“ möglicherweise erhöhen, wenn Ihre Speicherknoten spezifische Anforderungen an RAM und verfügbaren Speicherplatz erfüllen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie müssen über die Berechtigung Root Access oder die Rastertopologie-Seitenkonfiguration und andere Grid-Konfigurationsberechtigungen verfügen.
 * Sie haben das Upgrade für StorageGRID 11.6 abgeschlossen.
 
 
+.Über diese Aufgabe
 Möglicherweise können Sie den reservierten Speicherplatz für systemweite Metadaten nach dem Upgrade auf StorageGRID 11.6 manuell auf 8 TB erhöhen. Durch die Reservierung von zusätzlichem Metadatenspeicherplatz nach dem Upgrade 11.6 werden zukünftige Hardware- und Software-Upgrades vereinfacht.
 
 Sie können nur den Wert der Einstellung für systemweiten reservierten Speicherplatz für Metadaten erhöhen, wenn beide dieser Anweisungen wahr sind:

@@ -13,7 +13,7 @@ summary: Führen Sie dieses Verfahren für jeden Admin-Knoten in einer StorageGR
 [role="lead"]
 Führen Sie dieses Verfahren für jeden Admin-Knoten in einer StorageGRID-Bereitstellung durch, von der aus Sie Audit-Nachrichten abrufen möchten.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben die `Passwords.txt` Datei mit dem Root-/Admin-Passwort (im GENANNTEN Paket verfügbar).
 * Sie haben den Benutzernamen und das Kennwort für das CIFS Active Directory.
 * Sie haben die `Configuration.txt` Datei (im GENANNTEN Paket verfügbar).

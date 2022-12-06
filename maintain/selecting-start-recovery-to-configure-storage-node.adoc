@@ -13,7 +13,7 @@ summary: Nachdem Sie einen Speicherknoten ersetzt haben, müssen Sie im Grid Man
 [role="lead"]
 Nachdem Sie einen Speicherknoten ersetzt haben, müssen Sie im Grid Manager die Option Wiederherstellung starten auswählen, um den neuen Knoten als Ersatz für den ausgefallenen Knoten zu konfigurieren.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie müssen über die Berechtigung Wartung oder Stammzugriff verfügen.
 * Sie müssen über eine Passphrase für die Bereitstellung verfügen.
@@ -22,6 +22,7 @@ Nachdem Sie einen Speicherknoten ersetzt haben, müssen Sie im Grid Manager die 
 * Sie müssen überprüft haben, dass der Speicherknoten innerhalb der letzten 15 Tage nicht neu aufgebaut wurde.
 
 
+.Über diese Aufgabe
 Wenn der Storage-Node als Container auf einem Linux-Host installiert ist, müssen Sie diesen Schritt nur ausführen, wenn einer dieser Schritte zutrifft:
 
 * Man musste das benutzen `--force` Flag, um den Knoten zu importieren, oder Sie haben ausgegeben `storagegrid node force-recovery _node-name_`
@@ -61,4 +62,5 @@ image::../media/recovery_reset_button.gif[Screenshot mit der Bühne „Warten au
 
 
 
+.Verwandte Informationen
 xref:preparing-appliance-for-reinstallation-platform-replacement-only.adoc[Appliance für die Neuinstallation vorbereiten (nur Plattformaustausch)]

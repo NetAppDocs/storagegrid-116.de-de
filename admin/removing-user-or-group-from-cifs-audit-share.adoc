@@ -13,11 +13,12 @@ summary: Sie können den letzten Benutzer oder die letzte Gruppe, der Zugriff au
 [role="lead"]
 Sie können den letzten Benutzer oder die letzte Gruppe, der Zugriff auf die Revisionsfreigabe hat, nicht entfernen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben die `Passwords.txt` Datei mit den Passwörtern des Root-Kontos (im GENANNTEN Paket verfügbar).
 * Sie haben die `Configuration.txt` Datei (im GENANNTEN Paket verfügbar).
 
 
+.Über diese Aufgabe
 Der Audit-Export über CIFS/Samba wurde veraltet und wird in einer zukünftigen StorageGRID-Version entfernt.
 
 .Schritte

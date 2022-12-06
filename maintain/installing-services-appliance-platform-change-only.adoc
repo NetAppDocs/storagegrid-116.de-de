@@ -25,4 +25,5 @@ Führen Sie diese Vorgehensweise nur aus, wenn Sie einen ausgefallenen Node, der
 . Verwenden Sie bei der Aufforderung zu einem Node-Namen den Node-Namen des ausgefallenen Node.
 
 
+.Verwandte Informationen
 xref:../sg100-1000/index.adoc[SG100- und SG1000-Services-Appliances]

@@ -13,11 +13,12 @@ summary: Wenn ein einzelner Storage-Node länger als 15 Tage offline war und nic
 [role="lead"]
 Wenn ein einzelner Storage-Node länger als 15 Tage offline war und nicht mit anderen Storage-Nodes verbunden ist, müssen Sie Cassandra auf dem Node neu aufbauen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben überprüft, dass keine Ausmusterung von Storage-Nodes ausgeführt wird oder Sie den Vorgang zur Deaktivierung eines Node angehalten haben. (Wählen Sie im Grid Manager die Option *WARTUNG* *Aufgaben* *Dekommission*.)
 * Sie haben überprüft, dass keine Erweiterung ausgeführt wird. (Wählen Sie im Grid Manager die Option *WARTUNG* *Aufgaben* *Erweiterung*.)
 
 
+.Über diese Aufgabe
 Storage-Nodes verfügen über eine Cassandra Datenbank mit Objekt-Metadaten. Wenn ein Storage-Node seit mehr als 15 Tagen nicht mit anderen Storage-Nodes kommunizieren kann, geht StorageGRID davon aus, dass die Cassandra-Datenbank des Node veraltet ist. Der Storage-Node kann erst wieder dem Grid beitreten, wenn Cassandra mithilfe von Informationen anderer Storage-Nodes neu erstellt wurde.
 
 Verwenden Sie dieses Verfahren, um Cassandra nur dann neu aufzubauen, wenn ein einzelner Storage-Node ausfällt. Wenden Sie sich an den technischen Support, wenn weitere Storage-Nodes offline sind oder wenn Cassandra innerhalb der letzten 15 Tage auf einem anderen Storage-Node neu erstellt wurde. Dazu gehört beispielsweise das Verfahren zur Wiederherstellung ausgefallener Storage-Volumes oder zur Wiederherstellung eines ausgefallenen Storage-Nodes.

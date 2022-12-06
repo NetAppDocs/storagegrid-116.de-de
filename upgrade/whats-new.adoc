@@ -46,7 +46,7 @@ Sie können jetzt virtuelle LAN-Schnittstellen (VLAN) für Admin-Nodes und Gatew
 * Der neue Assistent *Erstellen einer VLAN-Schnittstelle* führt Sie durch den Prozess der Eingabe einer VLAN-ID und der Auswahl einer übergeordneten Schnittstelle auf einem oder mehreren Knoten. Eine übergeordnete Schnittstelle kann das Grid-Netzwerk, das Client-Netzwerk oder eine zusätzliche Trunk-Schnittstelle für die VM oder Bare-Metal-Host sein. Siehe xref:../admin/configure-vlan-interfaces.html[Konfigurieren Sie die VLAN-Schnittstellen].
 * Einem Node können jetzt zusätzliche Trunk- oder Zugriffsschnittstellen hinzugefügt werden. Wenn Sie eine Trunk-Schnittstelle hinzufügen, müssen Sie eine VLAN-Schnittstelle konfigurieren. Wenn Sie eine Zugriffsoberfläche hinzufügen, können Sie die Schnittstelle direkt einer HA-Gruppe hinzufügen. Sie müssen keine VLAN-Schnittstelle konfigurieren. Siehe folgendes:
 +
-** *Linux (vor dem Installieren des Knotens)*:  enhancements
+** *Linux (vor dem Installieren des Knotens)*: <<Installationsverbesserungen führen zu>>
 ** *Linux (nach der Installation des Knotens)*: xref:../maintain/linux-adding-trunk-or-access-interfaces-to-node.adoc[Linux: Hinzufügen von Trunk- oder Zugriffsschnittstellen zu einem Node]
 ** *VMware (nach der Installation des Knotens)*: xref:../vmware/collecting-information-about-your-deployment-environment.adoc[Erfassen von Informationen über die Bereitstellungsumgebung]
 

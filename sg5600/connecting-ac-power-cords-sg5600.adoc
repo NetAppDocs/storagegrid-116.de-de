@@ -13,6 +13,7 @@ summary: Sie müssen die Netzkabel an die externe Stromquelle und an den Netzans
 [role="lead"]
 Sie müssen die Netzkabel an die externe Stromquelle und an den Netzanschluss an jedem Controller anschließen. Nachdem Sie die Netzkabel angeschlossen haben, können Sie das Netzkabel einschalten.
 
+.Was Sie benötigen
 Vor dem Anschließen an die Stromversorgung müssen beide Netzschalter des Geräts ausgeschaltet sein.
 
 

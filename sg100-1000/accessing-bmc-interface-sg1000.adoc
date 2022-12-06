@@ -13,7 +13,7 @@ summary: Sie können auf die BMC-Schnittstelle auf der Services-Appliance mit de
 [role="lead"]
 Sie können auf die BMC-Schnittstelle auf der Services-Appliance mit der DHCP- oder statischen IP-Adresse für den BMC-Management-Port zugreifen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Der Management-Client verwendet ein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Der BMC-Management-Port der Services-Appliance ist mit dem Managementnetzwerk verbunden, das Sie verwenden möchten.
 +
@@ -65,4 +65,5 @@ NOTE: Wenn sich Benutzer zum ersten Mal anmelden, werden sie möglicherweise auf
 
 
 
+.Verwandte Informationen
 xref:changing-root-password-for-bmc-interface-sg1000.adoc[Ändern Sie das Root-Passwort für die BMC-Schnittstelle]

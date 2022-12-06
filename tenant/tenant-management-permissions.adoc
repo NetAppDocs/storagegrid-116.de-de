@@ -78,6 +78,7 @@ Nur S3-Mandanten. Ermöglicht Benutzern, Endpunkte mithilfe des Mandanten-Manage
 Benutzer, die diese Berechtigung nicht besitzen, sehen nicht die Menüoption *Platform Services Endpunkte*.
 
 |===
+.Verwandte Informationen
 xref:../s3/index.adoc[S3 verwenden]
 
 xref:../swift/index.adoc[Verwenden Sie Swift]

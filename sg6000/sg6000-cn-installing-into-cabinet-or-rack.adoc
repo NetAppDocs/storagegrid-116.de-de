@@ -13,7 +13,7 @@ summary: Sie müssen einen Satz Schienen für den SG6000-CN-Controller in Ihrem 
 [role="lead"]
 Sie müssen einen Satz Schienen für den SG6000-CN-Controller in Ihrem Schrank oder Rack installieren und dann den Controller auf die Schienen schieben.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben das im Lieferumfang enthaltene Sicherheitshinweisen geprüft und die Vorsichtsmaßnahmen für das Bewegen und Installieren von Hardware verstanden.
 * Sie haben die Anweisungen im Lieferumfang des Schienensatz enthalten.
 * Sie haben das E2860 Controller-Shelf und -Laufwerke oder das EF570 Controller-Shelf installiert.

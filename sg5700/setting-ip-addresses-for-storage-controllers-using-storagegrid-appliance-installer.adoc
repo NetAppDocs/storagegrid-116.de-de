@@ -13,11 +13,12 @@ summary: Management-Port 1 auf jedem Storage-Controller verbindet die Appliance 
 [role="lead"]
 Management-Port 1 auf jedem Storage-Controller verbindet die Appliance mit dem Managementnetzwerk für SANtricity System Manager. Wenn Sie vom StorageGRID Appliance Installer nicht auf den SANtricity System Manager zugreifen können, müssen Sie für jeden Storage Controller eine statische IP-Adresse festlegen, um sicherzustellen, dass die Managementverbindung zur Hardware und der Controller-Firmware im Controller-Shelf nicht unterbrochen wird.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie verwenden einen beliebigen Management-Client, der eine Verbindung zum StorageGRID-Admin-Netzwerk herstellen kann, oder Sie haben einen Service-Laptop.
 * Der Client- oder Service-Laptop verfügt über einen unterstützten Webbrowser.
 
 
+.Über diese Aufgabe
 Adressen, die durch DHCP zugewiesen werden, können jederzeit geändert werden. Weisen Sie den Controllern statische IP-Adressen zu, um einen konsistenten Zugriff zu gewährleisten.
 
 

@@ -85,7 +85,7 @@ xref:using-s3-object-lock.adoc[Verwenden Sie die S3-Objektsperre]
 ** `x-amz-server-side-encryption-customer-key`
 ** `x-amz-server-side-encryption-customer-algorithm`
 +
-Siehe  headers for server-side encryption
+Siehe <<Anforderungsheader für serverseitige Verschlüsselung>>
 
 
 
@@ -179,6 +179,7 @@ Wenn Sie die serverseitige Verschlüsselung verwenden, hängen die von Ihnen zur
 
 Wenn der Quell-Bucket versioniert ist, können Sie den verwenden `x-amz-copy-source` Kopfzeile zum Kopieren der neuesten Version eines Objekts. Zum Kopieren einer bestimmten Version eines Objekts müssen Sie explizit die Version angeben, die kopiert werden soll `versionId` unterressource. Wenn der Ziel-Bucket versioniert ist, wird die generierte Version im zurückgegeben `x-amz-version-id` Kopfzeile der Antwort. Wenn die Versionierung für den Ziel-Bucket ausgesetzt ist, dann `x-amz-version-id` Gibt einen Wert „`null`“ zurück.
 
+.Verwandte Informationen
 xref:../ilm/index.adoc[Objektmanagement mit ILM]
 
 xref:using-server-side-encryption.adoc[Serverseitige Verschlüsselung]

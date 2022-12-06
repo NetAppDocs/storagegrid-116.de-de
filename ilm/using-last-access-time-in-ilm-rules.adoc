@@ -13,6 +13,7 @@ summary: Sie können den Zeitpunkt des letzten Zugriffs als Referenzzeit in eine
 [role="lead"]
 Sie können den Zeitpunkt des letzten Zugriffs als Referenzzeit in einer ILM-Regel verwenden. Sie möchten beispielsweise Objekte, die in den letzten drei Monaten auf lokalen Speicherknoten angezeigt wurden, während Sie Objekte verschieben, die noch nicht in letzter Zeit an einen externen Standort betrachtet wurden. Sie können den Zeitpunkt des letzten Zugriffs auch als erweiterten Filter verwenden, wenn eine ILM-Regel nur für Objekte gelten soll, auf die zuletzt an einem bestimmten Datum zugegriffen wurde.
 
+.Über diese Aufgabe
 Bevor Sie den Zeitpunkt des letzten Zugriffs in einer ILM-Regel verwenden, prüfen Sie die folgenden Aspekte:
 
 * Wenn Sie den Zeitpunkt des letzten Zugriffs als Referenzzeit verwenden, beachten Sie, dass durch das Ändern der Uhrzeit für den letzten Zugriff für ein Objekt keine sofortige ILM-Evaluierung ausgelöst wird. Stattdessen werden die Platzierungen des Objekts bewertet und das Objekt nach Bedarf verschoben, wenn im Hintergrund ILM das Objekt bewertet wird. Dies kann zwei Wochen oder länger dauern, nachdem auf das Objekt zugegriffen wurde.

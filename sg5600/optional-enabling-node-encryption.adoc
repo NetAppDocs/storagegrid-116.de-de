@@ -13,8 +13,10 @@ summary: 'Wenn Sie die Node-Verschlüsselung aktivieren, können die Festplatten
 [role="lead"]
 Wenn Sie die Node-Verschlüsselung aktivieren, können die Festplatten Ihrer Appliance durch eine sichere KMS-Verschlüsselung (Key Management Server) gegen physischen Verlust oder die Entfernung vom Standort geschützt werden. Bei der Installation der Appliance müssen Sie die Node-Verschlüsselung auswählen und aktivieren. Die Auswahl der Node-Verschlüsselung kann nicht rückgängig gemacht werden, sobald der KMS-Verschlüsselungsprozess gestartet wird.
 
+.Was Sie benötigen
 Lesen Sie die Informationen über KMS in den Anweisungen zur Administration von StorageGRID durch.
 
+.Über diese Aufgabe
 Eine Appliance mit aktivierter Node-Verschlüsselung stellt eine Verbindung zum externen Verschlüsselungsmanagement-Server (KMS) her, der für den StorageGRID-Standort konfiguriert ist. Jeder KMS (oder KMS-Cluster) verwaltet die Schlüssel für alle Appliance-Nodes am Standort. Diese Schlüssel verschlüsseln und entschlüsseln die Daten auf jedem Laufwerk in einer Appliance mit aktivierter Node-Verschlüsselung.
 
 Ein KMS kann im Grid Manager vor oder nach der Installation der Appliance in StorageGRID eingerichtet werden. Weitere Informationen zur KMS- und Appliance-Konfiguration finden Sie in den Anweisungen zur Administration von StorageGRID.
@@ -64,8 +66,10 @@ NOTE: Die Appliances werden anfänglich mit einem zufälligen Verschlüsselungss
 
 
 
+.Nachdem Sie fertig sind
 Wenn sich der Appliance-Node im Wartungsmodus befindet, können Sie den Verschlüsselungsstatus, die KMS-Details und die verwendeten Zertifikate anzeigen.
 
+.Verwandte Informationen
 xref:../admin/index.adoc[StorageGRID verwalten]
 
 xref:monitoring-node-encryption-in-maintenance-mode.adoc[Überwachung der Node-Verschlüsselung im Wartungsmodus (SG5600)]

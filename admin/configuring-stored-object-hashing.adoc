@@ -13,11 +13,12 @@ summary: Die Option „Speichertes Objekt-Hashing“ gibt den Hash-Algorithmus a
 [role="lead"]
 Die Option „Speichertes Objekt-Hashing“ gibt den Hash-Algorithmus an, der zur Überprüfung der Objektintegrität verwendet wird.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben spezifische Zugriffsberechtigungen.
 
 
+.Über diese Aufgabe
 Standardmäßig werden Objektdaten mit dem SHA-1-Algorithmus gehasht. Der SHA-256-Algorithmus erfordert zusätzliche CPU-Ressourcen und wird im Allgemeinen nicht für die Integritätsprüfung empfohlen.
 
 

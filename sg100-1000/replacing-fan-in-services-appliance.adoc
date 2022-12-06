@@ -13,13 +13,14 @@ summary: Die Service-Appliance verfügt über acht Lüfter. Wenn einer der Lüft
 [role="lead"]
 Die Service-Appliance verfügt über acht Lüfter. Wenn einer der Lüfter ausfällt, müssen Sie ihn so schnell wie möglich austauschen, um sicherzustellen, dass das Gerät ordnungsgemäß gekühlt wird.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben den Ersatzlüfter ausgepackt.
 * Das ist schon xref:locating-controller-in-data-center.adoc[Das Gerät befindet sich physisch].
 * Sie haben bestätigt, dass die anderen Lüfter installiert sind und ausgeführt werden.
 * Das ist schon xref:placing-appliance-into-maintenance-mode.adoc[Das Gerät in den Wartungsmodus versetzt].
 
 
+.Über diese Aufgabe
 Auf den Geräteknoten kann nicht zugegriffen werden, wenn Sie den Lüfter austauschen.
 
 Das Foto zeigt einen Ventilator für die Service Appliance. Die Kühllüfter sind zugänglich, nachdem Sie die obere Abdeckung aus dem Gerät nehmen.

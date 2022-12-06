@@ -15,7 +15,7 @@ Sie können detaillierte Informationen zu einer Meldung anzeigen, die derzeit Ih
 
 Optional können Sie xref:silencing-alert-notifications.adoc[Stummschalten einer aktuellen Warnmeldung] Oder xref:editing-alert-rules.adoc[Aktualisieren Sie die Meldungsregel].
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 
 

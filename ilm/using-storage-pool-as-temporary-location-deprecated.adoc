@@ -18,4 +18,5 @@ Temporäre Speicherorte wurden veraltet und werden in einer zukünftigen Version
 
 NOTE: Wenn Sie das strikte Aufnahmeverhalten auswählen (Schritt 3 des Assistenten zur Erstellung von ILM-Regeln), wird der temporäre Speicherort ignoriert.
 
+.Verwandte Informationen
 xref:data-protection-options-for-ingest.adoc[Datensicherungsoptionen für die Aufnahme]

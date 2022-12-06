@@ -458,6 +458,7 @@ Enthält Informationen über ausgehende Verbindungen von der Management-API zu i
 Admin-Nodes
 
 |===
+.Verwandte Informationen
 xref:about-bycast-log.adoc[Etwa bycast.log]
 
 xref:../s3/index.adoc[S3 verwenden]

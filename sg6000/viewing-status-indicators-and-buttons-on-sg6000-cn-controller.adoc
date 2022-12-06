@@ -82,6 +82,7 @@ Um die Boot- und Fehlercodes anzuzeigen, müssen Sie auf die BMC-Schnittstelle z
 
 
 
+.Verwandte Informationen
 xref:troubleshooting-hardware-installation.adoc[Fehlerbehebung bei der Hardwareinstallation (SG6000)]
 
 xref:configuring-bmc-interface-sg6000.adoc[BMC-Schnittstelle konfigurieren (SG6000)]

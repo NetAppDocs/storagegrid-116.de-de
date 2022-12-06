@@ -13,12 +13,13 @@ summary: Mit dem Tool zur Erläuterung von Audits können Sie die Audit-Meldunge
 [role="lead"]
 Sie können das verwenden `audit-explain` Tool zum Übersetzen der Audit-Meldungen im Audit-Protokoll in ein einfach zu lesendes Format.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen über spezifische Zugriffsberechtigungen verfügen.
 * Sie müssen die haben `Passwords.txt` Datei:
 * Sie müssen die IP-Adresse des primären Admin-Knotens kennen.
 
 
+.Über diese Aufgabe
 Der `audit-explain` Das auf dem primären Admin-Knoten verfügbare Tool bietet vereinfachte Zusammenfassungen der Audit-Meldungen in einem Audit-Protokoll.
 
 
@@ -98,4 +99,5 @@ NOTE: Um die Zeilenlänge zu verringern und die Lesbarkeit zu erleichtern, werde
 
 
 
+.Verwandte Informationen
 xref:sput-s3-put.adoc[SPUT: S3 PUT]

@@ -13,7 +13,7 @@ summary: 'Möglicherweise müssen Sie einen Knoten außer Betrieb setzen, der de
 [role="lead"]
 Möglicherweise müssen Sie einen Knoten außer Betrieb setzen, der derzeit nicht mit dem Grid verbunden ist (einen Node, dessen Status unbekannt oder administrativ ausgefallen ist).
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie verstehen die Anforderungen und xref:considerations-for-decommissioning-grid-nodes.adoc[Überlegungen für die Deaktivierung von Grid-Nodes].
 * Sie haben alle erforderlichen Elemente erhalten.
 * Sie haben sichergestellt, dass keine Datenreparaturjobs aktiv sind. Siehe xref:checking-data-repair-jobs.adoc[Prüfen Sie die Reparatur von Daten].
@@ -23,6 +23,7 @@ Möglicherweise müssen Sie einen Knoten außer Betrieb setzen, der derzeit nich
 * Sie müssen über eine Passphrase für die Bereitstellung verfügen.
 
 
+.Über diese Aufgabe
 Sie können nicht verbundene Knoten identifizieren, indem Sie in der Spalte *Health* nach Unbekannt (blau) oder Administrativ Down (grau)-Symbolen suchen. Im Beispiel ist der Speicherknoten DC1-S4 getrennt; alle anderen Knoten sind verbunden.
 
 image::../media/decommission_nodes_page_one_disconnected.png[Legen Sie die Seite Knoten außer Betrieb, wobei ein Knoten nicht verbunden ist]
@@ -197,6 +198,7 @@ Mit diesem Befehl wird eine fehlerhafte Volume-Reparatur mithilfe der Reparatur-
 
 --
 ====
+.Nachdem Sie fertig sind
 Sobald die getrennten Nodes außer Betrieb genommen und alle Reparatur-Jobs abgeschlossen sind, können Sie alle verbundenen Grid-Nodes je nach Bedarf ausmustern.
 
 Führen Sie anschließend die folgenden Schritte aus, nachdem Sie den Vorgang zur Deaktivierung abgeschlossen haben:
@@ -212,4 +214,5 @@ Führen Sie anschließend die folgenden Schritte aus, nachdem Sie den Vorgang zu
 
 
 
+.Verwandte Informationen
 xref:grid-node-recovery-procedures.adoc[Verfahren zur Recovery von Grid-Nodes]

@@ -70,6 +70,7 @@ SG5760
 . Installieren Sie alle erforderlichen Netzwerk-Switches. Informationen zur Kompatibilität sind im NetApp Interoperabilitäts-Matrix-Tool verfügbar.
 
 
+.Verwandte Informationen
 https://hwu.netapp.com["NetApp Hardware Universe"^]
 
 https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^]

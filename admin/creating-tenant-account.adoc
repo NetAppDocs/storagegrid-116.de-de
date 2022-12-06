@@ -17,7 +17,7 @@ Wenn Sie ein Mandantenkonto erstellen, geben Sie einen Namen, ein Client-Protoko
 
 Der Grid Manager enthält einen Assistenten, der Sie durch die Schritte zum Erstellen eines Mandantenkontos führt. Je nachdem, ob die Schritte variieren xref:using-identity-federation.adoc[Identitätsföderation] Und xref:configuring-sso.adoc[Single Sign On] Sind konfiguriert und ob das Grid Manager-Konto, das Sie zum Erstellen des Mandantenkontos verwenden, einer Admin-Gruppe mit Root-Zugriffsberechtigung angehört.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben spezifische Zugriffsberechtigungen.
 * Wenn das Mandantenkonto die für den Grid Manager konfigurierte Identitätsquelle verwendet und Sie einer föderierten Gruppe Root-Zugriffsberechtigungen für das Mandantenkonto gewähren möchten, haben Sie diese föderierte Gruppe in den Grid Manager importiert. Sie müssen dieser Admin-Gruppe keine Grid Manager-Berechtigungen zuweisen. Siehe xref:managing-admin-groups.adoc[Anweisungen zum Verwalten von Admin-Gruppen].

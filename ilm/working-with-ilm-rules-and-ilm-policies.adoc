@@ -13,7 +13,7 @@ summary: Nachdem Sie ILM-Regeln und eine ILM-Richtlinie erstellt haben, können 
 [role="lead"]
 Sobald Sie ILM-Regeln und eine ILM-Richtlinie erstellt haben, können Sie sie weiterhin verwenden und ihre Konfiguration an die sich ändernden Storage-Anforderungen anpassen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben spezifische Zugriffsberechtigungen.
 

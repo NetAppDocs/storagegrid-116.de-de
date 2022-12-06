@@ -13,11 +13,12 @@ summary: Sie können SNMP-Benachrichtigungen deaktivieren, Community-Strings akt
 [role="lead"]
 Sie können SNMP-Benachrichtigungen deaktivieren, Community-Strings aktualisieren oder Agent-Adressen, USM-Benutzer und Trap-Ziele hinzufügen oder entfernen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie müssen über die Berechtigung Root Access verfügen.
 
 
+.Über diese Aufgabe
 Jedes Mal, wenn Sie den aktualisieren xref:configuring-snmp-agent.adoc[SNMP-Agent-Konfiguration], Beachten Sie, dass Sie unten auf der Seite SNMP Agent auf *Speichern* klicken müssen, um alle Änderungen zu übernehmen, die Sie auf jeder Registerkarte vorgenommen haben.
 
 .Schritte
@@ -72,12 +73,12 @@ Der Benutzername für einen bestehenden USM-Benutzer kann nicht geändert werden
 
 +
 
-NOTE: Wenn Sie die autorisierende Engine-ID eines Benutzers hinzufügen oder entfernen und dieser Benutzer derzeit für ein Ziel ausgewählt ist, müssen Sie das Ziel bearbeiten oder entfernen, wie in Schritt beschrieben ,SNMP-Trap-Ziel. Andernfalls tritt ein Validierungsfehler auf, wenn Sie die SNMP-Agent-Konfiguration speichern.
+NOTE: Wenn Sie die autorisierende Engine-ID eines Benutzers hinzufügen oder entfernen und dieser Benutzer derzeit für ein Ziel ausgewählt ist, müssen Sie das Ziel bearbeiten oder entfernen, wie in Schritt beschrieben <<SNMP_TRAP_DESTINATION,SNMP-Trap-Ziel>>. Andernfalls tritt ein Validierungsfehler auf, wenn Sie die SNMP-Agent-Konfiguration speichern.
 
 .. Um einen USM-Benutzer zu entfernen, wählen Sie das Optionsfeld für den Benutzer aus, und klicken Sie auf *Entfernen*. Klicken Sie dann auf *OK*, um zu bestätigen, dass Sie diesen Benutzer entfernen möchten.
 +
 
-NOTE: Wenn der Benutzer, den Sie entfernt haben, derzeit für ein Trap-Ziel ausgewählt ist, müssen Sie das Ziel bearbeiten oder entfernen, wie in Schritt beschrieben ,SNMP-Trap-Ziel. Andernfalls tritt ein Validierungsfehler auf, wenn Sie die SNMP-Agent-Konfiguration speichern.
+NOTE: Wenn der Benutzer, den Sie entfernt haben, derzeit für ein Trap-Ziel ausgewählt ist, müssen Sie das Ziel bearbeiten oder entfernen, wie in Schritt beschrieben <<SNMP_TRAP_DESTINATION,SNMP-Trap-Ziel>>. Andernfalls tritt ein Validierungsfehler auf, wenn Sie die SNMP-Agent-Konfiguration speichern.
 
 +
 image::../media/snmp_usm_user_remove_error.png[Fehler beim Entfernen des SNMP-USM-Benutzers]

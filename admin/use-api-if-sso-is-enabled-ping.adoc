@@ -19,11 +19,12 @@ Wenn Sie haben xref:../admin/configuring-sso.adoc[Konfiguration und Aktivierung 
 
 Diese Anweisungen gelten, wenn Sie PingFederate als SSO-Identitäts-Provider verwenden
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie kennen den SSO-Benutzernamen und das Passwort für einen föderierten Benutzer, der einer StorageGRID-Benutzergruppe angehört.
 * Wenn Sie auf die Mandanten-Management-API zugreifen möchten, kennen Sie die Mandanten-Account-ID.
 
 
+.Über diese Aufgabe
 Um ein Authentifizierungs-Token zu erhalten, können Sie eines der folgenden Beispiele verwenden:
 
 * Der `storagegrid-ssoauth.py` Python-Skript, das sich im Verzeichnis der Installationsdateien von StorageGRID befindet (`./rpms` Für Red hat Enterprise Linux oder CentOS, `./debs` Für Ubuntu oder Debian, und `./vsphere` Für VMware).
@@ -207,6 +208,7 @@ Jetzt können Sie verwenden `MYTOKEN` Für andere Anfragen, ähnlich wie Sie die
 
 Wenn Single Sign-On (SSO) aktiviert ist, müssen Sie eine Reihe von API-Anforderungen zum Abzeichnen der Grid Management API oder der Mandantenmanagement-API ausstellen. Diese Anweisungen gelten, wenn Sie PingFederate als SSO-Identitäts-Provider verwenden
 
+.Über diese Aufgabe
 Bei Bedarf können Sie sich einfach von der StorageGRID-API abmelden, indem Sie sich einfach von der Seite Ihres Unternehmens abmelden. Alternativ können Sie einzelne Abmeldungen (SLO) von StorageGRID auslösen, was ein gültiges StorageGRID-Überträger-Token erfordert.
 
 .Schritte

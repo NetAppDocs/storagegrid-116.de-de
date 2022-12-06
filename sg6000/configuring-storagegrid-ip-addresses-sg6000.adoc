@@ -13,6 +13,7 @@ summary: Mit dem Installationsprogramm der StorageGRID-Appliance können Sie die
 [role="lead"]
 Mit dem Installationsprogramm der StorageGRID-Appliance können Sie die für den Appliance-Speicherknoten verwendeten IP-Adressen und Routing-Informationen im StorageGRID-Raster, Administrator und Client-Netzwerke konfigurieren.
 
+.Über diese Aufgabe
 Sie müssen entweder auf jedem verbundenen Netzwerk eine statische IP-Adresse für das Gerät zuweisen oder einen permanenten Leasing für die Adresse des DHCP-Servers zuweisen.
 
 Wenn Sie die Verbindungskonfiguration ändern möchten, lesen Sie den xref:changing-link-configuration-of-sg6000-cn-controller.adoc[Anweisungen zum Ändern der Link-Konfiguration des SG6000-CN Controllers].

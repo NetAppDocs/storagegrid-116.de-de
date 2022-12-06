@@ -45,4 +45,5 @@ Geben Sie für Management_Port_IP die IP-Adresse für Management-Port 1 auf dem 
 
 
 
+.Verwandte Informationen
 xref:e5600sg-controller-seven-segment-display-codes.adoc[E5600SG-Controller-Anzeigecodes für sieben Segmente]

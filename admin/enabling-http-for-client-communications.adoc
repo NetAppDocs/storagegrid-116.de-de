@@ -13,11 +13,12 @@ summary: Standardmäßig verwenden Client-Anwendungen das HTTPS-Netzwerkprotokol
 [role="lead"]
 Standardmäßig verwenden Client-Anwendungen das HTTPS-Netzwerkprotokoll für alle Verbindungen zu Storage-Nodes oder zum veralteten CLB-Dienst auf Gateway-Nodes. Optional können Sie HTTP für diese Verbindungen aktivieren, z. B. beim Testen eines nicht produktiven Grids.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben spezifische Zugriffsberechtigungen.
 
 
+.Über diese Aufgabe
 Führen Sie diese Aufgabe nur aus, wenn S3- und Swift-Clients HTTP-Verbindungen direkt zu Storage-Nodes oder zum veralteten CLB-Service auf Gateway-Nodes herstellen müssen.
 
 Sie müssen diese Aufgabe nicht für Clients abschließen, die nur HTTPS-Verbindungen verwenden oder für Clients, die eine Verbindung zum Load Balancer-Dienst herstellen (da Sie jeden Load Balancer-Endpunkt so konfigurieren können, dass entweder HTTP oder HTTPS verwendet werden). Weitere Informationen finden Sie in den Informationen zum Konfigurieren von Load Balancer-Endpunkten.

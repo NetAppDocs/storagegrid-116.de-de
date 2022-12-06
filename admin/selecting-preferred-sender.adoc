@@ -13,11 +13,12 @@ summary: Wenn Ihre StorageGRID-Bereitstellung mehrere Administratorknoten enthä
 [role="lead"]
 Wenn Ihre StorageGRID-Bereitstellung mehrere Administratorknoten enthält, können Sie auswählen, welcher Admin-Knoten der bevorzugte Absender von Benachrichtigungen sein soll. Standardmäßig ist der primäre Admin-Node ausgewählt, aber jeder Admin-Node kann der bevorzugte Absender sein.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben spezifische Zugriffsberechtigungen.
 
 
+.Über diese Aufgabe
 Die Seite *CONFIGURATION* *System* *Anzeigeoptionen* zeigt an, welcher Admin-Node derzeit als bevorzugter Absender ausgewählt wurde. Der primäre Admin-Node ist standardmäßig ausgewählt.
 
 Bei normalen Systemvorgängen sendet nur der bevorzugte Absender folgende Benachrichtigungen:

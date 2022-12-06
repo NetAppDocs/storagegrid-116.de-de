@@ -13,13 +13,14 @@ summary: Der CloudMirror Replikationsservice ist einer der drei StorageGRID Plat
 [role="lead"]
 Der xref:understanding-cloudmirror-replication-service.adoc[CloudMirror Replikationsservice] Zu den drei Plattform-Services von StorageGRID gehören. Mithilfe der CloudMirror Replizierung können Sie Objekte automatisch in einen externen S3-Bucket replizieren.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Plattform-Services müssen von einem StorageGRID-Administrator für Ihr Mandantenkonto aktiviert werden.
 * Sie müssen bereits einen Bucket erstellt haben, um als Replikationsquelle zu fungieren.
 * Der Endpunkt, den Sie als Ziel für die CloudMirror-Replikation verwenden möchten, muss bereits vorhanden sein, und Sie müssen über seinen URN verfügen.
 * Sie müssen zu einer Benutzergruppe gehören, die über die Berechtigung Alle Buckets verwalten oder Stammzugriff verfügt, sodass Sie die Einstellungen für alle S3-Buckets in Ihrem Mandantenkonto verwalten können. Diese Berechtigungen überschreiben die Berechtigungseinstellungen in Gruppen- oder Bucket-Richtlinien bei der Konfiguration des Buckets mithilfe des Mandanten-Manager.
 
 
+.Über diese Aufgabe
 Die CloudMirror Replizierung kopiert Objekte von einem Quell-Bucket zu einem Ziel-Bucket, der in einem Endpunkt angegeben wird. Um die CloudMirror-Replikation für einen Bucket zu aktivieren, müssen Sie eine gültige Bucket-Replizierungskonfiguration-XML erstellen und anwenden. Die XML-Replikationskonfiguration muss den URN eines S3-Bucket-Endpunkts für jedes Ziel verwenden.
 
 
@@ -93,6 +94,7 @@ Bei kleinen Objekten wird die Replizierung schnell durchgeführt.
 
 
 
+.Verwandte Informationen
 xref:../s3/index.adoc[S3 verwenden]
 
 xref:creating-platform-services-endpoint.adoc[Endpunkt für Plattformservices erstellen]

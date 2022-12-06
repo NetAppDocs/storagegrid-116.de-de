@@ -52,6 +52,7 @@ E-Series Dokumentation
 . Falls das Problem dadurch nicht behoben werden kann, wenden Sie sich an den technischen Support.
 
 
+.Verwandte Informationen
 xref:e5600sg-controller-seven-segment-display-codes.adoc[E5600SG-Controller-Anzeigecodes für sieben Segmente]
 
 xref:he-error-error-synchronizing-with-santricity-os-software.adoc[HE-Fehler: Fehler beim Synchronisieren mit SANtricity OS Software]

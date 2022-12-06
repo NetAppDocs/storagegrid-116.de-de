@@ -13,11 +13,12 @@ summary: 'Der SSTS-Alarm (Storage Status) wird ausgelöst, wenn ein Speicherknot
 [role="lead"]
 Der SSTS-Alarm (Storage Status) wird ausgelöst, wenn ein Speicherknoten über nicht genügend freien Speicherplatz für den Objektspeicher verfügt.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie müssen über spezifische Zugriffsberechtigungen verfügen.
 
 
+.Über diese Aufgabe
 Der SSTS-Alarm (Speicherstatus) wird auf der Meldeebene ausgelöst, wenn die Menge an freiem Speicherplatz auf jedem Volume in einem Speicherknoten unter den Wert des Speichervolumen-SoftRead-Only-Wasserzeichens (*KONFIGURATION* *System* *Speicheroptionen*) fällt.
 
 image::../media/storage_watermarks.png[Überblick Über Die Storage-Optionen]

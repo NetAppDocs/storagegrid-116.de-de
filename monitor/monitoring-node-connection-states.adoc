@@ -13,10 +13,11 @@ summary: Wenn ein oder mehrere Nodes vom Grid getrennt werden, können kritische
 [role="lead"]
 Wenn ein oder mehrere Nodes vom Grid getrennt werden, können kritische StorageGRID-Vorgänge beeinträchtigt werden. Sie müssen den Status der Node-Verbindung überwachen und Probleme unverzüglich beheben.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 
 
+.Über diese Aufgabe
 Nodes können einen von drei Verbindungszuständen haben:
 
 * *Nicht verbunden - Unbekannt* image:../media/icon_alarm_blue_unknown.png["Blaues Fragezeichen-Symbol"]: Der Knoten ist aus einem unbekannten Grund nicht mit dem Raster verbunden. Beispielsweise wurde die Netzwerkverbindung zwischen den Knoten unterbrochen oder der Strom ist ausgefallen. Die Warnung * kann nicht mit Node* kommunizieren. Auch andere Warnmeldungen können aktiv sein. Diese Situation erfordert sofortige Aufmerksamkeit.
@@ -60,6 +61,7 @@ Graue Nodes werden während der Wartungsvorgänge erwartet und sind möglicherwe
 
 
 
+.Verwandte Informationen
 xref:alerts-reference.adoc[Alerts Referenz]
 
 xref:../maintain/index.adoc[Recovery und Wartung]

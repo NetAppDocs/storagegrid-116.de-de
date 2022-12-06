@@ -23,7 +23,7 @@ NOTE: Um sicherzustellen, dass die Vorgänge durch ein Serverzertifikat nicht un
 
 NOTE: Wenn Sie zum Schutz der Daten auf speziell konfigurierten Appliance-Nodes einen Verschlüsselungsmanagement-Server (KMS) verwenden, lesen Sie die spezifischen Informationen zu xref:kms-adding.adoc[Hochladen eines KMS-Clientzertifikats].
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben Root-Zugriffsberechtigung.
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * So konfigurieren Sie ein Clientzertifikat:
@@ -48,9 +48,9 @@ NOTE: Wenn Sie zum Schutz der Daten auf speziell konfigurierten Appliance-Nodes 
 
 Befolgen Sie die Vorgehensweise für Ihr Szenario, um ein Clientzertifikat hinzuzufügen:
 
-*  interface certificate already configured
-*  issued client certificate
-*  certificate from Grid Manager
+* <<Das Zertifikat der Managementoberfläche ist bereits konfiguriert>>
+* <<KANN Client-Zertifikat AUSGESTELLT haben>>
+* <<Zertifikat vom Grid Manager generiert>>
 
 
 
@@ -220,7 +220,7 @@ Das neue Zertifikat wird auf der Registerkarte Client angezeigt.
 . Wählen Sie im Grid Manager die Option *KONFIGURATION* *Sicherheit* *Zertifikate* und wählen Sie dann die Registerkarte *Global* aus.
 . Wählen Sie *Management Interface Certificate* aus.
 . Wählen Sie *Benutzerdefiniertes Zertifikat verwenden*.
-. Laden Sie die Dateien Certificate.pem und private_key.pem aus dem hoch ,Details zum Clientzertifikat Schritt: Es ist nicht erforderlich, das CA-Paket hochzuladen.
+. Laden Sie die Dateien Certificate.pem und private_key.pem aus dem hoch <<client_cert_details,Details zum Clientzertifikat>> Schritt: Es ist nicht erforderlich, das CA-Paket hochzuladen.
 +
 .. Wählen Sie *Zertifikat hochladen* und dann *Weiter*.
 .. Laden Sie jede Zertifikatdatei hoch (`.pem`).

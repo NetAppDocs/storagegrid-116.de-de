@@ -13,6 +13,7 @@ summary: Das Verfahren zur Wiederherstellung eines fehlerhaften StorageGRID-Appl
 [role="lead"]
 Das Verfahren zur Wiederherstellung eines fehlerhaften StorageGRID-Appliance-Speicherknoten ist dieselbe, egal ob Sie eine Wiederherstellung nach dem Verlust des Systemlaufwerks oder nach dem Verlust von Storage-Volumes durchführen.
 
+.Über diese Aufgabe
 Sie müssen die Appliance vorbereiten und Software neu installieren, den Node so konfigurieren, dass er wieder in das Grid eingespeist wird, Speicher neu formatiert und Objektdaten wiederhergestellt werden.
 
 image::../media/overview_sga_recovery.gif[Übersicht über das Flussdiagramm der StorageGRID-Appliance-Recovery]
@@ -37,6 +38,7 @@ NOTE: Wenn während der Wiederherstellung ein Alarm „Service: Status – Cassa
 
 NOTE: Informationen zu Hardware-Wartungsarbeiten, wie z. B. Anweisungen zum Austausch eines Controllers oder zur Neuinstallation von SANtricity OS, finden Sie in der Installations- und Wartungsanleitung für Ihre Storage Appliance.
 
+.Verwandte Informationen
 xref:../monitor/index.adoc[Monitoring und Fehlerbehebung]
 
 xref:../sg6000/index.adoc[SG6000 Storage-Appliances]

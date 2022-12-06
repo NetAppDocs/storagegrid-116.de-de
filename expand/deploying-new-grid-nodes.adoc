@@ -35,7 +35,7 @@ Bei der Implementierung des Node können Sie optional Node-Ports neu zuordnen od
 
 Die Grid-Nodes können auf neuen Linux-Hosts oder auf vorhandenen Linux-Hosts implementiert werden. Wenn Sie zusätzliche Linux-Hosts benötigen, um die CPU-, RAM- und Storage-Anforderungen der StorageGRID-Nodes, die Sie dem Grid hinzufügen möchten, zu unterstützen, bereiten Sie sie auf die gleiche Weise vor, wie Sie die Hosts bei der ersten Installation vorbereitet haben. Anschließend implementieren Sie die Erweiterungs-Nodes auf dieselbe Weise wie bei der Installation die Grid-Nodes.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben Anweisungen zum Installieren von StorageGRID für Ihre Linux-Version und haben die Hardware- und Speicheranforderungen geprüft.
 +
 ** xref:../rhel/index.adoc[Installieren Sie Red hat Enterprise Linux oder CentOS]
@@ -59,6 +59,7 @@ IMPORTANT: Führen Sie in einer Produktionsimplementierung nicht mehr als einen 
 . Wenn Sie einem vorhandenen Linux-Host Nodes hinzufügen, starten Sie die neuen Nodes mithilfe der StorageGRID Host Service-CLI:``sudo storagegrid node start [<node name\>]``
 
 
+.Nachdem Sie fertig sind
 Nach der Implementierung aller neuen Grid-Nodes können Sie dies gerne nutzen xref:performing-expansion.adoc[Die Erweiterung durchführen].
 
 
@@ -67,7 +68,7 @@ Nach der Implementierung aller neuen Grid-Nodes können Sie dies gerne nutzen xr
 
 Um die StorageGRID-Software auf einem Appliance-Knoten zu installieren, verwenden Sie das Installationsprogramm für StorageGRID-Appliances, das in der Appliance enthalten ist. Jede Storage-Appliance arbeitet als einzelner Storage-Node in einer Erweiterung und jede Services-Appliance fungiert als einzelner Gateway-Node oder als nicht-primärer Admin-Node. Jede Appliance kann eine Verbindung zum Grid-Netzwerk, dem Admin-Netzwerk und dem Client-Netzwerk herstellen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Das Gerät wurde in einem Rack oder Schrank installiert, mit Ihren Netzwerken verbunden und eingeschaltet.
 * Sie haben mit dem Installationsprogramm für StorageGRID-Geräte alle Schritte „`Hardware konfigurieren`“ in den Installations- und Wartungsanweisungen für die Appliance abgeschlossen.
 +
@@ -86,6 +87,7 @@ Das Konfigurieren der Appliance-Hardware umfasst die erforderlichen Schritte zum
 * Sie kennen eine der IP-Adressen, die dem Computing-Controller der Appliance zugewiesen sind. Sie können die IP-Adresse für jedes angeschlossene StorageGRID-Netzwerk verwenden.
 
 
+.Über diese Aufgabe
 Die Installation von StorageGRID auf einem Appliance-Node erfolgt in folgenden Phasen:
 
 * Sie geben die IP-Adresse des primären Admin-Knotens und den Namen des Appliance-Nodes an oder bestätigen sie.

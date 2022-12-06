@@ -125,4 +125,5 @@ NOTE: Wenn Sie nur ein Storage-Volume für einen Storage-Node verwenden und dem 
 
 Weitere Informationen finden Sie unter xref:../admin/managing-object-metadata-storage.adoc[Management von Objekt-Metadaten-Storage].
 
+.Verwandte Informationen
 xref:../maintain/index.adoc[Recovery und Wartung]

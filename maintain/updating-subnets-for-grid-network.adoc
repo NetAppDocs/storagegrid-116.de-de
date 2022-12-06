@@ -13,13 +13,14 @@ summary: 'StorageGRID pflegt eine Liste der für die Kommunikation zwischen Grid
 [role="lead"]
 StorageGRID pflegt eine Liste der für die Kommunikation zwischen den Grid-Nodes im Grid-Netzwerk (eth0) verwendeten Subnetze. Zu diesen Einträgen gehören die Subnetze, die von jedem Standort im StorageGRID-System für das Grid-Netzwerk verwendet werden, sowie alle Subnetze, die für NTP, DNS, LDAP oder andere externe Server verwendet werden, auf die über das Grid-Netzwerk-Gateway zugegriffen wird. Wenn Sie Grid-Nodes oder einen neuen Standort in einer Erweiterung hinzufügen, müssen Sie möglicherweise Subnetze zum Grid-Netzwerk aktualisieren oder hinzufügen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie müssen über die Berechtigung Wartung oder Stammzugriff verfügen.
 * Sie müssen über eine Passphrase für die Bereitstellung verfügen.
 * Sie müssen die Netzwerkadressen in CIDR-Notation der Subnetze haben, die Sie konfigurieren möchten.
 
 
+.Über diese Aufgabe
 Wenn Sie eine Erweiterungsaktivität durchführen, die das Hinzufügen eines neuen Subnetzes beinhaltet, müssen Sie das neue Grid-Subnetz hinzufügen, bevor Sie den Erweiterungsvorgang starten.
 
 .Schritte

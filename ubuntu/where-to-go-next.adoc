@@ -55,6 +55,7 @@ NOTE: Wenn ein Archiv-Knoten Tivoli Storage Manager als externes Archiv-Speicher
 
 NOTE: Der Audit-Export über CIFS/Samba wurde veraltet und wird in einer zukünftigen StorageGRID-Version entfernt.
 
+.Verwandte Informationen
 xref:../admin/index.adoc[StorageGRID verwalten]
 
 xref:../s3/index.adoc[S3 verwenden]

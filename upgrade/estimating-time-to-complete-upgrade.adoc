@@ -13,6 +13,7 @@ summary: Wenn Sie ein Upgrade auf StorageGRID 11.6 planen, müssen Sie je nach D
 [role="lead"]
 Wenn Sie ein Upgrade auf StorageGRID 11.6 planen, müssen Sie je nach Dauer des Upgrades in Betracht ziehen, wann ein Upgrade durchgeführt werden soll. Außerdem muss bekannt sein, welche Vorgänge in jeder Phase des Upgrades ausgeführt werden können und welche nicht.
 
+.Über diese Aufgabe
 Die erforderliche Zeit zur Durchführung eines StorageGRID Upgrades hängt von verschiedenen Faktoren ab, beispielsweise von Client-Last und Hardware-Performance.
 
 Die Tabelle fasst die wichtigsten Upgrade-Aufgaben zusammen und zeigt die ungefähre Zeit, die für jede Aufgabe erforderlich ist. Die Schritte nach der Tabelle enthalten Anweisungen zur Schätzung der Aktualisierungszeit für Ihr System.

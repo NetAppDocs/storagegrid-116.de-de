@@ -43,4 +43,5 @@ IMPORTANT: Die von Ihnen zur Verfügung gelegten Schlüssel werden niemals gespe
 
 Mehrteilige Uploads bestehen aus separaten Vorgängen zum Initiieren des Uploads, Auflisten von Uploads, Hochladen von Teilen, Zusammenbauen der hochgeladenen Teile und Abschließen des Uploads. Objekte werden erstellt (und gegebenenfalls versioniert), wenn der Vorgang zum Hochladen mehrerer Teile abgeschlossen ist.
 
+.Verwandte Informationen
 xref:using-server-side-encryption.adoc[Serverseitige Verschlüsselung]

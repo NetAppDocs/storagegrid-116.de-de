@@ -13,8 +13,10 @@ summary: Sie können die IP-Adresse für jeden Grid-Node im StorageGRID System a
 [role="lead"]
 Sie können die IP-Adresse für jeden Grid-Node im StorageGRID System anzeigen. Sie können diese IP-Adresse dann verwenden, um sich bei dem Grid-Node über die Befehlszeile anzumelden und verschiedene Wartungsvorgänge auszuführen.
 
+.Was Sie benötigen
 Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 
+.Über diese Aufgabe
 Informationen zum Ändern von IP-Adressen finden Sie unter xref:../maintain/index.adoc[Recovery und Wartung].
 
 .Schritte

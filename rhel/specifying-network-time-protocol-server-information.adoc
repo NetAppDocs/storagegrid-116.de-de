@@ -13,6 +13,7 @@ summary: 'Sie müssen die Konfigurationsinformationen zum Netzwerkzeitprotokoll 
 [role="lead"]
 Sie müssen die NTP-Konfigurationsinformationen (Network Time Protocol) für das StorageGRID-System angeben, damit die auf separaten Servern ausgeführten Vorgänge synchronisiert bleiben können.
 
+.Über diese Aufgabe
 Sie müssen IPv4-Adressen für die NTP-Server angeben.
 
 Sie müssen externe NTP-Server angeben. Die angegebenen NTP-Server müssen das NTP-Protokoll verwenden.

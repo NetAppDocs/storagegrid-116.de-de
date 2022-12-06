@@ -13,10 +13,11 @@ summary: Wenn das Skript sn-recovery-postinstall.sh zum Neuformatieren eines ode
 [role="lead"]
 Wenn der `sn-recovery-postinstall.sh` Skript ist erforderlich, um ein oder mehrere fehlgeschlagene Speicher-Volumes neu zu formatieren, müssen Sie Objektdaten auf dem neu formatierten Speicher-Volume von anderen Speicherknoten und Archiv-Nodes wiederherstellen. Diese Schritte sind erst dann erforderlich, wenn ein oder mehrere Storage Volumes neu formatiert wurden.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen bestätigt haben, dass der wiederhergestellte Speicherknoten einen Verbindungsstatus von *verbunden* hat image:../media/icon_alert_green_checkmark.png["Grünes Häkchen für Symbolwarnung"] Auf der Registerkarte *NODES* *Übersicht* im Grid Manager.
 
 
+.Über diese Aufgabe
 Objektdaten können von anderen Storage-Nodes, einem Archiv-Node oder einem Cloud Storage-Pool wiederhergestellt werden, wenn die ILM-Regeln des Grid so konfiguriert wurden, dass Objektkopien verfügbar sind.
 
 Beachten Sie Folgendes:
@@ -28,7 +29,7 @@ Beachten Sie Folgendes:
 
 
 
-== Über das Skript für Reparaturdaten
+== Informationen zum `repair-data` Skript
 
 Zum Wiederherstellen von Objektdaten führen Sie den aus `repair-data` Skript: Dieses Skript startet den Prozess der Wiederherstellung von Objektdaten und arbeitet mit ILM-Scans zusammen, um sicherzustellen, dass ILM-Regeln eingehalten werden.
 
@@ -98,7 +99,7 @@ Wenn Sie als root angemeldet sind, ändert sich die Eingabeaufforderung von `$` 
 
 Wenn alle Storage-Volumes ausgefallen sind, reparieren Sie den gesamten Node. Befolgen Sie die Anweisungen für *replizierte Daten*, *Erasure-codierte (EC) Daten* oder beide, je nachdem, ob Sie replizierte Daten, Erasure-codierte (EC) Daten oder beide verwenden.
 
-Wenn nur einige Volumes gescheitert sind, gehen Sie zu  data if only some volumes have failed.
+Wenn nur einige Volumes gescheitert sind, gehen Sie zu <<Reparieren Sie Daten, wenn nur einige Volumes ausgefallen sind>>.
 
 
 IMPORTANT: Sie können nicht ausgeführt werden `repair-data` Betrieb für mehr als einen Node gleichzeitig. Wenden Sie sich an den technischen Support, um mehrere Nodes wiederherzustellen.
@@ -138,7 +139,7 @@ NOTE: Reparaturen von Daten, die auf Löschung codiert wurden, können beginnen,
 
 Wenn nur einige Volumes ausgefallen sind, die betroffenen Volumes reparieren. Befolgen Sie die Anweisungen für *replizierte Daten*, *Erasure-codierte (EC) Daten* oder beide, je nachdem, ob Sie replizierte Daten, Erasure-codierte (EC) Daten oder beide verwenden.
 
-Wenn alle Volumes ausgefallen sind, gehen Sie zu  data if all volumes have failed.
+Wenn alle Volumes ausgefallen sind, gehen Sie zu <<Reparieren Sie Daten, wenn alle Volumes ausgefallen sind>>.
 
 Geben Sie die Volume-IDs in hexadezimal ein. Beispiel: `0000` Ist der erste Band und `000F` Ist der sechzehnte Band. Sie können ein Volume, einen Bereich von Volumes oder mehrere Volumes angeben, die sich nicht in einer Sequenz befinden.
 

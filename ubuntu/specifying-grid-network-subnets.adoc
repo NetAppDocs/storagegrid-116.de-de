@@ -13,6 +13,7 @@ summary: Sie müssen die Subnetze angeben, die im Grid-Netzwerk verwendet werden
 [role="lead"]
 Sie müssen die Subnetze angeben, die im Grid-Netzwerk verwendet werden.
 
+.Über diese Aufgabe
 Die Subnetzeinträge enthalten die Subnetze für das Grid-Netzwerk für jeden Standort im StorageGRID-System sowie alle Subnetze, die über das Grid-Netzwerk erreichbar sein müssen.
 
 Wenn Sie mehrere Grid-Subnetze haben, ist das Grid Network-Gateway erforderlich. Alle angegebenen Grid-Subnetze müssen über dieses Gateway erreichbar sein.

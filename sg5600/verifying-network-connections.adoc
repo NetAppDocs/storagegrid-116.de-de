@@ -39,6 +39,7 @@ image::../media/ping_test_passed.png[Screenshot der Ping-Testergebnisse im Stora
 
 
 
+.Verwandte Informationen
 xref:configuring-network-links-sg5600.adoc[Konfigurieren von Netzwerkverbindungen (SG5600)]
 
 xref:changing-mtu-setting.adoc[MTU-Einstellung ändern]

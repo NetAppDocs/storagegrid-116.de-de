@@ -31,6 +31,7 @@ Wenn das optionale BMC-Managementnetzwerk nicht verbunden ist, sind einige Suppo
 
 NOTE: Ausführliche Informationen zu StorageGRID-Netzwerken finden Sie unter _Rasterprimer_.
 
+.Verwandte Informationen
 xref:gathering-installation-information-sg6000.adoc[Erfassen von Installationsinformationen (SG6000)]
 
 xref:cabling-appliance-sg6000.adoc[Kabelgerät (SG6000)]

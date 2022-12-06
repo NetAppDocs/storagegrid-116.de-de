@@ -13,7 +13,7 @@ summary: Wenn Sie die SANtricity OS-Software nicht mithilfe des Grid-Managers ak
 [role="lead"]
 Wenn Sie die SANtricity OS-Software nicht mithilfe des Grid-Managers aktualisieren können, wenden Sie das Upgrade im Wartungsmodus an.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben das NetApp Interoperabilitäts-Matrix-Tool (IMT) konsultiert, um zu überprüfen, ob die für das Upgrade verwendete SANtricity Betriebssystemversion mit Ihrer Appliance kompatibel ist.
 * Sie müssen den E5600-Controller in platzieren xref:placing-appliance-into-maintenance-mode.adoc[Wartungsmodus] Wenn Sie den Grid Manager nicht verwenden. Wenn der Controller in den Wartungsmodus versetzt wird, wird die Verbindung zum E2700 Controller unterbrochen.
 +
@@ -22,6 +22,7 @@ NOTE: In seltenen Fällen kann es vorkommen, dass eine StorageGRID Appliance in 
 
 
 
+.Über diese Aufgabe
 Aktualisieren Sie das SANtricity Betriebssystem und NVSRAM im E-Series Controller nicht auf mehr als einer StorageGRID Appliance gleichzeitig.
 
 

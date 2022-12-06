@@ -138,7 +138,7 @@ Zeitplan der neuesten Änderungen erstellen
  a| 
 Änderungen an Ihrem StorageGRID System, seiner Konfiguration oder seiner Umgebung können zu neuem Verhalten führen.
  a| 
-* ,Erstellen Sie eine Zeitleiste der neuesten Änderungen
+* <<create_timeline,Erstellen Sie eine Zeitleiste der neuesten Änderungen>>
 
 
 
@@ -186,7 +186,7 @@ Basispläne erstellen
  a| 
 Sammeln von Informationen über die normalen Stufen verschiedener Betriebswerte. Diese Basiswerte und Abweichungen von diesen Grundlinien können wertvolle Hinweise liefern.
  a| 
-* ,Basispläne erstellen
+* <<establish_baselines,Basispläne erstellen>>
 
 
 
@@ -236,7 +236,7 @@ Vom technischen Support werden Sie möglicherweise aufgefordert, Daten zu sammel
 |===
 
 
-==== Erstellen Sie eine Zeitleiste der neuesten Änderungen
+==== [[create_Timeline]]Erstellen Sie eine Zeitleiste der neuesten Änderungen
 
 Wenn ein Problem auftritt, sollten Sie berücksichtigen, was sich kürzlich geändert hat und wann diese Änderungen aufgetreten sind.
 
@@ -305,7 +305,7 @@ Hier einige Beispiele für potenziell signifikante Änderungen:
 
 
 
-==== Basispläne erstellen
+==== [[Erschaffen_Baselines]]]Basispläne erstellen
 
 Sie können Basislinien für Ihr System einrichten, indem Sie die normalen Ebenen verschiedener Betriebswerte erfassen. In Zukunft können Sie aktuelle Werte mit diesen Basiswerten vergleichen, um ungewöhnliche Werte zu erkennen und zu beheben.
 
@@ -478,14 +478,14 @@ xref:collecting-log-files-and-system-data.adoc[Erfassen von Protokolldateien und
 |  | Basisinformationen  a| 
 Sammeln von Basisinformationen über Erfassungs-, Abrufvorgänge und Storage-Verbrauch
 
-,Basispläne erstellen
+<<establish_baselines,Basispläne erstellen>>
 
 
 
 |  | Zeitachse der letzten Änderungen  a| 
 Erstellen Sie eine Zeitleiste, in der alle letzten Änderungen am System oder seiner Umgebung zusammengefasst sind.
 
-,Erstellen Sie eine Zeitleiste der neuesten Änderungen
+<<create_timeline,Erstellen Sie eine Zeitleiste der neuesten Änderungen>>
 
 
 

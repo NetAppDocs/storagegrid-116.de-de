@@ -13,11 +13,12 @@ summary: Optional können Sie Stille konfigurieren, um Benachrichtigungen vorüb
 [role="lead"]
 Optional können Sie Stille konfigurieren, um Benachrichtigungen vorübergehend zu unterdrücken.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie verfügen über die Berechtigung zum Verwalten von Warnungen oder Stammzugriff.
 
 
+.Über diese Aufgabe
 Sie können Alarmregeln für das gesamte Grid, eine einzelne Site oder einen einzelnen Knoten und für einen oder mehrere Schweregrade stummschalten. Bei jeder Silence werden alle Benachrichtigungen für eine einzelne Warnungsregel oder für alle Warnungsregeln unterdrückt.
 
 Wenn Sie den SNMP-Agent aktiviert haben, unterdrücken Stille auch SNMP-Traps und informieren.

@@ -13,7 +13,7 @@ summary: Sie können einen Cloud Storage Pool bearbeiten, um seinen Namen, seine
 [role="lead"]
 Sie können einen Cloud Storage Pool bearbeiten, um seinen Namen, seinen Service-Endpunkt oder andere Details zu ändern. Es ist jedoch nicht möglich, den S3-Bucket oder den Azure-Container für einen Cloud-Storage-Pool zu ändern.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben spezifische Zugriffsberechtigungen.
 * Sie haben die geprüft xref:considerations-for-cloud-storage-pools.adoc[Überlegungen zu Cloud-Storage-Pools].

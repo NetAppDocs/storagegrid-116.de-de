@@ -13,7 +13,7 @@ summary: Nach der Wiederherstellung eines Appliance Storage Node müssen Sie üb
 [role="lead"]
 Nach der Wiederherstellung eines Appliance Storage Node müssen Sie überprüfen, ob der gewünschte Status des Appliance Storage Node auf „Online“ gesetzt ist, und vergewissern Sie sich, dass der Status bei jedem Neustart des Storage Node-Servers standardmäßig online ist.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Der Speicherknoten wurde wiederhergestellt und die Datenwiederherstellung ist abgeschlossen.
 

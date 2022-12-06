@@ -13,6 +13,7 @@ summary: Sie sollten täglich den allgemeinen Zustand Ihres StorageGRID Systems 
 [role="lead"]
 Sie sollten täglich den allgemeinen Zustand Ihres StorageGRID Systems überwachen.
 
+.Über diese Aufgabe
 Das StorageGRID System ist fehlertolerant und funktioniert weiterhin, wenn Teile des Grids nicht verfügbar sind. Das erste Anzeichen eines potenziellen Problems mit Ihrem StorageGRID System ist wahrscheinlich eine Warnmeldung oder ein Alarm (Legacy-System) und nicht unbedingt ein Problem beim Systembetrieb. Wenn Sie die Systemintegrität beachten, können Sie kleinere Probleme erkennen, bevor sie den Betrieb oder die Netzeffizienz beeinträchtigen.
 
 Das Teilfenster „Systemzustand“ im Grid Manager Dashboard bietet eine Zusammenfassung von Problemen, die Ihr System möglicherweise beeinträchtigen. Sie sollten alle auf dem Dashboard angezeigten Probleme untersuchen.

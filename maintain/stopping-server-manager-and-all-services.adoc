@@ -13,6 +13,7 @@ summary: Server Manager ist dafür gedacht, immer ausgeführt zu werden, aber m�
 [role="lead"]
 Server Manager ist dafür gedacht, immer ausgeführt zu werden, aber möglicherweise müssen Sie Server Manager und alle Dienste, die auf einem Grid-Knoten ausgeführt werden, anhalten.
 
+.Was Sie benötigen
 Sie müssen die haben `Passwords.txt` Datei:
 
 .Schritte

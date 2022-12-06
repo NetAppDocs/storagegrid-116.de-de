@@ -13,11 +13,13 @@ summary: Sie können die Ethernet-Link-Konfiguration des E5600SG-Controllers än
 [role="lead"]
 Sie können die Ethernet-Link-Konfiguration des E5600SG-Controllers ändern. Sie können den Port Bond-Modus, den Netzwerk-Bond-Modus und die Verbindungsgeschwindigkeit ändern.
 
+.Was Sie benötigen
 xref:placing-appliance-into-maintenance-mode.adoc[Setzen Sie den E5600SG-Controller in den Wartungsmodus].
 
 
 NOTE: In seltenen Fällen kann es vorkommen, dass eine StorageGRID Appliance in den Wartungsmodus versetzt wird, damit die Appliance für den Remote-Zugriff nicht verfügbar ist.
 
+.Über diese Aufgabe
 Die Ethernet-Link-Konfiguration des E5600SG-Controllers kann wie folgt geändert werden:
 
 * Ändern des *Port Bond Modus* von Fixed zu Aggregate oder von Aggregat zu Fixed
@@ -45,7 +47,7 @@ NOTE: Wenn Sie Änderungen am Netzwerk oder an der Verbindung vorgenommen haben,
 Wenn Sie Änderungen an den VLAN-Einstellungen vorgenommen haben, hat sich das Subnetz für die Appliance möglicherweise geändert. Wenn Sie die IP-Adressen für die Appliance ändern müssen, befolgen Sie die xref:setting-ip-configuration-sg5600.adoc[Legen Sie die IP-Konfiguration fest] Anweisungen.
 
 . Wählen Sie im Installationsprogramm der StorageGRID-Appliance die Option *Netzwerke konfigurieren* *Ping-Test* aus.
-. Verwenden Sie das Ping-Test-Tool, um die Verbindung zu IP-Adressen in Netzwerken zu prüfen, die möglicherweise von den in vorgenommenen Änderungen der Verbindungskonfiguration betroffen sind ,Verbindungskonfiguration ändern Schritt:
+. Verwenden Sie das Ping-Test-Tool, um die Verbindung zu IP-Adressen in Netzwerken zu prüfen, die möglicherweise von den in vorgenommenen Änderungen der Verbindungskonfiguration betroffen sind <<change_link_configuration_sg5600,Verbindungskonfiguration ändern>> Schritt:
 +
 Zusätzlich zu allen anderen Tests, die Sie durchführen möchten, bestätigen Sie, dass Sie die Grid-IP-Adresse des primären Admin-Knotens und die Grid-IP-Adresse von mindestens einem anderen Speicherknoten pingen können. Korrigieren Sie ggf. alle Probleme mit der Verbindungskonfiguration.
 
@@ -66,4 +68,5 @@ image::../media/nodes_menu.png[Das Raster des Appliance-Node wurde neu verbunden
 
 
 
+.Verwandte Informationen
 xref:configuring-network-links-sg5600.adoc[Konfigurieren von Netzwerkverbindungen (SG5600)]

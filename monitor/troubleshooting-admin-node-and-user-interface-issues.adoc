@@ -20,11 +20,12 @@ Es gibt verschiedene Aufgaben, die Sie durchführen können, um die Ursache von 
 
 Wenn beim Anmelden bei einem StorageGRID-Admin-Node ein Fehler auftritt, weist Ihr System möglicherweise ein Problem mit der Konfiguration des Identitätsverbunds auf, ein Netzwerk- oder Hardwareproblem, ein Problem mit den Admin-Node-Services oder ein Problem mit der Cassandra-Datenbank auf verbundenen Speicherknoten.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen die haben `Passwords.txt` Datei:
 * Sie müssen über spezifische Zugriffsberechtigungen verfügen.
 
 
+.Über diese Aufgabe
 Verwenden Sie diese Hinweise zur Fehlerbehebung, wenn eine der folgenden Fehlermeldungen angezeigt wird, wenn Sie versuchen, sich bei einem Admin-Knoten anzumelden:
 
 * `Your credentials for this account were invalid. Please try again.`
@@ -165,7 +166,7 @@ Wenn Sie als root angemeldet sind, ändert sich die Eingabeaufforderung von `$` 
 +
 Stellen Sie sicher, dass die Services idnt, acct, nginx und cassandra ausgeführt werden.
 
-. Wiederholen Sie die Schritte ,Verwenden Sie Lumberjack, um Protokolle zu sammeln Und ,Protokolle prüfen So prüfen Sie die Protokolle auf den Speicherknoten.
+. Wiederholen Sie die Schritte <<use_Lumberjack_to_collect_logs,Verwenden Sie Lumberjack, um Protokolle zu sammeln>> Und <<review_logs,Protokolle prüfen>> So prüfen Sie die Protokolle auf den Speicherknoten.
 . Wenn das Problem nicht behoben werden kann, wenden Sie sich an den technischen Support.
 +
 Stellen Sie die Protokolle bereit, die Sie für den technischen Support gesammelt haben. Siehe auch xref:logs-files-reference.adoc[Referenz für Protokolldateien].
@@ -203,6 +204,7 @@ Beim Löschen des Caches werden veraltete Ressourcen entfernt, die von der vorhe
 
 Wenn das StorageGRID-System mehrere Administratorknoten enthält, können Sie den Status eines nicht verfügbaren Admin-Knotens mit einem anderen Admin-Knoten überprüfen.
 
+.Was Sie benötigen
 Sie müssen über spezifische Zugriffsberechtigungen verfügen.
 
 .Schritte
@@ -217,4 +219,5 @@ image::../media/unavailable_admin_node_troubleshooting.gif[Screenshot, der durch
 . Ergreifen Sie die entsprechenden Maßnahmen, um das Problem zu lösen.
 
 
+.Verwandte Informationen
 xref:../admin/index.adoc[StorageGRID verwalten]

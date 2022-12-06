@@ -13,6 +13,7 @@ summary: Wenn Sie Erweiterungseinschübe für SG6060 oder SG6060X installiert ha
 [role="lead"]
 Wenn Sie Erweiterungseinschübe für SG6060 oder SG6060X installiert haben und diese nicht im StorageGRID Appliance Installer angezeigt werden, sollten Sie überprüfen, ob die Shelfs vollständig installiert und eingeschaltet wurden.
 
+.Über diese Aufgabe
 Sie können überprüfen, ob die Erweiterungs-Shelfs mit der Appliance verbunden sind, indem Sie die folgenden Informationen im Installationsprogramm der StorageGRID Appliance anzeigen:
 
 * Die *Home* Seite enthält eine Nachricht über Erweiterungsregale.

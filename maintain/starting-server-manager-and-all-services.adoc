@@ -13,8 +13,10 @@ summary: Möglicherweise müssen Sie Server Manager starten, der auch alle Diens
 [role="lead"]
 Möglicherweise müssen Sie Server Manager starten, der auch alle Dienste auf dem Grid-Knoten startet.
 
+.Was Sie benötigen
 Sie müssen die haben `Passwords.txt` Datei:
 
+.Über diese Aufgabe
 Der Start von Server Manager auf einem Grid-Knoten, auf dem er bereits ausgeführt wird, führt zu einem Neustart des Server-Managers und aller Dienste auf dem Grid-Knoten.
 
 .Schritte

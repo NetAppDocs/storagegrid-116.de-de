@@ -43,4 +43,5 @@ NOTE: Der CLB-Service ist veraltet.
 
 Bei der Verwendung mit StorageGRID Storage Appliances ermöglichen sowohl die SG100- als auch die SG1000-Service-Appliances die Implementierung von gerätebasierten Grids ohne Abhängigkeiten von externen Hypervisoren oder Computing-Hardware.
 
+.Verwandte Informationen
 xref:../admin/index.adoc[StorageGRID verwalten]

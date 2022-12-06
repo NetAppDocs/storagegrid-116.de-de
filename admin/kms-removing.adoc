@@ -13,12 +13,13 @@ summary: In einigen Fällen möchten Sie einen Schlüsselverwaltungsserver entfe
 [role="lead"]
 In einigen Fällen möchten Sie einen Schlüsselverwaltungsserver entfernen. Sie können beispielsweise einen standortspezifischen KMS entfernen, wenn Sie den Standort deaktiviert haben.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben die geprüft xref:kms-considerations-and-requirements.adoc[Überlegungen und Anforderungen für die Verwendung eines Verschlüsselungsmanagement-Servers].
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben die Root-Zugriffsberechtigung.
 
 
+.Über diese Aufgabe
 In diesen Fällen können Sie einen KMS entfernen:
 
 * Wenn der Standort außer Betrieb genommen wurde oder wenn der Standort keine Appliance-Nodes mit aktivierter Node-Verschlüsselung enthält, können Sie einen standortspezifischen KMS entfernen.

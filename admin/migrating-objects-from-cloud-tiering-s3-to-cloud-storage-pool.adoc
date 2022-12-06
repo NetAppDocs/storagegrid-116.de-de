@@ -13,7 +13,7 @@ summary: 'Wenn Sie derzeit die Cloud Tiering - Simple Storage Service \ (S3\) Fu
 [role="lead"]
 Wenn Sie derzeit die Funktion *Cloud Tiering - Simple Storage Service (S3)* verwenden, um Objektdaten auf einen S3-Bucket zu verschieben, sollten Sie stattdessen Ihre Objekte in einen Cloud-Storage-Pool migrieren. Cloud Storage Pools bieten einen skalierbaren Ansatz, der alle Storage-Nodes in Ihrem StorageGRID System nutzt.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben spezifische Zugriffsberechtigungen.
 * Sie haben bereits Objekte im S3-Bucket gespeichert, der für Cloud Tiering konfiguriert ist.
@@ -22,6 +22,7 @@ Wenn Sie derzeit die Funktion *Cloud Tiering - Simple Storage Service (S3)* verw
 
 NOTE: Vor der Migration von Objektdaten sollten Sie den NetApp Ansprechpartner kontaktieren, um die damit verbundenen Kosten zu verstehen und zu managen.
 
+.Über diese Aufgabe
 Aus einer ILM-Perspektive ähnelt ein Cloud-Storage-Pool einem Storage-Pool. Während Storage-Pools jedoch aus Storage-Nodes oder Archiv-Nodes innerhalb des StorageGRID Systems bestehen, besteht ein Cloud Storage-Pool aus einem externen S3-Bucket.
 
 Vor der Migration von Objekten aus Cloud Tiering – S3 zu einem Cloud-Storage-Pool müssen Sie zuerst einen S3-Bucket erstellen und dann den Cloud-Storage-Pool in StorageGRID erstellen. Dann können Sie eine neue ILM-Richtlinie erstellen und die ILM-Regel ersetzen, die zum Speichern von Objekten im Cloud Tiering Bucket verwendet wird, durch eine geklonte ILM-Regel, die dieselben Objekte im Cloud-Storage-Pool speichert.
@@ -45,4 +46,5 @@ Wenn die neue Richtlinie aktiviert ist und eine ILM-Bewertung erfolgt, werden di
 
 
 
+.Verwandte Informationen
 xref:../ilm/index.adoc[Objektmanagement mit ILM]

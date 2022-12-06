@@ -69,6 +69,7 @@ Bereitstellen eines Appliance-Speicherknotens als Teil eines Speicherknotenwiede
 Anweisungen zur Wiederherstellung und Wartung
 
 |===
+.Verwandte Informationen
 xref:preparing-for-installation.adoc[Installation vorbereiten (SG5600)]
 
 xref:installing-hardware.adoc[Hardware installieren (SG5600)]

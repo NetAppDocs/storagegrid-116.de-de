@@ -13,7 +13,7 @@ summary: Wenn Sie einen Cloud Storage Pool für S3 erstellen, müssen Sie den Au
 [role="lead"]
 Wenn Sie einen Cloud Storage Pool für S3 erstellen, müssen Sie den Authentifizierungstyp für den Cloud Storage Pool-Endpunkt auswählen. Sie können Anonymous angeben oder eine Zugriffsschlüssel-ID und einen geheimen Zugriffsschlüssel eingeben.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben die Basisinformationen für den Cloud-Speicherpool eingegeben und als Provider-Typ *Amazon S3* angegeben.
 +
 image::../media/cloud_storage_pool_create_s3.png[Cloud Storage Pool Erstellen S3]

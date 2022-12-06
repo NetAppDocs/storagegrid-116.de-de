@@ -13,7 +13,7 @@ summary: Sie müssen Schienen in Ihrem Schrank oder Rack installieren und das Ge
 [role="lead"]
 Sie müssen Schienen in Ihrem Schrank oder Rack installieren und das Gerät dann auf die Schienen schieben. Wenn Sie eine SG5760 haben, müssen Sie nach der Installation der Appliance auch die Laufwerke installieren.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben das im Lieferumfang enthaltene Sicherheitshinweisen geprüft und die Vorsichtsmaßnahmen für das Bewegen und Installieren von Hardware verstanden.
 * Sie haben die Anweisungen im Lieferumfang des Schienensatz enthalten.
 * Sie verfügen über die _Installations- und Setup-Anleitung_ für das Gerät.

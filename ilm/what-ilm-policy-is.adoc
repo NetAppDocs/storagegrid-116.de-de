@@ -56,4 +56,5 @@ Die Aktivierung der vorgeschlagenen Richtlinie führt dazu, dass die zuvor aktiv
 
 image::../media/ilm_policies_proposed_active_historical.png[Konzept-Image für ILM-Richtlinien]
 
+.Verwandte Informationen
 xref:creating-ilm-policy.adoc[ILM-Richtlinie erstellen]

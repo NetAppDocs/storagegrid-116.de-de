@@ -13,6 +13,7 @@ summary: Mithilfe der Grid Management API können Sie bestimmte Funktionen im St
 [role="lead"]
 Mithilfe der Grid Management API können Sie bestimmte Funktionen im StorageGRID-System komplett deaktivieren. Wenn ein Feature deaktiviert ist, kann niemand Berechtigungen zum Ausführen der Aufgaben zugewiesen werden, die mit diesem Feature verbunden sind.
 
+.Über diese Aufgabe
 Mit dem deaktivierten Features-System können Sie den Zugriff auf bestimmte Funktionen im StorageGRID-System verhindern. Die Deaktivierung einer Funktion ist der einzige Weg, um zu verhindern, dass Root-Benutzer oder Benutzer, die zu Admin-Gruppen mit *Root Access*-Berechtigung gehören, diese Funktion verwenden können.
 
 Um zu verstehen, wie diese Funktionalität nützlich sein kann, gehen Sie folgendermaßen vor:

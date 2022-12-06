@@ -13,7 +13,7 @@ summary: Fahren Sie die Service-Appliance herunter, um Hardware-Wartungsarbeiten
 [role="lead"]
 Fahren Sie die Service-Appliance herunter, um Hardware-Wartungsarbeiten durchzuführen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben den physischen Standort der Service-Appliance gefunden, die im Datacenter gewartet werden muss.
 +
 xref:locating-controller-in-data-center.adoc[Lokalisierung des Controllers in einem Rechenzentrum]
@@ -21,6 +21,7 @@ xref:locating-controller-in-data-center.adoc[Lokalisierung des Controllers in ei
 * Das Gerät war xref:placing-appliance-into-maintenance-mode.adoc[Wird in den Wartungsmodus versetzt].
 
 
+.Über diese Aufgabe
 Um Serviceunterbrechungen zu vermeiden, sollten Sie die Services-Appliance während eines geplanten Wartungsfensters herunterfahren, wenn mit den üblichen Serviceunterbrechungen gerechnet wird.
 
 .Schritte

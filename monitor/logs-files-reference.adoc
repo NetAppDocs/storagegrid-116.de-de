@@ -173,4 +173,5 @@ Sockendaten für Netzwerk-Debug.
 Ausgabe von StorageGRID-Containerbefehlen. Enthält Systeminformationen wie z. B. Netzwerk- und Festplattenverwendung.
 
 |===
+.Verwandte Informationen
 xref:collecting-log-files-and-system-data.adoc[Erfassen von Protokolldateien und Systemdaten]

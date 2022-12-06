@@ -13,11 +13,12 @@ summary: Möglicherweise müssen Sie ein Laufwerk, einen Lüfter, ein Netzteil o
 [role="lead"]
 Möglicherweise müssen Sie ein Laufwerk, einen Lüfter, ein Netzteil oder einen Akku im StorageGRID-Gerät austauschen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben das Verfahren zum Austausch der E-Series Hardware.
 * Das Gerät war xref:placing-appliance-into-maintenance-mode.adoc[Wird im Wartungsmodus versetzt] Wenn das Verfahren zum Austausch von Komponenten erfordert, schalten Sie das Gerät aus.
 
 
+.Über diese Aufgabe
 Zum Austausch eines Antriebs, des Power-Lüfterbehälter, des Ventilatorkanals, des Stromkanisters, der Batterie, Oder Laufwerkseinschub finden Sie in den Standardverfahren für die E2700 und E5600 Storage-Arrays. Konzentrieren Sie sich auf die Schritt-für-Schritt-Anleitung zum Entfernen und Austauschen der Hardware selbst. Viele der SANtricity Storage Manager Verfahren gelten nicht für eine Appliance.
 
 
@@ -83,6 +84,7 @@ Batterie im E2700 Controller (Entfernen des Controllers erforderlich)
 Befolgen Sie die Schritte unter xref:replacing-e2700-controller.adoc[E2700 Controller austauschen], Aber installieren Sie den neuen Akku in der vorhandenen Steuerung.
 
 |===
+.Verwandte Informationen
 https://mysupport.netapp.com/info/web/ECMP11751516.html["Verfahren zum Austausch von Hardware der NetApp E-Series und EF-Series"^]
 
 http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61765["NetApp Dokumentation: E2700 Serie"^]

@@ -13,6 +13,7 @@ summary: Setzen Sie den Controller nach Abschluss der Hardwarewartung in ein Rac
 [role="lead"]
 Setzen Sie den Controller nach Abschluss der Hardwarewartung in ein Rack oder Rack ein.
 
+.Was Sie benötigen
 Sie haben die Controller-Abdeckung wieder installiert.
 
 xref:reinstalling-sg6000-cn-controller-cover.adoc[Bringen Sie die SG6000-CN Controller-Abdeckung wieder an]
@@ -48,6 +49,7 @@ xref:connecting-power-cords-and-applying-power-sg6000.adoc[Anschließen des Netz
 
 
 
+.Nachdem Sie fertig sind
 Der Controller kann neu gestartet werden.
 
 xref:powering-on-sg6000-cn-controller-and-verifying-operation.adoc[Schalten Sie den SG6000-CN Controller ein, und überprüfen Sie den Betrieb]

@@ -13,7 +13,7 @@ summary: Gehen Sie folgendermaßen vor, um vorhandenen Standorten Grid-Nodes hin
 [role="lead"]
 Gehen Sie folgendermaßen vor, um vorhandenen Standorten Grid-Nodes hinzuzufügen oder einen neuen Standort hinzuzufügen, aber Sie können nicht beide Erweiterungstypen gleichzeitig ausführen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben die Berechtigung Root-Zugriff oder Wartung.
 * Alle bestehenden Nodes im Grid sind über alle Standorte hinweg betriebsbereit.
 * Alle vorherigen Erweiterungs-, Upgrade-, Stilllegungs- oder Recovery-Verfahren sind abgeschlossen.

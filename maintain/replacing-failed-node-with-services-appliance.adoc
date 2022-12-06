@@ -13,7 +13,7 @@ summary: Sie können eine SG100- oder SG1000-Services-Appliance verwenden, um ei
 [role="lead"]
 Sie können eine SG100- oder SG1000-Services-Appliance verwenden, um einen fehlgeschlagenen Gateway-Node, einen ausgefallenen nicht-primären Admin-Node oder einen ausgefallenen primären Admin-Node wiederherzustellen, der auf VMware, einem Linux-Host oder einer Services Appliance gehostet wurde. Dieses Verfahren ist ein Schritt der Wiederherstellung des Grid-Nodes.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen festgestellt haben, dass eine der folgenden Situationen zutrifft:
 +
 ** Die virtuelle Maschine, die den Node hostet, kann nicht wiederhergestellt werden.
@@ -30,6 +30,7 @@ xref:../sg100-1000/index.adoc[SG100- und SG1000-Services-Appliances]
 
 IMPORTANT: Stellen Sie keine SG100- und SG1000-Service-Appliance am selben Standort bereit. Das kann zu einer unvorhersehbaren Performance führen.
 
+.Über diese Aufgabe
 In den folgenden Fällen können Sie eine SG100- oder SG1000-Services-Appliance verwenden, um einen fehlgeschlagenen Grid-Node wiederherzustellen:
 
 * Der ausgefallene Node wurde auf VMware oder Linux gehostet (Plattformänderung)

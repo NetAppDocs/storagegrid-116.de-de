@@ -46,6 +46,7 @@ In der folgenden Liste werden die Attributelemente beschrieben:
 * `value` Ist der Inhalt des Attributs, in der Regel ein numerischer Wert oder Textwert. Werte folgen immer einem Doppelpunkt (`:`). Werte des Datentyps CSTR werden von doppelten Anführungszeichen umgeben `" "`.
 
 
+.Verwandte Informationen
 xref:using-audit-explain-tool.adoc[Verwenden Sie das Audit-Erklären-Tool]
 
 xref:using-audit-sum-tool.adoc[Verwenden Sie das Audit-Sum-Tool]

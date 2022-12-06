@@ -13,6 +13,7 @@ summary: 'Ab Schritt 6 \(Monitor Decommission\) des Seitenassistenten der Decomm
 [role="lead"]
 Ab Schritt 6 (Überwachung der Dekommission) des Seitenassistenten der Decommission-Website können Sie den Fortschritt überwachen, während die Site entfernt wird.
 
+.Über diese Aufgabe
 Wenn StorageGRID einen verbundenen Standort entfernt, werden Nodes in dieser Reihenfolge entfernt:
 
 . Gateway-Nodes
@@ -236,6 +237,7 @@ image::../media/decommission_site_success_message.png[Success Message Zur Deakti
 
 
 
+.Nachdem Sie fertig sind
 Führen Sie diese Aufgaben nach Abschluss des Verfahrens zur Deaktivierung der Website durch:
 
 * Stellen Sie sicher, dass die Laufwerke aller Storage-Nodes am ausgemusterten Standort sauber gelöscht werden. Verwenden Sie ein handelsübliches Datenwischwerkzeug oder einen Dienst, um die Daten dauerhaft und sicher von den Laufwerken zu entfernen.

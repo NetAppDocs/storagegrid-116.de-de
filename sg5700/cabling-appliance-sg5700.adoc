@@ -13,7 +13,7 @@ summary: Sie müssen die beiden Controller miteinander verbinden, die Management
 [role="lead"]
 Sie müssen die beiden Controller miteinander verbinden, die Management-Ports auf jedem Controller verbinden und die 10/25-GbE-Ports des E5700SG-Controllers mit dem Grid-Netzwerk und dem optionalen Client-Netzwerk für StorageGRID verbinden.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben die folgenden Artikel ausgepackt, die im Lieferumfang des Geräts enthalten sind:
 +
 ** Zwei Netzkabel.
@@ -33,6 +33,7 @@ Sie müssen die beiden Controller miteinander verbinden, die Management-Ports au
 
 CAUTION: *Gefahr der Laserstrahlung* -- kein Teil eines SFP-Transceivers zerlegen oder entfernen. Sie können Laserstrahlung ausgesetzt sein.
 
+.Über diese Aufgabe
 Die Zahlen zeigen die beiden Controller der SG5760 und SG5760X, wobei der Storage Controller der E2800 Serie oben und der E5700SG Controller unten gezeigt werden. In den SG5712 und SG5712X befindet sich der Speicher-Controller der E2800 Serie links vom E5700SG-Controller, wenn er von hinten betrachtet wird.
 
 *SG5760 Verbindungen*
@@ -189,6 +190,7 @@ Grid-Netzwerk
 
 
 
+.Verwandte Informationen
 xref:accessing-storagegrid-appliance-installer-sg5700.adoc[Rufen Sie das Installationsprogramm für StorageGRID-Appliances auf]
 
 xref:port-bond-modes-for-e5700sg-controller-ports.adoc[Port Bond-Modi für E5700SG Controller-Ports]

@@ -13,8 +13,10 @@ summary: Mit dem Change IP-Tool können Sie die Netzwerkkonfiguration für einen
 [role="lead"]
 Mit dem Change IP-Tool können Sie die Netzwerkkonfiguration für einen oder mehrere Knoten ändern. Sie können die Konfiguration des Grid-Netzwerks ändern oder den Administrator- oder Client-Netzwerk hinzufügen, ändern oder entfernen.
 
+.Was Sie benötigen
 Sie müssen die haben `Passwords.txt` Datei:
 
+.Über diese Aufgabe
 *Linux:* Wenn Sie zum ersten Mal einen Grid-Knoten zum Admin-Netzwerk oder Client-Netzwerk hinzufügen und SIE IN der Node-Konfigurationsdatei NOCH nicht ADMIN_NETWORK_TARGET oder CLIENT_NETWORK_TARGET konfiguriert haben, müssen Sie dies jetzt tun.
 
 Weitere Informationen finden Sie in der StorageGRID-Installationsanleitung für Ihr Linux-Betriebssystem.
@@ -201,6 +203,7 @@ Nach dem Anwenden oder Staging von Änderungen wird ein neues Wiederherstellungs
 
 
 
+.Verwandte Informationen
 xref:linux-adding-interfaces-to-existing-node.adoc[Linux: Hinzufügen von Schnittstellen zu vorhandenem Node]
 
 xref:../rhel/index.adoc[Installieren Sie Red hat Enterprise Linux oder CentOS]

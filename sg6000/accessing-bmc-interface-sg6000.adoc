@@ -13,7 +13,7 @@ summary: Sie können über die DHCP- oder statische IP-Adresse für den BMC-Mana
 [role="lead"]
 Sie können über die DHCP- oder statische IP-Adresse für den BMC-Management-Port auf die BMC-Schnittstelle des SG6000-CN-Controllers zugreifen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Der BMC-Management-Port des SG6000-CN Controllers ist mit dem Managementnetzwerk verbunden, das Sie verwenden möchten.
 +
 image::../media/sg6000_cn_bmc_management_port.gif[BMC-Management-Port am SG6000-CN Controller]

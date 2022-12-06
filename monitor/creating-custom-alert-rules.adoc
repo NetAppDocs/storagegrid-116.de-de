@@ -13,7 +13,7 @@ summary: Sie können benutzerdefinierte Alarmregeln erstellen, um eigene Bedingu
 [role="lead"]
 Sie können benutzerdefinierte Alarmregeln erstellen, um eigene Bedingungen für das Auslösen von Warnmeldungen zu definieren.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser]
 * Sie verfügen über die Berechtigung zum Verwalten von Warnungen oder Stammzugriff
 * Sie kennen das xref:commonly-used-prometheus-metrics.adoc[Häufig verwendete Prometheus-Kennzahlen]
@@ -24,6 +24,7 @@ image::../media/video-screenshot-alert-create-custom.png[Link-"https://netapp.ho
 
 
 
+.Über diese Aufgabe
 StorageGRID validiert keine benutzerdefinierten Warnmeldungen. Wenn Sie sich für die Erstellung benutzerdefinierter Warnungsregeln entscheiden, befolgen Sie die folgenden allgemeinen Richtlinien:
 
 * Informieren Sie sich über die Bedingungen für die Standardwarnregeln und verwenden Sie sie als Beispiele für Ihre benutzerdefinierten Warnungsregeln.

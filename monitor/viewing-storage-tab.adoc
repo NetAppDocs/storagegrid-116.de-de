@@ -34,4 +34,5 @@ Für alle Nodes enthält die Registerkarte Storage Details zu den Festplattenger
 
 image::../media/nodes_page_storage_tables.png[Knoten Seitentabellen]
 
+.Verwandte Informationen
 xref:monitoring-storage-capacity.adoc[Monitoring der Storage-Kapazität]

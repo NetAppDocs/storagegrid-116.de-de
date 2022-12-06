@@ -19,6 +19,7 @@ Für Storage-Nodes bietet die Registerkarte ILM Details zur ILM-Bewertung und zu
 
 image::../media/nodes_page_ilm_tab.png[Knoten Seite ILM Registerkarte]
 
+.Verwandte Informationen
 xref:monitoring-information-lifecycle-management.adoc[Überwachung des Information Lifecycle Management]
 
 xref:../admin/index.adoc[StorageGRID verwalten]

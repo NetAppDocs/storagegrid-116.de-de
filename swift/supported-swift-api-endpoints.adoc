@@ -97,6 +97,7 @@ Die folgenden Antwortkopfzeilen für Konto- und Container-Vorgänge sind Beispie
 * `X-Container-Object-Count`
 
 
+.Verwandte Informationen
 xref:configuring-tenant-accounts-and-connections.adoc[Mandantenkonten und -Verbindungen konfigurieren]
 
 xref:account-operations.adoc[Konto-Operationen]

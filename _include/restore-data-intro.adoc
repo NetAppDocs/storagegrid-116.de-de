@@ -2,10 +2,11 @@
 :allow-uri-read: 
 
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen bestätigt haben, dass der wiederhergestellte Speicherknoten einen Verbindungsstatus von *verbunden* hat image:../media/icon_alert_green_checkmark.png["Grünes Häkchen für Symbolwarnung"] Auf der Registerkarte *NODES* *Übersicht* im Grid Manager.
 
 
+.Über diese Aufgabe
 Objektdaten können von anderen Storage-Nodes, einem Archiv-Node oder einem Cloud Storage-Pool wiederhergestellt werden, wenn die ILM-Regeln des Grid so konfiguriert wurden, dass Objektkopien verfügbar sind.
 
 Beachten Sie Folgendes:
@@ -17,7 +18,7 @@ Beachten Sie Folgendes:
 
 
 
-== Über das Skript für Reparaturdaten
+== Informationen zum `repair-data` Skript
 
 Zum Wiederherstellen von Objektdaten führen Sie den aus `repair-data` Skript: Dieses Skript startet den Prozess der Wiederherstellung von Objektdaten und arbeitet mit ILM-Scans zusammen, um sicherzustellen, dass ILM-Regeln eingehalten werden.
 

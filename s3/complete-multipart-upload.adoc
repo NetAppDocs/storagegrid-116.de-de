@@ -68,4 +68,5 @@ In diesem Fall wird im Grid Manager on Total Events (SMTT) ein Alarm ausgelöst.
 
 Ein Mandant kann die fehlgeschlagene Replizierung oder Benachrichtigung auslösen, indem die Metadaten oder Tags des Objekts aktualisiert werden. Ein Mieter kann die vorhandenen Werte erneut einreichen, um unerwünschte Änderungen zu vermeiden.
 
+.Verwandte Informationen
 xref:../ilm/index.adoc[Objektmanagement mit ILM]

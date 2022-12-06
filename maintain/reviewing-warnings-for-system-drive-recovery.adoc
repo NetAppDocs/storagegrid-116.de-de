@@ -42,6 +42,7 @@ IMPORTANT: Wenn ILM-Regeln so konfiguriert sind, dass nur eine replizierte Kopie
 
 NOTE: Wenn während der Wiederherstellung ein Alarm „Service: Status – Cassandra (SVST)“ (Service: Status – Cassandra) ausgegeben wird, lesen Sie die Überwachungs- und Fehlerbehebungsanweisungen zur Wiederherstellung des Alarms durch Neuaufbau von Cassandra. Nach dem Wiederaufbau von Cassandra sollten die Alarme gelöscht werden. Wenn die Alarme nicht gelöscht werden, wenden Sie sich an den technischen Support.
 
+.Verwandte Informationen
 xref:../monitor/index.adoc[Monitoring und Fehlerbehebung]
 
 xref:warnings-and-considerations-for-grid-node-recovery.adoc[Warnungen und Überlegungen für die Wiederherstellung von Grid Nodes]

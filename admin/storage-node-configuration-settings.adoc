@@ -266,4 +266,5 @@ Wählen Sie diese Option aus, um die ausgehende Replikation (einschließlich Inh
 Wenn die ausgehende Replikation deaktiviert ist, können Objekte auf diesen Speicherknoten kopiert werden. Objekte können jedoch nicht vom Speicherknoten abgerufen werden, um sie an andere Speicherorte im StorageGRID-System zu kopieren. Der LDR-Service ist schreibgeschützt.
 
 |===
+.Verwandte Informationen
 xref:../monitor/index.adoc[Monitoring und Fehlerbehebung]

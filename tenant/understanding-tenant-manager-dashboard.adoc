@@ -100,6 +100,7 @@ image::../media/tenant_dashboard_endpoint_error.png[Dashboard mit Endpunkt-Meldu
 
 Wenn Sie Details zu einem Endpunktfehler anzeigen möchten, wählen Sie Endpunkte aus, um die Seite Endpunkte anzuzeigen.
 
+.Verwandte Informationen
 xref:troubleshooting-platform-services-endpoint-errors.adoc[Fehlerbehebung bei Endpunktfehlern bei Plattform-Services]
 
 xref:../monitor/index.adoc[Monitoring und Fehlerbehebung]

@@ -13,7 +13,7 @@ summary: Wenn die Erweiterung durchgeführt wird, werden die neuen Grid-Nodes zu
 [role="lead"]
 Wenn die Erweiterung durchgeführt wird, werden die neuen Grid-Nodes zu Ihrer bestehenden StorageGRID Implementierung hinzugefügt.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben die Berechtigung Wartung oder Stammzugriff.
 * Sie haben die Provisionierungs-Passphrase.
@@ -22,6 +22,7 @@ Wenn die Erweiterung durchgeführt wird, werden die neuen Grid-Nodes zu Ihrer be
 * Wenn Sie einen neuen Standort hinzufügen, müssen Sie ILM-Regeln prüfen und aktualisieren, bevor Sie die Erweiterung starten, um sicherzustellen, dass Objektkopien erst nach Abschluss der Erweiterung auf dem neuen Standort gespeichert werden. Wenn eine Regel beispielsweise den Standard-Speicherpool (Alle Speicherknoten) verwendet, müssen Sie einen neuen Speicherpool erstellen, der nur die vorhandenen Speicherknoten enthält, und die ILM-Regel aktualisieren, um den neuen Speicherpool zu verwenden. Andernfalls werden Objekte auf den neuen Standort kopiert, sobald der erste Node an diesem Standort aktiv ist. Siehe Anweisungen für xref:../ilm/index.adoc[Objektmanagement mit ILM].
 
 
+.Über diese Aufgabe
 Während der Erweiterung umfasst die folgenden Phasen:
 
 . Sie konfigurieren die Erweiterung, indem Sie angeben, ob Sie neue Grid-Nodes oder einen neuen Standort hinzufügen und die Grid-Nodes genehmigen, die Sie hinzufügen möchten.
@@ -180,4 +181,5 @@ IMPORTANT: Starten Sie keine Storage-Nodes entweder während der Phasen „Erwei
 . Fahren Sie mit der Überwachung der Erweiterung fort, bis alle Aufgaben abgeschlossen sind und die Schaltfläche *Erweiterung konfigurieren* erneut angezeigt wird.
 
 
+.Nachdem Sie fertig sind
 Je nachdem, welche Typen von Grid-Nodes Sie hinzugefügt haben, müssen Sie zusätzliche Integrations- und Konfigurationsschritte durchführen. Siehe xref:configuring-expanded-storagegrid-system.adoc[Konfiguration Schritte nach Erweiterung].

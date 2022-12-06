@@ -13,7 +13,7 @@ summary: Sie aktualisieren Ihre Laufwerk-Firmware, um sicherzustellen, dass Sie 
 [role="lead"]
 Sie aktualisieren Ihre Laufwerk-Firmware, um sicherzustellen, dass Sie über alle neuesten Funktionen und Fehlerbehebungen verfügen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Die Storage Appliance hat einen optimalen Status.
 * Alle Laufwerke haben einen optimalen Status.
 * Die aktuelle Version von SANtricity System Manager ist mit Ihrer StorageGRID-Version kompatibel.
@@ -222,4 +222,5 @@ image::../media/node_rejoin_grid_confirmation.png[Das Raster des Appliance-Node 
 
 
 
+.Verwandte Informationen
 xref:upgrading-santricity-os-on-storage-controllers.adoc[Upgrades des SANtricity OS auf Storage Controllern]

@@ -13,6 +13,7 @@ summary: Bei der ersten Implementierung von StorageGRID können Sie eine oder me
 [role="lead"]
 Bei der ersten Implementierung von StorageGRID können Sie eine oder mehrere StorageGRID Services Appliances installieren oder Nodes von Services-Appliances später im Rahmen einer Erweiterung hinzufügen.
 
+.Was Sie benötigen
 Ihr StorageGRID System verwendet die erforderliche Version der StorageGRID Software.
 
 [cols="1a,2a"]
@@ -96,6 +97,7 @@ xref:../maintain/index.adoc[Wiederherstellung und Wartung eines StorageGRID Syst
 |===
 
 
+.Verwandte Informationen
 xref:../expand/index.adoc[Erweitern Sie Ihr Raster]
 
 xref:../maintain/index.adoc[Recovery und Wartung des Grids]

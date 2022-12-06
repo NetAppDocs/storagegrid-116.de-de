@@ -29,6 +29,7 @@ Optional können Sie das Ziel der Audit-Protokolle ändern und Audit-Information
 
 Details zur Audit-Protokolldatei, zum Format von Audit-Meldungen, zu den Typen von Audit-Meldungen und zu den verfügbaren Tools zur Analyse von Audit-Meldungen finden Sie in den Anweisungen für Audit-Meldungen. Weitere Informationen zum Konfigurieren des Zugriffs auf Audit-Clients finden Sie in den Anweisungen für die Administration von StorageGRID.
 
+.Verwandte Informationen
 xref:../audit/index.adoc[Prüfung von Audit-Protokollen]
 
 xref:../admin/index.adoc[StorageGRID verwalten]

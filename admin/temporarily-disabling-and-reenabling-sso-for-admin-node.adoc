@@ -13,12 +13,13 @@ summary: 'Sie können sich möglicherweise nicht beim Grid-Manager anmelden, wen
 [role="lead"]
 Sie können sich möglicherweise nicht beim Grid-Manager anmelden, wenn das SSO-System (Single Sign-On) ausfällt. In diesem Fall können Sie SSO für einen Admin-Node vorübergehend deaktivieren und erneut aktivieren. Um SSO zu deaktivieren und dann erneut zu aktivieren, müssen Sie auf die Befehlshaber des Node zugreifen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben spezifische Zugriffsberechtigungen.
 * Sie haben die `Passwords.txt` Datei:
 * Sie kennen das Passwort für den lokalen Root-Benutzer.
 
 
+.Über diese Aufgabe
 Nachdem Sie SSO für einen Admin-Node deaktiviert haben, können Sie sich beim Grid-Manager als lokaler Root-Benutzer anmelden. Zum Sichern Ihres StorageGRID-Systems müssen Sie die Befehlshaber des Node verwenden, um SSO auf dem Admin-Node erneut zu aktivieren, sobald Sie sich abmelden.
 
 

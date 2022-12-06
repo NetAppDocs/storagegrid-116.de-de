@@ -75,6 +75,7 @@ Weitere Informationen zur Fehlerbehebung bei Plattform-Services finden Sie in de
 
 xref:../admin/index.adoc[StorageGRID verwalten]
 
+.Verwandte Informationen
 xref:creating-platform-services-endpoint.adoc[Endpunkt für Plattformservices erstellen]
 
 xref:testing-connection-for-platform-services-endpoint.adoc[Testen der Verbindung für Endpunkt der Plattformservices]

@@ -13,10 +13,11 @@ summary: Bevor Sie StorageGRID mit einem FabricPool-Workload verwenden, müssen 
 [role="lead"]
 Bevor Sie StorageGRID mit einem FabricPool-Workload verwenden, müssen Sie einen S3-Bucket für Ihre FabricPool-Daten erstellen. Außerdem müssen Sie einen Zugriffsschlüssel und einen geheimen Zugriffsschlüssel für das Mandantenkonto erhalten, das Sie für FabricPool verwenden werden.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben ein Mandantenkonto für die Nutzung von FabricPool erstellt.
 
 
+.Über diese Aufgabe
 In diesen Anweisungen wird die Verwendung von StorageGRID Mandanten-Manager zur Erstellung eines Buckets beschrieben und Zugriffschlüssel erhalten. Sie können diese Aufgaben auch mit der Mandantenmanagement-API oder der StorageGRID S3 REST-API ausführen. Oder, wenn Sie ONTAP 9.10 verwenden, können Sie den Bucket stattdessen mit dem FabricPool-Setup-Assistenten erstellen.
 
 Weitere Informationen:

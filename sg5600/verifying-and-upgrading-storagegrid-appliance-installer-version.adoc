@@ -13,6 +13,7 @@ summary: Die Installationsversion der StorageGRID Appliance auf der Appliance mu
 [role="lead"]
 Die Installationsversion der StorageGRID Appliance auf der Appliance muss mit der auf dem StorageGRID-System installierten Softwareversion übereinstimmen, um sicherzustellen, dass alle StorageGRID-Funktionen unterstützt werden.
 
+.Was Sie benötigen
 Sie haben auf das Installationsprogramm für StorageGRID-Geräte zugegriffen.
 
 StorageGRID-Appliances werden ab Werk mit dem StorageGRID-Appliance-Installationsprogramm vorinstalliert. Wenn Sie einem kürzlich aktualisierten StorageGRID-System eine Appliance hinzufügen, müssen Sie möglicherweise das Installationsprogramm für StorageGRID-Appliances manuell aktualisieren, bevor Sie die Appliance als neuen Node installieren.
@@ -46,4 +47,5 @@ Nach dem Herunterladen der Datei Support für StorageGRID Appliances extrahieren
 
 
 
+.Verwandte Informationen
 xref:accessing-storagegrid-appliance-installer-sg5600.adoc[Rufen Sie das Installationsprogramm für StorageGRID-Appliances auf]

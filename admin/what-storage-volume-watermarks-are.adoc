@@ -56,7 +56,7 @@ Der Read-Write-Wasserzeichen ist immer größer als der Soft Read-Only-Wasserzei
 
 Sie können die aktuellen Einstellungen für Wasserzeichen und die systemoptimierten Werte anzeigen. Wenn keine optimierten Wasserzeichen verwendet werden, können Sie festlegen, ob Sie die Einstellungen anpassen können oder sollten.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben das Upgrade auf StorageGRID 11.6 abgeschlossen.
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben die Root-Zugriffsberechtigung.
@@ -77,7 +77,7 @@ image::../media/storage-volume-watermark-overrides.png[Überschreibungen auf dem
 +
 ** Wenn die Wasserzeichen *0* überschreiben, sind alle drei Wasserzeichen für jedes Speichervolumen auf jedem Speicherknoten optimiert, basierend auf der Größe des Speicherknoten und der relativen Kapazität des Volumes.
 +
-Dies ist die Standardeinstellung und die empfohlene Einstellung. Sie sollten diese Werte nicht aktualisieren. Nach Bedarf können Sie optional  optimized storage watermarks.
+Dies ist die Standardeinstellung und die empfohlene Einstellung. Sie sollten diese Werte nicht aktualisieren. Nach Bedarf können Sie optional <<Anzeigen optimierter Speicherabdrücke>>.
 
 ** Wenn es sich bei den Wasserzeichen um nicht-0-Werte handelt, werden benutzerdefinierte (nicht optimierte) Wasserzeichen verwendet. Es wird nicht empfohlen, benutzerdefinierte Wasserzeichen zu verwenden. Befolgen Sie die Anweisungen für xref:../monitor/troubleshoot-low-watermark-alert.adoc[Fehlerbehebung Warnungen bei niedriger Schreibschutzmarke überschreiben] Um zu bestimmen, ob Sie die Einstellungen anpassen können oder sollen.
 

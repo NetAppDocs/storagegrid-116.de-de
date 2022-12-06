@@ -13,6 +13,7 @@ summary: Die sieben-Segment-Anzeige auf jedem Controller zeigt Status- und Fehle
 [role="lead"]
 Die sieben-Segment-Anzeige auf jedem Controller zeigt Status- und Fehlercodes an, wenn das Gerät eingeschaltet wird, während die Hardware initialisiert wird und wenn die Hardware ausfällt und die Initialisierung wieder aus der Zeit ist. Wenn Sie den Fortschritt oder die Fehlerbehebung überwachen, sollten Sie die Reihenfolge der Codes beobachten, wie sie angezeigt werden.
 
+.Über diese Aufgabe
 Die Status- und Fehlercodes des E5600SG-Controllers entsprechen nicht den Status- und Fehlercodes des E2700 Controllers.
 
 .Schritte
@@ -21,6 +22,7 @@ Die Status- und Fehlercodes des E5600SG-Controllers entsprechen nicht den Status
 . Fehlercodes für den E2700 Controller werden in der E2700 Controller-Dokumentation auf der Support-Website geprüft.
 
 
+.Verwandte Informationen
 xref:e5600sg-controller-seven-segment-display-codes.adoc[E5600SG-Controller-Anzeigecodes für sieben Segmente]
 
 http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61765["NetApp Dokumentation: E2700 Serie"^]

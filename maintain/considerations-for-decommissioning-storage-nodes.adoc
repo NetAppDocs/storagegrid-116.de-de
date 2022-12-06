@@ -33,4 +33,5 @@ Bei der Ausmusterung von Storage-Nodes gelten die folgenden Überlegungen und Ei
 
 
 
+.Verwandte Informationen
 xref:restoring-object-data-to-storage-volume-if-required.adoc[Wiederherstellen von Objektdaten im Storage Volume, falls erforderlich]

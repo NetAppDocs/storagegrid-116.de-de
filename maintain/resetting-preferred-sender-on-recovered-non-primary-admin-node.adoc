@@ -13,7 +13,7 @@ summary: Wenn der nicht-primäre Admin-Node, den Sie wiederherstellen, derzeit a
 [role="lead"]
 Wenn der nicht-primäre Admin-Node, den Sie wiederherstellen, derzeit als bevorzugter Absender von Warnmeldungen, Alarmbenachrichtigungen und AutoSupport-Meldungen eingestellt ist, müssen Sie diese Einstellung im StorageGRID-System neu konfigurieren.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie müssen über spezifische Zugriffsberechtigungen verfügen.
 * Der wiederhergestellte Admin-Node muss installiert und ausgeführt werden.
@@ -25,4 +25,5 @@ Wenn der nicht-primäre Admin-Node, den Sie wiederherstellen, derzeit als bevorz
 . Klicken Sie Auf *Änderungen Übernehmen*.
 
 
+.Verwandte Informationen
 xref:../admin/index.adoc[StorageGRID verwalten]

@@ -48,6 +48,7 @@ Informationen zur Fehlerbehebung finden Sie in der StorageGRID-Installationsanle
 
 
 
+.Verwandte Informationen
 xref:../rhel/index.adoc[Installieren Sie Red hat Enterprise Linux oder CentOS]
 
 xref:../ubuntu/index.adoc[Installieren Sie Ubuntu oder Debian]

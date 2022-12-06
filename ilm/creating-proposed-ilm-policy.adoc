@@ -16,7 +16,7 @@ Sie können eine vorgeschlagene ILM-Richtlinie von Grund auf erstellen oder die 
 
 NOTE: Wenn die globale S3-Objektsperre aktiviert wurde, gehen Sie stattdessen wie folgt vor: xref:creating-ilm-policy-after-s3-object-lock-is-enabled.adoc[Erstellen Sie eine ILM-Richtlinie, nachdem S3 Object Lock aktiviert ist].
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben spezifische Zugriffsberechtigungen.
 * Sie haben die ILM-Regeln erstellt, die Sie der vorgeschlagenen Richtlinie hinzufügen möchten. Bei Bedarf können Sie eine vorgeschlagene Richtlinie speichern, zusätzliche Regeln erstellen und die vorgeschlagene Richtlinie bearbeiten, um die neuen Regeln hinzuzufügen.
@@ -28,6 +28,7 @@ image::../media/video-screenshot-ilm-policies.png[Video: StorageGRID ILM-Richtli
 
 
 
+.Über diese Aufgabe
 Typische Gründe für die Erstellung einer vorgeschlagenen ILM-Richtlinie sind:
 
 * Sie haben einen neuen Standort hinzugefügt und müssen neue ILM-Regeln verwenden, um Objekte an diesem Standort zu platzieren.

@@ -13,7 +13,7 @@ summary: 'Wenn Sie einen Cloud-Storage-Pool erstellen, geben Sie den Namen und d
 [role="lead"]
 Wenn Sie einen Cloud-Storage-Pool erstellen, geben Sie den Namen und den Standort des externen Buckets oder Containers an, den StorageGRID zum Speichern von Objekten, dem Cloud-Provider-Typ (Amazon S3 oder Azure Blob Storage) und den Informationen, die StorageGRID für den Zugriff auf den externen Bucket oder Container benötigt.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben spezifische Zugriffsberechtigungen.
 * Sie haben die Richtlinien zur Konfiguration von Cloud-Speicherpools überprüft.
@@ -21,6 +21,7 @@ Wenn Sie einen Cloud-Storage-Pool erstellen, geben Sie den Namen und den Standor
 * Sie verfügen über alle Authentifizierungsinformationen, die für den Zugriff auf den Bucket oder Container erforderlich sind.
 
 
+.Über diese Aufgabe
 Ein Cloud-Storage-Pool gibt einen einzelnen externen S3-Bucket oder Azure Blob-Storage-Container an. StorageGRID validiert den Cloud-Storage-Pool, sobald Sie ihn speichern. Sie müssen also sicherstellen, dass der im Cloud-Speicherpool angegebene Bucket oder Container vorhanden ist und erreichbar ist.
 
 .Schritte

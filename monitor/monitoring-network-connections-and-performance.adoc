@@ -13,7 +13,7 @@ summary: Die Grid-Nodes müssen miteinander kommunizieren können, damit das Gri
 [role="lead"]
 Die Grid-Nodes müssen miteinander kommunizieren können, damit das Grid betrieben werden kann. Die Integrität des Netzwerks zwischen Knoten und Standorten und die Netzwerkbandbreite zwischen Standorten sind für einen effizienten Betrieb entscheidend.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie müssen über spezifische Zugriffsberechtigungen verfügen.
 
@@ -74,6 +74,7 @@ Informationen zum Erstellen, Bearbeiten oder Löschen von Richtlinien zur Verkeh
 
 
 
+.Verwandte Informationen
 xref:viewing-network-tab.adoc[Zeigen Sie die Registerkarte Netzwerk an]
 
 xref:monitoring-node-connection-states.adoc[Überwachen Sie die Status der Node-Verbindung]

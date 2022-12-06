@@ -13,12 +13,13 @@ summary: 'Sie können das Audit-Sum-Tool verwenden, um die Schreib-, Lese-, Kopf
 [role="lead"]
 Sie können das verwenden `audit-sum` Tool zum Zählen der Schreib-, Lese-, Kopf- und Löschmeldungen und zum Anzeigen der minimalen, maximalen und durchschnittlichen Zeit (oder Größe) für jeden Operationstyp.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen über spezifische Zugriffsberechtigungen verfügen.
 * Sie müssen die haben `Passwords.txt` Datei:
 * Sie müssen die IP-Adresse des primären Admin-Knotens kennen.
 
 
+.Über diese Aufgabe
 Der `audit-sum` Tool, das auf dem primären Admin-Knoten verfügbar ist, fasst zusammen, wie viele Schreib-, Lese- und Löschvorgänge protokolliert wurden und wie lange diese Vorgänge gedauert haben.
 
 
@@ -394,4 +395,5 @@ grep SPUT audit.log | audit-sum -gb -s
 
 
 
+.Verwandte Informationen
 xref:using-audit-explain-tool.adoc[Verwenden Sie das Audit-Erklären-Tool]

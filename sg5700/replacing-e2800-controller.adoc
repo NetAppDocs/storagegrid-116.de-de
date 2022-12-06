@@ -29,6 +29,7 @@ IMPORTANT: Sie können das Gerät erst dann verwenden, wenn Sie die Laufwerke mi
 * Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 
 
+.Über diese Aufgabe
 Sie können auf zwei Arten feststellen, ob ein ausgefallener Controller-Behälter besteht:
 
 * Der Recovery Guru im SANtricity System Manager führt Sie dazu, den Controller zu ersetzen.
@@ -266,7 +267,7 @@ Eine separate HIC wird nur für den E2800B-Controller verwendet. Die HIC wird au
 
 NOTE: Die Abbildungen in diesem Verfahren zeigen eine HIC mit 2 Ports. Die HIC in Ihrem Controller hat möglicherweise eine andere Anzahl von Ports.
 
-. Wenn der Controller keine HIC (E2800A) besitzt, ersetzen Sie die Controller-Abdeckung. Wenn der Controller über eine HIC (E2800B) verfügt, fahren Sie mit fort ,Verschieben Sie die HIC vom ausgefallenen Controller auf den Ersatz-Controller.
+. Wenn der Controller keine HIC (E2800A) besitzt, ersetzen Sie die Controller-Abdeckung. Wenn der Controller über eine HIC (E2800B) verfügt, fahren Sie mit fort <<move_the_HIC_to_the_replacement_controller,Verschieben Sie die HIC vom ausgefallenen Controller auf den Ersatz-Controller>>.
 +
 .. [[move_the_HIC_to_the_Replacement_Controller]]Wenn Sie über eine HIC verfügen, verschieben Sie die HIC vom ausgefallenen Controller auf den Ersatz-Controller.
 .. Entfernen Sie alle SFPs von der HIC.
@@ -392,4 +393,5 @@ image::../media/node_rejoin_grid_confirmation.png[Das Raster des Appliance-Node 
 
 Nach dem Austausch des Teils senden Sie das fehlerhafte Teil an NetApp zurück, wie in den mit dem Kit gelieferten RMA-Anweisungen beschrieben. Siehe https://mysupport.netapp.com/site/info/rma["Rückgabe von Teilen; Austausch"^] Seite für weitere Informationen.
 
+.Verwandte Informationen
 http://mysupport.netapp.com/info/web/ECMP1658252.html["NetApp E-Series Systems Documentation Site"^]

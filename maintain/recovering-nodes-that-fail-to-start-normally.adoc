@@ -23,4 +23,5 @@ TIP: Bestätigen Sie vor Ausgabe dieses Befehls, dass die Netzwerkkonfiguration 
 
 IMPORTANT: Nach Ausstellung des `storagegrid node force-recovery _node-name_` Befehl, Sie müssen zusätzliche Recovery-Schritte für _Node-Name_ durchführen.
 
+.Verwandte Informationen
 xref:whats-next-performing-additional-recovery-steps-if-required.adoc[Nächste Schritte: Falls erforderlich, zusätzliche Recovery-Schritte durchführen]

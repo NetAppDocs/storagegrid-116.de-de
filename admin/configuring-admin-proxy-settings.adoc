@@ -13,11 +13,12 @@ summary: 'Wenn Sie AutoSupport-Meldungen über HTTP oder HTTPS senden, können S
 [role="lead"]
 Wenn Sie AutoSupport-Meldungen über HTTP oder HTTPS senden (siehe xref:configure-autosupport-grid-manager.adoc[Konfigurieren Sie AutoSupport]) Können Sie einen nicht transparenten Proxy-Server zwischen Admin-Knoten und technischem Support (AutoSupport) konfigurieren.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben spezifische Zugriffsberechtigungen.
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 
 
+.Über diese Aufgabe
 Sie können die Einstellungen für einen einzigen Admin-Proxy konfigurieren.
 
 .Schritte

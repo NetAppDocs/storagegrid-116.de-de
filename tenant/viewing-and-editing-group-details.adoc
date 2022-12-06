@@ -13,7 +13,7 @@ summary: Wenn Sie die Details für eine Gruppe anzeigen, können Sie den Anzeige
 [role="lead"]
 Wenn Sie die Details für eine Gruppe anzeigen, können Sie den Anzeigenamen, Berechtigungen, Richtlinien und die Benutzer, die zu der Gruppe gehören, ändern.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Mandantenmanager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie müssen einer Benutzergruppe mit Root Access-Berechtigung angehören.
 
@@ -59,6 +59,7 @@ Weitere Informationen zum Swift Administrator erhalten Sie in den Anweisungen zu
 
 
 
+.Verwandte Informationen
 xref:creating-groups-for-s3-tenant.adoc[Gruppen für S3 Mandanten erstellen]
 
 xref:creating-groups-for-swift-tenant.adoc[Gruppen für Swift Mandanten erstellen]

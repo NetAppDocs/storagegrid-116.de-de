@@ -21,4 +21,5 @@ Für Nodes bietet die Tabelle Netzwerkschnittstellen Informationen zu den physis
 
 image::../media/nodes_page_network_tab.png[Registerkarte Knoten Netzwerk]
 
+.Verwandte Informationen
 xref:monitoring-network-connections-and-performance.adoc[Überwachen Sie Netzwerkverbindungen und Performance]

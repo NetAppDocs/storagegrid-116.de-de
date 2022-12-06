@@ -33,6 +33,7 @@ NOTE: Hardware-spezifische Installations- und Integrationsanweisungen sind nicht
 * Legen Sie fest, welche der verfügbaren Implementierungs- und Konfigurationstools Sie verwenden möchten.
 
 
+.Verwandte Informationen
 xref:../sg100-1000/index.adoc[SG100- und SG1000-Services-Appliances]
 
 xref:../sg6000/index.adoc[SG6000 Storage-Appliances]

@@ -13,7 +13,7 @@ summary: 'Sie verwenden PingFederate, um für jeden Admin-Node in Ihrem System e
 [role="lead"]
 Sie verwenden PingFederate, um für jeden Admin-Node in Ihrem System eine SP-Verbindung (Service Provider) zu erstellen. Um den Prozess zu beschleunigen, importieren Sie die SAML-Metadaten aus StorageGRID.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben Single Sign-On für StorageGRID konfiguriert und als SSO-Typ * Ping föderate* ausgewählt.
 * *Der Sandbox-Modus* ist auf der Single Sign-On-Seite im Grid Manager ausgewählt. Siehe xref:../admin/using-sandbox-mode.adoc[Verwenden Sie den Sandbox-Modus].
 * Sie haben die *SP-Verbindungs-ID* für jeden Admin-Knoten in Ihrem System. Diese Werte finden Sie in der Detailtabelle Admin Nodes auf der StorageGRID Single Sign-On-Seite.
@@ -23,6 +23,7 @@ Sie verwenden PingFederate, um für jeden Admin-Node in Ihrem System eine SP-Ver
 * Sie haben die Administratorberechtigung für PingFederate Server.
 
 
+.Über diese Aufgabe
 Mit diesen Anweisungen wird zusammengefasst, wie PingFederate Server Version 10.3 als SSO-Anbieter für StorageGRID konfiguriert wird. Wenn Sie eine andere Version von PingFederate verwenden, müssen Sie diese Anweisungen möglicherweise anpassen. Detaillierte Anweisungen für Ihre Version finden Sie in der Dokumentation zu PingFederate Server.
 
 
@@ -33,7 +34,7 @@ Bevor Sie die SP-Verbindungen erstellen können, die Sie für StorageGRID verwen
 
 
 
-=== Erstellen eines Datenspeichers
+=== Datenspeicher erstellen[[Data-Store]]
 
 Falls noch nicht, erstellen Sie einen Datenspeicher, um PingFederate mit dem AD FS LDAP-Server zu verbinden. Verwenden Sie die Werte, die Sie verwendet haben, wenn xref:../admin/using-identity-federation.adoc[Identitätsföderation wird konfiguriert] Im StorageGRID.
 
@@ -44,7 +45,7 @@ Falls noch nicht, erstellen Sie einen Datenspeicher, um PingFederate mit dem AD 
 
 
 
-=== Gültigkeitsprüfung für Kennwortausweise erstellen
+=== Passwortvalididator[[Password-Validator] erstellen
 
 Wenn Sie noch nicht vorhanden sind, erstellen Sie einen Validierer für Kennwortausweise.
 
@@ -57,7 +58,7 @@ Wenn Sie noch nicht vorhanden sind, erstellen Sie einen Validierer für Kennwort
 
 
 
-=== IdP-Adapterinstanz erstellen
+=== IdP-Adapterinstanz erstellen[[Adapter-Instanz]]
 
 Wenn Sie noch nicht, erstellen Sie eine IdP-Adapterinstanz.
 
@@ -65,14 +66,14 @@ Wenn Sie noch nicht, erstellen Sie eine IdP-Adapterinstanz.
 . Wählen Sie *Neue Instanz Erstellen*.
 . Wählen Sie auf der Registerkarte Typ die Option *HTML-Formular-IdP-Adapter* aus.
 . Wählen Sie auf der Registerkarte IdP-Adapter *Neue Zeile zu 'Credential Validators'* hinzufügen.
-. Wählen Sie die aus ,Gültigkeitsprüfung für Kennwortausweise Sie haben erstellt.
+. Wählen Sie die aus <<password-validator,Gültigkeitsprüfung für Kennwortausweise>> Sie haben erstellt.
 . Wählen Sie auf der Registerkarte Adapterattribute das Attribut *Benutzername* für *Pseudonym* aus.
 . Wählen Sie *Speichern*.
 
 
 
 
-=== Erstellen oder importieren Sie das Signierungszertifikat
+=== Signaturzertifikat[[Signing-Certificate]] erstellen oder importieren
 
 Wenn Sie noch nicht, erstellen oder importieren Sie das Signierungszertifikat.
 
@@ -87,7 +88,7 @@ Wenn Sie noch nicht, erstellen oder importieren Sie das Signierungszertifikat.
 Wenn Sie eine SP-Verbindung in PingFederate erstellen, importieren Sie die SAML-Metadaten, die Sie für den Admin-Node von StorageGRID heruntergeladen haben. Die Metadatendatei enthält viele der spezifischen Werte, die Sie benötigen.
 
 
-IMPORTANT: Sie müssen für jeden Admin-Node in Ihrem StorageGRID-System eine SP-Verbindung erstellen, damit sich Benutzer sicher bei und aus einem beliebigen Node anmelden können. Erstellen Sie anhand dieser Anweisungen die erste SP-Verbindung. Fahren Sie dann mit fort  additional SP connections Um zusätzliche Verbindungen zu erstellen, die Sie benötigen.
+IMPORTANT: Sie müssen für jeden Admin-Node in Ihrem StorageGRID-System eine SP-Verbindung erstellen, damit sich Benutzer sicher bei und aus einem beliebigen Node anmelden können. Erstellen Sie anhand dieser Anweisungen die erste SP-Verbindung. Fahren Sie dann mit fort <<Erstellen Sie zusätzliche SP-Verbindungen>> Um zusätzliche Verbindungen zu erstellen, die Sie benötigen.
 
 
 
@@ -134,10 +135,10 @@ Die Entity-ID des Partners und der Verbindungsname werden auf die Verbindungs-ID
 === Adapterinstanz zuordnen
 
 . Wählen Sie auf der Registerkarte Authentication Source Mapping die Option *Map New Adapter Instance*.
-. Wählen Sie auf der Registerkarte Adapterinstanz das aus ,Adapterinstanz Sie haben erstellt.
+. Wählen Sie auf der Registerkarte Adapterinstanz das aus <<adapter-instance,Adapterinstanz>> Sie haben erstellt.
 . Wählen Sie auf der Registerkarte Zuordnungsmethode die Option *Weitere Attribute aus einem Datenspeicher abrufen* aus.
 . Wählen Sie auf der Registerkarte Attributquelle User Lookup die Option *Attributquelle hinzufügen* aus.
-. Geben Sie auf der Registerkarte Data Store eine Beschreibung ein, und wählen Sie die aus ,Datastore Sie haben hinzugefügt.
+. Geben Sie auf der Registerkarte Data Store eine Beschreibung ein, und wählen Sie die aus <<data-store,Datastore>> Sie haben hinzugefügt.
 . Auf der Registerkarte LDAP-Verzeichnissuche:
 +
 ** Geben Sie den *Basis-DN* ein, der exakt mit dem Wert übereinstimmt, den Sie in StorageGRID für den LDAP-Server eingegeben haben.
@@ -174,7 +175,7 @@ Die Entity-ID des Partners und der Verbindungsname werden auf die Verbindungs-ID
 
 . Wählen Sie auf der Registerkarte SP-Verbindung die Option *Anmeldeinformationen* aus.
 . Wählen Sie auf der Registerkarte Anmeldeinformationen die Option *Anmeldeinformationen konfigurieren*.
-. Wählen Sie die aus ,Signieren des Zertifikats Sie haben erstellt oder importiert.
+. Wählen Sie die aus <<signing-certificate,Signieren des Zertifikats>> Sie haben erstellt oder importiert.
 . Wählen Sie *Weiter* aus, um zu *Einstellungen zur Signature-Verifizierung verwalten* zu gelangen.
 +
 .. Wählen Sie auf der Registerkarte Vertrauensmodell die Option *nicht verankert* aus.

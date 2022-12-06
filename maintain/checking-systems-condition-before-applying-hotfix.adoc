@@ -35,6 +35,7 @@ NOTE: Wenn ein Knoten oder ein Standort stillgelegt wird, können Sie sicher ein
 
 
 
+.Verwandte Informationen
 xref:../monitor/index.adoc[Monitoring und Fehlerbehebung]
 
 xref:pausing-and-resuming-decommission-process-for-storage-nodes.adoc[Anhalten und Fortsetzen des Stilllegen-Prozesses für Storage-Nodes]

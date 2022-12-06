@@ -13,7 +13,7 @@ summary: Möglicherweise müssen Sie ein ein ein-/Ausgabemodul, ein Netzteil ode
 [role="lead"]
 Möglicherweise müssen Sie ein ein ein-/Ausgabemodul, ein Netzteil oder einen Lüfter im Erweiterungs-Shelf ersetzen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben das Verfahren zum Austausch der E-Series Hardware.
 * Sie haben die Storage Appliance physisch gefunden, wo Sie im Datacenter Erweiterungs-Shelf-Hardware-Komponenten ersetzen.
 +
@@ -21,6 +21,7 @@ xref:locating-controller-in-data-center.adoc[Controller im Datacenter finden]
 
 
 
+.Über diese Aufgabe
 Um ein Input/Output-Modul (IOM) in einem Erweiterungs-Shelf mit 60 Laufwerken zu ersetzen, lesen Sie die Anweisungen in diesen Anleitungen zum Austauschen eines Storage-Controllers.
 
 Um ein Netzteil oder einen Lüfter in einem Erweiterungs-Shelf mit 60 Laufwerken zu ersetzen, rufen Sie die E-Series Verfahren zur Wartung von Hardware mit 60 Laufwerken auf.

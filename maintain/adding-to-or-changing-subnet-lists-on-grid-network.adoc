@@ -13,7 +13,7 @@ summary: Mithilfe des Tools IP ändern können Sie Subnetze im Grid Network hinz
 [role="lead"]
 Mithilfe des Tools IP ändern können Sie Subnetze im Grid Network hinzufügen oder ändern.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen die haben `Passwords.txt` Datei:
 
 
@@ -154,4 +154,5 @@ IMPORTANT: Die Recovery Package-Datei muss gesichert sein, weil sie Verschlüsse
 
 
 
+.Verwandte Informationen
 xref:configuring-ip-addresses.adoc[Konfigurieren Sie IP-Adressen]

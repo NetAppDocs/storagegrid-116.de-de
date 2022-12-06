@@ -13,7 +13,7 @@ summary: Nach dem Ersetzen eines nicht-primären Admin-Knotens müssen Sie im Gr
 [role="lead"]
 Nach dem Ersetzen eines nicht-primären Admin-Knotens müssen Sie im Grid-Manager die Option Wiederherstellung starten wählen, um den neuen Knoten als Ersatz für den fehlgeschlagenen Knoten zu konfigurieren.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie müssen über die Berechtigung Wartung oder Stammzugriff verfügen.
 * Sie müssen über eine Passphrase für die Bereitstellung verfügen.
@@ -55,6 +55,7 @@ NOTE: Informationen zum Konfigurieren eines Vertrauensverhältnisses mit einer v
 
 
 
+.Verwandte Informationen
 xref:../admin/index.adoc[StorageGRID verwalten]
 
 xref:preparing-appliance-for-reinstallation-platform-replacement-only.adoc[Appliance für die Neuinstallation vorbereiten (nur Plattformaustausch)]

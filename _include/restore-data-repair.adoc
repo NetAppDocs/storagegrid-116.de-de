@@ -26,7 +26,7 @@ Wenn Sie als root angemeldet sind, ändert sich die Eingabeaufforderung von `$` 
 
 Wenn alle Storage-Volumes ausgefallen sind, reparieren Sie den gesamten Node. Befolgen Sie die Anweisungen für *replizierte Daten*, *Erasure-codierte (EC) Daten* oder beide, je nachdem, ob Sie replizierte Daten, Erasure-codierte (EC) Daten oder beide verwenden.
 
-Wenn nur einige Volumes gescheitert sind, gehen Sie zu  data if only some volumes have failed.
+Wenn nur einige Volumes gescheitert sind, gehen Sie zu <<Reparieren Sie Daten, wenn nur einige Volumes ausgefallen sind>>.
 
 
 IMPORTANT: Sie können nicht ausgeführt werden `repair-data` Betrieb für mehr als einen Node gleichzeitig. Wenden Sie sich an den technischen Support, um mehrere Nodes wiederherzustellen.
@@ -66,7 +66,7 @@ NOTE: Reparaturen von Daten, die auf Löschung codiert wurden, können beginnen,
 
 Wenn nur einige Volumes ausgefallen sind, die betroffenen Volumes reparieren. Befolgen Sie die Anweisungen für *replizierte Daten*, *Erasure-codierte (EC) Daten* oder beide, je nachdem, ob Sie replizierte Daten, Erasure-codierte (EC) Daten oder beide verwenden.
 
-Wenn alle Volumes ausgefallen sind, gehen Sie zu  data if all volumes have failed.
+Wenn alle Volumes ausgefallen sind, gehen Sie zu <<Reparieren Sie Daten, wenn alle Volumes ausgefallen sind>>.
 
 Geben Sie die Volume-IDs in hexadezimal ein. Beispiel: `0000` Ist der erste Band und `000F` Ist der sechzehnte Band. Sie können ein Volume, einen Bereich von Volumes oder mehrere Volumes angeben, die sich nicht in einer Sequenz befinden.
 

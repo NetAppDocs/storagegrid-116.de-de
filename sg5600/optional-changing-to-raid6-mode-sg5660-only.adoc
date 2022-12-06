@@ -13,13 +13,14 @@ summary: 'Wenn Sie eine SG5660 mit 60 Laufwerken besitzen, können Sie die Volum
 [role="lead"]
 Wenn Sie eine SG5660 mit 60 Laufwerken besitzen, können Sie die Volume-Konfiguration von der standardmäßigen und empfohlenen Einstellung Dynamic Disk Pools (DDP) auf RAID 6 ändern. Sie können den Modus nur ändern, bevor Sie den Speicherknoten der StorageGRID-Appliance bereitstellen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben eine SG5660. Die SG5612 unterstützt RAID6 nicht. Sollten Sie über eine SG5612 verfügen, müssen Sie den DDP-Modus nutzen.
 
 
 
 IMPORTANT: Wenn bereits Volumes konfiguriert wurden oder bereits StorageGRID installiert war, werden die Volumes durch eine Änderung des RAID-Modus entfernt und ersetzt. Alle Daten auf diesen Volumes gehen verloren.
 
+.Über diese Aufgabe
 Vor der Bereitstellung eines StorageGRID Appliance Storage Node können Sie zwischen zwei Optionen zur Volume-Konfiguration wählen:
 
 * *Dynamic Disk Pools (DDP)* -- Dies ist die Standardeinstellung und empfohlene Einstellung. DDP ist ein verbessertes Hardware-Datensicherungsschema, das über eine bessere Systemperformance, kürzere Wiederherstellungszeiten nach Laufwerksausfällen und ein vereinfachtes Management verfügt.

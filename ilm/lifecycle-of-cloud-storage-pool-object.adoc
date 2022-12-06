@@ -13,8 +13,8 @@ summary: Überprüfen Sie vor der Implementierung von Cloud-Storage-Pools den Le
 [role="lead"]
 Überprüfen Sie vor der Implementierung von Cloud-Storage-Pools den Lebenszyklus der Objekte, die in jedem Typ von Cloud-Storage-Pool gespeichert sind.
 
-*  Lifecycle of a Cloud Storage Pool object
-*  Lifecycle of a Cloud Storage Pool object
+* <<S3: Lebenszyklus eines Cloud-Storage-Pool-Objekts>>
+* <<Azure: Lebenszyklus eines Cloud-Storage-Pool-Objekts>>
 
 
 
@@ -110,4 +110,5 @@ Sobald ein Objekt im Azure Cloud Storage Pool wiederhergestellt ist, kann die Cl
 
 
 
+.Verwandte Informationen
 xref:../s3/index.adoc[S3 verwenden]

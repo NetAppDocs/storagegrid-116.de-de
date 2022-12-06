@@ -13,7 +13,7 @@ summary: Wenn Sie eine Services-Appliance als primären Administratorknoten bere
 [role="lead"]
 Wenn Sie eine Services-Appliance als primären Administratorknoten bereitstellen, verwenden Sie das auf der Appliance enthaltene StorageGRID-Appliance-Installationsprogramm, um die StorageGRID-Software zu installieren, oder Sie laden die gewünschte Softwareversion hoch. Sie müssen den primären Admin-Node installieren und konfigurieren, bevor Sie andere Node-Typen installieren. Ein primärer Admin-Node kann eine Verbindung mit dem Grid-Netzwerk und dem optionalen Admin-Netzwerk und dem Client-Netzwerk herstellen, wenn ein oder beide konfiguriert sind.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Das Gerät wurde in einem Rack oder Schrank installiert, mit Ihren Netzwerken verbunden und eingeschaltet.
 * Mithilfe des Installationsprogramms der StorageGRID Appliance wurden Netzwerkverbindungen, IP-Adressen und (falls erforderlich) die Port-Neuzuordnung für die Appliance konfiguriert.
 +
@@ -31,6 +31,7 @@ NOTE: Der CLB-Service ist veraltet.
 * Sie kennen eine der IP-Adressen, die der Appliance zugewiesen sind. Sie können die IP-Adresse für jedes angeschlossene StorageGRID-Netzwerk verwenden.
 
 
+.Über diese Aufgabe
 So installieren Sie StorageGRID auf einem primären Administrator-Node einer Appliance:
 
 * Sie verwenden das Installationsprogramm für StorageGRID-Appliances, um die StorageGRID-Software zu installieren. Wenn Sie eine andere Version der Software installieren möchten, laden Sie sie zuerst mithilfe des StorageGRID-Appliance-Installationsprogramms hoch.

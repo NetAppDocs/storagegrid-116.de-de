@@ -13,6 +13,7 @@ summary: Sie können einen Grid-Node vom Grid Manager oder von der Befehlsshell 
 [role="lead"]
 Sie können einen Grid-Node aus dem Grid Manager oder aus der Befehlshaber des Node neu booten.
 
+.Über diese Aufgabe
 Beim Neubooten eines Grid-Node wird der Node heruntergefahren und neu gestartet. Alle Dienste werden automatisch neu gestartet.
 
 Wenn Sie Storage-Nodes neu starten möchten, beachten Sie Folgendes:
@@ -21,4 +22,5 @@ Wenn Sie Storage-Nodes neu starten möchten, beachten Sie Folgendes:
 * Um sicherzustellen, dass Sie während des Neubootens eines Storage-Node auf alle Objekte zugreifen können, beenden Sie die Verarbeitung von Objekten an einem Standort etwa eine Stunde lang, bevor Sie den Node neu booten.
 
 
+.Verwandte Informationen
 xref:../admin/index.adoc[StorageGRID verwalten]

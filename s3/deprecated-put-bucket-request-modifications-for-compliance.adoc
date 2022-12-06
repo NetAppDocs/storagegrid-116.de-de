@@ -29,6 +29,7 @@ Mit aktivierter Compliance können keine neuen Buckets mehr erstellt werden. Die
 The Compliance feature is deprecated.
 Contact your StorageGRID administrator if you need to create new Compliant buckets.
 ----
+.Verwandte Informationen
 xref:../ilm/index.adoc[Objektmanagement mit ILM]
 
 xref:../tenant/index.adoc[Verwenden Sie das Mandantenkonto]

@@ -13,7 +13,7 @@ summary: Wenn Sie einen S3-Mandanten verwenden und über entsprechende Berechtig
 [role="lead"]
 Wenn Sie einen S3-Mandanten verwenden und über die entsprechenden Berechtigungen verfügen, können Sie die S3-Zugriffsschlüssel eines anderen Benutzers anzeigen. Sie können die Liste nach Ablauf der Zeit sortieren, sodass Sie feststellen können, welche Schlüssel bald ablaufen. Nach Bedarf können Sie neue Schlüssel erstellen und Schlüssel löschen, die nicht mehr verwendet werden.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Mandantenmanager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie müssen über die Berechtigung Root Access verfügen.
 
@@ -44,6 +44,7 @@ Abgelaufene Schlüssel werden automatisch entfernt.
 
 
 
+.Verwandte Informationen
 xref:creating-another-users-s3-access-keys.adoc[Erstellen von S3-Zugriffsschlüsseln eines anderen Benutzers]
 
 xref:deleting-another-users-s3-access-keys.adoc[Löschen Sie die S3-Zugriffsschlüssel eines anderen Benutzers]

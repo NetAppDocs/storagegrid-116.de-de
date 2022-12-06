@@ -13,6 +13,7 @@ summary: Jeder Storage Controller verfügt über eine Anzeige in sieben Segmente
 [role="lead"]
 Jeder Storage Controller verfügt über eine Anzeige in sieben Segmenten, die Statuscodes bereitstellt, wenn der Controller heruntergefahren wird. Die Statuscodes sind sowohl für den E2800 Controller als auch für den EF570 Controller identisch.
 
+.Über diese Aufgabe
 Beschreibungen dieser Codes finden Sie in den Informationen zur Systemüberwachung der E-Series für Ihren Storage Controller-Typ.
 
 .Schritte
@@ -30,6 +31,7 @@ image::../media/seven_segment_display_codes_for_e2800.gif[Anzeigecodes für sieb
 . Wenn ein Controller oder beide andere Werte anzeigen, lesen Sie xref:troubleshooting-hardware-installation.adoc[Fehlerbehebung bei der Hardwareinstallation (SG6000)] Und bestätigen Sie, dass Sie die Installationsschritte korrekt ausgeführt haben. Wenn das Problem nicht behoben werden kann, wenden Sie sich an den technischen Support.
 
 
+.Verwandte Informationen
 https://library.netapp.com/ecmdocs/ECMLP2588751/html/frameset.html["E5700 und E2800 – System Monitoring Guide"^]
 
 https://mysupport.netapp.com/site/global/dashboard["NetApp Support"^]

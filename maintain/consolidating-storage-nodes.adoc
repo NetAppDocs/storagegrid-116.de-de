@@ -22,4 +22,5 @@ Beispielsweise können Sie zwei neue Storage-Nodes mit größerer Kapazität hin
 
 Durch Hinzufügen neuer Kapazität vor dem Entfernen vorhandener Storage-Nodes wird eine ausgewogenere Datenverteilung im gesamten StorageGRID System sichergestellt. Sie reduzieren auch die Möglichkeit, dass ein vorhandener Storage-Node über die Storage-Grenzmarke hinaus geschoben werden kann.
 
+.Verwandte Informationen
 xref:../expand/index.adoc[Erweitern Sie Ihr Raster]

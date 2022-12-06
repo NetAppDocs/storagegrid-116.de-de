@@ -13,7 +13,7 @@ summary: 'Sie können DNS-Server \(DNS\) hinzufügen, entfernen und aktualisiere
 [role="lead"]
 Sie können DNS-Server (Domain Name System) hinzufügen, entfernen und aktualisieren, sodass Sie vollständig qualifizierte Domain Name (FQDN) Hostnamen anstelle von IP-Adressen verwenden können.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie müssen über die Berechtigung Wartung oder Stammzugriff verfügen.
 * Sie müssen die IP-Adressen der DNS-Server konfigurieren.

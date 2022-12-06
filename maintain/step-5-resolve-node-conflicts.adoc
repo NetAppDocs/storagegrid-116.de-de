@@ -100,6 +100,7 @@ NOTE: Die Schaltfläche * Previous* bleibt deaktiviert, bis die Stilllegung abge
 
 
 
+.Verwandte Informationen
 xref:../monitor/index.adoc[Monitoring und Fehlerbehebung]
 
 xref:grid-node-procedures.adoc[Verfahren für den Grid-Node]

@@ -13,7 +13,7 @@ summary: NFS-Audit-Clients erhalten auf Basis ihrer IP-Adresse Zugriff auf eine 
 [role="lead"]
 NFS-Audit-Clients erhalten auf Basis ihrer IP-Adresse Zugriff auf eine Revisionsfreigabe. Gewähren Sie einem neuen NFS-Audit-Client Zugriff auf die Revisionsfreigabe, indem Sie dessen IP-Adresse zur Revisionsfreigabe hinzufügen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben die `Passwords.txt` Datei mit dem Root-/Admin-Passwort (im GENANNTEN Paket verfügbar).
 * Sie haben die `Configuration.txt` Datei (im GENANNTEN Paket verfügbar).
 * Der Audit-Client verwendet die NFS-Version 3 (NFSv3).

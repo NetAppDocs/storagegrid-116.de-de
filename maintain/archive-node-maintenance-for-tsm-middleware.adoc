@@ -27,6 +27,7 @@ Wenn Sie feststellen, dass ein Fehler beim Archivspeichergerät vorliegt, auf da
 
 Bevor Sie eine Wartung des TSM Middleware-Servers durchführen, der dazu führen kann, dass der Knoten „Archiv“ nicht mehr verfügbar ist, nehmen Sie die Zielkomponente offline, um die Anzahl der Alarme zu begrenzen, die ausgelöst werden, wenn der TSM Middleware-Server nicht mehr verfügbar ist.
 
+.Was Sie benötigen
 Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 
 .Schritte
@@ -54,7 +55,7 @@ Wenn der Archivknoten ein Objekt vom Tivoli Storage Manager (TSM)-Server anforde
 
 Wenn diese Situation eintritt, wird ein Alarm ausgelöst, und der Wert steigt weiter. Um den Alarm anzuzeigen, wählen Sie *SUPPORT* *Tools* *Grid-Topologie*. Wählen Sie dann *Archiv-Knoten* *ARC* *Abrufen* *Fehler anfordern*.
 
-Wenn das Objekt dauerhaft nicht verfügbar ist, müssen Sie das Objekt identifizieren und die Anfrage des Archivierungs-Nodes manuell abbrechen, wie in der Prozedur beschrieben. ,Bestimmen, ob Objekte dauerhaft nicht verfügbar sind.
+Wenn das Objekt dauerhaft nicht verfügbar ist, müssen Sie das Objekt identifizieren und die Anfrage des Archivierungs-Nodes manuell abbrechen, wie in der Prozedur beschrieben. <<determining_objects_permanently_unavailable,Bestimmen, ob Objekte dauerhaft nicht verfügbar sind>>.
 
 Ein Abruf kann auch fehlschlagen, wenn das Objekt vorübergehend nicht verfügbar ist. In diesem Fall sollten nachfolgende Abrufanfragen erfolgreich sein.
 
@@ -66,12 +67,13 @@ Wenn das StorageGRID System so konfiguriert ist, dass eine ILM-Regel verwendet w
 
 Sie können feststellen, ob Objekte dauerhaft nicht verfügbar sind, indem Sie eine Anforderung über die TSM-Administrationskonsole erstellen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen über spezifische Zugriffsberechtigungen verfügen.
 * Sie müssen die haben `Passwords.txt` Datei:
 * Sie müssen die IP-Adresse eines Admin-Knotens kennen.
 
 
+.Über diese Aufgabe
 Dieses Beispiel dient nur zu Ihren Informationen. Dieses Verfahren kann Ihnen nicht dabei helfen, alle Ausfallbedingungen zu identifizieren, die zu nicht verfügbaren Objekten oder Bandvolumes führen können. Informationen zur TSM-Administration finden Sie in der TSM-Server-Dokumentation.
 
 .Schritte
@@ -221,6 +223,7 @@ NOTE: Der `/proc/CMSI/Object_Lost` Der Befehl ist nur für verlorene Objekte gü
 
 
 
+.Verwandte Informationen
 xref:../admin/index.adoc[StorageGRID verwalten]
 
 xref:../audit/index.adoc[Prüfung von Audit-Protokollen]

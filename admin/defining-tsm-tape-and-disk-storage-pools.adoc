@@ -13,6 +13,7 @@ summary: Der Archivknoten schreibt in einen Festplatten-Speicherpool. Um Inhalte
 [role="lead"]
 Der Archivknoten schreibt in einen Festplatten-Speicherpool. Um Inhalte auf Band zu archivieren, müssen Sie den Festplatten-Speicherpool konfigurieren, um Inhalte in einen Bandspeicher-Pool zu verschieben.
 
+.Über diese Aufgabe
 Bei einem TSM-Server müssen Sie einen Bandspeicher-Pool und einen Festplatten-Speicherpool in Tivoli Storage Manager definieren. Erstellen Sie nach Definition des Laufwerk-Pools ein Laufwerk-Volume und weisen Sie es dem Laufwerk-Pool zu. Ein Bandpool‐nicht erforderlich, wenn Ihr TSM-Server nur Festplatten-Storage verwendet.
 
 Sie müssen eine Reihe von Schritten auf Ihrem TSM-Server durchführen, bevor Sie einen Bandspeicher-Pool erstellen können. (Erstellen Sie eine Bandbibliothek und mindestens ein Laufwerk in der Bandbibliothek. Definieren Sie einen Pfad vom Server zur Bibliothek und vom Server zu den Laufwerken und definieren Sie dann eine Geräteklasse für die Laufwerke.) Die Details dieser Schritte können je nach Hardwarekonfiguration und Storage-Anforderungen des Standorts variieren. Weitere Informationen finden Sie in der TSM-Dokumentation.

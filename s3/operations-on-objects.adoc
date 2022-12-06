@@ -180,4 +180,5 @@ Widersprüchliche Clientanforderungen, wie z. B. zwei Clients, die in denselben 
 Wenn der `versionId` Der Abfrageparameter wird in der Anforderung nicht angegeben, und der Vorgang fügt Tags zur aktuellen Version des Objekts in einem versionierten Bucket hinzu. Wenn die aktuelle Version des Objekts ein Löschen-Marker ist, wird mit dem ein Status „`MethodNotAllowed`“ zurückgegeben `x-amz-delete-marker` Antwortkopfzeile auf gesetzt `true`.
 
 |===
+.Verwandte Informationen
 xref:s3-operations-tracked-in-audit-logs.adoc[S3-Vorgänge werden in Prüfprotokollen nachverfolgt]

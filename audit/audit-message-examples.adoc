@@ -71,6 +71,7 @@ UT][ANID(UI32):12872812][AMID(FC32):S3RQ][ATID(UI64):15792241
 ----
 ATIM zeichnet die Zeit in Mikrosekunden, seit Beginn der UNIX-Epoche. Im Beispiel der Wert `1405631878959669` Übersetzt bis Donnerstag, 17. Juli 2014 21:17:59 UTC.
 
+.Verwandte Informationen
 xref:sput-s3-put.adoc[SPUT: S3 PUT]
 
 xref:common-elements-in-audit-messages.adoc[Gemeinsame Elemente in Audit-Meldungen]

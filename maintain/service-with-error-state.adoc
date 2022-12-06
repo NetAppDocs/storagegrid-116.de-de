@@ -13,8 +13,10 @@ summary: Wenn Sie feststellen, dass ein Dienst einen Fehlerstatus eingegeben hat
 [role="lead"]
 Wenn Sie feststellen, dass ein Dienst einen Fehlerstatus eingegeben hat, versuchen Sie, den Dienst neu zu starten.
 
+.Was Sie benötigen
 Sie müssen die haben `Passwords.txt` Datei:
 
+.Über diese Aufgabe
 Server Manager überwacht Dienste und startet alle, die unerwartet angehalten haben. Wenn ein Dienst ausfällt, versucht der Server Manager, ihn neu zu starten. Wenn drei fehlgeschlagene Versuche bestehen, einen Dienst innerhalb von fünf Minuten zu starten, wechselt der Dienst in einen Fehlerzustand. Server Manager versucht keinen anderen Neustart.
 
 .Schritte

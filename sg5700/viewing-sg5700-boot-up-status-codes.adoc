@@ -13,6 +13,7 @@ summary: Die sieben-Segment-Anzeigen auf jedem Controller zeigen Status- und Feh
 [role="lead"]
 Die sieben-Segment-Anzeigen auf jedem Controller zeigen Status- und Fehlercodes an, wenn das Gerät eingeschaltet wird.
 
+.Über diese Aufgabe
 Der E2800 Controller und der E5700SG Controller zeigen verschiedene Status und Fehlercodes an.
 
 Um zu verstehen, was diese Codes bedeuten, lesen Sie die folgenden Ressourcen:
@@ -76,6 +77,7 @@ In der Sequenz ist der erste Zahlensatz die IP-Adresse, die vom DHCP für den Ma
 . Wenn die sieben Segmente andere Werte anzeigen, siehe xref:troubleshooting-hardware-installation.adoc[Fehlerbehebung bei der Hardware-Installation (SG5700)] Und bestätigen Sie, dass Sie die Installationsschritte korrekt ausgeführt haben. Wenn das Problem nicht behoben werden kann, wenden Sie sich an den technischen Support.
 
 
+.Verwandte Informationen
 xref:status-indicators-on-e5700sg-controller.adoc[Statusanzeigen auf dem E5700SG-Controller]
 
 https://library.netapp.com/ecmdocs/ECMLP2588751/html/frameset.html["E5700 und E2800 – System Monitoring Guide"^]

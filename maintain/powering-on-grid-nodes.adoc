@@ -17,6 +17,7 @@ Folgen Sie dieser Sequenz, um die Grid-Knoten nach einem vollständigen Herunter
 
 CAUTION: Wenn das gesamte Grid seit mehr als 15 Tagen heruntergefahren wurde, müssen Sie sich an den technischen Support wenden, bevor Sie die Grid-Nodes starten. Versuchen Sie nicht, die Wiederherstellungsverfahren für die Wiederherstellung von Cassandra-Daten zu verwenden. Dies kann zu Datenverlust führen.
 
+.Über diese Aufgabe
 Wenn möglich, sollten Sie die Netzknoten in dieser Reihenfolge einschalten:
 
 * Zuerst die Administratorknoten mit Strom versorgen.

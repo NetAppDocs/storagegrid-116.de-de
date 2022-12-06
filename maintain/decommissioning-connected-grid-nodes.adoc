@@ -135,4 +135,5 @@ xref:../sg6000/index.adoc[SG6000 Storage-Appliances]
 
 
 
+.Verwandte Informationen
 xref:../rhel/index.adoc[Installieren Sie Red hat Enterprise Linux oder CentOS]

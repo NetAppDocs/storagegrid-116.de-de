@@ -13,7 +13,7 @@ summary: Sie können die Subnetze in der Subnetz-Liste Admin-Netzwerk eines oder
 [role="lead"]
 Sie können die Subnetze in der Subnetz-Liste Admin-Netzwerk eines oder mehrerer Nodes hinzufügen, löschen oder ändern.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen die haben `Passwords.txt` Datei:
 
 
@@ -139,4 +139,5 @@ Updating grid network configuration on Name
 
 
 
+.Verwandte Informationen
 xref:configuring-ip-addresses.adoc[Konfigurieren Sie IP-Adressen]

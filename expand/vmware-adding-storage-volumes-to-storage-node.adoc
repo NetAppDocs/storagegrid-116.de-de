@@ -14,7 +14,7 @@ summary: Wenn ein Storage-Node weniger als 16 Storage-Volumes enthält, können 
 [role="lead"]
 Wenn ein Storage-Node weniger als 16 Storage-Volumes enthält, können Sie seine Kapazität mithilfe von VMware vSphere erhöhen, um Volumes hinzuzufügen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben Zugriff auf die Anweisungen zur Installation von StorageGRID für VMware Implementierungen.
 +
 ** xref:../vmware/index.adoc[VMware installieren]
@@ -27,6 +27,7 @@ Wenn ein Storage-Node weniger als 16 Storage-Volumes enthält, können Sie seine
 
 IMPORTANT: Versuchen Sie nicht, Speicher-Volumes zu einem Speicherknoten hinzuzufügen, während ein Software-Upgrade, ein Wiederherstellungsverfahren oder ein anderer Erweiterungsvorgang aktiv ist.
 
+.Über diese Aufgabe
 Der Storage-Node ist für kurze Zeit nicht verfügbar, wenn Sie Storage Volumes hinzufügen. Sie sollten dieses Verfahren jeweils auf einem Storage-Knoten durchführen, um die Grid-Services für Clients zu beeinträchtigen.
 
 .Schritte
@@ -109,4 +110,5 @@ Der Status wird automatisch aktualisiert.
 
 
 
+.Ergebnis
 Sie können die erweiterte Kapazität der Speicherknoten zum Speichern von Objektdaten verwenden.

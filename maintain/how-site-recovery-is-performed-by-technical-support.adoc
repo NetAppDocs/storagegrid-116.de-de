@@ -66,4 +66,5 @@ Nach der Wiederherstellung von Objektmetadaten und -Daten können fehlerhafte Ga
 
 
 
+.Verwandte Informationen
 xref:site-decommissioning.adoc[Deaktivierung der Website]

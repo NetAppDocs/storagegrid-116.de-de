@@ -23,4 +23,5 @@ Nehmen Sie beispielsweise an, ein Datacenter-Standort umfasst derzeit sechs Stor
 
 Wenn ein Speicherknoten außer Betrieb gesetzt werden muss, aber aufgrund der ADC-Quorum-Anforderung nicht in der Lage ist, müssen Sie einen neuen Speicherknoten in einer Erweiterung hinzufügen und angeben, dass er über einen ADC-Dienst verfügen soll. Anschließend können Sie den vorhandenen Storage-Node ausmustern.
 
+.Verwandte Informationen
 xref:../expand/index.adoc[Erweitern Sie Ihr Raster]

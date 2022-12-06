@@ -20,10 +20,11 @@ Sie können mehrere Aufgaben durchführen, um die Ursache von Metadatenproblemen
 
 Wenn die Warnung * Storage* mit niedrigen Metadaten ausgelöst wird, müssen Sie neue Storage-Nodes hinzufügen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 
 
+.Über diese Aufgabe
 StorageGRID reserviert eine bestimmte Menge an Speicherplatz auf Volume 0 jedes Storage-Nodes für Objekt-Metadaten. Dieser Speicherplatz wird als tatsächlicher reservierter Speicherplatz bezeichnet und in den Speicherplatz für Objekt-Metadaten (zulässiger Metadatenspeicherplatz) und den für wichtige Datenbankvorgänge wie Data-Compaction und Reparatur erforderlichen Speicherplatz unterteilt. Der zulässige Metadatenspeicherplatz bestimmt die gesamte Objektkapazität.
 
 image::../media/metadata_allowed_space_volume_0.png[Metadaten Zulässig Speicherplatz Volume 0]
@@ -76,12 +77,13 @@ Nach der Erweiterung verteilt StorageGRID die vorhandenen Objekt-Metadaten neu a
 
 Der Alarm Services: Status – Cassandra (SVST) gibt an, dass Sie die Cassandra-Datenbank für einen Storage-Node möglicherweise neu aufbauen müssen. Cassandra dient als Metadatenspeicher für StorageGRID.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie müssen über spezifische Zugriffsberechtigungen verfügen.
 * Sie müssen die haben `Passwords.txt` Datei:
 
 
+.Über diese Aufgabe
 Wenn Cassandra länger als 15 Tage angehalten wird (z. B. ausgeschaltet), startet Cassandra nicht, wenn der Node wieder online geschaltet wird. Sie müssen die Cassandra-Datenbank für den betroffenen DDS-Dienst neu erstellen.
 
 Das können Sie xref:running-diagnostics.adoc[Führen Sie eine Diagnose aus] Um zusätzliche Informationen über den aktuellen Status Ihres Rasters zu erhalten.
@@ -165,7 +167,7 @@ Wenn Cassandra länger als 15 Tage ausfällt, wird die folgende Meldung in der D
 started because it has been offline for longer than
 its 15 day grace period - rebuild cassandra
 ----
-.. Stellen Sie sicher, dass der Zeitstempel dieser Nachricht der Zeitpunkt ist, zu dem Sie versucht haben, Cassandra wie in Schritt angegeben neu zu starten ,Starten Sie Cassandra vom Storage-Node aus neu.
+.. Stellen Sie sicher, dass der Zeitstempel dieser Nachricht der Zeitpunkt ist, zu dem Sie versucht haben, Cassandra wie in Schritt angegeben neu zu starten <<restart_Cassandra_from_the_Storage_Node,Starten Sie Cassandra vom Storage-Node aus neu>>.
 +
 Für Cassandra gibt es mehrere Einträge; Sie müssen den letzten Eintrag finden.
 
@@ -184,6 +186,7 @@ Anweisungen hierzu finden Sie unter xref:../maintain/recovering-storage-node-tha
 
 Ein Alarm für Total Events (SMTT) wird ausgelöst, wenn die Cassandra-Datenbank einen Fehler außerhalb des Arbeitsspeichers hat. Wenn dieser Fehler auftritt, wenden Sie sich an den technischen Support, um das Problem zu bearbeiten.
 
+.Über diese Aufgabe
 Wenn für die Cassandra-Datenbank ein Fehler außerhalb des Arbeitsspeichers auftritt, wird ein Heap Dump erstellt, ein SMTT-Alarm (Total Events) ausgelöst und die Anzahl der Cassandra Heap Out of Memory-Fehler wird um eins erhöht.
 
 .Schritte

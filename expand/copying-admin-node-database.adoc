@@ -13,12 +13,13 @@ summary: Beim Hinzufügen von Admin-Nodes durch ein Erweiterungsverfahren könne
 [role="lead"]
 Beim Hinzufügen von Admin-Nodes durch ein Erweiterungsverfahren können Sie optional die Datenbank vom primären Admin-Node zum neuen Admin-Node kopieren. Durch das Kopieren der Datenbank können Sie historische Informationen über Attribute, Warnmeldungen und Warnmeldungen aufbewahren.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben die erforderlichen Erweiterungsschritte zum Hinzufügen eines Admin-Knotens abgeschlossen.
 * Sie haben die `Passwords.txt` Datei:
 * Sie haben die Provisionierungs-Passphrase.
 
 
+.Über diese Aufgabe
 Der StorageGRID-Softwareaktivierungsprozess erstellt eine leere Datenbank für den NMS-Dienst auf dem Erweiterungs-Admin-Knoten. Wenn der NMS-Dienst auf dem Erweiterungs-Admin-Knoten startet, zeichnet er Informationen für Server und Dienste auf, die derzeit Teil des Systems sind oder später hinzugefügt werden. Diese Admin-Knoten-Datenbank enthält die folgenden Informationen:
 
 * Meldungsverlauf

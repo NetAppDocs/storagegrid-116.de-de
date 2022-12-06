@@ -13,7 +13,7 @@ summary: Wenn Sie das Gerät mit Strom versorgen, protokolliert der BMC eine Rei
 [role="lead"]
 Wenn Sie das Gerät mit Strom versorgen, protokolliert der BMC eine Reihe von Startcodes für den SG6000-CN-Controller. Sie können diese Codes auf verschiedene Arten anzeigen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Wissen Sie, wie Sie auf das BMC-Dashboard zugreifen können.
 * Wenn Sie Seriell-über-LAN (SOL) verwenden möchten, haben Sie Erfahrung mit IPMI SOL-Konsolenanwendungen.
 

@@ -13,11 +13,12 @@ summary: Wenn Sie einen neuen Admin-Node durch ein Erweiterungsverfahren hinzuf�
 [role="lead"]
 Wenn Sie einen neuen Admin-Node durch ein Erweiterungsverfahren hinzufügen, protokolliert sein AMS-Service nur Ereignisse und Aktionen, die nach dem Beitritt zum System auftreten. Nach Bedarf können Sie Audit-Protokolle von einem zuvor installierten Admin-Node auf den neuen Erweiterungs-Admin-Node kopieren, sodass er mit dem Rest des StorageGRID Systems synchronisiert ist.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben die erforderlichen Erweiterungsschritte zum Hinzufügen eines Admin-Knotens abgeschlossen.
 * Sie haben die `Passwords.txt` Datei:
 
 
+.Über diese Aufgabe
 Um historische Audit-Meldungen auf einem neuen Admin-Knoten verfügbar zu machen, müssen Sie die Audit-Log-Dateien manuell von einem vorhandenen Admin-Knoten in den Erweiterungs-Admin-Knoten kopieren.
 
 [NOTE]

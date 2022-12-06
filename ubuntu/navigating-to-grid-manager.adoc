@@ -13,6 +13,7 @@ summary: Mit dem Grid Manager können Sie alle Informationen definieren, die fü
 [role="lead"]
 Mit dem Grid Manager können Sie alle Informationen definieren, die für die Konfiguration des StorageGRID Systems erforderlich sind.
 
+.Was Sie benötigen
 Der primäre Admin-Node muss bereitgestellt werden und die anfängliche Startsequenz abgeschlossen haben.
 
 .Schritte

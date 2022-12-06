@@ -108,4 +108,5 @@ Veraltet, aber unterstützt: Ermöglicht es Ihnen, die Compliance-Einstellungen 
 xref:deprecated-put-bucket-compliance-request.adoc[Veraltet: PUT Bucket-Compliance-Anforderung]
 
 |===
+.Verwandte Informationen
 xref:s3-operations-tracked-in-audit-logs.adoc[S3-Vorgänge werden in den Audit-Protokollen protokolliert]

@@ -13,7 +13,7 @@ summary: Möglicherweise müssen Sie den E5700SG-Controller austauschen, wenn er
 [role="lead"]
 Möglicherweise müssen Sie den E5700SG-Controller austauschen, wenn er nicht optimal funktioniert oder ausgefallen ist.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie verfügen über einen Ersatzcontroller mit derselben Teilenummer wie der zu ersetzenden Controller.
 * Sie haben die Anweisungen zur E-Series zum Austausch eines ausgefallenen E5700 Controllers heruntergeladen.
 +
@@ -24,6 +24,7 @@ IMPORTANT: Wenn Sie weitere Details für einen bestimmten Schritt benötigen, so
 * Das Gerät war xref:placing-appliance-into-maintenance-mode.adoc[In den Wartungsmodus versetzt].
 
 
+.Über diese Aufgabe
 Auf den Appliance-Speicherknoten kann nicht zugegriffen werden, wenn Sie den Controller austauschen. Wenn der E5700SG-Controller ausreichend funktioniert, können Sie zu Beginn dieses Verfahrens ein kontrolliertes Herunterfahren durchführen.
 
 
@@ -111,4 +112,5 @@ Der endgültige Zustand ist `HA`.
 . Vergewissern Sie sich, dass der Appliance Storage Node im Grid Manager angezeigt wird und keine Alarme angezeigt werden.
 
 
+.Verwandte Informationen
 http://mysupport.netapp.com/info/web/ECMP1658252.html["NetApp E-Series Systems Documentation Site"^]

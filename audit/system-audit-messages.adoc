@@ -205,4 +205,5 @@ Vom Benutzer Initiiertes Volume Verloren: Das `/proc/CMSI/Volume_Lost` Befehl wu
 xref:vlst-user-initiated-volume-lost.adoc[VLST: Vom Benutzer initiiertes Volumen verloren]
 
 |===
+.Verwandte Informationen
 xref:lkcu-overwritten-object-cleanup.adoc[LKCU: Objektbereinigung überschrieben]

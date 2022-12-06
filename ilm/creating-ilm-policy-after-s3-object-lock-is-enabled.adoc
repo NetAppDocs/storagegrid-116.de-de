@@ -13,7 +13,7 @@ summary: Wenn die globale S3-Objektsperre aktiviert ist, unterscheiden sich die 
 [role="lead"]
 Wenn die globale S3-Objektsperre aktiviert ist, unterscheiden sich die Schritte zum Erstellen einer Richtlinie geringfügig. Sie müssen sicherstellen, dass die ILM-Richtlinie die Anforderungen von Buckets erfüllt, für die S3 Object Lock aktiviert ist.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben spezifische Zugriffsberechtigungen.
 * Die globale S3-Objektsperre ist für das StorageGRID-System bereits aktiviert.

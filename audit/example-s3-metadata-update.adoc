@@ -33,4 +33,5 @@ Der S3-Client fordert eine SUPD (SUPD) auf, die angegebenen Metadaten zu aktuali
 [ATIM(UI64):1499810043157462][ATYP(FC32):SUPD][ANID(UI32):12258396][AMID(FC32):S3RQ]
 [ATID(UI64):8987436599021955788]]
 ----
+.Verwandte Informationen
 xref:../monitor/configure-audit-messages.adoc[Konfigurieren von Überwachungsmeldungen und Protokollzielen]

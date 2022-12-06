@@ -13,7 +13,7 @@ summary: Wenn Sie einen S3-Mandanten verwenden, können Sie den Mandanten-Manage
 [role="lead"]
 Wenn Sie einen S3-Mandanten verwenden, können Sie den Mandanten-Manager oder die Mandanten-Management-API verwenden, um den Versionierungsstatus für S3 Buckets zu ändern.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem beim Mandantenmanager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie gehören zu einer Benutzergruppe mit den Berechtigungen Alle Buckets verwalten oder Root Access. Diese Berechtigungen überschreiben die Berechtigungseinstellungen in Gruppen- oder Bucket-Richtlinien.
 +
@@ -21,6 +21,7 @@ xref:tenant-management-permissions.adoc[Mandantenmanagement-Berechtigungen]
 
 
 
+.Über diese Aufgabe
 Sie können die Objektversionierung für einen Bucket aktivieren oder aussetzen. Nachdem Sie die Versionierung für einen Bucket aktiviert haben, kann dieser nicht wieder in einen nichtversionierten Zustand zurückkehrt. Sie können die Versionierung für den Bucket jedoch unterbrechen.
 
 * Deaktiviert: Versionierung wurde noch nie aktiviert

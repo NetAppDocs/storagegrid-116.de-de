@@ -13,7 +13,7 @@ summary: 'Beim Neubooten eines Grid-Node aus dem Grid Manager wird der Probleme 
 [role="lead"]
 Beim Neubooten eines Grid-Node aus dem Grid Manager wird der Probleme auftreten `reboot` Befehl auf dem Ziel-Node.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben die Berechtigung Wartung oder Stammzugriff.
 * Sie haben die Provisionierungs-Passphrase.

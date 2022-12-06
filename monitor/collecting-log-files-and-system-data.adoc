@@ -13,12 +13,13 @@ summary: 'Mit dem Grid-Manager können Sie Protokolldateien und Systemdaten \ (e
 [role="lead"]
 Mit dem Grid Manager können Sie Protokolldateien und Systemdaten (einschließlich Konfigurationsdaten) für Ihr StorageGRID System abrufen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie müssen über spezifische Zugriffsberechtigungen verfügen.
 * Sie müssen über eine Passphrase für die Bereitstellung verfügen.
 
 
+.Über diese Aufgabe
 Sie können den Grid Manager zum Sammeln verwenden xref:logs-files-reference.adoc[Log-Dateien], Systemdaten und Konfigurationsdaten von einem beliebigen Grid-Knoten für den von Ihnen ausgewählten Zeitraum. Die Daten werden in einer .tar.gz-Datei gesammelt und archiviert, die Sie dann auf Ihren lokalen Computer herunterladen können.
 
 Optional können Sie das Ziel der Audit-Protokolle ändern und Audit-Informationen an einen externen Syslog-Server senden. Lokale Protokolle von Audit-Datensätzen werden weiterhin generiert und gespeichert, wenn ein externer Syslog-Server konfiguriert ist. Siehe xref:../monitor/configure-audit-messages.adoc[Konfigurieren von Überwachungsmeldungen und Protokollzielen].
@@ -65,6 +66,7 @@ Die Datei _.tar.gz_ enthält alle Protokolldateien aller Grid-Knoten, in denen d
 
 
 
+.Nachdem Sie fertig sind
 Sie können das Archivpaket für die Protokolldatei später erneut herunterladen, wenn Sie es benötigen.
 
 Optional können Sie *Löschen* wählen, um das Archiv-Paket der Protokolldatei zu entfernen und Speicherplatz freizugeben. Das aktuelle Archivpaket für die Protokolldatei wird beim nächsten Erfassen von Protokolldateien automatisch entfernt.

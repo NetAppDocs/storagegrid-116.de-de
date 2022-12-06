@@ -13,15 +13,16 @@ summary: Nach dem Abschluss der Linux-Installation auf Ihren Hosts müssen Sie m
 [role="lead"]
 Nach dem Abschluss der Linux-Installation auf Ihren Hosts müssen Sie möglicherweise eine zusätzliche Konfiguration durchführen, um auf jedem Host eine Reihe von Netzwerkschnittstellen vorzubereiten, die sich für die Zuordnung zu den später zu implementierenden StorageGRID Nodes eignen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben die geprüft xref:../network/index.adoc[StorageGRID Netzwerkrichtlinien].
 * Sie haben die Informationen zu überprüft xref:node-container-migration-requirements.adoc[Anforderungen für die Container-Migration für Nodes].
-* Wenn Sie virtuelle Hosts verwenden, haben Sie die gelesen ,Überlegungen und Empfehlungen zum Klonen von MAC-Adressen Vor dem Konfigurieren des Hostnetzwerks.
+* Wenn Sie virtuelle Hosts verwenden, haben Sie die gelesen <<mac_address_cloning_rhel,Überlegungen und Empfehlungen zum Klonen von MAC-Adressen>> Vor dem Konfigurieren des Hostnetzwerks.
 
 
 
 NOTE: Wenn Sie VMs als Hosts verwenden, sollten Sie VMXNET 3 als virtuellen Netzwerkadapter auswählen. Der VMware E1000-Netzwerkadapter hat Verbindungsprobleme bei StorageGRID-Containern mit bestimmten Linux-Distributionen verursacht.
 
+.Über diese Aufgabe
 Grid-Nodes müssen auf das Grid-Netzwerk und optional auf Admin- und Client-Netzwerke zugreifen können. Sie ermöglichen diesen Zugriff, indem Sie Zuordnungen erstellen, die die physische Schnittstelle des Hosts den virtuellen Schnittstellen für jeden Grid-Node zuordnen. Verwenden Sie bei der Erstellung von Host-Schnittstellen benutzerfreundliche Namen, um die Implementierung über alle Hosts hinweg zu vereinfachen und die Migration zu ermöglichen.
 
 Die gleiche Schnittstelle kann von dem Host und einem oder mehreren Nodes gemeinsam genutzt werden. Beispielsweise können Sie für den Hostzugriff und den Netzwerkzugriff von Node-Admin dieselbe Schnittstelle verwenden, um die Wartung von Hosts und Nodes zu vereinfachen. Obwohl dieselbe Schnittstelle zwischen dem Host und den einzelnen Nodes gemeinsam genutzt werden kann, müssen alle unterschiedliche IP-Adressen haben. IP-Adressen können nicht zwischen Nodes oder zwischen Host und einem beliebigen Node gemeinsam genutzt werden.
@@ -33,12 +34,14 @@ Sie können diese Aufgabe auf unterschiedliche Weise ausführen. Wenn es sich be
 
 NOTE: Verwenden Sie keine Bond- oder Bridge-Geräte direkt als Container-Netzwerkschnittstelle. Dies könnte den Anlauf eines Knotens verhindern, der durch ein Kernel-Problem verursacht wurde, indem MACLAN mit Bond- und Bridge-Geräten im Container-Namespace verwendet wird. Verwenden Sie stattdessen ein Gerät ohne Bindung, z. B. ein VLAN- oder ein virtuelles Ethernet-Paar (veth). Geben Sie dieses Gerät als Netzwerkschnittstelle in der Node-Konfigurationsdatei an.
 
+.Verwandte Informationen
 xref:creating-node-configuration-files.adoc[Erstellen von Knoten-Konfigurationsdateien]
 
 
 
 == Überlegungen und Empfehlungen zum Klonen von MAC-Adressen
 
+.[[mac_Address_Cloning_RHEL]]
 Das Klonen VON MAC-Adressen bewirkt, dass der Container die MAC-Adresse des Hosts verwendet und der Host die MAC-Adresse entweder einer von Ihnen angegebenen oder einer zufällig generierten Adresse verwendet. Verwenden Sie das Klonen von MAC-Adressen, um Netzwerkkonfigurationen im einfach zu vermeiden.
 
 
@@ -113,6 +116,7 @@ Wenn Switch 1 ein physischer Switch ist, sollten Sie die mit den Schnittstellen 
 
 == Beispiel 2: LACP Bond mit VLANs
 
+.Über diese Aufgabe
 Beispiel 2 geht davon aus, dass Sie mit der Verbindung von Netzwerkschnittstellen und der Erstellung von VLAN-Schnittstellen auf der von Ihnen verwendeten Linux-Distribution vertraut sind.
 
 Beispiel 2 beschreibt ein generisches, flexibles, VLAN-basiertes Schema, das die gemeinsame Nutzung aller verfügbaren Netzwerkbandbreite über alle Nodes auf einem einzelnen Host ermöglicht. Dieses Beispiel gilt insbesondere für Bare-Metal-Hosts.
@@ -137,4 +141,5 @@ Beispiele für Schnittstellenkonfigurationsdateien für dieses Netzwerkkonfigura
 
 
 
+.Verwandte Informationen
 xref:example-etc-sysconfig-network-scripts.adoc[Beispiel /etc/sysconfig/Network-scripts]

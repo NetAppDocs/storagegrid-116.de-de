@@ -27,6 +27,7 @@ Die folgenden Installationsprotokolldateien sind vom Host verfügbar:
 
 Informationen zum Zugriff auf die Protokolldateien finden Sie in den Anweisungen zum Überwachen und Beheben von StorageGRID. Informationen zur Fehlerbehebung bei Problemen mit der Installation finden Sie in den Installations- und Wartungsanweisungen für Ihre Geräte. Wenn Sie weitere Hilfe benötigen, wenden Sie sich an den technischen Support.
 
+.Verwandte Informationen
 xref:../monitor/index.adoc[Monitoring und Fehlerbehebung]
 
 xref:../sg100-1000/index.adoc[SG100- und SG1000-Services-Appliances]

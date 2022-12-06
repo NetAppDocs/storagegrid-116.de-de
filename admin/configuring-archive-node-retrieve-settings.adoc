@@ -13,7 +13,7 @@ summary: Sie können die Einstellungen für den Abruf eines Archiv-Knotens so ko
 [role="lead"]
 Sie können die Einstellungen für den Abruf eines Archiv-Knotens so konfigurieren, dass der Status auf Online oder Offline gesetzt wird, oder die Fehleranzahl, die für die zugehörigen Alarme nachverfolgt wird, zurücksetzen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben spezifische Zugriffsberechtigungen.
 

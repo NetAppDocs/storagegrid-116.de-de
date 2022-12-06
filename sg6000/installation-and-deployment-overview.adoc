@@ -13,6 +13,7 @@ summary: Sie können eine oder mehrere StorageGRID Storage Appliances installier
 [role="lead"]
 Sie können eine oder mehrere StorageGRID Storage Appliances installieren, wenn Sie StorageGRID zum ersten Mal implementieren. Alternativ können Sie Appliance Storage-Nodes später im Rahmen einer Erweiterung hinzufügen. Möglicherweise müssen Sie auch einen Appliance-Speicherknoten im Rahmen eines Wiederherstellungsvorgangs installieren.
 
+.Was Sie benötigen
 Ihr StorageGRID System verwendet die erforderliche Version der StorageGRID Software.
 
 |===
@@ -104,6 +105,7 @@ Anweisungen zur Wiederherstellung und Wartung
 |===
 
 
+.Verwandte Informationen
 xref:preparing-for-installation.adoc[Installation vorbereiten (SG6000)]
 
 xref:installing-hardware.adoc[Hardware installieren (SG6000)]

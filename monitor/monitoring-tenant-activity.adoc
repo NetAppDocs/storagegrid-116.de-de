@@ -13,7 +13,7 @@ summary: Alle Client-Aktivitäten sind mit einem Mandantenkonto verknüpft. Mit 
 [role="lead"]
 Alle Client-Aktivitäten sind mit einem Mandantenkonto verknüpft. Mit dem Grid Manager lässt sich die Storage-Nutzung oder der Netzwerk-Traffic eines Mandanten überwachen. Alternativ können mit dem Audit-Protokoll oder Grafana Dashboards ausführlichere Informationen zur Verwendung von StorageGRID durch Mandanten erstellt werden.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben die Berechtigung Root Access oder Administrator.
 
@@ -145,6 +145,7 @@ IMPORTANT: Die auf der Seite Metriken verfügbaren Tools sind in erster Linie f�
 
 
 
+.Verwandte Informationen
 xref:alerts-reference.adoc[Alerts Referenz]
 
 xref:../audit/index.adoc[Prüfung von Audit-Protokollen]

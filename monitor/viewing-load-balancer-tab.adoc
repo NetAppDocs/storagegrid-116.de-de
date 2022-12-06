@@ -46,6 +46,7 @@ Dieses Diagramm zeigt einen 3-minütigen versch. Durchschnitt der Anfragedauer u
 
 Dieses Diagramm zeigt einen Mittelwert, der durch 3 Minuten verschoben wird und der Anzahl der Fehlerantworten, die an Clients pro Sekunde zurückgegeben werden, aufgeschlüsselt nach dem Fehlercode.
 
+.Verwandte Informationen
 xref:monitoring-load-balancing-operations.adoc[Monitoring von Lastverteilungsvorgängen]
 
 xref:../admin/index.adoc[StorageGRID verwalten]

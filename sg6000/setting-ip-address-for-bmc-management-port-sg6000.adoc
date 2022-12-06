@@ -13,7 +13,7 @@ summary: Bevor Sie auf die BMC-Schnittstelle zugreifen können, müssen Sie die 
 [role="lead"]
 Bevor Sie auf die BMC-Schnittstelle zugreifen können, müssen Sie die IP-Adresse für den BMC-Management-Port des SG6000-CN-Controllers konfigurieren.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Der Management-Client verwendet ein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie verwenden jeden Management-Client, der eine Verbindung zu einem StorageGRID-Netzwerk herstellen kann.
 * Der BMC-Management-Port ist mit dem Managementnetzwerk verbunden, das Sie verwenden möchten.
@@ -22,6 +22,7 @@ image::../media/sg6000_cn_bmc_management_port.gif[BMC-Management-Port am SG6000-
 
 
 
+.Über diese Aufgabe
 Zu Support-Zwecken ermöglicht der BMC-Management-Port einen niedrigen Hardwarezugriff.
 
 

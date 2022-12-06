@@ -13,7 +13,7 @@ summary: 'Möglicherweise müssen Sie den Fibre Channel-Hostbus-Adapter \(HBA\) 
 [role="lead"]
 Möglicherweise müssen Sie den Fibre-Channel-Hostbus-Adapter (HBA) im SG6000-CN-Controller ersetzen, wenn dieser nicht optimal funktioniert oder wenn er ausgefallen ist.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben den richtigen Fibre Channel HBA für den Austausch.
 * Sie haben festgestellt, welcher SG6000-CN-Controller den zu ersetzenden Fibre Channel HBA enthält.
 +
@@ -29,6 +29,7 @@ xref:removing-sg6000-cn-controller-cover.adoc[Entfernen Sie die SG6000-CN Contro
 
 
 
+.Über diese Aufgabe
 Um Serviceunterbrechungen zu vermeiden, vergewissern Sie sich, dass alle anderen Storage-Nodes mit dem Grid verbunden sind, bevor Sie den Austausch des Fibre Channel-HBA starten oder den Adapter während eines geplanten Wartungsfensters austauschen, wenn die Zeiten der Serviceunterbrechung normalerweise zu erwarten sind. Informationen zum Bestimmen von Knotenverbindungsstatus finden Sie in den Anweisungen zum Verwalten von Objekten mit Information Lifecycle Management.
 
 
@@ -52,10 +53,12 @@ In der Riserbaugruppe befinden sich zwei Adapter: Ein Fibre-Channel-HBA und ein 
 . Setzen Sie den Adapter auf eine flache antistatische Oberfläche.
 
 
+.Nachdem Sie fertig sind
 Installieren Sie den Ersatz-Fibre-Channel-HBA.
 
 xref:reinstalling-fibre-channel-hba.adoc[Installieren Sie den Fibre Channel HBA neu]
 
+.Verwandte Informationen
 xref:reinstalling-fibre-channel-hba.adoc[Installieren Sie den Fibre Channel HBA neu]
 
 xref:../admin/index.adoc[StorageGRID verwalten]

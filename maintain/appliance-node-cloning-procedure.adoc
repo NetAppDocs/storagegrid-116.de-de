@@ -13,7 +13,7 @@ summary: 'Der Klonprozess kann mehrere Tage dauern, bis die Daten zwischen dem Q
 [role="lead"]
 Der Klonprozess kann mehrere Tage dauern, bis die Daten zwischen dem Quell-Node (Appliance, die ersetzt wird) und der Ziel-Appliance übertragen werden.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben das kompatible Zielgerät in einem Schrank oder Rack installiert, alle Kabel angeschlossen und mit Strom versorgt.
 * Sie haben überprüft, ob die Installationsversion für die StorageGRID Appliance auf der Ersatzanwendung mit der Softwareversion des StorageGRID-Systems übereinstimmt. Dabei müssen Sie ggf. die StorageGRID Appliance Installer-Firmware aktualisieren.
 * Sie haben die Ziel-Appliance konfiguriert, einschließlich der Konfiguration von StorageGRID-Verbindungen, SANtricity System Manager (nur Storage Appliances) und der BMC-Schnittstelle.

@@ -61,6 +61,7 @@ Vor der Verwendung von Plattform-Services müssen Sie die folgenden Empfehlungen
 * Die CloudMirror-Replikation schlägt mit einem AccessDenied-Fehler fehl, wenn auf dem Ziel-Bucket ältere Compliance-Funktionen aktiviert sind.
 
 
+.Verwandte Informationen
 xref:../tenant/index.adoc[Verwenden Sie das Mandantenkonto]
 
 xref:../admin/index.adoc[StorageGRID verwalten]

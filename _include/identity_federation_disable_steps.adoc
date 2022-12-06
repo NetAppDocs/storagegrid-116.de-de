@@ -4,6 +4,7 @@
 
 Sie können den Identitätsverbund für Gruppen und Benutzer vorübergehend oder dauerhaft deaktivieren. Wenn die Identitätsföderation deaktiviert ist, besteht keine Kommunikation zwischen StorageGRID und der Identitätsquelle. Allerdings bleiben alle von Ihnen konfigurierten Einstellungen erhalten, sodass Sie die Identitätsföderation zukünftig einfach wieder aktivieren können.
 
+.Über diese Aufgabe
 Bevor Sie die Identitätsföderation deaktivieren, sollten Sie Folgendes beachten:
 
 * Verbundene Benutzer können sich nicht anmelden.

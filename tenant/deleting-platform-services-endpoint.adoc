@@ -13,7 +13,7 @@ summary: Sie können einen Endpunkt löschen, wenn Sie den zugeordneten Plattfor
 [role="lead"]
 Sie können einen Endpunkt löschen, wenn Sie den zugeordneten Plattformdienst nicht mehr verwenden möchten.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Mandantenmanager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie müssen einer Benutzergruppe angehören, die die Berechtigung *Endpunkte verwalten* besitzt. Siehe xref:tenant-management-permissions.adoc[Mandantenmanagement-Berechtigungen].
 

@@ -35,4 +35,5 @@ NOTE: Wenn Sie eine neue Version eines Objekts über einen mehrteiligen Upload-V
 
 Anweisungen zum Managen von Objekten mit Information Lifecycle Management finden Sie in den Anweisungen, wie z. B. eine ILM-Richtlinie für versionierte Objekte mit S3 enthält.
 
+.Verwandte Informationen
 xref:../ilm/index.adoc[Objektmanagement mit ILM]

@@ -14,6 +14,7 @@ summary: 'Der SMTT-Alarm (Total Events) wird im Grid Manager ausgelöst, wenn ei
 [role="lead"]
 Der SMTT-Alarm (Total Events) wird im Grid Manager ausgelöst, wenn eine Plattformdienstnachricht an ein Ziel gesendet wird, das die Daten nicht annehmen kann.
 
+.Über diese Aufgabe
 So kann beispielsweise ein S3-Multipart-Upload erfolgreich sein, auch wenn die zugehörige Replizierungs- oder Benachrichtigungsmeldung nicht an den konfigurierten Endpunkt gesendet werden kann. Alternativ kann eine Nachricht für die CloudMirror Replizierung nicht bereitgestellt werden, wenn die Metadaten zu lang sind.
 
 Der SMTT-Alarm enthält eine Meldung „Letztes Ereignis“, die lautet: `Failed to publish notifications for _bucket-name object key_` Für das letzte Objekt, dessen Benachrichtigung fehlgeschlagen ist.

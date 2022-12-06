@@ -13,6 +13,7 @@ summary: Nach Abschluss einer Erweiterung müssen Sie weitere Integrations- und 
 [role="lead"]
 Nach Abschluss einer Erweiterung müssen Sie weitere Integrations- und Konfigurationsschritte durchführen.
 
+.Über diese Aufgabe
 Sie müssen die unten aufgeführten Konfigurationsaufgaben für die Grid-Nodes ausführen, die Sie in Ihrer Erweiterung hinzufügen. Einige Aufgaben können optional sein, je nachdem, welche Optionen bei der Installation und Verwaltung des Systems ausgewählt wurden, und wie Sie die während der Erweiterung hinzugefügten Grid-Nodes konfigurieren möchten.
 
 .Schritte

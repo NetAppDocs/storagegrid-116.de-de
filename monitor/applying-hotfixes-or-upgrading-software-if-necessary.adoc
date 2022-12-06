@@ -13,6 +13,7 @@ summary: Wenn ein Hotfix oder eine neue Version der StorageGRID-Software verfüg
 [role="lead"]
 Wenn ein Hotfix oder eine neue Version der StorageGRID-Software verfügbar ist, sollten Sie prüfen, ob das Update für Ihr System geeignet ist, und installieren Sie es, falls erforderlich.
 
+.Über diese Aufgabe
 StorageGRID Hotfixes enthalten Software-Änderungen, die außerhalb einer Feature- oder Patch-Freigabe verfügbar gemacht werden. Die gleichen Änderungen sind in einer zukünftigen Version enthalten.
 
 .Schritte

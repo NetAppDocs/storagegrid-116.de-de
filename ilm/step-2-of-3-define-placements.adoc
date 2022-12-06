@@ -13,6 +13,7 @@ summary: 'Schritt 2 \(Platzierungen definieren\) des Assistenten zum Erstellen v
 [role="lead"]
 Schritt 2 (Platzierungen definieren) des Assistenten zur Erstellung von ILM-Regeln können Sie die Anweisungen zur Platzierung festlegen, um festzulegen, wie lange Objekte gespeichert werden, wie viel Kopien (repliziert oder Erasure Coding), den Storage-Standort und die Anzahl der Kopien erstellt werden.
 
+.Über diese Aufgabe
 Eine ILM-Regel kann eine oder mehrere Anweisungen zur Platzierung enthalten. Jede Einstufungsanweisung gilt für einen einzelnen Zeitraum. Wenn Sie mehrere Befehle verwenden, müssen die Zeiträume zusammenhängend sein, und mindestens eine Anweisung muss am Tag 0 beginnen. Die Anweisungen können entweder für immer fortgesetzt werden oder bis Sie keine Objektkopien mehr benötigen.
 
 Jede Anweisung für die Platzierung kann mehrere Zeilen haben, wenn Sie verschiedene Arten von Kopien erstellen oder verschiedene Standorte während dieses Zeitraums verwenden möchten.

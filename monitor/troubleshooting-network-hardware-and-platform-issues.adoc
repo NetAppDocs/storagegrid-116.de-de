@@ -15,7 +15,7 @@ Sie können verschiedene Aufgaben durchführen, um die Ursache von Problemen im 
 
 
 
-== Fehler „422: Unbearbeitbare Einheit“ beheben
+== Fehler bei „`422: Unbearbeitbare Einheit`“ beheben
 
 Der Fehler 422: Unbearbeitbare Einheit kann unter verschiedenen Umständen auftreten. Überprüfen Sie die Fehlermeldung, um festzustellen, welche Ursache Ihr Problem verursacht hat.
 
@@ -75,14 +75,16 @@ Diese Meldung wird angezeigt, wenn Sie versuchen, eine nicht unterstützte Chiff
 Überprüfen Sie die vom externen System angebotenen Chiffren. Das System muss eine der von StorageGRID unterstützten Chiffren für ausgehende TLS-Verbindungen verwenden, wie in den Anleitungen zur StorageGRID-Verwaltung dargestellt.
 
 |===
+.Verwandte Informationen
 xref:../admin/index.adoc[StorageGRID verwalten]
 
 
 
-== Fehler bei der Warnmeldung zur Nichtübereinstimmung bei Grid Network MTU
+== [[Troubleshooting_MTU_Alert]]Fehlerbehebung bei der MTU-Warnung für das Grid Network
 
 Die Warnung *Grid Network MTU mismatch* wird ausgelöst, wenn sich die MTU-Einstellung (Maximum Transmission Unit) für die Grid Network Interface (eth0) über Knoten im Grid deutlich unterscheidet.
 
+.Über diese Aufgabe
 Die Unterschiede in den MTU-Einstellungen könnten darauf hinweisen, dass einige, aber nicht alle, eth0-Netzwerke für Jumbo Frames konfiguriert sind. Eine MTU-Größe von mehr als 1000 kann zu Problemen mit der Netzwerkleistung führen.
 
 .Schritte
@@ -152,6 +154,7 @@ Der Node. Die Standardeinstellung ist der lokale Knoten.
 
 
 
+.Verwandte Informationen
 xref:../sg100-1000/index.adoc[SG100- und SG1000-Services-Appliances]
 
 xref:../sg6000/index.adoc[SG6000 Storage-Appliances]
@@ -166,6 +169,7 @@ xref:../sg5600/index.adoc[SG5600 Storage Appliances]
 
 NRER-Alarme (Network Receive Error) können durch Verbindungsprobleme zwischen StorageGRID und Ihrer Netzwerk-Hardware verursacht werden. In einigen Fällen können NRER-Fehler ohne manuelles Eingreifen gelöscht werden. Wenn die Fehler nicht behoben werden, führen Sie die empfohlenen Maßnahmen durch.
 
+.Über diese Aufgabe
 NRER-Alarme können durch die folgenden Probleme mit Netzwerk-Hardware verursacht werden, die eine Verbindung mit StorageGRID herstellt:
 
 * Eine Vorwärtsfehlerkorrektur (FEC) ist erforderlich und wird nicht verwendet
@@ -234,7 +238,8 @@ Der Ruffuffer kann bei Überlastung des StorageGRID-Systems überlaufen werden u
 
 
 
-,Fehler bei der Warnmeldung zur Nichtübereinstimmung bei Grid Network MTU
+.Verwandte Informationen
+<<troubleshoot_MTU_alert,Fehler bei der Warnmeldung zur Nichtübereinstimmung bei Grid Network MTU>>
 
 xref:alarms-reference.adoc[Alarmreferenz (Altsystem)]
 
@@ -257,6 +262,7 @@ Wenn Probleme mit der Zeitsynchronisierung auftreten, stellen Sie sicher, dass S
 
 NOTE: Wenn Sie die externe NTP-Quelle für eine StorageGRID-Installation auf Produktionsebene angeben, verwenden Sie den Windows Time-Dienst (W32Time) nicht auf einer Windows-Version als Windows Server 2016. Der Zeitdienst für ältere Windows Versionen ist nicht ausreichend genau und wird von Microsoft nicht für die Verwendung in Umgebungen mit hoher Genauigkeit, wie z. B. StorageGRID, unterstützt.
 
+.Verwandte Informationen
 xref:../maintain/index.adoc[Recovery und Wartung]
 
 
@@ -282,16 +288,18 @@ Weitere Informationen zum Aktivieren des MAC-Klonens finden Sie in den Anweisung
 
 Wenn Sie kein Klonen der MAC-Adresse verwenden möchten und lieber alle Schnittstellen Daten für andere MAC-Adressen als die vom Hypervisor zugewiesenen empfangen und übertragen möchten, Stellen Sie sicher, dass die Sicherheitseigenschaften auf der Ebene der virtuellen Switch- und Portgruppen auf *Accept* für den Promiscuous-Modus, MAC-Adressänderungen und Forged-Übertragungen eingestellt sind. Die auf dem virtuellen Switch eingestellten Werte können von den Werten auf der Portgruppenebene außer Kraft gesetzt werden. Stellen Sie also sicher, dass die Einstellungen an beiden Stellen identisch sind.
 
+.Verwandte Informationen
 xref:../rhel/index.adoc[Installieren Sie Red hat Enterprise Linux oder CentOS]
 
 xref:../ubuntu/index.adoc[Installieren Sie Ubuntu oder Debian]
 
 
 
-== Linux: Node-Status ist „verwaist“
+== Linux: Node-Status lautet „`verwaiste`“
 
 Ein Linux-Node in einem verwaisten Status gibt in der Regel an, dass entweder der StorageGRID-Service oder der StorageGRID-Node-Daemon, der den Container steuert, unerwartet gestorben ist.
 
+.Über diese Aufgabe
 Wenn ein Linux-Knoten meldet, dass er sich in einem verwaisten Status befindet, sollten Sie Folgendes tun:
 
 * Überprüfen Sie die Protokolle auf Fehler und Meldungen.
@@ -337,6 +345,7 @@ storagegrid node start DC1-S1-172-16-1-172
 
 Möglicherweise müssen Sie die IPv6-Unterstützung im Kernel aktivieren, wenn Sie StorageGRID-Knoten auf Linux-Hosts installiert haben und Sie bemerken, dass den Knoten-Containern keine IPv6-Adressen wie erwartet zugewiesen wurden.
 
+.Über diese Aufgabe
 Die IPv6-Adresse, die einem Grid-Node zugewiesen wurde, wird in den folgenden Speicherorten im Grid Manager angezeigt:
 
 * Wählen Sie *NODES* aus, und wählen Sie den Knoten aus. Wählen Sie dann auf der Registerkarte Übersicht neben *IP-Adressen* die Option *Mehr anzeigen* aus.

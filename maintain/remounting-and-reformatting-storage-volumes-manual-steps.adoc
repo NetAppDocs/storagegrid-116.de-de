@@ -13,7 +13,7 @@ summary: Sie müssen zwei Skripte manuell ausführen, um die erhaltenen Storage 
 [role="lead"]
 Sie müssen zwei Skripte manuell ausführen, um die erhaltenen Storage Volumes neu einzubinden und ausgefallene Storage Volumes neu zu formatieren. Das erste Skript bindet Volumes wieder ein, die ordnungsgemäß als StorageGRID-Storage-Volumes formatiert sind. Das zweite Skript formatiert alle nicht abgehängt Volumes neu, stellt Cassandra bei Bedarf wieder her und startet Services.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben bereits die Hardware für alle ausgefallenen Storage Volumes ausgetauscht, die ausgetauscht werden müssen.
 +
 Ausführen des `sn-remount-volumes` Skript kann Ihnen helfen, zusätzliche ausgefallene Storage-Volumes zu identifizieren.
@@ -27,6 +27,7 @@ CAUTION: Wenden Sie sich an den technischen Support, wenn mehr als ein Speicherk
 
 
 
+.Über diese Aufgabe
 Zum Abschluss dieses Vorgangs führen Sie die folgenden grundlegenden Aufgaben aus:
 
 * Melden Sie sich beim wiederhergestellten Speicherknoten an.
@@ -42,7 +43,7 @@ Zum Abschluss dieses Vorgangs führen Sie die folgenden grundlegenden Aufgaben a
 * Führen Sie die aus `sn-recovery-postinstall.sh` Skript: Wenn dieses Skript ausgeführt wird, führt es Folgendes aus.
 +
 
-IMPORTANT: Starten Sie einen Speicherknoten während der Wiederherstellung nicht neu, bevor Sie ausführen `sn-recovery-postinstall.sh` Formatieren ausgefallener Storage-Volumes und Wiederherstellen von Objekt-Metadaten Vor dem Neubooten des Speicherknoten `sn-recovery-postinstall.sh` Durch das Abschließen werden Fehler bei Diensten verursacht, die zu starten versuchen, und die Knoten der StorageGRID-Appliance den Wartungsmodus beenden. Siehe den Schritt für ,Skript nach der Installation.
+IMPORTANT: Starten Sie einen Speicherknoten während der Wiederherstellung nicht neu, bevor Sie ausführen `sn-recovery-postinstall.sh` Formatieren ausgefallener Storage-Volumes und Wiederherstellen von Objekt-Metadaten Vor dem Neubooten des Speicherknoten `sn-recovery-postinstall.sh` Durch das Abschließen werden Fehler bei Diensten verursacht, die zu starten versuchen, und die Knoten der StorageGRID-Appliance den Wartungsmodus beenden. Siehe den Schritt für <<post-install-script-step,Skript nach der Installation>>.
 
 +
 ** Umformatiert alle Storage-Volumes, die von der `sn-remount-volumes` Das Skript konnte nicht gemountet werden oder es wurde festgestellt, dass es nicht ordnungsgemäß formatiert wurde.
@@ -238,6 +239,7 @@ image::../media/recovering_cassandra.png[Screenshot zeigt den Wiederherstellungs
 
 Nach dem `sn-recovery-postinstall.sh` Skript hat Dienste auf dem Knoten gestartet. Sie können Objektdaten auf allen Speicher-Volumes wiederherstellen, die durch das Skript formatiert wurden, wie in diesem Verfahren beschrieben.
 
+.Verwandte Informationen
 xref:reviewing-warnings-for-system-drive-recovery.adoc[Prüfen Sie die Warnungen für die Wiederherstellung von Speicherknoten-Laufwerken]
 
 xref:restoring-object-data-to-storage-volume-if-required.adoc[Wiederherstellen von Objektdaten im Storage Volume, falls erforderlich]

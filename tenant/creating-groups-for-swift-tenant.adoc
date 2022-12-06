@@ -13,7 +13,7 @@ summary: Sie können Zugriffsberechtigungen für ein Swift-Mandantenkonto verwal
 [role="lead"]
 Sie können Zugriffsberechtigungen für ein Swift-Mandantenkonto verwalten, indem Sie föderierte Gruppen importieren oder lokale Gruppen erstellen. Mindestens eine Gruppe muss über die Swift-Administratorberechtigung verfügen, die zur Verwaltung der Container und Objekte für ein Swift-Mandantenkonto erforderlich ist.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Mandantenmanager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie müssen einer Benutzergruppe mit Root Access-Berechtigung angehören.
 * Wenn Sie eine föderierte Gruppe importieren möchten, haben Sie einen Identitätsverbund konfiguriert, und die föderierte Gruppe ist bereits in der konfigurierten Identitätsquelle vorhanden.
@@ -72,6 +72,7 @@ Die von Ihnen erstellte Gruppe wird in der Gruppenliste angezeigt. Änderungen k
 
 
 
+.Verwandte Informationen
 xref:tenant-management-permissions.adoc[Mandantenmanagement-Berechtigungen]
 
 xref:../swift/index.adoc[Verwenden Sie Swift]

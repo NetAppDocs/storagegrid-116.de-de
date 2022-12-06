@@ -13,10 +13,11 @@ summary: Sie können einen Grid-Node von der Befehlshülle des Node herunterfahr
 [role="lead"]
 Sie können einen Grid-Node über die Befehlshaber des Node herunterfahren.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen die haben `Passwords.txt` Datei:
 
 
+.Über diese Aufgabe
 Bevor Sie dieses Verfahren durchführen, sollten Sie folgende Punkte beachten:
 
 * Im Allgemeinen sollten Sie nicht mehr als einen Node gleichzeitig herunterfahren, um Unterbrechungen zu vermeiden.
@@ -91,4 +92,5 @@ Diese LED leuchtet, wenn zwischengespeicherte Daten auf die Laufwerke geschriebe
 
 
 
+.Verwandte Informationen
 xref:../admin/index.adoc[StorageGRID verwalten]

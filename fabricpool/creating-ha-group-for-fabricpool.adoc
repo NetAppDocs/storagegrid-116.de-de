@@ -13,12 +13,13 @@ summary: 'Wenn Sie StorageGRID für die Verwendung mit FabricPool konfigurieren,
 [role="lead"]
 Wenn Sie StorageGRID für die Verwendung mit FabricPool konfigurieren, können Sie optional eine oder mehrere HA-Gruppen (High Availability, Hochverfügbarkeit) erstellen. Eine HA-Gruppe besteht aus mindestens einer Netzwerkschnittstellen auf Admin-Nodes, Gateway-Nodes oder beiden.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben die Berechtigung Root Access.
 * Wenn Sie ein VLAN verwenden möchten, haben Sie die VLAN-Schnittstelle erstellt. Siehe xref:../admin/configure-vlan-interfaces.adoc[Konfigurieren Sie die VLAN-Schnittstellen].
 
 
+.Über diese Aufgabe
 Jede HA-Gruppe verwendet virtuelle IP-Adressen (VIPs), um hochverfügbaren Zugriff auf die Shared Services auf den zugehörigen Nodes zu ermöglichen.
 
 Weitere Informationen zu dieser Aufgabe finden Sie unter xref:../admin/managing-high-availability-groups.adoc[Management von Hochverfügbarkeitsgruppen].

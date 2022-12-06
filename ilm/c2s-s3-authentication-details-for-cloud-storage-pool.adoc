@@ -13,7 +13,7 @@ summary: 'Um den S3-Service für kommerzielle Cloud-Services \(C2S\) als Cloud-S
 [role="lead"]
 Wenn Sie den S3-Service (Commercial Cloud Services, C2S) als Cloud-Storage-Pool verwenden möchten, müssen Sie C2S Access Portal (CAP) als Authentifizierungstyp konfigurieren, damit StorageGRID temporäre Anmeldedaten für den Zugriff auf den S3-Bucket in Ihrem C2S-Konto anfordern kann.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben die Basisinformationen für einen Amazon S3 Cloud-Storage-Pool eingegeben, einschließlich des Service-Endpunkts.
 * Sie kennen die vollständige URL, mit der StorageGRID temporäre Anmeldedaten vom CAP-Server erhalten wird, einschließlich aller erforderlichen und optionalen API-Parameter, die Ihrem C2S-Konto zugewiesen sind.
 * Sie haben ein Server-CA-Zertifikat, das von einer entsprechenden Behörde ausgestellt wurde. StorageGRID verwendet dieses Zertifikat, um die Identität des CAP-Servers zu überprüfen. Das Server-CA-Zertifikat muss die PEM-Kodierung verwenden.

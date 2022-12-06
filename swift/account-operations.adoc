@@ -80,4 +80,5 @@ Bei einer erfolgreichen Ausführung werden die folgenden Header mit einer „`HT
 * `X-Trans-Id`
 
 
+.Verwandte Informationen
 xref:monitoring-and-auditing-operations.adoc[Monitoring und Prüfung von Vorgängen]

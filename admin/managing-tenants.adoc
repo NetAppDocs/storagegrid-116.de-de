@@ -92,4 +92,5 @@ Nach der Erstellung eines Swift-Mandantenkontos kann der Root-Benutzer des Manda
 
 IMPORTANT: Swift-Benutzer müssen über die Root-Zugriffsberechtigung für den Zugriff auf den Mandanten-Manager verfügen. Die Berechtigung Root-Zugriff erlaubt Benutzern jedoch nicht, sich in der Swift REST-API zu authentifizieren, um Container zu erstellen und Objekte aufzunehmen. Benutzer müssen über die Swift-Administratorberechtigung verfügen, um sich bei der Swift-REST-API zu authentifizieren.
 
+.Verwandte Informationen
 xref:../tenant/index.adoc[Verwenden Sie ein Mandantenkonto]

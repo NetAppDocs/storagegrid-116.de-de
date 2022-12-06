@@ -13,11 +13,12 @@ summary: Sie können die Konfiguration einer Appliance mithilfe einer JSON-Datei
 [role="lead"]
 Sie können die Konfiguration einer Appliance mithilfe einer JSON-Datei mit den Konfigurationsinformationen automatisieren. Sie laden die Datei mithilfe des StorageGRID-Appliance-Installationsprogramms hoch.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Ihr Gerät muss mit der neuesten Firmware ausgestattet sein, die mit StorageGRID 11.5 oder höher kompatibel ist.
 * Sie müssen mit dem Installationsprogramm für StorageGRID-Geräte auf der Appliance verbunden sein, die Sie mit einem konfigurieren xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 
 
+.Über diese Aufgabe
 Sie können Appliance-Konfigurationsaufgaben automatisieren, z. B. die Konfiguration folgender Komponenten:
 
 * IP-Adressen für Grid-Netzwerk, Admin-Netzwerk und Client-Netzwerk

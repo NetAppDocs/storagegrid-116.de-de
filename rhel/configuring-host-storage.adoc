@@ -13,12 +13,14 @@ summary: Jedem Host müssen Block Storage Volumes zugewiesen werden.
 [role="lead"]
 Jedem Host müssen Block Storage Volumes zugewiesen werden.
 
+.Was Sie benötigen
 Sie haben die folgenden Themen behandelt, die Ihnen Informationen liefern, die Sie für diese Aufgabe benötigen:
 
 xref:storage-and-performance-requirements.adoc[Storage- und Performance-Anforderungen erfüllt]
 
 xref:node-container-migration-requirements.adoc[Anforderungen für die Container-Migration für Nodes]
 
+.Über diese Aufgabe
 Bei der Zuweisung von Block Storage Volumes (LUNs) an Hosts können Sie mithilfe der Tabellen unter „`SStorage-Anforderungen`“ Folgendes ermitteln:
 
 * Anzahl der erforderlichen Volumes für jeden Host (basierend auf der Anzahl und den Typen der Nodes, die auf diesem Host bereitgestellt werden)
@@ -92,4 +94,5 @@ Dadurch werden die Aliase im als Blockgeräte angezeigt `/dev/mapper` Verzeichni
 
 NOTE: Wenn Sie gemeinsam genutzten Speicher zur Unterstützung von StorageGRID-Node-Migration einrichten und unter Verwendung von Device Mapper Multipathing einen gemeinsamen Speicher erstellen und installieren `/etc/multipath.conf` Auf allen zusammengehörige Hosts. Stellen Sie einfach sicher, dass Sie auf jedem Host einen anderen Container-Engine-Storage-Volume verwenden. Die Verwendung von Aliases und das Einschließen des Ziel-Hostnamen in den Alias für jede Container-Engine Speicher-Volume LUN wird dies leicht zu merken machen und empfohlen.
 
+.Verwandte Informationen
 xref:configuring-docker-storage-volume.adoc[Konfigurieren des Container Engine Storage Volume]

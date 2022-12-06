@@ -13,6 +13,7 @@ summary: Die Installation des StorageGRID Host Service und die Konfiguration der
 [role="lead"]
 Die Installation des StorageGRID Host Service und die Konfiguration der Grid-Nodes können automatisiert werden.
 
+.Über diese Aufgabe
 Eine Automatisierung der Implementierung kann in einem der folgenden Fälle von Nutzen sein:
 
 * Sie verwenden bereits ein Standard-Orchestrierungs-Framework wie Ansible, Puppet oder Chef für die Implementierung und Konfiguration physischer oder virtueller Hosts.
@@ -55,7 +56,7 @@ Beispiel-Rolle und Playbook für Ansible werden im Ordner /Extras mit dem Instal
 
 Nach der Implementierung der Grid-Nodes können Sie die Konfiguration des StorageGRID Systems automatisieren.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie kennen den Speicherort der folgenden Dateien aus dem Installationsarchiv.
 
 
@@ -81,6 +82,7 @@ Leere Konfigurationsdatei für die Verwendung mit dem Skript
 * Sie haben ein erstellt `configure-storagegrid.json` Konfigurationsdatei Um diese Datei zu erstellen, können Sie die Beispielkonfigurationsdatei ändern (`configure-storagegrid.sample.json`) Oder die leere Konfigurationsdatei (`configure-storagegrid.blank.json`).
 
 
+.Über diese Aufgabe
 Sie können das verwenden `configure-storagegrid.py` Python-Skript und das `configure-storagegrid.json` Konfigurationsdatei zur automatischen Konfiguration des StorageGRID Systems
 
 
@@ -111,6 +113,7 @@ Beispiel:
 ----
 
 
+.Ergebnis
 Ein Wiederherstellungspaket `.zip` Die Datei wird während des Konfigurationsprozesses generiert und in das Verzeichnis heruntergeladen, in dem Sie den Installations- und Konfigurationsprozess ausführen. Sie müssen die Recovery-Paket-Datei sichern, damit Sie das StorageGRID-System wiederherstellen können, wenn ein oder mehrere Grid-Knoten ausfallen. Zum Beispiel kopieren Sie den Text auf einen sicheren, gesicherten Netzwerkstandort und an einen sicheren Cloud-Storage-Standort.
 
 
@@ -133,4 +136,5 @@ Das StorageGRID System wird installiert und konfiguriert, wenn eine Bestätigung
 ----
 StorageGRID has been configured and installed.
 ----
+.Verwandte Informationen
 xref:overview-of-installation-rest-api.adoc[Überblick über DIE REST API zur Installation]

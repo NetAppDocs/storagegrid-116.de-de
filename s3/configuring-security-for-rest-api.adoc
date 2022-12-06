@@ -95,6 +95,7 @@ Client-Autorisierung
 
 
 |===
+.Verwandte Informationen
 xref:../admin/index.adoc[StorageGRID verwalten]
 
 
@@ -180,4 +181,5 @@ TLS_RSA_WITH_AES_128_GCM_SHA256
 TLS_RSA_WITH_AES_256_GCM_SHA384
 
 |===
+.Verwandte Informationen
 xref:configuring-tenant-accounts-and-connections.adoc[Wie Client-Verbindungen konfiguriert werden können]

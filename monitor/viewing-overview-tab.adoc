@@ -58,6 +58,7 @@ Im Abschnitt „Warnungen“ der Registerkarte „Übersicht“ werden alle Warn
 
 image::../media/nodes_page_alerts_table.png[Tabelle „Knotenpunkte“]
 
+.Verwandte Informationen
 xref:monitoring-node-connection-states.adoc[Überwachen Sie die Status der Node-Verbindung]
 
 xref:viewing-current-alerts.adoc[Anzeigen aktueller Warnmeldungen]

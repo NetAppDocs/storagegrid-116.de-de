@@ -13,12 +13,13 @@ summary: Wenn Sie eine SG5760 mit 60 Laufwerken haben, können Sie einen anderen
 [role="lead"]
 Wenn Sie eine SG5760 mit 60 Laufwerken haben, können Sie einen anderen RAID-Modus wechseln, um Ihre Storage- und Recovery-Anforderungen zu erfüllen. Sie können den Modus nur ändern, bevor Sie den Speicherknoten der StorageGRID-Appliance bereitstellen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben eine SG5760. Wenn Sie eine SG5712 haben, müssen Sie den DDP-Modus verwenden.
 * Sie verwenden jeden Client, der eine Verbindung zu StorageGRID herstellen kann.
 * Der Client verfügt über eine xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 
 
+.Über diese Aufgabe
 Vor der Bereitstellung der SG5760 Appliance als Storage-Node können Sie eine der folgenden Volume-Konfigurationsoptionen wählen:
 
 * *DDP*: Dieser Modus verwendet zwei Paritätslaufwerke pro acht Datenlaufwerke. Dies ist der Standard- und empfohlene Modus für alle Appliances. Im Vergleich zu RAID 6 bietet DDP eine bessere System-Performance, geringere Wiederherstellungszeiten nach Laufwerksausfällen und einfaches Management. DDP bietet auch Schutz vor Schubladenverlust bei Appliances mit 60 Laufwerken.
@@ -40,4 +41,5 @@ Wo `_E5700SG_Controller_IP_` Gibt eine der IP-Adressen für den E5700SG-Controll
 . Klicken Sie Auf *Speichern*.
 
 
+.Verwandte Informationen
 http://mysupport.netapp.com/info/web/ECMP1658252.html["NetApp E-Series Systems Documentation Site"^]

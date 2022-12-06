@@ -48,6 +48,7 @@ image::../media/events_report.gif[Veranstaltungsseite]
 
 Benutzerdefinierte Ereignisse ermöglichen die Verfolgung aller Kernel-, Daemon-, Fehler- und kritischen Benutzerereignisse auf der Ebene, die beim Syslog-Server protokolliert werden. Ein benutzerdefiniertes Ereignis kann nützlich sein, um das Auftreten von Systemprotokollmeldungen zu überwachen (und damit Netzwerksicherheitsereignisse und Hardwarefehler).
 
+.Über diese Aufgabe
 Ziehen Sie in Betracht, benutzerdefinierte Ereignisse zu erstellen, um wiederkehrende Probleme zu überwachen. Die folgenden Überlegungen gelten für benutzerdefinierte Ereignisse.
 
 * Nach der Erstellung eines benutzerdefinierten Ereignisses wird jeder Vorgang überwacht.
@@ -86,6 +87,7 @@ image::../media/custom_events_count.png[SSM-Ereignisseite - Übersicht]
 
 Wenn Sie den Zähler nur für benutzerdefinierte Ereignisse zurücksetzen möchten, müssen Sie die Seite Grid Topology im Menü Support verwenden.
 
+.Über diese Aufgabe
 Beim Zurücksetzen eines Zählers wird der Alarm durch das nächste Ereignis ausgelöst. Wenn Sie einen Alarm quittieren, wird dieser Alarm dagegen nur erneut ausgelöst, wenn der nächste Schwellwert erreicht wird.
 
 . Wählen Sie *SUPPORT* > *Tools* > *Grid-Topologie* aus.

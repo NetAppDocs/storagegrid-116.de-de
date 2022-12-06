@@ -13,7 +13,7 @@ summary: 'Sie müssen auf das Installationsprogramm der StorageGRID-Appliance zu
 [role="lead"]
 Sie müssen auf das Installationsprogramm der StorageGRID Appliance zugreifen, um die Installationsversion zu überprüfen und die Verbindungen zwischen der Appliance und den drei StorageGRID-Netzwerken zu konfigurieren: Das Grid-Netzwerk, das Admin-Netzwerk (optional) und das Client-Netzwerk (optional).
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie verwenden einen beliebigen Management-Client, der eine Verbindung zum StorageGRID-Admin-Netzwerk herstellen kann, oder Sie haben einen Service-Laptop.
 * Der Client- oder Service-Laptop verfügt über einen unterstützten Webbrowser.
 * Der SG6000-CN-Controller ist mit allen StorageGRID-Netzwerken verbunden, die Sie verwenden möchten.
@@ -21,6 +21,7 @@ Sie müssen auf das Installationsprogramm der StorageGRID Appliance zugreifen, u
 * Sie haben die geplanten Netzwerk-Switches konfiguriert.
 
 
+.Über diese Aufgabe
 Um zunächst auf das Installationsprogramm der StorageGRID-Appliance zuzugreifen, können Sie die über DHCP zugewiesene IP-Adresse für den Admin-Netzwerkport auf dem SG6000-CN-Controller verwenden (vorausgesetzt, der Controller ist mit dem Admin-Netzwerk verbunden). Alternativ können Sie einen Service-Laptop direkt mit dem SG6000-CN-Controller verbinden.
 
 .Schritte
@@ -74,6 +75,7 @@ NOTE: Wenn Sie über eine lokale Verbindung nicht auf die Startseite zugreifen k
 
 
 
+.Nachdem Sie fertig sind
 Nach dem Zugriff auf das Installationsprogramm der StorageGRID-Appliance:
 
 * Überprüfen Sie, ob die Installationsversion der StorageGRID Appliance auf der Appliance mit der auf dem StorageGRID-System installierten Softwareversion übereinstimmt. Aktualisieren Sie gegebenenfalls das Installationsprogramm für StorageGRID-Appliances.
@@ -83,4 +85,5 @@ xref:verifying-and-upgrading-storagegrid-appliance-installer-version.adoc[Überp
 * Überprüfen Sie alle Meldungen, die auf der Startseite des StorageGRID-Appliance-Installationsprogramms angezeigt werden, und konfigurieren Sie die Linkkonfiguration und die IP-Konfiguration nach Bedarf.
 
 
+.Verwandte Informationen
 xref:../admin/web-browser-requirements.adoc[Anforderungen an einen Webbrowser]

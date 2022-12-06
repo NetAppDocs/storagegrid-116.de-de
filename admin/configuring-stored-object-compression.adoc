@@ -13,11 +13,12 @@ summary: Über die Grid-Option „gespeicherte Objekte komprimieren“ lässt si
 [role="lead"]
 Über die Grid-Option „gespeicherte Objekte komprimieren“ lässt sich die Größe der in StorageGRID gespeicherten Objekte reduzieren, sodass Objekte weniger Storage belegen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben spezifische Zugriffsberechtigungen.
 
 
+.Über diese Aufgabe
 Die Grid-Option „gespeicherte Objekte komprimieren“ ist standardmäßig deaktiviert. Wenn Sie diese Option aktivieren, versucht StorageGRID, jedes Objekt beim Speichern mit verlustfreier Komprimierung zu komprimieren.
 
 

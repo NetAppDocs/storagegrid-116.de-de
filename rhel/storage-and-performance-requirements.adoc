@@ -96,7 +96,7 @@ Objektdaten
 
 *Hinweis:* ein softwarebasierter Speicherknoten kann 1 bis 16 Speicher-Volumes haben; es werden mindestens 3 Speicher-Volumes empfohlen.
  a| 
-12 TB (4 TB/LUN) SIEHE ,Storage-Anforderungen für Storage-Nodes Finden Sie weitere Informationen.
+12 TB (4 TB/LUN) SIEHE <<storage_req_SN,Storage-Anforderungen für Storage-Nodes>> Finden Sie weitere Informationen.
 
 
 
@@ -298,6 +298,7 @@ NOTE: Wenn Sie nur ein Storage-Volume für einen Storage-Node verwenden und dem 
 
 Weitere Informationen finden Sie unter xref:../admin/managing-object-metadata-storage.adoc[Management von Objekt-Metadaten-Storage].
 
+.Verwandte Informationen
 xref:node-container-migration-requirements.adoc[Anforderungen für die Container-Migration für Nodes]
 
 xref:../maintain/index.adoc[Recovery und Wartung]

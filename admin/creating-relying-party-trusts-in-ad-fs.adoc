@@ -13,7 +13,7 @@ summary: 'Sie müssen Active Directory Federation Services (AD FS) verwenden, um
 [role="lead"]
 Sie müssen Active Directory Federation Services (AD FS) verwenden, um ein Vertrauensverhältnis für jeden Admin-Knoten in Ihrem System zu erstellen. Sie können vertraut mit PowerShell-Befehlen erstellen, SAML-Metadaten von StorageGRID importieren oder die Daten manuell eingeben.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben Single Sign-On für StorageGRID konfiguriert und als SSO-Typ *AD FS* ausgewählt.
 * *Der Sandbox-Modus* ist auf der Single Sign-On-Seite im Grid Manager ausgewählt. Siehe xref:../admin/using-sandbox-mode.adoc[Verwenden Sie den Sandbox-Modus].
 * Sie kennen den vollständig qualifizierten Domänennamen (oder die IP-Adresse) und die bevertrauenden Partei-ID für jeden Admin-Knoten in Ihrem System. Diese Werte finden Sie in der Detailtabelle Admin Nodes auf der StorageGRID Single Sign-On-Seite.
@@ -26,6 +26,7 @@ NOTE: Sie müssen für jeden Admin-Knoten in Ihrem StorageGRID-System ein Vertra
 * Wenn Sie das Vertrauen der Vertrauensstelle manuell erstellen, haben Sie das benutzerdefinierte Zertifikat, das für die StorageGRID-Managementoberfläche hochgeladen wurde, oder Sie wissen, wie Sie sich von der Eingabeaufforderung-Shell bei einem Admin-Knoten anmelden.
 
 
+.Über diese Aufgabe
 Diese Anweisungen gelten für Windows Server 2016 AD FS. Wenn Sie eine andere Version von AD FS verwenden, werden Sie kleine Unterschiede im Verfahren bemerken. Wenn Sie Fragen haben, lesen Sie bitte die Microsoft AD FS-Dokumentation.
 
 

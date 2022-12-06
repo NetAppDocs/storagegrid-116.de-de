@@ -13,13 +13,14 @@ summary: Möglicherweise müssen Sie das Gerät austauschen, wenn es nicht optim
 [role="lead"]
 Möglicherweise müssen Sie das Gerät austauschen, wenn es nicht optimal funktioniert oder es ausgefallen ist.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben ein Ersatzgerät mit der gleichen Teilenummer wie das Gerät, das Sie austauschen.
 * Sie verfügen über Etiketten, um jedes Kabel zu identifizieren, das mit dem Gerät verbunden ist.
 * Das ist schon xref:locating-controller-in-data-center.adoc[Das Gerät befindet sich physisch].
 * Das Gerät war xref:placing-appliance-into-maintenance-mode.adoc[In den Wartungsmodus versetzt].
 
 
+.Über diese Aufgabe
 Auf den StorageGRID-Node kann nicht zugegriffen werden, wenn Sie die Appliance ersetzen. Wenn das Gerät ausreichend funktioniert, können Sie zu Beginn dieses Verfahrens eine kontrollierte Abschaltung durchführen.
 
 
@@ -93,6 +94,7 @@ Verwenden Sie die BMC-Schnittstelle, um den Boot-up-Status zu überwachen.
 . Vergewissern Sie sich, dass der Appliance-Node im Grid Manager angezeigt wird und keine Meldungen angezeigt werden.
 
 
+.Verwandte Informationen
 xref:installing-appliance-in-cabinet-or-rack-sg100-and-sg1000.adoc[Appliance in einem Schrank oder Rack installieren (SG100 und SG1000)]
 
 xref:viewing-status-indicators-on-sg100-and-sg1000-appliances.adoc[Anzeigen von Statusanzeigen für die SG100- und SG1000-Geräte]

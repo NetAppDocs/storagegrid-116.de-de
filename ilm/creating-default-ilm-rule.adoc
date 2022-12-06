@@ -13,11 +13,12 @@ summary: Bevor Sie eine ILM-Richtlinie erstellen, müssen Sie eine Standardregel
 [role="lead"]
 Bevor Sie eine ILM-Richtlinie erstellen, müssen Sie eine Standardregel erstellen, um Objekte zu platzieren, die nicht mit einer anderen Regel in der Richtlinie übereinstimmt. Die Standardregel kann keine Filter verwenden. Die Lösung muss für alle Mandanten, alle Buckets und alle Objektversionen gelten.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben spezifische Zugriffsberechtigungen.
 
 
+.Über diese Aufgabe
 Die Standardregel ist die letzte Regel, die in einer ILM-Richtlinie ausgewertet werden muss. Daher kann sie keine Filter oder nicht aktuelle Referenzzeit verwenden. Die Anweisungen zur Platzierung der Standardregel werden auf alle Objekte angewendet, die nicht mit einer anderen Regel in der Richtlinie abgeglichen werden.
 
 In dieser Beispielrichtlinie gilt die erste Regel nur für Objekte, die zu Mandant A gehören Die letzte Standardregel gilt für Objekte, die zu allen anderen Mandantenkonten gehören.

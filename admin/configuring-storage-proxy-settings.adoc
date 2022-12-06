@@ -13,11 +13,12 @@ summary: Wenn Sie Plattform-Services oder Cloud Storage-Pools verwenden, können
 [role="lead"]
 Wenn Sie Plattform-Services oder Cloud Storage-Pools verwenden, können Sie einen nicht transparenten Proxy zwischen Storage Nodes und den externen S3-Endpunkten konfigurieren. Beispielsweise benötigen Sie einen nicht transparenten Proxy, um Meldungen von Plattformdiensten an externe Endpunkte, z. B. einen Endpunkt im Internet, zu senden.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben spezifische Zugriffsberechtigungen.
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 
 
+.Über diese Aufgabe
 Sie können die Einstellungen für einen einzelnen Speicherproxy konfigurieren.
 
 .Schritte
@@ -52,6 +53,7 @@ NOTE: Änderungen an Proxy können bis zu 10 Minuten in Anspruch nehmen.
 . Überprüfen Sie die Einstellungen Ihres Proxy-Servers, um sicherzustellen, dass für den Plattformdienst bezogene Nachrichten von StorageGRID nicht blockiert werden.
 
 
+.Nachdem Sie fertig sind
 Wenn Sie einen Speicher-Proxy deaktivieren möchten, deaktivieren Sie das Kontrollkästchen *Storage Proxy aktivieren* und wählen Sie *Speichern*.
 
 .Verwandte Informationen

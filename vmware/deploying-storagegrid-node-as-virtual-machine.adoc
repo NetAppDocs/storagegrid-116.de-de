@@ -17,7 +17,7 @@ Wenn Sie Speicherknoten von StorageGRID-Appliances bereitstellen möchten, lesen
 
 Optional können Sie Node-Ports neu zuordnen oder die CPU- oder Speichereinstellungen für den Node erhöhen, bevor Sie den Node einschalten.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben die Vorgehensweise überprüft xref:planning-and-preparation.adoc[Installation planen und vorbereiten]Und Sie verstehen die Anforderungen an Software, CPU und RAM sowie Storage und Performance.
 * Sie sind mit VMware vSphere Hypervisor vertraut und verfügen über Erfahrung mit der Bereitstellung von Virtual Machines in dieser Umgebung.
 +
@@ -81,6 +81,7 @@ IMPORTANT: Verwenden Sie FabricPool niemals, um StorageGRID-bezogene Daten in da
 
 
 
+.Über diese Aufgabe
 Befolgen Sie diese Anweisungen, um zunächst VMware Nodes zu implementieren, einen neuen VMware Node in einer Erweiterung hinzuzufügen oder einen VMware Node im Rahmen eines Recovery-Vorgangs zu ersetzen. Sofern in den Schritten nicht anders angegeben, ist das Verfahren zur Node-Implementierung für alle Node-Typen, einschließlich Admin-Nodes, Storage-Nodes, Gateway-Nodes und Archiv-Nodes, identisch.
 
 Wenn Sie ein neues StorageGRID System installieren:
@@ -130,7 +131,7 @@ Je nach Ihrer Version von vCenter variieren die Schritte in der Reihenfolge, in 
 
 . Wählen Sie Speicher für die virtuelle Maschine aus.
 +
-Wenn Sie einen Node im Rahmen der Recovery implementieren, führen Sie die Anweisungen im aus ,Storage Recovery-Schritt Um neue virtuelle Festplatten hinzuzufügen, fügen Sie virtuelle Festplatten vom ausgefallenen Grid-Node oder beiden wieder an.
+Wenn Sie einen Node im Rahmen der Recovery implementieren, führen Sie die Anweisungen im aus <<step_recovery_storage,Storage Recovery-Schritt>> Um neue virtuelle Festplatten hinzuzufügen, fügen Sie virtuelle Festplatten vom ausgefallenen Grid-Node oder beiden wieder an.
 
 +
 Verwenden Sie bei der Bereitstellung eines Storage-Nodes 3 oder mehr Storage-Volumes, wobei jedes Storage-Volume mindestens 4 TB betragen kann. Sie müssen Volume 0 mindestens 4 TB zuweisen.
@@ -293,4 +294,5 @@ Stellen Sie die *Speicherreservierung* auf die gleiche Größe wie der *Speicher
 . Schalten Sie die Virtual Machine ein.
 
 
+.Nachdem Sie fertig sind
 Wenn Sie diesen Node im Rahmen eines Erweiterungs- oder Recovery-Verfahrens implementiert haben, kehren Sie zu diesen Anweisungen zurück, um das Verfahren durchzuführen.

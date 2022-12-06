@@ -13,7 +13,7 @@ summary: Sie können die Details eines Speicherpools anzeigen, um zu bestimmen, 
 [role="lead"]
 Sie können die Details eines Speicherpools anzeigen, um zu bestimmen, wo der Speicherpool verwendet wird, und um zu sehen, welche Nodes und Speicherklassen enthalten sind.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben spezifische Zugriffsberechtigungen.
 
@@ -90,4 +90,5 @@ Anweisungen zum Arbeiten mit ILM-Regeln finden Sie in der Anleitung.
 . Wenn Sie die Details des Speicherpools anzeigen, wählen Sie *Schließen*.
 
 
+.Verwandte Informationen
 xref:working-with-ilm-rules-and-ilm-policies.adoc[Arbeiten Sie mit ILM-Regeln und ILM-Richtlinien]

@@ -13,7 +13,7 @@ summary: Der SG6000-CN Controller verfügt über zwei Netzteile für Redundanz. 
 [role="lead"]
 Der SG6000-CN Controller verfügt über zwei Netzteile für Redundanz. Wenn eines der Netzteile ausfällt, müssen Sie es so schnell wie möglich ersetzen, um sicherzustellen, dass der Compute-Controller über redundante Stromversorgung verfügt. Beide im Controller ausgeführten Netzteile müssen das gleiche Modell und die gleiche Stromleistung aufweisen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben den physischen Standort im Datacenter des Controllers ermittelt und das zu ersetzende Netzteil verwendet.
 +
 xref:locating-controller-in-data-center.adoc[Lokalisierung des Controllers in einem Rechenzentrum]
@@ -31,12 +31,13 @@ xref:locating-controller-in-data-center.adoc[Lokalisierung des Controllers in ei
 
 
 
+.Über diese Aufgabe
 Die Abbildung zeigt die beiden Netzteile des SG6000-CN Controllers, auf die über die Rückseite des Controllers zugegriffen werden kann. Gehen Sie folgendermaßen vor, um ein oder beide Netzteile zu ersetzen. Wenn Sie beide Netzteile austauschen, müssen Sie zunächst ein kontrolliertes Herunterfahren des Geräts durchführen.
 
 image::../media/sg6000_cn_power_supplies.gif[Rückseite des SG6000-CN mit zwei Netzteilen]
 
 .Schritte
-. Wenn Sie nur ein Netzteil ersetzen, müssen Sie das Gerät nicht herunterfahren. Wechseln Sie zum ,Ziehen Sie das Netzkabel ab Schritt: Wenn Sie beide Netzteile gleichzeitig ersetzen, gehen Sie folgendermaßen vor, bevor Sie die Netzkabel abziehen:
+. Wenn Sie nur ein Netzteil ersetzen, müssen Sie das Gerät nicht herunterfahren. Wechseln Sie zum <<Unplug_the_power_cord,Ziehen Sie das Netzkabel ab>> Schritt: Wenn Sie beide Netzteile gleichzeitig ersetzen, gehen Sie folgendermaßen vor, bevor Sie die Netzkabel abziehen:
 +
 .. xref:placing-appliance-into-maintenance-mode.adoc[Stellen Sie das Gerät in den Wartungsmodus].
 .. xref:shutting-down-sg6000-cn-controller.adoc[Schalten Sie das Gerät aus].

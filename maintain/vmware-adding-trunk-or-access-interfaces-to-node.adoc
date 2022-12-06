@@ -14,7 +14,7 @@ summary: Nach der Installation können Sie einem VM-Node zusätzliche Trunk- ode
 [role="lead"]
 Nach der Installation des Node können Sie einem VM-Node eine Trunk- oder Zugriffsschnittstelle hinzufügen. Die fügen Sie Schnittstellen hinzu, werden auf der Seite VLAN-Schnittstellen und auf der Seite HA-Gruppen angezeigt.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben Zugriff auf die Anweisungen zum Installieren von StorageGRID auf Ihrer VMware Plattform.
 
 
@@ -30,6 +30,7 @@ xref:../vmware/index.adoc[VMware installieren]
 
 IMPORTANT: Versuchen Sie nicht, einem Node Schnittstellen hinzuzufügen, während ein Software-Upgrade, ein Wiederherstellungsverfahren oder ein Erweiterungsvorgang aktiv ist.
 
+.Über diese Aufgabe
 Verwenden Sie diese Schritte, um einem VMware Node nach der Installation des Node mindestens eine zusätzliche Schnittstelle hinzuzufügen. Beispielsweise möchten Sie einem Admin oder Gateway Node eine Trunk-Schnittstelle hinzufügen, sodass Sie den Datenverkehr zwischen verschiedenen Applikationen oder Mandanten über VLAN-Schnittstellen trennen können. Oder Sie möchten vielleicht eine Zugriffsoberfläche hinzufügen, die in einer HA-Gruppe (High Availability, Hochverfügbarkeit) verwendet werden soll.
 
 Wenn Sie eine Trunk-Schnittstelle hinzufügen, müssen Sie eine VLAN-Schnittstelle in StorageGRID konfigurieren. Wenn Sie eine Zugriffsoberfläche hinzufügen, können Sie die Schnittstelle direkt einer HA-Gruppe hinzufügen. Sie müssen keine VLAN-Schnittstelle konfigurieren.

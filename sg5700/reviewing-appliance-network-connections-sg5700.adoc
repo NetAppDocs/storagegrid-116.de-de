@@ -113,6 +113,7 @@ Management-Port 2 am E5700SG Controller
 Stellen Sie eine Verbindung zum Grid-Netzwerk und dem Client-Netzwerk für StorageGRID her. Siehe „`10/25-GbE-Portverbindungen für den E5700SG Controller`“.
 
 |===
+.Verwandte Informationen
 xref:gathering-installation-information-sg5700.adoc[Installationsinformationen (SG5700) erfassen]
 
 xref:cabling-appliance-sg5700.adoc[Kabel-Appliance (SG5700)]

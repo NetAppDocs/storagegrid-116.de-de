@@ -13,6 +13,7 @@ summary: 'Vor der Installation der Container-Engine (Docker oder Podman) müssen
 [role="lead"]
 Vor der Installation der Container-Engine (Docker oder Podman) müssen Sie möglicherweise das Storage-Volume formatieren und mounten.
 
+.Über diese Aufgabe
 Diese Schritte können sie überspringen, wenn Sie einen lokalen Speicher für das Docker oder Podman Storage Volume verwenden möchten und genügend Speicherplatz auf der Host-Partition mit zur Verfügung steht `/var/lib/docker` Für Docker und `/var/lib/containers` Für Podman.
 
 
@@ -53,7 +54,7 @@ Mit diesem Schritt wird sichergestellt, dass das Storage Volume nach einem Neust
 
 == Installation Von Docker
 
-Das StorageGRID System läuft unter Red hat Enterprise Linux oder CentOS als Sammlung von Containern. Wenn Sie sich für die Verwendung der Docker Container-Engine entschieden haben, führen Sie die folgenden Schritte aus, um Docker zu installieren. Andernfalls  Podman,Installieren Sie Podman.
+Das StorageGRID System läuft unter Red hat Enterprise Linux oder CentOS als Sammlung von Containern. Wenn Sie sich für die Verwendung der Docker Container-Engine entschieden haben, führen Sie die folgenden Schritte aus, um Docker zu installieren. Andernfalls <<Installieren Sie Podman,Installieren Sie Podman>>.
 
 .Schritte
 . Installieren Sie Docker gemäß den Anweisungen für Ihre Linux-Distribution.
@@ -87,7 +88,7 @@ Die Client- und Server-Versionen müssen 1.11.0 oder höher sein.
 
 == Installieren Sie Podman
 
-Das StorageGRID-System läuft unter Red hat Enterprise Linux als eine Sammlung von Containern. Wenn Sie sich für die Verwendung der Podman Container-Engine entschieden haben, befolgen Sie diese Schritte, um Podman zu installieren. Andernfalls  Docker,Installation von Docker.
+Das StorageGRID-System läuft unter Red hat Enterprise Linux als eine Sammlung von Containern. Wenn Sie sich für die Verwendung der Podman Container-Engine entschieden haben, befolgen Sie diese Schritte, um Podman zu installieren. Andernfalls <<Installation Von Docker,Installation von Docker>>.
 
 
 NOTE: Podman wird nur auf Red hat Enterprise Linux (RHEL) unterstützt.

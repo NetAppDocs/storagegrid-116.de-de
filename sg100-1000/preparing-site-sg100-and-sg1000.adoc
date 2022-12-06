@@ -43,6 +43,7 @@ Vor der Installation der Appliance müssen Sie sicherstellen, dass der Standort 
 . Entscheiden Sie, wo Sie das Gerät installieren möchten.
 
 
+.Verwandte Informationen
 https://hwu.netapp.com["NetApp Hardware Universe"^]
 
 https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^]

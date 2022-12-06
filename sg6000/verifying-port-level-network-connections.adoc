@@ -13,6 +13,7 @@ summary: Damit der Zugriff zwischen dem Installationsprogramm der StorageGRID Ap
 [role="lead"]
 Damit der Zugriff zwischen dem Installationsprogramm der StorageGRID Appliance und anderen Nodes nicht durch Firewalls beeinträchtigt wird, vergewissern Sie sich, dass der Installer von StorageGRID eine Verbindung zu einem bestimmten TCP-Port oder einem Satz von Ports an der angegebenen IP-Adresse oder dem angegebenen Adressbereich herstellen kann.
 
+.Über diese Aufgabe
 Mithilfe der Liste der im StorageGRID-Appliance-Installationsprogramm bereitgestellten Ports können Sie die Verbindung zwischen der Appliance und den anderen Nodes im Grid-Netzwerk testen.
 
 Darüber hinaus können Sie die Konnektivität auf den Admin- und Client-Netzwerken sowie auf UDP-Ports testen, wie sie für externe NFS- oder DNS-Server verwendet werden. Eine Liste dieser Ports finden Sie unter der Portreferenz in den Netzwerkrichtlinien von StorageGRID.
@@ -71,4 +72,5 @@ image::../media/nmap_test_red_banner.png[NMAP Test Red Banner]
 
 
 
+.Verwandte Informationen
 xref:../network/index.adoc[Netzwerkrichtlinien]

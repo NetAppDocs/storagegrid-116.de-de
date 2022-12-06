@@ -13,7 +13,7 @@ summary: Möglicherweise müssen Sie den SG6000-CN-Controller austauschen, wenn 
 [role="lead"]
 Möglicherweise müssen Sie den SG6000-CN-Controller austauschen, wenn er nicht optimal funktioniert oder ausgefallen ist.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie verfügen über einen Ersatzcontroller mit derselben Teilenummer wie der zu ersetzenden Controller.
 * Sie verfügen über Etiketten, um jedes Kabel, das mit dem Controller verbunden ist, zu identifizieren.
 * Der Controller ist physisch zu finden, der im Datacenter ersetzt werden soll.
@@ -22,6 +22,7 @@ xref:locating-controller-in-data-center.adoc[Controller im Datacenter finden]
 
 
 
+.Über diese Aufgabe
 Der Gerätespeicherknoten kann nicht aufgerufen werden, wenn Sie den SG6000-CN-Controller austauschen. Wenn der SG6000-CN-Controller ausreichend funktioniert, können Sie zu Beginn dieses Verfahrens ein kontrolliertes Herunterfahren durchführen.
 
 
@@ -83,6 +84,7 @@ xref:../maintain/index.adoc[Recovery und Wartung]
 
 
 
+.Verwandte Informationen
 xref:sg6000-cn-installing-into-cabinet-or-rack.adoc[SG6000-CN: Einbau in Schrank oder Rack]
 
 xref:viewing-status-indicators-and-buttons-on-sg6000-cn-controller.adoc[Statusanzeigen und Schaltflächen des SG6000-CN Controllers anzeigen]

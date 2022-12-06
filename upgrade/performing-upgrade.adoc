@@ -13,6 +13,7 @@ summary: Wenn Sie bereit sind, das Upgrade auszuführen, wählen Sie das .Upgrad
 [role="lead"]
 Wenn Sie bereit sind, das Upgrade auszuführen, wählen Sie die aus `.upgrade` Archivieren Sie die Provisionierungs-Passphrase, und geben Sie sie ein. Als Option können Sie die Upgrade-Vorabprüfungen durchführen, bevor Sie das tatsächliche Upgrade durchführen.
 
+.Was Sie benötigen
 Sie haben alle Überlegungen geprüft und alle Planungs- und Vorbereitungsschritte durchgeführt.
 
 

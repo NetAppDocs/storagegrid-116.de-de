@@ -13,6 +13,7 @@ summary: Möglicherweise müssen Sie den Server-Manager und alle Dienste, die au
 [role="lead"]
 Möglicherweise müssen Sie den Server-Manager und alle Dienste, die auf einem Grid-Knoten ausgeführt werden, neu starten.
 
+.Was Sie benötigen
 Sie müssen die haben `Passwords.txt` Datei:
 
 .Schritte

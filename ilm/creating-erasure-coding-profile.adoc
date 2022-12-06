@@ -13,12 +13,13 @@ summary: Um ein Erasure Coding-Profil zu erstellen, verknüpfen Sie einen Speich
 [role="lead"]
 Um ein Erasure Coding-Profil zu erstellen, verknüpfen Sie einen Speicherpool mit Storage-Nodes mit einem Codierungsschema zur Fehlerkorrektur. Diese Verknüpfung bestimmt die Anzahl der erstellten Daten und Paritäts-Fragmente und wo das System diese Fragmente verteilt.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben spezifische Zugriffsberechtigungen.
 * Sie haben einen Speicherpool erstellt, der genau einen Standort oder einen Speicherpool umfasst, der drei oder mehr Standorte umfasst. Für einen Storage Pool mit nur zwei Standorten stehen keine Erasure Coding-Schemata zur Verfügung.
 
 
+.Über diese Aufgabe
 Die in Erasure Coding-Profilen verwendeten Storage-Pools müssen exakt einen oder drei oder mehr Standorte umfassen. Wenn Sie Standortredundanz bereitstellen möchten, muss der Speicherpool mindestens drei Standorte aufweisen.
 
 

@@ -31,4 +31,5 @@ Beim Härten eines StorageGRID Systems sind folgende Punkte zu beachten:
 * Welche Sicherheitsanforderungen und -Konventionen von Ihrem Unternehmen erfüllt werden? Möglicherweise müssen Sie bestimmte gesetzliche oder unternehmensbezogene Anforderungen einhalten.
 
 
+.Verwandte Informationen
 https://security.netapp.com/policy/["Richtlinie Zum Umgang Mit Schwachstellen"^]

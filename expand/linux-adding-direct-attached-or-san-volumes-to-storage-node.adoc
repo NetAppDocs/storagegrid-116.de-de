@@ -14,7 +14,7 @@ summary: Wenn ein Speicherknoten weniger als 16 Speicher-Volumes umfasst, könne
 [role="lead"]
 Wenn ein Speicherknoten weniger als 16 Speicher-Volumes umfasst, können Sie seine Kapazität erhöhen, indem Sie neue Block-Speichergeräte hinzufügen, sie für die Linux-Hosts sichtbar machen und die neuen Blockgeräte-Zuordnungen zur StorageGRID-Konfigurationsdatei hinzufügen, die für den Speicherknoten verwendet wurde.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben Zugriff auf die Anweisungen für die Installation von StorageGRID für Ihre Linux-Plattform.
 +
 ** xref:../rhel/index.adoc[Installieren Sie Red hat Enterprise Linux oder CentOS]
@@ -28,6 +28,7 @@ Wenn ein Speicherknoten weniger als 16 Speicher-Volumes umfasst, können Sie sei
 
 IMPORTANT: Versuchen Sie nicht, Speicher-Volumes zu einem Speicherknoten hinzuzufügen, während ein Software-Upgrade, ein Wiederherstellungsverfahren oder ein anderer Erweiterungsvorgang aktiv ist.
 
+.Über diese Aufgabe
 Der Storage-Node ist für kurze Zeit nicht verfügbar, wenn Sie Storage Volumes hinzufügen. Sie sollten dieses Verfahren jeweils auf einem Storage-Knoten durchführen, um die Grid-Services für Clients zu beeinträchtigen.
 
 .Schritte
@@ -199,4 +200,5 @@ Der Status wird automatisch aktualisiert.
 
 
 
+.Ergebnis
 Sie können jetzt die erweiterte Kapazität der Speicherknoten zum Speichern von Objektdaten verwenden.

@@ -14,11 +14,12 @@ summary: 'Möglicherweise können Objekte gefunden und wiederhergestellt werden,
 [role="lead"]
 Möglicherweise können Objekte gefunden und wiederhergestellt werden, die einen Alarm „Lost Objects“ (LOST Objects – LOST) und einen „Object Lost*“-Alarm ausgelöst haben und die Sie als „potentiell verloren“ identifiziert haben.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen über die UUID eines verlorenen Objekts verfügen, wie in „`Untersuchung verlorener Objekte`“ angegeben.
 * Sie müssen die haben `Passwords.txt` Datei:
 
 
+.Über diese Aufgabe
 Im Anschluss an dieses Verfahren können Sie sich nach replizierten Kopien des verlorenen Objekts an einer anderen Stelle im Grid suchen. In den meisten Fällen wird das verlorene Objekt nicht gefunden. In einigen Fällen können Sie jedoch ein verlorenes repliziertes Objekt finden und wiederherstellen, wenn Sie umgehend Maßnahmen ergreifen.
 
 
@@ -115,7 +116,7 @@ ls '/var/local/rangedb/1/p/17/11/00rH0%DkRs&LgA%#3tN6'
 *Hinweis*: Fügen Sie den Objektdateipfad immer in einzelne Anführungszeichen, um Sonderzeichen zu entkommen.
 
 * Wenn der Objektpfad nicht gefunden wurde, geht das Objekt verloren und kann mit diesem Verfahren nicht wiederhergestellt werden. Wenden Sie sich an den technischen Support.
-* Wenn der Objektpfad gefunden wurde, fahren Sie mit Schritt fort ,Stellen Sie das Objekt in StorageGRID wieder her. Sie können versuchen, das gefundene Objekt wieder in StorageGRID wiederherzustellen.
+* Wenn der Objektpfad gefunden wurde, fahren Sie mit Schritt fort <<restore_the_object_to_StorageGRID,Stellen Sie das Objekt in StorageGRID wieder her>>. Sie können versuchen, das gefundene Objekt wieder in StorageGRID wiederherzustellen.
 +
 .. [[restore_the_object_to_StorageGRID, Start=3]]Wenn der Objektpfad gefunden wurde, versuchen Sie, das Objekt in StorageGRID wiederherzustellen:
 +
@@ -154,7 +155,7 @@ First packet of file was valid. Extracted key: 38186FE53E3C49A5
 Renamed '/var/local/rangedb/1/p/17/11/00rH0%DkRs&LgA%#3tN6' to '/var/local/rangedb/1/p/17/11/00rH0%DkRt78Ila#3udu'
 ----
 +
-Mit Schritt fortfahren ,Überprüfen Sie, ob neue Standorte erstellt wurden
+Mit Schritt fortfahren <<verify_that_new_locations_were_created,Überprüfen Sie, ob neue Standorte erstellt wurden>>
 
 +
 ... [[Verify_That_New_Locations_were_created, Start=4]]Wenn das Objekt erfolgreich in StorageGRID wiederhergestellt wurde, überprüfen Sie, ob neue Speicherorte erstellt wurden.
@@ -272,6 +273,7 @@ Wenn vorhanden, ist der Wert von CLDI in LOCS die Node-ID und die Volume-ID, in 
 
 
 
+.Verwandte Informationen
 xref:investigating-lost-objects.adoc[Untersuchen Sie verlorene Objekte]
 
 xref:resetting-lost-and-missing-object-counts.adoc[Verlorene und fehlende Objektanzahl zurücksetzen]

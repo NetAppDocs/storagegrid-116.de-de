@@ -13,7 +13,7 @@ summary: Suchen Sie den Controller, um Hardware-Wartungsarbeiten oder Upgrades d
 [role="lead"]
 Suchen Sie den Controller, um Hardware-Wartungsarbeiten oder Upgrades durchzuführen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben festgestellt, welcher Controller gewartet werden muss.
 +
 (Optional) um den Controller in Ihrem Rechenzentrum zu finden, schalten Sie die blaue Identify-LED ein.
@@ -48,6 +48,7 @@ xref:turning-controller-identify-led-on-and-off.adoc[Ein- und Ausschalten der Co
 
 
 
+.Verwandte Informationen
 xref:removing-fibre-channel-hba.adoc[Entfernen Sie den Fibre Channel HBA]
 
 xref:removing-sg6000-cn-controller-from-cabinet-or-rack.adoc[Entfernen Sie den SG6000-CN Controller aus dem Schrank oder Rack]

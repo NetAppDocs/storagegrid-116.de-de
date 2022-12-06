@@ -13,7 +13,7 @@ summary: Um StorageGRID auf einem Appliance-Speicherknoten zu installieren, verw
 [role="lead"]
 Um StorageGRID auf einem Appliance-Speicherknoten zu installieren, verwenden Sie das StorageGRID-Appliance-Installationsprogramm, das in der Appliance enthalten ist.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Die Appliance wurde in einem Rack installiert, mit Ihren Netzwerken verbunden und eingeschaltet.
 * Mithilfe des StorageGRID Appliance Installer wurden Netzwerkverbindungen und IP-Adressen für die Appliance konfiguriert.
 * Sie kennen die IP-Adresse des primären Admin-Knotens für das StorageGRID-Raster.
@@ -29,6 +29,7 @@ Um StorageGRID auf einem Appliance-Speicherknoten zu installieren, verwenden Sie
 * Sie kennen eine der IP-Adressen, die dem Computing-Controller in der Appliance zugewiesen sind. Sie können die IP-Adresse für das Admin-Netzwerk (Management-Port 1 auf dem Controller), das Grid-Netzwerk oder das Client-Netzwerk verwenden.
 
 
+.Über diese Aufgabe
 So installieren Sie StorageGRID auf einem Appliance-Speicherknoten:
 
 * Sie geben die IP-Adresse des primären Admin-Knotens und den Namen des Knotens an oder bestätigen sie.
@@ -95,6 +96,7 @@ NOTE: Wenn Sie manuell auf die Seite Monitor-Installation zugreifen müssen, kli
 
 
 
+.Verwandte Informationen
 xref:../sg100-1000/index.adoc[SG100- und SG1000-Services-Appliances]
 
 xref:../sg6000/index.adoc[SG6000 Storage-Appliances]

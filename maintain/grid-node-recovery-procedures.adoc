@@ -22,4 +22,5 @@ Im Allgemeinen versuchen Sie, soweit möglich Daten vom ausgefallenen Grid Node 
 
 IMPORTANT: Wenn eine gesamte StorageGRID Site ausfällt, wenden Sie sich an den technischen Support. Der technische Support arbeitet mit Ihnen zusammen an der Entwicklung und Umsetzung eines Site Recovery-Plans, der die wiederherzustellenden Datenmenge maximiert und Ihre Geschäftsziele erreicht.
 
+.Verwandte Informationen
 xref:how-site-recovery-is-performed-by-technical-support.adoc[Durchführen der Standortwiederherstellung durch den technischen Support]

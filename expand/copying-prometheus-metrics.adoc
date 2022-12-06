@@ -13,12 +13,13 @@ summary: Nach dem Hinzufügen eines neuen Admin-Knotens können Sie optional die
 [role="lead"]
 Nach dem Hinzufügen eines neuen Admin-Knotens können Sie optional die historischen Metriken kopieren, die von Prometheus vom primären Admin-Node erhalten wurden, zum neuen Admin-Node. Durch das Kopieren der Metriken wird sichergestellt, dass historische Metriken zwischen Admin-Nodes konsistent sind.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Der neue Admin-Node wird installiert und ausgeführt.
 * Sie haben die `Passwords.txt` Datei:
 * Sie haben die Provisionierungs-Passphrase.
 
 
+.Über diese Aufgabe
 Wenn Sie einen Admin-Knoten hinzufügen, erstellt der Software-Installationsprozess eine neue Prometheus-Datenbank. Sie können die historischen Kennzahlen zwischen den Knoten konsistent halten, indem Sie die Prometheus-Datenbank vom primären Admin-Node (den_Source Admin-Node_) auf den neuen Admin-Node kopieren.
 
 

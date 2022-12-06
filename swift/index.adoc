@@ -34,4 +34,5 @@ HTTP
 *Hinweis*: StorageGRID unterstützt HTTP/1.1-Pipelining nicht.
 
 |===
+.Verwandte Informationen
 http://docs.openstack.org/developer/swift/api/object_api_v1_overview.html["OpenStack: Objekt-Storage-API"^]

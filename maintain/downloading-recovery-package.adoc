@@ -13,7 +13,7 @@ summary: Die Wiederherstellungspakedatei ermöglicht Ihnen die Wiederherstellung
 [role="lead"]
 Die Wiederherstellungspakedatei ermöglicht Ihnen die Wiederherstellung des StorageGRID-Systems bei einem Fehler.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie müssen über eine Passphrase für die Bereitstellung verfügen.
 * Sie müssen über spezifische Zugriffsberechtigungen verfügen.
@@ -42,4 +42,5 @@ IMPORTANT: Die Recovery Package-Datei muss gesichert sein, weil sie Verschlüsse
 
 
 
+.Verwandte Informationen
 xref:../admin/index.adoc[StorageGRID verwalten]

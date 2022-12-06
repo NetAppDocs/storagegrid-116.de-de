@@ -13,7 +13,7 @@ summary: Entfernen Sie den SG6000-CN-Controller aus einem Schrank oder Rack, um 
 [role="lead"]
 Entfernen Sie den SG6000-CN-Controller aus einem Schrank oder Rack, um auf die obere Abdeckung zuzugreifen oder um den Controller an einen anderen Ort zu bewegen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie verfügen über Etiketten, um jedes Kabel zu identifizieren, das mit dem SG6000-CN-Controller verbunden ist.
 * Der SG6000-CN-Controller ist in einem physischen Standort untergebracht, an dem Wartungsarbeiten im Datacenter durchgeführt werden.
 +
@@ -48,4 +48,5 @@ Die obere Abdeckung des Controllers ist zugänglich.
 . Optional: Wenn Sie den Controller vollständig aus dem Schrank oder Rack entfernen, befolgen Sie die Anweisungen für den Schienensatz, um den Controller aus den Schienen zu entfernen.
 
 
+.Verwandte Informationen
 xref:removing-sg6000-cn-controller-cover.adoc[Entfernen Sie die SG6000-CN Controller-Abdeckung]

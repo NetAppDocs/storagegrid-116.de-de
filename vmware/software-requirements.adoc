@@ -44,4 +44,5 @@ Weitere Informationen zu unterstützten Versionen von VMware vSphere Hypervisor 
 
 Die Schritte zur Installation dieser VMware-Produkte finden Sie in der VMware-Dokumentation.
 
+.Verwandte Informationen
 https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^]

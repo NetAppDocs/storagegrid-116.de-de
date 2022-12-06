@@ -92,7 +92,7 @@ xref:using-s3-object-lock.adoc[Verwenden der S3-Objektsperre]
 ** `x-amz-server-side-encryption-customer-key`
 ** `x-amz-server-side-encryption-customer-algorithm`
 +
- headers for server-side encryption
+<<Anforderungsheader für serverseitige Verschlüsselung>>
 
 
 
@@ -139,6 +139,7 @@ Die folgende Anforderungsüberschrift wird nicht unterstützt und kehrt zurück 
 
 Mehrteilige Uploads bestehen aus separaten Vorgängen zum Initiieren des Uploads, Auflisten von Uploads, Hochladen von Teilen, Zusammenbauen der hochgeladenen Teile und Abschließen des Uploads. Objekte werden erstellt (und gegebenenfalls versioniert), wenn der Vorgang zum Hochladen mehrerer Teile abgeschlossen ist.
 
+.Verwandte Informationen
 xref:../ilm/index.adoc[Objektmanagement mit ILM]
 
 xref:using-server-side-encryption.adoc[Serverseitige Verschlüsselung]

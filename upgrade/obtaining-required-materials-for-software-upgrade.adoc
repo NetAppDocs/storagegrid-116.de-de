@@ -21,7 +21,7 @@ Bevor Sie mit dem Software-Upgrade beginnen, müssen Sie alle erforderlichen Unt
  a| 
 StorageGRID-Upgrade-Dateien
  a| 
- the StorageGRID upgrade files Auf Ihren Service-Laptop.
+<<Laden Sie die StorageGRID-Upgrade-Dateien herunter>> Auf Ihren Service-Laptop.
 
 
 
@@ -46,7 +46,7 @@ Der Browser-Support ändert sich in der Regel für jede StorageGRID Version. Ste
  a| 
 Wiederherstellungspaket (`.zip`) Datei
  a| 
- the Recovery Package Vor dem Upgrade speichern und speichern Sie die Datei an einem sicheren Ort. Die Recovery Package-Datei ermöglicht es Ihnen, das System wiederherzustellen, wenn ein Fehler auftritt.
+<<Laden Sie das Recovery Package herunter>> Vor dem Upgrade speichern und speichern Sie die Datei an einem sicheren Ort. Die Recovery Package-Datei ermöglicht es Ihnen, das System wiederherzustellen, wenn ein Fehler auftritt.
 
 
 
@@ -141,7 +141,7 @@ NOTE: Für SG100 oder SG1000 sind keine zusätzlichen Dateien erforderlich.
 
 Die Wiederherstellungspakedatei ermöglicht Ihnen die Wiederherstellung des StorageGRID-Systems bei einem Fehler. Laden Sie die aktuelle Recovery Package-Datei herunter, bevor Sie Grid-Topologieänderungen am StorageGRID-System vornehmen oder bevor Sie Software aktualisieren. Laden Sie anschließend eine neue Kopie des Wiederherstellungspakets herunter, nachdem Sie Änderungen an der Grid-Topologie vorgenommen haben oder nachdem Sie die Software aktualisiert haben.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie müssen über eine Passphrase für die Bereitstellung verfügen.
 * Sie müssen über spezifische Zugriffsberechtigungen verfügen.

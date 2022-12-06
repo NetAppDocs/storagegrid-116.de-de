@@ -13,6 +13,7 @@ summary: Die sieben-Segment-Anzeige auf dem Compute-Controller zeigt EINEN HE-Fe
 [role="lead"]
 Die sieben-Segment-Anzeige auf dem Compute-Controller zeigt EINEN HE-Fehlercode an, wenn das Installationsprogramm der StorageGRID-Appliance nicht mit SANtricity OS Software synchronisiert werden kann.
 
+.Über diese Aufgabe
 Wenn ein HE-Fehlercode angezeigt wird, führen Sie diese Korrekturmaßnahme durch.
 
 .Schritte

@@ -13,7 +13,7 @@ summary: Wenn Sie Erweiterungs-Shelfs verwenden, müssen Sie sie mit dem E2860 C
 [role="lead"]
 Wenn Sie Erweiterungs-Shelfs verwenden, müssen Sie sie mit dem E2860 Controller-Shelf verbinden. Es können maximal zwei Erweiterungs-Shelfs für jede SG6060- oder SG6060X-Appliance verwendet werden.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben die beiden SAS-Kabel mit jedem Erweiterungs-Shelf geliefert.
 * Sie haben die Erweiterungs-Shelfs im Rack oder Rack mit dem E2860 Controller-Shelf installiert.
 +
@@ -21,6 +21,7 @@ xref:sg6060-installing-60-drive-shelves-into-cabinet-or-rack.adoc[SG6060 und SG6
 
 
 
+.Schritt
 Verbinden Sie jedes Erweiterungs-Shelf mit dem E2860 Controller-Shelf, wie in der Abbildung dargestellt.
 
 Diese Abbildung zeigt die Verkabelung für zwei Erweiterungs-Shelfs in einem SG6060 (die Erweiterungskabel für den SG6060X sind identisch). Wenn Sie nur über ein Erweiterungs-Shelf verfügen, verbinden Sie IOM A mit Controller A und verbinden Sie IOM B mit Controller B

@@ -62,6 +62,7 @@ image::../media/state_graph.gif[Statusdiagramm]
 
 
 
+.Verwandte Informationen
 xref:viewing-nodes-page.adoc[Zeigen Sie die Seite Knoten an]
 
 xref:viewing-grid-topology-tree.adoc[Sehen Sie sich den Baum der Grid Topology an]
@@ -126,6 +127,7 @@ Eine Mischung aus grauem und blauem Schatten zeigt an, dass einige der Attributw
 
 Die Seite Nodes enthält die Diagramme und Diagramme, auf die Sie regelmäßig zugreifen sollten, um Attribute wie Speicherkapazität und Durchsatz zu überwachen. In einigen Fällen, vor allem bei der Arbeit mit technischem Support, können Sie die Seite *SUPPORT* *Tools* *Grid Topology* verwenden, um auf zusätzliche Diagramme zuzugreifen.
 
+.Was Sie benötigen
 Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 
 .Schritte
@@ -181,7 +183,7 @@ Das Display wechselt automatisch zur Seite *Berichte* *Diagramme*. Das Diagramm 
 
 Diagramme zeigen eine grafische Darstellung der Attributdatenwerte an. Die Berichte können an Datacenter-Standorten, Grid-Node, Komponenten oder Service erstellt werden.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie müssen über spezifische Zugriffsberechtigungen verfügen.
 

@@ -39,6 +39,7 @@ image::../media/ping_test_passed.png[Screenshot der Ping-Testergebnisse im Stora
 
 
 
+.Verwandte Informationen
 xref:configuring-network-links-sg100-and-sg1000.adoc[Konfigurieren von Netzwerkverbindungen (SG100 und SG1000)]
 
 xref:changing-mtu-setting.adoc[MTU-Einstellung ändern]

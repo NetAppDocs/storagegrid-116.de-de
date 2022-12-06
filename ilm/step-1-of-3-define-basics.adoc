@@ -13,6 +13,7 @@ summary: 'Schritt 1 \(Grundlagen definieren\) des Assistenten „ILM-Regel erste
 [role="lead"]
 Schritt 1 (Grundlagen definieren) des Assistenten „ILM-Regel erstellen“ ermöglicht es Ihnen, die grundlegenden und erweiterten Filter der Regel zu definieren.
 
+.Über diese Aufgabe
 Bei der Bewertung eines Objekts mit einer ILM-Regel vergleicht StorageGRID die Objekt-Metadaten mit den Filtern der Regel. Wenn die Objektmetadaten mit allen Filtern übereinstimmen, verwendet StorageGRID die Regel, um das Objekt abzulegen. Sie können eine Regel für alle Objekte entwerfen oder grundlegende Filter angeben, z. B. ein oder mehrere Mandantenkonten und Bucket-Namen oder erweiterte Filter, wie z. B. Größe des Objekts oder Benutzermetadaten.
 
 image::../media/ilm_create_ilm_rule_wizard_1.png[Erstellen Sie die ILM-Regel Schritt 1 von 3]

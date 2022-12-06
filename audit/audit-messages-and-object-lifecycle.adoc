@@ -61,4 +61,5 @@ Die Reihe von Audit-Meldungen, die beim Abrufen von Objektdaten aus einem extern
 
 Die beim Löschen von Objektdaten aus einem externen Archivspeichersystem generierte Reihe von Überwachungsmeldungen ähnelt der für Speicherknoten, es sei denn, ES gibt keine SREM (Object Store Remove)-Nachricht und für jede Löschanforderung gibt es eine AREM-Nachricht (Archive Object Remove).
 
+.Verwandte Informationen
 xref:../ilm/index.adoc[Objektmanagement mit ILM]

@@ -19,7 +19,7 @@ Sie können VMware vSphere verwenden, um die Implementierung von Grid-Nodes zu a
 
 Einsatz von VMware vSphere zur Automatisierung der Implementierung von Grid-Nodes
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben Zugriff auf ein Linux/Unix System mit Bash 3.2 oder höher.
 * Sie haben VMware OVF Tool 4.1 installiert und richtig konfiguriert.
 * Sie kennen den Benutzernamen und das Kennwort, die für den Zugriff auf VMware vSphere mit dem OVF-Tool erforderlich sind.
@@ -93,7 +93,7 @@ Sie geben die Informationen an, die zum Implementieren der virtuellen Grid-Nodes
 . Offen `deploy-vsphere-ovftool.ini`.
 . Geben Sie alle für die Implementierung der virtuellen VMware Grid-Nodes erforderlichen Informationen ein.
 +
-Siehe ,Konfigurationsdateieinstellungen Zur Information.
+Siehe <<configuration-file-settings,Konfigurationsdateieinstellungen>> Zur Information.
 
 . Wenn Sie alle erforderlichen Informationen eingegeben und verifiziert haben, speichern und schließen Sie die Datei.
 
@@ -308,6 +308,7 @@ NOTE: Der ADMIN_IP-Parameter wird für den primären Admin-Node ignoriert.
 * Parameter, die nicht global festgelegt wurden. Wenn beispielsweise ein Node mit dem Admin-Netzwerk verbunden ist und Sie ADMIN_NETWORK nicht global angeben, müssen Sie diese für den Node angeben.
 
 
+.Primärer Admin-Node
 Für den primären Admin-Node sind folgende zusätzliche Einstellungen erforderlich:
 
 * *NODE_TYPE*: VM_Admin_Node
@@ -339,6 +340,7 @@ DISK = INSTANCES=2, CAPACITY=300
 
 NOTE: Bei Admin-Nodes müssen INSTANZEN immer gleich 2 sein.
 
+.Storage-Node
 Für Speicherknoten ist die folgende zusätzliche Einstellung erforderlich:
 
 * *NODE_TYPE*: VM_Storage_Node
@@ -399,6 +401,7 @@ DISK = INSTANCES=16, CAPACITY=4096
 ----
 
 
+.Archiv-Node
 Für Archiv-Knoten ist die folgende zusätzliche Einstellung erforderlich:
 
 * *NODE_TYPE*: VM_Archive_Node
@@ -416,6 +419,7 @@ Dieser Beispieleintrag gilt für einen Archiv-Node, der sich auf Grid- und Admin
 
   ADMIN_IP = 10.1.0.2
 ----
+.Gateway-Node
 Für Gateway-Knoten ist die folgende zusätzliche Einstellung erforderlich:
 
 * *NODE_TYPE*: VM_API_GATEWAY
@@ -439,6 +443,7 @@ Dieser Beispieleintrag gilt für einen Beispiel-Gateway-Node auf allen drei Netz
 
   ADMIN_IP = 10.1.0.2
 ----
+.Nicht primärer Admin-Node
 Die folgenden zusätzlichen Einstellungen sind für nicht-primäre Admin-Nodes erforderlich:
 
 * *NODE_TYPE*: VM_Admin_Node
@@ -478,7 +483,7 @@ NOTE: Bei Admin-Nodes müssen INSTANZEN immer gleich 2 sein.
 
 Sie können das verwenden `deploy-vsphere-ovftool.sh` Bash-Skript und die deploy-vsphere-ovftool.ini-Konfigurationsdatei, die Sie geändert haben, um die Implementierung von StorageGRID-Grid-Nodes in VMware vSphere zu automatisieren.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben eine deploy-vsphere-ovftool.ini-Konfigurationsdatei für Ihre Umgebung erstellt.
 
 
@@ -546,7 +551,7 @@ Deployment Summary
 
 Nach der Implementierung der Grid-Nodes können Sie die Konfiguration des StorageGRID Systems automatisieren.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie kennen den Speicherort der folgenden Dateien aus dem Installationsarchiv.
 
 
@@ -602,6 +607,7 @@ Beispiel:
 ----
 
 
+.Ergebnis
 Während des Konfigurationsprozesses wird eine ZIP-Datei für das Wiederherstellungspaket erstellt und in das Verzeichnis heruntergeladen, in dem Sie den Installations- und Konfigurationsprozess ausführen. Sie müssen die Recovery-Paket-Datei sichern, damit Sie das StorageGRID-System wiederherstellen können, wenn ein oder mehrere Grid-Knoten ausfallen. Zum Beispiel kopieren Sie den Text auf einen sicheren, gesicherten Netzwerkstandort und an einen sicheren Cloud-Storage-Standort.
 
 
@@ -624,6 +630,7 @@ Das StorageGRID System wird installiert und konfiguriert, wenn eine Bestätigung
 ----
 StorageGRID has been configured and installed.
 ----
+.Verwandte Informationen
 xref:navigating-to-grid-manager.adoc[Navigieren Sie zum Grid Manager]
 
 xref:overview-of-installation-rest-api.adoc[Überblick über DIE REST API zur Installation]

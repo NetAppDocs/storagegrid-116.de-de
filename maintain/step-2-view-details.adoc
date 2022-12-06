@@ -13,6 +13,7 @@ summary: 'Ab Schritt 2 \(Details anzeigen\) des Assistenten für die Decommissio
 [role="lead"]
 Ab Schritt 2 (Details anzeigen) des Assistenten für die Decommission-Site können Sie überprüfen, welche Knoten auf der Site enthalten sind, sehen, wie viel Speicherplatz auf den einzelnen Speicherknoten verwendet wurde, und bewerten, wie viel freier Speicherplatz auf den anderen Standorten in Ihrem Raster verfügbar ist.
 
+.Was Sie benötigen
 Bevor Sie einen Standort außer Betrieb nehmen, müssen Sie überprüfen, wie viele Objektdaten am Standort vorhanden sind.
 
 * Wenn Sie eine verbundene Website ausmustern, müssen Sie vor der Aktualisierung des ILM die derzeit vorhandene Objektdaten an der Website kennen. Basierend auf den Kapazitäten des Standorts und den Datensicherungsanforderungen können Sie neue ILM-Regeln erstellen, um Daten an andere Standorte zu verschieben oder Objektdaten vom Standort zu löschen.
@@ -86,4 +87,5 @@ Schritt 3 (ILM-Richtlinie überarbeiten) wird angezeigt.
 
 
 
+.Verwandte Informationen
 xref:../ilm/index.adoc[Objektmanagement mit ILM]

@@ -13,6 +13,7 @@ summary: Wenn Sie eine DoNotStart-Datei entfernen, die den Start eines Dienstes 
 [role="lead"]
 Wenn Sie eine DoNotStart-Datei entfernen, die den Start eines Dienstes verhindert, müssen Sie diesen Dienst starten.
 
+.Was Sie benötigen
 Sie müssen die haben `Passwords.txt` Datei:
 
 .Schritte

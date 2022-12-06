@@ -13,10 +13,11 @@ summary: 'Sie können die derzeit von diesem Appliance-Knoten verwendeten DNS \(
 [role="lead"]
 Sie können die DNS-Server (Domain Name System), die derzeit von diesem Appliance-Node verwendet werden, überprüfen und vorübergehend ändern.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Das ist schon xref:placing-appliance-into-maintenance-mode.adoc[Das Gerät in den Wartungsmodus versetzt].
 
 
+.Über diese Aufgabe
 Möglicherweise müssen Sie die DNS-Servereinstellungen ändern, wenn eine verschlüsselte Appliance sich nicht mit dem Verschlüsselungsmanagement-Server (KMS) oder dem KMS-Cluster verbinden kann, da der Hostname des KMS als Domänenname anstelle einer IP-Adresse angegeben wurde. Alle Änderungen, die Sie an den DNS-Einstellungen für die Appliance vornehmen, sind temporär und gehen verloren, wenn Sie den Wartungsmodus verlassen. Um diese Änderungen dauerhaft zu machen, geben Sie die DNS-Server im Grid Manager an (*MAINTENANCE* *Network* *DNS-Server*).
 
 * Temporäre Änderungen an der DNS-Konfiguration sind nur für Node-verschlüsselte Appliances erforderlich, bei denen der KMS-Server mithilfe eines vollständig qualifizierten Domänennamens anstelle einer IP-Adresse für den Hostnamen definiert wird.

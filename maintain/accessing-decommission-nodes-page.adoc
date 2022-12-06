@@ -13,7 +13,7 @@ summary: Wenn Sie im Grid Manager auf die Seite Decommission Nodes zugreifen, se
 [role="lead"]
 Wenn Sie im Grid Manager auf die Seite Decommission Nodes zugreifen, sehen Sie auf einen Blick, welche Knoten deaktiviert werden können.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie müssen über die Berechtigung Wartung oder Stammzugriff verfügen.
 
@@ -66,7 +66,7 @@ Die Spalte *Health* enthält eines der folgenden Symbole für getrennte Grid-Kno
 ** image:../media/icon_alarm_blue_unknown.png["Blaues Fragezeichen-Symbol"] (Blau): Unbekannt
 
  a| 
-Wechseln Sie zum ,Schritt, in dem die Optionen für das Stilllegen aufgeführt sind.
+Wechseln Sie zum <<decommission_procedure_choices,Schritt, in dem die Optionen für das Stilllegen aufgeführt sind>>.
 
 
 
@@ -146,6 +146,7 @@ Nur verbundene Grid-Nodes
 xref:decommissioning-connected-grid-nodes.adoc[Verbundene Grid-Nodes ausmustern]
 
 |===
+.Verwandte Informationen
 xref:checking-data-repair-jobs.adoc[Prüfen Sie die Reparatur von Daten]
 
 xref:understanding-adc-service-quorum.adoc[Das ADC-Quorum verstehen]

@@ -13,6 +13,7 @@ summary: Vor der Installation von Docker müssen Sie möglicherweise das Docker 
 [role="lead"]
 Vor der Installation von Docker muss möglicherweise das Docker Storage Volume formatiert und gemountet werden `/var/lib/docker`.
 
+.Über diese Aufgabe
 Sie können diese Schritte überspringen, wenn Sie planen, lokalen Speicher für das Docker-Speicher-Volume zu verwenden und über genügend Speicherplatz auf der Host-Partition mit verfügen `/var/lib`.
 
 .Schritte

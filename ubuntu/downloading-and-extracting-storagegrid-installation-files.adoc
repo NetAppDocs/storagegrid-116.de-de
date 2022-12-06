@@ -111,4 +111,5 @@ API-Schemata für StorageGRID:
 *Hinweis*: Bevor Sie ein Upgrade durchführen, können Sie mit diesen Schemas bestätigen, dass jeder Code, den Sie zur Verwendung von StorageGRID Management APIs geschrieben haben, mit der neuen StorageGRID-Version kompatibel ist, wenn Sie keine StorageGRID-Umgebung außerhalb der Produktionsumgebung zum Testen der Upgrade-Kompatibilität besitzen.
 
 |===
+.Verwandte Informationen
 xref:../maintain/index.adoc[Recovery und Wartung]

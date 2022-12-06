@@ -49,6 +49,7 @@ Drücken Sie den Netzschalter während des Einschaltvorgangs nicht erneut.
 . Befestigen Sie die Frontverkleidung bei Entfernung am SG6000-CN Controller.
 
 
+.Verwandte Informationen
 xref:viewing-boot-up-status-codes-for-sg6000-storage-controllers.adoc[Anzeigen von Boot-Statuscodes für SG6000-Speicher-Controller]
 
 xref:viewing-status-indicators-and-buttons-on-sg6000-cn-controller.adoc[Statusanzeigen und Schaltflächen des SG6000-CN Controllers anzeigen]

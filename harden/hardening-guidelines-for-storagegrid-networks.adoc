@@ -51,6 +51,7 @@ Wenn Sie das Client-Netzwerk verwenden, befolgen Sie die folgenden Richtlinien:
 * Eingehende Clientdatenverkehr nur an explizit konfigurierten Endpunkten akzeptieren. Siehe xref:../admin/managing-untrusted-client-networks.adoc[Verwalten von nicht vertrauenswürdigen Client-Netzwerken].
 
 
+.Verwandte Informationen
 xref:../network/index.adoc[Netzwerkrichtlinien]
 
 xref:../primer/index.adoc[Gittergrundierung]

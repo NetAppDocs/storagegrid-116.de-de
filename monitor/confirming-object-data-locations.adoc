@@ -13,7 +13,7 @@ summary: Je nach Problem sollten Sie überprüfen, wo Objektdaten gespeichert we
 [role="lead"]
 Je nach Problem sollten Sie überprüfen, wo Objektdaten gespeichert werden. Beispielsweise möchten Sie überprüfen, ob die ILM-Richtlinie wie erwartet funktioniert und Objektdaten dort gespeichert werden, wo sie geplant sind.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen über eine Objektkennung verfügen, die einer der folgenden sein kann:
 +
 ** *UUID*: Der Universally Unique Identifier des Objekts. Geben Sie die UUID in allen Großbuchstaben ein.
@@ -57,6 +57,7 @@ image::../media/object_lookup_results.png[Ergebnisse Für Objekt-Lookup]
 
 
 
+.Verwandte Informationen
 xref:../ilm/index.adoc[Objektmanagement mit ILM]
 
 xref:../s3/index.adoc[S3 verwenden]

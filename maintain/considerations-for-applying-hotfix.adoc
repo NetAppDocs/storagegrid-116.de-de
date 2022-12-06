@@ -44,4 +44,5 @@ NOTE: Je nach Bedarf zur Anpassung der Grid-Version können Sie beim Bereitstell
 . Anschließend wenden Sie Hotfix 11._A.B.y_ auf den primären Admin-Node an.
 
 
+.Verwandte Informationen
 xref:configuring-replacement-primary-admin-node.adoc[Primären Ersatzadministrator-Knoten konfigurieren]

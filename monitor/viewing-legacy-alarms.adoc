@@ -16,7 +16,7 @@ Alarme (Altsystem) werden ausgelöst, wenn Systemattribute die Alarmschwellenwer
 
 NOTE: Das alte Alarmsystem wird zwar weiterhin unterstützt, bietet jedoch deutliche Vorteile und ist einfacher zu bedienen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 
 
@@ -93,6 +93,7 @@ image::../media/alarms_acknowledging.png[Alarme Quittieren]
 
 
 
+.Verwandte Informationen
 xref:alarms-reference.adoc[Alarmreferenz (Altsystem)]
 
 xref:managing-alarms.adoc[Quittierung aktueller Alarme (Legacy-System)]

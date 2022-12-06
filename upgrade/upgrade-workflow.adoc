@@ -30,4 +30,5 @@ IMPORTANT: Genehmigen Sie das Upgrade für einen Grid-Node nicht, es sei denn, S
 . Nach Abschluss des Upgrades überprüfen Sie die Softwareversion und wenden alle Hotfixes an.
 
 
+.Verwandte Informationen
 xref:estimating-time-to-complete-upgrade.adoc[Schätzen Sie den Zeitaufwand für die Durchführung eines Upgrades ein]

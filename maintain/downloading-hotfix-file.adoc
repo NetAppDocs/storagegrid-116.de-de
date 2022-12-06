@@ -50,4 +50,5 @@ NOTE: Wenn Sie ein macOS-Gerät verwenden, wird die Hotfix-Datei möglicherweise
 . Wählen Sie einen Speicherort für den Download aus, und wählen Sie *Speichern*.
 
 
+.Verwandte Informationen
 xref:configuring-replacement-primary-admin-node.adoc[Primären Ersatzadministrator-Knoten konfigurieren]

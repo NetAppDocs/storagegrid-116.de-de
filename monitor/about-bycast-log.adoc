@@ -34,6 +34,7 @@ NOTE: Wenn eine Protokolldatei komprimiert wurde, dürfen Sie sie nicht auf den 
 
 Optional können Sie das Ziel der Audit-Protokolle ändern und Audit-Informationen an einen externen Syslog-Server senden. Lokale Protokolle von Audit-Datensätzen werden weiterhin generiert und gespeichert, wenn ein externer Syslog-Server konfiguriert ist. Siehe xref:../monitor/configure-audit-messages.adoc[Konfigurieren von Überwachungsmeldungen und Protokollzielen].
 
+.Verwandte Informationen
 xref:collecting-log-files-and-system-data.adoc[Erfassen von Protokolldateien und Systemdaten]
 
 
@@ -112,7 +113,7 @@ Beispiel:
 
 
 
-== Fehlercodes in bycast.log
+== Fehlercodes in `bycast.log`
 
 Die meisten Fehlermeldungen in `bycast.log` Fehlercodes enthalten.
 

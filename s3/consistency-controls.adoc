@@ -67,7 +67,7 @@ Verhält sich wie die Konsistenzstufe „`read-after-New-write`“, bietet aber 
 |===
 
 
-== Verwenden Sie die Consistency Controls „read-after-write“ und „available“
+== Verwenden Sie die Consistency Controls „`read-after-New-write`“ und „`available`“
 
 Wenn bei einem HEAD oder GET-Vorgang die Konsistenzkontrolle „`read-after-New-write`“ verwendet wird, führt StorageGRID die Suche in mehreren Schritten durch:
 
@@ -145,6 +145,7 @@ Falls Sie stattdessen dieselbe ILM-Regel und die Konsistenzstufe „`strong-Site
 
 Die Wechselbeziehung zwischen Konsistenzstufen und ILM-Regeln kann komplex sein. Wenden Sie sich an NetApp, wenn Sie Hilfe benötigen.
 
+.Verwandte Informationen
 xref:../ilm/index.adoc[Objektmanagement mit ILM]
 
 xref:get-bucket-consistency-request.adoc[Get Bucket-Konsistenzanforderung]

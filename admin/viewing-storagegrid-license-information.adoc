@@ -13,14 +13,16 @@ summary: Sie können die Lizenzinformationen für Ihr StorageGRID-System anzeige
 [role="lead"]
 Sie können die Lizenzinformationen für Ihr StorageGRID-System anzeigen, z. B. die maximale Storage-Kapazität eines Grids, wann immer sie benötigt werden.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 
 
+.Über diese Aufgabe
 Wenn ein Problem mit der Softwarelizenz für dieses StorageGRID-System vorliegt, enthält das Bedienfeld „Systemzustand“ auf dem Dashboard ein Symbol für den Lizenzstatus und einen Link mit *Lizenz*. Die Nummer gibt an, wie viele Probleme mit Lizenzen es gibt.
 
 image::../media/dashboard_health_panel_license_status.png[Lizenzstatus Des Dashboards]
 
+.Schritt
 Um die Lizenz anzuzeigen, führen Sie einen der folgenden Schritte aus:
 
 * Wählen Sie im Bedienfeld „Systemzustand“ des Dashboards das Symbol Lizenzstatus oder den Link *Lizenz* aus. Dieser Link wird nur angezeigt, wenn ein Problem mit der Lizenz vorliegt.

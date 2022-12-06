@@ -15,11 +15,12 @@ Audit-Meldungen und -Protokolle zeichnen Systemaktivitäten und Sicherheitsereig
 
 Weitere Informationen zu Audit-Meldungen finden Sie unter xref:../audit/index.adoc[Prüfung von Audit-Protokollen].
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie verfügen über Wartungs- oder Root-Zugriffsberechtigungen.
 
 
+.Über diese Aufgabe
 Alle StorageGRID Nodes generieren Audit-Meldungen und -Protokolle, um die Systemaktivität und -Ereignisse nachzuverfolgen. Standardmäßig werden Audit-Informationen an das Audit-Protokoll auf Admin-Knoten gesendet. Sie können die Überwachungsstufen anpassen, um die Art und Anzahl der im Audit-Protokoll aufgezeichneten Audit-Meldungen zu erhöhen oder zu verringern. Optional können Sie die Audit-Informationen konfigurieren, die an einen Remote-Syslog-Server gesendet oder temporär auf den ausnehmenden Nodes zur manuellen Erfassung gespeichert werden sollen.
 
 
@@ -141,7 +142,7 @@ Ein grünes Banner zeigt an, dass Ihre Konfiguration erfolgreich gespeichert wur
 Sie können einen externen Syslog-Server konfigurieren, wenn Sie Audit-Informationen Remote speichern möchten.
 
 * Wenn Sie Audit-Informationen auf einem externen Syslog-Server speichern möchten, gehen Sie zu xref:../monitor/configuring-syslog-server.adoc[Konfigurieren Sie einen externen Syslog-Server].
-* Wenn Sie keinen externen Syslog-Server verwenden, fahren Sie mit fort ,Wählen Sie Ziele für Audit-Informationen aus.
+* Wenn Sie keinen externen Syslog-Server verwenden, fahren Sie mit fort <<Select-audit-information-destinations,Wählen Sie Ziele für Audit-Informationen aus>>.
 
 
 
@@ -214,6 +215,7 @@ Neue Protokolle werden an die ausgewählten Ziele gesendet. Vorhandene Protokoll
 
 
 
+.Verwandte Informationen
 xref:../monitor/considerations-for-external-syslog-server.adoc[Überlegungen für externen Syslog-Server]
 
 xref:../admin/index.adoc[StorageGRID verwalten]

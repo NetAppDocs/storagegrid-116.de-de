@@ -13,6 +13,7 @@ summary: Sie können Netzwerkverbindungen für die Ports konfigurieren, die zum 
 [role="lead"]
 Sie können Netzwerkverbindungen für die Ports konfigurieren, die zum Verbinden der Appliance mit dem Grid-Netzwerk, dem Client-Netzwerk und dem Admin-Netzwerk verwendet werden. Sie können die Verbindungsgeschwindigkeit sowie den Port- und Netzwerk-Bond-Modus einstellen.
 
+.Was Sie benötigen
 Wenn Sie einen Appliance-Node klonen, konfigurieren Sie für alle vom Node der Quell-Appliance verwendeten Links für die Ziel-Appliance.
 
 Wenn Sie die 25-GbE-Verbindungsgeschwindigkeit verwenden möchten:
@@ -30,6 +31,7 @@ Wenn Sie den aggregierten Port Bond-Modus, den LACP Network Bond-Modus oder VLAN
 * Sie kennen das eindeutige VLAN-Tag, das für jedes Netzwerk verwendet werden soll. Dieses VLAN-Tag wird zu jedem Netzwerkpaket hinzugefügt, um sicherzustellen, dass der Netzwerkverkehr an das richtige Netzwerk weitergeleitet wird.
 
 
+.Über diese Aufgabe
 Diese Abbildung zeigt, wie die vier Netzwerk-Ports im Bond-Modus mit festen Ports verbunden sind (Standardkonfiguration).
 
 image::../media/sg6000_cn_fixed_port.gif[Bild: Wie die Netzwerkanschlüsse des SG6000-CN-Controllers im festen Modus verbunden sind]

@@ -48,6 +48,7 @@ Das folgende Beispiel zeigt drei Audit-Nachrichten in einer Audit-Log-Datei (Zei
 ----
 In ihrem Standardformat sind die Audit-Meldungen in den Audit-Log-Dateien nicht einfach zu lesen oder zu interpretieren. Sie können das verwenden `audit-explain` Tool zum Abrufen vereinfachter Zusammenfassungen der Audit-Meldungen im Audit-Protokoll. Sie können das verwenden `audit-sum` Tool zum Zusammenfassen, wie viele Schreibvorgänge, Lese- und Löschvorgänge protokolliert wurden und wie lange diese Vorgänge gedauert haben.
 
+.Verwandte Informationen
 xref:using-audit-explain-tool.adoc[Verwenden Sie das Audit-Erklären-Tool]
 
 xref:using-audit-sum-tool.adoc[Verwenden Sie das Audit-Sum-Tool]

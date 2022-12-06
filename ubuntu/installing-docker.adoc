@@ -41,4 +41,5 @@ Die Client- und Server-Versionen müssen 1.11.0 oder höher sein.
 
 
 
+.Verwandte Informationen
 xref:configuring-host-storage.adoc[Hostspeicher konfigurieren]

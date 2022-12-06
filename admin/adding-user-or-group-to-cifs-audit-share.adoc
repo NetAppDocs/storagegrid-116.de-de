@@ -13,11 +13,12 @@ summary: Sie können einen Benutzer oder eine Gruppe zu einer CIFS-Revisionsfrei
 [role="lead"]
 Sie können einen Benutzer oder eine Gruppe zu einer CIFS-Revisionsfreigabe hinzufügen, die in die AD-Authentifizierung integriert ist.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben die `Passwords.txt` Datei mit dem Root-/Admin-Passwort (im GENANNTEN Paket verfügbar).
 * Sie haben die `Configuration.txt` Datei (im GENANNTEN Paket verfügbar).
 
 
+.Über diese Aufgabe
 Das folgende Verfahren gilt für eine mit AD-Authentifizierung integrierte Audit-Freigabe.
 
 

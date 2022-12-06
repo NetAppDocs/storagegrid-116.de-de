@@ -13,12 +13,13 @@ summary: Sie können ein Erasure Coding-Profil deaktivieren, wenn Sie es nicht m
 [role="lead"]
 Sie können ein Erasure Coding-Profil deaktivieren, wenn Sie es nicht mehr verwenden möchten und wenn das Profil derzeit in keiner ILM-Regel verwendet wird.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben spezifische Zugriffsberechtigungen.
 * Sie haben bestätigt, dass derzeit keine Reparatur- oder Deaktivierung von Daten mithilfe von Erasure Coding ausgeführt wird. Wenn Sie versuchen, ein Erasure Coding-Profil zu deaktivieren, während einer dieser Vorgänge ausgeführt wird, wird eine Fehlermeldung zurückgegeben.
 
 
+.Über diese Aufgabe
 Wenn Sie ein Erasure Coding-Profil deaktivieren, wird das Profil auf der Seite Erasure Coding Profiles weiterhin angezeigt, der Status ist jedoch *deactivated*.
 
 image::../media/deactivated_ec_profile.png[EC-Profil deaktiviert]

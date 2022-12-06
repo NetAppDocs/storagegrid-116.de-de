@@ -13,11 +13,12 @@ summary: Das StorageGRID System kann die Integrität von Objektdaten auf Storage
 [role="lead"]
 Das StorageGRID System kann die Integrität von Objektdaten auf Storage-Nodes überprüfen und sowohl beschädigte als auch fehlende Objekte prüfen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie müssen über die Berechtigung Wartung oder Stammzugriff verfügen.
 
 
+.Über diese Aufgabe
 Zwei xref:verifying-object-integrity.adoc[Verifizierungsprozesse] Gewährleisten Sie gemeinsam die Datenintegrität:
 
 * *Hintergrundüberprüfung* läuft automatisch und überprüft kontinuierlich die Richtigkeit der Objektdaten.

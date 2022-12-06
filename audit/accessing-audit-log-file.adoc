@@ -13,7 +13,7 @@ summary: 'Die Revisionsfreigabe enthält die aktive audit.log-Datei und alle kom
 [role="lead"]
 Die Revisionsfreigabe enthält die aktive `audit.log` Datei und alle komprimierten Audit-Log-Dateien. Um einfachen Zugriff auf Audit-Protokolle zu ermöglichen, können Sie den Client-Zugriff auf Audit-Shares sowohl für NFS als auch für CIFS (CIFS ist veraltet) konfigurieren. Sie können auch direkt über die Befehlszeile des Admin-Knotens auf Audit-Protokolldateien zugreifen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen über spezifische Zugriffsberechtigungen verfügen.
 * Sie müssen die haben `Passwords.txt` Datei:
 * Sie müssen die IP-Adresse eines Admin-Knotens kennen.
@@ -33,4 +33,5 @@ Die Revisionsfreigabe enthält die aktive `audit.log` Datei und alle komprimiert
 . Sehen Sie sich die aktuelle oder gespeicherte Audit-Protokolldatei nach Bedarf an.
 
 
+.Verwandte Informationen
 xref:../admin/index.adoc[StorageGRID verwalten]

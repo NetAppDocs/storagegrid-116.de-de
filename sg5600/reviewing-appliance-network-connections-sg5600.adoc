@@ -113,6 +113,7 @@ Vier Netzwerk-Ports am E5600SG Controller
 Stellen Sie eine Verbindung zum Grid-Netzwerk und dem Client-Netzwerk für StorageGRID her. Siehe „`10-GbE-Port-Verbindungen für den E5600SG-Controller`“.
 
 |===
+.Verwandte Informationen
 xref:port-bond-modes-for-e5600sg-controller-ports.adoc[Port Bond-Modi für die E5600SG Controller-Ports]
 
 xref:gathering-installation-information-sg5600.adoc[Erfassen von Installationsinformationen (SG5600)]

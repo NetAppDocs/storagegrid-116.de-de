@@ -13,6 +13,7 @@ summary: Sie sollten überprüfen, ob der technische Support Ihre AutoSupport Me
 [role="lead"]
 Sie sollten überprüfen, ob der technische Support Ihre AutoSupport Meldungen erhält. Den Status von AutoSupport für Ihre Systeme finden Sie im Active IQ Portal. Durch die Überprüfung des Eingangs dieser Nachrichten wird sichergestellt, dass der technische Support Ihre Informationen enthält, wenn Sie Hilfe benötigen.
 
+.Über diese Aufgabe
 AutoSupport kann einen der folgenden Status anzeigen:
 
 * *EIN*

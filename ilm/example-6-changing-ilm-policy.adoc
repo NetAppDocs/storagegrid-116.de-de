@@ -40,6 +40,7 @@ NOTE: StorageGRID hält jedes Erasure Coding-Profil für einzigartig und verwend
 * Kopien vorhandener Objekte werden an einen völlig anderen Speicherort verschoben, z. B. um eine große Anzahl von Objekten in einen oder aus einem Cloud-Storage-Pool oder an einen Remote-Standort zu verschieben.
 
 
+.Verwandte Informationen
 xref:creating-ilm-policy.adoc[ILM-Richtlinie erstellen]
 
 

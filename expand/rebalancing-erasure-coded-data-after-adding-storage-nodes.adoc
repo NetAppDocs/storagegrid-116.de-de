@@ -13,7 +13,7 @@ summary: In einigen Fällen müssen Sie möglicherweise nach dem Hinzufügen neu
 [role="lead"]
 In einigen Fällen müssen Sie möglicherweise nach dem Hinzufügen neuer Storage-Nodes einen Ausgleich für Daten schaffen, die mit Erasure Coding versehen sind.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie haben die Erweiterungsschritte zum Hinzufügen der neuen Speicherknoten abgeschlossen.
 * Sie haben die geprüft xref:considerations-for-rebalancing-erasure-coded-data.adoc[Überlegungen zur Lastverteilung bei Daten, die mit Erasure Coding versehen sind].
 +
@@ -24,6 +24,7 @@ IMPORTANT: Führen Sie diesen Vorgang nur aus, wenn die Warnung *Low Object Stor
 * Sie haben die `Passwords.txt` Datei:
 
 
+.Über diese Aufgabe
 Wenn das EC-Ausgleichverfahren ausgeführt wird, ist die Performance von ILM-Vorgängen sowie S3- und Swift-Client-Operationen wahrscheinlich beeinträchtigt. Aus diesem Grund sollten Sie dieses Verfahren nur in begrenzten Fällen durchführen.
 
 
@@ -95,8 +96,8 @@ Hilfe zum Befehl zum Ausgleich von Daten erhalten:
 . Führen Sie weitere Schritte aus, basierend auf dem zurückgegebenen Status:
 +
 ** Wenn der Status lautet `In progress`, Der EC-Ausgleichsoperation läuft noch. Sie sollten das Verfahren regelmäßig überwachen, bis es abgeschlossen ist.
-** Wenn der Status lautet `Failure`, Führen Sie die ,Fehlerschritte.
-** Wenn der Status lautet `Success`, Führen Sie die ,Erfolg.
+** Wenn der Status lautet `Failure`, Führen Sie die <<rebalance_fail,Fehlerschritte>>.
+** Wenn der Status lautet `Success`, Führen Sie die <<rebalance_succeed,Erfolg>>.
 
 
 . Wenn das EC-Ausgleichverfahren zu viel Last generiert (beispielsweise sind Ingest-Operationen betroffen), unterbrechen Sie den Vorgang.
@@ -123,7 +124,7 @@ Informationen zu bestimmten Warnmeldungen finden Sie in den Anweisungen zum Moni
 .. Wenn der Status des EC-Ausgleichs noch immer ist `Failure`, Wenden Sie sich an den technischen Support.
 
 
-. [[Ausgleichs_erfolgreich]] Wenn der Status des EC-Ausgleichs-Verfahrens lautet `Success`, Optional ,Prüfen von Objekt-Storage Um die aktualisierten Details für die Site anzuzeigen.
+. [[Ausgleichs_erfolgreich]] Wenn der Status des EC-Ausgleichs-Verfahrens lautet `Success`, Optional <<review_object_storage,Prüfen von Objekt-Storage>> Um die aktualisierten Details für die Site anzuzeigen.
 +
 Daten mit Erasure-Coding-Verfahren sollten nun besser auf die Storage-Nodes am Standort abgestimmt sein.
 

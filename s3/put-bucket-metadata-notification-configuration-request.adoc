@@ -308,4 +308,5 @@ Alle für das Objekt definierten Objekt-Tags als Schlüsselwert-Paare
 |===
 *Hinweis:* für Tags und Benutzer-Metadaten übergibt StorageGRID Daten und Nummern als Strings oder als S3-Ereignisbenachrichtigungen an Elasticsearch. Um Elasticsearch so zu konfigurieren, dass diese Strings als Daten oder Zahlen interpretiert werden, befolgen Sie die Elasticsearch-Anweisungen für die dynamische Feldzuordnung und die Zuordnung von Datumsformaten. Sie müssen die dynamischen Feldzuordnungen im Index aktivieren, bevor Sie den Suchintegrationsdienst konfigurieren. Nachdem ein Dokument indiziert wurde, können Sie die Feldtypen des Dokuments im Index nicht bearbeiten.
 
+.Verwandte Informationen
 xref:../tenant/index.adoc[Verwenden Sie das Mandantenkonto]

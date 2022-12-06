@@ -13,7 +13,7 @@ summary: Wenn Ihr Archivknoten eine Verbindung zu einem TSM Middleware-Server he
 [role="lead"]
 Wenn der Archivknoten eine Verbindung zu einem TSM Middleware-Server herstellt, können Sie den Status des Archivspeichers eines Archiv-Knotens in Online oder Offline konfigurieren. Sie können den Archivspeicher auch deaktivieren, wenn der Archivknoten zum ersten Mal gestartet wird, oder die Fehleranzahl, die für den zugehörigen Alarm nachverfolgt wird, zurücksetzen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben spezifische Zugriffsberechtigungen.
 
@@ -40,4 +40,5 @@ image::../media/archive_store_tsm.gif[Konfigurieren Sie den Archivspeicher für 
 . Wählen Sie *Änderungen Anwenden*.
 
 
+.Verwandte Informationen
 xref:managing-archive-node-when-tsm-server-reaches-capacity.adoc[Verwalten Sie einen Archiv-Node, wenn der TSM-Server die Kapazität erreicht]

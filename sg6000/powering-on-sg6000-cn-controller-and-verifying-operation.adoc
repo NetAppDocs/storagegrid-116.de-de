@@ -13,7 +13,7 @@ summary: Schalten Sie den Controller nach dem Abschluss der Wartung ein.
 [role="lead"]
 Schalten Sie den Controller nach dem Abschluss der Wartung ein.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Der Controller wurde in einem Rack oder Rack installiert und die Daten- und Stromkabel angeschlossen.
 +
 xref:reinstalling-sg6000-cn-controller-into-cabinet-or-rack.adoc[Installieren Sie den SG6000-CN Controller wieder in den Schrank oder Rack]
@@ -108,6 +108,7 @@ CAUTION: Nehmen Sie keinen anderen Appliance-Node offline, es sei denn, dieses G
 . Optional: Befestigen Sie die Frontverkleidung, falls eine entfernt wurde.
 
 
+.Verwandte Informationen
 xref:viewing-status-indicators-and-buttons-on-sg6000-cn-controller.adoc[Statusanzeigen und Schaltflächen des SG6000-CN Controllers anzeigen]
 
 xref:viewing-boot-up-status-codes-for-sg6000-storage-controllers.adoc[Anzeigen von Boot-Statuscodes für SG6000-Speicher-Controller]

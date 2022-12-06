@@ -13,12 +13,13 @@ summary: Verwenden Sie dieses Verfahren, um die StorageGRID-Provisionierungs-Pas
 [role="lead"]
 Verwenden Sie dieses Verfahren, um die StorageGRID-Provisionierungs-Passphrase zu ändern. Die Passphrase ist für Recovery-, Erweiterungs- und Wartungsvorgänge erforderlich. Die Passphrase ist außerdem erforderlich, um Backups im Recovery-Paket herunterzuladen, die Grid-Topologiedaten, Passwörter für die Grid-Node-Konsole und Verschlüsselungsschlüssel für das StorageGRID-System enthalten.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie verfügen über Wartungs- oder Root-Zugriffsberechtigungen.
 * Sie haben die aktuelle Provisionierungs-Passphrase.
 
 
+.Über diese Aufgabe
 Die Provisionierungs-Passphrase ist für viele Installations- und Wartungsverfahren und für erforderlich xref:../maintain/downloading-recovery-package.adoc[Herunterladen des Wiederherstellungspakets]. Die Provisionierungs-Passphrase wird im nicht aufgeführt `Passwords.txt` Datei: Achten Sie darauf, die Provisionierungs-Passphrase zu dokumentieren und an einem sicheren Ort zu halten.
 
 .Schritte

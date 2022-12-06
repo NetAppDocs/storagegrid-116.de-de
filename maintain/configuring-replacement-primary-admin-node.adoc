@@ -13,7 +13,7 @@ summary: Der Ersatzknoten muss als primärer Admin-Node für Ihr StorageGRID Sys
 [role="lead"]
 Der Ersatzknoten muss als primärer Admin-Node für Ihr StorageGRID System konfiguriert sein.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Für primäre Admin-Knoten, die auf virtuellen Maschinen gehostet werden, muss die virtuelle Maschine bereitgestellt, eingeschaltet und initialisiert werden.
 * Für primäre Admin-Nodes, die auf einer Services-Appliance gehostet werden, haben Sie die Appliance ersetzt und die installierte Software installiert. Informationen zum Gerät finden Sie im Installationshandbuch.
 +
@@ -62,6 +62,7 @@ NOTE: Informationen zum Konfigurieren eines Vertrauensverhältnisses mit einer v
 
 
 
+.Verwandte Informationen
 xref:../admin/index.adoc[StorageGRID verwalten]
 
 xref:storagegrid-hotfix-procedure.adoc[StorageGRID Hotfix Verfahren]

@@ -45,4 +45,5 @@ Wenn die Datenaufnahme oder -Abfrage bei keinem Upgrade eines Grid-Node unerwart
 
 Wenn das Datenbank-Upgrade mit einem Fehler fehlschlägt, versuchen Sie es erneut. Wenden Sie sich an den technischen Support, wenn dieser erneut fehlschlägt.
 
+.Verwandte Informationen
 xref:checking-systems-condition-before-upgrading-software.adoc[Überprüfen Sie den Zustand des Systems, bevor Sie die Software aktualisieren]

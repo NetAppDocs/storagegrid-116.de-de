@@ -13,7 +13,7 @@ summary: Wenn Sie das Gerät mit Strom versorgen, protokolliert der BMC eine Rei
 [role="lead"]
 Wenn Sie das Gerät mit Strom versorgen, protokolliert der BMC eine Reihe von Startcodes. Sie können diese Codes auf einer grafischen Konsole anzeigen, die mit dem BMC-Management-Port verbunden ist.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Wissen Sie, wie Sie auf das BMC-Dashboard zugreifen können.
 * Wenn Sie Seriell-über-LAN (SOL) verwenden möchten, haben Sie Erfahrung mit IPMI SOL-Konsolenanwendungen.
 
@@ -152,4 +152,5 @@ StorageGRID wird ausgeführt.
 |===
 
 
+.Verwandte Informationen
 xref:accessing-bmc-interface-sg1000.adoc[Greifen Sie auf die BMC-Schnittstelle zu]

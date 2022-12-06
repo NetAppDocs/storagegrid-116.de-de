@@ -13,6 +13,7 @@ summary: Für jeden Grid-Node können Sie den aktuellen Status und die Version d
 [role="lead"]
 Für jeden Grid-Node können Sie den aktuellen Status und die Version des auf diesem Grid-Node ausgeführten Server Managers anzeigen. Zudem erhalten Sie den aktuellen Status aller auf diesem Grid-Node ausgeführten Services.
 
+.Was Sie benötigen
 Sie müssen die haben `Passwords.txt` Datei:
 
 .Schritte

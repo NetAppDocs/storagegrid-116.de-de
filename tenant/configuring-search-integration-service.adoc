@@ -13,13 +13,14 @@ summary: Der Suchintegrations-Service sendet Objektmetadaten an einen Zielindex 
 [role="lead"]
 Der Suchintegrations-Service sendet Objektmetadaten an einen Zielindex bei jedem Erstellen, Löschen oder Aktualisieren der zugehörigen Metadaten oder Tags.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Plattform-Services müssen von einem StorageGRID-Administrator für Ihr Mandantenkonto aktiviert werden.
 * Sie müssen bereits einen S3-Bucket erstellt haben, dessen Inhalt Sie indexieren möchten.
 * Der Endpunkt, den Sie als Ziel für den Suchintegrationsdienst verwenden möchten, muss bereits vorhanden sein, und Sie müssen seinen URN haben.
 * Sie müssen zu einer Benutzergruppe gehören, die über die Berechtigung Alle Buckets verwalten oder Stammzugriff verfügt, sodass Sie die Einstellungen für alle S3-Buckets in Ihrem Mandantenkonto verwalten können. Diese Berechtigungen überschreiben die Berechtigungseinstellungen in Gruppen- oder Bucket-Richtlinien bei der Konfiguration des Buckets mithilfe des Mandanten-Manager.
 
 
+.Über diese Aufgabe
 Nachdem Sie den Such-Integrationsservice für einen Quell-Bucket konfiguriert haben, werden beim Erstellen eines Objekts oder beim Aktualisieren der Metadaten oder Tags eines Objekts Objektmetadaten ausgelöst, die an den Ziel-Endpunkt gesendet werden. Wenn Sie den Such-Integrationsservice für einen Bucket aktivieren, der bereits Objekte enthält, werden Metadatenbenachrichtigungen nicht automatisch für vorhandene Objekte gesendet. Sie müssen diese vorhandenen Objekte aktualisieren, um sicherzustellen, dass ihre Metadaten dem Zielsuchindex hinzugefügt werden.
 
 .Schritte
@@ -68,12 +69,14 @@ In dem zuvor gezeigten Beispiel lösen alle Objekte, die dem Bucket hinzugefügt
 
 
 
+.Nachdem Sie fertig sind
 Bei Bedarf können Sie die Suchintegration für einen Bucket mithilfe einer der folgenden Methoden deaktivieren:
 
 * Wählen Sie *STORAGE (S3)* *Buckets* und deaktivieren Sie das Kontrollkästchen *Suchintegration aktivieren*.
 * Wenn Sie die S3-API direkt verwenden, verwenden Sie eine Benachrichtigungsanforderung FÜR DELETE-Bucket-Metadaten. Anweisungen zur Implementierung von S3-Client-Applikationen finden Sie in der Anleitung.
 
 
+.Verwandte Informationen
 xref:understanding-search-integration-service.adoc[Den Suchintegrations-Service verstehen]
 
 xref:configuration-xml-for-search-configuration.adoc[Konfigurations-XML für die Integration der Suche]

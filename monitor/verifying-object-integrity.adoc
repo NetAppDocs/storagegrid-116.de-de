@@ -51,11 +51,12 @@ Wenn die Hintergrundüberprüfung ein beschädigtes Objekt nicht ersetzen kann, 
 
 Sie können die Rate ändern, mit der die Hintergrundüberprüfung replizierte Objektdaten auf einem Storage-Node überprüft, wenn Sie Bedenken hinsichtlich der Datenintegrität haben.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie müssen über spezifische Zugriffsberechtigungen verfügen.
 
 
+.Über diese Aufgabe
 Sie können die Verifizierungsrate für die Hintergrundüberprüfung eines Speicherknoten ändern:
 
 * Adaptiv: Standardeinstellung. Die Aufgabe wurde entwickelt, um maximal 4 MB/s oder 10 Objekte/s zu überprüfen (je nachdem, welcher Wert zuerst überschritten wird).
@@ -145,7 +146,7 @@ Die Objektexistenz prüft die Metadaten für jedes in StorageGRID gespeicherte O
 
 Sie erstellen und führen jeweils einen Job für die Überprüfung der Objektexistenz aus. Wenn Sie einen Job erstellen, wählen Sie die Speicherknoten und -Volumes aus, die Sie überprüfen möchten. Sie wählen auch das Consistency Control für den Job aus.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie haben die Berechtigung Wartung oder Stammzugriff.
 * Sie haben sichergestellt, dass die zu prüfenden Speicherknoten online sind. Wählen Sie *NODES*, um die Tabelle der Knoten anzuzeigen. Stellen Sie sicher, dass neben dem Knotennamen für die Knoten, die Sie überprüfen möchten, keine Warnsymbole angezeigt werden.
@@ -163,6 +164,7 @@ Sie erstellen und führen jeweils einen Job für die Überprüfung der Objektexi
 
 Die Objektprüfung bietet keine nützlichen Informationen, während diese Verfahren ausgeführt werden.
 
+.Über diese Aufgabe
 Die Fertigstellung eines Objektes kann je nach Anzahl der Objekte im Raster, der ausgewählten Storage-Nodes und Volumes und der ausgewählten Konsistenzgruppe Tage oder Wochen dauern. Sie können nur einen Job gleichzeitig ausführen, aber Sie können mehrere Speicherknoten und Volumes gleichzeitig auswählen.
 
 .Schritte
@@ -256,4 +258,5 @@ image::../media/oec_rerun.png[OEC erneut ausführen]
 
 Die Registerkarte „aktiver Job“ wird angezeigt. Alle ausgewählten Jobs werden als ein Job bei einer Consistency Control von strong-site erneut ausgeführt. In einem Feld mit * Related Jobs* im Bereich Details werden die Job-IDs für die ursprünglichen Jobs angezeigt.
 
+.Nachdem Sie fertig sind
 Wenn Sie noch Bedenken bezüglich der Datenintegrität haben, gehen Sie zu *SUPPORT* *Tools* *Grid-Topologie* *_Site_* *_Storage-Node_* *LDR* *Verifizierung* *Konfiguration* *Main* und erhöhen Sie die Hintergrundverifizierungsrate. Die Hintergrundüberprüfung überprüft die Richtigkeit aller gespeicherten Objektdaten und repariert sämtliche gefundenen Probleme. Das schnelle Auffinden und Reparieren potenzieller Probleme verringert das Risiko von Datenverlusten.

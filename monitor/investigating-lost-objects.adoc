@@ -14,12 +14,13 @@ summary: Wenn der Alarm *Objekte verloren* ausgelöst wird, müssen Sie sofort u
 [role="lead"]
 Wenn der Alarm *Objekte verloren* ausgelöst wird, müssen Sie sofort untersuchen. Sammeln Sie Informationen zu den betroffenen Objekten und wenden Sie sich an den technischen Support.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Grid Manager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie müssen über spezifische Zugriffsberechtigungen verfügen.
 * Sie müssen die haben `Passwords.txt` Datei:
 
 
+.Über diese Aufgabe
 Die Warnung *Objects lost* zeigt an, dass StorageGRID glaubt, dass es keine Kopien eines Objekts im Raster gibt. Möglicherweise sind Daten dauerhaft verloren gegangen.
 
 Untersuchen Sie verlorene Objektwarnungen sofort. Möglicherweise müssen Sie Maßnahmen ergreifen, um weiteren Datenverlust zu vermeiden. In einigen Fällen können Sie ein verlorenes Objekt wiederherstellen, wenn Sie eine sofortige Aktion ausführen.
@@ -196,4 +197,5 @@ Vom technischen Support bitten Sie möglicherweise, zu bestimmen, ob ein Verfahr
 
 
 
+.Verwandte Informationen
 xref:../audit/index.adoc[Prüfung von Audit-Protokollen]

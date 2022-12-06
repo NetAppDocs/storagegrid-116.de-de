@@ -93,6 +93,7 @@ Während des Upgrades auf StorageGRID 11.6 (d. h. während das System als Umgebu
 
 Dieser Fehler wird nach Abschluss des Upgrades auf 11.6 behoben.
 
+.Behelfslösung
 Während das Upgrade für 11.6 ausgeführt wird, nutzen Sie folgende Tools, um Bucket-Details anzuzeigen oder Buckets zu managen, anstatt den Mandanten-Manager zu verwenden:
 
 * Zur Ausführung von S3-Standardvorgängen auf einem Bucket können Sie entweder die S3-REST-API oder die Mandanten-Management-API verwenden.

@@ -13,7 +13,7 @@ summary: Das AutoSupport Tool erfasst Daten in einem Kunden-Support-Bundle von d
 [role="lead"]
 Das AutoSupport Tool erfasst Daten in einem Kunden-Support-Bundle von der Appliance und sendet die Daten automatisch an den technischen Support. Konfigurieren von AutoSupport unterstützt den technischen Support durch Remote-Fehlerbehebung und Problemanalyse.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Die AutoSupport-Funktion muss auf der Appliance aktiviert sein.
 +
 Die AutoSupport-Funktion wird global auf einer Storage Management Station aktiviert und deaktiviert.
@@ -21,6 +21,7 @@ Die AutoSupport-Funktion wird global auf einer Storage Management Station aktivi
 * Der Storage Manager-Ereignismonitor muss auf mindestens einem Gerät mit Zugang zum Gerät und vorzugsweise auf maximal einer Maschine ausgeführt werden.
 
 
+.Über diese Aufgabe
 Alle Daten werden an dem von Ihnen angegebenen Speicherort in ein einziges komprimiertes Archivdateiformat (.7z) komprimiert.
 
 AutoSupport bietet die folgenden Meldungsarten:
@@ -61,4 +62,5 @@ Wöchentliche Nachrichten
 . Verwenden Sie die Online-Hilfe des SANtricity Storage Managers, falls erforderlich, um die Aufgabe abzuschließen.
 
 
+.Verwandte Informationen
 http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61197["NetApp Dokumentation: SANtricity Storage Manager"^]

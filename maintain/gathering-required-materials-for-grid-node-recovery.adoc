@@ -21,7 +21,7 @@ Bevor Sie Wartungsmaßnahmen durchführen, müssen Sie sicherstellen, dass die z
  a| 
 StorageGRID Installationsarchiv
  a| 
-Wenn Sie einen Grid-Node wiederherstellen müssen, müssen Sie dies tun ,Laden Sie die Installationsdateien von StorageGRID herunter Für Ihre Plattform.
+Wenn Sie einen Grid-Node wiederherstellen müssen, müssen Sie dies tun <<download-and-extract-install-files-recover,Laden Sie die Installationsdateien von StorageGRID herunter>> Für Ihre Plattform.
 
 *Hinweis:* Sie müssen keine Dateien herunterladen, wenn Sie fehlgeschlagene Speichervolumen auf einem Speicherknoten wiederherstellen.
 

@@ -127,6 +127,7 @@ Im folgenden Beispiel verwendet die Anweisung die Elemente „Effekt“, „Prin
 ----
 Die Bucket-Richtlinie hat eine Größenbeschränkung von 20,480 Byte, und die Gruppenrichtlinie hat ein Größenlimit von 5,120 Byte.
 
+.Verwandte Informationen
 xref:../tenant/index.adoc[Verwenden Sie das Mandantenkonto]
 
 
@@ -201,7 +202,8 @@ In Richtlinienausrechnungen können Sie mithilfe des Elements Ressourcen den Buc
 * Der Ressourcenwert kann einen Bucket angeben, der beim Erstellen einer Gruppenrichtlinie noch nicht vorhanden ist.
 
 
- variables in a policy
+.Verwandte Informationen
+<<Geben Sie Variablen in einer Richtlinie an>>
 
 
 
@@ -824,7 +826,8 @@ Mögliche Einstellungen für diese Berechtigung sind:
 
 IMPORTANT: Wenn die aktuelle S3-Richtlinie eine Überschreibung zulässt und die Berechtigung PutOverwriteObject auf Deny gesetzt ist, kann der Client die Daten eines Objekts, benutzerdefinierte Metadaten oder Objekt-Tagging nicht überschreiben. Wenn zusätzlich das Kontrollkästchen *Client Modification* verhindern* aktiviert ist (*CONFIGURATION* *System* *Grid options*), überschreibt diese Einstellung die Einstellung der PutOverwriteObject-Berechtigung.
 
- group policy examples
+.Verwandte Informationen
+<<Beispiele für S3-Gruppenrichtlinien>>
 
 
 
@@ -1297,13 +1300,14 @@ PUT#2 -------> OK
 /mybucket/important.doc
 PUT#1 -------> PUT#2 ---X (denied)
 ----
+.Verwandte Informationen
 xref:../ilm/index.adoc[Objektmanagement mit ILM]
 
- policies requiring special handling
+<<Erstellen von Richtlinien, die eine spezielle Handhabung erfordern>>
 
 xref:how-storagegrid-ilm-rules-manage-objects.adoc[Managen von Objekten durch StorageGRID ILM-Regeln]
 
- group policy examples
+<<Beispiele für S3-Gruppenrichtlinien>>
 
 
 
@@ -1528,6 +1532,7 @@ In diesem Beispiel ist der `Deny` Effect für PutOverwriteObject und DeleteObjec
   ]
 }
 ----
+.Verwandte Informationen
 xref:operations-on-buckets.adoc[Operationen auf Buckets]
 
 
@@ -1601,7 +1606,7 @@ In diesem Beispiel haben alle Mitglieder der Gruppe schreibgeschützten Zugriff 
 ----
 
 
-==== Beispiel: Erlauben Sie Gruppenmitgliedern vollen Zugriff auf ihre „Ordner“ in einem Bucket
+==== Beispiel: Gruppenmitglieder haben vollen Zugriff auf ihre „`folder`“ in einem Bucket
 
 In diesem Beispiel dürfen Mitglieder der Gruppe nur ihren spezifischen Ordner (Schlüsselpräfix) im angegebenen Bucket auflisten und darauf zugreifen. Beachten Sie, dass bei der Festlegung der Privatsphäre dieser Ordner Zugriffsberechtigungen aus anderen Gruppenrichtlinien und der Bucket-Richtlinie berücksichtigt werden sollten.
 
@@ -1629,4 +1634,5 @@ In diesem Beispiel dürfen Mitglieder der Gruppe nur ihren spezifischen Ordner (
   ]
 }
 ----
+.Verwandte Informationen
 xref:../tenant/index.adoc[Verwenden Sie das Mandantenkonto]

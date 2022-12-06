@@ -13,7 +13,7 @@ summary: Sie können eine Liste der Buckets und Bucket-Einstellungen in Ihrem Ma
 [role="lead"]
 Sie können eine Liste der Buckets und Bucket-Einstellungen in Ihrem Mandantenkonto anzeigen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Sie müssen mit einem beim Mandantenmanager angemeldet sein xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 
 
