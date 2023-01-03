@@ -244,7 +244,7 @@ Angenommen, Sie installieren ein StorageGRID System mit Version 11.6. Nehmen Sie
 
 * Der systemweite *Metadaten reservierter Platz* ist auf 8 TB eingestellt. (Dies ist der Standardwert für StorageGRID 11.6, wenn jeder Speicherknoten mehr als 128 GB RAM hat.)
 * Der tatsächlich reservierte Speicherplatz für Metadaten von SN1 beträgt 6 TB. (Das gesamte Volume ist reserviert, da Volume 0 kleiner ist als die Einstellung *Metadaten reservierter Speicherplatz*.)
-* Der zulässige Speicherplatz für Metadaten auf SN1 beträgt 3 TB, basierend auf der im angegebenen Berechnung <<actual-reserved-space-for-metadata,Tabelle für den tatsächlich reservierten Speicherplatz für Metadaten>>: (Tatsächlich reservierter Platz für Metadaten − 1 TB) × 60%, bis zu einem Maximum von 3.96 TB.
+* Der zulässige Speicherplatz für Metadaten auf SN1 beträgt 3 TB, basierend auf der im angegebenen Berechnung <<table-allowed-space-for-metadata,Tabelle für zulässigem Speicherplatz für Metadaten>>: (Tatsächlich reservierter Platz für Metadaten − 1 TB) × 60%, bis zu einem Maximum von 3.96 TB.
 
 
 
