@@ -89,7 +89,7 @@ In diesem Beispiel `s3.example.com` Stellt den DNS-Eintrag für die virtuelle IP
 
 +
 
-NOTE: Wenn möglich, sollten Sie sich mit einer HA-Gruppe von Lastausgleichs Nodes verbinden, um einen Single Point of Failure zu vermeiden.
+NOTE: Wenn dies möglich ist, sollten Sie eine Verbindung zu einer HA-Gruppe von Load-Balancing-Nodes herstellen, um einen Single Point of Failure zu vermeiden.
 
 +
 Auf ähnliche Weise kann der URI für einen Bucket sein, der auf AWS gehostet wird,:

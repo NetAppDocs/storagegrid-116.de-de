@@ -168,7 +168,7 @@ NOTE: Wenn Ihre ILM-Regeln und -Richtlinien zum Schutz vor dem Verlust eines ein
 
 == Überlegungen zu Konsistenzkontrollen beim Entfernen eines Standorts
 
-Die Konsistenzstufe für einen S3-Bucket oder Swift-Container bestimmt, ob StorageGRID Objektmetadaten vollständig auf alle Nodes und Standorte repliziert, bevor einem Client mitgeteilt wird, dass die Objektaufnahme erfolgreich war. Die Konsistenzstufe gibt einen Kompromiss zwischen der Verfügbarkeit der Objekte und der Konsistenz dieser Objekte über verschiedene Speicherknoten und Standorte hinweg.
+Die Konsistenzstufe für einen S3-Bucket oder Swift-Container bestimmt, ob StorageGRID Objektmetadaten vollständig auf alle Nodes und Standorte repliziert, bevor einem Client mitgeteilt wird, dass die Objektaufnahme erfolgreich war. Konsistenzkontrollen bieten ein Gleichgewicht zwischen der Verfügbarkeit der Objekte und der Konsistenz dieser Objekte über verschiedene Storage Nodes und Standorte hinweg.
 
 Wenn StorageGRID einen Standort entfernt, muss es sicherstellen, dass keine Daten auf den entfernten Standort geschrieben werden. Daher wird das Konsistenzlevel vorübergehend für jeden Bucket oder Container überschrieben. Nach dem Starten der Website-Außerbetriebnahme verwendet StorageGRID vorübergehend eine hohe Standort-Konsistenz, um zu verhindern, dass Objekt-Metadaten auf die Website geschrieben werden.
 

@@ -16,7 +16,7 @@ Nach der Konfiguration von Hochverfügbarkeitsgruppen und Endpunkten des Load Ba
 Die IP-Adresse, die Sie im DNS-Datensatz eingeben, hängt davon ab, ob Sie eine HA-Gruppe von Load-Balancing-Nodes verwenden:
 
 * Wenn Sie eine HA-Gruppe konfiguriert haben, stellt FabricPool eine Verbindung zu den virtuellen IP-Adressen dieser HA-Gruppe her.
-* Wenn Sie keine HA-Gruppe verwenden, kann FabricPool eine Verbindung zum StorageGRID Load Balancer Service herstellen. Dabei wird die IP-Adresse eines Gateway Node oder eines Admin-Nodes verwendet.
+* Wenn Sie keine HA-Gruppe verwenden, kann sich FabricPool mithilfe der IP-Adresse eines beliebigen Gateway-Node oder Admin-Node mit dem StorageGRID Load Balancer-Service verbinden.
 
 
 Außerdem müssen Sie sicherstellen, dass der DNS-Datensatz alle erforderlichen Endpunkt-Domain-Namen referenziert, einschließlich Platzhalternamen.

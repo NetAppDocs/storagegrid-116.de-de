@@ -22,6 +22,10 @@ Sie können zu einem anderen RAID-Modus auf der Appliance wechseln, um Ihre Anfo
 Vor der Bereitstellung der Appliance als Storage Node können Sie eine der folgenden Volume-Konfigurationsoptionen wählen:
 
 * *DDP*: Dieser Modus verwendet zwei Paritätslaufwerke pro acht Datenlaufwerke. Dies ist der Standard- und empfohlene Modus für alle Appliances. Im Vergleich zu RAID 6 bietet DDP eine bessere System-Performance, geringere Wiederherstellungszeiten nach Laufwerksausfällen und einfaches Management.
++
+
+IMPORTANT: Aufgrund der beiden SSDs bietet DDP in SG6060 Appliances keinen Schubladenschutz. Der Schutz vor Schubladenverlusten ist in allen Erweiterungs-Shelfs, die zu einem SG6060 hinzugefügt werden, wirksam.
+
 * *DDP16*: In diesem Modus werden für alle 16 Datenlaufwerke zwei Paritätslaufwerke verwendet. Dies führt im Vergleich zu DDP zu einer höheren Storage-Effizienz. Im Vergleich zu RAID 6 bietet DDP16 eine bessere System-Performance, geringere Wiederherstellungszeiten nach Laufwerksausfällen, einfaches Management und vergleichbare Storage-Effizienz. Um den DDP16-Modus zu verwenden, muss Ihre Konfiguration mindestens 20 Laufwerke enthalten. DDP16 bietet keinen Schubladenschutz.
 * *RAID 6*: Dieser Modus verwendet zwei Paritätslaufwerke pro 16 oder mehr Datenlaufwerken. Für die Verwendung des RAID 6-Modus muss Ihre Konfiguration mindestens 20 Laufwerke enthalten. Obwohl RAID-6 die Storage-Effizienz der Appliance im Vergleich zu DDP erhöhen kann, wird dies in den meisten StorageGRID-Umgebungen nicht empfohlen.
 

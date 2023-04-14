@@ -37,7 +37,7 @@ Der Speicherpool Alle Speicherknoten kann nicht bearbeitet werden.
 . Wählen Sie bei Bedarf andere Standorte und Lagersorten aus.
 +
 
-NOTE: Sie können die Standort- oder Speicherklasse nicht ändern, wenn der Speicherpool in einem Erasure-Coding-Profil verwendet wird und die Änderung das Erasure-Coding-Schema ungültig machen würde. Wenn beispielsweise ein Speicherpool, der in einem Erasure-Coding-Profil verwendet wird, derzeit eine Speicherklasse mit nur einem Standort enthält, können Sie eine Speicherklasse mit zwei Standorten nicht verwenden, da die Änderung das Erasure-Coding-Schema ungültig machen würde.
+NOTE: Sie können die Standort- oder Speicherklasse nicht ändern, wenn der Speicherpool in einem Erasure-Coding-Profil verwendet wird und die Änderung das Erasure-Coding-Schema ungültig machen würde. Wenn beispielsweise ein in einem Erasure Coding-Profil verwendeter Speicherpool derzeit einen Storage-Grade mit nur einem Standort umfasst, können Sie keinen Storage-Grade mit zwei Standorten verwenden, da die Änderung das Erasure Coding-Schema ungültig machen würde.
 
 . Wählen Sie *Speichern*.
 

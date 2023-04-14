@@ -75,7 +75,7 @@ Jede SG6060- und SG6060X-Appliance kann ein oder zwei Erweiterungs-Shelfs für i
 
 == SG6060- und 6060X-Diagramme
 
-Die Fronten der SG6060 und SG6060X sind identisch. Diese Abbildung zeigt die Vorderseite des SG6060, das einen 1-HE-Computing-Controller und ein 4-HE-Shelf mit zwei Storage-Controllern und 60 Laufwerken in fünf LaufwerkSchubladen enthält.
+Die Fronten des SG6060 und des SG6060X sind identisch. Die folgende Abbildung zeigt die Vorderseite des SG6060, der einen 1-HE-Computing-Controller und ein 4-HE-Shelf mit zwei Storage-Controllern und 60 Laufwerken in fünf Laufwerkseinschüben umfasst.
 
 *SG6060 Vorderansicht*
 
@@ -113,7 +113,7 @@ SG6000-CN Computing Controller mit abnehmbarer Frontblende
 E2860 Controller-Shelf mit entfernter Frontblende (optionales Erweiterungs-Shelf erscheint identisch)
 
 |===
-Diese Abbildung zeigt die Rückseite des SG6060, einschließlich der Computing- und Storage-Controller, Lüfter und Netzteile.
+Die folgenden Abbildungen zeigen die Rückseite des SG6060 und des SG6060X, einschließlich der Computing- und Storage-Controller, Lüfter und Netzteile.
 
 *SG6060 Rückansicht*
 
@@ -203,7 +203,7 @@ Netzteil (1 von 2) für E2860 Controller-Shelf
 |===
 *SG6060 und SG6060X Erweiterungs-Shelf*
 
-Diese Abbildung zeigt die Rückseite des optionalen Erweiterungs-Shelfs für SG6060 und SG6060X, einschließlich der ein-/Ausgabemodule (IOMs), Lüfter und Netzteile. Jeder SG6060 kann mit einem oder zwei Erweiterungs-Shelfs installiert werden. Dies kann bei der Erstinstallation oder einem späteren Zeitpunkt hinzugefügt werden.
+Diese Abbildung zeigt die Rückseite des optionalen Erweiterungs-Shelfs für SG6060 und SG6060X, einschließlich der ein-/Ausgabemodule (IOMs), Lüfter und Netzteile. Jedes SG6060 und SG6060X kann mit einem oder zwei Erweiterungs-Shelfs installiert werden, die in der Erstinstallation enthalten oder später hinzugefügt werden können.
 
 image::../media/de460c_expansion_shelf_rear_view.gif[Erweiterungs-Shelf Hinten]
 

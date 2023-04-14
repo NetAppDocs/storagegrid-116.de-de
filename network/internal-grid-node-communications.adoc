@@ -279,6 +279,9 @@ Interner Datenverkehr für Wartungsvorgänge und Fehlerberichte.
 
 
 
+| 8443 | TCP | Primärer Admin-Node | Appliance-Nodes | Interner Datenverkehr im Zusammenhang mit dem Wartungsmodus. 
+
+
  a| 
 9042
  a| 

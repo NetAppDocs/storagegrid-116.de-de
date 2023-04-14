@@ -250,8 +250,8 @@ Der Endpunkt des Load Balancer wird erstellt. Das individuelle Zertifikat wird f
 Die IP-Adresse, die Sie im DNS-Datensatz eingeben, hängt davon ab, ob Sie eine HA-Gruppe von Load-Balancing-Nodes verwenden:
 
 +
-** Wenn Sie eine HA-Gruppe konfiguriert haben, stellt Clients eine Verbindung mit den virtuellen IP-Adressen dieser HA-Gruppe her.
-** Wenn Sie keine HA-Gruppe verwenden, stellen die Clients eine Verbindung zum StorageGRID Load Balancer Service her. Dabei wird die IP-Adresse eines Gateway-Node oder eines Admin-Nodes verwendet.
+** Wenn Sie eine HA-Gruppe konfiguriert haben, stellen Clients eine Verbindung zu den virtuellen IP-Adressen dieser HA-Gruppe her.
+** Wenn Sie keine HA-Gruppe verwenden, stellen die Clients unter Verwendung der IP-Adresse eines beliebigen Gateway-Node oder Admin-Node eine Verbindung zum StorageGRID Load Balancer-Service her.
 +
 Außerdem müssen Sie sicherstellen, dass der DNS-Datensatz alle erforderlichen Endpunkt-Domain-Namen referenziert, einschließlich Platzhalternamen.
 

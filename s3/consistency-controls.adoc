@@ -2,7 +2,7 @@
 permalink: s3/consistency-controls.html 
 sidebar: sidebar 
 keywords: consistency controls 
-summary: Konsistenzkontrollen ermöglichen je nach Anforderung eine Kompromiss zwischen der Verfügbarkeit der Objekte und der Konsistenz dieser Objekte über verschiedene Storage-Nodes und -Standorte. 
+summary: Konsistenzkontrollen sorgen für ein Gleichgewicht zwischen der Verfügbarkeit der Objekte und der Konsistenz dieser Objekte über verschiedene Storage Nodes und Standorte hinweg, wie von Ihrer Anwendung gefordert. 
 ---
 = Konsistenzkontrollen
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Konsistenzkontrollen ermöglichen je nach Anforderung eine Kompromiss z
 
 
 [role="lead"]
-Konsistenzkontrollen ermöglichen je nach Anforderung eine Kompromiss zwischen der Verfügbarkeit der Objekte und der Konsistenz dieser Objekte über verschiedene Storage-Nodes und -Standorte.
+Konsistenzkontrollen sorgen für ein Gleichgewicht zwischen der Verfügbarkeit der Objekte und der Konsistenz dieser Objekte über verschiedene Storage Nodes und Standorte hinweg, wie von Ihrer Anwendung gefordert.
 
 Standardmäßig garantiert StorageGRID eine Lese-/Nachher-Konsistenz für neu erstellte Objekte. Jeder GET nach einem erfolgreich abgeschlossenen PUT wird in der Lage sein, die neu geschriebenen Daten zu lesen. Überschreibungen vorhandener Objekte, Metadatenaktualisierungen und -Löschungen sind schließlich konsistent. Überschreibungen dauern in der Regel nur wenige Sekunden oder Minuten, können jedoch bis zu 15 Tage in Anspruch nehmen.
 
@@ -25,46 +25,13 @@ Die Konsistenzkontrolle beeinflusst die Verteilung der Metadaten, die StorageGRI
 
 Sie können die Konsistenzkontrolle für einen Bucket- oder API-Vorgang auf einen der folgenden Werte festlegen:
 
-|===
-| Konsistenzkontrolle | Beschreibung 
+* *All*: Alle Knoten erhalten die Daten sofort, oder die Anfrage schlägt fehl.
+* *Strong-global*: Garantiert Lese-After-Write-Konsistenz für alle Kundenanfragen über alle Standorte hinweg.
+* *Strong-site*: Garantiert Lese-After-Write Konsistenz für alle Kundenanfragen innerhalb einer Site.
+* *Read-after-New-write*: (Standard) bietet Read-after-write-Konsistenz für neue Objekte und eventuelle Konsistenz für Objektaktualisierungen. Hochverfügbarkeit und garantierte Datensicherung Empfohlen für die meisten Fälle.
+* *Verfügbar*: Bietet eventuelle Konsistenz für neue Objekte und Objekt-Updates. Verwenden Sie für S3-Buckets nur nach Bedarf (z. B. für einen Bucket mit Protokollwerten, die nur selten gelesen werden, oder für HEAD- oder GET-Vorgänge für nicht vorhandene Schlüssel). Nicht unterstützt für S3 FabricPool-Buckets.
 
 
- a| 
-Alle
- a| 
-Alle Nodes erhalten die Daten sofort, sonst schlägt die Anfrage fehl.
-
-
-
- a| 
-Stark global
- a| 
-Garantierte Konsistenz bei Lese-nach-Schreibvorgängen für alle Client-Anfragen an allen Standorten.
-
-
-
- a| 
-Stark vor Ort
- a| 
-Garantiert Konsistenz bei Lese-nach-Schreibvorgängen für alle Client-Anfragen innerhalb eines Standorts.
-
-
-
- a| 
-Read-after-New-Write-Funktion
- a| 
-(Standard) konsistente Lese-/Schreibvorgänge für neue Objekte und eventuelle Konsistenz bei Objekt-Updates. Hochverfügbarkeit und garantierte Datensicherung Am ehesten entspricht die Konsistenzgarantie von Amazon S3.
-
-*Hinweis:* Wenn Ihre Anwendung HEAD oder GET Anfragen zu Objekten verwendet, die nicht existieren, erhalten Sie möglicherweise eine hohe Anzahl von 500 internen Serverfehlern, wenn ein oder mehrere Speicherknoten nicht verfügbar sind. Um diese Fehler zu vermeiden, setzen Sie das Consistency Control auf „`available`“, es sei denn, Sie benötigen Konsistenzgarantien ähnlich wie Amazon S3.
-
-
-
- a| 
-Verfügbar (eventuelle Konsistenz für HEAD- oder GET-Vorgänge)
- a| 
-Verhält sich wie die Konsistenzstufe „`read-after-New-write`“, bietet aber schließlich Konsistenz für HEAD- und GET-Vorgänge. Bietet eine höhere Verfügbarkeit FÜR HEAD- und GET-Vorgänge als „`read-after-New-write`“, wenn Storage-Nodes nicht verfügbar sind. Unterscheidet sich von Amazon S3 Konsistenzgarantien für HEAD- und GET-Operationen.
-
-|===
 
 
 == Verwenden Sie die Consistency Controls „`read-after-New-write`“ und „`available`“
@@ -72,12 +39,12 @@ Verhält sich wie die Konsistenzstufe „`read-after-New-write`“, bietet aber 
 Wenn bei einem HEAD oder GET-Vorgang die Konsistenzkontrolle „`read-after-New-write`“ verwendet wird, führt StorageGRID die Suche in mehreren Schritten durch:
 
 * Es sieht zunächst das Objekt mit einer niedrigen Konsistenz.
-* Falls dieses Lookup fehlschlägt, wird das Lookup auf der nächsten Konsistenzebene wiederholt, bis es die höchste Konsistenzstufe „`all,`“ erreicht, sodass alle Kopien der Objektmetadaten verfügbar sein müssen.
+* Wenn diese Suche fehlschlägt, wiederholt sie die Suche auf der nächsten Konsistenzebene, bis sie eine Konsistenzstufe erreicht, die dem Verhalten für Strong-Global entspricht.
 
 
-Wenn ein KOPF- oder GET-Vorgang die Konsistenzkontrolle „`read-after-New-write`“ verwendet, aber das Objekt nicht vorhanden ist, erreicht die Objekt-Lookup immer die Konsistenzstufe „`all`“. Da auf dieser Konsistenzstufe alle Kopien der Objektmetadaten verfügbar sein müssen, können Sie eine hohe Anzahl von 500 Fehlern des internen Servers erhalten, wenn ein oder mehrere Storage-Nodes nicht verfügbar sind.
+Wenn eine HEAD- oder GET-Operation das Konsistenzsteuerelement „`read-after-New-write`“ verwendet, das Objekt aber nicht existiert, erreicht die Objekt-Lookup immer eine Konsistenzstufe, die dem Verhalten für strong-global entspricht. Da für diese Konsistenzstufe mehrere Kopien der Objektmetadaten an jedem Standort verfügbar sein müssen, können Sie eine hohe Anzahl von 500 internen Serverfehlern erhalten, wenn zwei oder mehr Storage-Nodes am selben Standort nicht verfügbar sind.
 
-Sofern Sie keine Konsistenzgarantien ähnlich wie Amazon S3 benötigen, können Sie diese Fehler bei DEN HEAD- und GET-Vorgängen vermeiden, indem Sie die Konsistenzkontrolle auf „`Available`“ setzen. Wenn bei einem HEAD oder GET-Vorgang die Konsistenzkontrolle „`Available`“ verwendet wird, bietet StorageGRID eventuell nur Konsistenz. Ein fehlgeschlagener Vorgang wird erst wieder versucht, wenn es die Konsistenzstufe „`all`“ erreicht. Daher müssen nicht alle Kopien der Objektmetadaten verfügbar sein.
+Sofern Sie keine Konsistenzgarantien ähnlich wie Amazon S3 benötigen, können Sie diese Fehler bei DEN HEAD- und GET-Vorgängen vermeiden, indem Sie die Konsistenzkontrolle auf „`Available`“ setzen. Wenn bei einem HEAD oder GET-Vorgang die Konsistenzkontrolle „`Available`“ verwendet wird, bietet StorageGRID eventuell nur Konsistenz. Bei einem fehlgeschlagenen Vorgang wird nicht erneut versucht, die Konsistenzstufen zu erhöhen, daher müssen nicht mehrere Kopien der Objekt-Metadaten verfügbar sein.
 
 
 
@@ -125,7 +92,7 @@ Die folgenden Aufnahmeverhalten stehen für ILM-Regeln zur Verfügung:
 
 
 
-NOTE: Lesen Sie vor der Auswahl des Aufnahmeverhaltens für eine ILM-Regel die vollständige Beschreibung dieser Einstellungen in den Anweisungen zum Managen von Objekten mit Information Lifecycle Management.
+NOTE: Bevor Sie das Aufnahmeverhalten für eine ILM-Regel auswählen, lesen Sie die vollständige Beschreibung dieser Einstellungen in xref:../ilm/index.adoc[Objektmanagement mit ILM].
 
 
 
@@ -146,8 +113,6 @@ Falls Sie stattdessen dieselbe ILM-Regel und die Konsistenzstufe „`strong-Site
 Die Wechselbeziehung zwischen Konsistenzstufen und ILM-Regeln kann komplex sein. Wenden Sie sich an NetApp, wenn Sie Hilfe benötigen.
 
 .Verwandte Informationen
-xref:../ilm/index.adoc[Objektmanagement mit ILM]
-
 xref:get-bucket-consistency-request.adoc[Get Bucket-Konsistenzanforderung]
 
 xref:put-bucket-consistency-request.adoc[PUT Bucket-Konsistenzanforderung]

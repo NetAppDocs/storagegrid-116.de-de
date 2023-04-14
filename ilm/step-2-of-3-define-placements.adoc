@@ -88,7 +88,7 @@ NOTE: Die Warnung *ILM-Platzierung unerreichbar* wird ausgelöst, um anzuzeigen,
 +
 *** Die Anzahl der Kopien darf nicht größer sein als die Anzahl der Speicherpools.
 *** Wenn die Anzahl der Kopien der Anzahl der Storage-Pools entspricht, wird in jedem Storage-Pool eine Kopie des Objekts gespeichert.
-*** Wenn die Anzahl der Kopien kleiner als die Anzahl der Storage-Pools ist, verteilt das System die Kopien, damit die Festplattennutzung zwischen den Pools ausgeglichen bleibt. Gleichzeitig wird sichergestellt, dass an keinem Standort mehr als eine Kopie eines Objekts gespeichert wird.
+*** Wenn die Anzahl der Kopien geringer ist als die Anzahl der Storage-Pools, wird eine Kopie am Aufnahmeport gespeichert, und das System verteilt die restlichen Kopien, um die Festplattennutzung unter den Pools gleichmäßig zu halten. Dabei wird sichergestellt, dass kein Standort mehr als eine Kopie eines Objekts erhält.
 *** Wenn sich die Speicherpools überschneiden (die gleichen Storage-Nodes enthalten), werden möglicherweise alle Kopien des Objekts an nur einem Standort gespeichert. Geben Sie aus diesem Grund nicht den Standardpool Alle Speicherknoten und einen anderen Speicherpool an.
 +
 image::../media/ilm_rule_with_multiple_storage_pools.png[Anweisungen zur Platzierung mehrerer Storage Pools]

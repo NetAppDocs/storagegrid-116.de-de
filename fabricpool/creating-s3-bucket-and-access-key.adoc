@@ -72,7 +72,7 @@ image::../media/create_bucket_for_fabricpool.png[Bucket für FabricPool erstelle
 
 +
 
-NOTE: Für FabricPool Buckets wird die empfohlene Bucket-Konsistenzstufe „`read-after-New-write`“ empfohlen. Die Konsistenzstufe „`verfügbar`“ wird nicht empfohlen. Siehe xref:../tenant/changing-consistency-level.adoc[Ändern der Konsistenzstufe].
+NOTE: Für FabricPool Buckets ist die empfohlene Bucket-Konsistenzstufe *Read-after-New-write*, was die Standardeinstellung für einen neuen Bucket ist. Bearbeiten Sie FabricPool Buckets nicht, um *available* oder eine andere Konsistenzstufe zu verwenden.
 
 . Erstellen Sie einen Zugriffsschlüssel und einen geheimen Zugriffsschlüssel.
 +

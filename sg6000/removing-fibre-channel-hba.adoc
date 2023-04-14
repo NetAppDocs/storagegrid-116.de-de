@@ -15,25 +15,22 @@ Möglicherweise müssen Sie den Fibre-Channel-Hostbus-Adapter (HBA) im SG6000-CN
 
 .Was Sie benötigen
 * Sie haben den richtigen Fibre Channel HBA für den Austausch.
-* Sie haben festgestellt, welcher SG6000-CN-Controller den zu ersetzenden Fibre Channel HBA enthält.
+* Das ist schon link:verifying-fibre-channel-hba-to-replace.html["Festgestellt, welcher SG6000-CN-Controller den zu ersetzenden Fibre-Channel-HBA enthält"].
+* Das ist schon link:locating-controller-in-data-center.html["Physikalischer Standort des SG6000-CN-Controllers"] Im Datacenter zu ermöglichen.
+* Das ist schon link:shutting-down-sg6000-cn-controller.html["Fahren Sie den SG6000-CN-Controller herunter"].
 +
-xref:verifying-fibre-channel-hba-to-replace.adoc[Überprüfen Sie, ob der Fibre-Channel-HBA ersetzt werden soll]
 
-* Der SG6000-CN-Controller befindet sich physisch, wo der Fibre Channel HBA im Datacenter ausgetauscht wird.
-+
-xref:locating-controller-in-data-center.adoc[Controller im Datacenter finden]
+IMPORTANT: Vor dem Entfernen des Controllers aus dem Rack ist ein kontrolliertes Herunterfahren erforderlich.
 
-* Sie haben die Controller-Abdeckung entfernt.
-+
-xref:removing-sg6000-cn-controller-cover.adoc[Entfernen Sie die SG6000-CN Controller-Abdeckung]
-
+* Das ist schon link:removing-sg6000-cn-controller-from-cabinet-or-rack.html["Controller aus Schrank oder Rack entfernt"].
+* Das ist schon link:removing-sg6000-cn-controller-cover.html["Die Controllerabdeckung entfernt"].
 
 
 .Über diese Aufgabe
-Um Serviceunterbrechungen zu vermeiden, vergewissern Sie sich, dass alle anderen Storage-Nodes mit dem Grid verbunden sind, bevor Sie den Austausch des Fibre Channel-HBA starten oder den Adapter während eines geplanten Wartungsfensters austauschen, wenn die Zeiten der Serviceunterbrechung normalerweise zu erwarten sind. Informationen zum Bestimmen von Knotenverbindungsstatus finden Sie in den Anweisungen zum Verwalten von Objekten mit Information Lifecycle Management.
+Um Serviceunterbrechungen zu vermeiden, vergewissern Sie sich, dass alle anderen Storage-Nodes mit dem Grid verbunden sind, bevor Sie den Austausch des Fibre Channel-HBA starten oder den Adapter während eines geplanten Wartungsfensters austauschen, wenn die Zeiten der Serviceunterbrechung normalerweise zu erwarten sind. Weitere Informationen finden Sie unter link:../monitor/monitor-node-connection-states.html["Monitoring der Verbindungsstatus der Nodes"].
 
 
-IMPORTANT: Wenn Sie jemals eine ILM-Regel verwendet haben, die nur eine Kopie eines Objekts erstellt, müssen Sie den Fibre Channel HBA während eines geplanten Wartungsfensters ersetzen. Andernfalls verlieren Sie während dieses Verfahrens vorübergehend den Zugriff auf diese Objekte. + Weitere Informationen zum Verwalten von Objekten mit Information Lifecycle Management finden Sie unter.
+IMPORTANT: Wenn Sie jemals eine ILM-Regel verwendet haben, die nur eine Kopie eines Objekts erstellt, müssen Sie den Fibre Channel HBA während eines geplanten Wartungsfensters ersetzen. Andernfalls verlieren Sie während dieses Verfahrens vorübergehend den Zugriff auf diese Objekte. Siehe Informationen zu link:../ilm/why-you-should-not-use-single-copy-replication.html["Warum sollten Sie die Single-Copy-Replizierung nicht verwenden"].
 
 .Schritte
 . Wickeln Sie das Gurt-Ende des ESD-Armbands um Ihr Handgelenk, und befestigen Sie das Clip-Ende auf einer Metallmasse, um eine statische Entladung zu verhindern.
@@ -57,12 +54,3 @@ In der Riserbaugruppe befinden sich zwei Adapter: Ein Fibre-Channel-HBA und ein 
 Installieren Sie den Ersatz-Fibre-Channel-HBA.
 
 xref:reinstalling-fibre-channel-hba.adoc[Installieren Sie den Fibre Channel HBA neu]
-
-.Verwandte Informationen
-xref:reinstalling-fibre-channel-hba.adoc[Installieren Sie den Fibre Channel HBA neu]
-
-xref:../admin/index.adoc[StorageGRID verwalten]
-
-xref:../monitor/index.adoc[Monitoring und Fehlerbehebung]
-
-xref:../ilm/index.adoc[Objektmanagement mit ILM]

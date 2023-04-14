@@ -22,7 +22,7 @@ Die Appliance der StorageGRID SG5700 Serie bietet folgende Funktionen:
 * Unterstützung von Full Disk Encryption-Laufwerken (FDE) oder FIPS-Laufwerken (Federal Information Processing Standard) Wenn diese Laufwerke mit der Laufwerksicherheitsfunktion in SANtricity System Manager verwendet werden, wird ein nicht autorisierter Zugriff auf die Daten verhindert.
 
 
-Das SG5700-Appliance ist in vier Modellen verfügbar: SG5712 und SG5712X sowie SG5760 und SG5760. Es gibt keine Spezifikations- oder Funktionsunterschiede zwischen dem SG5712 und SG5712X außer der Lage der Interconnect-Ports auf dem Storage Controller. Ebenso gibt es keine Spezifikations- oder Funktionsunterschiede zwischen dem SG5712 und SG5712X außer der Lage der Interconnect-Ports auf dem Storage Controller.
+Das SG5700-Appliance ist in vier Modellen verfügbar: SG5712 und SG5712X sowie SG5760 und SG5760. Es gibt keine Spezifikations- oder Funktionsunterschiede zwischen dem SG5712 und SG5712X außer der Lage der Interconnect-Ports auf dem Storage Controller. Ebenso gibt es keine Spezifikations- oder Funktionsunterschiede zwischen dem SG5760 und dem SG5760X, außer dem Standort der Interconnect Ports am Storage Controller.
 
 Die Modelle umfassen die folgenden Komponenten:
 

@@ -19,7 +19,9 @@ Wenn Sie einen S3-Mandanten verwenden, können Sie mithilfe des Mandanten Manage
 
 
 .Über diese Aufgabe
-Die Konsistenzstufe sorgt für einen Kompromiss zwischen der Verfügbarkeit der Objekte und der Konsistenz dieser Objekte über verschiedene Speicherknoten und Standorte hinweg. Im Allgemeinen sollten Sie für Ihre Buckets die Konsistenzstufe *Read-after-New-write* verwenden. Wenn die Konsistenzstufe *Read-after-New-write* nicht den Anforderungen der Client-Anwendung entspricht, können Sie die Konsistenzstufe ändern, indem Sie die Bucket-Konsistenzstufe oder die verwenden `Consistency-Control` Kopfzeile. Der `Consistency-Control` Kopfzeile setzt die Bucket-Konsistenzstufe außer Kraft.
+Die Konsistenzstufe bietet ein Gleichgewicht zwischen der Verfügbarkeit der Objekte und der Konsistenz dieser Objekte über verschiedene Storage-Nodes und Standorte hinweg. Im Allgemeinen sollten Sie für Ihre Buckets die Konsistenzstufe *Read-after-New-write* verwenden.
+
+Wenn die Konsistenzstufe *Read-after-New-write* nicht den Anforderungen der Client-Anwendung entspricht, können Sie die Konsistenzstufe ändern, indem Sie die Bucket-Konsistenzstufe oder die verwenden `Consistency-Control` Kopfzeile. Der `Consistency-Control` Kopfzeile setzt die Bucket-Konsistenzstufe außer Kraft.
 
 
 NOTE: Wenn Sie die Konsistenzstufe eines Buckets ändern, werden nur die Objekte, die nach der Änderung aufgenommen werden, garantiert, um die überarbeitete Ebene zu erfüllen.
@@ -33,46 +35,12 @@ Die Seite mit den Bucket-Details wird angezeigt.
 . Wählen Sie *Bucket-Optionen* *Konsistenzstufe* aus.
 . Wählen Sie eine Konsistenzstufe für Operationen aus, die an den Objekten in diesem Bucket durchgeführt werden.
 +
-[cols="1a,3a"]
-|===
-| Konsistenzstufe | Beschreibung 
+** *All*: Bietet die höchste Konsistenz. Alle Nodes erhalten die Daten sofort, sonst schlägt die Anfrage fehl.
+** *Strong-global*: Garantiert Lese-nach-Schreiben-Konsistenz für alle Client-Anfragen über alle Standorte hinweg.
+** *Strong-site*: Garantiert Lese-nach-Schreiben Konsistenz für alle Client-Anfragen innerhalb einer Site.
+** *Read-after-New-write* (default): Bietet Read-after-write-Konsistenz für neue Objekte und eventuelle Konsistenz für Objektaktualisierungen. Hochverfügbarkeit und garantierte Datensicherung Empfohlen für die meisten Fälle.
+** *Verfügbar*: Bietet eventuelle Konsistenz für neue Objekte und Objekt-Updates. Verwenden Sie für S3-Buckets nur nach Bedarf (z. B. für einen Bucket mit Protokollwerten, die nur selten gelesen werden, oder für HEAD- oder GET-Vorgänge für nicht vorhandene Schlüssel). Nicht unterstützt für S3 FabricPool-Buckets.
 
 
- a| 
-Alle
- a| 
-Alle Nodes erhalten die Daten sofort, sonst schlägt die Anfrage fehl.
-
-
-
- a| 
-Stark global
- a| 
-Garantierte Konsistenz bei Lese-nach-Schreibvorgängen für alle Client-Anfragen an allen Standorten.
-
-
-
- a| 
-Stark vor Ort
- a| 
-Garantiert Konsistenz bei Lese-nach-Schreibvorgängen für alle Client-Anfragen innerhalb eines Standorts.
-
-
-
- a| 
-Read-after-New-Write (Standard)
- a| 
-Ermöglicht Konsistenz von Lese- nach Schreibvorgängen für neue Objekte und die eventuelle Konsistenz von Objekt-Updates. Hochverfügbarkeit und garantierte Datensicherung Am ehesten entspricht die Konsistenzgarantie von Amazon S3.
-
-*Hinweis:* Wenn Ihre Anwendung versucht, OPERATIONEN auf Schlüssel ZU ERHALTEN, die nicht existieren, setzen Sie die Consistency Level auf *available*, es sei denn, Sie benötigen Amazon S3 Consistency Garantien. Andernfalls kann eine hohe Anzahl von 500 internen Serverfehlern führen, wenn ein oder mehrere Speicherknoten nicht verfügbar sind.
-
-
-
- a| 
-Verfügbar (eventuelle Konsistenz für HEAD- oder GET-Vorgänge)
- a| 
-Verhält sich wie die Konsistenz *Read-after-New-write*, bietet aber schließlich Konsistenz für KOPF- und GET-Vorgänge. Bietet höhere Verfügbarkeit für HEAD und GET Operations als *Read-after-New-write* wenn Speicherknoten nicht verfügbar sind. Unterscheidet sich von Amazon S3 Konsistenzgarantien für HEAD- und GET-Operationen.
-
-|===
 . Wählen Sie *Änderungen speichern*.
 

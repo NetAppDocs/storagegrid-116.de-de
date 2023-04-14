@@ -42,7 +42,7 @@ Wenn der Fehler behoben ist und eine Schnittstelle mit höherer Priorität wiede
 
 Die Best Practices zum Erstellen einer StorageGRID HA-Gruppe für FabricPool hängen vom Workload ab:
 
-* Wenn Sie FabricPool für Daten mit primären Workloads verwenden möchten, müssen Sie eine HA-Gruppe erstellen, die mindestens zwei Load-Balancing-Nodes umfasst, um eine Unterbrechung beim Datenabruf zu vermeiden.
+* Wenn Sie FabricPool für primäre Workload-Daten verwenden möchten, müssen Sie eine HA-Gruppe erstellen, die mindestens zwei Nodes für Lastausgleich enthält, um eine Unterbrechung des Datenabrufs zu verhindern.
 * Wenn Sie eine FabricPool Richtlinie für das reine Volume-Tiering nur für Snapshots oder nicht für lokale Performance-Tiers (z. B. Disaster Recovery-Standorte oder NetApp SnapMirror Ziele) verwenden möchten, können Sie eine HA-Gruppe mit nur einem Node konfigurieren.
 
 

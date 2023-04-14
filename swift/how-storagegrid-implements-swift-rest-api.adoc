@@ -33,7 +33,7 @@ Widersprüchliche Clientanforderungen, wie z. B. zwei Clients, die in denselben 
 
 Standardmäßig bietet StorageGRID Lese-/Nachher-Konsistenz für neu erstellte Objekte und schließlich die Konsistenz von Objekt-Updates und HEAD-Operationen. Jeder GET nach einem erfolgreich abgeschlossenen PUT wird in der Lage sein, die neu geschriebenen Daten zu lesen. Überschreibungen vorhandener Objekte, Metadatenaktualisierungen und -Löschungen sind schließlich konsistent. Überschreibungen dauern in der Regel nur wenige Sekunden oder Minuten, können jedoch bis zu 15 Tage in Anspruch nehmen.
 
-StorageGRID ermöglicht Ihnen außerdem die Kontrolle der Konsistenz einzelner Container. Sie können die Consistency Control ändern, um je nach Anforderung zwischen der Verfügbarkeit der Objekte und der Konsistenz dieser Objekte in verschiedenen Storage Nodes und Standorten einen Kompromiss zwischen der Verfügbarkeit der Objekte herzustellen.
+StorageGRID ermöglicht Ihnen außerdem die Kontrolle der Konsistenz einzelner Container. Sie können die Konsistenzsteuerung so ändern, dass ein Gleichgewicht zwischen der Verfügbarkeit der Objekte und der Konsistenz dieser Objekte über verschiedene Storage Nodes und Standorte hinweg erzielt wird, wie von Ihrer Anwendung gefordert.
 
 .Verwandte Informationen
 xref:../ilm/index.adoc[Objektmanagement mit ILM]
