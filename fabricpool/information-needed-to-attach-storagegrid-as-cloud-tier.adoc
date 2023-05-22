@@ -21,8 +21,8 @@ NOTE: Die genauen Feldnamen und der Prozess, den Sie zur Eingabe der erforderlic
 
 Weitere Informationen finden Sie im Folgenden:
 
-* https://www.netapp.com/pdf.html?item=/media/17239-tr4598pdf.pdf["TR-4598: FabricPool Best Practices in ONTAP 9.9.1"^]
-* https://docs.netapp.com/us-en/ontap/index.html["ONTAP 9-Dokumentation"^]
+* https://["TR-4598: FabricPool Best Practices in ONTAP 9.9.1"^]
+* https://["ONTAP 9-Dokumentation"^]
 
 
 [cols="1a,2a"]

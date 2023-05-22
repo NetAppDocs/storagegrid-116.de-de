@@ -217,10 +217,6 @@ Die Fortschrittsanzeige und die Spalte Phase auf der Seite Wiederherstellung geb
 +
 image::../media/recovering_cassandra.png[Screenshot zeigt den Wiederherstellungsfortschritt in der Grid-Verwaltungsschnittstelle]
 
-. Kehren Sie zur Seite „Installation überwachen“ des Installationsprogramms für StorageGRID-Geräte zurück, indem Sie eingeben `https://Controller_IP:8443`, Verwendung der IP-Adresse des Compute-Controllers.
-+
-Auf der Seite „Installation überwachen“ wird der Installationsfortschritt angezeigt, während das Skript ausgeführt wird.
-
 
 
 Nach dem `sn-recovery-postinstall.sh` Skript hat Dienste auf dem Knoten gestartet. Sie können Objektdaten auf allen Speicher-Volumes wiederherstellen, die durch das Skript formatiert wurden, wie im nächsten Verfahren beschrieben.

@@ -17,10 +17,10 @@ Sie können benutzerdefinierte Alarmregeln erstellen, um eigene Bedingungen für
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser]
 * Sie verfügen über die Berechtigung zum Verwalten von Warnungen oder Stammzugriff
 * Sie kennen das xref:commonly-used-prometheus-metrics.adoc[Häufig verwendete Prometheus-Kennzahlen]
-* Sie verstehen den https://prometheus.io/docs/querying/basics/["Syntax der Prometheus-Abfragen"^]
-* Optional haben Sie sich das Video angesehen: https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b35ac3f2-957b-4e79-b82b-acc5013c98d0["Video: Verwenden von Metriken, um benutzerdefinierte Warnmeldungen zu erstellen"^]
+* Sie verstehen den https://["Syntax der Prometheus-Abfragen"^]
+* Optional haben Sie sich das Video angesehen: https://["Video: Verwenden von Metriken, um benutzerdefinierte Warnmeldungen zu erstellen"^]
 +
-image::../media/video-screenshot-alert-create-custom.png[Link-"https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b35ac3f2-957b-4e79-b82b-acc5013c98d0"[] alt=„Video: Verwenden von Metriken zum Erstellen benutzerdefinierter Warnmeldungen“]
+image::../media/video-screenshot-alert-create-custom.png[Link-"https://[] alt=„Video: Verwenden von Metriken zum Erstellen benutzerdefinierter Warnmeldungen“]
 
 
 

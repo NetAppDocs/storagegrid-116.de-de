@@ -32,4 +32,4 @@ Beim Härten eines StorageGRID Systems sind folgende Punkte zu beachten:
 
 
 .Verwandte Informationen
-https://security.netapp.com/policy/["Richtlinie Zum Umgang Mit Schwachstellen"^]
+https://["Richtlinie Zum Umgang Mit Schwachstellen"^]

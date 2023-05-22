@@ -25,4 +25,4 @@ Die Status- und Fehlercodes des E5600SG-Controllers entsprechen nicht den Status
 .Verwandte Informationen
 xref:e5600sg-controller-seven-segment-display-codes.adoc[E5600SG-Controller-Anzeigecodes für sieben Segmente]
 
-http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61765["NetApp Dokumentation: E2700 Serie"^]
+http://["NetApp Dokumentation: E2700 Serie"^]

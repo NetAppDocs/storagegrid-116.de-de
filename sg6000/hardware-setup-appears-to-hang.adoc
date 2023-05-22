@@ -25,7 +25,7 @@ Während die Hardware beim Einschalten initialisiert wird, zeigen die beiden sie
 .Verwandte Informationen
 xref:viewing-boot-up-status-codes-for-sg6000-storage-controllers.adoc[Anzeigen von Boot-Statuscodes für SG6000-Speicher-Controller]
 
-https://library.netapp.com/ecmdocs/ECMLP2588751/html/frameset.html["E5700 und E2800 – System Monitoring Guide"^]
+https://["E5700 und E2800 – System Monitoring Guide"^]
 
 xref:viewing-status-indicators-and-buttons-on-sg6000-cn-controller.adoc[Statusanzeigen und Schaltflächen des SG6000-CN Controllers anzeigen]
 

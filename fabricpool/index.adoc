@@ -39,8 +39,8 @@ image::../media/fabricpool_storagegrid_workflow.png[FabricPool StorageGRID-Workf
 * Machen Sie sich mit der StorageGRID Systemsoftware vertraut, einschließlich Grid Manager und Tenant Manager.
 * Lesen Sie die folgenden zusätzlichen Ressourcen durch, die Details zur Verwendung und Konfiguration von FabricPool enthalten:
 +
-** https://www.netapp.com/pdf.html?item=/media/17239-tr4598pdf.pdf["TR-4598: FabricPool Best Practices in ONTAP 9.9.1"^]
-** https://docs.netapp.com/us-en/ontap/index.html["ONTAP 9-Dokumentation"^]
+** https://["TR-4598: FabricPool Best Practices in ONTAP 9.9.1"^]
+** https://["ONTAP 9-Dokumentation"^]
 
 
 

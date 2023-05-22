@@ -21,7 +21,7 @@ Sie finden die Nummer auf dem Packzettel, in Ihrer Bestätigungs-E-Mail oder auf
 +
 image::../media/appliance_label.gif[Etikett mit Seriennummer]
 
-. Wechseln Sie zur NetApp Support Site unter http://mysupport.netapp.com/["mysupport.netapp.com"^].
+. Wechseln Sie zur NetApp Support Site unter http://["mysupport.netapp.com"^].
 . Bestimmen Sie, ob Sie die Hardware registrieren müssen:
 +
 |===

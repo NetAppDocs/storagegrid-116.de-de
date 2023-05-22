@@ -63,4 +63,4 @@ Wöchentliche Nachrichten
 
 
 .Verwandte Informationen
-http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61197["NetApp Dokumentation: SANtricity Storage Manager"^]
+http://["NetApp Dokumentation: SANtricity Storage Manager"^]

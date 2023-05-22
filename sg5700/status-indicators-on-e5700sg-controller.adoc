@@ -287,4 +287,4 @@ Installation oder Kommunikation mit dem E2800-Controller ist fehlgeschlagen.
 .Verwandte Informationen
 xref:troubleshooting-hardware-installation.adoc[Fehlerbehebung bei der Hardware-Installation (SG5700)]
 
-https://mysupport.netapp.com/site/global/dashboard["NetApp Support"^]
+https://["NetApp Support"^]

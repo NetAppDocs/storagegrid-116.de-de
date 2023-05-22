@@ -40,7 +40,7 @@ NOTE: Erfahrene Benutzer, die sowohl die Installation als auch die Konfiguration
 .Schritte
 . Generieren Sie die JSON-Datei mit einer der folgenden Methoden:
 +
-** Der https://configbuilder.netapp.com/["ConfigBuilder-Applikation"^].
+** Der https://["ConfigBuilder-Applikation"^].
 ** Der xref:automating-installation-configuration-appliance-nodes-configure-sga-py-script.adoc[configure-sga.py Konfigurationsskript für die Appliance]. Sie können das Skript vom Installationsprogramm für StorageGRID-Geräte herunterladen (*Hilfe* *Konfigurationsskript für Geräte*).
 +
 Die Node-Namen in der JSON-Datei müssen die folgenden Anforderungen erfüllen:

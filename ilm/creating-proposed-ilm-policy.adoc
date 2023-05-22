@@ -21,7 +21,7 @@ NOTE: Wenn die globale S3-Objektsperre aktiviert wurde, gehen Sie stattdessen wi
 * Sie haben spezifische Zugriffsberechtigungen.
 * Sie haben die ILM-Regeln erstellt, die Sie der vorgeschlagenen Richtlinie hinzufügen möchten. Bei Bedarf können Sie eine vorgeschlagene Richtlinie speichern, zusätzliche Regeln erstellen und die vorgeschlagene Richtlinie bearbeiten, um die neuen Regeln hinzuzufügen.
 * Das ist schon xref:creating-default-ilm-rule.adoc[Eine Standard-ILM-Regel wurde erstellt] Für die Richtlinie, die keine Filter enthält.
-* Optional haben Sie sich das Video angesehen: https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c929e94e-353a-4375-b112-acc5013c81c7["Video: StorageGRID ILM-Richtlinien"^]
+* Optional haben Sie sich das Video angesehen: https://["Video: StorageGRID ILM-Richtlinien"^]
 +
 [link=https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c929e94e-353a-4375-b112-acc5013c81c7]
 image::../media/video-screenshot-ilm-policies.png[Video: StorageGRID ILM-Richtlinien]

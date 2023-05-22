@@ -43,6 +43,6 @@ Damit Sie Clients auf kleinere Objektgrößen in PUT Object umstellen können, w
 
 Die NAS Bridge-Funktion hatte bereits seit StorageGRID Version 11.4 eingeschränkten Zugriff. Die NAS Bridge-Funktion bleibt nur eingeschränkt verfügbar und ist ab StorageGRID 11.6 veraltet.
 
-NAS-Bridge 11.4 bleibt das finale Release und wird weiterhin mit StorageGRID 11.6 kompatibel sein. Überprüfen Sie die https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] Für die weitere Kompatibilität zwischen NAS Bridge 11.4 und StorageGRID Versionen.
+NAS-Bridge 11.4 bleibt das finale Release und wird weiterhin mit StorageGRID 11.6 kompatibel sein. Überprüfen Sie die https://["NetApp Interoperabilitäts-Matrix-Tool"^] Für die weitere Kompatibilität zwischen NAS Bridge 11.4 und StorageGRID Versionen.
 
-Auf der NetApp Support Site finden Sie Informationen zu den https://mysupport.netapp.com/site/info/version-support["Support-Zeitplan für NAS Bridge"^].
+Auf der NetApp Support Site finden Sie Informationen zu den https://["Support-Zeitplan für NAS Bridge"^].

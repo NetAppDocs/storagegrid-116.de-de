@@ -19,7 +19,7 @@ StorageGRID Hotfixes enthalten Software-Änderungen, die außerhalb einer Featur
 .Schritte
 . StorageGRID finden Sie auf der Seite zu NetApp Downloads.
 +
-https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["NetApp Downloads: StorageGRID"^]
+https://["NetApp Downloads: StorageGRID"^]
 
 . Wählen Sie den Abwärtspfeil für das Feld *Typ/Version auswählen* aus, um eine Liste der zum Herunterladen verfügbaren Aktualisierungen anzuzeigen:
 +

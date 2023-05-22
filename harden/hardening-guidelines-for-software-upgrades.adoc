@@ -48,10 +48,10 @@ Wenn Ihre StorageGRID-Knoten Linux-Hostplattformen verwenden, müssen Sie sicher
 Mit dem NetApp Interoperabilitäts-Matrix-Tool können Sie eine Liste der unterstützten Versionen abrufen.
 
 .Verwandte Informationen
-https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["NetApp Downloads: StorageGRID"^]
+https://["NetApp Downloads: StorageGRID"^]
 
 xref:../upgrade/index.adoc[Software-Upgrade]
 
 xref:../maintain/index.adoc[Recovery und Wartung]
 
-https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^]
+https://["NetApp Interoperabilitäts-Matrix-Tool"^]

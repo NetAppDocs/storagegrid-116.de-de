@@ -228,7 +228,7 @@ NOTE: Der RSM-Dienst ist auf Speicherknoten vorhanden, die den ADC-Service entha
 
 NOTE: Einige StorageGRID-Wiederherstellungsverfahren verwenden Reaper für die Bearbeitung von Cassandra-Reparaturen. Reparaturen werden automatisch ausgeführt, sobald die entsprechenden oder erforderlichen Services gestartet wurden. Sie können die Skriptausgabe bemerken, die "`reaper`" oder "`Cassandra Reparatur erwähnt.`" Wenn eine Fehlermeldung angezeigt wird, dass die Reparatur fehlgeschlagen ist, führen Sie den in der Fehlermeldung angegebenen Befehl aus.
 
-. [[Post-install-script-Step]]. Als der `sn-recovery-postinstall.sh` Skript wird ausgeführt, überwachen Sie die Wiederherstellungsseite im Grid Manager.
+. [[Post-install-script-STEP]] als `sn-recovery-postinstall.sh` Skript wird ausgeführt, überwachen Sie die Wiederherstellungsseite im Grid Manager.
 +
 Die Fortschrittsanzeige und die Spalte Phase auf der Seite Wiederherstellung geben einen allgemeinen Status des an `sn-recovery-postinstall.sh` Skript:
 

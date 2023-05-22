@@ -71,6 +71,6 @@ SG5760
 
 
 .Verwandte Informationen
-https://hwu.netapp.com["NetApp Hardware Universe"^]
+https://["NetApp Hardware Universe"^]
 
-https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^]
+https://["NetApp Interoperabilitäts-Matrix-Tool"^]

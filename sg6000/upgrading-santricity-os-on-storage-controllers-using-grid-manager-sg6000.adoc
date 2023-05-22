@@ -38,7 +38,7 @@ NOTE: Mit diesem Verfahren wird der NVSRAM automatisch auf die neueste Version a
 Achten Sie darauf, die SANtricity Betriebssystemversion für Ihre Storage Controller auszuwählen.
 
 +
-https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["NetApp Downloads mit StorageGRID Appliance"^]
+https://["NetApp Downloads mit StorageGRID Appliance"^]
 
 . Wählen Sie *WARTUNG* *System* *Software-Update*.
 +
@@ -189,6 +189,6 @@ NOTE: Wenn Sie das Upgrade wiederholen, müssen Sie zuvor aktualisierte Knoten g
 
 
 .Verwandte Informationen
-https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^]
+https://["NetApp Interoperabilitäts-Matrix-Tool"^]
 
 xref:upgrading-santricity-os-on-storage-controllers-using-maintenance-mode-sg6000.adoc[Aktualisieren Sie das SANtricity OS auf Storage Controllern mit dem Wartungsmodus]

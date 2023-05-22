@@ -58,7 +58,7 @@ Mit SANtricity System Manager können Sie die folgenden Einstellungen konfigurie
 Weitere Informationen zum E-Series AutoSupport finden Sie im Dokumentationszentrum zur E-Series.
 
 +
-http://mysupport.netapp.com/info/web/ECMP1658252.html["NetApp E-Series Systems Documentation Site"^]
+http://["NetApp E-Series Systems Documentation Site"^]
 
 * Laufwerkssicherheitsschlüssel, die zum Entsperren gesicherter Laufwerke erforderlich sind (dieser Schritt ist erforderlich, wenn die Laufwerksicherheitsfunktion aktiviert ist)
 * Administratorpasswort für den Zugriff auf SANtricity System Manager

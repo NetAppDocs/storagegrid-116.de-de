@@ -117,6 +117,6 @@ IMPORTANT: Stellen Sie vor der Installation sicher, dass die im Lieferumfang des
 
 
 .Verwandte Informationen
-https://hwu.netapp.com["NetApp Hardware Universe"^]
+https://["NetApp Hardware Universe"^]
 
-https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^]
+https://["NetApp Interoperabilitäts-Matrix-Tool"^]

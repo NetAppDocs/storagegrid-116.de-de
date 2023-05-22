@@ -80,4 +80,4 @@ In der Sequenz ist der erste Zahlensatz die IP-Adresse, die vom DHCP für den Ma
 .Verwandte Informationen
 xref:status-indicators-on-e5700sg-controller.adoc[Statusanzeigen auf dem E5700SG-Controller]
 
-https://library.netapp.com/ecmdocs/ECMLP2588751/html/frameset.html["E5700 und E2800 – System Monitoring Guide"^]
+https://["E5700 und E2800 – System Monitoring Guide"^]

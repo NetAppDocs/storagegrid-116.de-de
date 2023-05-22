@@ -33,7 +33,7 @@ SIE haben den technischen Support benachrichtigt, dass Sie AutoSupport nicht akt
 Nachdem der technische Support ein wöchentliches Protokoll aus dem System erhält, ändert sich der AutoSupport-Status in EIN.
 
 .Schritte
-. Wechseln Sie zur NetApp Support Site unter http://mysupport.netapp.com/["mysupport.netapp.com"^], Und melden Sie sich im Active IQ Portal.
+. Wechseln Sie zur NetApp Support Site unter http://["mysupport.netapp.com"^], Und melden Sie sich im Active IQ Portal.
 . Wenn DER AutoSupport-Status NICHT AKTIVIERT ist und Sie der Meinung sind, dass er falsch ist, führen Sie Folgendes aus:
 +
 .. Überprüfen Sie die Systemkonfiguration, um sicherzustellen, dass AutoSupport aktiviert ist.

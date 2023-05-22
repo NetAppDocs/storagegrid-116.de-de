@@ -125,7 +125,7 @@ IMPORTANT: Die experimentelle S3-Konsole wurde nicht vollständig getestet und i
 * Mit einem neuen Kontrollkästchen *Software-Updates überprüfen* auf der AutoSupport-Seite (*SUPPORT* *Tools* *AutoSupport*) können Sie diese Funktion steuern. Sie können die Prüfung auf verfügbare Softwareupdates deaktivieren, wenn Ihr System keinen WAN-Zugriff hat. Siehe xref:../admin/configure-autosupport-grid-manager.adoc#disable-checks-for-software-updates[AutoSupport gt konfigurieren; Prüfungen für Software-Updates deaktivieren].
 +
 
-NOTE: Für das Upgrade auf StorageGRID 11.6 können Sie optional ein Skript verwenden, um ein Upgrade durchzuführen und gleichzeitig einen Hotfix anzuwenden. Siehe https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/StorageGRID/How_to_run_combined_major_upgrade_and_hotfix_script_for_StorageGRID["NetApp Knowledge Base: So führen Sie umfassende Upgrades und Hotfix-Skripte für StorageGRID aus"^].
+NOTE: Für das Upgrade auf StorageGRID 11.6 können Sie optional ein Skript verwenden, um ein Upgrade durchzuführen und gleichzeitig einen Hotfix anzuwenden. Siehe https://["NetApp Knowledge Base: So führen Sie umfassende Upgrades und Hotfix-Skripte für StorageGRID aus"^].
 
 * Sie können nun ein Upgrade auf SANtricity OS unterbrechen und einige Nodes überspringen, wenn Sie das Upgrade zu einem späteren Zeitpunkt abschließen müssen. Beachten Sie die Anweisungen für Ihre Storage Appliance:
 +
