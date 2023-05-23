@@ -110,4 +110,4 @@ xref:initiate-multipart-upload.adoc[Initiieren Von Mehrteiligen Uploads]
 
 xref:object-versioning.adoc[Objektversionierung]
 
-https://["Amazon Simple Storage Service Benutzerhandbuch: S3 Object Lock verwenden"^]
+https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html["Amazon Simple Storage Service Benutzerhandbuch: S3 Object Lock verwenden"^]

@@ -25,4 +25,4 @@ Der Service-Laptop, der für die Hardwareinstallation benötigt wird, muss die f
 .Verwandte Informationen
 xref:../admin/web-browser-requirements.adoc[Anforderungen an einen Webbrowser]
 
-http://["NetApp Dokumentation: SANtricity Storage Manager"^]
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61197["NetApp Dokumentation: SANtricity Storage Manager"^]

@@ -44,4 +44,4 @@ NOTE: Über den Link SANtricity System Manager können Sie den SANtricity System
 
 Wenn Sie Details zur Performance und Kapazitätsauslastung des Storage Array anzeigen möchten, halten Sie den Mauszeiger über jedes Diagramm.
 
-Weitere Informationen zum Anzeigen der Informationen, auf die über die Registerkarte SANtricity System Manager zugegriffen werden kann, finden Sie unter https://["NetApp E-Series und SANtricity Dokumentation"^].
+Weitere Informationen zum Anzeigen der Informationen, auf die über die Registerkarte SANtricity System Manager zugegriffen werden kann, finden Sie unter https://mysupport.netapp.com/info/web/ECMP1658252.html["NetApp E-Series und SANtricity Dokumentation"^].

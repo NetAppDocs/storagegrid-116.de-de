@@ -29,7 +29,7 @@ Falls ein S3-Mandantenkonto Vorschriften beim Speichern von Objektdaten einhalte
 Ein Grid-Administrator muss die globale S3-Objektsperre aktivieren, damit Mandantenbenutzer neue Buckets erstellen können, für die S3-Objektsperre aktiviert ist. Nachdem diese Einstellung aktiviert ist, kann sie nicht deaktiviert werden.
 
 
-NOTE: Wenn Sie die Einstellung für globale Konformität mit einer früheren Version von StorageGRID aktiviert haben, ist die S3-Objektsperre in StorageGRID 11.6 aktiviert. Sie können die Einstellungen für vorhandene konforme Buckets weiterhin mit StorageGRID verwalten, jedoch können keine neuen konformen Buckets erstellt werden. Siehe https://["NetApp Knowledge Base: Management älterer, konformer Buckets für StorageGRID 11.5"^].
+NOTE: Wenn Sie die Einstellung für globale Konformität mit einer früheren Version von StorageGRID aktiviert haben, ist die S3-Objektsperre in StorageGRID 11.6 aktiviert. Sie können die Einstellungen für vorhandene konforme Buckets weiterhin mit StorageGRID verwalten, jedoch können keine neuen konformen Buckets erstellt werden. Siehe https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/StorageGRID/How_to_manage_legacy_Compliant_buckets_in_StorageGRID_11.5["NetApp Knowledge Base: Management älterer, konformer Buckets für StorageGRID 11.5"^].
 
 .Schritte
 . Wählen Sie *KONFIGURATION* *System* *S3 Objektsperre*.

@@ -77,6 +77,6 @@ image::../media/appliance_drive_insertion.gif[Einschub des Laufwerks]
 
 
 .Verwandte Informationen
-https://["E2700 – Installationshandbuch für Controller-Laufwerke und zugehörige Laufwerksfächer"^]
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2344477["E2700 – Installationshandbuch für Controller-Laufwerke und zugehörige Laufwerksfächer"^]
 
-https://["E5600 – Installationshandbuch für Controller-Laufwerke und zugehörige Laufwerksfächer"^]
+https://library.netapp.com/ecm/ecm_download_file/ECMP1532527["E5600 – Installationshandbuch für Controller-Laufwerke und zugehörige Laufwerksfächer"^]

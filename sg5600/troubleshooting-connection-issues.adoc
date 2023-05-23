@@ -40,7 +40,7 @@ Geben Sie für Management_Port_IP die IP-Adresse für Management-Port 1 auf dem 
 .. Wenn Sie eine Antwort vom Ping erhalten, überprüfen Sie, ob Port 8443 in den Firewalls geöffnet ist.
 .. Starten Sie die Appliance neu.
 .. Aktualisieren Sie die Installationsseite.
-.. Wenn das Verbindungsproblem dadurch nicht behoben werden kann, wenden Sie sich an den technischen Support über die NetApp Support Site unter http://["mysupport.netapp.com"^].
+.. Wenn das Verbindungsproblem dadurch nicht behoben werden kann, wenden Sie sich an den technischen Support über die NetApp Support Site unter http://mysupport.netapp.com/["mysupport.netapp.com"^].
 
 
 

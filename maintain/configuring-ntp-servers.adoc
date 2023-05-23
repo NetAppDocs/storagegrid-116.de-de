@@ -35,7 +35,7 @@ Die angegebenen externen NTP-Server müssen das NTP-Protokoll verwenden. Sie mü
 
 NOTE: Wenn Sie die externe NTP-Quelle für eine StorageGRID-Installation auf Produktionsebene angeben, verwenden Sie den Windows Time-Dienst (W32Time) nicht auf einer Windows-Version als Windows Server 2016. Der Zeitdienst für ältere Windows Versionen ist nicht ausreichend genau und wird von Microsoft nicht für die Verwendung in Umgebungen mit hoher Genauigkeit, wie z. B. StorageGRID, unterstützt.
 
-https://["Begrenzung des Supports, um Windows Time Service für hochpräzise Umgebungen zu konfigurieren"^]
+https://support.microsoft.com/en-us/help/939322/support-boundary-to-configure-the-windows-time-service-for-high-accura["Begrenzung des Supports, um Windows Time Service für hochpräzise Umgebungen zu konfigurieren"^]
 
 Wenn Probleme mit der Stabilität oder Verfügbarkeit der NTP-Server auftreten, die ursprünglich während der Installation angegeben wurden, können Sie die Liste der externen NTP-Quellen, die das StorageGRID-System verwendet, aktualisieren oder entfernen Sie vorhandene Server.
 

@@ -73,6 +73,6 @@ E-Series: Auswechseln der Laufwerkschublade (60 Laufwerke)
 
 |===
 .Verwandte Informationen
-http://["NetApp E-Series Systems Documentation Site"^]
+http://mysupport.netapp.com/info/web/ECMP1658252.html["NetApp E-Series Systems Documentation Site"^]
 
 xref:replacing-storage-controller-sg6000.adoc[Austausch des Storage Controllers]

@@ -15,7 +15,7 @@ Das StorageGRID System unterstützt für jedes S3-Mandantenkonto maximal 1,000 B
 
 Einschränkungen für Bucket-Namen folgen den regionalen Beschränkungen für AWS US Standard. Sie sollten sie jedoch noch weiter auf DNS-Namenskonventionen beschränken, um Anfragen im Stil von virtuellen S3-Hosted-Style zu unterstützen.
 
-https://["Amazon Web Services (AWS) Dokumentation: Bucket-Einschränkungen und -Einschränkungen"^]
+https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html["Amazon Web Services (AWS) Dokumentation: Bucket-Einschränkungen und -Einschränkungen"^]
 
 xref:../admin/configuring-s3-api-endpoint-domain-names.adoc[Konfigurieren von S3-API-Endpunkt-Domain-Namen]
 
@@ -313,7 +313,7 @@ PUT Bucket-Replizierung
  a| 
 Dieser Vorgang konfiguriert die StorageGRID CloudMirror-Replikation für den Bucket mithilfe der im Anforderungsgremium bereitgestellten Replikationskonfigurations-XML. Für die CloudMirror-Replikation sollten Sie die folgenden Implementierungsdetails beachten:
 
-* StorageGRID unterstützt nur V1 der Replizierungskonfiguration. Das bedeutet, dass StorageGRID die Verwendung von nicht unterstützt `Filter` Element für Regeln und folgt V1-Konventionen zum Löschen von Objektversionen. Weitere Informationen finden Sie im https://["Amazon S3-Dokumentation zur Replizierungskonfiguration"^].
+* StorageGRID unterstützt nur V1 der Replizierungskonfiguration. Das bedeutet, dass StorageGRID die Verwendung von nicht unterstützt `Filter` Element für Regeln und folgt V1-Konventionen zum Löschen von Objektversionen. Weitere Informationen finden Sie im https://docs.aws.amazon.com/AmazonS3/latest/userguide/replication-add-config.html["Amazon S3-Dokumentation zur Replizierungskonfiguration"^].
 * Die Bucket-Replizierung kann für versionierte oder nicht versionierte Buckets konfiguriert werden.
 * Sie können in jeder Regel der XML-Replikationskonfiguration einen anderen Ziel-Bucket angeben. Ein Quell-Bucket kann auf mehrere Ziel-Bucket replizieren.
 * Ziel-Buckets müssen als URN der StorageGRID-Endpunkte angegeben werden, wie im Mandantenmanager oder der Mandantenmanagement-API angegeben.

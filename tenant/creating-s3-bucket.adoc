@@ -50,7 +50,7 @@ Bucket-Namen müssen folgende Regeln einhalten:
 
 +
 
-NOTE: Weitere Informationen finden Sie im https://["Dokumentation der Amazon Web Services (AWS) zu den Bucket-Benennungsregeln"^].
+NOTE: Weitere Informationen finden Sie im https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html["Dokumentation der Amazon Web Services (AWS) zu den Bucket-Benennungsregeln"^].
 
 . Wählen Sie die Region für diesen Bucket aus.
 +

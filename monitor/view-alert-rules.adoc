@@ -18,7 +18,7 @@ Sie können die Liste aller Standard- und benutzerdefinierten Warnungsregeln anz
 .Was Sie benötigen
 * Sie sind mit einem bei Grid Manager angemeldet xref:../admin/web-browser-requirements.adoc[Unterstützter Webbrowser].
 * Sie verfügen über die Berechtigung zum Verwalten von Warnungen oder Stammzugriff.
-* Optional haben Sie sich das Video angesehen: https://["Video: Übersicht über Warnungen"^]
+* Optional haben Sie sich das Video angesehen: https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2680a74f-070c-41c2-bcd3-acc5013c9cdd["Video: Übersicht über Warnungen"^]
 +
 [link=https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2680a74f-070c-41c2-bcd3-acc5013c9cdd]
 image::../media/video-screenshot-alert-overview.png[Video: Übersicht über Warnungen]

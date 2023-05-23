@@ -95,7 +95,7 @@ Wenn Nodes auf Linux-Hosts bereitgestellt werden, müssen auch ein RPM- oder DEB
 
 
 .Schritte
-. Gehen Sie zu https://["NetApp Downloads: StorageGRID"^].
+. Gehen Sie zu https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["NetApp Downloads: StorageGRID"^].
 . Wählen Sie die Schaltfläche zum Herunterladen der neuesten Version, oder wählen Sie eine andere Version aus dem Dropdown-Menü aus und wählen Sie *Go*.
 +
 Die StorageGRID-Softwareversionen haben dieses Format: 11._x.y_. StorageGRID-Hotfixes haben dieses Format: 11._x. y.y.z_.

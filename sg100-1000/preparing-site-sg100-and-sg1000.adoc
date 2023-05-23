@@ -44,6 +44,6 @@ Vor der Installation der Appliance müssen Sie sicherstellen, dass der Standort 
 
 
 .Verwandte Informationen
-https://["NetApp Hardware Universe"^]
+https://hwu.netapp.com["NetApp Hardware Universe"^]
 
-https://["NetApp Interoperabilitäts-Matrix-Tool"^]
+https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^]

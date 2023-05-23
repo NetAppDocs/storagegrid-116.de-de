@@ -69,4 +69,4 @@ Wenn Sie eine Verbindung zu SANtricity Storage Manager herstellen, verwenden Sie
 
 
 .Verwandte Informationen
-http://["NetApp Dokumentation: SANtricity Storage Manager"^]
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61197["NetApp Dokumentation: SANtricity Storage Manager"^]

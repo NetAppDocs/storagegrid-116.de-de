@@ -71,7 +71,7 @@ Wählen Sie * zugeordnete Laufwerke anzeigen* aus, um anzuzeigen, wo diese Laufw
 +
 .. Öffnen Sie Ihren Webbrowser, navigieren Sie zur NetApp Support Website und melden Sie sich mit Ihrer ID und Ihrem Passwort an.
 +
-https://["NetApp Support"^]
+https://mysupport.netapp.com/site/["NetApp Support"^]
 
 .. Wählen Sie auf der NetApp Support Website die Registerkarte *Downloads* aus und wählen Sie dann *E-Series Festplatten-Firmware* aus.
 +
