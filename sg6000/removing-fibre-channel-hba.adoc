@@ -27,7 +27,7 @@ IMPORTANT: Vor dem Entfernen des Controllers aus dem Rack ist ein kontrolliertes
 
 
 .Über diese Aufgabe
-Um Serviceunterbrechungen zu vermeiden, vergewissern Sie sich, dass alle anderen Storage-Nodes mit dem Grid verbunden sind, bevor Sie den Austausch des Fibre Channel-HBA starten oder den Adapter während eines geplanten Wartungsfensters austauschen, wenn die Zeiten der Serviceunterbrechung normalerweise zu erwarten sind. Weitere Informationen finden Sie unter link:../monitor/monitor-node-connection-states.html["Monitoring der Verbindungsstatus der Nodes"].
+Um Serviceunterbrechungen zu vermeiden, vergewissern Sie sich, dass alle anderen Storage-Nodes mit dem Grid verbunden sind, bevor Sie den Austausch des Fibre Channel-HBA starten oder den Adapter während eines geplanten Wartungsfensters austauschen, wenn die Zeiten der Serviceunterbrechung normalerweise zu erwarten sind. Weitere Informationen finden Sie unter link:../monitor/monitoring-node-connection-states.html["Monitoring der Verbindungsstatus der Nodes"].
 
 
 IMPORTANT: Wenn Sie jemals eine ILM-Regel verwendet haben, die nur eine Kopie eines Objekts erstellt, müssen Sie den Fibre Channel HBA während eines geplanten Wartungsfensters ersetzen. Andernfalls verlieren Sie während dieses Verfahrens vorübergehend den Zugriff auf diese Objekte. Siehe Informationen zu link:../ilm/why-you-should-not-use-single-copy-replication.html["Warum sollten Sie die Single-Copy-Replizierung nicht verwenden"].

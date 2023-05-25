@@ -29,6 +29,22 @@ Der Gerätespeicherknoten kann nicht aufgerufen werden, wenn Sie den SG6000-CN-C
 NOTE: Wenn Sie den Controller vor dem Installieren der StorageGRID-Software ersetzen, können Sie nach Abschluss dieses Verfahrens möglicherweise nicht sofort auf den StorageGRID Appliance Installer zugreifen. Während Sie von anderen Hosts im selben Subnetz wie die Appliance auf das Installationsprogramm für StorageGRID-Geräte zugreifen können, können Sie nicht von Hosts in anderen Subnetzen darauf zugreifen. Diese Bedingung sollte sich innerhalb von 15 Minuten lösen (wenn Einträge im ARP-Cache für die ursprüngliche Controller-Zeit erforderlich sind), oder Sie können den Zustand sofort löschen, indem Sie alle alten ARP-Cacheeinträge manuell vom lokalen Router oder Gateway löschen.
 
 .Schritte
+. Zeigt die aktuellen Konfigurationen des Geräts an und zeichnet sie auf.
++
+.. Melden Sie sich bei der zu ersetzenden Appliance an:
++
+... Geben Sie den folgenden Befehl ein: `ssh admin@_grid_node_IP_`
+... Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+... Geben Sie den folgenden Befehl ein, um zum Root zu wechseln: `su -`
+... Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
++
+Wenn Sie als root angemeldet sind, ändert sich die Eingabeaufforderung von `$` Bis `#`.
+
+
+
+.. Geben Sie Ein: `*run-host-command ipmitool lan print*` Zeigt die aktuellen BMC-Konfigurationen für die Appliance an.
+
+
 . Wenn der SG6000-CN-Controller ausreichend funktioniert, um ein kontrolliertes Herunterfahren zu ermöglichen, fahren Sie den SG6000-CN-Controller herunter.
 +
 xref:shutting-down-sg6000-cn-controller.adoc[Fahren Sie den SG6000-CN-Controller herunter]
@@ -39,13 +55,17 @@ xref:shutting-down-sg6000-cn-controller.adoc[Fahren Sie den SG6000-CN-Controller
 ** Die Seite Power Control der BMC-Schnittstelle zeigt an, dass der Controller aus ist.
 
 
-. Wenn die mit dem Controller verbundenen StorageGRID-Netzwerke DHCP-Server verwenden, aktualisieren Sie die Einstellungen für DNS/Netzwerk und IP-Adresse.
+. Wenn eine der Netzwerkschnittstellen auf dieser StorageGRID-Appliance für DHCP konfiguriert ist, müssen Sie möglicherweise die permanenten DHCP-Lease-Zuordnungen auf den DHCP-Servern aktualisieren, um auf die MAC-Adressen der Ersatz-Appliance zu verweisen. Das Update stellt sicher, dass der Appliance die erwarteten IP-Adressen zugewiesen werden.
 +
 .. Suchen Sie das MAC-Adressenetikett auf der Vorderseite des SG6000-CN-Controllers und legen Sie die MAC-Adresse für den Admin-Netzwerkanschluss fest.
 +
+[NOTE]
+====
+Auf dem MAC-Adressenetikett wird die MAC-Adresse für den BMC-Verwaltungsport aufgelistet.
 
-NOTE: Auf dem MAC-Adressenetikett wird die MAC-Adresse für den BMC-Verwaltungsport aufgelistet. + um die MAC-Adresse für den Admin-Netzwerkanschluss zu ermitteln, müssen Sie der Hexadezimalzahl auf dem Etikett *2* hinzufügen. Wenn die MAC-Adresse auf dem Etikett beispielsweise mit *09* endet, endet die MAC-Adresse für den Admin-Port in *0B*. Wenn die MAC-Adresse auf dem Etikett mit *(_y_)FF* endet, endet die MAC-Adresse für den Admin-Port in *(_y_+1)01*. Sie können diese Berechnung einfach durchführen, indem Sie den Rechner unter Windows öffnen, ihn auf den Programmiermodus setzen, Hex auswählen, die MAC-Adresse eingeben und dann *+ 2 =* eingeben.
+Um die MAC-Adresse für den Admin-Netzwerkanschluss zu ermitteln, müssen Sie der Hexadezimalzahl auf dem Etikett *2* hinzufügen. Wenn die MAC-Adresse auf dem Etikett beispielsweise mit *09* endet, endet die MAC-Adresse für den Admin-Port in *0B*. Wenn die MAC-Adresse auf dem Etikett mit *(_y_)FF* endet, endet die MAC-Adresse für den Admin-Port in *(_y_+1)01*. Sie können diese Berechnung einfach durchführen, indem Sie den Rechner unter Windows öffnen, ihn auf den Programmiermodus setzen, Hex auswählen, die MAC-Adresse eingeben und dann *+ 2 =* eingeben.
 
+====
 .. Bitten Sie den Netzwerkadministrator, die DNS/Netzwerk- und IP-Adresse des entfernten Controllers mit der MAC-Adresse des Ersatzcontrollers zu verknüpfen.
 +
 
@@ -70,18 +90,45 @@ IMPORTANT: Um eine verminderte Leistung zu vermeiden, dürfen die Kabel nicht ve
 .. Schalten Sie den Controller ein, und überwachen Sie die Controller-LEDs und die Boot-Codes.
 
 
-. Vergewissern Sie sich, dass der Appliance Storage Node im Grid Manager angezeigt wird und keine Alarme angezeigt werden.
-. Wählen Sie im Grid Manager *NODES* aus, und überprüfen Sie, ob die BMC-IP-Adresse für den Knoten-Controller korrekt ist.
+. Wenn die Appliance, bei der Sie den Controller ausgetauscht haben, zur Verschlüsselung von Daten einen Schlüsselverwaltungsserver (KMS) verwendet hat, ist möglicherweise eine zusätzliche Konfiguration erforderlich, bevor der Node dem Grid beitreten kann. Wenn der Node nicht automatisch dem Grid hinzugefügt wird, stellen Sie sicher, dass die folgenden Konfigurationseinstellungen auf den neuen Controller übertragen wurden, und konfigurieren Sie manuell alle Einstellungen, für die nicht die erwartete Konfiguration vorhanden ist:
 +
-Wenn die Node-Controller-IP-Adresse ungültig ist oder sich nicht im erwarteten Bereich befindet, konfigurieren Sie die IP-Adresse gemäß den Recovery- und Wartungsanweisungen neu.
+** link:../sg6000/configuring-storagegrid-connections.html["Konfigurieren Sie StorageGRID-Verbindungen"]
+** link:../admin/kms-overview-of-kms-and-appliance-configuration.html#set-up-the-appliance["Konfigurieren Sie die Node-Verschlüsselung für die Appliance"]
+
+
+. Melden Sie sich bei der Appliance mit dem ausgetauschten Controller an:
++
+.. Geben Sie den folgenden Befehl ein: `ssh admin@_grid_node_IP_`
+.. Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+.. Geben Sie den folgenden Befehl ein, um zum Root zu wechseln: `su -`
+.. Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
+
+
+. Stellen Sie die BMC-Netzwerkverbindung für die Appliance wieder her. Es gibt zwei Möglichkeiten:
++
+** Verwenden Sie statische IP, Netzmaske und Gateway
+** Verwenden Sie DHCP, um eine IP, eine Netzmaske und ein Gateway zu erhalten
++
+... Geben Sie zum Wiederherstellen der BMC-Konfiguration für die Verwendung einer statischen IP, Netzmaske und eines Gateways die folgenden Befehle ein:
++
+`*run-host-command ipmitool lan set 1 ipaddr _Appliance_IP_*`
 
 +
-
-NOTE: Wenn Sie während der ursprünglichen Installation zusätzliche Anpassungen vorgenommen haben, z. B. das Festlegen von SNMP-Trap-Zielen oder E-Mail-Benachrichtigungen, sollten Sie die Konfiguration aufzeichnen und validieren und gegebenenfalls erneut anwenden.
+`*run-host-command ipmitool lan set 1 netmask _Netmask_IP_*`
 
 +
-xref:../maintain/index.adoc[Recovery und Wartung]
+`*run-host-command ipmitool lan set 1 defgw ipaddr _Default_gateway_*`
 
+... Geben Sie den folgenden Befehl ein, um die BMC-Konfiguration so wiederherzustellen, dass DHCP zum Abrufen einer IP, einer Netmask und eines Gateways verwendet wird:
++
+`*run-host-command ipmitool lan set 1 ipsrc dhcp*`
+
+
+
+
+
+. Stellen Sie nach dem Wiederherstellen der BMC-Netzwerkverbindung eine Verbindung zur BMC-Schnittstelle her, um die zusätzlich angewendete benutzerdefinierte BMC-Konfiguration zu prüfen und wiederherzustellen. Sie sollten beispielsweise die Einstellungen für SNMP-Trap-Ziele und E-Mail-Benachrichtigungen bestätigen. Siehe link:configuring-bmc-interface-sg6000.html["Konfigurieren Sie die BMC-Schnittstelle"].
+. Vergewissern Sie sich, dass der Appliance-Node im Grid Manager angezeigt wird und keine Meldungen angezeigt werden.
 
 
 .Verwandte Informationen

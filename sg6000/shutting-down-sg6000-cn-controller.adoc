@@ -25,9 +25,7 @@ xref:locating-controller-in-data-center.adoc[Controller im Datacenter finden]
 Um Serviceunterbrechungen zu vermeiden, vergewissern Sie sich, dass alle anderen Storage-Nodes mit dem Grid verbunden sind, bevor Sie den Controller herunterfahren oder den Controller während eines geplanten Wartungsfensters herunterfahren, wenn die Serviceunterbrechungen akzeptabel sind. Informationen zum Bestimmen von Knotenverbindungsstatus finden Sie in den Anweisungen zum Verwalten von Objekten mit Information Lifecycle Management.
 
 
-IMPORTANT: Wenn Sie jemals eine ILM-Regel verwendet haben, die nur eine Kopie eines Objekts erstellt, müssen Sie den Controller während eines geplanten Wartungsfensters herunterfahren. Andernfalls verlieren Sie während dieses Verfahrens vorübergehend den Zugriff auf diese Objekte.
-
-+ Weitere Informationen zum Verwalten von Objekten mit Information Lifecycle Management finden Sie unter.
+IMPORTANT: Wenn Sie jemals eine ILM-Regel verwendet haben, die nur eine Kopie eines Objekts erstellt, müssen Sie den Controller während eines geplanten Wartungsfensters herunterfahren. Andernfalls verlieren Sie während dieses Verfahrens vorübergehend den Zugriff auf diese Objekte. Siehe link:../ilm/index.html["Verwalten von Objekten mit Information Lifecycle Management"].
 
 .Schritte
 . Wenn das Gerät in den Wartungsmodus versetzt wurde, fahren Sie den SG6000-CN-Controller herunter:

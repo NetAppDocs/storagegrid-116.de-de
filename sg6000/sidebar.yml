@@ -78,7 +78,7 @@ entries:
       url: "/sg6000/verifying-network-connections.html"
     - title: Überprüfen Sie Netzwerkverbindungen auf Portebene
       url: "/sg6000/verifying-port-level-network-connections.html"
-  - title: Aufrufen und Konfigurieren von SANtricity System Manager (SG6000)
+  - title: SANtricity System Manager (SG6000) aufrufen und konfigurieren
     url: "/sg6000/accessing-and-configuring-santricity-system-manager.html"
     entries:
     - title: Einrichten und Zugreifen auf SANtricity System Manager
