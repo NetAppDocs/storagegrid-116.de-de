@@ -14,27 +14,22 @@ summary: Fahren Sie den SG6000-CN-Controller herunter, um die Hardware zu warten
 Fahren Sie den SG6000-CN-Controller herunter, um die Hardware zu warten.
 
 .Was Sie benötigen
-* Der SG6000-CN Controller ist physisch zu finden, der im Datacenter gewartet werden muss.
-+
-xref:locating-controller-in-data-center.adoc[Controller im Datacenter finden]
-
-* Das Gerät war xref:placing-appliance-into-maintenance-mode.adoc[Wird in den Wartungsmodus versetzt].
-
+Der SG6000-CN Controller ist physisch zu finden, der im Datacenter gewartet werden muss. Siehe xref:locating-controller-in-data-center.adoc[Controller im Datacenter finden].
 
 .Über diese Aufgabe
-Um Serviceunterbrechungen zu vermeiden, vergewissern Sie sich, dass alle anderen Storage-Nodes mit dem Grid verbunden sind, bevor Sie den Controller herunterfahren oder den Controller während eines geplanten Wartungsfensters herunterfahren, wenn die Serviceunterbrechungen akzeptabel sind. Informationen zum Bestimmen von Knotenverbindungsstatus finden Sie in den Anweisungen zum Verwalten von Objekten mit Information Lifecycle Management.
+Um Serviceunterbrechungen zu vermeiden, vergewissern Sie sich, dass alle anderen Storage-Nodes mit dem Grid verbunden sind, bevor Sie den Controller herunterfahren oder den Controller während eines geplanten Wartungsfensters herunterfahren, wenn die Serviceunterbrechungen akzeptabel sind. Weitere Informationen finden Sie unter xref:monitoring-node-connection-states.adoc[Monitoring der Verbindungsstatus der Nodes].
 
 
 IMPORTANT: Wenn Sie jemals eine ILM-Regel verwendet haben, die nur eine Kopie eines Objekts erstellt, müssen Sie den Controller während eines geplanten Wartungsfensters herunterfahren. Andernfalls verlieren Sie während dieses Verfahrens vorübergehend den Zugriff auf diese Objekte. Siehe link:../ilm/index.html["Verwalten von Objekten mit Information Lifecycle Management"].
 
 .Schritte
-. Wenn das Gerät in den Wartungsmodus versetzt wurde, fahren Sie den SG6000-CN-Controller herunter:
+. Fahren Sie den SG6000-CN-Controller herunter:
 +
 
-CAUTION: Sie müssen das Herunterfahren des Controllers steuern, indem Sie die unten angegebenen Befehle eingeben. Wenn Sie den Controller mit dem Netzschalter herunterfahren, führt dies zu Datenverlust.
+CAUTION: Sie müssen das Herunterfahren des Controllers steuern, indem Sie die unten angegebenen Befehle eingeben. Es ist eine Best Practice, nach Möglichkeit eine kontrollierte Abschaltung durchzuführen, um unnötige Warnmeldungen zu vermeiden, sicherzustellen, dass vollständige Protokolle verfügbar sind und Serviceunterbrechungen zu vermeiden.
 
 +
-.. Melden Sie sich mit PuTTY oder einem anderen SSH-Client am Grid-Knoten an:
+.. Wenn Sie sich noch nicht beim Grid-Knoten angemeldet haben, melden Sie sich mit PuTTY oder einem anderen ssh-Client an:
 +
 ... Geben Sie den folgenden Befehl ein: `ssh admin@_grid_node_IP_`
 ... Geben Sie das im aufgeführte Passwort ein `Passwords.txt` Datei:
@@ -45,8 +40,10 @@ Wenn Sie als root angemeldet sind, ändert sich die Eingabeaufforderung von `$` 
 
 
 
-.. Fahren Sie den SG6000-CN-Controller herunter: +
+.. Fahren Sie den SG6000-CN-Controller herunter:
++
 `*shutdown -h now*`
+
 +
 Dieser Befehl kann bis zu 10 Minuten in Anspruch nehmen.
 

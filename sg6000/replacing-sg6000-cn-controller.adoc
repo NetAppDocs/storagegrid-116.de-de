@@ -49,12 +49,6 @@ Wenn Sie als root angemeldet sind, ändert sich die Eingabeaufforderung von `$` 
 +
 xref:shutting-down-sg6000-cn-controller.adoc[Fahren Sie den SG6000-CN-Controller herunter]
 
-. Überprüfen Sie anhand einer von zwei Methoden, ob die Stromversorgung für den SG6000-CN-Controller ausgeschaltet ist:
-+
-** Die Betriebsanzeige-LED an der Vorderseite des Controllers leuchtet nicht.
-** Die Seite Power Control der BMC-Schnittstelle zeigt an, dass der Controller aus ist.
-
-
 . Wenn eine der Netzwerkschnittstellen auf dieser StorageGRID-Appliance für DHCP konfiguriert ist, müssen Sie möglicherweise die permanenten DHCP-Lease-Zuordnungen auf den DHCP-Servern aktualisieren, um auf die MAC-Adressen der Ersatz-Appliance zu verweisen. Das Update stellt sicher, dass der Appliance die erwarteten IP-Adressen zugewiesen werden.
 +
 .. Suchen Sie das MAC-Adressenetikett auf der Vorderseite des SG6000-CN-Controllers und legen Sie die MAC-Adresse für den Admin-Netzwerkanschluss fest.
