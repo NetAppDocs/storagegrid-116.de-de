@@ -53,7 +53,7 @@ Beispiel: Wenn eine SG1000-Quell-Node-Appliance als Admin-Node verwendet wird un
 
 * Eine Ersatz-Speicher-Appliance muss die gleiche oder höhere Kapazität aufweisen als der Speicherknoten, den sie ersetzt.
 +
-** Wenn die Ziel-Speicher-Appliance die gleiche Anzahl von Laufwerken wie der Quellknoten hat, müssen die Laufwerke in der ZielAppliance dieselbe Kapazität (in TB) oder größer haben.
+** Wenn die Ziel-Storage-Appliance über dieselbe Anzahl von Laufwerken wie der Quell-Node verfügt, müssen die Laufwerke in der Ziel-Appliance über eine größere Kapazität (in TB) verfügen.
 ** Wenn Sie planen, denselben RAID-Modus auf dem Ziel-Node zu verwenden, der auf dem Quell-Node verwendet wurde, Oder einen weniger Storage-effizienten RAID-Modus (beispielsweise beim Wechsel von RAID 6 zu DDP) müssen die Laufwerke in der Ziel-Appliance größer sein (in TB) als die Laufwerke in der Quell-Appliance.
 ** Wenn die Anzahl der Standardlaufwerke, die in einer Ziel-Storage Appliance installiert sind, kleiner als die Anzahl der Laufwerke im Quell-Node ist, da Solid State Drives (SSDs) installiert sind, wird die gesamte Storage-Kapazität der Standardlaufwerke in der Ziel-Appliance (in TB) Die Gesamtkapazität aller Laufwerke im Quell-Storage-Node muss erreicht oder überschritten werden.
 +
