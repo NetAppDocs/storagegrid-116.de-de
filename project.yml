@@ -12,7 +12,8 @@ sidebar:
   entries:
   - title: StorageGRID 11.6 Dokumentation
     url: "/index.html"
-  - section: release-notes
+  - title: Versionshinweise
+    url: "/release-notes/index.html"
   - title: Los geht's
     entries:
     - section: primer

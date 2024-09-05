@@ -42,7 +42,7 @@ Wenn bei einem HEAD oder GET-Vorgang die Konsistenzkontrolle „`read-after-New-
 * Wenn diese Suche fehlschlägt, wiederholt sie die Suche auf der nächsten Konsistenzebene, bis sie eine Konsistenzstufe erreicht, die dem Verhalten für Strong-Global entspricht.
 
 
-Wenn eine HEAD- oder GET-Operation das Konsistenzsteuerelement „`read-after-New-write`“ verwendet, das Objekt aber nicht existiert, erreicht die Objekt-Lookup immer eine Konsistenzstufe, die dem Verhalten für strong-global entspricht. Da für diese Konsistenzstufe mehrere Kopien der Objektmetadaten an jedem Standort verfügbar sein müssen, können Sie eine hohe Anzahl von 500 internen Serverfehlern erhalten, wenn zwei oder mehr Storage-Nodes am selben Standort nicht verfügbar sind.
+Wenn eine HEAD- oder GET-Operation das Konsistenzsteuerelement „`read-after-New-write`“ verwendet, das Objekt aber nicht existiert, erreicht die Objekt-Lookup immer eine Konsistenzstufe, die dem Verhalten für strong-global entspricht. Da für diese Konsistenzstufe mehrere Kopien der Objektmetadaten an jedem Standort verfügbar sein müssen, können Sie eine hohe Anzahl von 500 internen Serverfehlern erhalten, wenn ein oder mehrere Storage-Nodes am selben Standort nicht verfügbar sind.
 
 Sofern Sie keine Konsistenzgarantien ähnlich wie Amazon S3 benötigen, können Sie diese Fehler bei DEN HEAD- und GET-Vorgängen vermeiden, indem Sie die Konsistenzkontrolle auf „`Available`“ setzen. Wenn bei einem HEAD oder GET-Vorgang die Konsistenzkontrolle „`Available`“ verwendet wird, bietet StorageGRID eventuell nur Konsistenz. Bei einem fehlgeschlagenen Vorgang wird nicht erneut versucht, die Konsistenzstufen zu erhöhen, daher müssen nicht mehrere Kopien der Objekt-Metadaten verfügbar sein.
 
