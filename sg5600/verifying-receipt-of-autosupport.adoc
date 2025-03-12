@@ -2,7 +2,7 @@
 permalink: sg5600/verifying-receipt-of-autosupport.html 
 sidebar: sidebar 
 keywords: storagegrid, sg5600, storage node, storage appliance, verify, verification, verifying, confirm, confirmation, confirming, autosupport, auto-support, status 
-summary: Sie sollten überprüfen, ob der technische Support Ihre AutoSupport Meldungen erhält. Den Status von AutoSupport für Ihre Systeme finden Sie im Active IQ Portal. Durch die Überprüfung des Eingangs dieser Nachrichten wird sichergestellt, dass der technische Support Ihre Informationen enthält, wenn Sie Hilfe benötigen. 
+summary: Sie sollten überprüfen, ob der technische Support Ihre AutoSupport Meldungen erhält. Den Status von AutoSupport für Ihre Systeme finden Sie im Digital Advisor Portal. Durch die Überprüfung des Eingangs dieser Nachrichten wird sichergestellt, dass der technische Support Ihre Informationen enthält, wenn Sie Hilfe benötigen. 
 ---
 = Überprüfen Sie den Eingang von AutoSupport
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Sie sollten überprüfen, ob der technische Support Ihre AutoSupport Me
 
 
 [role="lead"]
-Sie sollten überprüfen, ob der technische Support Ihre AutoSupport Meldungen erhält. Den Status von AutoSupport für Ihre Systeme finden Sie im Active IQ Portal. Durch die Überprüfung des Eingangs dieser Nachrichten wird sichergestellt, dass der technische Support Ihre Informationen enthält, wenn Sie Hilfe benötigen.
+Sie sollten überprüfen, ob der technische Support Ihre AutoSupport Meldungen erhält. Den Status von AutoSupport für Ihre Systeme finden Sie im Digital Advisor Portal. Durch die Überprüfung des Eingangs dieser Nachrichten wird sichergestellt, dass der technische Support Ihre Informationen enthält, wenn Sie Hilfe benötigen.
 
 .Über diese Aufgabe
 AutoSupport kann einen der folgenden Status anzeigen:
@@ -33,7 +33,7 @@ SIE haben den technischen Support benachrichtigt, dass Sie AutoSupport nicht akt
 Nachdem der technische Support ein wöchentliches Protokoll aus dem System erhält, ändert sich der AutoSupport-Status in EIN.
 
 .Schritte
-. Wechseln Sie zur NetApp Support Site unter http://mysupport.netapp.com/["mysupport.netapp.com"^], Und melden Sie sich im Active IQ Portal.
+. Melden Sie sich auf der NetApp Support-Website unter http://mysupport.netapp.com/["mysupport.netapp.com"^] an, und melden Sie sich beim Digital Advisor-Portal an.
 . Wenn DER AutoSupport-Status NICHT AKTIVIERT ist und Sie der Meinung sind, dass er falsch ist, führen Sie Folgendes aus:
 +
 .. Überprüfen Sie die Systemkonfiguration, um sicherzustellen, dass AutoSupport aktiviert ist.
